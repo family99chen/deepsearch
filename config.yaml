@@ -7,3 +7,16 @@ orcid:
 google_scholar:
   search_base_url: "https://scholar.google.com"
 
+# Google Custom Search API 配置
+google:
+  api_key: "AIzaSyAx7Gy4iSDzyHxbA7iTaG4pIwoK0Ff8kj8"
+  cx: "d75a80598807a44f4"
+  # API 限制：免费版每天 100 次查询
+  # 付费版：$5/1000 次查询
+  rate_limit: 1000  # 每秒最大请求数
+
+# 代理配置
+proxy:
+  enabled: false
+  url: ""
+
