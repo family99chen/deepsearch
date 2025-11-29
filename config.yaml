@@ -1,0 +1,9 @@
+# ORCID API 配置
+orcid:
+  access_token: "ffc8fc1b-accd-4002-9317-5c0cabdc8e77"
+  api_base_url: "https://pub.orcid.org/v3.0"
+
+# Google Scholar 配置
+google_scholar:
+  search_base_url: "https://scholar.google.com"
+
