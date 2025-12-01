@@ -1,18 +1,25 @@
 """
 从 Google Scholar 个人页面获取作者的论文列表
+
+特性：
+- 支持指数退避重试
+- 支持代理配置
+- 自动分页获取所有论文
 """
 
 import os
 import sys
 import json
 import time
+import random
 import requests
 from typing import List, Optional
 from urllib.parse import urlparse, parse_qs
 from bs4 import BeautifulSoup
+from pathlib import Path
 
 # 添加项目根目录到 path，以便导入 proxy 模块
-sys.path.insert(0, str(__file__).replace('\\', '/').rsplit('/google_scholar_url/', 1)[0])
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 # 导入代理模块
 try:
@@ -20,21 +27,47 @@ try:
 except ImportError:
     def configure_session(session): return session
 
+# 导入重试模块
+try:
+    from utils.retry import DEFAULT_RETRYABLE_EXCEPTIONS, DEFAULT_RETRYABLE_STATUS_CODES
+except ImportError:
+    DEFAULT_RETRYABLE_EXCEPTIONS = (
+        requests.exceptions.ConnectionError,
+        requests.exceptions.Timeout,
+        requests.exceptions.HTTPError,
+    )
+    DEFAULT_RETRYABLE_STATUS_CODES = (429, 500, 502, 503, 504)
+
 
 class GoogleScholarProfileScraper:
-    """Google Scholar 个人主页文章爬虫"""
+    """Google Scholar 个人主页文章爬虫（带指数退避重试）"""
     
     # 默认 cookies 路径：脚本所在目录
     DEFAULT_COOKIES_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "google_cookies.json")
     
-    def __init__(self, cookies_path: str = None):
+    def __init__(
+        self, 
+        cookies_path: str = None,
+        max_retries: int = 3,
+        base_delay: float = 2.0,
+        max_delay: float = 60.0,
+    ):
         """
         初始化爬虫
         
         Args:
             cookies_path: cookies 文件路径，默认为脚本所在目录下的 google_cookies.json
+            max_retries: 最大重试次数
+            base_delay: 基础延迟时间（秒）
+            max_delay: 最大延迟时间（秒）
         """
         self.cookies_path = cookies_path or self.DEFAULT_COOKIES_PATH
+        
+        # 重试配置
+        self.max_retries = max_retries
+        self.base_delay = base_delay
+        self.max_delay = max_delay
+        
         self.session = requests.Session()
         self.session.headers.update({
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -64,9 +97,77 @@ class GoogleScholarProfileScraper:
             except Exception as e:
                 print(f"[WARNING] 加载 cookies 失败: {e}")
     
+    def _request_with_retry(self, url: str, timeout: int = 15) -> Optional[requests.Response]:
+        """
+        带指数退避重试的请求
+        
+        Args:
+            url: 请求 URL
+            timeout: 超时时间
+            
+        Returns:
+            Response 对象，如果失败返回 None
+        """
+        last_exception = None
+        
+        for attempt in range(self.max_retries + 1):
+            try:
+                response = self.session.get(url, timeout=timeout)
+                
+                # 检查是否需要重试的状态码
+                if response.status_code in DEFAULT_RETRYABLE_STATUS_CODES:
+                    if attempt < self.max_retries:
+                        delay = self._calculate_delay(attempt)
+                        print(f"[RETRY] HTTP {response.status_code}，{delay:.1f}秒后重试 "
+                              f"({attempt + 1}/{self.max_retries})...")
+                        time.sleep(delay)
+                        continue
+                    else:
+                        print(f"[ERROR] HTTP {response.status_code}，重试次数已用尽")
+                        return None
+                
+                response.raise_for_status()
+                return response
+                
+            except DEFAULT_RETRYABLE_EXCEPTIONS as e:
+                last_exception = e
+                
+                if attempt >= self.max_retries:
+                    print(f"[ERROR] 请求失败，重试次数已用尽: {type(e).__name__}: {e}")
+                    return None
+                
+                delay = self._calculate_delay(attempt)
+                print(f"[RETRY] {type(e).__name__}，{delay:.1f}秒后重试 "
+                      f"({attempt + 1}/{self.max_retries})...")
+                time.sleep(delay)
+                
+            except requests.RequestException as e:
+                print(f"[ERROR] 请求失败: {e}")
+                return None
+        
+        return None
+    
+    def _calculate_delay(self, attempt: int) -> float:
+        """
+        计算指数退避延迟时间
+        
+        Args:
+            attempt: 当前尝试次数（从0开始）
+            
+        Returns:
+            延迟时间（秒）
+        """
+        delay = min(
+            self.base_delay * (2 ** attempt),
+            self.max_delay
+        )
+        # 添加随机抖动 (±25%)
+        jitter = delay * 0.25 * (2 * random.random() - 1)
+        return delay + jitter
+    
     def get_all_papers(self, profile_url: str) -> List[dict]:
         """
-        获取作者主页的所有论文
+        获取作者主页的所有论文（带重试）
         
         Args:
             profile_url: 作者 Google Scholar 主页 URL
@@ -88,6 +189,8 @@ class GoogleScholarProfileScraper:
         all_papers = []
         cstart = 0  # 分页起始位置
         pagesize = 100  # 每页数量
+        consecutive_failures = 0  # 连续失败次数
+        max_consecutive_failures = 2  # 最大连续失败次数
         
         while True:
             # 构建请求 URL
@@ -96,16 +199,30 @@ class GoogleScholarProfileScraper:
             
             print(f"[INFO] 正在获取第 {cstart // pagesize + 1} 页 (cstart={cstart})...")
             
-            try:
-                response = self.session.get(url, timeout=15)
-                response.raise_for_status()
-                time.sleep(2)  # 礼貌性延迟
-                
-            except requests.RequestException as e:
-                print(f"[ERROR] 请求失败: {e}")
-                break
+            # 使用带重试的请求
+            response = self._request_with_retry(url)
+            
+            if response is None:
+                consecutive_failures += 1
+                if consecutive_failures >= max_consecutive_failures:
+                    print(f"[ERROR] 连续 {consecutive_failures} 次请求失败，停止获取")
+                    break
+                print(f"[WARNING] 请求失败，跳过当前页 ({consecutive_failures}/{max_consecutive_failures})")
+                cstart += pagesize
+                continue
+            
+            # 重置连续失败计数
+            consecutive_failures = 0
+            
+            # 礼貌性延迟
+            time.sleep(2)
             
             soup = BeautifulSoup(response.text, 'html.parser')
+            
+            # 检查是否被封锁
+            if self._check_blocked(response.text):
+                print("[ERROR] 访问被限制，请重新登录获取 cookies")
+                break
             
             # 解析论文列表
             paper_rows = soup.select('tr.gsc_a_tr')
@@ -136,6 +253,30 @@ class GoogleScholarProfileScraper:
             time.sleep(1)  # 额外延迟
         
         return all_papers
+    
+    def _check_blocked(self, html_text: str) -> bool:
+        """
+        检查是否被 Google Scholar 封锁
+        
+        Args:
+            html_text: HTML 文本
+            
+        Returns:
+            是否被封锁
+        """
+        # 检查是否有验证码
+        if 'captcha' in html_text.lower() or 'recaptcha' in html_text.lower():
+            return True
+        
+        # 检查是否是异常流量页面
+        if 'unusual traffic' in html_text.lower():
+            return True
+        
+        # 检查是否是登录页面
+        if 'accounts.google.com' in html_text:
+            return True
+        
+        return False
     
     def _parse_paper_row(self, row) -> Optional[dict]:
         """
@@ -182,18 +323,32 @@ class GoogleScholarProfileScraper:
         return paper
 
 
-def get_google_scholar_papers(profile_url: str, cookies_path: str = "google_cookies.json") -> List[dict]:
+def get_google_scholar_papers(
+    profile_url: str, 
+    cookies_path: str = None,
+    max_retries: int = 3,
+    base_delay: float = 2.0,
+    max_delay: float = 60.0,
+) -> List[dict]:
     """
-    便捷函数：获取 Google Scholar 作者的所有论文
+    便捷函数：获取 Google Scholar 作者的所有论文（带重试）
     
     Args:
         profile_url: 作者 Google Scholar 主页 URL
         cookies_path: cookies 文件路径
+        max_retries: 最大重试次数
+        base_delay: 基础延迟时间（秒）
+        max_delay: 最大延迟时间（秒）
         
     Returns:
         论文列表
     """
-    scraper = GoogleScholarProfileScraper(cookies_path=cookies_path)
+    scraper = GoogleScholarProfileScraper(
+        cookies_path=cookies_path,
+        max_retries=max_retries,
+        base_delay=base_delay,
+        max_delay=max_delay,
+    )
     return scraper.get_all_papers(profile_url)
 
 
@@ -224,4 +379,3 @@ if __name__ == "__main__":
     
     if len(papers) > 10:
         print(f"\n... 还有 {len(papers) - 10} 篇论文未显示")
-

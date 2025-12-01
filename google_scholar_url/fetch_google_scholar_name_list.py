@@ -3,19 +3,26 @@ Google Scholar 作者搜索模块
 支持两种模式：
 1. 首次运行：使用 Selenium 手动登录并保存 cookies
 2. 后续运行：使用保存的 cookies 通过 requests 访问（可在服务器运行）
+
+特性：
+- 支持指数退避重试
+- 支持代理配置
+- Cookies 过期检测
 """
 
 import os
 import sys
 import json
 import time
+import random
 import requests
 from typing import List, Dict, Optional
 from urllib.parse import quote_plus
 from bs4 import BeautifulSoup
+from pathlib import Path
 
 # 添加项目根目录到 path，以便导入 proxy 模块
-sys.path.insert(0, str(__file__).replace('\\', '/').rsplit('/google_scholar_url/', 1)[0])
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 # 导入代理模块
 try:
@@ -27,6 +34,17 @@ except ImportError:
     def get_selenium_proxy_args(): return []
     def is_proxy_enabled(): return False
 
+# 导入重试模块
+try:
+    from utils.retry import DEFAULT_RETRYABLE_EXCEPTIONS, DEFAULT_RETRYABLE_STATUS_CODES
+except ImportError:
+    DEFAULT_RETRYABLE_EXCEPTIONS = (
+        requests.exceptions.ConnectionError,
+        requests.exceptions.Timeout,
+        requests.exceptions.HTTPError,
+    )
+    DEFAULT_RETRYABLE_STATUS_CODES = (429, 500, 502, 503, 504)
+
 # Selenium 相关（仅首次登录需要）
 try:
     from selenium import webdriver
@@ -37,21 +55,36 @@ except ImportError:
 
 
 class GoogleScholarAuthorScraper:
-    """Google Scholar 作者搜索爬虫"""
+    """Google Scholar 作者搜索爬虫（带指数退避重试）"""
     
     BASE_URL = "https://scholar.google.com/citations"
     # 使用脚本所在目录的路径，而不是当前工作目录
     COOKIES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "google_cookies.json")
     
-    def __init__(self, cookies_path: Optional[str] = None):
+    def __init__(
+        self, 
+        cookies_path: Optional[str] = None,
+        max_retries: int = 3,
+        base_delay: float = 2.0,
+        max_delay: float = 60.0,
+    ):
         """
         初始化爬虫
         
         Args:
             cookies_path: cookies 文件路径，默认为脚本所在目录下的 google_cookies.json
+            max_retries: 最大重试次数
+            base_delay: 基础延迟时间（秒）
+            max_delay: 最大延迟时间（秒）
         """
         self.cookies_path = cookies_path or self.COOKIES_FILE
         self.cookies_valid = False  # cookies 是否有效
+        
+        # 重试配置
+        self.max_retries = max_retries
+        self.base_delay = base_delay
+        self.max_delay = max_delay
+        
         self.session = requests.Session()
         self.session.headers.update({
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -64,6 +97,80 @@ class GoogleScholarAuthorScraper:
         
         # 尝试加载已保存的 cookies
         self.cookies_valid = self._load_cookies()
+    
+    def _request_with_retry(
+        self, 
+        url: str, 
+        timeout: int = 15,
+        check_blocked: bool = True
+    ) -> Optional[requests.Response]:
+        """
+        带指数退避重试的请求
+        
+        Args:
+            url: 请求 URL
+            timeout: 超时时间
+            check_blocked: 是否检查被封锁
+            
+        Returns:
+            Response 对象，如果失败返回 None
+        """
+        last_exception = None
+        
+        for attempt in range(self.max_retries + 1):
+            try:
+                response = self.session.get(url, timeout=timeout)
+                
+                # 检查是否需要重试的状态码
+                if response.status_code in DEFAULT_RETRYABLE_STATUS_CODES:
+                    if attempt < self.max_retries:
+                        delay = self._calculate_delay(attempt)
+                        print(f"[RETRY] HTTP {response.status_code}，{delay:.1f}秒后重试 "
+                              f"({attempt + 1}/{self.max_retries})...")
+                        time.sleep(delay)
+                        continue
+                    else:
+                        print(f"[ERROR] HTTP {response.status_code}，重试次数已用尽")
+                        return None
+                
+                response.raise_for_status()
+                return response
+                
+            except DEFAULT_RETRYABLE_EXCEPTIONS as e:
+                last_exception = e
+                
+                if attempt >= self.max_retries:
+                    print(f"[ERROR] 请求失败，重试次数已用尽: {type(e).__name__}: {e}")
+                    return None
+                
+                delay = self._calculate_delay(attempt)
+                print(f"[RETRY] {type(e).__name__}，{delay:.1f}秒后重试 "
+                      f"({attempt + 1}/{self.max_retries})...")
+                time.sleep(delay)
+                
+            except requests.RequestException as e:
+                print(f"[ERROR] 请求失败: {e}")
+                return None
+        
+        return None
+    
+    def _calculate_delay(self, attempt: int) -> float:
+        """
+        计算指数退避延迟时间
+        
+        Args:
+            attempt: 当前尝试次数（从0开始）
+            
+        Returns:
+            延迟时间（秒）
+        """
+        delay = min(
+            self.base_delay * (2 ** attempt),
+            self.max_delay
+        )
+        # 添加随机抖动 (±25%)
+        jitter = delay * 0.25 * (2 * random.random() - 1)
+        return delay + jitter
     
     def _load_cookies(self) -> bool:
         """
@@ -235,7 +342,7 @@ class GoogleScholarAuthorScraper:
     
     def search_author(self, author_name: str, max_results: int = 20) -> List[Dict]:
         """
-        搜索作者并返回作者信息列表（支持翻页）
+        搜索作者并返回作者信息列表（支持翻页，带重试）
         
         Args:
             author_name: 作者名字
@@ -259,14 +366,15 @@ class GoogleScholarAuthorScraper:
         while len(all_authors) < max_results:
             print(f"[INFO] 正在获取第 {page_num} 页...")
             
-            try:
-                response = self.session.get(current_url, timeout=15)
-                response.raise_for_status()
-                time.sleep(2)  # 礼貌性延迟，避免被封
-                
-            except requests.RequestException as e:
-                print(f"[ERROR] 请求失败: {e}")
+            # 使用带重试的请求
+            response = self._request_with_retry(current_url)
+            
+            if response is None:
+                print("[ERROR] 请求失败，停止搜索")
                 break
+            
+            # 礼貌性延迟
+            time.sleep(2)
             
             soup = BeautifulSoup(response.text, 'html.parser')
             
@@ -443,7 +551,11 @@ class GoogleScholarAuthorScraper:
 
 def main():
     """主函数"""
-    scraper = GoogleScholarAuthorScraper()
+    scraper = GoogleScholarAuthorScraper(
+        max_retries=3,
+        base_delay=2.0,
+        max_delay=60.0
+    )
     
     # 检查 cookies 状态（不存在、过期、或无效都需要重新登录）
     if not scraper.cookies_valid:
@@ -477,4 +589,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

@@ -2,10 +2,25 @@
 通过 ORCID API 获取作者的个人信息（姓名等）
 """
 
+import sys
 import requests
 import yaml
 from pathlib import Path
 from typing import Optional
+
+# 添加项目根目录到 path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+# 导入重试模块
+try:
+    from utils.retry import exponential_backoff, DEFAULT_RETRYABLE_EXCEPTIONS
+except ImportError:
+    # 如果导入失败，提供一个空装饰器
+    def exponential_backoff(*args, **kwargs):
+        def decorator(func):
+            return func
+        return decorator
+    DEFAULT_RETRYABLE_EXCEPTIONS = (requests.exceptions.RequestException,)
 
 
 def load_config() -> dict:
@@ -15,6 +30,12 @@ def load_config() -> dict:
         return yaml.safe_load(f)
 
 
+@exponential_backoff(
+    max_retries=3,
+    base_delay=1.0,
+    max_delay=30.0,
+    retryable_exceptions=DEFAULT_RETRYABLE_EXCEPTIONS + (requests.exceptions.RequestException,)
+)
 def fetch_author_info(orcid_id: str, access_token: Optional[str] = None) -> dict:
     """
     通过 ORCID ID 获取作者的个人信息
@@ -25,6 +46,9 @@ def fetch_author_info(orcid_id: str, access_token: Optional[str] = None) -> dict
     
     Returns:
         包含作者个人信息的字典
+        
+    Raises:
+        requests.exceptions.HTTPError: API 请求失败（重试后仍失败）
     """
     config = load_config()
     
@@ -39,7 +63,7 @@ def fetch_author_info(orcid_id: str, access_token: Optional[str] = None) -> dict
         "Authorization": f"Bearer {access_token}"
     }
     
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, timeout=30)
     response.raise_for_status()
     
     return response.json()
@@ -119,4 +143,3 @@ if __name__ == "__main__":
         print(f"API 请求失败: {e}")
     except Exception as e:
         print(f"发生错误: {e}")
-
