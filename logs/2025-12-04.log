@@ -1,0 +1,857 @@
+[2025-12-04 17:06:30] [INFO] 开始查找 ORCID: 0000-0003-2494-8974
+[2025-12-04 17:06:31] [INFO] 作者姓名: Iris KM Yu
+[2025-12-04 17:06:32] [INFO] 作者组织: Hong Kong Polytechnic University
+[2025-12-04 17:06:33] [INFO] 获取到 40 篇 ORCID 论文
+[2025-12-04 17:06:33] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:06:36] [INFO] 找到匹配: https://scholar.google.com/citations?user=7brvRFIAAAAJ&hl=zh-CN (策略: 仅 "Iris KM Yu", 迭代 1 次)
+[2025-12-04 17:25:12] [INFO] 开始查找 ORCID: 0009-0001-6437-2044
+[2025-12-04 17:25:12] [INFO] 作者姓名: Lisa Schlott
+[2025-12-04 17:25:14] [INFO] 作者组织: University of Münster
+[2025-12-04 17:25:14] [INFO] 获取到 3 篇 ORCID 论文
+[2025-12-04 17:25:15] [WARNING] 未找到匹配的 Google Scholar 账号: 0009-0001-6437-2044
+[2025-12-04 17:25:16] [INFO] 开始查找 ORCID: 0000-0003-2892-825X
+[2025-12-04 17:25:17] [INFO] 作者姓名: Moritz Gutsch
+[2025-12-04 17:25:18] [INFO] 获取到 4 篇 ORCID 论文
+[2025-12-04 17:25:18] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:25:22] [INFO] 找到匹配: https://scholar.google.com/citations?user=rNnDA0UAAAAJ&hl=zh-CN (策略: 仅 "Moritz Gutsch", 迭代 1 次)
+[2025-12-04 17:25:22] [INFO] 开始查找 ORCID: 0000-0003-0237-691X
+[2025-12-04 17:25:23] [INFO] 作者姓名: Jens Leker
+[2025-12-04 17:25:24] [INFO] 作者组织: University of Münster
+[2025-12-04 17:25:25] [INFO] 获取到 61 篇 ORCID 论文
+[2025-12-04 17:25:25] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0003-0237-691X
+[2025-12-04 17:25:26] [INFO] 开始查找 ORCID: 0009-0006-2360-0449
+[2025-12-04 17:25:27] [INFO] 作者姓名: Abu Danish Aiman Bin Abu Sofian
+[2025-12-04 17:25:29] [INFO] 获取到 1 篇 ORCID 论文
+[2025-12-04 17:25:29] [WARNING] 未找到匹配的 Google Scholar 账号: 0009-0006-2360-0449
+[2025-12-04 17:25:30] [INFO] 开始查找 ORCID: 0000-0001-6287-9258
+[2025-12-04 17:25:30] [INFO] 作者姓名: Annabelle Maletzko
+[2025-12-04 17:25:32] [INFO] 作者组织: Fraunhofer Institute for Chemical Technology
+[2025-12-04 17:25:33] [INFO] 获取到 14 篇 ORCID 论文
+[2025-12-04 17:25:33] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:25:37] [INFO] 找到匹配: https://scholar.google.com/citations?user=c2D1HwwAAAAJ&hl=zh-CN (策略: 仅 "Annabelle Maletzko", 迭代 1 次)
+[2025-12-04 17:25:37] [INFO] 开始查找 ORCID: 0000-0001-9693-1595
+[2025-12-04 17:25:38] [INFO] 作者姓名: Liang Feng
+[2025-12-04 17:25:39] [INFO] 作者组织: Duke University
+[2025-12-04 17:25:40] [INFO] 获取到 61 篇 ORCID 论文
+[2025-12-04 17:25:40] [INFO] 第 1 批找到 3 个候选人
+[2025-12-04 17:25:43] [INFO] 找到匹配: https://scholar.google.com/citations?user=78cGTeEAAAAJ&hl=zh-CN (策略: "Liang Feng" + 组织 "Duke University", 迭代 1 次)
+[2025-12-04 17:25:44] [INFO] 开始查找 ORCID: 0000-0002-6583-5354
+[2025-12-04 17:25:44] [INFO] 作者姓名: Sascha Feldmann
+[2025-12-04 17:25:45] [INFO] 作者组织: Harvard University
+[2025-12-04 17:25:46] [INFO] 获取到 69 篇 ORCID 论文
+[2025-12-04 17:25:46] [INFO] 第 1 批找到 3 个候选人
+[2025-12-04 17:25:50] [INFO] 找到匹配: https://scholar.google.com/citations?user=U6NvOIcAAAAJ&hl=zh-CN (策略: "Sascha Feldmann" + 组织 "Harvard University", 迭代 1 次)
+[2025-12-04 17:25:50] [INFO] 开始查找 ORCID: 0000-0002-7769-0869
+[2025-12-04 17:25:51] [INFO] 作者姓名: Carolin M. Sutter-Fella
+[2025-12-04 17:25:51] [INFO] 作者组织: Lawrence Berkeley National Laboratory
+[2025-12-04 17:25:52] [INFO] 获取到 77 篇 ORCID 论文
+[2025-12-04 17:25:53] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:26:00] [INFO] 找到匹配: https://scholar.google.com/citations?user=rzawnbUAAAAJ&hl=zh-CN (策略: "Carolin M. Sutter-Fella" + 组织 "Lawrence Berkeley National Laboratory", 迭代 1 次)
+[2025-12-04 17:26:01] [INFO] 开始查找 ORCID: 0000-0002-8364-4295
+[2025-12-04 17:26:01] [INFO] 作者姓名: Yuanyuan Zhou
+[2025-12-04 17:26:02] [INFO] 作者组织: Hong Kong University of Science and Technology
+[2025-12-04 17:26:03] [INFO] 获取到 147 篇 ORCID 论文
+[2025-12-04 17:26:04] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 17:26:11] [INFO] 找到匹配: https://scholar.google.com/citations?user=ZbofhOcAAAAJ&hl=zh-CN (策略: "Yuanyuan Zhou" + 组织 "Hong Kong University of Science and Technology", 迭代 1 次)
+[2025-12-04 17:26:12] [INFO] 开始查找 ORCID: 0000-0001-5303-347X
+[2025-12-04 17:26:12] [INFO] 作者姓名: Li Zeng
+[2025-12-04 17:26:14] [INFO] 获取到 1 篇 ORCID 论文
+[2025-12-04 17:26:14] [INFO] 第 1 批找到 9 个候选人
+[2025-12-04 17:26:44] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0001-5303-347X
+[2025-12-04 17:26:44] [INFO] 开始查找 ORCID: 0000-0003-2867-8721
+[2025-12-04 17:26:45] [INFO] 作者姓名: Shuhao  Li
+[2025-12-04 17:26:45] [INFO] 作者组织: Swinburne University of Technology
+[2025-12-04 17:26:46] [INFO] 获取到 9 篇 ORCID 论文
+[2025-12-04 17:26:47] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:26:50] [INFO] 找到匹配: https://scholar.google.com/citations?user=RZfM33AAAAAJ&hl=zh-CN (策略: "Shuhao  Li" + 组织 "Swinburne University of Technology", 迭代 1 次)
+[2025-12-04 17:26:51] [INFO] 开始查找 ORCID: 0000-0002-9014-1231
+[2025-12-04 17:26:52] [INFO] 作者姓名: Fanran Meng
+[2025-12-04 17:26:52] [INFO] 作者组织: University of Sheffield
+[2025-12-04 17:26:53] [INFO] 获取到 46 篇 ORCID 论文
+[2025-12-04 17:26:53] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 17:26:56] [INFO] 找到匹配: https://scholar.google.com/citations?user=D9eC2XoAAAAJ&hl=zh-CN (策略: "Fanran Meng" + 组织 "University of Sheffield", 迭代 1 次)
+[2025-12-04 17:26:56] [INFO] 开始查找 ORCID: 0000-0001-6663-8494
+[2025-12-04 17:26:57] [INFO] 作者姓名: Jennifer L. Hawkin
+[2025-12-04 17:26:58] [INFO] 作者组织: University of Cambridge
+[2025-12-04 17:26:59] [INFO] 获取到 3 篇 ORCID 论文
+[2025-12-04 17:26:59] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:27:02] [INFO] 找到匹配: https://scholar.google.com/citations?user=QNNPim0AAAAJ&hl=zh-CN (策略: 仅 "Jennifer L. Hawkin", 迭代 1 次)
+[2025-12-04 17:27:03] [INFO] 开始查找 ORCID: 0000-0002-9227-1566
+[2025-12-04 17:27:03] [INFO] 作者姓名: Stella Job
+[2025-12-04 17:27:04] [INFO] 作者组织: Grazebrook Innovation
+[2025-12-04 17:27:05] [INFO] 获取到 6 篇 ORCID 论文
+[2025-12-04 17:27:06] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-9227-1566
+[2025-12-04 17:27:07] [INFO] 开始查找 ORCID: 0000-0002-7936-9171
+[2025-12-04 17:27:07] [INFO] 作者姓名: Lixiao Zhang
+[2025-12-04 17:27:08] [INFO] 作者组织: Beijing Normal University
+[2025-12-04 17:27:08] [INFO] 获取到 1 篇 ORCID 论文
+[2025-12-04 17:27:09] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:27:15] [INFO] 找到匹配: https://scholar.google.com/citations?user=SyElNV0AAAAJ&hl=zh-CN (策略: "Lixiao Zhang" + 组织 "Beijing Normal University", 迭代 1 次)
+[2025-12-04 17:27:15] [INFO] 开始查找 ORCID: 0000-0002-4587-6132
+[2025-12-04 17:27:16] [INFO] 作者姓名: Zheng-Yang Huo
+[2025-12-04 17:27:17] [INFO] 作者组织: Sungkyunkwan University 
+[2025-12-04 17:27:17] [WARNING] [WARNING] ORCID 论文列表为空，无法进行匹配
+[2025-12-04 17:27:18] [INFO] 开始查找 ORCID: 0000-0002-0079-5806
+[2025-12-04 17:27:18] [INFO] 作者姓名: Sang-Woo Kim
+[2025-12-04 17:27:19] [INFO] 作者组织: Yonsei University
+[2025-12-04 17:27:21] [INFO] 获取到 417 篇 ORCID 论文
+[2025-12-04 17:27:22] [INFO] 第 1 批找到 6 个候选人
+[2025-12-04 17:27:44] [INFO] 找到匹配: https://scholar.google.com/citations?user=qCyU-VoAAAAJ&hl=zh-CN (策略: "Sang-Woo Kim" + 组织 "Yonsei University", 迭代 1 次)
+[2025-12-04 17:27:44] [INFO] 开始查找 ORCID: 0000-0003-4572-3459
+[2025-12-04 17:27:44] [INFO] 作者姓名: Alexandra Ramadan
+[2025-12-04 17:27:45] [INFO] 作者组织: University of Sheffield
+[2025-12-04 17:27:45] [INFO] 获取到 43 篇 ORCID 论文
+[2025-12-04 17:27:46] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0003-4572-3459
+[2025-12-04 17:27:47] [INFO] 开始查找 ORCID: 0009-0006-7014-6808
+[2025-12-04 17:27:47] [INFO] 作者姓名: Dilip Rijal
+[2025-12-04 17:27:48] [INFO] 作者组织: Swinburne University of Technology
+[2025-12-04 17:27:48] [INFO] 获取到 5 篇 ORCID 论文
+[2025-12-04 17:27:49] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:27:51] [INFO] 找到匹配: https://scholar.google.com/citations?user=uDQGxigAAAAJ&hl=zh-CN (策略: "Dilip Rijal" + 组织 "Swinburne University of Technology", 迭代 1 次)
+[2025-12-04 17:27:52] [INFO] 开始查找 ORCID: 0000-0002-1944-7166
+[2025-12-04 17:27:52] [INFO] 作者姓名: Guilin Ruan
+[2025-12-04 17:27:53] [INFO] 作者组织: Technion – Israel Institute of Technology
+[2025-12-04 17:27:54] [INFO] 获取到 11 篇 ORCID 论文
+[2025-12-04 17:27:54] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:27:58] [INFO] 找到匹配: https://scholar.google.com/citations?user=Cg0kzkkAAAAJ&hl=zh-CN (策略: "Guilin Ruan" + 组织 "Technion – Israel Institute of Technology", 迭代 1 次)
+[2025-12-04 17:27:58] [INFO] 开始查找 ORCID: 0000-0002-9497-0539
+[2025-12-04 17:27:59] [INFO] 作者姓名: Fiona Todman
+[2025-12-04 17:28:01] [INFO] 获取到 2 篇 ORCID 论文
+[2025-12-04 17:28:01] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-9497-0539
+[2025-12-04 17:28:02] [INFO] 开始查找 ORCID: 0009-0002-0084-1267
+[2025-12-04 17:28:03] [INFO] 作者姓名: Rotem Arad
+[2025-12-04 17:28:03] [INFO] 作者组织: H2Pro (Israel)
+[2025-12-04 17:28:04] [INFO] 获取到 1 篇 ORCID 论文
+[2025-12-04 17:28:04] [WARNING] 未找到匹配的 Google Scholar 账号: 0009-0002-0084-1267
+[2025-12-04 17:28:05] [INFO] 开始查找 ORCID: 0000-0001-8895-6303
+[2025-12-04 17:28:06] [INFO] 作者姓名: Tom Smolinka
+[2025-12-04 17:28:07] [INFO] 作者组织: Fraunhofer Institute for Solar Energy Systems
+[2025-12-04 17:28:08] [WARNING] [WARNING] ORCID 论文列表为空，无法进行匹配
+[2025-12-04 17:28:08] [INFO] 开始查找 ORCID: 0000-0002-2427-7763
+[2025-12-04 17:28:09] [INFO] 作者姓名: Jens Oluf Jensen
+[2025-12-04 17:28:10] [INFO] 作者组织: Technical University of Denmark
+[2025-12-04 17:28:12] [INFO] 获取到 330 篇 ORCID 论文
+[2025-12-04 17:28:12] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:28:50] [INFO] 找到匹配: https://scholar.google.com/citations?user=nevwA8AAAAAJ&hl=zh-CN (策略: "Jens Oluf Jensen" + 组织 "Technical University of Denmark", 迭代 1 次)
+[2025-12-04 17:28:51] [INFO] 开始查找 ORCID: 0000-0001-8067-5240
+[2025-12-04 17:28:51] [INFO] 作者姓名: Mark Symes
+[2025-12-04 17:28:52] [INFO] 作者组织: University of Glasgow
+[2025-12-04 17:28:53] [INFO] 获取到 90 篇 ORCID 论文
+[2025-12-04 17:28:54] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:29:00] [INFO] 找到匹配: https://scholar.google.com/citations?user=JPU4JfAAAAAJ&hl=zh-CN (策略: "Mark Symes" + 组织 "University of Glasgow", 迭代 1 次)
+[2025-12-04 17:29:01] [INFO] 开始查找 ORCID: 0000-0002-2512-0370
+[2025-12-04 17:29:02] [INFO] 作者姓名: Avner Rothschild
+[2025-12-04 17:29:03] [INFO] 作者组织: H2Pro
+[2025-12-04 17:29:04] [INFO] 获取到 128 篇 ORCID 论文
+[2025-12-04 17:29:04] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 17:29:12] [INFO] 找到匹配: https://scholar.google.com/citations?user=DrESWpsAAAAJ&hl=zh-CN (策略: 仅 "Avner Rothschild", 迭代 1 次)
+[2025-12-04 17:29:12] [INFO] 开始查找 ORCID: 0000-0003-3831-4489
+[2025-12-04 17:29:13] [INFO] 作者姓名: Qiaozhi Zhang
+[2025-12-04 17:29:13] [INFO] 作者组织: National University of Singapore
+[2025-12-04 17:29:14] [INFO] 获取到 13 篇 ORCID 论文
+[2025-12-04 17:29:14] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:29:17] [INFO] 找到匹配: https://scholar.google.com/citations?user=turRnJQAAAAJ&hl=zh-CN (策略: "Qiaozhi Zhang" + 组织 "National University of Singapore", 迭代 1 次)
+[2025-12-04 17:29:18] [INFO] 开始查找 ORCID: 0000-0002-8046-9022
+[2025-12-04 17:29:18] [INFO] 作者姓名: Zhuo Li
+[2025-12-04 17:29:18] [INFO] 作者组织: National University of Singapore
+[2025-12-04 17:29:19] [INFO] 获取到 14 篇 ORCID 论文
+[2025-12-04 17:29:20] [INFO] 第 1 批找到 10 个候选人
+[2025-12-04 17:30:05] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-8046-9022
+[2025-12-04 17:30:05] [INFO] 开始查找 ORCID: 0009-0003-0056-0366
+[2025-12-04 17:30:06] [INFO] 作者姓名: Zhuoyue Liu
+[2025-12-04 17:30:07] [INFO] 作者组织: National University of Singapore
+[2025-12-04 17:30:07] [INFO] 获取到 1 篇 ORCID 论文
+[2025-12-04 17:30:08] [WARNING] 未找到匹配的 Google Scholar 账号: 0009-0003-0056-0366
+[2025-12-04 17:30:09] [INFO] 开始查找 ORCID: 0000-0003-2494-8974
+[2025-12-04 17:30:09] [INFO] 作者姓名: Iris KM Yu
+[2025-12-04 17:30:10] [INFO] 作者组织: Hong Kong Polytechnic University
+[2025-12-04 17:30:11] [INFO] 获取到 40 篇 ORCID 论文
+[2025-12-04 17:30:12] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:30:15] [INFO] 找到匹配: https://scholar.google.com/citations?user=7brvRFIAAAAJ&hl=zh-CN (策略: 仅 "Iris KM Yu", 迭代 1 次)
+[2025-12-04 17:30:16] [INFO] 开始查找 ORCID: 0000-0002-1130-0282
+[2025-12-04 17:30:16] [INFO] 作者姓名: Nayanika Kalita
+[2025-12-04 17:30:17] [INFO] 作者组织: University at Buffalo, State University of New York
+[2025-12-04 17:30:18] [INFO] 获取到 4 篇 ORCID 论文
+[2025-12-04 17:30:18] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:30:22] [INFO] 找到匹配: https://scholar.google.com/citations?user=7d_fb6wAAAAJ&hl=zh-CN (策略: 仅 "Nayanika Kalita", 迭代 1 次)
+[2025-12-04 17:30:23] [INFO] 开始查找 ORCID: 0000-0002-8018-4529
+[2025-12-04 17:30:23] [INFO] 作者姓名: Wei Chen
+[2025-12-04 17:30:24] [INFO] 作者组织: University of Science and Technology of China
+[2025-12-04 17:30:25] [INFO] 获取到 38 篇 ORCID 论文
+[2025-12-04 17:30:26] [INFO] 第 1 批找到 5 个候选人
+[2025-12-04 17:30:33] [INFO] 找到匹配: https://scholar.google.com/citations?user=8QDJgikAAAAJ&hl=zh-CN (策略: "Wei Chen" + 组织 "University of Science and Technology of China", 迭代 1 次)
+[2025-12-04 17:30:34] [INFO] 开始查找 ORCID: 0000-0002-1151-3122
+[2025-12-04 17:30:35] [INFO] 作者姓名: Chengliang Wang
+[2025-12-04 17:30:36] [INFO] 作者组织: Huazhong University of Science and Technology
+[2025-12-04 17:30:38] [INFO] 获取到 153 篇 ORCID 论文
+[2025-12-04 17:30:39] [INFO] 第 1 批找到 5 个候选人
+[2025-12-04 17:30:46] [INFO] 找到匹配: https://scholar.google.com/citations?user=AUDmWTYAAAAJ&hl=zh-CN (策略: "Chengliang Wang" + 组织 "Huazhong University of Science and Technology", 迭代 1 次)
+[2025-12-04 17:30:46] [INFO] 开始查找 ORCID: 0000-0003-1932-9810
+[2025-12-04 17:30:48] [INFO] 作者姓名: Yaolin Wang
+[2025-12-04 17:30:49] [INFO] 作者组织: University of Liverpool
+[2025-12-04 17:30:50] [INFO] 获取到 42 篇 ORCID 论文
+[2025-12-04 17:30:50] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:30:53] [INFO] 找到匹配: https://scholar.google.com/citations?user=ILH471YAAAAJ&hl=zh-CN (策略: "Yaolin Wang" + 组织 "University of Liverpool", 迭代 1 次)
+[2025-12-04 17:30:53] [INFO] 开始查找 ORCID: 0000-0002-6376-0897
+[2025-12-04 17:30:54] [INFO] 作者姓名: Xin Tu
+[2025-12-04 17:30:55] [INFO] 作者组织: University of Liverpool
+[2025-12-04 17:30:56] [INFO] 获取到 185 篇 ORCID 论文
+[2025-12-04 17:30:56] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:31:11] [INFO] 找到匹配: https://scholar.google.com/citations?user=qd37ZQMAAAAJ&hl=zh-CN (策略: "Xin Tu" + 组织 "University of Liverpool", 迭代 1 次)
+[2025-12-04 17:31:12] [INFO] 开始查找 ORCID: 0000-0002-7644-9934
+[2025-12-04 17:31:12] [INFO] 作者姓名: Pengfei Xie
+[2025-12-04 17:31:13] [INFO] 作者组织: Zhejiang University
+[2025-12-04 17:31:14] [INFO] 获取到 69 篇 ORCID 论文
+[2025-12-04 17:31:15] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:31:22] [INFO] 找到匹配: https://scholar.google.com/citations?user=tl51tuMAAAAJ&hl=zh-CN (策略: "Pengfei Xie" + 组织 "Zhejiang University", 迭代 1 次)
+[2025-12-04 17:31:22] [INFO] 开始查找 ORCID: 0000-0001-5172-3354
+[2025-12-04 17:31:23] [INFO] 作者姓名: Xianbiao Fu （付先彪）
+[2025-12-04 17:31:24] [INFO] 作者组织: National University of Singapore
+[2025-12-04 17:31:24] [INFO] 获取到 50 篇 ORCID 论文
+[2025-12-04 17:31:25] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 17:31:28] [INFO] 找到匹配: https://scholar.google.com/citations?user=gUtTqT4AAAAJ&hl=zh-CN (策略: "Xianbiao Fu （付先彪）" + 组织 "National University of Singapore", 迭代 1 次)
+[2025-12-04 17:31:28] [INFO] 开始查找 ORCID: 0000-0003-2527-6313
+[2025-12-04 17:31:29] [INFO] 作者姓名: Xiaotu Ma
+[2025-12-04 17:31:30] [INFO] 作者组织: SUNY Binghamton
+[2025-12-04 17:31:31] [INFO] 获取到 33 篇 ORCID 论文
+[2025-12-04 17:31:31] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 17:31:34] [INFO] 找到匹配: https://scholar.google.com/citations?user=zQysxXQAAAAJ&hl=zh-CN (策略: 仅 "Xiaotu Ma", 迭代 1 次)
+[2025-12-04 17:31:35] [INFO] 开始查找 ORCID: 0000-0003-1060-2956
+[2025-12-04 17:31:35] [INFO] 作者姓名: Yan Wang
+[2025-12-04 17:31:37] [INFO] 获取到 33 篇 ORCID 论文
+[2025-12-04 17:31:37] [INFO] 第 1 批找到 10 个候选人
+[2025-12-04 17:32:18] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0003-1060-2956
+[2025-12-04 17:32:18] [INFO] 开始查找 ORCID: 0000-0002-2950-526X
+[2025-12-04 17:32:19] [INFO] 作者姓名: William Tarpeh
+[2025-12-04 17:32:21] [INFO] 获取到 78 篇 ORCID 论文
+[2025-12-04 17:32:21] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:32:25] [INFO] 找到匹配: https://scholar.google.com/citations?user=rVtqGV0AAAAJ&hl=zh-CN (策略: 仅 "William Tarpeh", 迭代 1 次)
+[2025-12-04 17:32:26] [INFO] 开始查找 ORCID: 0000-0002-2767-6743
+[2025-12-04 17:32:26] [INFO] 作者姓名: Jinshuo Zou
+[2025-12-04 17:32:27] [INFO] 作者组织: The University of Adelaide
+[2025-12-04 17:32:28] [INFO] 获取到 1 篇 ORCID 论文
+[2025-12-04 17:32:28] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:32:32] [INFO] 找到匹配: https://scholar.google.com/citations?user=Zno2jOYAAAAJ&hl=zh-CN (策略: "Jinshuo Zou" + 组织 "The University of Adelaide", 迭代 1 次)
+[2025-12-04 17:32:33] [INFO] 开始查找 ORCID: 0000-0001-7253-4560
+[2025-12-04 17:32:33] [INFO] 作者姓名: Divyani Gupta
+[2025-12-04 17:32:34] [INFO] 作者组织: University of Adelaide
+[2025-12-04 17:32:35] [INFO] 获取到 27 篇 ORCID 论文
+[2025-12-04 17:32:35] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:32:38] [INFO] 找到匹配: https://scholar.google.com/citations?user=DR2FRCMAAAAJ&hl=zh-CN (策略: "Divyani Gupta" + 组织 "University of Adelaide", 迭代 1 次)
+[2025-12-04 17:32:39] [INFO] 开始查找 ORCID: 0000-0002-0915-0756
+[2025-12-04 17:32:40] [INFO] 作者姓名: Jodie A. Yuwono
+[2025-12-04 17:32:41] [INFO] 作者组织: The University of Adelaide
+[2025-12-04 17:32:41] [INFO] 获取到 80 篇 ORCID 论文
+[2025-12-04 17:32:42] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:32:45] [INFO] 找到匹配: https://scholar.google.com/citations?user=PYjgeOMAAAAJ&hl=zh-CN (策略: "Jodie A. Yuwono" + 组织 "The University of Adelaide", 迭代 1 次)
+[2025-12-04 17:32:46] [INFO] 开始查找 ORCID: 0000-0002-3268-5708
+[2025-12-04 17:32:46] [INFO] 作者姓名: shilin zhang
+[2025-12-04 17:32:47] [INFO] 作者组织: The University of Adelaide
+[2025-12-04 17:32:48] [INFO] 获取到 54 篇 ORCID 论文
+[2025-12-04 17:32:48] [INFO] 第 1 批找到 3 个候选人
+[2025-12-04 17:32:55] [INFO] 找到匹配: https://scholar.google.com/citations?user=c8UIMmQAAAAJ&hl=zh-CN (策略: "shilin zhang" + 组织 "The University of Adelaide", 迭代 1 次)
+[2025-12-04 17:32:55] [INFO] 开始查找 ORCID: 0000-0003-3464-5301
+[2025-12-04 17:32:56] [INFO] 作者姓名: Zaiping Guo
+[2025-12-04 17:32:56] [INFO] 作者组织: City University of Hong Kong
+[2025-12-04 17:33:01] [INFO] 获取到 678 篇 ORCID 论文
+[2025-12-04 17:33:01] [INFO] 第 1 批找到 4 个候选人
+[2025-12-04 17:33:30] [INFO] 找到匹配: https://scholar.google.com/citations?user=t7pJaWYAAAAJ&hl=zh-CN (策略: "Zaiping Guo" + 组织 "City University of Hong Kong", 迭代 1 次)
+[2025-12-04 17:33:31] [INFO] 开始查找 ORCID: 0000-0002-4831-6958
+[2025-12-04 17:33:32] [INFO] 作者姓名: Florian Altermatt
+[2025-12-04 17:33:33] [INFO] 作者组织: ETH Zurich
+[2025-12-04 17:33:35] [INFO] 获取到 269 篇 ORCID 论文
+[2025-12-04 17:33:35] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:33:39] [INFO] 找到匹配: https://scholar.google.com/citations?user=BPBrTVMAAAAJ&hl=zh-CN (策略: "Florian Altermatt" + 组织 "ETH Zurich", 迭代 1 次)
+[2025-12-04 17:33:39] [INFO] 开始查找 ORCID: 0000-0001-9880-8646
+[2025-12-04 17:33:41] [INFO] 作者姓名: Marjorie Couton
+[2025-12-04 17:33:41] [INFO] 作者组织: Eawag
+[2025-12-04 17:33:42] [INFO] 获取到 19 篇 ORCID 论文
+[2025-12-04 17:33:42] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:33:46] [INFO] 找到匹配: https://scholar.google.com/citations?user=SJQR5ZgAAAAJ&hl=zh-CN (策略: "Marjorie Couton" + 组织 "Eawag", 迭代 1 次)
+[2025-12-04 17:33:46] [INFO] 开始查找 ORCID: 0000-0002-3933-1144
+[2025-12-04 17:33:47] [INFO] 作者姓名: Luca Carraro
+[2025-12-04 17:33:47] [INFO] 作者组织: Eawag
+[2025-12-04 17:33:48] [INFO] 获取到 34 篇 ORCID 论文
+[2025-12-04 17:33:49] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:33:52] [INFO] 找到匹配: https://scholar.google.com/citations?user=Otc0zR4AAAAJ&hl=zh-CN (策略: "Luca Carraro" + 组织 "Eawag", 迭代 1 次)
+[2025-12-04 17:33:53] [INFO] 开始查找 ORCID: 0000-0002-3323-4167
+[2025-12-04 17:33:54] [INFO] 作者姓名: François Keck
+[2025-12-04 17:33:55] [INFO] 获取到 43 篇 ORCID 论文
+[2025-12-04 17:33:56] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:33:59] [INFO] 找到匹配: https://scholar.google.com/citations?user=CI0RpZQAAAAJ&hl=zh-CN (策略: 仅 "François Keck", 迭代 1 次)
+[2025-12-04 17:33:59] [INFO] 开始查找 ORCID: 0000-0002-8153-5511
+[2025-12-04 17:34:00] [INFO] 作者姓名: Lori Lawson Handley
+[2025-12-04 17:34:00] [INFO] 作者组织: UK Centre for Ecology & Hydrology
+[2025-12-04 17:34:01] [INFO] 获取到 57 篇 ORCID 论文
+[2025-12-04 17:34:01] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:34:08] [INFO] 找到匹配: https://scholar.google.com/citations?user=LuB1_3UAAAAJ&hl=zh-CN (策略: "Lori Lawson Handley" + 组织 "UK Centre for Ecology & Hydrology", 迭代 1 次)
+[2025-12-04 17:34:09] [INFO] 开始查找 ORCID: 0000-0002-5465-913X
+[2025-12-04 17:34:10] [INFO] 作者姓名: Florian Leese
+[2025-12-04 17:34:10] [INFO] 作者组织: University of Duisburg-Essen
+[2025-12-04 17:34:11] [INFO] 获取到 183 篇 ORCID 论文
+[2025-12-04 17:34:11] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:34:22] [INFO] 找到匹配: https://scholar.google.com/citations?user=WsjDp3AAAAAJ&hl=zh-CN (策略: "Florian Leese" + 组织 "University of Duisburg-Essen", 迭代 1 次)
+[2025-12-04 17:34:22] [INFO] 开始查找 ORCID: 0000-0001-8974-9963
+[2025-12-04 17:34:23] [INFO] 作者姓名: Xiaowei Zhang
+[2025-12-04 17:34:24] [INFO] 作者组织: Yunnan University
+[2025-12-04 17:34:25] [INFO] 获取到 232 篇 ORCID 论文
+[2025-12-04 17:34:26] [INFO] 第 1 批找到 10 个候选人
+[2025-12-04 17:34:48] [INFO] 找到匹配: https://scholar.google.com/citations?user=udGyC44AAAAJ&hl=zh-CN (策略: 仅 "Xiaowei Zhang", 迭代 1 次)
+[2025-12-04 17:34:49] [INFO] 开始查找 ORCID: 0000-0003-0688-5359
+[2025-12-04 17:34:50] [INFO] 作者姓名: Yan Zhang
+[2025-12-04 17:34:50] [INFO] 作者组织: Nanjing University
+[2025-12-04 17:34:51] [INFO] 获取到 13 篇 ORCID 论文
+[2025-12-04 17:34:51] [INFO] 第 1 批找到 6 个候选人
+[2025-12-04 17:35:26] [INFO] 第 1 批找到 10 个候选人
+[2025-12-04 17:36:14] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0003-0688-5359
+[2025-12-04 17:36:15] [INFO] 开始查找 ORCID: 0000-0002-6182-8691
+[2025-12-04 17:36:16] [INFO] 作者姓名: Rosetta Blackman
+[2025-12-04 17:36:17] [INFO] 作者组织: Eawag
+[2025-12-04 17:36:18] [INFO] 获取到 38 篇 ORCID 论文
+[2025-12-04 17:36:19] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-6182-8691
+[2025-12-04 17:36:19] [INFO] 开始查找 ORCID: 0000-0002-0778-6515
+[2025-12-04 17:36:21] [INFO] 作者姓名: Tanmoy Mukhopadhyay
+[2025-12-04 17:36:21] [INFO] 作者组织: Indian Institute of Technology Kanpur
+[2025-12-04 17:36:23] [INFO] 获取到 159 篇 ORCID 论文
+[2025-12-04 17:36:24] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:36:34] [INFO] 找到匹配: https://scholar.google.com/citations?user=-WJZyx8AAAAJ&hl=zh-CN (策略: 仅 "Tanmoy Mukhopadhyay", 迭代 1 次)
+[2025-12-04 17:36:34] [INFO] 开始查找 ORCID: 0000-0002-3713-311X
+[2025-12-04 17:36:35] [INFO] 作者姓名: Susana Garcia
+[2025-12-04 17:36:36] [INFO] 作者组织: Heriot-Watt University
+[2025-12-04 17:36:38] [INFO] 获取到 134 篇 ORCID 论文
+[2025-12-04 17:36:38] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 17:36:49] [INFO] 找到匹配: https://scholar.google.com/citations?user=DGaz4jEAAAAJ&hl=zh-CN (策略: "Susana Garcia" + 组织 "Heriot-Watt University", 迭代 1 次)
+[2025-12-04 17:36:50] [INFO] 开始查找 ORCID: 0000-0002-1980-0759
+[2025-12-04 17:36:50] [INFO] 作者姓名: Wei Peng
+[2025-12-04 17:36:51] [INFO] 作者组织: Princeton University
+[2025-12-04 17:36:52] [INFO] 获取到 44 篇 ORCID 论文
+[2025-12-04 17:36:53] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:36:56] [INFO] 找到匹配: https://scholar.google.com/citations?user=cUyhcxYAAAAJ&hl=zh-CN (策略: "Wei Peng" + 组织 "Princeton University", 迭代 1 次)
+[2025-12-04 17:36:57] [INFO] 开始查找 ORCID: 0000-0003-0530-8410
+[2025-12-04 17:36:58] [INFO] 作者姓名: Bing Deng
+[2025-12-04 17:36:59] [INFO] 作者组织: Tsinghua University
+[2025-12-04 17:37:00] [INFO] 获取到 83 篇 ORCID 论文
+[2025-12-04 17:37:00] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:37:04] [INFO] 找到匹配: https://scholar.google.com/citations?user=syvvqcEAAAAJ&hl=zh-CN (策略: "Bing Deng" + 组织 "Tsinghua University", 迭代 1 次)
+[2025-12-04 17:37:05] [INFO] 开始查找 ORCID: 0000-0001-8189-0081
+[2025-12-04 17:37:05] [INFO] 作者姓名: Lucas Eddy
+[2025-12-04 17:37:05] [INFO] 作者组织: William Marsh Rice University
+[2025-12-04 17:37:07] [INFO] 获取到 17 篇 ORCID 论文
+[2025-12-04 17:37:07] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:37:10] [INFO] 找到匹配: https://scholar.google.com/citations?user=s9R-VmcAAAAJ&hl=zh-CN (策略: 仅 "Lucas Eddy", 迭代 1 次)
+[2025-12-04 17:37:10] [INFO] 开始查找 ORCID: 0000-0002-8479-9328
+[2025-12-04 17:37:11] [INFO] 作者姓名: James M. Tour
+[2025-12-04 17:37:12] [INFO] 作者组织: Rice University
+[2025-12-04 17:37:15] [INFO] 获取到 1115 篇 ORCID 论文
+[2025-12-04 17:37:15] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 17:38:07] [INFO] 找到匹配: https://scholar.google.com/citations?user=YwoecRMAAAAJ&hl=zh-CN (策略: "James M. Tour" + 组织 "Rice University", 迭代 1 次)
+[2025-12-04 17:38:08] [INFO] 开始查找 ORCID: 0000-0001-6124-8286
+[2025-12-04 17:38:09] [INFO] 作者姓名: Jana Stengler
+[2025-12-04 17:38:09] [INFO] 作者组织: German Aerospace Center (DLR)
+[2025-12-04 17:38:10] [INFO] 获取到 17 篇 ORCID 论文
+[2025-12-04 17:38:10] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:38:13] [INFO] 找到匹配: https://scholar.google.com/citations?user=LdQIEF4AAAAJ&hl=zh-CN (策略: "Jana Stengler" + 组织 "German Aerospace Center (DLR)", 迭代 1 次)
+[2025-12-04 17:38:14] [INFO] 开始查找 ORCID: 0000-0001-5746-3792
+[2025-12-04 17:38:15] [INFO] 作者姓名: Mark Bülow
+[2025-12-04 17:38:17] [WARNING] [WARNING] ORCID 论文列表为空，无法进行匹配
+[2025-12-04 17:38:17] [INFO] 开始查找 ORCID: 0000-0002-3542-3391
+[2025-12-04 17:38:18] [INFO] 作者姓名: Robert Pitz-Paal
+[2025-12-04 17:38:19] [INFO] 作者组织: Deutsches Zentrum für Luft und Raumfahrt
+[2025-12-04 17:38:20] [INFO] 获取到 132 篇 ORCID 论文
+[2025-12-04 17:38:21] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:38:46] [INFO] 找到匹配: https://scholar.google.com/citations?user=MVg-6OEAAAAJ&hl=zh-CN (策略: 仅 "Robert Pitz-Paal", 迭代 1 次)
+[2025-12-04 17:38:46] [INFO] 开始查找 ORCID: 0000-0002-9521-4700
+[2025-12-04 17:38:47] [INFO] 作者姓名: Nathan Johnson
+[2025-12-04 17:38:48] [INFO] 作者组织: Imperial College London
+[2025-12-04 17:38:49] [INFO] 获取到 9 篇 ORCID 论文
+[2025-12-04 17:38:49] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:38:52] [INFO] 找到匹配: https://scholar.google.com/citations?user=y1WFfWwAAAAJ&hl=zh-CN (策略: "Nathan Johnson" + 组织 "Imperial College London", 迭代 1 次)
+[2025-12-04 17:38:53] [INFO] 开始查找 ORCID: 0009-0003-6450-3993
+[2025-12-04 17:38:54] [INFO] 作者姓名: Michael David Jonathan Liebreich
+[2025-12-04 17:38:54] [INFO] 作者组织: Imperial College London
+[2025-12-04 17:38:54] [WARNING] [WARNING] ORCID 论文列表为空，无法进行匹配
+[2025-12-04 17:38:55] [INFO] 开始查找 ORCID: 0000-0003-2984-7777
+[2025-12-04 17:38:56] [INFO] 作者姓名: Daniel Kammen
+[2025-12-04 17:38:56] [INFO] 作者组织: University of California Berkeley
+[2025-12-04 17:38:57] [INFO] 获取到 2 篇 ORCID 论文
+[2025-12-04 17:38:57] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0003-2984-7777
+[2025-12-04 17:38:58] [INFO] 开始查找 ORCID: 0000-0003-1012-7075
+[2025-12-04 17:38:59] [INFO] 作者姓名: Iain Staffell
+[2025-12-04 17:38:59] [INFO] 作者组织: Imperial College London
+[2025-12-04 17:39:00] [INFO] 获取到 72 篇 ORCID 论文
+[2025-12-04 17:39:00] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:39:08] [INFO] 找到匹配: https://scholar.google.com/citations?user=pZzijWIAAAAJ&hl=zh-CN (策略: "Iain Staffell" + 组织 "Imperial College London", 迭代 1 次)
+[2025-12-04 17:39:08] [INFO] 开始查找 ORCID: 0000-0003-4027-8093
+[2025-12-04 17:39:09] [INFO] 作者姓名: Kaijian Zhu
+[2025-12-04 17:39:10] [INFO] 作者组织: City University of Hong Kong
+[2025-12-04 17:39:10] [INFO] 获取到 26 篇 ORCID 论文
+[2025-12-04 17:39:10] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:39:14] [INFO] 找到匹配: https://scholar.google.com/citations?user=4yMPUUwAAAAJ&hl=zh-CN (策略: "Kaijian Zhu" + 组织 "City University of Hong Kong", 迭代 1 次)
+[2025-12-04 17:39:15] [INFO] 开始查找 ORCID: 0009-0003-3443-283X
+[2025-12-04 17:39:15] [INFO] 作者姓名: Lan Wen
+[2025-12-04 17:39:17] [INFO] 获取到 4 篇 ORCID 论文
+[2025-12-04 17:39:17] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 17:39:24] [WARNING] 未找到匹配的 Google Scholar 账号: 0009-0003-3443-283X
+[2025-12-04 17:39:25] [INFO] 开始查找 ORCID: 0009-0008-8309-7376
+[2025-12-04 17:39:25] [INFO] 作者姓名: Shujie Zhou
+[2025-12-04 17:39:26] [INFO] 作者组织: University of New South Wales
+[2025-12-04 17:39:27] [INFO] 获取到 56 篇 ORCID 论文
+[2025-12-04 17:39:27] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 17:39:31] [INFO] 找到匹配: https://scholar.google.com/citations?user=JOfviDcAAAAJ&hl=zh-CN (策略: "Shujie Zhou" + 组织 "University of New South Wales", 迭代 1 次)
+[2025-12-04 17:39:31] [INFO] 开始查找 ORCID: 0000-0001-9142-2126
+[2025-12-04 17:39:32] [INFO] 作者姓名: Yun Hau Ng
+[2025-12-04 17:39:33] [INFO] 作者组织: City University of Hong Kong
+[2025-12-04 17:39:36] [INFO] 获取到 231 篇 ORCID 论文
+[2025-12-04 17:39:36] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:39:51] [INFO] 找到匹配: https://scholar.google.com/citations?user=XNBjDW8AAAAJ&hl=zh-CN (策略: "Yun Hau Ng" + 组织 "City University of Hong Kong", 迭代 1 次)
+[2025-12-04 17:39:52] [INFO] 开始查找 ORCID: 0000-0001-5631-0620
+[2025-12-04 17:39:53] [INFO] 作者姓名: Fatwa Abdi
+[2025-12-04 17:39:54] [INFO] 作者组织: City University of Hong Kong
+[2025-12-04 17:39:56] [INFO] 获取到 131 篇 ORCID 论文
+[2025-12-04 17:39:56] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0001-5631-0620
+[2025-12-04 17:39:57] [INFO] 开始查找 ORCID: 0000-0002-4327-7259
+[2025-12-04 17:39:58] [INFO] 作者姓名: Anabelle Williamson Cardoso
+[2025-12-04 17:39:58] [INFO] 作者组织: University at Buffalo, State University of New York
+[2025-12-04 17:39:59] [INFO] 获取到 28 篇 ORCID 论文
+[2025-12-04 17:40:00] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:40:04] [INFO] 找到匹配: https://scholar.google.com/citations?user=-T7q0CgAAAAJ&hl=zh-CN (策略: 仅 "Anabelle Williamson Cardoso", 迭代 1 次)
+[2025-12-04 17:40:04] [INFO] 开始查找 ORCID: 0000-0002-1442-8433
+[2025-12-04 17:40:04] [INFO] 作者姓名: RUNMING TAO
+[2025-12-04 17:40:05] [INFO] 作者组织: Argonne National Laboratory
+[2025-12-04 17:40:06] [INFO] 获取到 41 篇 ORCID 论文
+[2025-12-04 17:40:07] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:40:10] [INFO] 找到匹配: https://scholar.google.com/citations?user=tb2biqkAAAAJ&hl=zh-CN (策略: "RUNMING TAO" + 组织 "Argonne National Laboratory", 迭代 1 次)
+[2025-12-04 17:40:11] [INFO] 开始查找 ORCID: 0000-0002-4350-8459
+[2025-12-04 17:40:11] [INFO] 作者姓名: Yu Gu
+[2025-12-04 17:40:12] [INFO] 获取到 8 篇 ORCID 论文
+[2025-12-04 17:40:13] [INFO] 第 1 批找到 10 个候选人
+[2025-12-04 17:41:10] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-4350-8459
+[2025-12-04 17:41:11] [INFO] 开始查找 ORCID: 0000-0002-5178-0487
+[2025-12-04 17:41:11] [INFO] 作者姓名: Zhijia Du
+[2025-12-04 17:41:13] [INFO] 获取到 68 篇 ORCID 论文
+[2025-12-04 17:41:13] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-5178-0487
+[2025-12-04 17:41:14] [INFO] 开始查找 ORCID: 0000-0002-8710-9847
+[2025-12-04 17:41:14] [INFO] 作者姓名: Jianlin Li
+[2025-12-04 17:41:15] [INFO] 作者组织: Argonne National Laboratory
+[2025-12-04 17:41:17] [INFO] 获取到 184 篇 ORCID 论文
+[2025-12-04 17:41:17] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:41:27] [INFO] 找到匹配: https://scholar.google.com/citations?user=n2TLDPoAAAAJ&hl=zh-CN (策略: "Jianlin Li" + 组织 "Argonne National Laboratory", 迭代 1 次)
+[2025-12-04 17:41:28] [INFO] 开始查找 ORCID: 0000-0002-0772-164X
+[2025-12-04 17:41:28] [INFO] 作者姓名: Magda H. Barecka
+[2025-12-04 17:41:29] [INFO] 作者组织: Northeastern University
+[2025-12-04 17:41:30] [INFO] 获取到 24 篇 ORCID 论文
+[2025-12-04 17:41:31] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:41:34] [INFO] 找到匹配: https://scholar.google.com/citations?user=db-DO0wAAAAJ&hl=zh-CN (策略: "Magda H. Barecka" + 组织 "Northeastern University", 迭代 1 次)
+[2025-12-04 17:41:35] [INFO] 开始查找 ORCID: 0000-0003-3350-6270
+[2025-12-04 17:41:36] [INFO] 作者姓名: Zhonghao Rao
+[2025-12-04 17:41:36] [INFO] 作者组织: Hebei University of Technology
+[2025-12-04 17:41:38] [INFO] 获取到 230 篇 ORCID 论文
+[2025-12-04 17:41:39] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0003-3350-6270
+[2025-12-04 17:41:39] [INFO] 开始查找 ORCID: 0000-0002-5790-5164
+[2025-12-04 17:41:40] [INFO] 作者姓名: Xuning Feng
+[2025-12-04 17:41:41] [INFO] 作者组织: Tsinghua University
+[2025-12-04 17:41:41] [WARNING] [WARNING] ORCID 论文列表为空，无法进行匹配
+[2025-12-04 17:41:42] [INFO] 开始查找 ORCID: 0000-0002-3685-381X
+[2025-12-04 17:41:42] [INFO] 作者姓名: Zhongjian Li
+[2025-12-04 17:41:44] [INFO] 获取到 24 篇 ORCID 论文
+[2025-12-04 17:41:44] [INFO] 第 1 批找到 3 个候选人
+[2025-12-04 17:41:52] [INFO] 找到匹配: https://scholar.google.com/citations?user=d-DtEgYAAAAJ&hl=zh-CN (策略: 仅 "Zhongjian Li", 迭代 1 次)
+[2025-12-04 17:41:52] [INFO] 开始查找 ORCID: 0000-0001-9795-8503
+[2025-12-04 17:41:53] [INFO] 作者姓名: 侯阳
+[2025-12-04 17:41:54] [INFO] 作者组织: Zhejiang University
+[2025-12-04 17:41:54] [INFO] 获取到 50 篇 ORCID 论文
+[2025-12-04 17:41:55] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0001-9795-8503
+[2025-12-04 17:41:56] [INFO] 开始查找 ORCID: 0000-0002-4503-498X
+[2025-12-04 17:41:56] [INFO] 作者姓名: Jiawei Zhang
+[2025-12-04 17:41:58] [INFO] 获取到 9 篇 ORCID 论文
+[2025-12-04 17:41:59] [INFO] 第 1 批找到 10 个候选人
+[2025-12-04 17:42:31] [INFO] 找到匹配: https://scholar.google.com/citations?user=tbtanasAAAAJ&hl=zh-CN (策略: 仅 "Jiawei Zhang", 迭代 1 次)
+[2025-12-04 17:42:32] [INFO] 开始查找 ORCID: 0000-0002-7350-0001
+[2025-12-04 17:42:33] [INFO] 作者姓名: Yunhong Che
+[2025-12-04 17:42:33] [INFO] 作者组织: Aalborg University
+[2025-12-04 17:42:35] [INFO] 获取到 56 篇 ORCID 论文
+[2025-12-04 17:42:35] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 17:42:39] [INFO] 找到匹配: https://scholar.google.com/citations?user=dqVO8SgAAAAJ&hl=zh-CN (策略: "Yunhong Che" + 组织 "Aalborg University", 迭代 1 次)
+[2025-12-04 17:42:39] [INFO] 开始查找 ORCID: 0000-0003-3164-5234
+[2025-12-04 17:42:39] [INFO] 作者姓名: Ziyou Song
+[2025-12-04 17:42:41] [INFO] 获取到 48 篇 ORCID 论文
+[2025-12-04 17:42:41] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:42:48] [INFO] 找到匹配: https://scholar.google.com/citations?user=CWEeVz4AAAAJ&hl=zh-CN (策略: 仅 "Ziyou Song", 迭代 1 次)
+[2025-12-04 17:42:49] [INFO] 开始查找 ORCID: 0000-0002-2769-4183
+[2025-12-04 17:42:50] [INFO] 作者姓名: Xiaosong Hu
+[2025-12-04 17:42:51] [WARNING] [WARNING] ORCID 论文列表为空，无法进行匹配
+[2025-12-04 17:42:51] [INFO] 开始查找 ORCID: 0000-0002-9893-4244
+[2025-12-04 17:42:52] [INFO] 作者姓名: Roland Horne
+[2025-12-04 17:42:53] [INFO] 作者组织: Stanford University
+[2025-12-04 17:42:54] [INFO] 获取到 28 篇 ORCID 论文
+[2025-12-04 17:42:54] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:43:19] [INFO] 找到匹配: https://scholar.google.com/citations?user=f1brNwEAAAAJ&hl=zh-CN (策略: "Roland Horne" + 组织 "Stanford University", 迭代 1 次)
+[2025-12-04 17:43:20] [INFO] 开始查找 ORCID: 0000-0001-8378-4979
+[2025-12-04 17:43:20] [INFO] 作者姓名: William Ellsworth
+[2025-12-04 17:43:21] [INFO] 作者组织: Stanford University
+[2025-12-04 17:43:22] [INFO] 获取到 1 篇 ORCID 论文
+[2025-12-04 17:43:22] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 17:43:39] [INFO] 找到匹配: https://scholar.google.com/citations?user=PPzR63sAAAAJ&hl=zh-CN (策略: "William Ellsworth" + 组织 "Stanford University", 迭代 1 次)
+[2025-12-04 17:43:39] [INFO] 开始查找 ORCID: 0000-0002-4819-7506
+[2025-12-04 17:43:40] [INFO] 作者姓名: Mari Moora
+[2025-12-04 17:43:41] [INFO] 作者组织: University of Tartu
+[2025-12-04 17:43:42] [INFO] 获取到 142 篇 ORCID 论文
+[2025-12-04 17:43:42] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:43:50] [INFO] 找到匹配: https://scholar.google.com/citations?user=xYWIs9IAAAAJ&hl=zh-CN (策略: "Mari Moora" + 组织 "University of Tartu", 迭代 1 次)
+[2025-12-04 17:43:50] [INFO] 开始查找 ORCID: 0000-0002-0161-6195
+[2025-12-04 17:43:50] [INFO] 作者姓名: John Davison
+[2025-12-04 17:43:51] [INFO] 作者组织: University of Tartu
+[2025-12-04 17:43:51] [WARNING] [WARNING] ORCID 论文列表为空，无法进行匹配
+[2025-12-04 17:43:52] [INFO] 开始查找 ORCID: 0000-0001-7957-6704
+[2025-12-04 17:43:52] [INFO] 作者姓名: Martin Zobel
+[2025-12-04 17:43:54] [INFO] 获取到 173 篇 ORCID 论文
+[2025-12-04 17:43:55] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 17:44:09] [INFO] 找到匹配: https://scholar.google.com/citations?user=C2m74MsAAAAJ&hl=zh-CN (策略: 仅 "Martin Zobel", 迭代 1 次)
+[2025-12-04 17:44:10] [INFO] 开始查找 ORCID: 0000-0001-9682-3295
+[2025-12-04 17:44:10] [INFO] 作者姓名: Qiao Zhang
+[2025-12-04 17:44:11] [INFO] 作者组织: Soochow University
+[2025-12-04 17:44:12] [INFO] 获取到 137 篇 ORCID 论文
+[2025-12-04 17:44:12] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:44:27] [INFO] 找到匹配: https://scholar.google.com/citations?user=i6uepXwAAAAJ&hl=zh-CN (策略: "Qiao Zhang" + 组织 "Soochow University", 迭代 1 次)
+[2025-12-04 17:44:28] [INFO] 开始查找 ORCID: 0000-0003-2327-7259
+[2025-12-04 17:44:28] [INFO] 作者姓名: Wenyu Huang
+[2025-12-04 17:44:31] [INFO] 获取到 199 篇 ORCID 论文
+[2025-12-04 17:44:32] [INFO] 第 1 批找到 6 个候选人
+[2025-12-04 17:44:43] [INFO] 找到匹配: https://scholar.google.com/citations?user=hdvBjAMAAAAJ&hl=zh-CN (策略: 仅 "Wenyu Huang", 迭代 1 次)
+[2025-12-04 17:44:43] [INFO] 开始查找 ORCID: 0000-0001-9254-7430
+[2025-12-04 17:44:44] [INFO] 作者姓名: Jinxing Chen
+[2025-12-04 17:44:44] [INFO] 作者组织: Soochow University
+[2025-12-04 17:44:45] [INFO] 获取到 96 篇 ORCID 论文
+[2025-12-04 17:44:45] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 17:44:53] [INFO] 找到匹配: https://scholar.google.com/citations?user=pp0pYy0AAAAJ&hl=zh-CN (策略: "Jinxing Chen" + 组织 "Soochow University", 迭代 1 次)
+[2025-12-04 17:44:53] [INFO] 开始查找 ORCID: 0000-0002-3341-2998
+[2025-12-04 17:44:54] [INFO] 作者姓名: Ding Ma
+[2025-12-04 17:44:54] [INFO] 作者组织: Peking University
+[2025-12-04 17:44:55] [INFO] 获取到 31 篇 ORCID 论文
+[2025-12-04 17:44:56] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 17:45:14] [INFO] 找到匹配: https://scholar.google.com/citations?user=YB5nuWcAAAAJ&hl=zh-CN (策略: "Ding Ma" + 组织 "Peking University", 迭代 1 次)
+[2025-12-04 17:45:14] [INFO] 开始查找 ORCID: 0000-0001-8337-219X
+[2025-12-04 17:45:14] [INFO] 作者姓名: Bo Weng
+[2025-12-04 17:45:15] [INFO] 作者组织: Institute of Urban Environment
+[2025-12-04 17:45:16] [INFO] 获取到 83 篇 ORCID 论文
+[2025-12-04 17:45:17] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:45:24] [INFO] 找到匹配: https://scholar.google.com/citations?user=uo6X3KYAAAAJ&hl=zh-CN (策略: "Bo Weng" + 组织 "Institute of Urban Environment", 迭代 1 次)
+[2025-12-04 17:45:25] [INFO] 开始查找 ORCID: 0000-0002-3791-0644
+[2025-12-04 17:45:25] [INFO] 作者姓名: Jia-Fang XIE
+[2025-12-04 17:45:26] [WARNING] [WARNING] ORCID 论文列表为空，无法进行匹配
+[2025-12-04 17:45:26] [INFO] 开始查找 ORCID: 0000-0001-9558-5563
+[2025-12-04 17:45:28] [INFO] 作者姓名: Hongpeng Jia
+[2025-12-04 17:45:29] [INFO] 获取到 47 篇 ORCID 论文
+[2025-12-04 17:45:30] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:45:39] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0001-9558-5563
+[2025-12-04 17:45:39] [INFO] 开始查找 ORCID: 0000-0001-8528-509X
+[2025-12-04 17:45:40] [INFO] 作者姓名: Zhu Yongfa
+[2025-12-04 17:45:40] [INFO] 作者组织: Tsinghua University
+[2025-12-04 17:45:44] [INFO] 获取到 667 篇 ORCID 论文
+[2025-12-04 17:45:45] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0001-8528-509X
+[2025-12-04 17:45:45] [INFO] 开始查找 ORCID: 0000-0002-1751-9162
+[2025-12-04 17:45:46] [INFO] 作者姓名: Shaobin Wang
+[2025-12-04 17:45:46] [INFO] 作者组织: The University of Adelaide
+[2025-12-04 17:45:49] [INFO] 获取到 706 篇 ORCID 论文
+[2025-12-04 17:45:49] [INFO] 第 1 批找到 4 个候选人
+[2025-12-04 17:46:22] [INFO] 找到匹配: https://scholar.google.com/citations?user=wzVn_jkAAAAJ&hl=zh-CN (策略: "Shaobin Wang" + 组织 "The University of Adelaide", 迭代 1 次)
+[2025-12-04 17:46:23] [INFO] 开始查找 ORCID: 0000-0002-3858-1037
+[2025-12-04 17:46:23] [INFO] 作者姓名: Yu-Ming Zheng
+[2025-12-04 17:46:24] [INFO] 作者组织: Institute of Urban Environment Chinese Academy of Sciences
+[2025-12-04 17:46:25] [INFO] 获取到 138 篇 ORCID 论文
+[2025-12-04 17:46:26] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:46:33] [INFO] 找到匹配: https://scholar.google.com/citations?user=wD52EjcAAAAJ&hl=zh-CN (策略: "Yu-Ming Zheng" + 组织 "Institute of Urban Environment Chinese Academy of Sciences", 迭代 1 次)
+[2025-12-04 17:56:50] [INFO] 开始查找 ORCID: 0000-0001-6663-8494
+[2025-12-04 17:56:51] [INFO] 作者姓名: Jennifer L. Hawkin
+[2025-12-04 17:56:51] [INFO] 作者组织: University of Cambridge
+[2025-12-04 17:56:52] [INFO] 获取到 3 篇 ORCID 论文
+[2025-12-04 17:56:53] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 17:56:56] [INFO] 找到匹配: https://scholar.google.com/citations?user=QNNPim0AAAAJ&hl=zh-CN (策略: 仅 "Jennifer L. Hawkin", 迭代 1 次)
+[2025-12-04 17:57:41] [INFO] 开始查找 ORCID: 0000-0002-4587-6132
+[2025-12-04 17:57:42] [INFO] 作者姓名: Zheng-Yang Huo
+[2025-12-04 17:57:44] [INFO] 作者组织: Sungkyunkwan University 
+[2025-12-04 17:57:45] [WARNING] [WARNING] ORCID 论文列表为空，无法进行匹配
+[2025-12-04 17:58:46] [INFO] 开始查找 ORCID: 0000-0003-4572-3459
+[2025-12-04 17:58:47] [INFO] 作者姓名: Alexandra Ramadan
+[2025-12-04 17:58:47] [INFO] 作者组织: University of Sheffield
+[2025-12-04 17:58:48] [INFO] 获取到 43 篇 ORCID 论文
+[2025-12-04 17:58:49] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-04 17:58:52] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0003-4572-3459
+[2025-12-04 18:06:13] [INFO] 开始查找 ORCID: 0000-0003-4572-3459
+[2025-12-04 18:06:14] [INFO] 作者姓名: Alexandra Ramadan
+[2025-12-04 18:06:14] [INFO] 作者组织: University of Sheffield
+[2025-12-04 18:06:15] [INFO] 获取到 43 篇 ORCID 论文
+[2025-12-04 18:06:15] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 18:06:19] [INFO] 找到匹配: https://scholar.google.com/citations?user=1n-5WB8AAAAJ&hl=zh-CN (策略: "Alexandra Ramadan" + 组织 "University of Sheffield", 迭代 1 次)
+[2025-12-04 18:11:36] [INFO] 开始查找 ORCID: 0000-0003-4572-3459
+[2025-12-04 18:11:36] [INFO] 作者姓名: Alexandra Ramadan
+[2025-12-04 18:11:37] [INFO] 作者组织: University of Sheffield
+[2025-12-04 18:11:38] [INFO] 获取到 43 篇 ORCID 论文
+[2025-12-04 18:11:38] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 18:11:42] [INFO] 找到匹配: https://scholar.google.com/citations?user=1n-5WB8AAAAJ&hl=zh-CN (策略: "Alexandra Ramadan" + 组织 "University of Sheffield", 迭代 1 次)
+[2025-12-04 18:14:44] [INFO] 开始查找 ORCID: 0000-0002-6182-8691
+[2025-12-04 18:14:45] [INFO] 作者姓名: Rosetta Blackman
+[2025-12-04 18:14:45] [INFO] 作者组织: Eawag
+[2025-12-04 18:14:46] [INFO] 获取到 38 篇 ORCID 论文
+[2025-12-04 18:14:47] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 18:14:50] [INFO] 找到匹配: https://scholar.google.com/citations?user=xDsgnREAAAAJ&hl=zh-CN (策略: "Rosetta Blackman" + 组织 "Eawag", 迭代 1 次)
+[2025-12-04 18:15:40] [INFO] 开始查找 ORCID: 0000-0003-2984-7777
+[2025-12-04 18:15:41] [INFO] 作者姓名: Daniel Kammen
+[2025-12-04 18:15:42] [INFO] 作者组织: University of California Berkeley
+[2025-12-04 18:15:42] [INFO] 获取到 2 篇 ORCID 论文
+[2025-12-04 18:15:43] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 18:16:11] [INFO] 找到匹配: https://scholar.google.com/citations?user=dzoa18QAAAAJ&hl=zh-CN (策略: "Daniel Kammen" + 组织 "University of California Berkeley", 迭代 1 次)
+[2025-12-04 18:17:27] [INFO] 开始查找 ORCID: 0000-0002-5790-5164
+[2025-12-04 18:17:27] [INFO] 作者姓名: Xuning Feng
+[2025-12-04 18:17:28] [INFO] 作者组织: Tsinghua University
+[2025-12-04 18:17:29] [WARNING] [WARNING] ORCID 论文列表为空，无法进行匹配
+[2025-12-04 18:17:41] [INFO] 开始查找 ORCID: 0000-0001-9795-8503
+[2025-12-04 18:17:42] [INFO] 作者姓名: 侯阳
+[2025-12-04 18:17:43] [INFO] 作者组织: Zhejiang University
+[2025-12-04 18:17:43] [INFO] 获取到 50 篇 ORCID 论文
+[2025-12-04 18:17:44] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-04 18:17:47] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0001-9795-8503
+[2025-12-04 18:41:29] [INFO] 开始查找 ORCID: 0000-0001-9795-8503
+[2025-12-04 18:41:30] [INFO] 作者姓名: 侯阳 -> hou yang
+[2025-12-04 18:41:31] [INFO] 作者组织: Zhejiang University
+[2025-12-04 18:41:32] [INFO] 获取到 50 篇 ORCID 论文
+[2025-12-04 18:41:32] [INFO] 第 1 批找到 3 个候选人
+[2025-12-04 18:42:20] [INFO] 第 1 批找到 9 个候选人
+[2025-12-04 18:43:01] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-04 18:43:05] [INFO] 论文搜索找到 1 个候选人
+[2025-12-04 18:43:24] [INFO] 通过论文搜索找到匹配: https://scholar.google.com/citations?user=ZmiirIwAAAAJ&hl=en&num=20&oi=sra
+[2025-12-04 19:02:07] [INFO] 开始查找 ORCID: 0000-0001-9795-8503
+[2025-12-04 19:02:08] [INFO] 作者姓名: 侯阳 -> hou yang
+[2025-12-04 19:02:09] [INFO] 作者组织: Zhejiang University
+[2025-12-04 19:02:09] [INFO] 获取到 50 篇 ORCID 论文
+[2025-12-04 19:02:10] [INFO] 第 1 批找到 4 个候选人
+[2025-12-04 19:02:27] [INFO] 找到匹配: https://scholar.google.com/citations?user=ZmiirIwAAAAJ&hl=zh-CN (策略: "hou yang" + 组织 "Zhejiang University", 迭代 1 次)
+[2025-12-04 19:08:40] [INFO] 开始查找 ORCID: 0000-0001-9795-8503
+[2025-12-04 19:08:41] [INFO] 作者姓名: 侯阳 -> hou yang
+[2025-12-04 19:08:42] [INFO] 作者组织: Zhejiang University
+[2025-12-04 19:08:43] [INFO] 获取到 50 篇 ORCID 论文
+[2025-12-04 19:08:44] [INFO] 第 1 批找到 3 个候选人
+[2025-12-04 19:09:31] [INFO] 第 1 批找到 9 个候选人
+[2025-12-04 19:10:12] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-04 19:10:12] [INFO] 论文 'Deformable and flexible electr...' 找到 1 个候选人
+[2025-12-04 19:10:30] [INFO] 通过论文搜索找到匹配: https://scholar.google.com/citations?user=ZmiirIwAAAAJ&hl=en&num=20&oi=sra
+[2025-12-04 19:11:04] [INFO] 开始查找 ORCID: 0000-0002-2769-4183
+[2025-12-04 19:11:04] [INFO] 作者姓名: Xiaosong Hu -> xiaosong hu
+[2025-12-04 19:11:05] [WARNING] [WARNING] ORCID 论文列表为空，无法进行匹配
+[2025-12-04 19:11:23] [INFO] 开始查找 ORCID: 0000-0002-0161-6195
+[2025-12-04 19:11:23] [INFO] 作者姓名: John Davison -> john davison
+[2025-12-04 19:11:24] [INFO] 作者组织: University of Tartu
+[2025-12-04 19:11:25] [WARNING] [WARNING] ORCID 论文列表为空，无法进行匹配
+[2025-12-04 19:11:47] [INFO] 开始查找 ORCID: 0000-0002-0161-6195
+[2025-12-04 19:11:48] [INFO] 作者姓名: John Davison -> john davison
+[2025-12-04 19:11:49] [INFO] 作者组织: University of Tartu
+[2025-12-04 19:11:49] [WARNING] [WARNING] ORCID 论文列表为空，无法进行匹配
+[2025-12-04 19:11:54] [INFO] 开始查找 ORCID: 0000-0002-3791-0644
+[2025-12-04 19:11:55] [INFO] 作者姓名: Jia-Fang XIE -> jia fang xie
+[2025-12-04 19:11:57] [WARNING] [WARNING] ORCID 论文列表为空，无法进行匹配
+[2025-12-04 19:12:10] [INFO] 开始查找 ORCID: 0000-0003-3350-6270
+[2025-12-04 19:12:10] [INFO] 作者姓名: Zhonghao Rao -> zhonghao rao
+[2025-12-04 19:12:11] [INFO] 作者组织: Hebei University of Technology
+[2025-12-04 19:12:12] [INFO] 获取到 230 篇 ORCID 论文
+[2025-12-04 19:12:13] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-04 19:12:15] [INFO] 论文 'Multi-directional synergistic ...' 找到 1 个候选人
+[2025-12-04 19:12:29] [INFO] 通过论文搜索找到匹配: https://scholar.google.com/citations?user=EWAs0HIAAAAJ&hl=en&num=20&oi=sra
+[2025-12-04 19:15:52] [INFO] 开始查找 ORCID: 0000-0002-0778-6515
+[2025-12-04 19:15:53] [INFO] 作者姓名: Tanmoy Mukhopadhyay -> tanmoy mukhopadhyay
+[2025-12-04 19:15:54] [INFO] 作者组织: Indian Institute of Technology Kanpur
+[2025-12-04 19:15:56] [INFO] 获取到 159 篇 ORCID 论文
+[2025-12-04 19:15:56] [INFO] 第 1 批找到 4 个候选人
+[2025-12-04 19:16:55] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 19:17:05] [INFO] 找到匹配: https://scholar.google.com/citations?user=-WJZyx8AAAAJ&hl=zh-CN (策略: 仅 "tanmoy mukhopadhyay", 迭代 1 次)
+[2025-12-04 19:17:33] [INFO] 开始查找 ORCID: 0000-0002-5178-0487
+[2025-12-04 19:17:34] [INFO] 作者姓名: Zhijia Du -> zhijia du
+[2025-12-04 19:17:36] [INFO] 获取到 68 篇 ORCID 论文
+[2025-12-04 19:17:37] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-04 19:17:40] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-5178-0487
+[2025-12-04 19:18:36] [INFO] 开始查找 ORCID: 0000-0002-4831-6958
+[2025-12-04 19:18:37] [INFO] 作者姓名: Florian Altermatt -> florian altermatt
+[2025-12-04 19:18:38] [INFO] 作者组织: ETH Zurich
+[2025-12-04 19:18:40] [INFO] 获取到 269 篇 ORCID 论文
+[2025-12-04 19:18:40] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 19:18:58] [INFO] 找到匹配: https://scholar.google.com/citations?user=xczFuuQAAAAJ&hl=zh-CN (策略: "florian altermatt" + 组织 "ETH Zurich", 迭代 1 次)
+[2025-12-04 19:19:24] [INFO] 开始查找 ORCID: 0000-0003-2494-8974
+[2025-12-04 19:19:24] [INFO] 作者姓名: Iris KM Yu -> iris km yu
+[2025-12-04 19:19:26] [INFO] 作者组织: Hong Kong Polytechnic University
+[2025-12-04 19:19:27] [INFO] 获取到 40 篇 ORCID 论文
+[2025-12-04 19:19:27] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 19:19:31] [INFO] 找到匹配: https://scholar.google.com/citations?user=7brvRFIAAAAJ&hl=zh-CN (策略: 仅 "iris km yu", 迭代 1 次)
+[2025-12-04 19:22:21] [INFO] 开始查找 ORCID: 0000-0003-1060-2956
+[2025-12-04 19:22:22] [INFO] 作者姓名: Yan Wang -> yan wang
+[2025-12-04 19:22:24] [INFO] 获取到 33 篇 ORCID 论文
+[2025-12-04 19:22:25] [INFO] 第 1 批找到 10 个候选人
+[2025-12-04 19:23:08] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-04 19:23:10] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0003-1060-2956
+[2025-12-04 19:27:08] [INFO] 开始查找 ORCID: 0000-0002-4831-6958
+[2025-12-04 19:27:09] [INFO] 作者姓名: Florian Altermatt -> florian altermatt
+[2025-12-04 19:27:10] [INFO] 作者组织: ETH Zurich
+[2025-12-04 19:27:12] [INFO] 获取到 269 篇 ORCID 论文
+[2025-12-04 19:27:12] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 19:27:30] [INFO] 找到匹配: https://scholar.google.com/citations?user=xczFuuQAAAAJ&hl=zh-CN (策略: "florian altermatt" + 组织 "ETH Zurich", 迭代 1 次)
+[2025-12-04 19:35:45] [INFO] 开始查找 ORCID: 0009-0001-6437-2044
+[2025-12-04 19:35:46] [INFO] 作者姓名: Lisa Schlott -> lisa schlott
+[2025-12-04 19:35:47] [INFO] 作者组织: University of Münster
+[2025-12-04 19:35:48] [INFO] 获取到 3 篇 ORCID 论文
+[2025-12-04 19:35:49] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-04 19:35:50] [WARNING] 未找到匹配的 Google Scholar 账号: 0009-0001-6437-2044
+[2025-12-04 19:35:51] [INFO] 开始查找 ORCID: 0000-0003-2892-825X
+[2025-12-04 19:35:51] [INFO] 作者姓名: Moritz Gutsch -> moritz gutsch
+[2025-12-04 19:35:53] [INFO] 获取到 4 篇 ORCID 论文
+[2025-12-04 19:35:53] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 19:35:56] [INFO] 找到匹配: https://scholar.google.com/citations?user=rNnDA0UAAAAJ&hl=zh-CN (策略: 仅 "moritz gutsch", 迭代 1 次)
+[2025-12-04 19:35:56] [INFO] 开始查找 ORCID: 0000-0003-0237-691X
+[2025-12-04 19:35:57] [INFO] 作者姓名: Jens Leker -> jens leker
+[2025-12-04 19:35:59] [INFO] 作者组织: University of Münster
+[2025-12-04 19:36:00] [INFO] 获取到 61 篇 ORCID 论文
+[2025-12-04 19:36:00] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 19:36:15] [INFO] 找到匹配: https://scholar.google.com/citations?user=1pGfpTcAAAAJ&hl=zh-CN (策略: 仅 "jens leker", 迭代 1 次)
+[2025-12-04 19:36:15] [INFO] 开始查找 ORCID: 0009-0006-2360-0449
+[2025-12-04 19:36:16] [INFO] 作者姓名: Abu Danish Aiman Bin Abu Sofian -> abu danish aiman bin abu sofian
+[2025-12-04 19:36:17] [INFO] 获取到 1 篇 ORCID 论文
+[2025-12-04 19:36:17] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-04 19:36:18] [WARNING] 未找到匹配的 Google Scholar 账号: 0009-0006-2360-0449
+[2025-12-04 19:36:19] [INFO] 开始查找 ORCID: 0000-0001-6287-9258
+[2025-12-04 19:36:19] [INFO] 作者姓名: Annabelle Maletzko -> annabelle maletzko
+[2025-12-04 19:36:20] [INFO] 作者组织: Fraunhofer Institute for Chemical Technology
+[2025-12-04 19:36:20] [INFO] 获取到 14 篇 ORCID 论文
+[2025-12-04 19:36:21] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 19:36:24] [INFO] 找到匹配: https://scholar.google.com/citations?user=c2D1HwwAAAAJ&hl=zh-CN (策略: "annabelle maletzko" + 组织 "Fraunhofer Institute for Chemical Technology", 迭代 1 次)
+[2025-12-04 19:36:25] [INFO] 开始查找 ORCID: 0000-0001-9693-1595
+[2025-12-04 19:36:26] [INFO] 作者姓名: Liang Feng -> liang feng
+[2025-12-04 19:36:26] [INFO] 作者组织: Duke University
+[2025-12-04 19:36:27] [INFO] 获取到 61 篇 ORCID 论文
+[2025-12-04 19:36:28] [INFO] 第 1 批找到 6 个候选人
+[2025-12-04 19:36:32] [INFO] 找到匹配: https://scholar.google.com/citations?user=78cGTeEAAAAJ&hl=zh-CN (策略: "liang feng" + 组织 "Duke University", 迭代 1 次)
+[2025-12-04 19:36:32] [INFO] 开始查找 ORCID: 0000-0002-6583-5354
+[2025-12-04 19:36:33] [INFO] 作者姓名: Sascha Feldmann -> sascha feldmann
+[2025-12-04 19:36:34] [INFO] 作者组织: Harvard University
+[2025-12-04 19:36:35] [INFO] 获取到 69 篇 ORCID 论文
+[2025-12-04 19:36:35] [INFO] 第 1 批找到 3 个候选人
+[2025-12-04 19:36:39] [INFO] 找到匹配: https://scholar.google.com/citations?user=U6NvOIcAAAAJ&hl=zh-CN (策略: "sascha feldmann" + 组织 "Harvard University", 迭代 1 次)
+[2025-12-04 19:36:39] [INFO] 开始查找 ORCID: 0000-0002-7769-0869
+[2025-12-04 19:36:40] [INFO] 作者姓名: Carolin M. Sutter-Fella -> carolin m sutter fella
+[2025-12-04 19:36:40] [INFO] 作者组织: Lawrence Berkeley National Laboratory
+[2025-12-04 19:36:41] [INFO] 获取到 77 篇 ORCID 论文
+[2025-12-04 19:36:42] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 19:36:49] [INFO] 找到匹配: https://scholar.google.com/citations?user=rzawnbUAAAAJ&hl=zh-CN (策略: "carolin m sutter fella" + 组织 "Lawrence Berkeley National Laboratory", 迭代 1 次)
+[2025-12-04 19:36:49] [INFO] 开始查找 ORCID: 0000-0002-8364-4295
+[2025-12-04 19:36:50] [INFO] 作者姓名: Yuanyuan Zhou -> yuanyuan zhou
+[2025-12-04 19:36:51] [INFO] 作者组织: Hong Kong University of Science and Technology
+[2025-12-04 19:36:53] [INFO] 获取到 147 篇 ORCID 论文
+[2025-12-04 19:36:53] [INFO] 第 1 批找到 4 个候选人
+[2025-12-04 19:37:01] [INFO] 找到匹配: https://scholar.google.com/citations?user=ZbofhOcAAAAJ&hl=zh-CN (策略: "yuanyuan zhou" + 组织 "Hong Kong University of Science and Technology", 迭代 1 次)
+[2025-12-04 19:37:02] [INFO] 开始查找 ORCID: 0000-0001-5303-347X
+[2025-12-04 19:37:03] [INFO] 作者姓名: Li Zeng -> li zeng
+[2025-12-04 19:37:04] [INFO] 获取到 1 篇 ORCID 论文
+[2025-12-04 19:37:05] [INFO] 第 1 批找到 10 个候选人
+[2025-12-04 19:37:44] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-04 19:37:45] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0001-5303-347X
+[2025-12-04 19:37:46] [INFO] 开始查找 ORCID: 0000-0003-2867-8721
+[2025-12-04 19:37:46] [INFO] 作者姓名: Shuhao  Li -> shuhao li
+[2025-12-04 19:37:47] [INFO] 作者组织: Swinburne University of Technology
+[2025-12-04 19:37:48] [INFO] 获取到 9 篇 ORCID 论文
+[2025-12-04 19:37:48] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 19:37:52] [INFO] 找到匹配: https://scholar.google.com/citations?user=RZfM33AAAAAJ&hl=zh-CN (策略: "shuhao li" + 组织 "Swinburne University of Technology", 迭代 1 次)
+[2025-12-04 19:37:53] [INFO] 开始查找 ORCID: 0000-0002-9014-1231
+[2025-12-04 19:37:53] [INFO] 作者姓名: Fanran Meng -> fanran meng
+[2025-12-04 19:37:54] [INFO] 作者组织: University of Sheffield
+[2025-12-04 19:37:55] [INFO] 获取到 46 篇 ORCID 论文
+[2025-12-04 19:37:55] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 19:37:59] [INFO] 找到匹配: https://scholar.google.com/citations?user=D9eC2XoAAAAJ&hl=zh-CN (策略: "fanran meng" + 组织 "University of Sheffield", 迭代 1 次)
+[2025-12-04 19:37:59] [INFO] 开始查找 ORCID: 0000-0001-6663-8494
+[2025-12-04 19:38:00] [INFO] 作者姓名: Jennifer L. Hawkin -> jennifer l hawkin
+[2025-12-04 19:38:01] [INFO] 作者组织: University of Cambridge
+[2025-12-04 19:38:01] [INFO] 获取到 3 篇 ORCID 论文
+[2025-12-04 19:38:02] [INFO] 第 1 批找到 3 个候选人
+[2025-12-04 19:38:05] [INFO] 找到匹配: https://scholar.google.com/citations?user=QNNPim0AAAAJ&hl=zh-CN (策略: 仅 "jennifer l hawkin", 迭代 1 次)
+[2025-12-04 19:38:05] [INFO] 开始查找 ORCID: 0000-0002-9227-1566
+[2025-12-04 19:38:05] [INFO] 作者姓名: Stella Job -> stella job
+[2025-12-04 19:38:06] [INFO] 作者组织: Grazebrook Innovation
+[2025-12-04 19:38:07] [INFO] 获取到 6 篇 ORCID 论文
+[2025-12-04 19:38:08] [INFO] 第 1 批找到 10 个候选人
+[2025-12-04 19:38:47] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-04 19:38:54] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-9227-1566
+[2025-12-04 19:38:54] [INFO] 开始查找 ORCID: 0000-0002-7936-9171
+[2025-12-04 19:38:55] [INFO] 作者姓名: Lixiao Zhang -> lixiao zhang
+[2025-12-04 19:38:56] [INFO] 作者组织: Beijing Normal University
+[2025-12-04 19:38:56] [INFO] 获取到 1 篇 ORCID 论文
+[2025-12-04 19:38:57] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 19:39:04] [INFO] 找到匹配: https://scholar.google.com/citations?user=SyElNV0AAAAJ&hl=zh-CN (策略: "lixiao zhang" + 组织 "Beijing Normal University", 迭代 1 次)
+[2025-12-04 19:39:05] [INFO] 开始查找 ORCID: 0000-0002-4587-6132
+[2025-12-04 19:39:06] [INFO] 作者姓名: Zheng-Yang Huo -> zheng yang huo
+[2025-12-04 19:39:06] [INFO] 作者组织: Sungkyunkwan University 
+[2025-12-04 19:39:07] [WARNING] [WARNING] ORCID 论文列表为空，无法进行匹配
+[2025-12-04 19:39:07] [INFO] 开始查找 ORCID: 0000-0002-0079-5806
+[2025-12-04 19:39:08] [INFO] 作者姓名: Sang-Woo Kim -> sang woo kim
+[2025-12-04 19:39:09] [INFO] 作者组织: Yonsei University
+[2025-12-04 19:39:11] [INFO] 获取到 417 篇 ORCID 论文
+[2025-12-04 19:39:12] [INFO] 第 1 批找到 6 个候选人
+[2025-12-04 19:39:33] [INFO] 找到匹配: https://scholar.google.com/citations?user=qCyU-VoAAAAJ&hl=zh-CN (策略: "sang woo kim" + 组织 "Yonsei University", 迭代 1 次)
+[2025-12-04 19:39:33] [INFO] 开始查找 ORCID: 0000-0003-4572-3459
+[2025-12-04 19:39:34] [INFO] 作者姓名: Alexandra Ramadan -> alexandra ramadan
+[2025-12-04 19:39:35] [INFO] 作者组织: University of Sheffield
+[2025-12-04 19:39:36] [INFO] 获取到 43 篇 ORCID 论文
+[2025-12-04 19:39:36] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 19:39:40] [INFO] 找到匹配: https://scholar.google.com/citations?user=1n-5WB8AAAAJ&hl=zh-CN (策略: "alexandra ramadan" + 组织 "University of Sheffield", 迭代 1 次)
+[2025-12-04 19:39:40] [INFO] 开始查找 ORCID: 0009-0006-7014-6808
+[2025-12-04 19:39:41] [INFO] 作者姓名: Dilip Rijal -> dilip rijal
+[2025-12-04 19:39:42] [INFO] 作者组织: Swinburne University of Technology
+[2025-12-04 19:39:43] [INFO] 获取到 5 篇 ORCID 论文
+[2025-12-04 19:39:43] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 19:39:47] [INFO] 找到匹配: https://scholar.google.com/citations?user=uDQGxigAAAAJ&hl=zh-CN (策略: "dilip rijal" + 组织 "Swinburne University of Technology", 迭代 1 次)
+[2025-12-04 19:39:47] [INFO] 开始查找 ORCID: 0000-0002-1944-7166
+[2025-12-04 19:39:48] [INFO] 作者姓名: Guilin Ruan -> guilin ruan
+[2025-12-04 19:39:49] [INFO] 作者组织: Technion – Israel Institute of Technology
+[2025-12-04 19:39:49] [INFO] 获取到 11 篇 ORCID 论文
+[2025-12-04 19:39:50] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 19:39:53] [INFO] 找到匹配: https://scholar.google.com/citations?user=Cg0kzkkAAAAJ&hl=zh-CN (策略: "guilin ruan" + 组织 "Technion – Israel Institute of Technology", 迭代 1 次)
+[2025-12-04 19:39:54] [INFO] 开始查找 ORCID: 0000-0002-9497-0539
+[2025-12-04 19:39:55] [INFO] 作者姓名: Fiona Todman -> fiona todman
+[2025-12-04 19:39:56] [INFO] 获取到 2 篇 ORCID 论文
+[2025-12-04 19:39:56] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-04 19:39:58] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-9497-0539
+[2025-12-04 19:39:59] [INFO] 开始查找 ORCID: 0009-0002-0084-1267
+[2025-12-04 19:39:59] [INFO] 作者姓名: Rotem Arad -> rotem arad
+[2025-12-04 19:40:00] [INFO] 作者组织: H2Pro (Israel)
+[2025-12-04 19:40:00] [INFO] 获取到 1 篇 ORCID 论文
+[2025-12-04 19:40:01] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 19:40:08] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-04 19:40:10] [WARNING] 未找到匹配的 Google Scholar 账号: 0009-0002-0084-1267
+[2025-12-04 19:40:10] [INFO] 开始查找 ORCID: 0000-0001-8895-6303
+[2025-12-04 19:40:11] [INFO] 作者姓名: Tom Smolinka -> tom smolinka
+[2025-12-04 19:40:12] [INFO] 作者组织: Fraunhofer Institute for Solar Energy Systems
+[2025-12-04 19:40:13] [WARNING] [WARNING] ORCID 论文列表为空，无法进行匹配
+[2025-12-04 19:40:13] [INFO] 开始查找 ORCID: 0000-0002-2427-7763
+[2025-12-04 19:40:14] [INFO] 作者姓名: Jens Oluf Jensen -> jens oluf jensen
+[2025-12-04 19:40:14] [INFO] 作者组织: Technical University of Denmark
+[2025-12-04 19:40:16] [INFO] 获取到 330 篇 ORCID 论文
+[2025-12-04 19:40:17] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 19:40:56] [INFO] 找到匹配: https://scholar.google.com/citations?user=nevwA8AAAAAJ&hl=zh-CN (策略: "jens oluf jensen" + 组织 "Technical University of Denmark", 迭代 1 次)
+[2025-12-04 19:40:57] [INFO] 开始查找 ORCID: 0000-0001-8067-5240
+[2025-12-04 19:40:57] [INFO] 作者姓名: Mark Symes -> mark symes
+[2025-12-04 19:40:57] [INFO] 作者组织: University of Glasgow
+[2025-12-04 19:40:58] [INFO] 获取到 90 篇 ORCID 论文
+[2025-12-04 19:40:58] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 19:41:06] [INFO] 找到匹配: https://scholar.google.com/citations?user=JPU4JfAAAAAJ&hl=zh-CN (策略: "mark symes" + 组织 "University of Glasgow", 迭代 1 次)
+[2025-12-04 19:41:06] [INFO] 开始查找 ORCID: 0000-0002-2512-0370
+[2025-12-04 19:41:07] [INFO] 作者姓名: Avner Rothschild -> avner rothschild
+[2025-12-04 19:41:07] [INFO] 作者组织: H2Pro
+[2025-12-04 19:41:08] [INFO] 获取到 128 篇 ORCID 论文
+[2025-12-04 19:41:09] [INFO] 第 1 批找到 2 个候选人
+[2025-12-04 19:41:17] [INFO] 找到匹配: https://scholar.google.com/citations?user=DrESWpsAAAAJ&hl=zh-CN (策略: 仅 "avner rothschild", 迭代 1 次)
+[2025-12-04 19:41:17] [INFO] 开始查找 ORCID: 0000-0003-3831-4489
+[2025-12-04 19:41:18] [INFO] 作者姓名: Qiaozhi Zhang -> qiaozhi zhang
+[2025-12-04 19:41:19] [INFO] 作者组织: National University of Singapore
+[2025-12-04 19:41:20] [INFO] 获取到 13 篇 ORCID 论文
+[2025-12-04 19:41:20] [INFO] 第 1 批找到 1 个候选人
+[2025-12-04 19:41:24] [INFO] 找到匹配: https://scholar.google.com/citations?user=turRnJQAAAAJ&hl=zh-CN (策略: "qiaozhi zhang" + 组织 "National University of Singapore", 迭代 1 次)
+[2025-12-04 19:41:24] [INFO] 开始查找 ORCID: 0000-0002-8046-9022
+[2025-12-04 19:41:25] [INFO] 作者姓名: Zhuo Li -> zhuo li
+[2025-12-04 19:41:26] [INFO] 作者组织: National University of Singapore
+[2025-12-04 19:41:27] [INFO] 获取到 14 篇 ORCID 论文
+[2025-12-04 19:41:27] [INFO] 第 1 批找到 3 个候选人
+[2025-12-04 19:41:49] [INFO] 第 1 批找到 10 个候选人

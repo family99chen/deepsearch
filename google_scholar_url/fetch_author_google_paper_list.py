@@ -2,6 +2,7 @@
 从 Google Scholar 个人页面获取作者的论文列表
 
 特性：
+- 使用假 cookies，无需登录
 - 支持指数退避重试
 - 支持代理配置
 - 自动分页获取所有论文
@@ -9,11 +10,11 @@
 
 import os
 import sys
-import json
 import time
 import random
+import string
 import requests
-from typing import List, Optional
+from typing import List, Optional, Dict
 from urllib.parse import urlparse, parse_qs
 from bs4 import BeautifulSoup
 from pathlib import Path
@@ -39,15 +40,64 @@ except ImportError:
     DEFAULT_RETRYABLE_STATUS_CODES = (429, 500, 502, 503, 504)
 
 
-class GoogleScholarProfileScraper:
-    """Google Scholar 个人主页文章爬虫（带指数退避重试）"""
+def generate_random_string(length: int, chars: str = None) -> str:
+    """生成随机字符串"""
+    if chars is None:
+        chars = string.ascii_letters + string.digits
+    return ''.join(random.choice(chars) for _ in range(length))
+
+
+def generate_fake_cookies() -> Dict[str, str]:
+    """
+    生成假的 Google cookies
+    让请求看起来像是登录用户
     
-    # 默认 cookies 路径：脚本所在目录
-    DEFAULT_COOKIES_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "google_cookies.json")
+    Returns:
+        cookies 字典
+    """
+    timestamp = int(time.time())
+    
+    fake_cookies = {
+        # 主要登录 cookies
+        'SID': generate_random_string(68, string.ascii_letters + string.digits + '-_'),
+        'HSID': generate_random_string(11, string.ascii_letters + string.digits),
+        'SSID': generate_random_string(11, string.ascii_letters + string.digits),
+        'APISID': generate_random_string(32, string.ascii_letters + string.digits + '-_'),
+        'SAPISID': generate_random_string(43, string.ascii_letters + string.digits + '-_/'),
+        
+        # Google Scholar 特定 cookies
+        'GSP': f'LM={timestamp}:S={generate_random_string(16)}',
+        'NID': f'{random.randint(500, 520)}=' + generate_random_string(170, string.ascii_letters + string.digits + '-_='),
+        
+        # 首选项 cookies
+        'SEARCH_SAMESITE': 'CgQIz5sB',
+        'AEC': generate_random_string(70, string.ascii_letters + string.digits + '-_'),
+        
+        # 1P_JAR cookie（包含日期）
+        '1P_JAR': time.strftime('%Y-%m-%d-%H', time.gmtime()),
+        
+        # 其他常见 cookies
+        'SIDCC': generate_random_string(76, string.ascii_letters + string.digits + '-_'),
+        '__Secure-1PSID': generate_random_string(68, string.ascii_letters + string.digits + '-_.'),
+        '__Secure-3PSID': generate_random_string(68, string.ascii_letters + string.digits + '-_.'),
+        '__Secure-1PAPISID': generate_random_string(43, string.ascii_letters + string.digits + '-_/'),
+        '__Secure-3PAPISID': generate_random_string(43, string.ascii_letters + string.digits + '-_/'),
+        
+        # CONSENT cookie
+        'CONSENT': f'PENDING+{random.randint(100, 999)}',
+        
+        # Scholar 偏好
+        'GOOGLE_ABUSE_EXEMPTION': generate_random_string(80, string.ascii_letters + string.digits + '-_='),
+    }
+    
+    return fake_cookies
+
+
+class GoogleScholarProfileScraper:
+    """Google Scholar 个人主页文章爬虫（使用假 cookies + 指数退避重试）"""
     
     def __init__(
         self, 
-        cookies_path: str = None,
         max_retries: int = 3,
         base_delay: float = 2.0,
         max_delay: float = 60.0,
@@ -56,46 +106,39 @@ class GoogleScholarProfileScraper:
         初始化爬虫
         
         Args:
-            cookies_path: cookies 文件路径，默认为脚本所在目录下的 google_cookies.json
             max_retries: 最大重试次数
             base_delay: 基础延迟时间（秒）
             max_delay: 最大延迟时间（秒）
         """
-        self.cookies_path = cookies_path or self.DEFAULT_COOKIES_PATH
-        
         # 重试配置
         self.max_retries = max_retries
         self.base_delay = base_delay
         self.max_delay = max_delay
         
+        # 创建 session
         self.session = requests.Session()
         self.session.headers.update({
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                           "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
             "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Connection": "keep-alive",
+            "Upgrade-Insecure-Requests": "1",
         })
         
         # 配置代理（如果启用）
         configure_session(self.session)
         
-        # 加载 cookies
-        self._load_cookies()
+        # 加载假 cookies
+        self._load_fake_cookies()
     
-    def _load_cookies(self):
-        """加载 cookies"""
-        if os.path.exists(self.cookies_path):
-            try:
-                with open(self.cookies_path, 'r', encoding='utf-8') as f:
-                    cookies = json.load(f)
-                for cookie in cookies:
-                    self.session.cookies.set(
-                        cookie['name'],
-                        cookie['value'],
-                        domain=cookie.get('domain', '.google.com')
-                    )
-                print(f"[INFO] 已加载 cookies: {self.cookies_path}")
-            except Exception as e:
-                print(f"[WARNING] 加载 cookies 失败: {e}")
+    def _load_fake_cookies(self):
+        """加载假 cookies"""
+        fake_cookies = generate_fake_cookies()
+        for name, value in fake_cookies.items():
+            self.session.cookies.set(name, value, domain='.google.com')
+        print(f"[INFO] 已加载假 cookies ({len(fake_cookies)} 个)")
     
     def _request_with_retry(self, url: str, timeout: int = 15) -> Optional[requests.Response]:
         """
@@ -221,8 +264,14 @@ class GoogleScholarProfileScraper:
             
             # 检查是否被封锁
             if self._check_blocked(response.text):
-                print("[ERROR] 访问被限制，请重新登录获取 cookies")
-                break
+                print("[ERROR] 访问被限制，尝试刷新 cookies...")
+                # 重新生成假 cookies 并重试一次
+                self._load_fake_cookies()
+                response = self._request_with_retry(url)
+                if response is None or self._check_blocked(response.text):
+                    print("[ERROR] 刷新 cookies 后仍被限制，停止获取")
+                    break
+                soup = BeautifulSoup(response.text, 'html.parser')
             
             # 解析论文列表
             paper_rows = soup.select('tr.gsc_a_tr')
@@ -272,8 +321,8 @@ class GoogleScholarProfileScraper:
         if 'unusual traffic' in html_text.lower():
             return True
         
-        # 检查是否是登录页面
-        if 'accounts.google.com' in html_text:
+        # 检查是否是登录页面（但页面内容不含论文）
+        if 'accounts.google.com' in html_text and 'gsc_a_at' not in html_text:
             return True
         
         return False
@@ -325,7 +374,6 @@ class GoogleScholarProfileScraper:
 
 def get_google_scholar_papers(
     profile_url: str, 
-    cookies_path: str = None,
     max_retries: int = 3,
     base_delay: float = 2.0,
     max_delay: float = 60.0,
@@ -335,7 +383,6 @@ def get_google_scholar_papers(
     
     Args:
         profile_url: 作者 Google Scholar 主页 URL
-        cookies_path: cookies 文件路径
         max_retries: 最大重试次数
         base_delay: 基础延迟时间（秒）
         max_delay: 最大延迟时间（秒）
@@ -344,7 +391,6 @@ def get_google_scholar_papers(
         论文列表
     """
     scraper = GoogleScholarProfileScraper(
-        cookies_path=cookies_path,
         max_retries=max_retries,
         base_delay=base_delay,
         max_delay=max_delay,
@@ -357,7 +403,7 @@ if __name__ == "__main__":
     test_url = "https://scholar.google.com/citations?hl=zh-CN&user=DsUCHdUAAAAJ"
     
     print("=" * 60)
-    print("Google Scholar 论文列表获取工具")
+    print("Google Scholar 论文列表获取工具（假 Cookies 模式）")
     print("=" * 60)
     print(f"目标 URL: {test_url}")
     print()

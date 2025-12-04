@@ -1,18 +1,23 @@
 """
 Google Custom Search API 通用模块
-支持高并发请求
+支持高并发请求和指数退避重试
 
 文档: https://developers.google.com/custom-search/v1/reference/rest/v1/cse/list
 """
 
+import sys
 import asyncio
+import random
 import aiohttp
 import yaml
 from pathlib import Path
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict, Any, Tuple
 from dataclasses import dataclass
 from datetime import datetime, timedelta
 import time
+
+# 添加项目根目录到 path
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 
 @dataclass
@@ -70,8 +75,23 @@ class RateLimiter:
             self.requests.append(time.time())
 
 
+# 默认可重试的状态码
+DEFAULT_RETRYABLE_STATUS_CODES = (429, 500, 502, 503, 504)
+
+# 默认可重试的异常
+DEFAULT_RETRYABLE_EXCEPTIONS = (
+    asyncio.TimeoutError,
+    aiohttp.ClientError,
+    aiohttp.ServerTimeoutError,
+    aiohttp.ClientConnectionError,
+    ConnectionError,
+    TimeoutError,
+    OSError,
+)
+
+
 class GoogleSearchAPI:
-    """Google Custom Search API 封装"""
+    """Google Custom Search API 封装（带指数退避重试）"""
     
     BASE_URL = "https://www.googleapis.com/customsearch/v1"
     
@@ -79,7 +99,10 @@ class GoogleSearchAPI:
         self,
         api_key: Optional[str] = None,
         cx: Optional[str] = None,
-        rate_limit: int = 10
+        rate_limit: int = 10,
+        max_retries: int = 3,
+        base_delay: float = 1.0,
+        max_delay: float = 60.0,
     ):
         """
         初始化 Google Search API
@@ -88,6 +111,9 @@ class GoogleSearchAPI:
             api_key: Google API Key（不提供则从配置文件读取）
             cx: Custom Search Engine ID（不提供则从配置文件读取）
             rate_limit: 每秒最大请求数
+            max_retries: 最大重试次数
+            base_delay: 基础延迟时间（秒）
+            max_delay: 最大延迟时间（秒）
         """
         config = self._load_config()
         google_config = config.get("google", {})
@@ -95,6 +121,11 @@ class GoogleSearchAPI:
         self.api_key = api_key or google_config.get("api_key")
         self.cx = cx or google_config.get("cx")
         self.rate_limit = rate_limit or google_config.get("rate_limit", 10)
+        
+        # 重试配置
+        self.max_retries = max_retries
+        self.base_delay = base_delay
+        self.max_delay = max_delay
         
         if not self.api_key or not self.cx:
             raise ValueError("必须提供 api_key 和 cx，或在 config.yaml 中配置")
@@ -117,10 +148,29 @@ class GoogleSearchAPI:
                     return yaml.safe_load(f) or {}
         return {}
     
+    def _calculate_delay(self, attempt: int) -> float:
+        """
+        计算指数退避延迟时间
+        
+        Args:
+            attempt: 当前尝试次数（从0开始）
+            
+        Returns:
+            延迟时间（秒）
+        """
+        delay = min(
+            self.base_delay * (2 ** attempt),
+            self.max_delay
+        )
+        # 添加随机抖动 (±25%)
+        jitter = delay * 0.25 * (2 * random.random() - 1)
+        return delay + jitter
+    
     async def _get_session(self) -> aiohttp.ClientSession:
         """获取或创建 HTTP session"""
         if self._session is None or self._session.closed:
-            self._session = aiohttp.ClientSession()
+            timeout = aiohttp.ClientTimeout(total=30)
+            self._session = aiohttp.ClientSession(timeout=timeout)
         return self._session
     
     async def close(self):
@@ -147,7 +197,7 @@ class GoogleSearchAPI:
         extra_params: Optional[Dict[str, Any]] = None
     ) -> SearchResponse:
         """
-        执行搜索
+        执行搜索（带指数退避重试）
         
         Args:
             query: 搜索关键词
@@ -190,60 +240,111 @@ class GoogleSearchAPI:
         if extra_params:
             params.update(extra_params)
         
-        try:
-            session = await self._get_session()
-            start_time = time.time()
-            
-            async with session.get(self.BASE_URL, params=params) as response:
-                search_time = time.time() - start_time
+        # 带重试的请求
+        last_exception = None
+        start_time = time.time()
+        
+        for attempt in range(self.max_retries + 1):
+            try:
+                session = await self._get_session()
                 
-                if response.status != 200:
-                    error_text = await response.text()
+                async with session.get(self.BASE_URL, params=params) as response:
+                    search_time = time.time() - start_time
+                    
+                    # 检查是否需要重试的状态码
+                    if response.status in DEFAULT_RETRYABLE_STATUS_CODES:
+                        if attempt < self.max_retries:
+                            delay = self._calculate_delay(attempt)
+                            print(f"[RETRY] HTTP {response.status}，{delay:.1f}秒后重试 "
+                                  f"({attempt + 1}/{self.max_retries})...")
+                            await asyncio.sleep(delay)
+                            continue
+                        else:
+                            error_text = await response.text()
+                            return SearchResponse(
+                                success=False,
+                                query=query,
+                                total_results=0,
+                                items=[],
+                                search_time=search_time,
+                                error=f"API 错误 ({response.status}): {error_text}"
+                            )
+                    
+                    if response.status != 200:
+                        error_text = await response.text()
+                        return SearchResponse(
+                            success=False,
+                            query=query,
+                            total_results=0,
+                            items=[],
+                            search_time=search_time,
+                            error=f"API 错误 ({response.status}): {error_text}"
+                        )
+                    
+                    data = await response.json()
+                    
+                    # 解析结果
+                    items = []
+                    for item in data.get("items", []):
+                        items.append(SearchResult(
+                            title=item.get("title", ""),
+                            link=item.get("link", ""),
+                            snippet=item.get("snippet", ""),
+                            display_link=item.get("displayLink", ""),
+                            html_title=item.get("htmlTitle"),
+                            html_snippet=item.get("htmlSnippet"),
+                            formatted_url=item.get("formattedUrl")
+                        ))
+                    
+                    # 获取总结果数
+                    search_info = data.get("searchInformation", {})
+                    total_results = int(search_info.get("totalResults", 0))
+                    
+                    return SearchResponse(
+                        success=True,
+                        query=query,
+                        total_results=total_results,
+                        items=items,
+                        search_time=search_time
+                    )
+                    
+            except DEFAULT_RETRYABLE_EXCEPTIONS as e:
+                last_exception = e
+                
+                if attempt >= self.max_retries:
                     return SearchResponse(
                         success=False,
                         query=query,
                         total_results=0,
                         items=[],
-                        search_time=search_time,
-                        error=f"API 错误 ({response.status}): {error_text}"
+                        search_time=time.time() - start_time,
+                        error=f"请求失败（重试 {self.max_retries} 次后）: {type(e).__name__}: {e}"
                     )
                 
-                data = await response.json()
+                delay = self._calculate_delay(attempt)
+                print(f"[RETRY] {type(e).__name__}，{delay:.1f}秒后重试 "
+                      f"({attempt + 1}/{self.max_retries})...")
+                await asyncio.sleep(delay)
                 
-                # 解析结果
-                items = []
-                for item in data.get("items", []):
-                    items.append(SearchResult(
-                        title=item.get("title", ""),
-                        link=item.get("link", ""),
-                        snippet=item.get("snippet", ""),
-                        display_link=item.get("displayLink", ""),
-                        html_title=item.get("htmlTitle"),
-                        html_snippet=item.get("htmlSnippet"),
-                        formatted_url=item.get("formattedUrl")
-                    ))
-                
-                # 获取总结果数
-                search_info = data.get("searchInformation", {})
-                total_results = int(search_info.get("totalResults", 0))
-                
+            except Exception as e:
                 return SearchResponse(
-                    success=True,
+                    success=False,
                     query=query,
-                    total_results=total_results,
-                    items=items,
-                    search_time=search_time
+                    total_results=0,
+                    items=[],
+                    search_time=time.time() - start_time,
+                    error=f"未知错误: {type(e).__name__}: {e}"
                 )
-                
-        except Exception as e:
-            return SearchResponse(
-                success=False,
-                query=query,
-                total_results=0,
-                items=[],
-                search_time=0,
-                error=str(e)
-            )
+        
+        # 不应该到达这里
+        return SearchResponse(
+            success=False,
+            query=query,
+            total_results=0,
+            items=[],
+            search_time=time.time() - start_time,
+            error=str(last_exception) if last_exception else "未知错误"
+        )
     
     async def search_all(
         self,
@@ -319,34 +420,42 @@ class GoogleSearchAPISync:
     """Google Search API 的同步包装器"""
     
     def __init__(self, **kwargs):
-        self._async_api = GoogleSearchAPI(**kwargs)
+        self._kwargs = kwargs
     
     def _run(self, coro):
         """运行协程"""
-        loop = asyncio.new_event_loop()
         try:
-            return loop.run_until_complete(coro)
-        finally:
-            loop.close()
+            loop = asyncio.get_event_loop()
+            if loop.is_running():
+                # 如果已有事件循环在运行，创建新的
+                import concurrent.futures
+                with concurrent.futures.ThreadPoolExecutor() as executor:
+                    future = executor.submit(asyncio.run, coro)
+                    return future.result()
+            else:
+                return loop.run_until_complete(coro)
+        except RuntimeError:
+            # 没有事件循环，创建新的
+            return asyncio.run(coro)
     
     def search(self, query: str, **kwargs) -> SearchResponse:
         """同步搜索"""
         async def _search():
-            async with GoogleSearchAPI() as api:
+            async with GoogleSearchAPI(**self._kwargs) as api:
                 return await api.search(query, **kwargs)
         return self._run(_search())
     
     def search_all(self, query: str, max_results: int = 50, **kwargs) -> SearchResponse:
         """同步获取多页结果"""
         async def _search():
-            async with GoogleSearchAPI() as api:
+            async with GoogleSearchAPI(**self._kwargs) as api:
                 return await api.search_all(query, max_results, **kwargs)
         return self._run(_search())
     
     def batch_search(self, queries: List[str], **kwargs) -> List[SearchResponse]:
         """同步批量搜索"""
         async def _search():
-            async with GoogleSearchAPI() as api:
+            async with GoogleSearchAPI(**self._kwargs) as api:
                 return await api.batch_search(queries, **kwargs)
         return self._run(_search())
 
@@ -371,7 +480,7 @@ if __name__ == "__main__":
         print("Google Custom Search API 测试")
         print("=" * 60)
         
-        async with GoogleSearchAPI() as api:
+        async with GoogleSearchAPI(max_retries=3) as api:
             # 单个搜索
             print("\n[测试 1] 单个搜索")
             result = await api.search("Python programming", num=5)
@@ -398,4 +507,3 @@ if __name__ == "__main__":
                 print(f"  结果数: {len(r.items)}, 耗时: {r.search_time:.2f}s")
     
     asyncio.run(main())
-

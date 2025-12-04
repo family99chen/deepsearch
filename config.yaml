@@ -15,6 +15,25 @@ google:
   # 付费版：$5/1000 次查询
   rate_limit: 1000  # 每秒最大请求数
 
+# SerpAPI 配置 (Google Scholar 搜索)
+serpapi:
+  api_key: "2b7f0241c4106975462e8a8159cb7a3cd5ca0d48657547a678f00fc4b0d17551"
+  # API 限制：免费版每月 100 次
+  # 付费版：$50/5000 次
+  max_retries: 3
+  timeout: 30
+
+# Pipeline 配置
+pipeline:
+  # 搜索候选人迭代次数（每次搜索 10 条）
+  # 迭代次数 × 10 = 最大搜索候选人数
+  # 例如：max_iterations=5 表示最多搜索 50 个候选人
+  max_iterations: 1
+  # 论文标题匹配阈值 (0-1)
+  match_threshold: 0.9
+  # 每个候选人最大匹配论文数
+  max_matches: 10
+
 # 代理配置
 proxy:
   enabled: false

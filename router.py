@@ -34,23 +34,19 @@ class SearchResult(BaseModel):
     error: Optional[str] = None
 
 
-async def run_pipeline_with_logs(
-    orcid_id: str,
-    max_candidates: int = 20,
-    match_threshold: float = 0.85,
-    max_matches: int = 10
-) -> AsyncGenerator[str, None]:
+async def run_pipeline_with_logs(orcid_id: str) -> AsyncGenerator[str, None]:
     """
     运行 pipeline 并流式输出日志
     
     Args:
         orcid_id: ORCID ID
-        max_candidates: 最大候选人数量
-        match_threshold: 匹配阈值
-        max_matches: 最大匹配数
         
     Yields:
         日志行和最终结果
+    
+    Note:
+        其他参数（max_iterations, match_threshold, max_matches）
+        由 pipeline 从 config.yaml 读取
     """
     yield f"data: [START] 开始查找 ORCID: {orcid_id}\n\n"
     
@@ -70,9 +66,6 @@ async def run_pipeline_with_logs(
             try:
                 url, author = find_google_scholar_by_orcid(
                     orcid_id=orcid_id,
-                    max_candidates=max_candidates,
-                    match_threshold=match_threshold,
-                    max_matches=max_matches,
                     verbose=True
                 )
                 result_url = url
@@ -140,13 +133,12 @@ async def run_pipeline_with_logs(
 
 @router.get("/find")
 async def find_google_scholar_account_stream(
-    orcid_id: str = Query(..., description="ORCID ID，格式如 0000-0002-1825-0097"),
-    max_candidates: int = Query(20, description="最大搜索候选人数量"),
-    match_threshold: float = Query(0.85, description="标题匹配相似度阈值"),
-    max_matches: int = Query(10, description="每个候选人最大匹配论文数量")
+    orcid_id: str = Query(..., description="ORCID ID，格式如 0000-0002-1825-0097")
 ):
     """
     根据 ORCID ID 查找对应的 Google Scholar 账号（流式输出）
+    
+    参数配置从 config.yaml 读取（max_iterations, match_threshold, max_matches）
     
     返回 Server-Sent Events (SSE) 流式响应：
     - [START] 开始处理
@@ -155,12 +147,7 @@ async def find_google_scholar_account_stream(
     - [END] 处理结束
     """
     return StreamingResponse(
-        run_pipeline_with_logs(
-            orcid_id=orcid_id,
-            max_candidates=max_candidates,
-            match_threshold=match_threshold,
-            max_matches=max_matches
-        ),
+        run_pipeline_with_logs(orcid_id=orcid_id),
         media_type="text/event-stream",
         headers={
             "Cache-Control": "no-cache",
@@ -172,13 +159,12 @@ async def find_google_scholar_account_stream(
 
 @router.get("/find/sync", response_model=SearchResult)
 async def find_google_scholar_account_sync(
-    orcid_id: str = Query(..., description="ORCID ID，格式如 0000-0002-1825-0097"),
-    max_candidates: int = Query(20, description="最大搜索候选人数量"),
-    match_threshold: float = Query(0.85, description="标题匹配相似度阈值"),
-    max_matches: int = Query(10, description="每个候选人最大匹配论文数量")
+    orcid_id: str = Query(..., description="ORCID ID，格式如 0000-0002-1825-0097")
 ):
     """
     根据 ORCID ID 查找对应的 Google Scholar 账号（同步返回）
+    
+    参数配置从 config.yaml 读取（max_iterations, match_threshold, max_matches）
     
     注意：此接口可能需要较长时间，建议使用 /find 流式接口
     """
@@ -190,9 +176,6 @@ async def find_google_scholar_account_sync(
         nonlocal result_url, result_author
         url, author = find_google_scholar_by_orcid(
             orcid_id=orcid_id,
-            max_candidates=max_candidates,
-            match_threshold=match_threshold,
-            max_matches=max_matches,
             verbose=False
         )
         result_url = url

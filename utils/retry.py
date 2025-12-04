@@ -297,6 +297,162 @@ class RetrySession:
         self.session.proxies = value
 
 
+# ============ 异步版本 ============
+
+import asyncio
+
+# 默认可重试的异步异常类型
+DEFAULT_ASYNC_RETRYABLE_EXCEPTIONS = (
+    asyncio.TimeoutError,
+    ConnectionError,
+    TimeoutError,
+    OSError,
+)
+
+
+def async_exponential_backoff(
+    max_retries: int = 3,
+    base_delay: float = 1.0,
+    max_delay: float = 60.0,
+    exponential_base: float = 2.0,
+    jitter: bool = True,
+    retryable_exceptions: Tuple[Type[Exception], ...] = None,
+    retryable_status_codes: Tuple[int, ...] = DEFAULT_RETRYABLE_STATUS_CODES,
+    on_retry: Optional[Callable[[Exception, int, float], None]] = None,
+):
+    """
+    异步指数退避重试装饰器
+    
+    Args:
+        max_retries: 最大重试次数
+        base_delay: 基础延迟时间（秒）
+        max_delay: 最大延迟时间（秒）
+        exponential_base: 指数基数
+        jitter: 是否添加随机抖动
+        retryable_exceptions: 可重试的异常类型元组
+        retryable_status_codes: 可重试的 HTTP 状态码元组
+        on_retry: 重试时的回调函数 (exception, attempt, delay)
+        
+    Returns:
+        装饰器函数
+        
+    Usage:
+        @async_exponential_backoff(max_retries=3)
+        async def fetch_data():
+            async with aiohttp.ClientSession() as session:
+                async with session.get(url) as response:
+                    return await response.json()
+    """
+    if retryable_exceptions is None:
+        retryable_exceptions = DEFAULT_ASYNC_RETRYABLE_EXCEPTIONS
+    
+    def decorator(func: Callable) -> Callable:
+        @functools.wraps(func)
+        async def wrapper(*args, **kwargs) -> Any:
+            last_exception = None
+            
+            for attempt in range(max_retries + 1):
+                try:
+                    return await func(*args, **kwargs)
+                    
+                except retryable_exceptions as e:
+                    last_exception = e
+                    
+                    # 如果已经是最后一次尝试，抛出异常
+                    if attempt >= max_retries:
+                        raise
+                    
+                    # 计算延迟时间
+                    delay = min(
+                        base_delay * (exponential_base ** attempt),
+                        max_delay
+                    )
+                    
+                    # 添加随机抖动
+                    if jitter:
+                        delay = delay * (0.5 + random.random())
+                    
+                    # 调用重试回调
+                    if on_retry:
+                        on_retry(e, attempt + 1, delay)
+                    else:
+                        print(f"[RETRY] 第 {attempt + 1}/{max_retries} 次重试，"
+                              f"{delay:.1f}秒后重试... 错误: {type(e).__name__}: {e}")
+                    
+                    await asyncio.sleep(delay)
+            
+            if last_exception:
+                raise last_exception
+                
+        return wrapper
+    return decorator
+
+
+async def async_retry_request(
+    func: Callable,
+    *args,
+    max_retries: int = 3,
+    base_delay: float = 1.0,
+    max_delay: float = 60.0,
+    exponential_base: float = 2.0,
+    jitter: bool = True,
+    retryable_exceptions: Tuple[Type[Exception], ...] = None,
+    on_retry: Optional[Callable[[Exception, int, float], None]] = None,
+    **kwargs
+) -> Any:
+    """
+    异步指数退避重试函数（非装饰器版本）
+    
+    Args:
+        func: 要执行的异步函数
+        *args: 传递给函数的位置参数
+        max_retries: 最大重试次数
+        base_delay: 基础延迟时间（秒）
+        max_delay: 最大延迟时间（秒）
+        exponential_base: 指数基数
+        jitter: 是否添加随机抖动
+        retryable_exceptions: 可重试的异常类型元组
+        on_retry: 重试时的回调函数
+        **kwargs: 传递给函数的关键字参数
+        
+    Returns:
+        函数执行结果
+    """
+    if retryable_exceptions is None:
+        retryable_exceptions = DEFAULT_ASYNC_RETRYABLE_EXCEPTIONS
+    
+    last_exception = None
+    
+    for attempt in range(max_retries + 1):
+        try:
+            return await func(*args, **kwargs)
+            
+        except retryable_exceptions as e:
+            last_exception = e
+            
+            if attempt >= max_retries:
+                raise
+            
+            delay = min(
+                base_delay * (exponential_base ** attempt),
+                max_delay
+            )
+            
+            if jitter:
+                delay = delay * (0.5 + random.random())
+            
+            if on_retry:
+                on_retry(e, attempt + 1, delay)
+            else:
+                print(f"[RETRY] 第 {attempt + 1}/{max_retries} 次重试，"
+                      f"{delay:.1f}秒后重试... 错误: {type(e).__name__}: {e}")
+            
+            await asyncio.sleep(delay)
+    
+    if last_exception:
+        raise last_exception
+
+
 if __name__ == "__main__":
     # 测试代码
     print("=" * 60)

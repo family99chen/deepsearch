@@ -1,590 +1,461 @@
 """
 Google Scholar 作者搜索模块
-支持两种模式：
-1. 首次运行：使用 Selenium 手动登录并保存 cookies
-2. 后续运行：使用保存的 cookies 通过 requests 访问（可在服务器运行）
+使用 Google Custom Search API 搜索 Google Scholar 个人页面
 
 特性：
+- 使用官方 Google Search API，无需维护 cookies
 - 支持指数退避重试
-- 支持代理配置
-- Cookies 过期检测
+- 支持异步批量搜索
 """
 
 import os
 import sys
-import json
-import time
-import random
-import requests
+import re
+import asyncio
 from typing import List, Dict, Optional
-from urllib.parse import quote_plus
-from bs4 import BeautifulSoup
+from urllib.parse import urlparse, parse_qs
 from pathlib import Path
 
-# 添加项目根目录到 path，以便导入 proxy 模块
+# 添加项目根目录到 path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-# 导入代理模块
-try:
-    from proxy import configure_session, get_selenium_proxy_args, is_proxy_enabled
-    PROXY_AVAILABLE = True
-except ImportError:
-    PROXY_AVAILABLE = False
-    def configure_session(session): return session
-    def get_selenium_proxy_args(): return []
-    def is_proxy_enabled(): return False
+# 导入 Google Search API
+from google_search_api.google_search import GoogleSearchAPI, GoogleSearchAPISync
 
-# 导入重试模块
-try:
-    from utils.retry import DEFAULT_RETRYABLE_EXCEPTIONS, DEFAULT_RETRYABLE_STATUS_CODES
-except ImportError:
-    DEFAULT_RETRYABLE_EXCEPTIONS = (
-        requests.exceptions.ConnectionError,
-        requests.exceptions.Timeout,
-        requests.exceptions.HTTPError,
-    )
-    DEFAULT_RETRYABLE_STATUS_CODES = (429, 500, 502, 503, 504)
-
-# Selenium 相关（仅首次登录需要）
-try:
-    from selenium import webdriver
-    from selenium.webdriver.chrome.options import Options
-    SELENIUM_AVAILABLE = True
-except ImportError:
-    SELENIUM_AVAILABLE = False
+# 导入作者名字过滤器
+from google_scholar_url.author_name_filter import is_same_author
 
 
 class GoogleScholarAuthorScraper:
-    """Google Scholar 作者搜索爬虫（带指数退避重试）"""
+    """
+    Google Scholar 作者搜索（使用 Google Custom Search API）
     
-    BASE_URL = "https://scholar.google.com/citations"
-    # 使用脚本所在目录的路径，而不是当前工作目录
-    COOKIES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "google_cookies.json")
+    通过 Google 搜索 site:scholar.google.com/citations 来查找学者主页
+    """
+    
+    # Google Scholar 个人页面的 URL 模式
+    SCHOLAR_PROFILE_PATTERN = re.compile(
+        r'https?://scholar\.google\.com[^/]*/citations\?[^"]*user=([a-zA-Z0-9_-]+)'
+    )
     
     def __init__(
-        self, 
-        cookies_path: Optional[str] = None,
+        self,
+        api_key: Optional[str] = None,
+        cx: Optional[str] = None,
         max_retries: int = 3,
-        base_delay: float = 2.0,
-        max_delay: float = 60.0,
+        **kwargs  # 兼容旧接口的参数
     ):
         """
-        初始化爬虫
+        初始化搜索器
         
         Args:
-            cookies_path: cookies 文件路径，默认为脚本所在目录下的 google_cookies.json
-            max_retries: 最大重试次数
-            base_delay: 基础延迟时间（秒）
-            max_delay: 最大延迟时间（秒）
+            api_key: Google API Key（不提供则从配置文件读取）
+            cx: Custom Search Engine ID（不提供则从配置文件读取）
+            max_retries: 最大重试次数（API 内部处理）
         """
-        self.cookies_path = cookies_path or self.COOKIES_FILE
-        self.cookies_valid = False  # cookies 是否有效
-        
-        # 重试配置
+        self.api_key = api_key
+        self.cx = cx
         self.max_retries = max_retries
-        self.base_delay = base_delay
-        self.max_delay = max_delay
         
-        self.session = requests.Session()
-        self.session.headers.update({
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                          "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-            "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
-        })
-        
-        # 配置代理（如果启用）
-        configure_session(self.session)
-        
-        # 尝试加载已保存的 cookies
-        self.cookies_valid = self._load_cookies()
+        # 兼容旧接口
+        self.cookies_valid = True  # API 方式始终有效
+        self.cookies_path = kwargs.get('cookies_path')  # 忽略，保持兼容
     
-    def _request_with_retry(
+    def search_author(
         self, 
-        url: str, 
-        timeout: int = 15,
-        check_blocked: bool = True
-    ) -> Optional[requests.Response]:
+        author_name: str, 
+        start: int = 1, 
+        num: int = 10,
+        organization: Optional[str] = None
+    ) -> List[Dict]:
         """
-        带指数退避重试的请求
-        
-        Args:
-            url: 请求 URL
-            timeout: 超时时间
-            check_blocked: 是否检查被封锁
-            
-        Returns:
-            Response 对象，如果失败返回 None
-        """
-        last_exception = None
-        
-        for attempt in range(self.max_retries + 1):
-            try:
-                response = self.session.get(url, timeout=timeout)
-                
-                # 检查是否需要重试的状态码
-                if response.status_code in DEFAULT_RETRYABLE_STATUS_CODES:
-                    if attempt < self.max_retries:
-                        delay = self._calculate_delay(attempt)
-                        print(f"[RETRY] HTTP {response.status_code}，{delay:.1f}秒后重试 "
-                              f"({attempt + 1}/{self.max_retries})...")
-                        time.sleep(delay)
-                        continue
-                    else:
-                        print(f"[ERROR] HTTP {response.status_code}，重试次数已用尽")
-                        return None
-                
-                response.raise_for_status()
-                return response
-                
-            except DEFAULT_RETRYABLE_EXCEPTIONS as e:
-                last_exception = e
-                
-                if attempt >= self.max_retries:
-                    print(f"[ERROR] 请求失败，重试次数已用尽: {type(e).__name__}: {e}")
-                    return None
-                
-                delay = self._calculate_delay(attempt)
-                print(f"[RETRY] {type(e).__name__}，{delay:.1f}秒后重试 "
-                      f"({attempt + 1}/{self.max_retries})...")
-                time.sleep(delay)
-                
-            except requests.RequestException as e:
-                print(f"[ERROR] 请求失败: {e}")
-                return None
-        
-        return None
-    
-    def _calculate_delay(self, attempt: int) -> float:
-        """
-        计算指数退避延迟时间
-        
-        Args:
-            attempt: 当前尝试次数（从0开始）
-            
-        Returns:
-            延迟时间（秒）
-        """
-        delay = min(
-            self.base_delay * (2 ** attempt),
-            self.max_delay
-        )
-        # 添加随机抖动 (±25%)
-        jitter = delay * 0.25 * (2 * random.random() - 1)
-        return delay + jitter
-    
-    def _load_cookies(self) -> bool:
-        """
-        加载保存的 cookies
-        
-        Returns:
-            是否成功加载有效的 cookies
-        """
-        if not os.path.exists(self.cookies_path):
-            return False
-            
-        try:
-            with open(self.cookies_path, 'r', encoding='utf-8') as f:
-                cookies = json.load(f)
-            
-            # 检查 cookies 是否过期
-            expired, expiry_info = self._check_cookies_expiry(cookies)
-            
-            if expired:
-                print(f"[WARNING] Cookies 已过期！{expiry_info}")
-                print("[WARNING] 请重新运行登录流程获取新的 cookies")
-                return False
-            
-            # 加载 cookies 到 session
-            for cookie in cookies:
-                self.session.cookies.set(
-                    cookie['name'], 
-                    cookie['value'], 
-                    domain=cookie.get('domain', '.google.com')
-                )
-            
-            print(f"[INFO] 已加载 cookies: {self.cookies_path}")
-            if expiry_info:
-                print(f"[INFO] {expiry_info}")
-            return True
-            
-        except Exception as e:
-            print(f"[WARNING] 加载 cookies 失败: {e}")
-            return False
-    
-    def _check_cookies_expiry(self, cookies: list) -> tuple:
-        """
-        检查关键登录 cookies 是否过期
-        
-        Args:
-            cookies: cookies 列表
-            
-        Returns:
-            (是否过期, 过期信息字符串)
-        """
-        # Google 关键登录 cookies
-        key_cookies = ['SID', 'HSID', 'SSID', 'APISID', 'SAPISID']
-        current_time = time.time()
-        
-        found_key_cookies = {}
-        earliest_expiry = None
-        earliest_name = None
-        
-        for cookie in cookies:
-            name = cookie.get('name', '')
-            expiry = cookie.get('expiry')
-            
-            if name in key_cookies:
-                found_key_cookies[name] = expiry
-                
-                if expiry:
-                    if earliest_expiry is None or expiry < earliest_expiry:
-                        earliest_expiry = expiry
-                        earliest_name = name
-        
-        # 检查是否找到关键 cookies
-        if not found_key_cookies:
-            return True, "未找到登录 cookies，可能未登录"
-        
-        # 检查是否有过期的
-        for name, expiry in found_key_cookies.items():
-            if expiry and expiry < current_time:
-                expired_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(expiry))
-                return True, f"Cookie '{name}' 已于 {expired_time} 过期"
-        
-        # 计算最近的过期时间
-        if earliest_expiry:
-            days_left = (earliest_expiry - current_time) / 86400
-            expiry_date = time.strftime('%Y-%m-%d', time.localtime(earliest_expiry))
-            
-            if days_left < 7:
-                return False, f"⚠️ Cookie '{earliest_name}' 将在 {days_left:.1f} 天后过期 ({expiry_date})，建议尽快更新"
-            else:
-                return False, f"Cookies 有效期至 {expiry_date}（还剩 {days_left:.0f} 天）"
-        
-        return False, ""
-    
-    def _save_cookies(self, cookies: list):
-        """保存 cookies 到文件"""
-        with open(self.cookies_path, 'w', encoding='utf-8') as f:
-            json.dump(cookies, f, indent=2, ensure_ascii=False)
-        print(f"[INFO] Cookies 已保存到: {self.cookies_path}")
-    
-    def login_and_save_cookies(self, wait_time: int = 60):
-        """
-        打开浏览器让用户手动登录，然后保存 cookies
-        
-        Args:
-            wait_time: 等待用户登录的时间（秒）
-        """
-        if not SELENIUM_AVAILABLE:
-            print("[ERROR] 需要安装 selenium: pip install selenium")
-            return False
-        
-        print("=" * 60)
-        print("即将打开浏览器，请在浏览器中：")
-        print("1. 登录你的 Google 账号")
-        print("2. 访问 Google Scholar 确认可以正常使用")
-        print(f"3. 完成后等待 {wait_time} 秒自动保存，或手动关闭浏览器")
-        print("=" * 60)
-        
-        chrome_options = Options()
-        # 不使用无头模式，让用户可以手动操作
-        chrome_options.add_argument("--disable-blink-features=AutomationControlled")
-        chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
-        
-        # 添加代理参数（如果启用）
-        for arg in get_selenium_proxy_args():
-            chrome_options.add_argument(arg)
-            print(f"[INFO] Selenium 使用代理")
-        
-        driver = webdriver.Chrome(options=chrome_options)
-        
-        try:
-            # 打开 Google Scholar
-            driver.get("https://scholar.google.com/")
-            
-            print(f"\n[INFO] 请在浏览器中登录，你有 {wait_time} 秒时间...")
-            print("[INFO] 登录完成后可以提前关闭浏览器")
-            
-            # 等待用户登录
-            for i in range(wait_time, 0, -10):
-                print(f"[INFO] 剩余等待时间: {i} 秒")
-                time.sleep(10)
-                # 检查浏览器是否还开着
-                try:
-                    _ = driver.title
-                except:
-                    break
-            
-            # 获取并保存 cookies
-            cookies = driver.get_cookies()
-            self._save_cookies(cookies)
-            
-            # 同时加载到当前 session
-            for cookie in cookies:
-                self.session.cookies.set(
-                    cookie['name'], 
-                    cookie['value'], 
-                    domain=cookie.get('domain', '.google.com')
-                )
-            
-            print("[SUCCESS] 登录成功，cookies 已保存！")
-            return True
-            
-        except Exception as e:
-            print(f"[ERROR] 登录过程出错: {e}")
-            return False
-        finally:
-            try:
-                driver.quit()
-            except:
-                pass
-    
-    def search_author(self, author_name: str, max_results: int = 20) -> List[Dict]:
-        """
-        搜索作者并返回作者信息列表（支持翻页，带重试）
+        搜索作者并返回作者信息列表（单页）
         
         Args:
             author_name: 作者名字
-            max_results: 最大返回结果数
+            start: 起始位置（1-100），用于分页
+                   - start=1: 返回第 1-10 条
+                   - start=11: 返回第 11-20 条
+                   - start=21: 返回第 21-30 条
+                   - 以此类推...
+            num: 返回数量（1-10，Google API 限制）
+            organization: 作者所属机构（可选），用于缩小搜索范围
+            
+        Returns:
+            包含作者信息的字典列表，每个字典包含:
+            - name: 作者名字（从搜索结果标题提取）
+            - url: Google Scholar 个人页面 URL
+            - user_id: Google Scholar user ID
+            - affiliation: 机构（从搜索结果摘要提取）
+            - snippet: 搜索结果摘要
+            
+        Usage:
+            # 第一次搜索（第 1-10 条）
+            authors = scraper.search_author("Jun Li", start=1)
+            
+            # 带组织搜索（更精确）
+            authors = scraper.search_author("Jun Li", organization="MIT")
+            
+            # 如果没找到，继续搜索（第 11-20 条）
+            if not found:
+                authors = scraper.search_author("Jun Li", start=11)
+        """
+        # 参数校验
+        start = max(1, min(start, 100))  # Google API 限制 1-100
+        num = max(1, min(num, 10))  # Google API 限制最多 10 条
+        
+        print(f"[INFO] 正在搜索作者: {author_name}")
+        if organization:
+            print(f"[INFO] 限定机构: {organization}")
+        print(f"[INFO] 起始位置: {start}, 数量: {num}")
+        print(f"[INFO] 使用 Google Custom Search API")
+        
+        # 构建搜索查询：限定在 Google Scholar 个人页面
+        if organization:
+            # 如果有组织信息，添加到搜索条件中
+            query = f'site:scholar.google.com/citations {author_name} {organization}'
+        else:
+            query = f'site:scholar.google.com/citations {author_name}'
+        
+        print(f"[DEBUG] 查询: {query}")
+        
+        try:
+            # 使用同步 API
+            api = GoogleSearchAPISync(api_key=self.api_key, cx=self.cx)
+            
+            result = api.search(
+                query=query,
+                num=num,
+                start=start
+            )
+            
+            if not result.success:
+                print(f"[ERROR] API 请求失败: {result.error}")
+                return []
+            
+            if not result.items:
+                print("[INFO] 没有搜索结果")
+                return []
+            
+            # 解析搜索结果
+            all_authors = []
+            seen_user_ids = set()
+            
+            for item in result.items:
+                author_info = self._parse_search_result(item, author_name)
+                
+                if author_info and author_info['user_id'] not in seen_user_ids:
+                    # 使用名字过滤器检查是否是同一人
+                    result_name = author_info['name']
+                    is_match, _ = is_same_author(author_name, result_name, verbose=False)
+                    
+                    if is_match:
+                        seen_user_ids.add(author_info['user_id'])
+                        all_authors.append(author_info)
+                        print(f"  - 找到: {author_info['name']} | {author_info.get('affiliation', 'N/A')}")
+                    else:
+                        print(f"  - 跳过（名字不匹配）: {result_name}")
+            
+            print(f"[INFO] 本页获取 {len(all_authors)} 个作者 (start={start})")
+            
+            return all_authors
+            
+        except Exception as e:
+            print(f"[ERROR] 搜索失败: {e}")
+            return []
+    
+    async def search_author_async(
+        self, 
+        author_name: str, 
+        start: int = 1, 
+        num: int = 10,
+        organization: Optional[str] = None
+    ) -> List[Dict]:
+        """
+        异步搜索作者（单页）
+        
+        Args:
+            author_name: 作者名字
+            start: 起始位置（1-100）
+            num: 返回数量（1-10）
+            organization: 作者所属机构（可选）
             
         Returns:
             包含作者信息的字典列表
         """
-        import re
-        
-        encoded_name = quote_plus(author_name)
-        base_url = f"{self.BASE_URL}?view_op=search_authors&mauthors={encoded_name}&hl=zh-CN"
+        start = max(1, min(start, 100))
+        num = max(1, min(num, 10))
         
         print(f"[INFO] 正在搜索作者: {author_name}")
-        print(f"[INFO] 目标获取数量: {max_results}")
+        if organization:
+            print(f"[INFO] 限定机构: {organization}")
+        print(f"[INFO] 起始位置: {start}, 数量: {num}")
+        print(f"[INFO] 使用 Google Custom Search API (异步)")
         
-        all_authors = []
-        current_url = base_url
-        page_num = 1
+        if organization:
+            query = f'site:scholar.google.com/citations "{author_name}" "{organization}"'
+        else:
+            query = f'site:scholar.google.com/citations "{author_name}"'
         
-        while len(all_authors) < max_results:
-            print(f"[INFO] 正在获取第 {page_num} 页...")
-            
-            # 使用带重试的请求
-            response = self._request_with_retry(current_url)
-            
-            if response is None:
-                print("[ERROR] 请求失败，停止搜索")
-                break
-            
-            # 礼貌性延迟
-            time.sleep(2)
-            
-            soup = BeautifulSoup(response.text, 'html.parser')
-            
-            # 解析当前页的作者
-            page_authors = self._parse_author_results(soup)
-            
-            if not page_authors:
-                # 如果没有结果，检查是否被拦截或需要验证
-                if self._check_blocked(soup, response.text):
-                    print("[ERROR] 访问被限制，请重新登录获取 cookies")
-                    print("[提示] 运行: python fetch_google_scholar_name_list.py")
-                    self.cookies_valid = False  # 标记 cookies 无效
-                    break
-                print("[INFO] 没有更多结果")
-                break
-            
-            all_authors.extend(page_authors)
-            print(f"[INFO] 已获取 {len(all_authors)} 个作者")
-            
-            # 检查是否已经够了
-            if len(all_authors) >= max_results:
-                break
-            
-            # 检查是否还有下一页（当前页不足10条说明到底了）
-            if len(page_authors) < 10:
-                print("[INFO] 已到最后一页")
-                break
-            
-            # 从页面中提取下一页链接
-            next_url = self._extract_next_page_url(soup, response.text)
-            if not next_url:
-                print("[INFO] 未找到下一页链接")
-                break
-            
-            current_url = next_url
-            page_num += 1
-            
-            # 额外延迟，避免请求过快
-            time.sleep(1)
-        
-        return all_authors[:max_results]
+        try:
+            async with GoogleSearchAPI(api_key=self.api_key, cx=self.cx) as api:
+                result = await api.search(
+                    query=query,
+                    num=num,
+                    start=start
+                )
+                
+                if not result.success:
+                    print(f"[ERROR] API 请求失败: {result.error}")
+                    return []
+                
+                if not result.items:
+                    print("[INFO] 没有搜索结果")
+                    return []
+                
+                all_authors = []
+                seen_user_ids = set()
+                
+                for item in result.items:
+                    author_info = self._parse_search_result(item, author_name)
+                    
+                    if author_info and author_info['user_id'] not in seen_user_ids:
+                        # 使用名字过滤器检查是否是同一人
+                        result_name = author_info['name']
+                        is_match, _ = is_same_author(author_name, result_name, verbose=False)
+                        
+                        if is_match:
+                            seen_user_ids.add(author_info['user_id'])
+                            all_authors.append(author_info)
+                            print(f"  - 找到: {author_info['name']} | {author_info.get('affiliation', 'N/A')}")
+                        else:
+                            print(f"  - 跳过（名字不匹配）: {result_name}")
+                
+                print(f"[INFO] 本页获取 {len(all_authors)} 个作者 (start={start})")
+                
+                return all_authors
+                
+        except Exception as e:
+            print(f"[ERROR] 搜索失败: {e}")
+            return []
     
-    def _extract_next_page_url(self, soup: BeautifulSoup, html_text: str) -> Optional[str]:
+    def _parse_search_result(self, item, search_name: str) -> Optional[Dict]:
         """
-        从页面中提取下一页的 URL
+        解析单个搜索结果
         
         Args:
-            soup: BeautifulSoup 对象
-            html_text: 原始 HTML 文本
+            item: SearchResult 对象
+            search_name: 原始搜索的名字
             
         Returns:
-            下一页 URL，如果没有则返回 None
+            作者信息字典，如果不是有效的 Scholar 页面则返回 None
         """
-        import re
+        url = item.link
         
-        # 方法1：查找下一页按钮的链接
-        next_button = soup.select_one('button.gs_btnPR')
-        if next_button:
-            # 检查按钮的 onclick 属性
-            onclick = next_button.get('onclick', '')
-            if onclick:
-                # 提取 URL
-                match = re.search(r"window\.location='([^']+)'", onclick)
-                if match:
-                    href = match.group(1).replace('\\x3d', '=').replace('\\x26', '&')
-                    if href.startswith('/'):
-                        return f"https://scholar.google.com{href}"
-                    return href
+        # 检查是否是 Google Scholar 个人页面
+        if 'scholar.google.com' not in url or 'citations' not in url:
+            return None
         
-        # 方法2：从 HTML 中查找包含 after_author 的链接
-        # Google Scholar 的下一页按钮通常在一个特定的 pattern 中
-        pattern = r'href="(/citations\?[^"]*after_author[^"]*)"'
-        match = re.search(pattern, html_text)
+        # 提取 user ID
+        user_id = self._extract_user_id(url)
+        if not user_id:
+            return None
+        
+        # 标准化 URL
+        clean_url = f"https://scholar.google.com/citations?user={user_id}&hl=zh-CN"
+        
+        # 从标题提取作者名字
+        # 标题格式通常是 "作者名 - Google Scholar" 或 "作者名- Google 学术搜索"
+        title = item.title
+        name = self._extract_name_from_title(title)
+        
+        # 从摘要提取机构信息
+        snippet = item.snippet or ""
+        affiliation = self._extract_affiliation(snippet)
+        
+        # 提取研究兴趣（如果摘要中有）
+        interests = self._extract_interests(snippet)
+        
+        return {
+            "name": name or search_name,
+            "url": clean_url,
+            "user_id": user_id,
+            "affiliation": affiliation,
+            "snippet": snippet,
+            "interests": interests,
+            "email": "",  # API 无法获取
+            "cited_by": "",  # API 无法获取
+        }
+    
+    def _extract_user_id(self, url: str) -> Optional[str]:
+        """从 URL 提取 Google Scholar user ID"""
+        # 方法1：从 URL 参数提取
+        try:
+            parsed = urlparse(url)
+            params = parse_qs(parsed.query)
+            if 'user' in params:
+                return params['user'][0]
+        except:
+            pass
+        
+        # 方法2：用正则表达式提取
+        match = self.SCHOLAR_PROFILE_PATTERN.search(url)
         if match:
-            href = match.group(1).replace('\\x3d', '=').replace('\\x26', '&')
-            return f"https://scholar.google.com{href}"
-        
-        # 方法3：查找 navigate 函数调用
-        pattern = r"navigate\('([^']*after_author[^']*)'\)"
-        match = re.search(pattern, html_text)
-        if match:
-            href = match.group(1).replace('\\x3d', '=').replace('\\x26', '&')
-            if href.startswith('/'):
-                return f"https://scholar.google.com{href}"
-            return href
+            return match.group(1)
         
         return None
     
-    def _check_blocked(self, soup: BeautifulSoup, html_text: str) -> bool:
-        """
-        检查是否被 Google Scholar 拦截
+    def _extract_name_from_title(self, title: str) -> str:
+        """从搜索结果标题提取作者名字"""
+        if not title:
+            return ""
         
-        Args:
-            soup: BeautifulSoup 对象
-            html_text: 原始 HTML 文本
-            
-        Returns:
-            是否被拦截
-        """
-        # 检查是否有验证码
-        if 'captcha' in html_text.lower() or 'recaptcha' in html_text.lower():
-            return True
+        # 移除 " - Google Scholar" 或类似后缀
+        patterns = [
+            r'\s*[-–—]\s*Google\s*(Scholar|学术搜索|學術搜尋).*$',
+            r'\s*[-–—]\s*Google.*$',
+            r'\s*\|\s*Google.*$',
+        ]
         
-        # 检查是否是异常流量页面
-        if 'unusual traffic' in html_text.lower():
-            return True
+        name = title
+        for pattern in patterns:
+            name = re.sub(pattern, '', name, flags=re.IGNORECASE)
         
-        # 检查是否是登录页面
-        if 'accounts.google.com' in html_text:
-            return True
-        
-        # 检查是否完全没有搜索结果区域
-        if 'gsc_1usr' not in html_text and 'gs_ai_name' not in html_text:
-            return True
-        
-        return False
+        return name.strip()
     
-    def _parse_author_results(self, soup: BeautifulSoup) -> List[Dict]:
-        """解析当前页面的作者搜索结果"""
-        authors = []
+    def _extract_affiliation(self, snippet: str) -> str:
+        """从摘要提取机构信息"""
+        if not snippet:
+            return ""
         
-        # Google Scholar 作者卡片选择器
-        author_cards = soup.select('div.gsc_1usr')
+        # 机构通常在摘要开头，以逗号或句号分隔
+        # 例如："Professor, MIT · Computer Science · Machine Learning"
         
-        if not author_cards:
+        # 尝试提取第一个主要部分
+        parts = re.split(r'[·•|]', snippet)
+        if parts:
+            # 取第一部分，通常是机构
+            first_part = parts[0].strip()
+            # 如果太长，可能不是机构
+            if len(first_part) < 100:
+                return first_part
+        
+        return ""
+    
+    def _extract_interests(self, snippet: str) -> List[str]:
+        """从摘要提取研究兴趣"""
+        if not snippet:
             return []
         
-        for card in author_cards:
-            try:
-                author_info = {}
-                
-                # 作者姓名和链接
-                name_elem = card.select_one('h3.gs_ai_name a')
-                if name_elem:
-                    author_info["name"] = name_elem.text.strip()
-                    href = name_elem.get('href', '')
-                    if href.startswith('/'):
-                        author_info["url"] = f"https://scholar.google.com{href}"
-                    else:
-                        author_info["url"] = href
-                else:
-                    continue
-                
-                # 所属机构
-                aff_elem = card.select_one('div.gs_ai_aff')
-                author_info["affiliation"] = aff_elem.text.strip() if aff_elem else ""
-                
-                # 邮箱域名
-                email_elem = card.select_one('div.gs_ai_eml')
-                author_info["email"] = email_elem.text.strip() if email_elem else ""
-                
-                # 被引用次数
-                cited_elem = card.select_one('div.gs_ai_cby')
-                author_info["cited_by"] = cited_elem.text.strip() if cited_elem else ""
-                
-                # 研究兴趣
-                interest_elems = card.select('div.gs_ai_int a')
-                author_info["interests"] = [elem.text.strip() for elem in interest_elems]
-                
-                authors.append(author_info)
-                print(f"  - 找到: {author_info['name']} | {author_info['affiliation']}")
-                
-            except Exception as e:
-                print(f"[WARNING] 解析失败: {e}")
-                continue
+        # 研究兴趣通常用 · 或 | 分隔
+        parts = re.split(r'[·•|]', snippet)
         
-        return authors
+        interests = []
+        for part in parts[1:]:  # 跳过第一部分（通常是机构）
+            part = part.strip()
+            # 过滤掉太长或太短的
+            if 3 < len(part) < 50:
+                interests.append(part)
+        
+        return interests[:5]  # 最多返回 5 个
     
-    def get_author_urls(self, author_name: str, max_results: int = 20) -> List[str]:
+    def get_author_urls(
+        self, 
+        author_name: str, 
+        start: int = 1, 
+        num: int = 10,
+        organization: Optional[str] = None
+    ) -> List[str]:
         """只返回作者主页 URL 列表"""
-        authors = self.search_author(author_name, max_results)
+        authors = self.search_author(author_name, start=start, num=num, organization=organization)
         return [a["url"] for a in authors if a.get("url")]
+    
+    def search_author_all(
+        self, 
+        author_name: str, 
+        max_results: int = 20,
+        organization: Optional[str] = None
+    ) -> List[Dict]:
+        """
+        搜索作者并返回多页结果（便捷方法）
+        
+        Args:
+            author_name: 作者名字
+            max_results: 最大返回结果数（最多 100）
+            organization: 作者所属机构（可选）
+            
+        Returns:
+            包含作者信息的字典列表
+        """
+        all_authors = []
+        seen_user_ids = set()
+        
+        for start in range(1, min(max_results, 100) + 1, 10):
+            authors = self.search_author(author_name, start=start, num=10, organization=organization)
+            
+            for author in authors:
+                if author['user_id'] not in seen_user_ids:
+                    seen_user_ids.add(author['user_id'])
+                    all_authors.append(author)
+            
+            if len(all_authors) >= max_results:
+                break
+            
+            if len(authors) < 10:
+                break
+        
+        return all_authors[:max_results]
+    
+    # ============ 兼容旧接口的方法 ============
+    
+    def _load_cookies(self) -> bool:
+        """兼容旧接口，始终返回 True"""
+        return True
+    
+    def login_and_save_cookies(self, wait_time: int = 60):
+        """兼容旧接口，API 方式无需登录"""
+        print("[INFO] 使用 Google Custom Search API，无需登录")
+        print("[INFO] 请确保 config.yaml 中配置了 google.api_key 和 google.cx")
+        return True
 
 
 def main():
     """主函数"""
-    scraper = GoogleScholarAuthorScraper(
-        max_retries=3,
-        base_delay=2.0,
-        max_delay=60.0
-    )
-    
-    # 检查 cookies 状态（不存在、过期、或无效都需要重新登录）
-    if not scraper.cookies_valid:
-        print("-" * 40)
-        print("[INFO] 需要登录获取 cookies")
-        print("-" * 40)
-        scraper.login_and_save_cookies(wait_time=120)
+    scraper = GoogleScholarAuthorScraper()
     
     # 搜索作者
-    test_name = "JUN LI"
+    test_name = "Alexandra Ramadan"
     
     print("\n" + "=" * 60)
     print(f"搜索作者: {test_name}")
     print("=" * 60)
     
-    authors = scraper.search_author(test_name, max_results=30)  # 可调整数量
+    # 方式1：单页搜索（默认返回第 1-10 条）
+    print("\n[测试1] 第一页搜索 (start=1)")
+    authors = scraper.search_author(test_name, start=1)
     
     if authors:
-        print("\n" + "-" * 40)
-        print("搜索结果:")
-        print("-" * 40)
+        print(f"找到 {len(authors)} 个作者")
         for i, author in enumerate(authors, 1):
-            print(f"\n[{i}] {author['name']}")
-            print(f"    主页: {author['url']}")
-            print(f"    机构: {author['affiliation']}")
-            print(f"    引用: {author['cited_by']}")
-            print(f"    兴趣: {', '.join(author['interests'])}")
-    else:
+            print(f"  [{i}] {author['name']} | {author.get('affiliation', 'N/A')[:30]}")
+    
+    # 方式2：继续搜索下一页
+    print("\n[测试2] 第二页搜索 (start=11)")
+    authors_page2 = scraper.search_author(test_name, start=11)
+    
+    if authors_page2:
+        print(f"找到 {len(authors_page2)} 个作者")
+        for i, author in enumerate(authors_page2, 1):
+            print(f"  [{i}] {author['name']} | {author.get('affiliation', 'N/A')[:30]}")
+    
+    # 方式3：使用便捷方法获取多页
+    # print("\n[测试3] 获取前20条 (search_author_all)")
+    # all_authors = scraper.search_author_all(test_name, max_results=20)
+    # print(f"共找到 {len(all_authors)} 个作者")
+    
+    if not authors:
         print("\n[WARNING] 未获取到结果")
+        print("[提示] 请检查 config.yaml 中的 Google API 配置")
 
 
 if __name__ == "__main__":
