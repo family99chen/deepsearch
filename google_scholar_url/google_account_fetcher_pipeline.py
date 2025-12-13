@@ -3,17 +3,20 @@ Google Scholar 账号查找 Pipeline
 输入 ORCID ID，输出对应的 Google Scholar 账号 URL
 
 完整流程：
-1. 通过 ORCID API 获取作者姓名
-2. 通过 ORCID API 获取作者论文列表
-3. 用姓名在 Google Scholar 搜索候选人（迭代搜索）
-4. 遍历候选人，匹配论文标题，找到正确的 Google Scholar 账号
-5. 如果未找到，继续搜索下一批候选人，直到找到或达到迭代上限
+1. 检查缓存（如果有直接返回）
+2. 通过 ORCID API 获取作者姓名
+3. 通过 ORCID API 获取作者论文列表
+4. 用姓名在 Google Scholar 搜索候选人（迭代搜索）
+5. 遍历候选人，匹配论文标题，找到正确的 Google Scholar 账号
+6. 如果未找到，继续搜索下一批候选人，直到找到或达到迭代上限
+7. 找到后存入缓存
 """
 
 import sys
 import yaml
 from pathlib import Path
 from typing import Optional, Tuple, Dict
+from datetime import datetime
 
 # 添加项目根目录到 path
 sys.path.insert(0, str(__file__).replace('\\', '/').rsplit('/google_scholar_url/', 1)[0])
@@ -24,6 +27,29 @@ try:
 except ImportError:
     import logging
     logger = logging.getLogger(__name__)
+
+# 导入缓存模块
+HAS_CACHE = False
+try:
+    from localdb.insert_mongo import MongoCache
+    HAS_CACHE = True
+except ImportError:
+    pass
+
+# 缓存配置
+CACHE_COLLECTION = "orcid_googleaccount_map"
+CACHE_TTL = 180 * 24 * 3600  # 6个月
+
+
+def _get_cache() -> Optional["MongoCache"]:
+    """获取缓存实例"""
+    if not HAS_CACHE:
+        return None
+    try:
+        cache = MongoCache(collection_name=CACHE_COLLECTION)
+        return cache if cache.is_connected() else None
+    except Exception:
+        return None
 
 # 导入子模块
 from fetch_author_person_info import get_author_name
@@ -60,7 +86,8 @@ def find_google_scholar_by_orcid(
     max_iterations: int = None,
     match_threshold: float = None,
     max_matches: int = None,
-    verbose: bool = True
+    verbose: bool = True,
+    use_cache: bool = True
 ) -> Tuple[Optional[str], Optional[Dict]]:
     """
     根据 ORCID ID 查找对应的 Google Scholar 账号（迭代搜索）
@@ -72,6 +99,7 @@ def find_google_scholar_by_orcid(
         match_threshold: 标题匹配相似度阈值，默认从配置读取
         max_matches: 每个候选人最大匹配论文数量，默认从配置读取
         verbose: 是否打印详细信息
+        use_cache: 是否使用缓存（默认 True）
         
     Returns:
         (匹配的 Google Scholar URL, 匹配的作者信息字典)
@@ -88,6 +116,35 @@ def find_google_scholar_by_orcid(
         match_threshold = pipeline_config.get("match_threshold", 0.85)
     if max_matches is None:
         max_matches = pipeline_config.get("max_matches", 10)
+    
+    # ========== 缓存读取 ==========
+    cache = _get_cache() if use_cache else None
+    
+    if cache:
+        cached_data = cache.get(orcid_id)
+        if cached_data and cached_data.get("google_scholar_url"):
+            if verbose:
+                print("=" * 60)
+                print("Google Scholar 账号查找 Pipeline")
+                print("=" * 60)
+                print(f"输入 ORCID: {orcid_id}")
+                print()
+                print(f"[CACHE] 命中缓存")
+                print(f"  URL: {cached_data['google_scholar_url']}")
+                print(f"  姓名: {cached_data.get('name', 'N/A')}")
+                print(f"  机构: {cached_data.get('affiliation', 'N/A')}")
+                print(f"  缓存时间: {cached_data.get('cached_at', 'N/A')}")
+            
+            logger.info(f"缓存命中: {orcid_id} -> {cached_data['google_scholar_url']}")
+            
+            # 返回格式与正常查找一致
+            matched_candidate = {
+                "name": cached_data.get("name"),
+                "url": cached_data.get("google_scholar_url"),
+                "user_id": cached_data.get("user_id"),
+                "affiliation": cached_data.get("affiliation"),
+            }
+            return cached_data["google_scholar_url"], matched_candidate
     
     logger.info(f"开始查找 ORCID: {orcid_id}")
     
@@ -266,8 +323,24 @@ def find_google_scholar_by_orcid(
                 verbose=verbose
             )
             
-            # 如果找到匹配，立即返回
+            # 如果找到匹配，写入缓存并返回
             if matched_url:
+                # 写入缓存
+                if cache and matched_candidate:
+                    cache_data = {
+                        "orcid_id": orcid_id,
+                        "google_scholar_url": matched_url,
+                        "user_id": matched_candidate.get("user_id", ""),
+                        "name": matched_candidate.get("name", ""),
+                        "affiliation": matched_candidate.get("affiliation", ""),
+                        "search_method": "name_search",
+                        "search_strategy": search_desc,
+                        "match_count": match_count,
+                        "cached_at": datetime.now().isoformat(),
+                    }
+                    cache.set(orcid_id, cache_data, ttl=CACHE_TTL)
+                    logger.info(f"已写入缓存: {orcid_id} -> {matched_url}")
+                
                 if verbose:
                     print()
                     print("=" * 60)
@@ -281,6 +354,8 @@ def find_google_scholar_by_orcid(
                     print(f"  匹配论文数: {match_count}")
                     print(f"  搜索策略: {search_desc}")
                     print(f"  搜索迭代次数: {iteration + 1}")
+                    if cache:
+                        print(f"  [CACHE] 已写入缓存")
                 
                 logger.info(f"找到匹配: {matched_url} (策略: {search_desc}, 迭代 {iteration + 1} 次)")
                 return matched_url, matched_candidate
@@ -371,8 +446,24 @@ def find_google_scholar_by_orcid(
                 verbose=verbose
             )
             
-            # 如果找到匹配，立即返回
+            # 如果找到匹配，写入缓存并返回
             if matched_url:
+                # 写入缓存
+                if cache and matched_candidate:
+                    cache_data = {
+                        "orcid_id": orcid_id,
+                        "google_scholar_url": matched_url,
+                        "user_id": matched_candidate.get("user_id", ""),
+                        "name": matched_candidate.get("name", ""),
+                        "affiliation": matched_candidate.get("affiliation", ""),
+                        "search_method": "paper_search",
+                        "search_paper": paper_title[:100],
+                        "match_count": match_count,
+                        "cached_at": datetime.now().isoformat(),
+                    }
+                    cache.set(orcid_id, cache_data, ttl=CACHE_TTL)
+                    logger.info(f"已写入缓存: {orcid_id} -> {matched_url}")
+                
                 if verbose:
                     print()
                     print("=" * 60)
@@ -384,6 +475,8 @@ def find_google_scholar_by_orcid(
                         print(f"  姓名: {matched_candidate.get('name', 'N/A')}")
                     print(f"  匹配论文数: {match_count}")
                     print(f"  搜索论文: {paper_title[:50]}...")
+                    if cache:
+                        print(f"  [CACHE] 已写入缓存")
                 
                 logger.info(f"通过论文搜索找到匹配: {matched_url}")
                 return matched_url, matched_candidate

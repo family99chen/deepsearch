@@ -4,6 +4,7 @@
 """
 
 import re
+import math
 from typing import List, Tuple
 from difflib import SequenceMatcher
 
@@ -151,37 +152,54 @@ def verify_author_identity(
         print("[WARNING] 未获取到 ORCID 论文")
         return False, []
     
-    # 3. 匹配论文标题
+    # 3. 计算所需匹配数量
+    base_count = min(len(scholar_titles), len(orcid_titles))
+    
+    # 如果双方论文数都超过 1000，只需要 10% 重合；否则需要 30%
+    if len(scholar_titles) >= 1000 and len(orcid_titles) >= 1000:
+        required_ratio = 0.10
+    else:
+        required_ratio = 0.30
+    
+    required_matches = math.ceil(base_count * required_ratio)  # 向上取整，1篇也必须匹配
+    # 目标匹配数：取 max_matches 和 required_matches 中较小的，达到即停止
+    target_matches = min(max_matches, required_matches)
+    
+    # 4. 匹配论文标题
     if verbose:
-        print("[STEP 3] 匹配论文标题...")
+        print(f"[STEP 3] 匹配论文标题（目标 {target_matches} 篇，阈值 {required_matches}，上限 {max_matches}）...")
     
     matched_papers = []
     
     for scholar_title in scholar_titles:
-        # 检查是否已达到最大匹配数
-        if len(matched_papers) >= max_matches:
+        # 达到目标匹配数即停止
+        if len(matched_papers) >= target_matches:
             if verbose:
-                print(f"[INFO] 已达到最大匹配数 {max_matches}，停止匹配")
+                print(f"[INFO] 已达到目标匹配数 {target_matches}，停止匹配")
             break
         
         for orcid_title in orcid_titles:
             if fuzzy_match_title(scholar_title, orcid_title, match_threshold):
                 matched_papers.append((scholar_title, orcid_title))
                 if verbose:
-                    print(f"  ✓ 匹配成功 ({len(matched_papers)}/{max_matches}):")
+                    print(f"  ✓ 匹配成功 ({len(matched_papers)}/{target_matches}):")
                     print(f"    Scholar: {scholar_title[:60]}...")
                     print(f"    ORCID:   {orcid_title[:60]}...")
                 break  # 一篇 scholar 论文只匹配一次
     
-    # 4. 判断结果
-    is_same_person = len(matched_papers) > 0
+    # 5. 判断结果
+    # 达到目标匹配数即为同一人
+    is_same_person = len(matched_papers) >= target_matches
     
     if verbose:
         print()
         print("=" * 60)
         print("验证结果")
         print("=" * 60)
-        print(f"匹配论文数量: {len(matched_papers)}")
+        print(f"基数（较少一方）: {base_count} 篇")
+        print(f"要求重合比例: {required_ratio:.0%} = {required_matches} 篇")
+        print(f"目标匹配数量: {target_matches} 篇 (min(阈值{required_matches}, 上限{max_matches}))")
+        print(f"实际匹配数量: {len(matched_papers)} 篇")
         print(f"是否为同一人: {'✓ 是' if is_same_person else '✗ 否'}")
     
     return is_same_person, matched_papers

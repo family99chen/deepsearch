@@ -1,5 +1,7 @@
 """
 通过 ORCID API 获取作者的组织/机构信息
+
+支持 MongoDB 缓存，避免重复 API 调用
 """
 
 import sys
@@ -21,12 +23,34 @@ except ImportError:
         return decorator
     DEFAULT_RETRYABLE_EXCEPTIONS = (requests.exceptions.RequestException,)
 
+# 导入缓存模块
+try:
+    from localdb.insert_mongo import MongoCache
+    HAS_CACHE = True
+except ImportError:
+    HAS_CACHE = False
+
+# 缓存配置
+CACHE_COLLECTION = "orcid_info"
+CACHE_TTL = 180 * 24 * 3600  # 6个月（秒）
+
 
 def load_config() -> dict:
     """加载配置文件"""
     config_path = Path(__file__).parent.parent / "config.yaml"
     with open(config_path, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
+
+
+def _get_cache() -> Optional["MongoCache"]:
+    """获取缓存实例"""
+    if not HAS_CACHE:
+        return None
+    try:
+        cache = MongoCache(collection_name=CACHE_COLLECTION)
+        return cache if cache.is_connected() else None
+    except Exception:
+        return None
 
 
 @exponential_backoff(
@@ -126,46 +150,83 @@ def parse_organizations(employments_data: dict) -> List[Dict]:
     return organizations
 
 
-def get_author_organization(orcid_id: str) -> Optional[str]:
+def get_author_organization(orcid_id: str, use_cache: bool = True) -> Optional[str]:
     """
-    获取作者的主要组织/机构名称
+    获取作者的主要组织/机构名称（支持缓存）
     
     优先返回当前工作的机构，如果没有则返回最近的机构
     
     Args:
         orcid_id: 作者的 ORCID ID
+        use_cache: 是否使用缓存，默认 True
     
     Returns:
         机构名称，如果没有则返回 None
     """
+    cache_key = orcid_id
+    cache = _get_cache() if use_cache else None
+    
+    # 尝试从缓存读取
+    if cache:
+        # 先检查是否有缓存的主要组织
+        cached_org = cache.get_field(cache_key, "primary_organization")
+        if cached_org is not None:
+            print(f"[INFO] ORCID {orcid_id} 组织信息命中缓存")
+            return cached_org if cached_org != "" else None
+    
     try:
         employments_data = fetch_employments(orcid_id)
         organizations = parse_organizations(employments_data)
         
-        if organizations:
-            # 返回第一个（当前或最近的）组织名称
-            return organizations[0]["name"]
+        primary_org = organizations[0]["name"] if organizations else None
         
-        return None
+        # 写入缓存
+        if cache:
+            cache.set_field(cache_key, "primary_organization", primary_org or "", ttl=CACHE_TTL)
+            cache.set_field(cache_key, "organizations", organizations, ttl=CACHE_TTL)
+            print(f"[INFO] ORCID {orcid_id} 组织信息已写入缓存")
+        
+        return primary_org
         
     except Exception as e:
         print(f"[WARNING] 获取组织信息失败: {e}")
         return None
 
 
-def get_all_organizations(orcid_id: str) -> List[Dict]:
+def get_all_organizations(orcid_id: str, use_cache: bool = True) -> List[Dict]:
     """
-    获取作者的所有组织/机构信息
+    获取作者的所有组织/机构信息（支持缓存）
     
     Args:
         orcid_id: 作者的 ORCID ID
+        use_cache: 是否使用缓存，默认 True
     
     Returns:
         组织列表
     """
+    cache_key = orcid_id
+    cache = _get_cache() if use_cache else None
+    
+    # 尝试从缓存读取
+    if cache:
+        cached_orgs = cache.get_field(cache_key, "organizations")
+        if cached_orgs is not None:
+            return cached_orgs
+    
     try:
         employments_data = fetch_employments(orcid_id)
-        return parse_organizations(employments_data)
+        organizations = parse_organizations(employments_data)
+        
+        # 写入缓存
+        if cache:
+            cache.set_field(cache_key, "organizations", organizations, ttl=CACHE_TTL)
+            if organizations:
+                cache.set_field(cache_key, "primary_organization", organizations[0]["name"], ttl=CACHE_TTL)
+            else:
+                cache.set_field(cache_key, "primary_organization", "", ttl=CACHE_TTL)
+        
+        return organizations
+        
     except Exception as e:
         print(f"[WARNING] 获取组织信息失败: {e}")
         return []
@@ -175,12 +236,19 @@ if __name__ == "__main__":
     # 示例用法
     test_orcid = "0000-0003-3701-8119"
     
-    print(f"正在获取 ORCID {test_orcid} 的组织信息...\n")
+    print(f"正在获取 ORCID {test_orcid} 的组织信息...")
+    
+    cache = _get_cache()
+    cache_key = test_orcid
+    
+    if cache:
+        has_cache = cache.has_field(cache_key, "organizations")
+        print(f"[缓存] {'命中' if has_cache else '未命中'}")
     
     try:
         # 获取主要组织
         primary_org = get_author_organization(test_orcid)
-        print(f"主要组织: {primary_org or '无'}")
+        print(f"\n主要组织: {primary_org or '无'}")
         
         # 获取所有组织
         print("\n=== 所有组织 ===")
@@ -198,9 +266,11 @@ if __name__ == "__main__":
                     print(f"    地点: {org['city']}, {org['country']}")
         else:
             print("未找到组织信息")
+        
+        if cache:
+            print(f"\n[缓存] 数据已写入 collection: {CACHE_COLLECTION}")
             
     except requests.exceptions.HTTPError as e:
         print(f"API 请求失败: {e}")
     except Exception as e:
         print(f"发生错误: {e}")
-

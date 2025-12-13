@@ -10,6 +10,7 @@
 """
 
 import sys
+import re
 from typing import List, Dict, Optional, Tuple
 from pathlib import Path
 
@@ -21,6 +22,48 @@ from google_search_api.serpapi_google_scholar import SerpAPIScholar
 
 # 导入作者名字过滤器
 from google_scholar_url.author_name_filter import is_same_author
+
+# 导入缓存模块
+try:
+    from localdb.insert_mongo import MongoCache
+    HAS_CACHE = True
+except ImportError:
+    HAS_CACHE = False
+
+# 缓存配置
+CACHE_COLLECTION_PAPER = "google_scholar_paper"
+CACHE_COLLECTION_PERSON = "google_scholar_person"
+CACHE_TTL = 180 * 24 * 3600  # 6个月
+
+
+def _get_cache(collection_name: str) -> Optional["MongoCache"]:
+    """获取缓存实例"""
+    if not HAS_CACHE:
+        return None
+    try:
+        cache = MongoCache(collection_name=collection_name)
+        return cache if cache.is_connected() else None
+    except Exception:
+        return None
+
+
+def _normalize_name(name: str) -> str:
+    """标准化名字（去除特殊字符、小写）"""
+    if not name:
+        return ""
+    # 去除 Unicode 零宽字符和控制字符
+    name = re.sub(r'[\u200b-\u200f\u202a-\u202e\u2060-\u206f\ufeff]', '', name)
+    return " ".join(name.lower().split())
+
+
+def _normalize_title(title: str) -> str:
+    """标准化论文标题（小写、去除特殊字符）"""
+    if not title:
+        return ""
+    # 去除 Unicode 零宽字符
+    title = re.sub(r'[\u200b-\u200f\u202a-\u202e\u2060-\u206f\ufeff]', '', title)
+    # 小写并合并空格
+    return " ".join(title.lower().split())
 
 
 class GoogleScholarAuthorByPaper:
@@ -50,6 +93,10 @@ class GoogleScholarAuthorByPaper:
             verbose=verbose
         )
         self.verbose = verbose
+        
+        # 缓存（只写入，供后续环节使用）
+        self._cache_paper = _get_cache(CACHE_COLLECTION_PAPER)
+        self._cache_person = _get_cache(CACHE_COLLECTION_PERSON)
     
     def search_author_by_paper(
         self,
@@ -97,8 +144,12 @@ class GoogleScholarAuthorByPaper:
         # 提取作者
         all_authors = []
         seen_ids = set()
+        all_paper_authors = []  # 用于存储论文对应的所有作者（名字过滤前）
         
         for paper in result.items:
+            # 收集当前论文的作者信息
+            paper_authors_raw = []
+            
             # 从论文的 authors 字段提取作者信息
             for author in paper.authors:
                 author_id = author.get("author_id")
@@ -107,16 +158,29 @@ class GoogleScholarAuthorByPaper:
                 if not author_id:
                     continue
                 
-                # 去重
-                if author_id in seen_ids:
-                    continue
-                
                 author_name_result = author.get("name", "")
                 author_link = author.get("link", "")
                 
                 # 如果没有 link，用 author_id 构建
                 if not author_link and author_id:
                     author_link = f"https://scholar.google.com/citations?user={author_id}&hl=zh-CN"
+                
+                author_info = {
+                    "name": author_name_result,
+                    "normalized_name": _normalize_name(author_name_result),
+                    "author_id": author_id,
+                    "url": author_link,
+                }
+                
+                # 写入 person 缓存（名字过滤之前，所有作者都存）
+                if self._cache_person:
+                    self._cache_person.set(author_id, author_info, ttl=CACHE_TTL)
+                
+                paper_authors_raw.append(author_info)
+                
+                # 去重
+                if author_id in seen_ids:
+                    continue
                 
                 # 名字过滤
                 if filter_by_name and author_name:
@@ -127,13 +191,23 @@ class GoogleScholarAuthorByPaper:
                         continue
                 
                 seen_ids.add(author_id)
-                author_info = {
-                    "name": author_name_result,
-                    "author_id": author_id,
-                    "url": author_link,
-                }
                 all_authors.append(author_info)
                 print(f"  - 找到作者: {author_name_result} (ID: {author_id})")
+            
+            # 收集论文的所有作者（用于 paper 缓存）
+            all_paper_authors.extend(paper_authors_raw)
+        
+        # 写入 paper 缓存（存储论文标题对应的所有作者信息）
+        if self._cache_paper and result.items:
+            paper_cache_key = _normalize_title(paper_title)
+            paper_cache_data = {
+                "title": paper_title,
+                "normalized_title": paper_cache_key,
+                "query": query if author_name else f'"{paper_title}"',
+                "authors": all_paper_authors,
+                "author_count": len(all_paper_authors),
+            }
+            self._cache_paper.set(paper_cache_key, paper_cache_data, ttl=CACHE_TTL)
         
         print(f"[INFO] 共找到 {len(all_authors)} 个有 Scholar 主页的作者")
         return all_authors

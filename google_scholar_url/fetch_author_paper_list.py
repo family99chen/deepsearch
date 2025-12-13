@@ -1,12 +1,14 @@
 """
 通过 ORCID API 获取作者的论文列表
+
+支持 MongoDB 缓存，避免重复 API 调用
 """
 
 import sys
 import requests
 import yaml
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List
 
 # 添加项目根目录到 path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -21,12 +23,34 @@ except ImportError:
         return decorator
     DEFAULT_RETRYABLE_EXCEPTIONS = (requests.exceptions.RequestException,)
 
+# 导入缓存模块
+try:
+    from localdb.insert_mongo import MongoCache
+    HAS_CACHE = True
+except ImportError:
+    HAS_CACHE = False
+
+# 缓存配置
+CACHE_COLLECTION = "orcid_info"
+CACHE_TTL = 180 * 24 * 3600  # 6个月（秒）
+
 
 def load_config() -> dict:
     """加载配置文件"""
     config_path = Path(__file__).parent.parent / "config.yaml"
     with open(config_path, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
+
+
+def _get_cache() -> Optional["MongoCache"]:
+    """获取缓存实例"""
+    if not HAS_CACHE:
+        return None
+    try:
+        cache = MongoCache(collection_name=CACHE_COLLECTION)
+        return cache if cache.is_connected() else None
+    except Exception:
+        return None
 
 
 @exponential_backoff(
@@ -68,7 +92,7 @@ def fetch_author_works(orcid_id: str, access_token: Optional[str] = None) -> dic
     return response.json()
 
 
-def parse_paper_list(works_data: dict) -> list[dict]:
+def parse_paper_list(works_data: dict) -> List[dict]:
     """
     解析 ORCID API 返回的论文数据
     
@@ -139,18 +163,36 @@ def parse_paper_list(works_data: dict) -> list[dict]:
     return papers
 
 
-def get_author_papers(orcid_id: str) -> list[dict]:
+def get_author_papers(orcid_id: str, use_cache: bool = True) -> List[dict]:
     """
-    获取并解析作者的论文列表
+    获取并解析作者的论文列表（支持缓存）
     
     Args:
         orcid_id: 作者的 ORCID ID
+        use_cache: 是否使用缓存，默认 True
     
     Returns:
         解析后的论文列表
     """
+    cache_key = orcid_id
+    cache = _get_cache() if use_cache else None
+    
+    # 尝试从缓存读取
+    if cache:
+        cached_papers = cache.get_field(cache_key, "papers")
+        if cached_papers is not None:
+            print(f"[INFO] ORCID {orcid_id} 论文列表命中缓存 ({len(cached_papers)} 篇)")
+            return cached_papers
+    
+    # 调用 API 获取数据
     works_data = fetch_author_works(orcid_id)
     papers = parse_paper_list(works_data)
+    
+    # 写入缓存
+    if cache:
+        cache.set_field(cache_key, "papers", papers, ttl=CACHE_TTL)
+        print(f"[INFO] ORCID {orcid_id} 论文列表已写入缓存 ({len(papers)} 篇)")
+    
     return papers
 
 
@@ -158,15 +200,20 @@ if __name__ == "__main__":
     # 示例用法
     import json
     
-    # 使用一个示例 ORCID ID 进行测试
-    # 你可以替换为实际要查询的 ORCID ID
-    test_orcid = "0000-0003-3701-8119"  # 这是一个示例 ORCID
+    test_orcid = "0000-0003-3701-8119"
     
     print(f"正在获取 ORCID {test_orcid} 的论文列表...")
     
+    cache = _get_cache()
+    cache_key = test_orcid
+    
+    if cache:
+        has_cache = cache.has_field(cache_key, "papers")
+        print(f"[缓存] {'命中' if has_cache else '未命中'}")
+    
     try:
         papers = get_author_papers(test_orcid)
-        print(f"共获取到 {len(papers)} 篇论文\n")
+        print(f"\n共获取到 {len(papers)} 篇论文\n")
         
         for i, paper in enumerate(papers[:5], 1):  # 只显示前5篇
             print(f"--- 论文 {i} ---")
@@ -178,6 +225,9 @@ if __name__ == "__main__":
         
         if len(papers) > 5:
             print(f"... 还有 {len(papers) - 5} 篇论文未显示")
+        
+        if cache:
+            print(f"\n[缓存] 数据已写入 collection: {CACHE_COLLECTION}")
             
     except requests.exceptions.HTTPError as e:
         print(f"API 请求失败: {e}")

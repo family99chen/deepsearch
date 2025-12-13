@@ -25,6 +25,40 @@ from google_search_api.google_search import GoogleSearchAPI, GoogleSearchAPISync
 # 导入作者名字过滤器
 from google_scholar_url.author_name_filter import is_same_author
 
+# 导入缓存模块
+try:
+    from localdb.insert_mongo import MongoCache
+    HAS_CACHE = True
+except ImportError:
+    HAS_CACHE = False
+
+# 缓存配置
+CACHE_COLLECTION = "google_scholar_person"
+CACHE_TTL = 180 * 24 * 3600  # 6个月
+
+
+def _get_cache() -> Optional["MongoCache"]:
+    """获取缓存实例"""
+    if not HAS_CACHE:
+        return None
+    try:
+        cache = MongoCache(collection_name=CACHE_COLLECTION)
+        return cache if cache.is_connected() else None
+    except Exception:
+        return None
+
+
+def _normalize_name(name: str) -> str:
+    """
+    标准化作者名字（去除特殊字符、小写）
+    """
+    if not name:
+        return ""
+    # 去除 Unicode 零宽字符和控制字符
+    name = re.sub(r'[\u200b-\u200f\u202a-\u202e\u2060-\u206f\ufeff]', '', name)
+    # 小写并合并空格
+    return " ".join(name.lower().split())
+
 
 class GoogleScholarAuthorScraper:
     """
@@ -60,6 +94,9 @@ class GoogleScholarAuthorScraper:
         # 兼容旧接口
         self.cookies_valid = True  # API 方式始终有效
         self.cookies_path = kwargs.get('cookies_path')  # 忽略，保持兼容
+        
+        # 缓存（只写入，供后续环节使用）
+        self._cache = _get_cache()
     
     def search_author(
         self, 
@@ -145,8 +182,17 @@ class GoogleScholarAuthorScraper:
                 author_info = self._parse_search_result(item, author_name)
                 
                 if author_info and author_info['user_id'] not in seen_user_ids:
-                    # 使用名字过滤器检查是否是同一人
                     result_name = author_info['name']
+                    
+                    # 将原始结果写入缓存（用 user_id 去重，供后续环节使用）
+                    if self._cache:
+                        cache_key = author_info['user_id']  # 用 user_id 作为唯一 key
+                        # 添加标准化后的名字字段
+                        author_info_to_cache = author_info.copy()
+                        author_info_to_cache['normalized_name'] = _normalize_name(result_name)
+                        self._cache.set(cache_key, author_info_to_cache, ttl=CACHE_TTL)
+                    
+                    # 使用名字过滤器检查是否是同一人
                     is_match, _ = is_same_author(author_name, result_name, verbose=False)
                     
                     if is_match:

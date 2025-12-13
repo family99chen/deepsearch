@@ -1,0 +1,67 @@
+[2025-12-12 16:21:11] [INFO] 开始查找 ORCID: 0000-0003-2720-8939
+[2025-12-12 16:21:12] [INFO] 作者姓名: Rahmah Elfithri -> rahmah elfithri
+[2025-12-12 16:21:12] [INFO] 作者组织: UNESCO
+[2025-12-12 16:21:13] [INFO] 获取到 28 篇 ORCID 论文
+[2025-12-12 16:21:14] [INFO] 第 1 批找到 1 个候选人
+[2025-12-12 16:21:18] [INFO] 找到匹配: https://scholar.google.com/citations?user=9dmNVMoAAAAJ&hl=zh-CN (策略: "rahmah elfithri" + 组织 "UNESCO", 迭代 1 次)
+[2025-12-12 16:36:49] [INFO] 开始查找 ORCID: 0009-0001-1268-1179
+[2025-12-12 16:36:49] [INFO] 作者姓名: 瀚 王 -> han wang
+[2025-12-12 16:36:50] [INFO] 作者组织: Northeast Forestry University
+[2025-12-12 16:36:50] [INFO] 获取到 1 篇 ORCID 论文
+[2025-12-12 16:36:51] [INFO] 第 1 批找到 10 个候选人
+[2025-12-12 16:37:39] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-12 16:37:41] [WARNING] 未找到匹配的 Google Scholar 账号: 0009-0001-1268-1179
+[2025-12-12 16:38:08] [INFO] 开始查找 ORCID: 0009-0001-1268-1179
+[2025-12-12 16:38:09] [INFO] 作者姓名: 瀚 王 -> han wang
+[2025-12-12 16:38:09] [INFO] 作者组织: Northeast Forestry University
+[2025-12-12 16:38:10] [INFO] 获取到 1 篇 ORCID 论文
+[2025-12-12 16:38:11] [INFO] 第 1 批找到 10 个候选人
+[2025-12-12 16:38:23] [INFO] 开始查找 ORCID: 0009-0001-1268-1179
+[2025-12-12 16:38:24] [INFO] 作者姓名: 瀚 王 -> han wang
+[2025-12-12 16:38:25] [INFO] 作者组织: Northeast Forestry University
+[2025-12-12 16:38:25] [INFO] 获取到 1 篇 ORCID 论文
+[2025-12-12 16:38:26] [INFO] 第 1 批找到 10 个候选人
+[2025-12-12 16:38:59] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-12 16:38:59] [WARNING] 未找到匹配的 Google Scholar 账号: 0009-0001-1268-1179
+[2025-12-12 16:39:13] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-12 16:39:13] [WARNING] 未找到匹配的 Google Scholar 账号: 0009-0001-1268-1179
+[2025-12-12 16:39:23] [INFO] 开始查找 ORCID: 0009-0001-1268-1179
+[2025-12-12 16:39:24] [INFO] 作者姓名: 瀚 王 -> han wang
+[2025-12-12 16:39:25] [INFO] 作者组织: Northeast Forestry University
+[2025-12-12 16:39:26] [INFO] 获取到 1 篇 ORCID 论文
+[2025-12-12 16:39:26] [INFO] 第 1 批找到 10 个候选人
+[2025-12-12 16:40:14] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-12 16:40:14] [WARNING] 未找到匹配的 Google Scholar 账号: 0009-0001-1268-1179
+[2025-12-12 16:40:32] [INFO] 开始查找 ORCID: 0000-0002-2371-7368
+[2025-12-12 16:40:33] [INFO] 作者姓名: Yi Lu -> yi lu
+[2025-12-12 16:40:33] [INFO] 作者组织: Institute of Process Engineering
+[2025-12-12 16:40:34] [INFO] 获取到 45 篇 ORCID 论文
+[2025-12-12 16:40:35] [INFO] 第 1 批找到 3 个候选人
+[2025-12-12 16:40:39] [INFO] 找到匹配: https://scholar.google.com/citations?user=2Vc7R-8AAAAJ&hl=zh-CN (策略: "yi lu" + 组织 "Institute of Process Engineering", 迭代 1 次)
+[2025-12-12 16:40:40] [INFO] 开始查找 ORCID: 0000-0003-3356-9095
+[2025-12-12 16:40:41] [INFO] 作者姓名: Long Bai -> long bai
+[2025-12-12 16:40:42] [INFO] 作者组织: Northeast Forestry University
+[2025-12-12 16:40:43] [INFO] 获取到 86 篇 ORCID 论文
+[2025-12-12 16:40:44] [INFO] 第 1 批找到 4 个候选人
+[2025-12-12 16:40:48] [INFO] 找到匹配: https://scholar.google.com/citations?user=CdhCVUEAAAAJ&hl=zh-CN (策略: "long bai" + 组织 "Northeast Forestry University", 迭代 1 次)
+[2025-12-12 16:40:51] [INFO] 开始查找 ORCID: 0000-0002-3008-9865
+[2025-12-12 16:40:51] [INFO] 作者姓名: Wei Li -> wei li
+[2025-12-12 16:40:52] [INFO] 作者组织: Northeast Forestry University
+[2025-12-12 16:40:53] [INFO] 获取到 4 篇 ORCID 论文
+[2025-12-12 16:40:53] [INFO] 第 1 批找到 2 个候选人
+[2025-12-12 16:41:04] [INFO] 第 1 批找到 10 个候选人
+[2025-12-12 16:41:57] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2025-12-12 16:42:01] [INFO] 论文 'N-Doped Carbon Aerogels Obtain...' 找到 1 个候选人
+[2025-12-12 16:43:52] [INFO] 通过论文搜索找到匹配: https://scholar.google.com/citations?user=E9LF2j8AAAAJ&hl=en&num=20&oi=sra
+[2025-12-12 16:43:55] [INFO] 开始查找 ORCID: 0000-0003-1688-9484
+[2025-12-12 16:43:56] [INFO] 作者姓名: Siqi Huan -> siqi huan
+[2025-12-12 16:43:56] [INFO] 作者组织: Northeast Forestry University
+[2025-12-12 16:43:57] [INFO] 获取到 19 篇 ORCID 论文
+[2025-12-12 16:43:57] [INFO] 第 1 批找到 1 个候选人
+[2025-12-12 16:44:01] [INFO] 找到匹配: https://scholar.google.com/citations?user=4dcfwKEAAAAJ&hl=zh-CN (策略: "siqi huan" + 组织 "Northeast Forestry University", 迭代 1 次)
+[2025-12-12 16:44:04] [INFO] 开始查找 ORCID: 0000-0001-9553-554X
+[2025-12-12 16:44:05] [INFO] 作者姓名: Chaoji Chen -> chaoji chen
+[2025-12-12 16:44:05] [INFO] 作者组织: Wuhan University
+[2025-12-12 16:44:07] [INFO] 获取到 197 篇 ORCID 论文
+[2025-12-12 16:44:07] [INFO] 第 1 批找到 1 个候选人
+[2025-12-12 16:44:19] [INFO] 找到匹配: https://scholar.google.com/citations?user=3BLQH4UAAAAJ&hl=zh-CN (策略: "chaoji chen" + 组织 "Wuhan University", 迭代 1 次)

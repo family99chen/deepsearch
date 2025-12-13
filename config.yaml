@@ -32,10 +32,20 @@ pipeline:
   # 论文标题匹配阈值 (0-1)
   match_threshold: 0.9
   # 每个候选人最大匹配论文数
-  max_matches: 10
+  max_matches: 150
 
 # 代理配置
 proxy:
   enabled: false
   url: ""
+
+# MongoDB 缓存配置（使用独立的无认证实例）
+mongodb:
+  host: "localhost"
+  port: 27018  # 独立 MongoDB 实例
+  db_name: "deepsearch_cache"
+  collection: "api_cache"
+  # 无需认证
+  # username: ""
+  # password: ""
 
