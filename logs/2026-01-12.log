@@ -1,0 +1,225 @@
+[2026-01-12 00:01:17] [INFO] IterAgent 初始化: k=2, n=2
+[2026-01-12 00:01:17] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-12 00:01:19] [INFO] undetected-chromedriver 初始化成功
+[2026-01-12 00:01:23] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-12 00:01:30] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:01:33] [INFO] LLM API Async 查询成功: 118 字符
+[2026-01-12 00:01:33] [INFO] IterAgent 完成: AHMED Irfan, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-01-12 00:03:56] [INFO] IterAgent 初始化: k=2, n=2
+[2026-01-12 00:03:56] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-12 00:03:57] [INFO] undetected-chromedriver 初始化成功
+[2026-01-12 00:04:02] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-12 00:04:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:04:10] [INFO] LLM API Async 查询成功: 110 字符
+[2026-01-12 00:04:10] [INFO] IterAgent 完成: AHMED Irfan, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-01-12 00:09:02] [INFO] IterAgent 初始化: k=2, n=2
+[2026-01-12 00:09:02] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-12 00:09:04] [INFO] undetected-chromedriver 初始化成功
+[2026-01-12 00:09:10] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-12 00:09:16] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:09:19] [INFO] LLM API Async 查询成功: 139 字符
+[2026-01-12 00:09:19] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:09:21] [INFO] LLM API Async 查询成功: 8 字符
+[2026-01-12 00:09:25] [INFO] 域名预热完成: https://scholars.cityu.edu.hk
+[2026-01-12 00:09:31] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:09:35] [INFO] LLM API Async 查询成功: 862 字符
+[2026-01-12 00:09:38] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:09:41] [INFO] LLM API Async 查询成功: 50 字符
+[2026-01-12 00:09:41] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:09:43] [INFO] LLM API Async 查询成功: 8 字符
+[2026-01-12 00:09:43] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:09:47] [INFO] LLM API Async 查询成功: 194 字符
+[2026-01-12 00:09:47] [INFO] IterAgent 完成: AHMED Irfan, 迭代 2 轮, 访问 3 页, 收集 1 条信息
+[2026-01-12 00:14:45] [INFO] IterAgent 初始化: k=2, n=2
+[2026-01-12 00:14:45] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-12 00:14:47] [INFO] undetected-chromedriver 初始化成功
+[2026-01-12 00:14:52] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-12 00:14:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:15:02] [INFO] LLM API Async 查询成功: 139 字符
+[2026-01-12 00:15:02] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:15:04] [INFO] LLM API Async 查询成功: 8 字符
+[2026-01-12 00:15:08] [INFO] 域名预热完成: https://scholars.cityu.edu.hk
+[2026-01-12 00:15:14] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:15:17] [INFO] LLM API Async 查询成功: 207 字符
+[2026-01-12 00:15:20] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:15:22] [INFO] LLM API Async 查询成功: 50 字符
+[2026-01-12 00:15:22] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:15:24] [INFO] LLM API Async 查询成功: 4 字符
+[2026-01-12 00:15:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:15:27] [INFO] LLM API Async 查询成功: 257 字符
+[2026-01-12 00:15:27] [INFO] IterAgent 完成: AHMED Irfan, 迭代 2 轮, 访问 3 页, 收集 2 条信息
+[2026-01-12 00:17:58] [INFO] IterAgent 初始化: k=2, n=2
+[2026-01-12 00:17:58] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-12 00:18:00] [INFO] undetected-chromedriver 初始化成功
+[2026-01-12 00:18:04] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-12 00:18:11] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:18:14] [INFO] LLM API Async 查询成功: 139 字符
+[2026-01-12 00:18:14] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:18:16] [INFO] LLM API Async 查询成功: 8 字符
+[2026-01-12 00:18:20] [INFO] 域名预热完成: https://scholars.cityu.edu.hk
+[2026-01-12 00:18:26] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:18:29] [INFO] LLM API Async 查询成功: 171 字符
+[2026-01-12 00:18:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:18:35] [INFO] LLM API Async 查询成功: 50 字符
+[2026-01-12 00:18:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:18:37] [INFO] LLM API Async 查询成功: 4 字符
+[2026-01-12 00:18:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:18:40] [INFO] LLM API Async 查询成功: 242 字符
+[2026-01-12 00:18:40] [INFO] IterAgent 完成: AHMED Irfan, 迭代 2 轮, 访问 3 页, 收集 2 条信息
+[2026-01-12 00:20:50] [INFO] IterAgent 初始化: k=2, n=2
+[2026-01-12 00:20:50] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-12 00:20:52] [INFO] undetected-chromedriver 初始化成功
+[2026-01-12 00:20:58] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-12 00:21:04] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:21:07] [INFO] LLM API Async 查询成功: 139 字符
+[2026-01-12 00:21:07] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:21:09] [INFO] LLM API Async 查询成功: 8 字符
+[2026-01-12 00:21:13] [INFO] 域名预热完成: https://scholars.cityu.edu.hk
+[2026-01-12 00:21:19] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:21:22] [INFO] LLM API Async 查询成功: 173 字符
+[2026-01-12 00:21:25] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:21:28] [INFO] LLM API Async 查询成功: 50 字符
+[2026-01-12 00:21:28] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:21:30] [INFO] LLM API Async 查询成功: 4 字符
+[2026-01-12 00:21:30] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:21:33] [INFO] LLM API Async 查询成功: 219 字符
+[2026-01-12 00:21:33] [INFO] IterAgent 完成: AHMED Irfan, 迭代 2 轮, 访问 3 页, 收集 2 条信息
+[2026-01-12 00:26:57] [INFO] IterAgent 初始化: k=2, n=2
+[2026-01-12 00:26:57] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-12 00:26:58] [INFO] undetected-chromedriver 初始化成功
+[2026-01-12 00:27:05] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-12 00:27:11] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:27:14] [INFO] LLM API Async 查询成功: 139 字符
+[2026-01-12 00:27:14] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:27:16] [INFO] LLM API Async 查询成功: 8 字符
+[2026-01-12 00:27:20] [INFO] 域名预热完成: https://scholars.cityu.edu.hk
+[2026-01-12 00:27:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:27:32] [INFO] LLM API Async 查询成功: 805 字符
+[2026-01-12 00:27:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:27:34] [INFO] LLM API Async 查询成功: 4 字符
+[2026-01-12 00:27:34] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:27:38] [INFO] LLM API Async 查询成功: 894 字符
+[2026-01-12 00:27:38] [INFO] IterAgent 完成: AHMED Irfan, 迭代 2 轮, 访问 2 页, 收集 2 条信息
+[2026-01-12 00:30:32] [INFO] IterAgent 初始化: k=2, n=2
+[2026-01-12 00:30:32] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-12 00:30:34] [INFO] undetected-chromedriver 初始化成功
+[2026-01-12 00:30:38] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-12 00:30:44] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:30:48] [INFO] LLM API Async 查询成功: 147 字符
+[2026-01-12 00:30:48] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:30:50] [INFO] LLM API Async 查询成功: 8 字符
+[2026-01-12 00:30:53] [INFO] 域名预热完成: https://scholars.cityu.edu.hk
+[2026-01-12 00:31:00] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:31:06] [INFO] LLM API Async 查询成功: 391 字符
+[2026-01-12 00:31:06] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:31:08] [INFO] LLM API Async 查询成功: 4 字符
+[2026-01-12 00:31:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:31:15] [INFO] LLM API Async 查询成功: 507 字符
+[2026-01-12 00:31:15] [INFO] IterAgent 完成: AHMED Irfan, 迭代 2 轮, 访问 2 页, 收集 2 条信息
+[2026-01-12 00:31:53] [INFO] IterAgent 初始化: k=2, n=2
+[2026-01-12 00:31:53] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-12 00:31:54] [INFO] undetected-chromedriver 初始化成功
+[2026-01-12 00:31:59] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-12 00:32:07] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:32:10] [INFO] LLM API Async 查询成功: 147 字符
+[2026-01-12 00:32:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:32:12] [INFO] LLM API Async 查询成功: 8 字符
+[2026-01-12 00:32:16] [INFO] 域名预热完成: https://scholars.cityu.edu.hk
+[2026-01-12 00:32:22] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:32:27] [INFO] LLM API Async 查询成功: 317 字符
+[2026-01-12 00:32:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:32:29] [INFO] LLM API Async 查询成功: 4 字符
+[2026-01-12 00:32:29] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:32:36] [INFO] LLM API Async 查询成功: 507 字符
+[2026-01-12 00:32:36] [INFO] IterAgent 完成: AHMED Irfan, 迭代 2 轮, 访问 2 页, 收集 2 条信息
+[2026-01-12 00:35:54] [INFO] IterAgent 初始化: k=3, n=2
+[2026-01-12 00:35:54] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-12 00:35:55] [INFO] undetected-chromedriver 初始化成功
+[2026-01-12 00:36:00] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-12 00:36:07] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:36:12] [INFO] LLM API Async 查询成功: 147 字符
+[2026-01-12 00:36:12] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:36:14] [INFO] LLM API Async 查询成功: 8 字符
+[2026-01-12 00:36:18] [INFO] 域名预热完成: https://scholars.cityu.edu.hk
+[2026-01-12 00:36:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:36:31] [INFO] LLM API Async 查询成功: 600 字符
+[2026-01-12 00:36:31] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:36:35] [INFO] LLM API Async 查询成功: 8 字符
+[2026-01-12 00:36:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:36:46] [INFO] LLM API Async 查询成功: 306 字符
+[2026-01-12 00:36:46] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:36:49] [INFO] LLM API Async 查询成功: 56 字符
+[2026-01-12 00:36:49] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:36:57] [INFO] LLM API Async 查询成功: 706 字符
+[2026-01-12 00:36:57] [INFO] IterAgent 完成: AHMED Irfan, 迭代 3 轮, 访问 4 页, 收集 3 条信息
+[2026-01-12 00:41:10] [INFO] IterAgent 初始化: k=3, n=2
+[2026-01-12 00:41:10] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-12 00:41:12] [INFO] undetected-chromedriver 初始化成功
+[2026-01-12 00:41:17] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-12 00:41:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:41:27] [INFO] LLM API Async 查询成功: 205 字符
+[2026-01-12 00:41:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:41:29] [INFO] LLM API Async 查询成功: 8 字符
+[2026-01-12 00:41:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:41:40] [INFO] LLM API Async 查询成功: 178 字符
+[2026-01-12 00:41:42] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:41:44] [INFO] LLM API Async 查询成功: 154 字符
+[2026-01-12 00:41:44] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:41:48] [INFO] LLM API Async 查询成功: 8 字符
+[2026-01-12 00:41:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:41:56] [INFO] LLM API Async 查询成功: 125 字符
+[2026-01-12 00:41:58] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:42:02] [INFO] LLM API Async 查询成功: 117 字符
+[2026-01-12 00:42:03] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:42:08] [INFO] LLM API Async 查询成功: 117 字符
+[2026-01-12 00:42:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:42:10] [INFO] LLM API Async 查询成功: 8 字符
+[2026-01-12 00:42:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:42:14] [INFO] LLM API Async 查询成功: 194 字符
+[2026-01-12 00:42:14] [INFO] IterAgent 完成: AHMED Irfan, 迭代 3 轮, 访问 6 页, 收集 1 条信息
+[2026-01-12 00:49:54] [INFO] IterAgent 初始化: k=3, n=2
+[2026-01-12 00:49:54] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-12 00:49:56] [INFO] undetected-chromedriver 初始化成功
+[2026-01-12 00:50:02] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-12 00:50:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:50:12] [INFO] LLM API Async 查询成功: 246 字符
+[2026-01-12 00:50:12] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:50:14] [INFO] LLM API Async 查询成功: 8 字符
+[2026-01-12 00:50:18] [INFO] 域名预热完成: https://scholars.cityu.edu.hk
+[2026-01-12 00:50:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:50:30] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:50:33] [INFO] LLM API Async 查询成功: 248 字符
+[2026-01-12 00:50:34] [INFO] LLM API Async 查询成功: 380 字符
+[2026-01-12 00:50:34] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:50:36] [INFO] LLM API Async 查询成功: 8 字符
+[2026-01-12 00:50:42] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:50:47] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:50:49] [INFO] LLM API Async 查询成功: 384 字符
+[2026-01-12 00:50:50] [INFO] LLM API Async 查询成功: 60 字符
+[2026-01-12 00:50:50] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:50:52] [INFO] LLM API Async 查询成功: 4 字符
+[2026-01-12 00:50:52] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:50:59] [INFO] LLM API Async 查询成功: 423 字符
+[2026-01-12 00:50:59] [INFO] IterAgent 完成: AHMED Irfan, 迭代 3 轮, 访问 5 页, 收集 4 条信息
+[2026-01-12 00:53:20] [INFO] IterAgent 初始化: k=3, n=2
+[2026-01-12 00:53:20] [INFO] IterAgent 开始: Emmy Tay, URL: https://mcip.ucdavis.edu/students
+[2026-01-12 00:53:22] [INFO] undetected-chromedriver 初始化成功
+[2026-01-12 00:53:51] [INFO] 域名预热完成: https://mcip.ucdavis.edu
+[2026-01-12 00:53:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:54:00] [INFO] LLM API Async 查询成功: 160 字符
+[2026-01-12 00:54:05] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:54:08] [INFO] LLM API Async 查询成功: 224 字符
+[2026-01-12 00:54:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:54:14] [INFO] LLM API Async 查询成功: 160 字符
+[2026-01-12 00:54:14] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:54:16] [INFO] LLM API Async 查询成功: 8 字符
+[2026-01-12 00:54:21] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:54:24] [INFO] 域名预热完成: https://cbsapps.ucdavis.edu
+[2026-01-12 00:54:26] [INFO] LLM API Async 查询成功: 226 字符
+[2026-01-12 00:54:31] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:54:35] [INFO] LLM API Async 查询成功: 155 字符
+[2026-01-12 00:54:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:54:37] [INFO] LLM API Async 查询成功: 4 字符
+[2026-01-12 00:54:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-12 00:54:40] [INFO] LLM API Async 查询成功: 175 字符
+[2026-01-12 00:54:40] [INFO] IterAgent 完成: Emmy Tay, 迭代 3 轮, 访问 5 页, 收集 2 条信息

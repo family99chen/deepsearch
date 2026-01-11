@@ -1,0 +1,144 @@
+[2026-01-11 22:32:52] [INFO] LLM Factory 初始化, 后端: api
+[2026-01-11 22:32:52] [ERROR] LLM API 请求失败: 401 Client Error: Unauthorized for url: https://api.openai.com/v1/chat/completions
+[2026-01-11 22:32:52] [WARNING] LLM API 重试 1: 401 Client Error: Unauthorized for url: https://api.openai.com/v1/chat/completions
+[2026-01-11 22:32:52] [ERROR] LLM API 请求失败: 401 Client Error: Unauthorized for url: https://api.openai.com/v1/chat/completions
+[2026-01-11 22:32:52] [WARNING] LLM API 重试 2: 401 Client Error: Unauthorized for url: https://api.openai.com/v1/chat/completions
+[2026-01-11 22:32:52] [ERROR] LLM API 请求失败: 401 Client Error: Unauthorized for url: https://api.openai.com/v1/chat/completions
+[2026-01-11 22:32:52] [ERROR] LLM API 查询失败: 401 Client Error: Unauthorized for url: https://api.openai.com/v1/chat/completions
+[2026-01-11 22:32:52] [INFO] LLM Factory 初始化, 后端: auto
+[2026-01-11 22:32:52] [ERROR] LLM API 请求失败: 401 Client Error: Unauthorized for url: https://api.openai.com/v1/chat/completions
+[2026-01-11 22:32:52] [WARNING] LLM API 重试 1: 401 Client Error: Unauthorized for url: https://api.openai.com/v1/chat/completions
+[2026-01-11 22:32:53] [ERROR] LLM API 请求失败: 401 Client Error: Unauthorized for url: https://api.openai.com/v1/chat/completions
+[2026-01-11 22:32:53] [WARNING] LLM API 重试 2: 401 Client Error: Unauthorized for url: https://api.openai.com/v1/chat/completions
+[2026-01-11 22:32:53] [ERROR] LLM API 请求失败: 401 Client Error: Unauthorized for url: https://api.openai.com/v1/chat/completions
+[2026-01-11 22:32:53] [ERROR] LLM API 查询失败: 401 Client Error: Unauthorized for url: https://api.openai.com/v1/chat/completions
+[2026-01-11 22:34:21] [INFO] 开始搜索组织链接: Emmy Tay @ University of California, Davis
+[2026-01-11 22:34:21] [INFO] 缓存命中: Emmy Tay, 10 个链接
+[2026-01-11 22:34:21] [INFO] 开始搜索组织链接: Ju Li @ MIT
+[2026-01-11 22:34:21] [INFO] 缓存命中: Ju Li, 10 个链接
+[2026-01-11 22:36:10] [INFO] LLM Factory 初始化, 后端: api
+[2026-01-11 22:36:15] [INFO] LLM API 查询成功: 32 字符
+[2026-01-11 22:36:15] [INFO] LLM Factory 初始化, 后端: auto
+[2026-01-11 22:36:17] [INFO] LLM API 查询成功: 25 字符
+[2026-01-11 22:54:44] [INFO] IterAgent 初始化: k=2, n=2
+[2026-01-11 22:54:44] [INFO] IterAgent 开始: Emmy Tay, URL: https://mcip.ucdavis.edu/students
+[2026-01-11 22:54:44] [ERROR] 页面请求失败: https://mcip.ucdavis.edu/students, 403 Client Error: Forbidden for url: https://mcip.ucdavis.edu/students
+[2026-01-11 22:54:44] [INFO] IterAgent 完成: Emmy Tay, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-01-11 22:56:18] [INFO] IterAgent 初始化: k=3, n=2
+[2026-01-11 22:56:18] [INFO] IterAgent 开始: Wang ShiQi, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-11 22:56:18] [INFO] LLM Factory 初始化, 后端: api
+[2026-01-11 22:56:23] [INFO] LLM API 查询成功: 54 字符
+[2026-01-11 22:56:23] [INFO] IterAgent 完成: Wang ShiQi, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-01-11 22:57:22] [INFO] IterAgent 初始化: k=3, n=2
+[2026-01-11 22:57:22] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-11 22:57:22] [INFO] LLM Factory 初始化, 后端: api
+[2026-01-11 22:57:24] [INFO] LLM API 查询成功: 54 字符
+[2026-01-11 22:57:24] [INFO] IterAgent 完成: AHMED Irfan, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-01-11 23:07:33] [INFO] IterAgent 初始化: k=3, n=2
+[2026-01-11 23:07:33] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-11 23:07:50] [INFO] Selenium Chrome driver 初始化成功
+[2026-01-11 23:07:53] [INFO] LLM Factory 初始化, 后端: api
+[2026-01-11 23:07:57] [INFO] LLM API 查询成功: 54 字符
+[2026-01-11 23:07:57] [INFO] IterAgent 完成: AHMED Irfan, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-01-11 23:18:10] [INFO] undetected-chromedriver 初始化成功
+[2026-01-11 23:18:15] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-11 23:18:22] [INFO] LLM Factory 初始化, 后端: api
+[2026-01-11 23:18:25] [INFO] LLM API 查询成功: 132 字符
+[2026-01-11 23:19:49] [INFO] IterAgent 初始化: k=3, n=2
+[2026-01-11 23:19:49] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-11 23:20:49] [ERROR] Driver 初始化失败: Message: session not created: cannot connect to chrome at 127.0.0.1:49627
+from chrome not reachable; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+#0 0x56b4c0fdc40a <unknown>
+#1 0x56b4c0a10598 <unknown>
+#2 0x56b4c09fc1c7 <unknown>
+#3 0x56b4c0a503f0 <unknown>
+#4 0x56b4c0a45af6 <unknown>
+#5 0x56b4c0a95dcc <unknown>
+#6 0x56b4c0a954ec <unknown>
+#7 0x56b4c0a547b2 <unknown>
+#8 0x56b4c0a55461 <unknown>
+#9 0x56b4c0fa4df9 <unknown>
+#10 0x56b4c0fa7d5d <unknown>
+#11 0x56b4c0f8db41 <unknown>
+#12 0x56b4c0fa893b <unknown>
+#13 0x56b4c0f74870 <unknown>
+#14 0x56b4c0fc9828 <unknown>
+#15 0x56b4c0fc99fc <unknown>
+#16 0x56b4c0fdb763 <unknown>
+#17 0x76758049caa4 <unknown>
+#18 0x767580529c6c <unknown>
+
+[2026-01-11 23:22:53] [INFO] IterAgent 初始化: k=3, n=2
+[2026-01-11 23:22:53] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-11 23:22:54] [INFO] undetected-chromedriver 初始化成功
+[2026-01-11 23:22:58] [INFO] IterAgent 初始化: k=3, n=2
+[2026-01-11 23:22:58] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-11 23:23:00] [INFO] undetected-chromedriver 初始化成功
+[2026-01-11 23:23:01] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-11 23:23:03] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-11 23:23:07] [INFO] LLM Factory 初始化, 后端: api
+[2026-01-11 23:23:10] [INFO] LLM Factory 初始化, 后端: api
+[2026-01-11 23:23:11] [INFO] LLM API 查询成功: 134 字符
+[2026-01-11 23:23:13] [INFO] LLM API 查询成功: 8 字符
+[2026-01-11 23:23:14] [WARNING] 域名预热失败: https://scholars.cityu.edu.hk, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-01-11 23:23:14] [ERROR] 页面获取失败: https://scholars.cityu.edu.hk/en/persons/iahmed8, HTTPConnectionPool(host='localhost', port=33629): Max retries exceeded with url: /session/14d2a8ec75987a4e2c2256474f95150d/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-01-11 23:23:14] [ERROR] 页面获取失败: https://scholars.cityu.edu.hk/en/persons/iahmed8, 页面获取失败: HTTPConnectionPool(host='localhost', port=33629): Max retries exceeded with url: /session/14d2a8ec75987a4e2c2256474f95150d/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-01-11 23:23:14] [WARNING] 域名预热失败: https://scholars.cityu.edu.hk, HTTPConnectionPool(host='localhost', port=33629): Max retries exceeded with url: /session/14d2a8ec75987a4e2c2256474f95150d/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x76215c067750>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-01-11 23:23:14] [ERROR] 页面获取失败: https://scholars.cityu.edu.hk/en/persons/wahmed7, HTTPConnectionPool(host='localhost', port=33629): Max retries exceeded with url: /session/14d2a8ec75987a4e2c2256474f95150d/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-01-11 23:23:14] [ERROR] 页面获取失败: https://scholars.cityu.edu.hk/en/persons/wahmed7, 页面获取失败: HTTPConnectionPool(host='localhost', port=33629): Max retries exceeded with url: /session/14d2a8ec75987a4e2c2256474f95150d/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-01-11 23:23:14] [INFO] LLM API 查询成功: 134 字符
+[2026-01-11 23:23:17] [INFO] LLM API 查询成功: 8 字符
+[2026-01-11 23:23:19] [INFO] LLM API 查询成功: 190 字符
+[2026-01-11 23:23:19] [INFO] IterAgent 完成: AHMED Irfan, 迭代 2 轮, 访问 3 页, 收集 1 条信息
+[2026-01-11 23:23:21] [INFO] 域名预热完成: https://scholars.cityu.edu.hk
+[2026-01-11 23:23:33] [INFO] LLM API 查询成功: 267 字符
+[2026-01-11 23:23:42] [INFO] LLM API 查询成功: 56 字符
+[2026-01-11 23:23:44] [INFO] LLM API 查询成功: 8 字符
+[2026-01-11 23:23:47] [INFO] 域名预热完成: https://www.facebook.com
+[2026-01-11 23:23:55] [INFO] LLM API 查询成功: 56 字符
+[2026-01-11 23:24:01] [INFO] 域名预热完成: https://twitter.com
+[2026-01-11 23:24:12] [INFO] LLM API 查询成功: 54 字符
+[2026-01-11 23:24:20] [INFO] LLM API 查询成功: 56 字符
+[2026-01-11 23:24:24] [INFO] LLM API 查询成功: 4 字符
+[2026-01-11 23:24:29] [INFO] LLM API 查询成功: 321 字符
+[2026-01-11 23:24:29] [INFO] IterAgent 完成: AHMED Irfan, 迭代 3 轮, 访问 6 页, 收集 2 条信息
+[2026-01-11 23:32:33] [INFO] IterAgent 初始化: k=2, n=2
+[2026-01-11 23:32:33] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-11 23:32:35] [INFO] undetected-chromedriver 初始化成功
+[2026-01-11 23:32:42] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-11 23:32:49] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-11 23:32:53] [INFO] LLM API Async 查询成功: 213 字符
+[2026-01-11 23:32:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-11 23:33:00] [INFO] LLM API Async 查询成功: 695 字符
+[2026-01-11 23:33:00] [INFO] IterAgent 完成: AHMED Irfan, 迭代 1 轮, 访问 1 页, 收集 1 条信息
+[2026-01-11 23:38:24] [INFO] IterAgent 初始化: k=2, n=2
+[2026-01-11 23:38:24] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-11 23:38:25] [INFO] undetected-chromedriver 初始化成功
+[2026-01-11 23:38:29] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-11 23:38:36] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-11 23:38:40] [INFO] LLM API Async 查询成功: 191 字符
+[2026-01-11 23:38:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-11 23:38:47] [INFO] LLM API Async 查询成功: 561 字符
+[2026-01-11 23:38:47] [INFO] IterAgent 完成: AHMED Irfan, 迭代 1 轮, 访问 1 页, 收集 1 条信息
+[2026-01-11 23:43:52] [INFO] IterAgent 初始化: k=2, n=2
+[2026-01-11 23:43:52] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-11 23:43:53] [INFO] undetected-chromedriver 初始化成功
+[2026-01-11 23:43:58] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-11 23:44:04] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-11 23:44:07] [INFO] LLM API Async 查询成功: 118 字符
+[2026-01-11 23:44:07] [INFO] IterAgent 完成: AHMED Irfan, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-01-11 23:56:24] [INFO] IterAgent 初始化: k=2, n=2
+[2026-01-11 23:56:24] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-11 23:56:26] [INFO] undetected-chromedriver 初始化成功
+[2026-01-11 23:56:32] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-11 23:56:38] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-11 23:56:41] [INFO] LLM API Async 查询成功: 118 字符
+[2026-01-11 23:56:41] [INFO] IterAgent 完成: AHMED Irfan, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-01-11 23:59:10] [INFO] IterAgent 初始化: k=2, n=2
+[2026-01-11 23:59:10] [INFO] IterAgent 开始: AHMED Irfan, URL: https://www.cityu.edu.hk/directories/people/academic
+[2026-01-11 23:59:12] [INFO] undetected-chromedriver 初始化成功
+[2026-01-11 23:59:16] [INFO] 域名预热完成: https://www.cityu.edu.hk
+[2026-01-11 23:59:22] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-11 23:59:25] [INFO] LLM API Async 查询成功: 118 字符
+[2026-01-11 23:59:25] [INFO] IterAgent 完成: AHMED Irfan, 迭代 1 轮, 访问 1 页, 收集 0 条信息

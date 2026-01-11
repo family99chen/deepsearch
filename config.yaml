@@ -49,3 +49,36 @@ mongodb:
   # username: ""
   # password: ""
 
+# LLM 配置
+llm:
+  # 后端选择: "api" | "local" | "auto"
+  # - api: 使用云端 API（OpenAI、Claude 等）
+  # - local: 使用本地部署的模型
+  # - auto: 自动选择（优先本地，本地不可用时使用 API）
+  backend: "api"
+  
+  # 云端 API 配置（OpenAI 兼容格式）
+  api:
+    api_key: "sk-zk200fee8578937a24d5206025c1500aaa368ff3f37ca32c"  # 填入你的 API Key
+    api_base: "https://api.zhizengzeng.com/v1"  # 或其他兼容的 API
+    model: "gpt-4o-mini"
+    timeout: 120  # 超时时间（秒）
+  
+  # 本地模型配置（OpenAI 兼容格式）
+  local:
+    api_base: "http://localhost:11434/v1"  # Ollama 默认地址
+    model: "qwen2.5:7b"  # 本地模型名称
+    timeout: 300  # 本地模型可能需要更长时间
+
+# Iter Agent 配置（迭代式网页深挖）
+iter_agent:
+  # 最大迭代次数 (k)
+  # 每次迭代会读取上一轮发现的所有链接
+  # 例如：k=3 表示最多进行 3 轮深挖
+  max_iterations: 3
+  
+  # 每个页面最多返回的链接数 (n)
+  # 每个页面分析后最多返回 n 个可能包含目标人物信息的链接
+  # 注意：第 i 轮如果有 m 个页面，下一轮最多会有 m*n 个链接
+  max_links_per_page: 3
+
