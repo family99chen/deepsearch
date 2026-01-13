@@ -478,8 +478,8 @@ if __name__ == "__main__":
         
         #test_url = "https://www.cityu.edu.hk/directories/people/academic"
         #test_name = "AHMED Irfan"
-        test_url = "https://mcip.ucdavis.edu/students"
-        test_name = "Emmy Tay"
+        test_url = "https://www.scut.edu.cn/new/"
+        test_name = "CAI Yutao"
         
         print(f"\n起始 URL: {test_url}")
         print(f"目标人物: {test_name}")
@@ -487,7 +487,7 @@ if __name__ == "__main__":
         result = await search_person_in_org(
             start_url=test_url,
             person_name=test_name,
-            max_iterations=3,
+            max_iterations=10,
             max_links_per_page=2,
             max_concurrent=2,
             verbose=True,
