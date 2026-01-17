@@ -12,6 +12,7 @@ Brain 模块
 
 import sys
 import asyncio
+import yaml
 from pathlib import Path
 from dataclasses import dataclass, field
 from typing import Optional, List, Dict, Any
@@ -20,7 +21,27 @@ from datetime import datetime
 # 添加项目根目录
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
+# ============ 加载配置 ============
+CONFIG_PATH = Path(__file__).parent.parent.parent / "config.yaml"
+
+def _load_config() -> Dict[str, Any]:
+    """加载配置文件"""
+    if CONFIG_PATH.exists():
+        with open(CONFIG_PATH, 'r', encoding='utf-8') as f:
+            return yaml.safe_load(f)
+    return {}
+
+_config = _load_config()
+_advanced_config = _config.get("iteragent_advanced", {})
+
+# 默认配置
+DEFAULT_MAX_ITERATIONS = _advanced_config.get("max_iterations", 10)
+DEFAULT_MAX_HISTORY_IN_PROMPT = _advanced_config.get("max_history_in_prompt", 5)
+
 from llm import query_async
+
+# 导入共享 driver（用于标签页切换）
+from org_info.shared_driver import switch_to_tab
 
 # 支持直接运行和模块导入两种方式
 try:
@@ -79,8 +100,10 @@ ACTION: [动作类型] [参数]
 ## 重要规则（必须遵守）
 1. **禁止重复操作**：如果历史记录显示你已经在当前页面做过某个操作（如已搜索过），不要再做同样的操作
 2. **搜索结果页翻页**：如果当前页面是搜索结果，但没有找到目标人物，或者不确定是否是当前目标人物（检查url是否包含人物名字），应该点击 Next/下一页 按钮翻页查看更多结果
-3. **查看 URL**：如果链接 URL 包含目标人物的名字（如 shiqi、wang-shiqi 等），优先点击该链接
+3. **查看 URL**：如果链接 URL 包含目标人物的名字，优先点击该链接
 4. **避免无效操作**：如果当前页面已经有搜索结果，不要重复搜索，而是浏览结果或翻页
+5. **BACK的使用**: 如果当前页面不是目标人物而是其他人物且有历史记录，说明上一步选择错误，应及时BACK
+6. **相似名字**: 注意相似姓名，不要把相似姓名的人判断为目标人物了
 
 ## 决策建议
 - 如果是第一次访问且有搜索框，尝试搜索目标人物姓名
@@ -100,7 +123,8 @@ class HistoryEntry:
     page_type: str                  # 页面类型
     page_summary: str               # 页面摘要
     person_info: str                # 提取到的信息
-    action_taken: str               # 采取的动作
+    action_taken: str               # 采取的动作（如 CLICK link_5）
+    action_detail: str = ""         # 动作详情（如链接文字、目标URL等）
     timestamp: datetime = field(default_factory=datetime.now)
 
 
@@ -124,10 +148,15 @@ class Brain:
     
     def __init__(
         self,
-        max_iterations: int = 10,
-        max_history_in_prompt: int = 5,
+        max_iterations: int = None,
+        max_history_in_prompt: int = None,
         verbose: bool = True,
     ):
+        # 使用配置文件中的值作为默认值
+        if max_iterations is None:
+            max_iterations = DEFAULT_MAX_ITERATIONS
+        if max_history_in_prompt is None:
+            max_history_in_prompt = DEFAULT_MAX_HISTORY_IN_PROMPT
         self.max_iterations = max_iterations
         self.max_history_in_prompt = max_history_in_prompt
         self.verbose = verbose
@@ -143,6 +172,7 @@ class Brain:
         self,
         start_url: str,
         person_name: str,
+        tab_handle: str = None,
     ) -> BrainResult:
         """
         运行主循环
@@ -150,14 +180,22 @@ class Brain:
         Args:
             start_url: 起始 URL
             person_name: 目标人物姓名
+            tab_handle: 指定的标签页 handle（用于隔离）
         
         Returns:
             BrainResult
         """
+        # 如果指定了标签页，切换到该标签页并绑定给 PageExecuter
+        if tab_handle:
+            switch_to_tab(tab_handle)
+            self.executer.set_tab(tab_handle)
+        
         if self.verbose:
             print("=" * 60)
             print(f"[Brain] 开始搜索: {person_name}")
             print(f"[Brain] 起始 URL: {start_url}")
+            if tab_handle:
+                print(f"[Brain] 使用标签页: {tab_handle[:15]}...")
             print("=" * 60)
         
         # 设置任务给 PageExecuter
@@ -221,8 +259,13 @@ class Brain:
                     person_name=person_name,
                 )
                 
+                # 获取动作的详细信息
+                action_detail = self._get_action_detail(next_action, state.elements)
+                
                 if self.verbose:
                     print(f"[Brain] 决策: {next_action.type.value} {next_action.target} {next_action.value}")
+                    if action_detail:
+                        print(f"[Brain] 详情: {action_detail}")
                 
                 # 4. 记录历史
                 self._history.append(HistoryEntry(
@@ -232,6 +275,7 @@ class Brain:
                     page_summary=summary.page_summary,
                     person_info=summary.person_info if summary.has_target_info else "",
                     action_taken=f"{next_action.type.value} {next_action.target} {next_action.value}".strip(),
+                    action_detail=action_detail,
                 ))
                 self._visited_urls.add(state.url)
                 
@@ -361,6 +405,43 @@ class Brain:
         
         return '\n'.join(lines)
     
+    def _get_action_detail(self, action: Action, elements: List[InteractiveElement]) -> str:
+        """获取动作的详细信息（链接文字、目标URL等）"""
+        if action.type == ActionType.DONE:
+            return ""
+        
+        if action.type == ActionType.BACK:
+            return "返回上一页"
+        
+        if action.type == ActionType.NAVIGATE:
+            return f"导航到: {action.target}"
+        
+        if action.type == ActionType.SEARCH:
+            # 找到搜索框元素
+            for elem in elements:
+                if elem.id == action.target:
+                    placeholder = elem.placeholder or "搜索框"
+                    return f'在 "{placeholder}" 中搜索 "{action.value}"'
+            return f'搜索 "{action.value}"'
+        
+        if action.type == ActionType.CLICK:
+            # 找到点击的元素
+            for elem in elements:
+                if elem.id == action.target:
+                    text = elem.text[:50] if elem.text else "(无文字)"
+                    if elem.type == ElementType.LINK and elem.href:
+                        # 链接：显示文字和目标URL
+                        href_short = elem.href[-60:] if len(elem.href) > 60 else elem.href
+                        return f'点击链接 "{text}" -> {href_short}'
+                    elif elem.type == ElementType.BUTTON:
+                        # 按钮：显示按钮文字
+                        return f'点击按钮 "{text}"'
+                    else:
+                        return f'点击 "{text}"'
+            return f"点击 {action.target}"
+        
+        return ""
+    
     def _format_history(self) -> str:
         """格式化历史记录"""
         if not self._history:
@@ -375,6 +456,9 @@ class Brain:
             lines.append(f"{i}. [{entry.page_type}] {entry.title[:40]} {info_mark}")
             lines.append(f"   URL: {entry.url[:80]}")
             lines.append(f"   执行的操作: {entry.action_taken}")
+            # 显示详细信息
+            if entry.action_detail:
+                lines.append(f"   操作详情: {entry.action_detail}")
             # 如果是搜索操作，特别标注
             if 'search' in entry.action_taken.lower():
                 lines.append(f"   ⚠️ 注意：已在此页面执行过搜索")
@@ -463,12 +547,22 @@ class Brain:
 async def search_person(
     start_url: str,
     person_name: str,
-    max_iterations: int = 10,
+    max_iterations: int = None,  # 使用 config.yaml 中的配置
     verbose: bool = True,
+    tab_handle: str = None,
 ) -> BrainResult:
-    """快捷搜索函数"""
+    """
+    快捷搜索函数
+    
+    Args:
+        start_url: 起始 URL
+        person_name: 目标人物姓名
+        max_iterations: 最大迭代次数
+        verbose: 是否打印详细日志
+        tab_handle: 指定的标签页 handle（用于隔离）
+    """
     brain = Brain(max_iterations=max_iterations, verbose=verbose)
-    return await brain.run(start_url, person_name)
+    return await brain.run(start_url, person_name, tab_handle=tab_handle)
 
 
 # ============ 测试 ============
@@ -477,12 +571,13 @@ if __name__ == "__main__":
     async def main():
         print("=" * 60)
         print("Brain 测试")
+        print(f"配置: max_iterations={DEFAULT_MAX_ITERATIONS}, max_history_in_prompt={DEFAULT_MAX_HISTORY_IN_PROMPT}")
         print("=" * 60)
         
         result = await search_person(
-            start_url="https://www.cuhk.edu.hk/chinese/index.html",
-            person_name="Yi Jiaci",
-            max_iterations=7,
+            start_url="https://www.cityu.edu.hk/",
+            person_name="Wang Shiqi",
+            # max_iterations 使用 config.yaml 中的配置
         )
         
         print("\n" + "=" * 60)

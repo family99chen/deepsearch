@@ -2,22 +2,101 @@
 Google Custom Search API 通用模块
 支持高并发请求和指数退避重试
 
+特性：
+- MongoDB 缓存（按 query 缓存，TTL 15 天）
+- API 调用次数统计（按天记录）
+- 指数退避重试
+
 文档: https://developers.google.com/custom-search/v1/reference/rest/v1/cse/list
 """
 
 import sys
 import asyncio
 import random
+import hashlib
 import aiohttp
 import yaml
 from pathlib import Path
 from typing import Optional, List, Dict, Any, Tuple
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from datetime import datetime, timedelta
 import time
 
 # 添加项目根目录到 path
 sys.path.insert(0, str(Path(__file__).parent.parent))
+
+# 导入缓存模块
+HAS_CACHE = False
+try:
+    from localdb.insert_mongo import MongoCache
+    HAS_CACHE = True
+except ImportError:
+    pass
+
+# 导入使用统计模块
+HAS_USAGE_TRACKER = False
+try:
+    from utils.usage_tracker import UsageTracker
+    HAS_USAGE_TRACKER = True
+except ImportError:
+    pass
+
+# 缓存配置
+CACHE_COLLECTION = "google_search_cache"
+CACHE_TTL = 15 * 24 * 3600  # 15 天（秒）
+
+
+def _get_cache() -> Optional["MongoCache"]:
+    """获取缓存实例"""
+    if not HAS_CACHE:
+        return None
+    try:
+        cache = MongoCache(collection_name=CACHE_COLLECTION)
+        return cache if cache.is_connected() else None
+    except Exception:
+        return None
+
+
+def _get_usage_tracker() -> Optional["UsageTracker"]:
+    """获取使用统计实例"""
+    if not HAS_USAGE_TRACKER:
+        return None
+    try:
+        storage_path = Path(__file__).parent.parent / "total_usage" / "google_search.json"
+        return UsageTracker(storage_path=storage_path, auto_save=True)
+    except Exception:
+        return None
+
+
+def _generate_cache_key(query: str, num: int, start: int, **kwargs) -> str:
+    """
+    生成缓存键
+    
+    基于查询参数生成唯一的缓存键
+    """
+    # 构建用于哈希的字符串
+    key_parts = [
+        f"q:{query}",
+        f"num:{num}",
+        f"start:{start}",
+    ]
+    
+    # 添加其他可能影响结果的参数
+    for k, v in sorted(kwargs.items()):
+        if v is not None:
+            key_parts.append(f"{k}:{v}")
+    
+    key_string = "|".join(key_parts)
+    
+    # 使用 MD5 生成较短的 key
+    return hashlib.md5(key_string.encode()).hexdigest()
+
+
+def _record_api_call():
+    """记录一次 API 调用"""
+    tracker = _get_usage_tracker()
+    if tracker:
+        tracker.record("google_custom_search", count=1)
 
 
 @dataclass
@@ -91,7 +170,7 @@ DEFAULT_RETRYABLE_EXCEPTIONS = (
 
 
 class GoogleSearchAPI:
-    """Google Custom Search API 封装（带指数退避重试）"""
+    """Google Custom Search API 封装（带指数退避重试 + MongoDB 缓存）"""
     
     BASE_URL = "https://www.googleapis.com/customsearch/v1"
     
@@ -103,6 +182,7 @@ class GoogleSearchAPI:
         max_retries: int = 3,
         base_delay: float = 1.0,
         max_delay: float = 60.0,
+        use_cache: bool = True,
     ):
         """
         初始化 Google Search API
@@ -114,6 +194,7 @@ class GoogleSearchAPI:
             max_retries: 最大重试次数
             base_delay: 基础延迟时间（秒）
             max_delay: 最大延迟时间（秒）
+            use_cache: 是否使用缓存（默认 True）
         """
         config = self._load_config()
         google_config = config.get("google", {})
@@ -126,6 +207,10 @@ class GoogleSearchAPI:
         self.max_retries = max_retries
         self.base_delay = base_delay
         self.max_delay = max_delay
+        
+        # 缓存配置
+        self.use_cache = use_cache
+        self._cache = _get_cache() if use_cache else None
         
         if not self.api_key or not self.cx:
             raise ValueError("必须提供 api_key 和 cx，或在 config.yaml 中配置")
@@ -194,10 +279,11 @@ class GoogleSearchAPI:
         site_search: Optional[str] = None,
         file_type: Optional[str] = None,
         date_restrict: Optional[str] = None,
-        extra_params: Optional[Dict[str, Any]] = None
+        extra_params: Optional[Dict[str, Any]] = None,
+        use_cache: Optional[bool] = None
     ) -> SearchResponse:
         """
-        执行搜索（带指数退避重试）
+        执行搜索（带指数退避重试 + MongoDB 缓存）
         
         Args:
             query: 搜索关键词
@@ -209,19 +295,60 @@ class GoogleSearchAPI:
             file_type: 限定文件类型（如 "pdf"）
             date_restrict: 时间限制（如 "d1" 一天内, "w1" 一周内, "m1" 一个月内）
             extra_params: 额外的 API 参数
+            use_cache: 是否使用缓存（None 表示使用实例默认设置）
             
         Returns:
             SearchResponse 对象
         """
-        # 速率限制
-        await self.limiter.acquire()
-        
         # 构建查询
         full_query = query
         if site_search:
             full_query = f"site:{site_search} {query}"
         if file_type:
             full_query = f"filetype:{file_type} {full_query}"
+        
+        # 确定是否使用缓存
+        should_use_cache = use_cache if use_cache is not None else self.use_cache
+        
+        # ========== 缓存读取 ==========
+        cache_key = _generate_cache_key(
+            query=full_query, 
+            num=num, 
+            start=start,
+            language=language,
+            safe=safe,
+            date_restrict=date_restrict
+        )
+        
+        if should_use_cache and self._cache:
+            cached_data = self._cache.get(cache_key)
+            if cached_data:
+                # 缓存命中，重建 SearchResponse
+                print(f"[CACHE] 命中缓存: {full_query[:50]}...")
+                items = [
+                    SearchResult(
+                        title=item.get("title", ""),
+                        link=item.get("link", ""),
+                        snippet=item.get("snippet", ""),
+                        display_link=item.get("display_link", ""),
+                        html_title=item.get("html_title"),
+                        html_snippet=item.get("html_snippet"),
+                        formatted_url=item.get("formatted_url")
+                    )
+                    for item in cached_data.get("items", [])
+                ]
+                return SearchResponse(
+                    success=True,
+                    query=cached_data.get("query", query),
+                    total_results=cached_data.get("total_results", 0),
+                    items=items,
+                    search_time=0.0,  # 缓存命中，搜索时间为 0
+                    error=None
+                )
+        
+        # ========== API 请求 ==========
+        # 速率限制
+        await self.limiter.acquire()
         
         # 构建参数
         params = {
@@ -299,6 +426,44 @@ class GoogleSearchAPI:
                     # 获取总结果数
                     search_info = data.get("searchInformation", {})
                     total_results = int(search_info.get("totalResults", 0))
+                    
+                    # 记录 API 调用（成功即记录）
+                    _record_api_call()
+                    
+                    # ========== 缓存写入 ==========
+                    # 无论是否有结果都写入缓存，空结果也缓存以避免重复查询
+                    if should_use_cache and self._cache:
+                        cache_data = {
+                            "query": query,
+                            "full_query": full_query,
+                            "total_results": total_results,
+                            "has_results": len(items) > 0,  # 标记是否有结果
+                            "items": [
+                                {
+                                    "title": item.title,
+                                    "link": item.link,
+                                    "snippet": item.snippet,
+                                    "display_link": item.display_link,
+                                    "html_title": item.html_title,
+                                    "html_snippet": item.html_snippet,
+                                    "formatted_url": item.formatted_url
+                                }
+                                for item in items
+                            ],
+                            "cached_at": datetime.now().isoformat(),
+                            "params": {
+                                "num": num,
+                                "start": start,
+                                "language": language,
+                                "safe": safe,
+                                "date_restrict": date_restrict
+                            }
+                        }
+                        self._cache.set(cache_key, cache_data, ttl=CACHE_TTL)
+                        if items:
+                            print(f"[CACHE] 已写入缓存: {full_query[:50]}... ({len(items)} 条结果)")
+                        else:
+                            print(f"[CACHE] 已写入缓存（无结果）: {full_query[:50]}...")
                     
                     return SearchResponse(
                         success=True,
@@ -417,10 +582,11 @@ class GoogleSearchAPI:
 
 # 同步包装器，方便非异步代码使用
 class GoogleSearchAPISync:
-    """Google Search API 的同步包装器"""
+    """Google Search API 的同步包装器（支持缓存）"""
     
-    def __init__(self, **kwargs):
+    def __init__(self, use_cache: bool = True, **kwargs):
         self._kwargs = kwargs
+        self._kwargs["use_cache"] = use_cache
     
     def _run(self, coro):
         """运行协程"""

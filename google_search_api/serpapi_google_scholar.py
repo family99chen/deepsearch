@@ -1,6 +1,11 @@
 """
 SerpAPI Google Scholar 搜索模块
 
+特性：
+- MongoDB 缓存（按 query 缓存，TTL 15 天）
+- API 调用次数统计（按天记录）
+- 指数退避重试
+
 官方文档: https://serpapi.com/google-scholar-api
 
 Usage:
@@ -15,13 +20,81 @@ import sys
 import time
 import json
 import yaml
+import hashlib
 import requests
 from pathlib import Path
 from dataclasses import dataclass, field
 from typing import List, Dict, Optional, Any
+from datetime import datetime
 
 # 添加项目根目录到 path
 sys.path.insert(0, str(Path(__file__).parent.parent))
+
+# 导入缓存模块
+HAS_CACHE = False
+try:
+    from localdb.insert_mongo import MongoCache
+    HAS_CACHE = True
+except ImportError:
+    pass
+
+# 导入使用统计模块
+HAS_USAGE_TRACKER = False
+try:
+    from utils.usage_tracker import UsageTracker
+    HAS_USAGE_TRACKER = True
+except ImportError:
+    pass
+
+# 缓存配置
+CACHE_COLLECTION = "serpapi_search_cache"
+CACHE_TTL = 15 * 24 * 3600  # 15 天（秒）
+
+
+def _get_cache() -> Optional["MongoCache"]:
+    """获取缓存实例"""
+    if not HAS_CACHE:
+        return None
+    try:
+        cache = MongoCache(collection_name=CACHE_COLLECTION)
+        return cache if cache.is_connected() else None
+    except Exception:
+        return None
+
+
+def _get_usage_tracker() -> Optional["UsageTracker"]:
+    """获取使用统计实例"""
+    if not HAS_USAGE_TRACKER:
+        return None
+    try:
+        storage_path = Path(__file__).parent.parent / "total_usage" / "serpapi.json"
+        return UsageTracker(storage_path=storage_path, auto_save=True)
+    except Exception:
+        return None
+
+
+def _generate_cache_key(q: str, start: int, num: int, **kwargs) -> str:
+    """生成缓存键"""
+    key_parts = [
+        f"q:{q}",
+        f"start:{start}",
+        f"num:{num}",
+    ]
+    
+    # 添加其他可能影响结果的参数
+    for k, v in sorted(kwargs.items()):
+        if v is not None:
+            key_parts.append(f"{k}:{v}")
+    
+    key_string = "|".join(key_parts)
+    return hashlib.md5(key_string.encode()).hexdigest()
+
+
+def _record_api_call():
+    """记录一次 API 调用"""
+    tracker = _get_usage_tracker()
+    if tracker:
+        tracker.record("serpapi_scholar", count=1)
 
 
 def _load_config() -> dict:
@@ -73,7 +146,7 @@ class SearchResponse:
 
 class SerpAPIScholar:
     """
-    SerpAPI Google Scholar 搜索客户端
+    SerpAPI Google Scholar 搜索客户端（支持 MongoDB 缓存）
     
     API 文档: https://serpapi.com/google-scholar-api
     """
@@ -87,6 +160,7 @@ class SerpAPIScholar:
         retry_delay: float = 1.0,
         timeout: int = 30,
         verbose: bool = False,
+        use_cache: bool = True,
     ):
         """
         初始化客户端
@@ -97,12 +171,17 @@ class SerpAPIScholar:
             retry_delay: 重试基础延迟（秒）
             timeout: 请求超时（秒）
             verbose: 是否打印详细信息
+            use_cache: 是否使用缓存（默认 True）
         """
         self.api_key = api_key or DEFAULT_API_KEY
         self.max_retries = max_retries
         self.retry_delay = retry_delay
         self.timeout = timeout
         self.verbose = verbose
+        
+        # 缓存配置
+        self.use_cache = use_cache
+        self._cache = _get_cache() if use_cache else None
         
         if not self.api_key:
             print("[WARNING] SerpAPI API Key 未配置")
@@ -125,10 +204,11 @@ class SerpAPIScholar:
         filter: Optional[int] = None,
         as_vis: Optional[int] = None,
         as_rr: Optional[int] = None,
+        use_cache: Optional[bool] = None,
         **kwargs
     ) -> SearchResponse:
         """
-        Google Scholar 搜索
+        Google Scholar 搜索（支持 MongoDB 缓存）
         
         Args:
             q: 搜索查询，支持 author:, source: 等前缀
@@ -146,10 +226,53 @@ class SerpAPIScholar:
             filter: 是否启用过滤 (0/1)
             as_vis: 排除引用 (0/1)
             as_rr: 仅显示综述文章 (0/1)
+            use_cache: 是否使用缓存（None 表示使用实例默认设置）
             
         Returns:
             SearchResponse
         """
+        # 确定是否使用缓存
+        should_use_cache = use_cache if use_cache is not None else self.use_cache
+        
+        # ========== 缓存读取 ==========
+        cache_key = _generate_cache_key(
+            q=q, start=start, num=num, hl=hl,
+            cites=cites, as_ylo=as_ylo, as_yhi=as_yhi,
+            scisbd=scisbd, cluster=cluster, lr=lr,
+            as_sdt=as_sdt, safe=safe, filter=filter,
+            as_vis=as_vis, as_rr=as_rr
+        )
+        
+        if should_use_cache and self._cache:
+            cached_data = self._cache.get(cache_key)
+            if cached_data:
+                # 缓存命中，重建 SearchResponse
+                print(f"[CACHE] 命中缓存: {q[:50]}...")
+                items = [
+                    ScholarResult(
+                        title=item.get("title", ""),
+                        link=item.get("link", ""),
+                        snippet=item.get("snippet", ""),
+                        publication_info=item.get("publication_info", ""),
+                        authors=item.get("authors", []),
+                        cited_by_count=item.get("cited_by_count", 0),
+                        cited_by_link=item.get("cited_by_link", ""),
+                        versions_count=item.get("versions_count", 0),
+                        versions_link=item.get("versions_link", ""),
+                        position=item.get("position", 0),
+                        raw=item.get("raw", {})
+                    )
+                    for item in cached_data.get("items", [])
+                ]
+                return SearchResponse(
+                    success=True,
+                    query=cached_data.get("query", q),
+                    items=items,
+                    total_results=cached_data.get("total_results", len(items)),
+                    raw={}  # 缓存不保存 raw 数据
+                )
+        
+        # ========== API 请求 ==========
         # 构建参数
         params = {
             "engine": "google_scholar",
@@ -198,6 +321,8 @@ class SerpAPIScholar:
         
         # 检查错误
         if "error" in data:
+            # 即使返回错误，只要 API 请求成功发出，就记录调用次数（消耗了配额）
+            _record_api_call()
             return SearchResponse(
                 success=False, 
                 query=q, 
@@ -210,6 +335,48 @@ class SerpAPIScholar:
         for result in data.get("organic_results", []):
             item = self._parse_result(result)
             items.append(item)
+        
+        # ========== 记录调用 + 缓存写入 ==========
+        # API 调用成功，记录次数
+        _record_api_call()
+        
+        # 写入缓存（无论是否有结果都缓存）
+        if should_use_cache and self._cache:
+            cache_data = {
+                "query": q,
+                "total_results": len(items),
+                "has_results": len(items) > 0,
+                "items": [
+                    {
+                        "title": item.title,
+                        "link": item.link,
+                        "snippet": item.snippet,
+                        "publication_info": item.publication_info,
+                        "authors": item.authors,
+                        "cited_by_count": item.cited_by_count,
+                        "cited_by_link": item.cited_by_link,
+                        "versions_count": item.versions_count,
+                        "versions_link": item.versions_link,
+                        "position": item.position,
+                        # 不缓存 raw 数据，太大
+                    }
+                    for item in items
+                ],
+                "cached_at": datetime.now().isoformat(),
+                "params": {
+                    "start": start,
+                    "num": num,
+                    "hl": hl,
+                    "cites": cites,
+                    "as_ylo": as_ylo,
+                    "as_yhi": as_yhi,
+                }
+            }
+            self._cache.set(cache_key, cache_data, ttl=CACHE_TTL)
+            if items:
+                print(f"[CACHE] 已写入缓存: {q[:50]}... ({len(items)} 条结果)")
+            else:
+                print(f"[CACHE] 已写入缓存（无结果）: {q[:50]}...")
         
         return SearchResponse(
             success=True,

@@ -20,6 +20,9 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 # 导入 PageReader
 from org_info.iter_agent.pagereader import PageReader, PageReadResult
 
+# 导入共享 driver（用于标签页切换）
+from org_info.shared_driver import switch_to_tab, get_current_tab
+
 # 导入异步 LLM
 from llm import query_async
 
@@ -143,12 +146,10 @@ class IterAgent:
         self.max_links_per_page = max_links_per_page or agent_config.get("max_links_per_page", 3)
         self.max_concurrent = max_concurrent
         self.verbose = verbose
+        self._tab_handle = None  # 绑定的标签页（运行时设置）
         
-        # PageReader 实例（单个实例，通过锁控制并发）
-        self.page_reader = PageReader(
-            max_links=self.max_links_per_page,
-            verbose=verbose,
-        )
+        # PageReader 实例（稍后在 run() 中创建，以便传入 tab_handle）
+        self.page_reader = None
         
         if self.verbose:
             print(f"[IterAgent] 初始化: max_iterations={self.max_iterations}, "
@@ -159,8 +160,11 @@ class IterAgent:
     
     def close(self):
         """关闭资源"""
-        if self.page_reader:
-            self.page_reader.close()
+        try:
+            if self.page_reader:
+                self.page_reader.close()
+        except Exception:
+            pass
     
     def __del__(self):
         self.close()
@@ -169,6 +173,7 @@ class IterAgent:
         self,
         start_url: str,
         person_name: str,
+        tab_handle: str = None,
     ) -> AgentResult:
         """
         异步执行迭代式信息收集
@@ -176,11 +181,24 @@ class IterAgent:
         Args:
             start_url: 起始 URL
             person_name: 目标人物姓名
+            tab_handle: 指定的标签页 handle（用于隔离，可选）
             
         Returns:
             AgentResult 对象
         """
         start_time = datetime.now()
+        
+        # 如果指定了标签页，切换到该标签页
+        self._tab_handle = tab_handle
+        if tab_handle:
+            switch_to_tab(tab_handle)
+        
+        # 创建 PageReader（传入 tab_handle 以实现标签页隔离）
+        self.page_reader = PageReader(
+            max_links=self.max_links_per_page,
+            verbose=self.verbose,
+            tab_handle=tab_handle,
+        )
         
         if self.verbose:
             print()
@@ -221,34 +239,25 @@ class IterAgent:
                         print(f"[IterAgent] 所有链接已访问过，停止")
                     break
                 
-                # 并发读取页面
+                # 真正并行读取页面（多标签页 + LLM 并行分析）
                 round_info: List[str] = []
                 round_links: List[str] = []
                 
-                # 使用信号量控制并发数
-                semaphore = asyncio.Semaphore(self.max_concurrent)
+                if self.verbose:
+                    print(f"\n[IterAgent] 并行获取 {len(urls_to_visit)} 个页面...")
+                    for i, url in enumerate(urls_to_visit, 1):
+                        print(f"  {i}. {url[:70]}...")
                 
-                async def read_with_semaphore(url: str, index: int):
-                    async with semaphore:
-                        if self.verbose:
-                            print(f"\n[IterAgent] [{index}/{len(urls_to_visit)}] 读取: {url[:60]}...")
-                        return await self.page_reader.read_page(url, person_name)
-                
-                # 创建并发任务
-                tasks = [
-                    read_with_semaphore(url, i)
-                    for i, url in enumerate(urls_to_visit, 1)
-                ]
-                
-                # 等待所有任务完成
-                results = await asyncio.gather(*tasks, return_exceptions=True)
+                # 使用批量并行方法（网络请求并行 + LLM 分析并行）
+                results = await self.page_reader.read_pages_batch(urls_to_visit, person_name)
                 
                 # 处理结果
                 for url, result in zip(urls_to_visit, results):
                     visited_urls.add(url)
                     
-                    if isinstance(result, Exception):
-                        logger.error(f"页面读取异常: {url}, {result}")
+                    if not result.success:
+                        if self.verbose:
+                            print(f"[IterAgent] ✗ 页面失败: {url[:50]}... ({result.error})")
                         continue
                     
                     if result.success and result.contains_person_info:
@@ -432,6 +441,7 @@ async def search_person_in_org(
     max_links_per_page: int = None,
     max_concurrent: int = 3,
     verbose: bool = True,
+    tab_handle: str = None,
 ) -> AgentResult:
     """
     异步在组织网站中搜索人物信息
@@ -443,6 +453,7 @@ async def search_person_in_org(
         max_links_per_page: 每页最多链接数
         max_concurrent: 最大并发数
         verbose: 是否打印详细日志
+        tab_handle: 指定的标签页 handle（用于隔离）
         
     Returns:
         AgentResult 对象
@@ -453,7 +464,7 @@ async def search_person_in_org(
         max_concurrent=max_concurrent,
         verbose=verbose,
     )
-    return await agent.run(start_url, person_name)
+    return await agent.run(start_url, person_name, tab_handle=tab_handle)
 
 
 # 同步版本（兼容）

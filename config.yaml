@@ -82,3 +82,26 @@ iter_agent:
   # 注意：第 i 轮如果有 m 个页面，下一轮最多会有 m*n 个链接
   max_links_per_page: 3
 
+# Iteragent Advanced 配置（智能浏览代理）
+iteragent_advanced:
+  # 最大迭代次数
+  # 每次迭代 Brain 会决定一个动作（点击、搜索、返回等）
+  max_iterations: 6
+  
+  # 提示词中显示的历史记录条数
+  max_history_in_prompt: 5
+
+# Organization Pipeline 配置（组织人员信息收集管道）
+organization_pipeline:
+  # 最大处理链接数
+  # 从 Google Search 获取的链接中，最多处理多少个
+  max_links: 10
+  
+  # 最大并发数
+  # 同时处理多少个链接
+  max_concurrent: 3
+  
+  # 注意：iter_agent 和 brain 的迭代次数使用各自模块的配置
+  # - iter_agent.max_iterations
+  # - iteragent_advanced.max_iterations
+

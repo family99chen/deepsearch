@@ -26,6 +26,17 @@ import undetected_chromedriver as uc
 # 添加项目根目录到 path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
+# 导入共享 driver 管理器
+from org_info.shared_driver import (
+    get_shared_driver, 
+    release_driver, 
+    warm_up_domain as shared_warm_up_domain,
+    is_domain_warmed,
+    close_shared_driver,
+    fetch_pages_parallel,  # 多标签页并行获取
+    switch_to_tab,  # 标签页切换
+)
+
 # 导入异步 LLM
 from llm import query_async
 
@@ -147,6 +158,8 @@ class PageReader:
     使用 undetected-chromedriver 绕过反爬虫检测
     采用"先访问主页再访问目标页"策略获取 cookies
     使用 LLM 分析是否包含目标人物信息
+    
+    支持标签页隔离：指定 tab_handle 后，所有操作都在该标签页内进行。
     """
     
     def __init__(
@@ -155,41 +168,28 @@ class PageReader:
         timeout: int = 30,
         max_content_length: int = 50000,
         verbose: bool = True,
+        tab_handle: str = None,
     ):
         self.max_links = max_links
         self.timeout = timeout
         self.max_content_length = max_content_length
         self.verbose = verbose
+        self.tab_handle = tab_handle  # 绑定的标签页
         
         self._driver = None
         self._warmed_domains: Set[str] = set()
         self._lock = asyncio.Lock()  # 用于保护 driver 的并发访问
     
     def _get_driver(self):
-        """获取或创建 undetected-chromedriver（同步方法，内部使用）"""
-        global _xvfb_process
-        
+        """获取共享的 undetected-chromedriver（同步方法，内部使用）"""
         if self._driver is None:
-            if _xvfb_process is None:
-                _xvfb_process = _setup_virtual_display()
-                if _xvfb_process and self.verbose:
-                    print(f"[PageReader] 已启动 Xvfb 虚拟显示器 (DISPLAY={os.environ.get('DISPLAY')})")
-            
-            options = uc.ChromeOptions()
-            options.add_argument("--no-sandbox")
-            options.add_argument("--disable-dev-shm-usage")
-            options.add_argument("--window-size=1920,1080")
-            
-            if Path(CHROME_BINARY_PATH).exists():
-                options.binary_location = CHROME_BINARY_PATH
-            
             try:
-                self._driver = uc.Chrome(options=options)
+                self._driver = get_shared_driver()
                 self._driver.set_page_load_timeout(self.timeout)
                 
                 if self.verbose:
-                    print("[PageReader] undetected-chromedriver 已初始化")
-                logger.info("undetected-chromedriver 初始化成功")
+                    print("[PageReader] 使用共享 Chrome driver")
+                logger.info("使用共享 Chrome driver")
                 
             except Exception as e:
                 logger.error(f"Driver 初始化失败: {e}")
@@ -211,53 +211,27 @@ class PageReader:
         return False
     
     def _warm_up_domain(self, url: str):
-        """预热域名：先访问主页获取 cookies"""
-        domain = self._get_domain(url)
-        
-        if domain in self._warmed_domains:
+        """预热域名：使用共享的预热状态"""
+        # 检查是否已预热（使用共享状态）
+        if is_domain_warmed(url):
             return
         
-        driver = self._get_driver()
+        if self.verbose:
+            print(f"[PageReader] 预热域名: {self._get_domain(url)}")
+        
+        # 使用共享的预热函数
+        shared_warm_up_domain(url)
         
         if self.verbose:
-            print(f"[PageReader] 预热域名: {domain}")
-        
-        try:
-            driver.get(domain)
-            time.sleep(3)
-            self._warmed_domains.add(domain)
-            
-            if self.verbose:
-                print(f"[PageReader] 域名预热完成")
-            logger.info(f"域名预热完成: {domain}")
-            
-        except Exception as e:
-            logger.warning(f"域名预热失败: {domain}, {e}")
+            print(f"[PageReader] 域名预热完成")
     
     def close(self):
-        """关闭浏览器和虚拟显示器"""
-        global _xvfb_process
-        
+        """释放对共享 driver 的引用（不关闭 driver，由管理器统一管理）"""
         if self._driver:
-            try:
-                self._driver.quit()
-                if self.verbose:
-                    print("[PageReader] 浏览器已关闭")
-            except Exception as e:
-                logger.warning(f"关闭浏览器时出错: {e}")
-            finally:
-                self._driver = None
-        
-        if _xvfb_process:
-            try:
-                _xvfb_process.terminate()
-                _xvfb_process.wait(timeout=5)
-                if self.verbose:
-                    print("[PageReader] Xvfb 已关闭")
-            except Exception:
-                pass
-            finally:
-                _xvfb_process = None
+            release_driver()
+            self._driver = None
+            if self.verbose:
+                print("[PageReader] 已释放共享 driver 引用")
     
     def __del__(self):
         self.close()
@@ -266,6 +240,10 @@ class PageReader:
         """同步获取页面内容（内部使用）"""
         self._warm_up_domain(url)
         driver = self._get_driver()
+        
+        # 如果绑定了标签页，先切换到该标签页
+        if self.tab_handle:
+            switch_to_tab(self.tab_handle)
         
         try:
             driver.get(url)
@@ -376,6 +354,121 @@ class PageReader:
                 page_title=title,
                 error=f"LLM 分析失败: {e}",
             )
+    
+    async def read_pages_batch(
+        self,
+        urls: List[str],
+        person_name: str,
+    ) -> List[PageReadResult]:
+        """
+        批量并行读取多个页面
+        
+        真正的并行：
+        1. 使用多标签页同时获取所有页面 HTML（网络请求并行）
+        2. 然后并行调用 LLM 分析每个页面
+        
+        Args:
+            urls: URL 列表
+            person_name: 目标人物姓名
+        
+        Returns:
+            PageReadResult 列表
+        """
+        if not urls:
+            return []
+        
+        if self.verbose:
+            print(f"[PageReader] 批量并行获取 {len(urls)} 个页面...")
+        
+        # 注意：暂时不预热域名，直接并行获取
+        # 预热可能导致 driver 状态不稳定
+        
+        # Step 1: 并行获取所有页面 HTML
+        fetch_results = await fetch_pages_parallel(urls, wait_time=4.0, scroll=True)
+        
+        if self.verbose:
+            success_count = sum(1 for _, html, err in fetch_results if not err and html)
+            print(f"[PageReader] 页面获取完成: {success_count}/{len(urls)} 成功")
+        
+        # Step 2: 并行分析每个页面
+        async def analyze_page(url: str, html: str, error: Optional[str]) -> PageReadResult:
+            if error or not html:
+                return PageReadResult(
+                    url=url,
+                    success=False,
+                    contains_person_info=False,
+                    person_info="",
+                    relevant_links=[],
+                    page_title="",
+                    error=error or "页面内容为空",
+                )
+            
+            try:
+                # 解析 HTML
+                soup = BeautifulSoup(html, 'html.parser')
+                
+                title = ""
+                if soup.title and soup.title.string:
+                    title = soup.title.string.strip()
+                
+                page_content = self._extract_text_content(soup, url)
+                all_links = self._extract_links(soup, url)
+                
+                # 使用 LLM 分析
+                result = await self._analyze_with_llm(
+                    page_content=page_content,
+                    all_links=all_links,
+                    page_url=url,
+                    person_name=person_name,
+                )
+                result.url = url
+                result.success = True
+                result.page_title = title
+                return result
+                
+            except Exception as e:
+                logger.error(f"页面分析失败: {url}, {e}")
+                return PageReadResult(
+                    url=url,
+                    success=False,
+                    contains_person_info=False,
+                    person_info="",
+                    relevant_links=[],
+                    page_title="",
+                    error=str(e),
+                )
+        
+        # 创建分析任务
+        tasks = [
+            analyze_page(url, html, error)
+            for url, html, error in fetch_results
+        ]
+        
+        # 并行执行 LLM 分析
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+        
+        # 处理异常
+        final_results = []
+        for i, result in enumerate(results):
+            if isinstance(result, Exception):
+                url = urls[i] if i < len(urls) else "unknown"
+                final_results.append(PageReadResult(
+                    url=url,
+                    success=False,
+                    contains_person_info=False,
+                    person_info="",
+                    relevant_links=[],
+                    page_title="",
+                    error=str(result),
+                ))
+            else:
+                final_results.append(result)
+        
+        if self.verbose:
+            info_count = sum(1 for r in final_results if r.contains_person_info)
+            print(f"[PageReader] 分析完成: {info_count}/{len(final_results)} 个页面包含目标信息")
+        
+        return final_results
     
     def _extract_text_content(self, soup: BeautifulSoup, base_url: str = "") -> str:
         """提取页面文本内容，保留链接 URL"""

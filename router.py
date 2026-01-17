@@ -7,10 +7,11 @@ Google Scholar 账号查找路由
 import sys
 import asyncio
 from io import StringIO
+from datetime import date
 from typing import Optional, AsyncGenerator
 import concurrent.futures
 
-from fastapi import APIRouter, Query
+from fastapi import APIRouter, Query, Depends, Request
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 
@@ -18,9 +19,23 @@ from pydantic import BaseModel
 sys.path.insert(0, "google_scholar_url")
 
 from google_scholar_url.google_account_fetcher_pipeline import find_google_scholar_by_orcid
+from utils.usage_tracker import record_api_call, get_tracker
+from utils.pipeline_stats import get_pipeline_stats
 
 # 创建路由器
 router = APIRouter(tags=["Google Scholar"])
+
+
+# ============ 使用统计依赖 ============
+
+async def track_usage(request: Request):
+    """
+    依赖注入：自动记录 API 调用
+    在路由函数执行前调用
+    """
+    endpoint = request.url.path
+    record_api_call(endpoint)
+    return endpoint
 
 
 class SearchResult(BaseModel):
@@ -133,7 +148,8 @@ async def run_pipeline_with_logs(orcid_id: str) -> AsyncGenerator[str, None]:
 
 @router.get("/find")
 async def find_google_scholar_account_stream(
-    orcid_id: str = Query(..., description="ORCID ID，格式如 0000-0002-1825-0097")
+    orcid_id: str = Query(..., description="ORCID ID，格式如 0000-0002-1825-0097"),
+    _tracked: str = Depends(track_usage)  # 自动记录调用
 ):
     """
     根据 ORCID ID 查找对应的 Google Scholar 账号（流式输出）
@@ -159,7 +175,8 @@ async def find_google_scholar_account_stream(
 
 @router.get("/find/sync", response_model=SearchResult)
 async def find_google_scholar_account_sync(
-    orcid_id: str = Query(..., description="ORCID ID，格式如 0000-0002-1825-0097")
+    orcid_id: str = Query(..., description="ORCID ID，格式如 0000-0002-1825-0097"),
+    _tracked: str = Depends(track_usage)  # 自动记录调用
 ):
     """
     根据 ORCID ID 查找对应的 Google Scholar 账号（同步返回）
@@ -202,3 +219,84 @@ async def find_google_scholar_account_sync(
             orcid_id=orcid_id,
             error=error_msg or "未找到匹配的 Google Scholar 账号"
         )
+
+
+# ============ 使用统计端点 ============
+
+@router.get("/usage", tags=["Usage"])
+async def get_usage_stats():
+    """
+    获取 API 使用统计
+    
+    返回：
+    - total: 总调用次数
+    - daily: 按日期分组的调用统计
+    - endpoints: 按端点分组的调用统计
+    """
+    tracker = get_tracker()
+    return tracker.get_stats()
+
+
+@router.get("/usage/today", tags=["Usage"])
+async def get_today_usage():
+    """
+    获取今日 API 使用统计
+    
+    返回：
+    - date: 今日日期
+    - total: 今日总调用次数
+    - endpoints: 各端点调用次数
+    - google_search_api: Google Search API 使用估算
+    """
+    tracker = get_tracker()
+    today_stats = tracker.get_daily_stats()
+    today_total = today_stats.get("total", 0)
+    
+    # Google Search API 每日免费额度 100 次
+    # 根据之前分析，每次查找最多消耗 3 次 Google Search
+    google_search_daily_limit = 100
+    estimated_google_usage = today_total * 3  # 估算
+    
+    return {
+        "date": date.today().isoformat(),
+        "total": today_total,
+        "endpoints": today_stats.get("endpoints", {}),
+        "first_request": today_stats.get("first_request"),
+        "last_request": today_stats.get("last_request"),
+        "google_search_api": {
+            "daily_limit": google_search_daily_limit,
+            "estimated_usage": estimated_google_usage,
+            "estimated_remaining": max(0, google_search_daily_limit - estimated_google_usage)
+        }
+    }
+
+
+@router.get("/usage/pipeline", tags=["Usage"])
+async def get_pipeline_usage():
+    """
+    获取 Pipeline 详细统计
+    
+    返回详细的查找统计：
+    - total_requests: 总请求次数
+    - cache_hits: 缓存命中次数（直接返回已缓存的结果）
+    - success: 成功获取作者次数
+    - error: 错误次数
+    - not_found: 未找到次数
+    - name_search: 名字搜索统计
+      - total: 通过名字搜索成功的总数
+      - by_iterations: 按 Google Search 调用次数分类 {"1": 10, "2": 5, ...}
+    - paper_search: 论文搜索统计
+      - total: 通过论文搜索成功的总数
+      - by_papers: 按搜索论文数分类 {"1": 8, "2": 2, ...}
+    """
+    stats = get_pipeline_stats()
+    return stats.get_stats()
+
+
+@router.get("/usage/pipeline/today", tags=["Usage"])
+async def get_pipeline_today_usage():
+    """
+    获取今日 Pipeline 详细统计
+    """
+    stats = get_pipeline_stats()
+    return stats.get_today_stats()

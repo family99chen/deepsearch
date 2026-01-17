@@ -1,0 +1,234 @@
+[2026-01-13 23:07:15] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:07:21] [INFO] LLM API Async 查询成功: 61 字符
+[2026-01-13 23:07:21] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:07:32] [INFO] LLM API Async 查询成功: 112 字符
+[2026-01-13 23:07:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:07:37] [INFO] LLM API Async 查询成功: 20 字符
+[2026-01-13 23:07:41] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:07:44] [INFO] LLM API Async 查询成功: 61 字符
+[2026-01-13 23:07:44] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:07:48] [INFO] LLM API Async 查询成功: 111 字符
+[2026-01-13 23:07:48] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:07:50] [INFO] LLM API Async 查询成功: 12 字符
+[2026-01-13 23:07:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:07:56] [INFO] LLM API Async 查询成功: 61 字符
+[2026-01-13 23:07:56] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:08:00] [INFO] LLM API Async 查询成功: 112 字符
+[2026-01-13 23:08:00] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:08:03] [INFO] LLM API Async 查询成功: 20 字符
+[2026-01-13 23:08:06] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:08:09] [INFO] LLM API Async 查询成功: 61 字符
+[2026-01-13 23:08:09] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:08:14] [INFO] LLM API Async 查询成功: 108 字符
+[2026-01-13 23:08:14] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:08:18] [INFO] LLM API Async 查询成功: 12 字符
+[2026-01-13 23:08:21] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:08:24] [INFO] LLM API Async 查询成功: 61 字符
+[2026-01-13 23:08:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:08:27] [INFO] LLM API Async 查询成功: 112 字符
+[2026-01-13 23:08:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:08:31] [INFO] LLM API Async 查询成功: 20 字符
+[2026-01-13 23:08:34] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:08:40] [INFO] LLM API Async 查询成功: 61 字符
+[2026-01-13 23:15:13] [WARNING] 域名预热失败: Message: timeout: Timed out receiving message from renderer: -0.002
+  (Session info: chrome=143.0.7499.192)
+Stacktrace:
+#0 0x637a440f140a <unknown>
+#1 0x637a43b2576b <unknown>
+#2 0x637a43b0d80a <unknown>
+#3 0x637a43b0d4ed <unknown>
+#4 0x637a43b0b3a7 <unknown>
+#5 0x637a43b0bcbf <unknown>
+#6 0x637a43b1a480 <unknown>
+#7 0x637a43b33b47 <unknown>
+#8 0x637a43b3a1fb <unknown>
+#9 0x637a43b0c3e8 <unknown>
+#10 0x637a43b338f8 <unknown>
+#11 0x637a43bc2639 <unknown>
+#12 0x637a43b697b2 <unknown>
+#13 0x637a43b6a461 <unknown>
+#14 0x637a440b9df9 <unknown>
+#15 0x637a440bcd5d <unknown>
+#16 0x637a440a2b41 <unknown>
+#17 0x637a440bd93b <unknown>
+#18 0x637a44089870 <unknown>
+#19 0x637a440de828 <unknown>
+#20 0x637a440de9fc <unknown>
+#21 0x637a440f0763 <unknown>
+#22 0x76a489a9caa4 <unknown>
+#23 0x76a489b29c6c <unknown>
+
+[2026-01-13 23:15:43] [ERROR] 执行失败: navigate, Message: timeout: Timed out receiving message from renderer: -0.002
+  (Session info: chrome=143.0.7499.192)
+Stacktrace:
+#0 0x637a440f140a <unknown>
+#1 0x637a43b2576b <unknown>
+#2 0x637a43b0d80a <unkno
+[2026-01-13 23:16:53] [WARNING] 域名预热失败: Message: timeout: Timed out receiving message from renderer: -0.002
+  (Session info: chrome=143.0.7499.192)
+Stacktrace:
+#0 0x63e23690340a <unknown>
+#1 0x63e23633776b <unknown>
+#2 0x63e23631f80a <unknown>
+#3 0x63e23631f4ed <unknown>
+#4 0x63e23631d3a7 <unknown>
+#5 0x63e23631dcbf <unknown>
+#6 0x63e23632c480 <unknown>
+#7 0x63e236345b47 <unknown>
+#8 0x63e23634c1fb <unknown>
+#9 0x63e23631e3e8 <unknown>
+#10 0x63e2363458f8 <unknown>
+#11 0x63e2363d4639 <unknown>
+#12 0x63e23637b7b2 <unknown>
+#13 0x63e23637c461 <unknown>
+#14 0x63e2368cbdf9 <unknown>
+#15 0x63e2368ced5d <unknown>
+#16 0x63e2368b4b41 <unknown>
+#17 0x63e2368cf93b <unknown>
+#18 0x63e23689b870 <unknown>
+#19 0x63e2368f0828 <unknown>
+#20 0x63e2368f09fc <unknown>
+#21 0x63e236902763 <unknown>
+#22 0x7efe4ee9caa4 <unknown>
+#23 0x7efe4ef29c6c <unknown>
+
+[2026-01-13 23:24:14] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:24:17] [INFO] LLM API Async 查询成功: 63 字符
+[2026-01-13 23:24:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:24:20] [INFO] LLM API Async 查询成功: 111 字符
+[2026-01-13 23:24:20] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:24:23] [INFO] LLM API Async 查询成功: 20 字符
+[2026-01-13 23:29:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:29:20] [INFO] LLM API Async 查询成功: 69 字符
+[2026-01-13 23:29:20] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:29:25] [INFO] LLM API Async 查询成功: 108 字符
+[2026-01-13 23:29:25] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:29:31] [INFO] LLM API Async 查询成功: 20 字符
+[2026-01-13 23:29:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:29:40] [INFO] LLM API Async 查询成功: 91 字符
+[2026-01-13 23:29:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:29:44] [INFO] LLM API Async 查询成功: 244 字符
+[2026-01-13 23:29:44] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:29:46] [INFO] LLM API Async 查询成功: 35 字符
+[2026-01-13 23:29:52] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:29:55] [INFO] LLM API Async 查询成功: 57 字符
+[2026-01-13 23:29:55] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:29:59] [INFO] LLM API Async 查询成功: 222 字符
+[2026-01-13 23:29:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:30:04] [INFO] LLM API Async 查询成功: 20 字符
+[2026-01-13 23:35:42] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:35:45] [INFO] LLM API Async 查询成功: 69 字符
+[2026-01-13 23:35:45] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:35:49] [INFO] LLM API Async 查询成功: 107 字符
+[2026-01-13 23:35:49] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:35:52] [INFO] LLM API Async 查询成功: 20 字符
+[2026-01-13 23:35:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:36:02] [INFO] LLM API Async 查询成功: 57 字符
+[2026-01-13 23:36:02] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:36:08] [INFO] LLM API Async 查询成功: 232 字符
+[2026-01-13 23:36:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:36:10] [INFO] LLM API Async 查询成功: 35 字符
+[2026-01-13 23:36:15] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:36:19] [INFO] LLM API Async 查询成功: 57 字符
+[2026-01-13 23:36:19] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:36:23] [INFO] LLM API Async 查询成功: 232 字符
+[2026-01-13 23:36:23] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:36:26] [INFO] LLM API Async 查询成功: 20 字符
+[2026-01-13 23:38:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:39:05] [INFO] LLM API Async 查询成功: 65 字符
+[2026-01-13 23:39:05] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:39:09] [INFO] LLM API Async 查询成功: 107 字符
+[2026-01-13 23:39:09] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:39:11] [INFO] LLM API Async 查询成功: 20 字符
+[2026-01-13 23:39:16] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:39:19] [INFO] LLM API Async 查询成功: 57 字符
+[2026-01-13 23:39:19] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:39:23] [INFO] LLM API Async 查询成功: 106 字符
+[2026-01-13 23:39:23] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:39:26] [INFO] LLM API Async 查询成功: 34 字符
+[2026-01-13 23:39:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:39:34] [INFO] LLM API Async 查询成功: 57 字符
+[2026-01-13 23:39:34] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:39:43] [INFO] LLM API Async 查询成功: 106 字符
+[2026-01-13 23:39:43] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:39:46] [INFO] LLM API Async 查询成功: 34 字符
+[2026-01-13 23:39:51] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:39:54] [INFO] LLM API Async 查询成功: 57 字符
+[2026-01-13 23:39:54] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:39:57] [INFO] LLM API Async 查询成功: 104 字符
+[2026-01-13 23:39:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:40:00] [INFO] LLM API Async 查询成功: 34 字符
+[2026-01-13 23:40:05] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:40:08] [INFO] LLM API Async 查询成功: 57 字符
+[2026-01-13 23:40:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:40:12] [INFO] LLM API Async 查询成功: 103 字符
+[2026-01-13 23:40:12] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:40:15] [INFO] LLM API Async 查询成功: 34 字符
+[2026-01-13 23:40:21] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:40:23] [INFO] LLM API Async 查询成功: 57 字符
+[2026-01-13 23:46:29] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:46:32] [INFO] LLM API Async 查询成功: 82 字符
+[2026-01-13 23:46:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:46:35] [INFO] LLM API Async 查询成功: 111 字符
+[2026-01-13 23:46:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:46:38] [INFO] LLM API Async 查询成功: 20 字符
+[2026-01-13 23:46:42] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:46:46] [INFO] LLM API Async 查询成功: 57 字符
+[2026-01-13 23:46:46] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:46:49] [INFO] LLM API Async 查询成功: 107 字符
+[2026-01-13 23:46:49] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:46:52] [INFO] LLM API Async 查询成功: 34 字符
+[2026-01-13 23:46:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:47:00] [INFO] LLM API Async 查询成功: 57 字符
+[2026-01-13 23:47:00] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:47:03] [INFO] LLM API Async 查询成功: 109 字符
+[2026-01-13 23:47:03] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:47:08] [INFO] LLM API Async 查询成功: 34 字符
+[2026-01-13 23:47:13] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:47:16] [INFO] LLM API Async 查询成功: 57 字符
+[2026-01-13 23:47:16] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:47:20] [INFO] LLM API Async 查询成功: 108 字符
+[2026-01-13 23:47:20] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:47:23] [INFO] LLM API Async 查询成功: 34 字符
+[2026-01-13 23:47:28] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:47:31] [INFO] LLM API Async 查询成功: 57 字符
+[2026-01-13 23:47:31] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:47:35] [INFO] LLM API Async 查询成功: 114 字符
+[2026-01-13 23:47:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:47:37] [INFO] LLM API Async 查询成功: 34 字符
+[2026-01-13 23:47:43] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:47:46] [INFO] LLM API Async 查询成功: 57 字符
+[2026-01-13 23:57:49] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:57:52] [INFO] LLM API Async 查询成功: 29 字符
+[2026-01-13 23:58:16] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:58:21] [INFO] LLM API Async 查询成功: 99 字符
+[2026-01-13 23:58:21] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:58:25] [INFO] LLM API Async 查询成功: 112 字符
+[2026-01-13 23:58:25] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:58:28] [INFO] LLM API Async 查询成功: 34 字符
+[2026-01-13 23:58:31] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:58:39] [INFO] LLM API Async 查询成功: 100 字符
+[2026-01-13 23:58:39] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:58:46] [INFO] LLM API Async 查询成功: 107 字符
+[2026-01-13 23:58:46] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:58:49] [INFO] LLM API Async 查询成功: 34 字符
+[2026-01-13 23:58:51] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:58:56] [INFO] LLM API Async 查询成功: 100 字符
+[2026-01-13 23:58:56] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:58:59] [INFO] LLM API Async 查询成功: 113 字符
+[2026-01-13 23:58:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:59:02] [INFO] LLM API Async 查询成功: 34 字符
+[2026-01-13 23:59:04] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:59:08] [INFO] LLM API Async 查询成功: 100 字符
+[2026-01-13 23:59:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:59:11] [INFO] LLM API Async 查询成功: 108 字符
+[2026-01-13 23:59:11] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:59:14] [INFO] LLM API Async 查询成功: 34 字符
+[2026-01-13 23:59:16] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:59:20] [INFO] LLM API Async 查询成功: 99 字符
+[2026-01-13 23:59:20] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:59:26] [INFO] LLM API Async 查询成功: 106 字符
+[2026-01-13 23:59:26] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:59:28] [INFO] LLM API Async 查询成功: 34 字符
+[2026-01-13 23:59:31] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-01-13 23:59:36] [INFO] LLM API Async 查询成功: 99 字符

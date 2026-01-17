@@ -1,0 +1,17 @@
+{
+  "total": 1,
+  "daily": {
+    "2026-01-17": {
+      "total": 1,
+      "endpoints": {
+        "/find": 1
+      },
+      "first_request": "2026-01-17T17:49:44.310998",
+      "last_request": "2026-01-17T18:00:22.520852"
+    }
+  },
+  "endpoints": {
+    "/find": 1
+  },
+  "last_updated": "2026-01-17T18:00:22.520858"
+}

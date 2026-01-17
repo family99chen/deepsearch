@@ -1,0 +1,33 @@
+{
+  "total_requests": 1,
+  "cache_hits": 0,
+  "success": 0,
+  "not_found": 1,
+  "error": 0,
+  "name_search": {
+    "total": 0,
+    "by_iterations": {}
+  },
+  "paper_search": {
+    "total": 0,
+    "by_papers": {}
+  },
+  "daily": {
+    "2026-01-17": {
+      "total_requests": 1,
+      "cache_hits": 0,
+      "success": 0,
+      "not_found": 1,
+      "error": 0,
+      "name_search": {
+        "total": 0,
+        "by_iterations": {}
+      },
+      "paper_search": {
+        "total": 0,
+        "by_papers": {}
+      }
+    }
+  },
+  "last_updated": "2026-01-17T18:03:26.744091"
+}

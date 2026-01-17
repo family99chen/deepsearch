@@ -31,6 +31,15 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from llm import query_async
 
+# 导入共享 driver 管理器
+from org_info.shared_driver import (
+    get_shared_driver, 
+    release_driver, 
+    warm_up_domain as shared_warm_up_domain,
+    is_domain_warmed,
+    switch_to_tab,  # 标签页切换
+)
+
 try:
     from utils.logger import logger
 except ImportError:
@@ -166,6 +175,7 @@ class PageExecuter:
     页面执行器
     
     使用 LLM 智能识别可交互元素
+    支持标签页隔离：指定 tab_handle 后，所有操作都在该标签页内进行。
     """
     
     def __init__(
@@ -173,10 +183,12 @@ class PageExecuter:
         timeout: int = 30,
         max_candidates: int = 1000,
         verbose: bool = True,
+        tab_handle: str = None,
     ):
         self.timeout = timeout
         self.max_candidates = max_candidates
         self.verbose = verbose
+        self.tab_handle = tab_handle  # 绑定的标签页
         
         self._driver = None
         self._element_map: Dict[str, Any] = {}  # id -> WebElement
@@ -189,24 +201,24 @@ class PageExecuter:
         """设置当前任务，用于更精确地提取元素"""
         self._task = task
     
+    def set_tab(self, tab_handle: str):
+        """设置绑定的标签页，所有操作将在该标签页内进行"""
+        self.tab_handle = tab_handle
+        if self._driver and tab_handle:
+            switch_to_tab(tab_handle)
+    
     def _get_driver(self):
-        """获取或创建浏览器"""
+        """获取共享浏览器"""
         if self._driver is None:
-            _setup_virtual_display()
-            
-            options = uc.ChromeOptions()
-            options.add_argument("--no-sandbox")
-            options.add_argument("--disable-dev-shm-usage")
-            options.add_argument("--window-size=1920,1080")
-            
-            if Path(CHROME_BINARY_PATH).exists():
-                options.binary_location = CHROME_BINARY_PATH
-            
-            self._driver = uc.Chrome(options=options)
+            self._driver = get_shared_driver()
             self._driver.set_page_load_timeout(self.timeout)
             
             if self.verbose:
-                print("[PageExecuter] 浏览器已启动")
+                print("[PageExecuter] 使用共享 Chrome driver")
+        
+        # 如果绑定了标签页，先切换到该标签页
+        if self.tab_handle:
+            switch_to_tab(self.tab_handle)
         
         return self._driver
     
@@ -296,24 +308,18 @@ class PageExecuter:
             return ""
     
     def _warm_up_domain_sync(self, url: str):
-        """预热域名（同步）"""
-        parsed = urlparse(url)
-        domain = f"{parsed.scheme}://{parsed.netloc}"
-        
-        if domain in self._warmed_domains:
+        """预热域名（使用共享状态）"""
+        if is_domain_warmed(url):
             return
         
-        driver = self._get_driver()
+        parsed = urlparse(url)
+        domain = f"{parsed.scheme}://{parsed.netloc}"
         
         if self.verbose:
             print(f"[PageExecuter] 预热域名: {domain}")
         
-        try:
-            driver.get(domain)
-            time.sleep(3)
-            self._warmed_domains.add(domain)
-        except Exception as e:
-            logger.warning(f"域名预热失败: {e}")
+        # 使用共享的预热函数
+        shared_warm_up_domain(url)
     
     async def _navigate(self, url: str) -> PageState:
         """访问 URL"""
@@ -990,25 +996,12 @@ class PageExecuter:
         return elements[:50]  # 限制数量
     
     def close(self):
-        """关闭浏览器"""
-        global _xvfb_process
-        
+        """释放对共享 driver 的引用（不关闭 driver，由管理器统一管理）"""
         if self._driver:
-            try:
-                self._driver.quit()
-                if self.verbose:
-                    print("[PageExecuter] 浏览器已关闭")
-            except:
-                pass
+            release_driver()
             self._driver = None
-        
-        if _xvfb_process:
-            try:
-                _xvfb_process.terminate()
-                _xvfb_process.wait(timeout=5)
-            except:
-                pass
-            _xvfb_process = None
+            if self.verbose:
+                print("[PageExecuter] 已释放共享 driver 引用")
     
     def __del__(self):
         self.close()
