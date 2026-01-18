@@ -194,7 +194,7 @@ def find_google_scholar_by_orcid(
         
         if not author_name:
             log_print("[ERROR] 无法获取作者姓名", "error")
-            record_error()
+            record_not_found()
             return None, None
         
         # 规范化姓名（中文转拼音等）
@@ -241,7 +241,7 @@ def find_google_scholar_by_orcid(
         
         if not orcid_papers:
             log_print("[WARNING] ORCID 论文列表为空，无法进行匹配", "warning")
-            record_error()
+            record_not_found()
             return None, None
         
         logger.info(f"获取到 {len(orcid_papers)} 篇 ORCID 论文")
