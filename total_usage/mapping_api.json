@@ -1,5 +1,5 @@
 {
-  "total": 8073,
+  "total": 29526,
   "daily": {
     "2026-01-17": {
       "total": 192,
@@ -40,10 +40,59 @@
       },
       "first_request": "2026-01-21T00:00:39.793434",
       "last_request": "2026-01-21T04:29:23.165578"
+    },
+    "2026-01-27": {
+      "total": 7107,
+      "endpoints": {
+        "/find": 7107
+      },
+      "first_request": "2026-01-27T09:53:42.560687",
+      "last_request": "2026-01-27T23:59:50.377845"
+    },
+    "2026-01-28": {
+      "total": 5277,
+      "endpoints": {
+        "/find": 5277
+      },
+      "first_request": "2026-01-28T00:00:04.121166",
+      "last_request": "2026-01-28T23:59:50.600183"
+    },
+    "2026-01-29": {
+      "total": 7759,
+      "endpoints": {
+        "/find": 7759
+      },
+      "first_request": "2026-01-29T00:00:01.772977",
+      "last_request": "2026-01-29T23:59:50.675904"
+    },
+    "2026-01-30": {
+      "total": 1303,
+      "endpoints": {
+        "/find": 1303
+      },
+      "first_request": "2026-01-30T00:00:04.755979",
+      "last_request": "2026-01-30T20:21:35.550036"
+    },
+    "2026-02-01": {
+      "total": 6,
+      "endpoints": {
+        "/find": 6
+      },
+      "first_request": "2026-02-01T15:54:34.116425",
+      "last_request": "2026-02-01T16:47:20.581155"
+    },
+    "2026-02-03": {
+      "total": 1,
+      "endpoints": {
+        "/person/report/orcid/stream": 1
+      },
+      "first_request": "2026-02-03T14:23:24.117942",
+      "last_request": "2026-02-03T14:23:24.117949"
     }
   },
   "endpoints": {
-    "/find": 8073
+    "/find": 29525,
+    "/person/report/orcid/stream": 1
   },
-  "last_updated": "2026-01-21T04:29:23.165585"
+  "last_updated": "2026-02-03T14:23:24.117954"
 }

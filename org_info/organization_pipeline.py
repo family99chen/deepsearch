@@ -25,7 +25,10 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 # 导入子模块（仅用于搜索链接，不需要 Chrome）
 from org_info.extract_org_info import get_organization
-from org_info.google_org_search import search_person_in_org as google_search, OrgPersonLink
+from org_info.google_org_search import (
+    search_person_in_org_with_raw as google_search_with_raw,
+    OrgPersonLink,
+)
 
 
 # ============ 配置 ============
@@ -62,6 +65,7 @@ class PipelineResult:
     success_count: int
     merged_report: str
     link_results: List[LinkResult] = field(default_factory=list)
+    google_search_raw: Optional[Dict[str, Any]] = None
     elapsed_time: float = 0.0
 
 
@@ -314,7 +318,12 @@ class OrganizationPipelineSubprocess:
         if self.verbose:
             print(f"\n[Step 2] 搜索 {person_name} + {org or 'N/A'} 的相关链接...")
         
-        links = google_search(person_name, org, max_results=self.max_links)
+        links, google_raw = google_search_with_raw(
+            person_name,
+            org,
+            max_results=self.max_links,
+            google_scholar_url=google_scholar_url,
+        )
         
         if self.verbose:
             print(f"  找到 {len(links)} 个链接")
@@ -322,13 +331,19 @@ class OrganizationPipelineSubprocess:
                 print(f"    {i+1}. {link.url[:60]}...")
         
         if not links:
+            merged = self._merge_reports([], person_name)
+            merged += "\n---\n## Google Search API 原始内容\n\n"
+            merged += "```json\n"
+            merged += json.dumps(google_raw, ensure_ascii=True, indent=2)
+            merged += "\n```\n"
             return PipelineResult(
                 person_name=person_name,
                 organization=org,
                 links_found=0,
                 links_processed=0,
                 success_count=0,
-                merged_report="未找到相关链接",
+                merged_report=merged,
+                google_search_raw=google_raw,
             )
         
         # 3. 使用线程池并行启动子进程（线程只是启动和等待子进程，实际工作在子进程中）
@@ -364,6 +379,10 @@ class OrganizationPipelineSubprocess:
         success_results = [r for r in results if r.success]
         reports = [r.report for r in success_results if r.report]
         merged = self._merge_reports(reports, person_name)
+        merged += "\n---\n## Google Search API 原始内容\n\n"
+        merged += "```json\n"
+        merged += json.dumps(google_raw, ensure_ascii=True, indent=2)
+        merged += "\n```\n"
         
         elapsed = time.time() - start_time
         
@@ -378,6 +397,7 @@ class OrganizationPipelineSubprocess:
             success_count=len(success_results),
             merged_report=merged,
             link_results=results,
+            google_search_raw=google_raw,
             elapsed_time=elapsed,
         )
     
@@ -419,6 +439,7 @@ if __name__ == "__main__":
     result = run_pipeline(
         person_name="Wang Shiqi",
         organization="City University of Hong Kong",
+        google_scholar_url="https://scholar.google.com/citations?user=Pr7s2VUAAAAJ&hl=en",
         max_links=10,
         max_workers=3,  # 可以开满，因为是真正的进程隔离
         verbose=True,
@@ -432,5 +453,5 @@ if __name__ == "__main__":
     print(f"链接: {result.links_found} 找到, {result.success_count} 成功")
     print(f"耗时: {result.elapsed_time:.1f}s")
     print("\n报告:")
-    print(result.merged_report[:2000])
+    print(result.merged_report[:5000])
 

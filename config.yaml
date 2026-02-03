@@ -105,3 +105,16 @@ organization_pipeline:
   # - iter_agent.max_iterations
   # - iteragent_advanced.max_iterations
 
+# Person Pipeline 配置（总 Pipeline）
+person_pipeline:
+  # LLM 后端选择: "api" | "local" | "auto"
+  backend: "api"
+  # LLM 模型名称（仅在 api/local 对应后端时生效）
+  model: "gpt-5.2"
+  # 最大迭代次数
+  max_iterations: 1
+  # 最大处理链接数
+  max_links: 10
+  # 最大并发数
+  max_workers: 3
+

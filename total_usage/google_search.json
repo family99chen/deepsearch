@@ -1,5 +1,5 @@
 {
-  "total": 8655,
+  "total": 21823,
   "daily": {
     "2026-01-17": {
       "total": 210,
@@ -40,10 +40,58 @@
       },
       "first_request": "2026-01-21T00:00:42.734738",
       "last_request": "2026-01-21T04:29:26.304513"
+    },
+    "2026-01-26": {
+      "total": 13,
+      "endpoints": {
+        "google_custom_search": 13
+      },
+      "first_request": "2026-01-26T16:37:01.808939",
+      "last_request": "2026-01-26T19:39:40.793623"
+    },
+    "2026-01-27": {
+      "total": 1322,
+      "endpoints": {
+        "google_custom_search": 1322
+      },
+      "first_request": "2026-01-27T17:31:49.332431",
+      "last_request": "2026-01-27T23:59:52.124971"
+    },
+    "2026-01-28": {
+      "total": 5786,
+      "endpoints": {
+        "google_custom_search": 5786
+      },
+      "first_request": "2026-01-28T00:00:06.239801",
+      "last_request": "2026-01-28T23:59:54.362861"
+    },
+    "2026-01-29": {
+      "total": 4606,
+      "endpoints": {
+        "google_custom_search": 4606
+      },
+      "first_request": "2026-01-29T00:00:51.999635",
+      "last_request": "2026-01-29T23:59:52.406993"
+    },
+    "2026-01-30": {
+      "total": 1440,
+      "endpoints": {
+        "google_custom_search": 1440
+      },
+      "first_request": "2026-01-30T00:00:06.105030",
+      "last_request": "2026-01-30T20:21:37.770179"
+    },
+    "2026-02-03": {
+      "total": 1,
+      "endpoints": {
+        "google_custom_search": 1
+      },
+      "first_request": "2026-02-03T14:29:36.900448",
+      "last_request": "2026-02-03T14:29:36.900454"
     }
   },
   "endpoints": {
-    "google_custom_search": 8655
+    "google_custom_search": 21823
   },
-  "last_updated": "2026-01-21T04:29:26.304519"
+  "last_updated": "2026-02-03T14:29:36.900457"
 }

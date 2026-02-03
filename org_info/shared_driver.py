@@ -53,6 +53,29 @@ except ImportError:
 CHROME_BINARY_PATH = "/root/.cache/selenium/chrome/linux64/143.0.7499.192/chrome"
 
 
+def _get_chrome_version_main() -> Optional[int]:
+    """尝试从 Chrome 可执行文件读取主版本号（例如 143）"""
+    if not Path(CHROME_BINARY_PATH).exists():
+        return None
+    try:
+        result = subprocess.run(
+            [CHROME_BINARY_PATH, "--version"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=False,
+        )
+        output = (result.stdout or result.stderr).strip()
+        # 形如: "Google Chrome 143.0.7499.192"
+        for token in output.split():
+            if token and token[0].isdigit():
+                major = token.split(".", 1)[0]
+                return int(major)
+    except Exception:
+        return None
+    return None
+
+
 # ============ Xvfb 管理 ============
 
 class XvfbManager:
@@ -222,8 +245,14 @@ class SharedDriverManager:
                 
                 if Path(CHROME_BINARY_PATH).exists():
                     options.binary_location = CHROME_BINARY_PATH
-                
-                driver = uc.Chrome(options=options)
+
+                version_main = _get_chrome_version_main()
+                if version_main:
+                    logger.info(f"检测到 Chrome 主版本: {version_main}")
+                else:
+                    logger.info("未检测到 Chrome 主版本，将由 uc 自动选择驱动")
+
+                driver = uc.Chrome(options=options, version_main=version_main)
                 driver.set_page_load_timeout(30)
                 
                 logger.info("共享 Chrome driver 已创建")

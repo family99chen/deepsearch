@@ -51,6 +51,7 @@ class LLMFactory:
     def __init__(
         self,
         backend: Optional[LLMType] = None,
+        model: Optional[str] = None,
         verbose: bool = False,
     ):
         """
@@ -68,6 +69,7 @@ class LLMFactory:
         llm_config = config.get("llm", {})
         
         self.backend = backend or llm_config.get("backend", "api")
+        self.model = model
         self.verbose = verbose
         
         # 初始化客户端
@@ -82,13 +84,13 @@ class LLMFactory:
     def _get_api_client(self) -> LLMApiClient:
         """获取 API 客户端（懒加载）"""
         if self._api_client is None:
-            self._api_client = LLMApiClient(verbose=self.verbose)
+            self._api_client = LLMApiClient(model=self.model, verbose=self.verbose)
         return self._api_client
     
     def _get_local_client(self) -> LLMLocalClient:
         """获取本地客户端（懒加载）"""
         if self._local_client is None:
-            self._local_client = LLMLocalClient(verbose=self.verbose)
+            self._local_client = LLMLocalClient(model=self.model, verbose=self.verbose)
         return self._local_client
     
     def _get_client(self):
@@ -175,6 +177,7 @@ class LLMFactoryAsync:
     def __init__(
         self,
         backend: Optional[LLMType] = None,
+        model: Optional[str] = None,
         verbose: bool = False,
     ):
         """初始化异步 LLM 工厂"""
@@ -182,6 +185,7 @@ class LLMFactoryAsync:
         llm_config = config.get("llm", {})
         
         self.backend = backend or llm_config.get("backend", "api")
+        self.model = model
         self.verbose = verbose
         
         self._api_client: Optional[LLMApiClientAsync] = None
@@ -209,13 +213,13 @@ class LLMFactoryAsync:
     def _get_api_client(self) -> LLMApiClientAsync:
         """获取 API 客户端"""
         if self._api_client is None:
-            self._api_client = LLMApiClientAsync(verbose=self.verbose)
+            self._api_client = LLMApiClientAsync(model=self.model, verbose=self.verbose)
         return self._api_client
     
     def _get_local_client(self) -> LLMLocalClientAsync:
         """获取本地客户端"""
         if self._local_client is None:
-            self._local_client = LLMLocalClientAsync(verbose=self.verbose)
+            self._local_client = LLMLocalClientAsync(model=self.model, verbose=self.verbose)
         return self._local_client
     
     async def _get_client(self):
@@ -317,6 +321,7 @@ def query(
     system_prompt: Optional[str] = None,
     temperature: float = 0.7,
     max_tokens: int = 4096,
+    model: Optional[str] = None,
     backend: Optional[LLMType] = None,
     verbose: bool = False,
 ) -> str:
@@ -339,8 +344,8 @@ def query(
         >>> response = query("请介绍一下 Python")
         >>> print(response)
     """
-    if backend:
-        factory = LLMFactory(backend=backend, verbose=verbose)
+    if backend or model:
+        factory = LLMFactory(backend=backend, model=model, verbose=verbose)
     else:
         factory = _get_default_factory(verbose=verbose)
     
@@ -356,6 +361,7 @@ def chat(
     messages: list,
     temperature: float = 0.7,
     max_tokens: int = 4096,
+    model: Optional[str] = None,
     backend: Optional[LLMType] = None,
     verbose: bool = False,
 ) -> str:
@@ -380,8 +386,8 @@ def chat(
         ... ]
         >>> response = chat(messages)
     """
-    if backend:
-        factory = LLMFactory(backend=backend, verbose=verbose)
+    if backend or model:
+        factory = LLMFactory(backend=backend, model=model, verbose=verbose)
     else:
         factory = _get_default_factory(verbose=verbose)
     
@@ -399,6 +405,7 @@ async def query_async(
     system_prompt: Optional[str] = None,
     temperature: float = 0.7,
     max_tokens: int = 4096,
+    model: Optional[str] = None,
     backend: Optional[LLMType] = None,
     verbose: bool = False,
 ) -> str:
@@ -408,7 +415,7 @@ async def query_async(
     Example:
         >>> response = await query_async("请介绍一下 Python")
     """
-    async with LLMFactoryAsync(backend=backend, verbose=verbose) as factory:
+    async with LLMFactoryAsync(backend=backend, model=model, verbose=verbose) as factory:
         return await factory.query(
             prompt=prompt,
             system_prompt=system_prompt,
@@ -421,11 +428,12 @@ async def chat_async(
     messages: list,
     temperature: float = 0.7,
     max_tokens: int = 4096,
+    model: Optional[str] = None,
     backend: Optional[LLMType] = None,
     verbose: bool = False,
 ) -> str:
     """异步多轮对话"""
-    async with LLMFactoryAsync(backend=backend, verbose=verbose) as factory:
+    async with LLMFactoryAsync(backend=backend, model=model, verbose=verbose) as factory:
         return await factory.chat(
             messages=messages,
             temperature=temperature,
@@ -439,6 +447,7 @@ async def batch_query_async(
     temperature: float = 0.7,
     max_tokens: int = 4096,
     max_concurrency: int = 5,
+    model: Optional[str] = None,
     backend: Optional[LLMType] = None,
     verbose: bool = False,
 ) -> List[str]:
@@ -461,7 +470,7 @@ async def batch_query_async(
         >>> prompts = ["介绍 Python", "介绍 JavaScript", "介绍 Go"]
         >>> responses = await batch_query_async(prompts, max_concurrency=3)
     """
-    async with LLMFactoryAsync(backend=backend, verbose=verbose) as factory:
+    async with LLMFactoryAsync(backend=backend, model=model, verbose=verbose) as factory:
         return await factory.batch_query(
             prompts=prompts,
             system_prompt=system_prompt,

@@ -12,7 +12,7 @@
 
 import sys
 import re
-from typing import List, Dict, Optional, Any
+from typing import List, Dict, Optional, Any, Tuple
 from pathlib import Path
 from dataclasses import dataclass, asdict
 from urllib.parse import urlparse
@@ -135,9 +135,9 @@ class GoogleOrgSearch:
                 self._cache = None
                 self.use_cache = False
     
-    def _get_cache_key(self, person_name: str) -> str:
+    def _get_cache_key(self, person_name: str, google_scholar_url: Optional[str]) -> str:
         """
-        生成缓存键（一个人一个文档）
+        生成缓存键（优先使用 Google Scholar URL 去重）
         
         Args:
             person_name: 人员名字
@@ -145,13 +145,16 @@ class GoogleOrgSearch:
         Returns:
             缓存键
         """
-        # 使用人员名字作为缓存键，统一转小写并去除首尾空格
+        if google_scholar_url:
+            return f"gs:{google_scholar_url.strip().lower()}"
+        # 回退到人员名字
         return f"person:{person_name.strip().lower()}"
     
     def _get_cached_links(
         self, 
         person_name: str, 
-        organization: str
+        organization: str,
+        google_scholar_url: Optional[str] = None,
     ) -> Optional[List[OrgPersonLink]]:
         """
         从缓存获取链接
@@ -181,7 +184,7 @@ class GoogleOrgSearch:
         if not self._cache:
             return None
         
-        cache_key = self._get_cache_key(person_name)
+        cache_key = self._get_cache_key(person_name, google_scholar_url)
         
         try:
             # 获取文档
@@ -221,7 +224,8 @@ class GoogleOrgSearch:
             
             if self.verbose:
                 print(f"[CACHE HIT] 从缓存读取 {len(links)} 个 organization 链接")
-            logger.info(f"缓存命中: {person_name}, {len(links)} 个链接")
+            key_hint = google_scholar_url or person_name
+            logger.info(f"缓存命中: {key_hint}, {len(links)} 个链接")
             
             return links
             
@@ -235,7 +239,8 @@ class GoogleOrgSearch:
         self, 
         person_name: str, 
         organization: str, 
-        links: List[OrgPersonLink]
+        links: List[OrgPersonLink],
+        google_scholar_url: Optional[str] = None,
     ) -> bool:
         """
         保存链接到缓存（更新时替换 organization 字段的旧数据）
@@ -263,7 +268,7 @@ class GoogleOrgSearch:
         if not self._cache:
             return False
         
-        cache_key = self._get_cache_key(person_name)
+        cache_key = self._get_cache_key(person_name, google_scholar_url)
         
         try:
             # 将链接转换为可序列化的字典列表
@@ -274,6 +279,7 @@ class GoogleOrgSearch:
             org_data = {
                 "links": links_data,
                 "source_organization": organization,  # 记录搜索时使用的组织名
+                "google_scholar_url": google_scholar_url,
                 "updated_at": datetime.utcnow(),
                 "expire_at": datetime.utcnow() + timedelta(seconds=CACHE_TTL_SECONDS),
             }
@@ -296,7 +302,8 @@ class GoogleOrgSearch:
             
             if self.verbose:
                 print(f"[CACHE SAVE] 已缓存 {len(links)} 个 organization 链接")
-            logger.info(f"缓存写入: {person_name} @ {organization}, {len(links)} 个链接")
+            key_hint = google_scholar_url or person_name
+            logger.info(f"缓存写入: {key_hint} @ {organization}, {len(links)} 个链接")
             
             return True
             
@@ -313,6 +320,7 @@ class GoogleOrgSearch:
         max_results: int = 20,
         site_restrict: Optional[str] = None,
         force_refresh: bool = False,
+        google_scholar_url: Optional[str] = None,
     ) -> List[OrgPersonLink]:
         """
         搜索某人在组织中的链接
@@ -333,7 +341,7 @@ class GoogleOrgSearch:
         
         # 检查缓存（除非强制刷新）
         if self.use_cache and not force_refresh:
-            cached_links = self._get_cached_links(person_name, organization)
+            cached_links = self._get_cached_links(person_name, organization, google_scholar_url)
             if cached_links is not None:
                 return cached_links[:max_results]
         
@@ -376,9 +384,114 @@ class GoogleOrgSearch:
         
         # 保存到缓存（空结果不缓存）
         if self.use_cache and links:
-            self._save_to_cache(person_name, organization, links)
+            self._save_to_cache(person_name, organization, links, google_scholar_url)
         
         return links[:max_results]
+
+    def search_person_in_org_with_raw(
+        self,
+        person_name: str,
+        organization: str,
+        max_results: int = 20,
+        site_restrict: Optional[str] = None,
+        force_refresh: bool = False,
+        google_scholar_url: Optional[str] = None,
+    ) -> Tuple[List[OrgPersonLink], Dict[str, Any]]:
+        """
+        搜索某人在组织中的链接，并返回原始搜索内容（包含摘要）
+        """
+        if self.verbose:
+            print(f"[INFO] 搜索: {person_name} @ {organization}")
+        logger.info(f"开始搜索组织链接: {person_name} @ {organization}")
+
+        # 构建搜索查询
+        if site_restrict:
+            query = f'site:{site_restrict} "{person_name}"'
+        else:
+            query = f'"{person_name}" "{organization}"'
+
+        # 检查缓存（除非强制刷新）
+        if self.use_cache and not force_refresh:
+            cached_links = self._get_cached_links(person_name, organization, google_scholar_url)
+            if cached_links is not None:
+                raw = {
+                    "from_cache": True,
+                    "success": True,
+                    "query": query,
+                    "total_results": len(cached_links),
+                    "error": None,
+                    "items": [
+                        {
+                            "title": link.title,
+                            "link": link.url,
+                            "snippet": link.snippet,
+                            "display_link": link.domain,
+                            "html_title": None,
+                            "html_snippet": None,
+                            "formatted_url": None,
+                        }
+                        for link in cached_links[:max_results]
+                    ],
+                    "google_scholar_url": google_scholar_url,
+                }
+                return cached_links[:max_results], raw
+
+        if self.verbose:
+            print(f"[DEBUG] 查询: {query}")
+
+        # 执行搜索
+        result = self.api.search(query, num=min(max_results, 10))
+
+        raw = {
+            "from_cache": False,
+            "success": result.success,
+            "query": result.query,
+            "total_results": result.total_results,
+            "error": result.error,
+            "items": [
+                {
+                    "title": item.title,
+                    "link": item.link,
+                    "snippet": item.snippet,
+                    "display_link": item.display_link,
+                    "html_title": item.html_title,
+                    "html_snippet": item.html_snippet,
+                    "formatted_url": item.formatted_url,
+                }
+                for item in result.items
+            ],
+            "google_scholar_url": google_scholar_url,
+        }
+
+        if not result.success:
+            print(f"[ERROR] 搜索失败: {result.error}")
+            logger.error(f"Google 搜索失败: {person_name} @ {organization}, {result.error}")
+            return [], raw
+
+        if not result.items:
+            if self.verbose:
+                print("[INFO] 没有搜索结果")
+            return [], raw
+
+        # 解析结果
+        links = []
+        for item in result.items:
+            link = self._parse_search_result(item, person_name, organization)
+            if link:
+                links.append(link)
+
+        # 按相关性排序
+        links.sort(key=lambda x: x.relevance_score, reverse=True)
+
+        if self.verbose:
+            print(f"[INFO] 找到 {len(links)} 个相关链接")
+        logger.info(f"搜索完成: {person_name} @ {organization}, 找到 {len(links)} 个链接")
+
+        # 保存到缓存（空结果不缓存）
+        if self.use_cache and links:
+            self._save_to_cache(person_name, organization, links, google_scholar_url)
+
+        return links[:max_results], raw
     
     def search_person_in_org_multi_query(
         self,
@@ -662,6 +775,7 @@ def search_person_in_org(
     verbose: bool = True,
     use_cache: bool = True,
     force_refresh: bool = False,
+    google_scholar_url: Optional[str] = None,
 ) -> List[OrgPersonLink]:
     """
     便捷函数：搜索某人在组织中的链接
@@ -683,6 +797,29 @@ def search_person_in_org(
         organization=organization,
         max_results=max_results,
         force_refresh=force_refresh,
+        google_scholar_url=google_scholar_url,
+    )
+
+
+def search_person_in_org_with_raw(
+    person_name: str,
+    organization: str,
+    max_results: int = 20,
+    verbose: bool = True,
+    use_cache: bool = True,
+    force_refresh: bool = False,
+    google_scholar_url: Optional[str] = None,
+) -> Tuple[List[OrgPersonLink], Dict[str, Any]]:
+    """
+    便捷函数：搜索某人在组织中的链接，并返回原始搜索内容（包含摘要）
+    """
+    searcher = GoogleOrgSearch(verbose=verbose, use_cache=use_cache)
+    return searcher.search_person_in_org_with_raw(
+        person_name=person_name,
+        organization=organization,
+        max_results=max_results,
+        force_refresh=force_refresh,
+        google_scholar_url=google_scholar_url,
     )
 
 
@@ -759,6 +896,7 @@ def clear_person_org_cache(
     person_name: str,
     clear_all: bool = False,
     verbose: bool = True,
+    google_scholar_url: Optional[str] = None,
 ) -> bool:
     """
     便捷函数：清除某人的 organization 链接缓存
@@ -783,7 +921,10 @@ def clear_person_org_cache(
                 print("[WARNING] MongoDB 连接失败")
             return False
         
-        cache_key = f"person:{person_name.strip().lower()}"
+        if google_scholar_url:
+            cache_key = f"gs:{google_scholar_url.strip().lower()}"
+        else:
+            cache_key = f"person:{person_name.strip().lower()}"
         
         if clear_all:
             # 清除该人所有缓存
