@@ -1,13 +1,13 @@
 # Jiawei-PreResearch
 
-- Main report: [DeepSearch-PreResearch-Report.md](./DeepSearch-PreResearch-Report.md)
-- Manifest: [manifest.json](./manifest.json)
-- Authenticity report: [Paper-Authenticity-Verification.md](./Paper-Authenticity-Verification.md)
-- Verification JSON: [verification.json](./verification.json)
-- Paper PDFs: [paper/](./paper/)
-- Per-paper reports: [paper_reports/](./paper_reports/)
+- 总报告: [DeepSearch-PreResearch-Report.md](./DeepSearch-PreResearch-Report.md)
+- 清单文件: [manifest.json](./manifest.json)
+- 真实性复核报告: [Paper-Authenticity-Verification.md](./Paper-Authenticity-Verification.md)
+- 真实性复核 JSON: [verification.json](./verification.json)
+- 论文原文目录: [paper/](./paper/)
+- 单篇报告目录: [paper_reports/](./paper_reports/)
 
-## Quick Stats
-- Total papers: 42
-- Successful downloads: 42
-- Failures: 0
+## 快速统计
+- 论文总数: 42
+- 下载成功: 42
+- 下载失败: 0
