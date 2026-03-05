@@ -1,0 +1,1180 @@
+{
+  "generated_at": "2026-03-05T23:39:18.458620",
+  "summary": {
+    "total": 42,
+    "verified": 42,
+    "partially_verified": 0,
+    "failed": 0
+  },
+  "results": [
+    {
+      "index": 1,
+      "slug": "webgpt",
+      "title": "WebGPT: Browser-assisted question-answering with human feedback",
+      "track": "Agentic Web Research",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:1486858"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "WebGPT: Browser-assisted question-answering with human feedback",
+          "manifest_title": "WebGPT: Browser-assisted question-answering with human feedback"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "slug": "react",
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "track": "Agentic Web Research",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:633805"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "manifest_title": "ReAct: Synergizing Reasoning and Acting in Language Models"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "slug": "toolformer",
+      "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+      "track": "Agentic Web Research",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:657966"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+          "manifest_title": "Toolformer: Language Models Can Teach Themselves to Use Tools"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "slug": "mind2web",
+      "title": "Mind2Web: Towards a Generalist Agent for the Web",
+      "track": "Agentic Web Research",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:7635816"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Mind2Web: Towards a Generalist Agent for the Web",
+          "manifest_title": "Mind2Web: Towards a Generalist Agent for the Web"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "slug": "webarena",
+      "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+      "track": "Agentic Web Research",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:9128123"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+          "manifest_title": "WebArena: A Realistic Web Environment for Building Autonomous Agents"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "slug": "seeact_gpt4v_agent",
+      "title": "GPT-4V(ision) is a Generalist Web Agent, if Grounded",
+      "track": "Agentic Web Research",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:9044518"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "GPT-4V(ision) is a Generalist Web Agent, if Grounded",
+          "manifest_title": "GPT-4V(ision) is a Generalist Web Agent, if Grounded"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "slug": "browsergym",
+      "title": "The BrowserGym Ecosystem for Web Agent Research",
+      "track": "Agentic Web Research",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:10876140"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "The BrowserGym Ecosystem for Web Agent Research",
+          "manifest_title": "The BrowserGym Ecosystem for Web Agent Research"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "slug": "search_o1",
+      "title": "Search-o1: Agentic Search-Enhanced Large Reasoning Models",
+      "track": "Agentic Web Research",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:655837"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Search-o1: Agentic Search-Enhanced Large Reasoning Models",
+          "manifest_title": "Search-o1: Agentic Search-Enhanced Large Reasoning Models"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "slug": "search_r1",
+      "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+      "track": "Agentic Web Research",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:645723"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+          "manifest_title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "slug": "deepresearcher",
+      "title": "DeepResearcher: Scaling Deep Research via Reinforcement Learning in Real-world Environments",
+      "track": "Agentic Web Research",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:1159177"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "DeepResearcher: Scaling Deep Research via Reinforcement Learning in Real-world Environments",
+          "manifest_title": "DeepResearcher: Scaling Deep Research via Reinforcement Learning in Real-world Environments"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "slug": "websailor_v2",
+      "title": "WebSailor-V2: Bridging the Chasm to Proprietary Agents via Synthetic Data and Scalable Reinforcement Learning",
+      "track": "Agentic Web Research",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:4319305"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "WebSailor-V2: Bridging the Chasm to Proprietary Agents via Synthetic Data and Scalable Reinforcement Learning",
+          "manifest_title": "WebSailor-V2: Bridging the Chasm to Proprietary Agents via Synthetic Data and Scalable Reinforcement Learning"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "slug": "universal_deep_research",
+      "title": "Universal Deep Research: Bring Your Own Model and Strategy",
+      "track": "Agentic Web Research",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:784858"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Universal Deep Research: Bring Your Own Model and Strategy",
+          "manifest_title": "Universal Deep Research: Bring Your Own Model and Strategy"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "slug": "realm",
+      "title": "REALM: Retrieval-Augmented Language Model Pre-Training",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:419037"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "REALM: Retrieval-Augmented Language Model Pre-Training",
+          "manifest_title": "REALM: Retrieval-Augmented Language Model Pre-Training"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "slug": "dpr",
+      "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:383508"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Dense Passage Retrieval for Open-Domain Question Answering",
+          "manifest_title": "Dense Passage Retrieval for Open-Domain Question Answering"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "slug": "rag",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:885323"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "manifest_title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "slug": "fid",
+      "title": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:326612"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering",
+          "manifest_title": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "slug": "colbert",
+      "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:4918165"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+          "manifest_title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "slug": "colbertv2",
+      "title": "ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:1081592"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction",
+          "manifest_title": "ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "slug": "contriever",
+      "title": "Unsupervised Dense Information Retrieval with Contrastive Learning",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:686136"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Unsupervised Dense Information Retrieval with Contrastive Learning",
+          "manifest_title": "Unsupervised Dense Information Retrieval with Contrastive Learning"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "slug": "beir",
+      "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:2094824"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+          "manifest_title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "slug": "splade_v2",
+      "title": "SPLADE v2: Sparse Lexical and Expansion Model for Information Retrieval",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:642058"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "SPLADE v2: Sparse Lexical and Expansion Model for Information Retrieval",
+          "manifest_title": "SPLADE v2: Sparse Lexical and Expansion Model for Information Retrieval"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "slug": "e5",
+      "title": "Text Embeddings by Weakly-Supervised Contrastive Pre-training",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:484956"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Text Embeddings by Weakly-Supervised Contrastive Pre-training",
+          "manifest_title": "Text Embeddings by Weakly-Supervised Contrastive Pre-training"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "slug": "hyde",
+      "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:424964"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+          "manifest_title": "Precise Zero-Shot Dense Retrieval without Relevance Labels"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "slug": "self_rag",
+      "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:1405127"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+          "manifest_title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "slug": "crag",
+      "title": "Corrective Retrieval Augmented Generation",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:667756"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Corrective Retrieval Augmented Generation",
+          "manifest_title": "Corrective Retrieval Augmented Generation"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "slug": "graphrag",
+      "title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:6893854"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
+          "manifest_title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "slug": "instructor",
+      "title": "One Embedder, Any Task: Instruction-Finetuned Text Embeddings",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:1263373"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "One Embedder, Any Task: Instruction-Finetuned Text Embeddings",
+          "manifest_title": "One Embedder, Any Task: Instruction-Finetuned Text Embeddings"
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "slug": "mteb",
+      "title": "MTEB: Massive Text Embedding Benchmark",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:769075"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "MTEB: Massive Text Embedding Benchmark",
+          "manifest_title": "MTEB: Massive Text Embedding Benchmark"
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "slug": "bge_multistage",
+      "title": "Towards General Text Embeddings with Multi-stage Contrastive Learning",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:701400"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Towards General Text Embeddings with Multi-stage Contrastive Learning",
+          "manifest_title": "Towards General Text Embeddings with Multi-stage Contrastive Learning"
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "slug": "m3_embedding",
+      "title": "M3-Embedding: Multi-Linguality, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:754673"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "M3-Embedding: Multi-Linguality, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation",
+          "manifest_title": "M3-Embedding: Multi-Linguality, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation"
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "slug": "rankgpt",
+      "title": "Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agents",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:849174"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agents",
+          "manifest_title": "Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agents"
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "slug": "setwise_ranking",
+      "title": "A Setwise Approach for Effective and Highly Efficient Zero-shot Ranking with Large Language Models",
+      "track": "Retrieval & RAG",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:2127006"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "A Setwise Approach for Effective and Highly Efficient Zero-shot Ranking with Large Language Models",
+          "manifest_title": "A Setwise Approach for Effective and Highly Efficient Zero-shot Ranking with Large Language Models"
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "slug": "s2and",
+      "title": "S2AND: A Benchmark and Evaluation System for Author Name Disambiguation",
+      "track": "Scholarly Identity",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:474579"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "S2AND: A Benchmark and Evaluation System for Author Name Disambiguation",
+          "manifest_title": "S2AND: A Benchmark and Evaluation System for Author Name Disambiguation"
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "slug": "whoiswho",
+      "title": "Web-Scale Academic Name Disambiguation: the WhoIsWho Benchmark, Leaderboard, and Toolkit",
+      "track": "Scholarly Identity",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:4300216"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Web-Scale Academic Name Disambiguation: the WhoIsWho Benchmark, Leaderboard, and Toolkit",
+          "manifest_title": "Web-Scale Academic Name Disambiguation: the WhoIsWho Benchmark, Leaderboard, and Toolkit"
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "slug": "ditto",
+      "title": "Deep Entity Matching with Pre-Trained Language Models",
+      "track": "Scholarly Identity",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:1056350"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Deep Entity Matching with Pre-Trained Language Models",
+          "manifest_title": "Deep Entity Matching with Pre-Trained Language Models"
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "slug": "deepmatcher",
+      "title": "DeepMatcher: A Deep Learning Approach to Entity Matching",
+      "track": "Scholarly Identity",
+      "status": "verified",
+      "score": 2,
+      "max_score": 2,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:1687612"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "pdf_url_status:200,ctype:application/pdf"
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "slug": "low_resource_deep_er",
+      "title": "Low-resource Deep Entity Resolution with Transfer and Active Learning",
+      "track": "Scholarly Identity",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:418157"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "acl_page_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:0.901",
+          "fetched_title": "Low-resource Deep Entity Resolution with Transfer and Active Learning - ACL Anthology",
+          "manifest_title": "Low-resource Deep Entity Resolution with Transfer and Active Learning"
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "slug": "s2orc",
+      "title": "S2ORC: The Semantic Scholar Open Research Corpus",
+      "track": "Scholarly Identity",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:2111239"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "S2ORC: The Semantic Scholar Open Research Corpus",
+          "manifest_title": "S2ORC: The Semantic Scholar Open Research Corpus"
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "slug": "scibert",
+      "title": "SciBERT: A Pretrained Language Model for Scientific Text",
+      "track": "Scholarly Identity",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:120281"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "SciBERT: A Pretrained Language Model for Scientific Text",
+          "manifest_title": "SciBERT: A Pretrained Language Model for Scientific Text"
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "slug": "specter",
+      "title": "SPECTER: Document-level Representation Learning using Citation-informed Transformers",
+      "track": "Scholarly Identity",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:683111"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "SPECTER: Document-level Representation Learning using Citation-informed Transformers",
+          "manifest_title": "SPECTER: Document-level Representation Learning using Citation-informed Transformers"
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "slug": "blink",
+      "title": "Scalable Zero-shot Entity Linking with Dense Entity Retrieval",
+      "track": "Scholarly Identity",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:358951"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Scalable Zero-shot Entity Linking with Dense Entity Retrieval",
+          "manifest_title": "Scalable Zero-shot Entity Linking with Dense Entity Retrieval"
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "slug": "autoregressive_entity_retrieval",
+      "title": "Autoregressive Entity Retrieval",
+      "track": "Scholarly Identity",
+      "status": "verified",
+      "score": 3,
+      "max_score": 3,
+      "checks": [
+        {
+          "name": "local_pdf",
+          "ok": true,
+          "detail": "size:1381292"
+        },
+        {
+          "name": "source_reachable",
+          "ok": true,
+          "detail": "arxiv_abs_reachable"
+        },
+        {
+          "name": "title_match",
+          "ok": true,
+          "detail": "ratio:1.000",
+          "fetched_title": "Autoregressive Entity Retrieval",
+          "manifest_title": "Autoregressive Entity Retrieval"
+        }
+      ]
+    }
+  ]
+}
