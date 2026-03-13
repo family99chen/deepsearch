@@ -22,13 +22,14 @@ sys.path.insert(0, "google_scholar_url")
 from google_scholar_url.google_account_fetcher_pipeline import find_google_scholar_by_orcid
 from pipeline import run_person_pipeline, run_person_pipeline_by_orcid
 from utils.usage_tracker import record_api_call, get_tracker
+from utils.org_pipeline_stats import get_org_pipeline_stats
 from utils.pipeline_stats import get_pipeline_stats
 
 # 创建路由器
 router = APIRouter(tags=["Google Scholar"])
 
 # Pipeline 并发控制（避免资源争抢）
-PIPELINE_MAX_CONCURRENT = int(os.getenv("PIPELINE_MAX_CONCURRENT", "5"))
+PIPELINE_MAX_CONCURRENT = int(os.getenv("PIPELINE_MAX_CONCURRENT", "10"))
 PIPELINE_SEMAPHORE = asyncio.Semaphore(PIPELINE_MAX_CONCURRENT)
 
 
@@ -477,4 +478,30 @@ async def get_pipeline_today_usage():
     获取今日 Pipeline 详细统计
     """
     stats = get_pipeline_stats()
+    return stats.get_today_stats()
+
+
+@router.get("/usage/org-pipeline", tags=["Usage"])
+async def get_org_pipeline_usage():
+    """
+    获取 org_info 联网搜索详细统计
+
+    返回：
+    - total_requests: 总请求次数
+    - cache_hits: 搜索缓存命中次数
+    - success / not_found / error: 总体结果统计
+    - links_found_total / links_processed_total / worker_success_total: 链接处理汇总
+    - worker: 全部 worker 的执行模式与成功失败情况
+    - by_pipeline: 按 organization / social_media / arbitrary 分组
+    """
+    stats = get_org_pipeline_stats()
+    return stats.get_stats()
+
+
+@router.get("/usage/org-pipeline/today", tags=["Usage"])
+async def get_org_pipeline_today_usage():
+    """
+    获取今日 org_info 联网搜索详细统计
+    """
+    stats = get_org_pipeline_stats()
     return stats.get_today_stats()

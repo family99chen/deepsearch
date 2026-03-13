@@ -12,6 +12,12 @@ from .insert_mongo import (
     cache_delete,
     cache_exists,
 )
+from .deepsearch_cache import (
+    PersonPipelineCache,
+    PageAnalysisCache,
+    get_person_pipeline_cache,
+    get_page_analysis_cache,
+)
 
 __all__ = [
     "MongoCache",
@@ -20,5 +26,9 @@ __all__ = [
     "cache_get",
     "cache_delete",
     "cache_exists",
+    "PersonPipelineCache",
+    "PageAnalysisCache",
+    "get_person_pipeline_cache",
+    "get_page_analysis_cache",
 ]
 

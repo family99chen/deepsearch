@@ -12,7 +12,7 @@ import re
 import json
 import asyncio
 import yaml
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, asdict
 from pathlib import Path
 from typing import Optional, List, Dict, Any
 
@@ -33,6 +33,7 @@ from org_info.organization_pipeline import run_pipeline as run_org_pipeline
 from org_info.social_media_pipeline import run_social_media_pipeline
 from org_info.arbitrary_pipeline import run_arbitrary_pipeline
 from llm import query_async
+from localdb.deepsearch_cache import get_person_pipeline_cache
 
 
 def _run_async(coro):
@@ -85,6 +86,58 @@ def _extract_json(text: str) -> Optional[Dict[str, Any]]:
     return None
 
 
+def _is_missing_organization(organization: Optional[str]) -> bool:
+    value = (organization or "").strip()
+    if not value:
+        return True
+
+    normalized = value.lower()
+    missing_markers = [
+        "未知所在单位机构",
+        "unknown affiliation",
+        "unknown organization",
+        "unknown institution",
+        "n/a",
+        "none",
+    ]
+    return any(marker in normalized for marker in missing_markers)
+
+
+def _pick_fallback_organization(*candidates: Any) -> Optional[str]:
+    for candidate in candidates:
+        if isinstance(candidate, str):
+            value = candidate.strip()
+            if value and not _is_missing_organization(value):
+                return value
+        elif isinstance(candidate, list):
+            for item in candidate:
+                if isinstance(item, str):
+                    value = item.strip()
+                    if value and not _is_missing_organization(value):
+                        return value
+                elif isinstance(item, dict):
+                    for key in ("name", "organization", "department-name", "value"):
+                        raw = item.get(key)
+                        if isinstance(raw, str):
+                            value = raw.strip()
+                            if value and not _is_missing_organization(value):
+                                return value
+    return None
+
+
+def _extract_domain_from_verified_email(verified_email: Optional[str]) -> Optional[str]:
+    text = (verified_email or "").strip()
+    if not text:
+        return None
+
+    match = re.search(r"([A-Za-z0-9.-]+\.[A-Za-z]{2,})", text)
+    if not match:
+        return None
+
+    domain = match.group(1).lower().strip(" .,:;)")
+    return domain or None
+
+
 @dataclass
 class FinalResult:
     person_name: str
@@ -111,8 +164,50 @@ class PersonPipeline:
         self.verbose = verbose
         self.model = model
         self.backend = backend
+    
+    @staticmethod
+    def _to_cache_payload(result: FinalResult) -> Dict[str, Any]:
+        return {
+            "person_name": result.person_name,
+            "organization": result.organization,
+            "report": result.report,
+            "iterations": result.iterations,
+            "queries": result.queries,
+            "sources": result.sources,
+        }
 
-    def run(self, google_scholar_url: str, extra_sources: Optional[List[str]] = None) -> FinalResult:
+    def run(
+        self,
+        google_scholar_url: str,
+        extra_sources: Optional[List[str]] = None,
+        fallback_organization: Optional[str] = None,
+    ) -> FinalResult:
+        pipeline_cache = get_person_pipeline_cache()
+        cached_result = pipeline_cache.get_final_result(
+            google_scholar_url=google_scholar_url,
+            max_iterations=self.max_iterations,
+            max_links=self.max_links,
+            max_workers=self.max_workers,
+            model=self.model,
+            backend=self.backend,
+            extra_sources=extra_sources,
+        )
+        if cached_result:
+            final = cached_result["final"]
+            if self.verbose:
+                print("=" * 60)
+                print("[Pipeline] 命中 person_pipeline_cache")
+                print("=" * 60)
+                print(f"[CACHE] Google Scholar URL: {google_scholar_url}")
+            return FinalResult(
+                person_name=final.get("person_name", ""),
+                organization=final.get("organization"),
+                report=final.get("report", ""),
+                iterations=final.get("iterations", 0),
+                queries=final.get("queries", []),
+                sources=final.get("sources", []),
+            )
+
         if self.verbose:
             print("=" * 60)
             print("[Pipeline] 从 Google Scholar 开始")
@@ -121,12 +216,53 @@ class PersonPipeline:
         profile = get_profile_info(google_scholar_url)
         person_name = profile.get("name")
         organization = profile.get("affiliation")
+        original_organization = organization
+        scholar_email_domain = _extract_domain_from_verified_email(profile.get("verified_email"))
+        resolved_fallback_organization = _pick_fallback_organization(
+            fallback_organization,
+            scholar_email_domain,
+        )
+        if _is_missing_organization(organization) and resolved_fallback_organization:
+            organization = resolved_fallback_organization
         if not person_name:
             raise ValueError("无法从 Google Scholar 获取姓名")
 
         if self.verbose:
             print(f"[Pipeline] 姓名: {person_name}")
             print(f"[Pipeline] 组织: {organization or '未找到'}")
+            if organization != original_organization and resolved_fallback_organization:
+                print(f"[Pipeline] 组织回退来源: {resolved_fallback_organization}")
+
+        stage_data: Dict[str, Any] = {
+            "profile": {
+                "name": profile.get("name"),
+                "affiliation": profile.get("affiliation"),
+                "resolved_organization": organization,
+                "verified_email_domain": scholar_email_domain,
+                "verified_email": profile.get("verified_email"),
+                "interests": profile.get("interests"),
+                "citations": profile.get("citations"),
+                "h_index": profile.get("h_index"),
+                "i10_index": profile.get("i10_index"),
+                "coauthors": profile.get("coauthors"),
+                "profile_url": profile.get("url"),
+            },
+            "arbitrary_pipeline": {},
+        }
+
+        def _save_and_return(result: FinalResult) -> FinalResult:
+            pipeline_cache.set_final_result(
+                google_scholar_url=google_scholar_url,
+                max_iterations=self.max_iterations,
+                max_links=self.max_links,
+                max_workers=self.max_workers,
+                model=self.model,
+                backend=self.backend,
+                result=self._to_cache_payload(result),
+                extra_sources=extra_sources,
+                stages=stage_data,
+            )
+            return result
 
         # 1) 组织信息 pipeline
         org_result = run_org_pipeline(
@@ -137,6 +273,7 @@ class PersonPipeline:
             max_workers=self.max_workers,
             verbose=self.verbose,
         )
+        stage_data["organization_pipeline"] = asdict(org_result)
 
         # 2) 社交媒体 pipeline
         social_result = run_social_media_pipeline(
@@ -147,6 +284,7 @@ class PersonPipeline:
             max_workers=self.max_workers,
             verbose=self.verbose,
         )
+        stage_data["social_media_pipeline"] = asdict(social_result)
 
         scholar_detail = {
             "name": profile.get("name"),
@@ -185,28 +323,29 @@ class PersonPipeline:
                 )
             except Exception:
                 # LLM 出错时直接返回已有内容，确保不中止
-                return FinalResult(
+                return _save_and_return(FinalResult(
                     person_name=person_name,
                     organization=organization,
                     report="\n\n".join(sources),
                     iterations=i + 1,
                     queries=queries,
                     sources=sources,
-                )
+                ))
             if decision.get("sufficient"):
                 report = decision.get("final_report") or self._final_report(
                     person_name,
                     organization,
                     sources,
                 )
-                return FinalResult(
+                stage_data["final_decision"] = decision
+                return _save_and_return(FinalResult(
                     person_name=person_name,
                     organization=organization,
                     report=report,
                     iterations=i + 1,
                     queries=queries,
                     sources=sources,
-                )
+                ))
 
             next_query = decision.get("next_query", "").strip()
             if not next_query:
@@ -228,18 +367,19 @@ class PersonPipeline:
                 person_name=ai_person_name,
                 organization=organization,
             )
+            stage_data["arbitrary_pipeline"][next_query] = asdict(arbitrary_result)
             sources.append(arbitrary_result.merged_report)
 
         # 达到最大迭代次数，仍生成最终报告
         final_report = self._final_report(person_name, organization, sources)
-        return FinalResult(
+        return _save_and_return(FinalResult(
             person_name=person_name,
             organization=organization,
             report=final_report,
             iterations=self.max_iterations,
             queries=queries,
             sources=sources,
-        )
+        ))
 
     def _analyze_sources(
         self,
@@ -271,10 +411,11 @@ class PersonPipeline:
 2. 个人主页：官网/主页链接（若无必须说明原因）
 3. 社交媒体账号：LinkedIn、X/Twitter、ResearchGate、ORCID、GitHub 等（可为空但需说明检索不足）
 4. 学术与研究：研究方向、代表成果/论文、学术影响（如引用、奖项）
-5. 联系方式：邮箱/电话/办公地址（若无说明缺失）
-6. 关系网络：合作作者、同领域伙伴或相关人物
-7. 背景信息：教育经历/履历/出生地（若无说明缺失）
-8. 各种相关信息
+5. 个人成就：重要荣誉、奖项、头衔、入选计划、里程碑成果等（若无说明缺失）
+6. 联系方式：邮箱/电话/办公地址（若无说明缺失）
+7. 关系网络：合作作者、同领域伙伴或相关人物
+8. 背景信息：教育经历/履历/出生地（若无说明缺失）
+9. 各种相关信息
 
 任务：
 - 判断当前信息是否是完整报告。
@@ -331,10 +472,11 @@ class PersonPipeline:
 2. 个人主页：官网/主页链接（若无必须说明原因）
 3. 社交媒体账号：LinkedIn、X/Twitter、ResearchGate、ORCID、GitHub 等（可为空但需说明检索不足）
 4. 学术与研究：研究方向、代表成果/论文、学术影响（如引用、奖项）
-5. 联系方式：邮箱/电话/办公地址（若无说明缺失）
-6. 关系网络：合作作者、同领域伙伴或相关人物
-7. 背景信息：教育经历/履历/出生地（若无说明缺失）
-8. 各种相关信息
+5. 个人成就：重要荣誉、奖项、头衔、入选计划、里程碑成果等（若无说明缺失）
+6. 联系方式：邮箱/电话/办公地址（若无说明缺失）
+7. 关系网络：合作作者、同领域伙伴或相关人物
+8. 背景信息：教育经历/履历/出生地（若无说明缺失）
+9. 各种相关信息
 
 请生成详细报告。
 """
@@ -435,6 +577,12 @@ def run_person_pipeline_by_orcid(
         "## ORCID -> Google Scholar Mapping (authoritative)\n"
         + json.dumps(orcid_detail, ensure_ascii=True, indent=2),
     ]
+    fallback_organization = _pick_fallback_organization(
+        matched_candidate.get("affiliation") if isinstance(matched_candidate, dict) else None,
+        orcid_cached.get("affiliation") if isinstance(orcid_cached, dict) else None,
+        orcid_org_info.get("primary_organization"),
+        orcid_org_info.get("organizations"),
+    )
 
     pipeline = PersonPipeline(
         max_iterations=max_iterations,
@@ -444,7 +592,11 @@ def run_person_pipeline_by_orcid(
         model=model,
         backend=backend,
     )
-    return pipeline.run(gs_url, extra_sources=extra_sources)
+    return pipeline.run(
+        gs_url,
+        extra_sources=extra_sources,
+        fallback_organization=fallback_organization,
+    )
 
 
 if __name__ == "__main__":

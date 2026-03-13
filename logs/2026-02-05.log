@@ -1,0 +1,247 @@
+[2026-02-05 15:45:10] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-05 15:45:10] [INFO] IterAgent 开始: Askar A Kleefeldt, URL: https://www.nti.org/news/introducing-the-winners-of-the-2023-next-generation-for-biosecurity-competition/
+[2026-02-05 15:45:10] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-05 15:45:10] [INFO] IterAgent 开始: Askar A Kleefeldt, URL: https://www.repository.cam.ac.uk/items/83967b9a-805d-46cc-8bc2-b0cbdad42b7a
+[2026-02-05 15:45:10] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-05 15:45:10] [INFO] IterAgent 开始: Askar A Kleefeldt, URL: https://www.linkedin.com/posts/kleefeldt_pnac-synthetic-biology-project-activity-7167915521630281728-bly-
+[2026-02-05 15:45:11] [INFO] Xvfb 已启动: DISPLAY=:188
+[2026-02-05 15:45:11] [INFO] Xvfb 已启动: DISPLAY=:191
+[2026-02-05 15:45:11] [INFO] Xvfb 已启动: DISPLAY=:189
+[2026-02-05 15:45:12] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:45:12] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:45:12] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:45:12] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:45:12] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:45:12] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:45:13] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:45:13] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:45:14] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:45:14] [WARNING] 打开标签页失败: https://www.nti.org/news/introducing-the-winners-of-the-2023-next-generation-for-biosecurity-competition/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-05 15:45:18] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=41009): Max retries exceeded with url: /session/68a6a205d6cef88ee863d884d59d780b/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x700a080c4390>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-05 15:45:18] [INFO] IterAgent 完成: Askar A Kleefeldt, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-05 15:45:18] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:45:19] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:45:19] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:45:19] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:45:19] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:45:20] [WARNING] 打开标签页失败: https://www.repository.cam.ac.uk/items/83967b9a-805d-46cc-8bc2-b0cbdad42b7a, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-05 15:45:23] [INFO] LLM API Async 查询成功: 365 字符
+[2026-02-05 15:45:23] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:45:24] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=57361): Max retries exceeded with url: /session/0fb1bebbd60bc523e57d609e6adc6d61/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ec2609b43d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-05 15:45:24] [INFO] IterAgent 完成: Askar A Kleefeldt, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-05 15:45:24] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:45:24] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:45:24] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:45:25] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:45:25] [INFO] LLM API Async 查询成功: 8 字符
+[2026-02-05 15:45:25] [INFO] 域名预热完成: https://www.nti.org
+[2026-02-05 15:45:27] [WARNING] 打开标签页失败: https://uk.linkedin.com/in/kleefeldt?trk=public_post_feed-actor-name, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-05 15:45:29] [INFO] 域名预热完成: https://www.repository.cam.ac.uk
+[2026-02-05 15:45:31] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=48867): Max retries exceeded with url: /session/c8ba216c9172cd9051311f0180bc3c21/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x793f033790d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-05 15:45:31] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:45:31] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=53833): Max retries exceeded with url: /session/dc8a51b50a04114e09d75c2dae3978eb/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x700a080ecbd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-05 15:45:31] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=53833): Max retries exceeded with url: /session/dc8a51b50a04114e09d75c2dae3978eb/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x700a08104ed0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-05 15:45:31] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:45:34] [INFO] LLM API Async 查询成功: 64 字符
+[2026-02-05 15:45:34] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:45:35] [INFO] LLM API Async 查询成功: 367 字符
+[2026-02-05 15:45:35] [INFO] IterAgent 完成: Askar A Kleefeldt, 迭代 2 轮, 访问 2 页, 收集 1 条信息
+[2026-02-05 15:45:35] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:45:35] [INFO] Xvfb 已停止
+[2026-02-05 15:45:36] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-05 15:45:36] [INFO] IterAgent 开始: Askar A Kleefeldt, URL: https://pubmed.ncbi.nlm.nih.gov/37380776/
+[2026-02-05 15:45:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:45:37] [INFO] Xvfb 已启动: DISPLAY=:178
+[2026-02-05 15:45:37] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:45:37] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:45:38] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:45:38] [INFO] LLM API Async 查询成功: 348 字符
+[2026-02-05 15:45:38] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:45:40] [INFO] LLM API Async 查询成功: 124 字符
+[2026-02-05 15:45:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:45:40] [INFO] LLM API Async 查询成功: 20 字符
+[2026-02-05 15:45:40] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:45:40] [INFO] Xvfb 已停止
+[2026-02-05 15:45:41] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-05 15:45:41] [INFO] IterAgent 开始: Askar A Kleefeldt, URL: https://www2.mrc-lmb.cam.ac.uk/ccsb/2022/08/askar-kleefeldt/
+[2026-02-05 15:45:42] [INFO] Xvfb 已启动: DISPLAY=:145
+[2026-02-05 15:45:42] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:45:43] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:45:43] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:45:45] [INFO] LLM API Async 查询成功: 374 字符
+[2026-02-05 15:45:45] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:45:47] [INFO] LLM API Async 查询成功: 20 字符
+[2026-02-05 15:45:47] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:45:47] [INFO] Xvfb 已停止
+[2026-02-05 15:45:47] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:45:48] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-05 15:45:48] [INFO] IterAgent 开始: Askar A Kleefeldt, URL: https://pubs.acs.org/doi/full/10.1021/acs.biochem.5c00075
+[2026-02-05 15:45:49] [INFO] Xvfb 已启动: DISPLAY=:132
+[2026-02-05 15:45:50] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:45:50] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:45:50] [WARNING] 打开标签页失败: https://www2.mrc-lmb.cam.ac.uk/ccsb/2022/08/askar-kleefeldt/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-05 15:45:50] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:45:52] [INFO] LLM API Async 查询成功: 165 字符
+[2026-02-05 15:45:54] [WARNING] 打开标签页失败: https://www.ncbi.nlm.nih.gov/guide/browsers/#ncbi_accesskeys, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-05 15:45:54] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=36449): Max retries exceeded with url: /session/2d13e8b0e03aadcd939e57ed431ef84e/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d1391828190>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-05 15:45:54] [INFO] IterAgent 完成: Askar A Kleefeldt, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-05 15:45:54] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:45:55] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:45:55] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:45:56] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:45:56] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:45:58] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=33407): Max retries exceeded with url: /session/29b6c36738ed3a09c962ee884e43d6b6/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a5051c0a910>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-05 15:45:58] [INFO] IterAgent 完成: Askar A Kleefeldt, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-02-05 15:45:58] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:45:58] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:45:58] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:45:58] [WARNING] 域名预热失败: https://www2.mrc-lmb.cam.ac.uk, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-05 15:45:58] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=39693): Max retries exceeded with url: /session/f78b8594e1a77b6710a092ac31abe238/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-05 15:45:58] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:45:58] [INFO] Xvfb 已停止
+[2026-02-05 15:45:59] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:45:59] [INFO] LLM API Async 查询成功: 54 字符
+[2026-02-05 15:45:59] [INFO] IterAgent 完成: Askar A Kleefeldt, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-05 15:45:59] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:45:59] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:45:59] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:46:00] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-05 15:46:00] [INFO] IterAgent 开始: Askar A Kleefeldt, URL: https://orcid.org/0000-0002-1067-7782
+[2026-02-05 15:46:00] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:46:01] [WARNING] 域名预热失败: https://pubmed.ncbi.nlm.nih.gov, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-05 15:46:01] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=51439): Max retries exceeded with url: /session/3d785114f93ac01246d1dba4637894e4/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-05 15:46:01] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:46:01] [INFO] Xvfb 已停止
+[2026-02-05 15:46:01] [INFO] Xvfb 已启动: DISPLAY=:190
+[2026-02-05 15:46:01] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:46:01] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:46:02] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:46:02] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-05 15:46:02] [INFO] IterAgent 开始: Askar A Kleefeldt, URL: https://www2.mrc-lmb.cam.ac.uk/ccsb/people-2/
+[2026-02-05 15:46:03] [INFO] Xvfb 已启动: DISPLAY=:199
+[2026-02-05 15:46:04] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:46:04] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:46:04] [WARNING] 打开标签页失败: https://orcid.org/0000-0002-1067-7782, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-05 15:46:04] [INFO] 域名预热完成: https://pubs.acs.org
+[2026-02-05 15:46:04] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:46:08] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=48193): Max retries exceeded with url: /session/98d1d179d07c2b9d55d665594c7bd94b/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74dc6730c0d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-05 15:46:08] [INFO] IterAgent 完成: Askar A Kleefeldt, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-05 15:46:08] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:46:08] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:46:08] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:46:09] [WARNING] 打开标签页失败: https://www2.mrc-lmb.cam.ac.uk/ccsb/people-2/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-05 15:46:09] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:46:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:12] [INFO] LLM API Async 查询成功: 54 字符
+[2026-02-05 15:46:12] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:13] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=41805): Max retries exceeded with url: /session/2f79bd838a56ac6b295b78e252740dd7/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74239040c550>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-05 15:46:13] [INFO] IterAgent 完成: Askar A Kleefeldt, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-05 15:46:13] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:46:13] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:46:13] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:46:13] [INFO] 域名预热完成: https://orcid.org
+[2026-02-05 15:46:14] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:46:14] [INFO] LLM API Async 查询成功: 89 字符
+[2026-02-05 15:46:14] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:16] [INFO] LLM API Async 查询成功: 12 字符
+[2026-02-05 15:46:19] [INFO] 域名预热完成: https://www2.mrc-lmb.cam.ac.uk
+[2026-02-05 15:46:19] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:19] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=42399): Max retries exceeded with url: /session/8e6da2dd617764263daa0b0d6e5e3932/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74dc67317610>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-05 15:46:19] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=42399): Max retries exceeded with url: /session/8e6da2dd617764263daa0b0d6e5e3932/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74dc6735f3d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-05 15:46:19] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:21] [INFO] LLM API Async 查询成功: 54 字符
+[2026-02-05 15:46:21] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:21] [INFO] LLM API Async 查询成功: 62 字符
+[2026-02-05 15:46:21] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:24] [INFO] LLM API Async 查询成功: 112 字符
+[2026-02-05 15:46:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:26] [INFO] LLM API Async 查询成功: 12 字符
+[2026-02-05 15:46:27] [INFO] LLM API Async 查询成功: 376 字符
+[2026-02-05 15:46:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:28] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:29] [INFO] LLM API Async 查询成功: 20 字符
+[2026-02-05 15:46:29] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:46:29] [INFO] Xvfb 已停止
+[2026-02-05 15:46:30] [INFO] LLM API Async 查询成功: 41 字符
+[2026-02-05 15:46:30] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:30] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-05 15:46:30] [INFO] IterAgent 开始: Askar A Kleefeldt, URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC7614783/
+[2026-02-05 15:46:31] [INFO] Xvfb 已启动: DISPLAY=:189
+[2026-02-05 15:46:31] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:46:31] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:46:32] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-05 15:46:32] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:46:32] [INFO] Xvfb 已停止
+[2026-02-05 15:46:32] [INFO] LLM API Async 查询成功: 12 字符
+[2026-02-05 15:46:32] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:46:33] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-05 15:46:33] [INFO] IterAgent 开始: Askar A Kleefeldt, URL: https://orcid.org/0000-0002-8164-2464
+[2026-02-05 15:46:34] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:34] [INFO] Xvfb 已启动: DISPLAY=:187
+[2026-02-05 15:46:34] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:46:34] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:46:35] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:46:37] [INFO] LLM API Async 查询成功: 91 字符
+[2026-02-05 15:46:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:38] [INFO] LLM API Async 查询成功: 12 字符
+[2026-02-05 15:46:38] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:42] [INFO] LLM API Async 查询成功: 91 字符
+[2026-02-05 15:46:42] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:43] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:44] [INFO] LLM API Async 查询成功: 237 字符
+[2026-02-05 15:46:44] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:45] [INFO] LLM API Async 查询成功: 12 字符
+[2026-02-05 15:46:46] [INFO] LLM API Async 查询成功: 152 字符
+[2026-02-05 15:46:46] [INFO] LLM API Async 查询成功: 8 字符
+[2026-02-05 15:46:47] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:46:47] [INFO] Xvfb 已停止
+[2026-02-05 15:46:52] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:54] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:54] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:56] [INFO] LLM API Async 查询成功: 179 字符
+[2026-02-05 15:46:57] [INFO] LLM API Async 查询成功: 178 字符
+[2026-02-05 15:46:57] [INFO] LLM API Async 查询成功: 165 字符
+[2026-02-05 15:46:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:46:58] [INFO] LLM API Async 查询成功: 8 字符
+[2026-02-05 15:47:02] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:47:04] [INFO] LLM API Async 查询成功: 50 字符
+[2026-02-05 15:47:04] [INFO] IterAgent 完成: Askar A Kleefeldt, 迭代 3 轮, 访问 3 页, 收集 0 条信息
+[2026-02-05 15:47:04] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:47:05] [INFO] 等待 Chrome 初始化锁...
+[2026-02-05 15:47:05] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-05 15:47:06] [INFO] 共享 Chrome driver 已创建
+[2026-02-05 15:47:07] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:47:07] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:47:07] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:47:10] [INFO] 域名预热完成: https://orcid.org
+[2026-02-05 15:47:10] [INFO] LLM API Async 查询成功: 163 字符
+[2026-02-05 15:47:10] [INFO] LLM API Async 查询成功: 162 字符
+[2026-02-05 15:47:11] [INFO] LLM API Async 查询成功: 258 字符
+[2026-02-05 15:47:11] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:47:12] [INFO] LLM API Async 查询成功: 8 字符
+[2026-02-05 15:47:12] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:47:17] [INFO] LLM API Async 查询成功: 266 字符
+[2026-02-05 15:47:17] [INFO] IterAgent 完成: Askar A Kleefeldt, 迭代 3 轮, 访问 6 页, 收集 1 条信息
+[2026-02-05 15:47:17] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:47:17] [INFO] Xvfb 已停止
+[2026-02-05 15:47:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:47:20] [INFO] LLM API Async 查询成功: 75 字符
+[2026-02-05 15:47:20] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:48:02] [INFO] LLM API Async 查询成功: 320 字符
+[2026-02-05 15:48:02] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:48:04] [INFO] LLM API Async 查询成功: 41 字符
+[2026-02-05 15:48:11] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:48:13] [INFO] LLM API Async 查询成功: 105 字符
+[2026-02-05 15:48:13] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:48:18] [INFO] LLM API Async 查询成功: 266 字符
+[2026-02-05 15:48:18] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:48:20] [INFO] LLM API Async 查询成功: 20 字符
+[2026-02-05 15:48:25] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:48:28] [INFO] LLM API Async 查询成功: 84 字符
+[2026-02-05 15:48:28] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:48:33] [INFO] LLM API Async 查询成功: 366 字符
+[2026-02-05 15:48:33] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-05 15:48:35] [INFO] LLM API Async 查询成功: 20 字符
+[2026-02-05 15:48:35] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-05 15:48:35] [INFO] Xvfb 已停止

@@ -24,9 +24,18 @@ from org_info.social_media_search import (
     search_person_in_social_media_with_raw as social_search_with_raw,
     SocialMediaLink,
 )
+from utils.org_pipeline_stats import (
+    record_cache_hit as record_stats_cache_hit,
+    record_error as record_stats_error,
+    record_not_found as record_stats_not_found,
+    record_request as record_stats_request,
+    record_success as record_stats_success,
+    record_worker_result as record_stats_worker_result,
+)
 
 # 复用已有 worker
 WORKER_SCRIPT = Path(__file__).parent / "_worker.py"
+PIPELINE_TYPE = "social_media"
 
 
 @dataclass
@@ -138,6 +147,7 @@ class SocialMediaPipelineSubprocess:
         google_scholar_url: Optional[str] = None,
     ) -> PipelineResult:
         start_time = time.time()
+        record_stats_request(PIPELINE_TYPE)
 
         if self.verbose:
             print("=" * 60)
@@ -148,12 +158,36 @@ class SocialMediaPipelineSubprocess:
         if self.verbose:
             print(f"\n[Step 1] 搜索 {person_name} + {organization or 'N/A'} 的社交媒体链接...")
 
-        links, social_raw = social_search_with_raw(
-            person_name,
-            organization,
-            max_results=self.max_links,
-            google_scholar_url=google_scholar_url,
-        )
+        try:
+            links, social_raw = social_search_with_raw(
+                person_name,
+                organization,
+                max_results=self.max_links,
+                google_scholar_url=google_scholar_url,
+            )
+        except Exception:
+            record_stats_error(PIPELINE_TYPE)
+            raise
+
+        if social_raw.get("from_cache"):
+            record_stats_cache_hit(PIPELINE_TYPE)
+
+        if social_raw.get("success") is False:
+            record_stats_error(PIPELINE_TYPE)
+            merged = self._merge_reports([], person_name)
+            merged += "\n---\n## Social Media Search 原始内容\n\n"
+            merged += "```json\n"
+            merged += json.dumps(social_raw, ensure_ascii=True, indent=2)
+            merged += "\n```\n"
+            return PipelineResult(
+                person_name=person_name,
+                organization=organization,
+                links_found=0,
+                links_processed=0,
+                success_count=0,
+                merged_report=merged,
+                social_search_raw=social_raw,
+            )
 
         if self.verbose:
             print(f"  找到 {len(links)} 个链接")
@@ -161,6 +195,7 @@ class SocialMediaPipelineSubprocess:
                 print(f"    {i+1}. {link.url[:60]}...")
 
         if not links:
+            record_stats_not_found(PIPELINE_TYPE, links_found=0, links_processed=0)
             merged = self._merge_reports([], person_name)
             merged += "\n---\n## Social Media Search 原始内容\n\n"
             merged += "```json\n"
@@ -207,6 +242,13 @@ class SocialMediaPipelineSubprocess:
 
         # 3. 合并结果
         success_results = [r for r in results if r.success]
+        for result in results:
+            record_stats_worker_result(
+                PIPELINE_TYPE,
+                success=result.success,
+                mode=result.mode,
+                error=result.error,
+            )
         reports = [r.report for r in success_results if r.report]
         merged = self._merge_reports(reports, person_name)
         merged += "\n---\n## Social Media Search 原始内容\n\n"
@@ -215,6 +257,19 @@ class SocialMediaPipelineSubprocess:
         merged += "\n```\n"
 
         elapsed = time.time() - start_time
+        if success_results:
+            record_stats_success(
+                PIPELINE_TYPE,
+                links_found=len(links),
+                links_processed=len(results),
+                worker_success=len(success_results),
+            )
+        else:
+            record_stats_not_found(
+                PIPELINE_TYPE,
+                links_found=len(links),
+                links_processed=len(results),
+            )
         if self.verbose:
             print(f"\n[完成] 成功: {len(success_results)}/{len(results)}, 耗时: {elapsed:.1f}s")
 

@@ -10,6 +10,8 @@ os.environ["UC_CACHE_DIR"] = f"/tmp/uc_cache_{os.getpid()}"
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+from localdb.deepsearch_cache import get_page_analysis_cache
+
 def run_task(url: str, person_name: str, verbose: bool):
     """运行单个任务"""
     result = {
@@ -20,6 +22,16 @@ def run_task(url: str, person_name: str, verbose: bool):
         "info_count": 0,
         "error": None,
     }
+    page_cache = get_page_analysis_cache()
+
+    cached = page_cache.get_result(url, person_name)
+    if cached and isinstance(cached.get("result"), dict):
+        if verbose:
+            print(
+                f"[Worker {os.getpid()}] [CACHE HIT] {url[:50]}...",
+                file=sys.stderr,
+            )
+        return cached["result"]
     
     try:
         # 先尝试 iter_agent
@@ -48,6 +60,7 @@ def run_task(url: str, person_name: str, verbose: bool):
                 result["mode"] = "iter_agent"
                 result["report"] = res.final_report
                 result["info_count"] = len(res.collected_info)
+                page_cache.set_result(url, person_name, result)
                 close_shared_driver()
                 return result
         except Exception as e:
@@ -103,6 +116,7 @@ def run_task(url: str, person_name: str, verbose: bool):
                 result["mode"] = "brain"
                 result["report"] = res.collected_info
                 result["info_count"] = 1
+                page_cache.set_result(url, person_name, result)
             else:
                 result["error"] = res.final_reason
                 if verbose:

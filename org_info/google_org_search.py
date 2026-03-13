@@ -43,6 +43,7 @@ except ImportError:
 CACHE_COLLECTION = "person_relevant_link"
 # 缓存过期时间：6个月 = 6 * 30 * 24 * 60 * 60 秒
 CACHE_TTL_SECONDS = 6 * 30 * 24 * 60 * 60  # 15552000 秒
+ORG_CACHE_VERSION = "v4_no_quotes"
 
 
 @dataclass
@@ -201,6 +202,8 @@ class GoogleOrgSearch:
             org_data = value.get("organization")
             if not org_data:
                 return None
+            if org_data.get("cache_version") != ORG_CACHE_VERSION:
+                return None
             
             # 检查 organization 数据是否过期
             expire_at = org_data.get("expire_at")
@@ -277,6 +280,7 @@ class GoogleOrgSearch:
             from datetime import timedelta
             # organization 字段数据（包含链接列表和过期时间）
             org_data = {
+                "cache_version": ORG_CACHE_VERSION,
                 "links": links_data,
                 "source_organization": organization,  # 记录搜索时使用的组织名
                 "google_scholar_url": google_scholar_url,
@@ -347,9 +351,9 @@ class GoogleOrgSearch:
         
         # 构建搜索查询
         if site_restrict:
-            query = f'site:{site_restrict} "{person_name}"'
+            query = f"site:{site_restrict} {person_name}"
         else:
-            query = f'"{person_name}" "{organization}"'
+            query = f"{person_name} {organization}"
         
         if self.verbose:
             print(f"[DEBUG] 查询: {query}")
@@ -374,9 +378,6 @@ class GoogleOrgSearch:
             link = self._parse_search_result(item, person_name, organization)
             if link:
                 links.append(link)
-        
-        # 按相关性排序
-        links.sort(key=lambda x: x.relevance_score, reverse=True)
         
         if self.verbose:
             print(f"[INFO] 找到 {len(links)} 个相关链接")
@@ -406,9 +407,9 @@ class GoogleOrgSearch:
 
         # 构建搜索查询
         if site_restrict:
-            query = f'site:{site_restrict} "{person_name}"'
+            query = f"site:{site_restrict} {person_name}"
         else:
-            query = f'"{person_name}" "{organization}"'
+            query = f"{person_name} {organization}"
 
         # 检查缓存（除非强制刷新）
         if self.use_cache and not force_refresh:
@@ -480,9 +481,6 @@ class GoogleOrgSearch:
             if link:
                 links.append(link)
 
-        # 按相关性排序
-        links.sort(key=lambda x: x.relevance_score, reverse=True)
-
         if self.verbose:
             print(f"[INFO] 找到 {len(links)} 个相关链接")
         logger.info(f"搜索完成: {person_name} @ {organization}, 找到 {len(links)} 个链接")
@@ -526,10 +524,10 @@ class GoogleOrgSearch:
         
         # 策略1: 基本搜索
         queries = [
-            f'"{person_name}" "{organization}"',
-            f'"{person_name}" {organization} profile',
-            f'"{person_name}" {organization} faculty',
-            f'"{person_name}" site:{self._guess_domain(organization)}' if self._guess_domain(organization) else None,
+            f"{person_name} {organization}",
+            f"{person_name} {organization} profile",
+            f"{person_name} {organization} faculty",
+            f"{person_name} site:{self._guess_domain(organization)}" if self._guess_domain(organization) else None,
         ]
         
         for query in queries:
@@ -556,8 +554,6 @@ class GoogleOrgSearch:
                     all_links.append(link)
         
         # 按相关性排序
-        all_links.sort(key=lambda x: x.relevance_score, reverse=True)
-        
         if self.verbose:
             print(f"[INFO] 共找到 {len(all_links)} 个不重复链接")
         logger.info(f"多策略搜索完成: {person_name} @ {organization}, 找到 {len(all_links)} 个链接")
@@ -604,18 +600,13 @@ class GoogleOrgSearch:
         # 判断链接类型
         link_type = self._classify_link_type(url, title)
         
-        # 计算相关性评分
-        relevance_score = self._calculate_relevance(
-            url, title, snippet, person_name, organization
-        )
-        
         return OrgPersonLink(
             title=title,
             url=url,
             domain=domain,
             snippet=snippet,
             link_type=link_type,
-            relevance_score=relevance_score,
+            relevance_score=0.0,
         )
     
     def _classify_link_type(self, url: str, title: str) -> str:
@@ -643,56 +634,6 @@ class GoogleOrgSearch:
             return 'research'
         
         return 'other'
-    
-    def _calculate_relevance(
-        self,
-        url: str,
-        title: str,
-        snippet: str,
-        person_name: str,
-        organization: str,
-    ) -> float:
-        """
-        计算相关性评分
-        
-        Args:
-            url: 页面 URL
-            title: 页面标题
-            snippet: 页面摘要
-            person_name: 人员名字
-            organization: 组织名称
-            
-        Returns:
-            相关性评分 (0-1)
-        """
-        score = 0.0
-        
-        # 名字出现在标题中 (+0.3)
-        if person_name.lower() in title.lower():
-            score += 0.3
-        
-        # 名字出现在 URL 中 (+0.2)
-        name_parts = person_name.lower().split()
-        url_lower = url.lower()
-        if any(part in url_lower for part in name_parts if len(part) > 2):
-            score += 0.2
-        
-        # 组织名出现在域名中 (+0.2)
-        org_parts = organization.lower().split()
-        if any(part in url_lower for part in org_parts if len(part) > 2):
-            score += 0.2
-        
-        # 是个人页面类型 (+0.2)
-        for pattern in self.PROFILE_PATTERNS:
-            if re.search(pattern, url_lower):
-                score += 0.2
-                break
-        
-        # 摘要中包含名字 (+0.1)
-        if person_name.lower() in snippet.lower():
-            score += 0.1
-        
-        return min(score, 1.0)
     
     def _guess_domain(self, organization: str) -> Optional[str]:
         """

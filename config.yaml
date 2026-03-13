@@ -59,7 +59,7 @@ llm:
   
   # 云端 API 配置（OpenAI 兼容格式）
   api:
-    api_key: "sk-zk200fee8578937a24d5206025c1500aaa368ff3f37ca32c"  # 填入你的 API Key
+    api_key: "sk-zk2bf37cb0da785f5ed7d2526b717bb43f969b3bc585d0d6"  # 填入你的 API Key
     api_base: "https://api.zhizengzeng.com/v1"  # 或其他兼容的 API
     model: "gpt-4o-mini"
     timeout: 120  # 超时时间（秒）
@@ -110,7 +110,7 @@ person_pipeline:
   # LLM 后端选择: "api" | "local" | "auto"
   backend: "api"
   # LLM 模型名称（仅在 api/local 对应后端时生效）
-  model: "gpt-5.2"
+  model: "gpt-5.4"
   # 最大迭代次数
   max_iterations: 1
   # 最大处理链接数

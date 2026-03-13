@@ -38,6 +38,7 @@ except ImportError:
 # ============ 缓存配置 ============
 CACHE_COLLECTION = "person_relevant_link"
 CACHE_TTL_SECONDS = 6 * 30 * 24 * 60 * 60  # 6个月
+SOCIAL_MEDIA_CACHE_VERSION = "v4_no_quotes"
 
 
 @dataclass
@@ -138,6 +139,8 @@ class SocialMediaSearch:
             sm_data = value.get("social_media")
             if not sm_data:
                 return None
+            if sm_data.get("cache_version") != SOCIAL_MEDIA_CACHE_VERSION:
+                return None
             if sm_data.get("query") != query:
                 return None
 
@@ -186,6 +189,7 @@ class SocialMediaSearch:
             links_data = [asdict(link) for link in links]
             from datetime import timedelta
             sm_data = {
+                "cache_version": SOCIAL_MEDIA_CACHE_VERSION,
                 "query": query,
                 "links": links_data,
                 "source_organization": organization,
@@ -223,7 +227,7 @@ class SocialMediaSearch:
     def _build_query(self, person_name: str, organization: str) -> str:
         # name + org + social media 关键词
         domains = " OR ".join([f"site:{d}" for d in self.SOCIAL_DOMAINS])
-        return f'"{person_name}" "{organization}" (social media OR {domains})'
+        return f"{person_name} {organization} (social media OR {domains})"
 
     def search_person_in_social_media(
         self,
@@ -268,7 +272,6 @@ class SocialMediaSearch:
             if link:
                 links.append(link)
 
-        links.sort(key=lambda x: x.relevance_score, reverse=True)
         if self.verbose:
             print(f"[INFO] 找到 {len(links)} 个相关链接")
         logger.info(f"社交媒体搜索完成: {person_name} @ {organization}, 找到 {len(links)} 个链接")
@@ -362,7 +365,6 @@ class SocialMediaSearch:
             if link:
                 links.append(link)
 
-        links.sort(key=lambda x: x.relevance_score, reverse=True)
         if self.verbose:
             print(f"[INFO] 找到 {len(links)} 个相关链接")
         logger.info(f"社交媒体搜索完成: {person_name} @ {organization}, 找到 {len(links)} 个链接")
@@ -393,15 +395,13 @@ class SocialMediaSearch:
             domain = ""
 
         platform = self._classify_platform(domain)
-        relevance_score = self._calculate_relevance(url, title, snippet, person_name, organization)
-
         return SocialMediaLink(
             title=title,
             url=url,
             domain=domain,
             snippet=snippet,
             platform=platform,
-            relevance_score=relevance_score,
+            relevance_score=0.0,
         )
 
     def _classify_platform(self, domain: str) -> str:
@@ -422,31 +422,6 @@ class SocialMediaSearch:
         if "scopus.com" in domain:
             return "scopus"
         return "other"
-
-    def _calculate_relevance(
-        self,
-        url: str,
-        title: str,
-        snippet: str,
-        person_name: str,
-        organization: str,
-    ) -> float:
-        score = 0.0
-        if person_name.lower() in title.lower():
-            score += 0.3
-        name_parts = person_name.lower().split()
-        url_lower = url.lower()
-        if any(part in url_lower for part in name_parts if len(part) > 2):
-            score += 0.2
-        org_parts = organization.lower().split()
-        if any(part in url_lower for part in org_parts if len(part) > 2):
-            score += 0.2
-        if person_name.lower() in snippet.lower():
-            score += 0.2
-        if any(domain in url_lower for domain in self.SOCIAL_DOMAINS):
-            score += 0.1
-        return min(score, 1.0)
-
 
 # ============ 便捷函数 ============
 

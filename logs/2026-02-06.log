@@ -1,0 +1,1565 @@
+[2026-02-06 13:18:27] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:18:27] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=QPD9ztMAAAAJ&hl=en
+[2026-02-06 13:18:27] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:18:27] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=_rVi7FUAAAAJ&hl=en
+[2026-02-06 13:18:27] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:18:27] [INFO] IterAgent 开始: Gregory B. Martin, URL: http://scholar.google.com/citations?user=9irBJmUAAAAJ&hl=zh-CN
+[2026-02-06 13:18:28] [INFO] Xvfb 已启动: DISPLAY=:180
+[2026-02-06 13:18:28] [INFO] Xvfb 已启动: DISPLAY=:177
+[2026-02-06 13:18:28] [INFO] Xvfb 已启动: DISPLAY=:179
+[2026-02-06 13:18:28] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:18:28] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:18:28] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:18:28] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:18:30] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:18:30] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:18:31] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:18:31] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:18:32] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:18:32] [WARNING] 打开标签页失败: http://scholar.google.com/citations?user=9irBJmUAAAAJ&hl=zh-CN, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:18:33] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=QPD9ztMAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:18:36] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=37351): Max retries exceeded with url: /session/e1507af085c9e189661a1a2a9f343ca7/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x714b54b18510>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:18:36] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:18:36] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:18:37] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:18:37] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:18:37] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:18:37] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=58427): Max retries exceeded with url: /session/dbc4f0d625287351869d68901c384cda/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x795e0e1f0510>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:18:37] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:18:38] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:18:38] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:18:38] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:18:39] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:18:39] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:18:41] [INFO] 域名预热完成: http://scholar.google.com
+[2026-02-06 13:18:43] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:18:43] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:18:43] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:18:43] [INFO] Xvfb 已停止
+[2026-02-06 13:18:45] [INFO] LLM API Async 查询成功: 508 字符
+[2026-02-06 13:18:45] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:18:45] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:18:45] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=H05SmSsAAAAJ&hl=en
+[2026-02-06 13:18:46] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:18:46] [INFO] IterAgent 开始: Gregory B. Martin, URL: http://scholar.google.com/citations?user=9irBJmUAAAAJ&hl=zh-CN
+[2026-02-06 13:18:46] [INFO] Xvfb 已启动: DISPLAY=:157
+[2026-02-06 13:18:46] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:18:46] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=_rVi7FUAAAAJ&hl=en
+[2026-02-06 13:18:46] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:18:46] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=QPD9ztMAAAAJ&hl=en
+[2026-02-06 13:18:46] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:18:46] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:18:47] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:18:47] [INFO] Xvfb 已启动: DISPLAY=:185
+[2026-02-06 13:18:47] [INFO] LLM API Async 查询成功: 8 字符
+[2026-02-06 13:18:47] [INFO] Xvfb 已启动: DISPLAY=:184
+[2026-02-06 13:18:47] [INFO] Xvfb 已启动: DISPLAY=:186
+[2026-02-06 13:18:47] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:18:47] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:18:47] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:18:47] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:18:48] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:18:48] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:18:48] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=H05SmSsAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:18:49] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:18:49] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:18:49] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:18:50] [WARNING] 打开标签页失败: http://scholar.google.com/citations?user=9irBJmUAAAAJ&hl=zh-CN, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:18:51] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=_rVi7FUAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:18:51] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=45143): Max retries exceeded with url: /session/7f9b2b8fdb50918fee31933f91b222bc/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x795e0e1fc710>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:18:51] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=45143): Max retries exceeded with url: /session/7f9b2b8fdb50918fee31933f91b222bc/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x795e0e1f3c90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:18:51] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:18:52] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=57299): Max retries exceeded with url: /session/e9b27e345f821bc9994e580b4143c9f2/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x70e5e96ec290>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:18:52] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:18:52] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:18:52] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:18:53] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:18:53] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:18:53] [INFO] LLM API Async 查询成功: 56 字符
+[2026-02-06 13:18:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:18:54] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:18:54] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=58601): Max retries exceeded with url: /session/a0c7f23ce8e450add1e344031d3ebd7e/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72379bda4150>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:18:54] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:18:54] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:18:54] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:18:54] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:18:55] [INFO] LLM API Async 查询成功: 50 字符
+[2026-02-06 13:18:55] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:18:55] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=45971): Max retries exceeded with url: /session/fe33d5568e8b37329c5539155e0c73d2/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7c8f4f814150>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:18:55] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:18:55] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:18:55] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:18:55] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=QPD9ztMAAAAJ&hl=en
+[2026-02-06 13:18:55] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:18:55] [INFO] IterAgent 开始: Gregory B. Martin, URL: http://scholar.google.com/citations?user=9irBJmUAAAAJ&hl=zh-CN
+[2026-02-06 13:18:55] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:18:55] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=_rVi7FUAAAAJ&hl=en
+[2026-02-06 13:18:55] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:18:55] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:18:55] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:18:56] [INFO] Xvfb 已启动: DISPLAY=:191
+[2026-02-06 13:18:56] [INFO] Xvfb 已启动: DISPLAY=:192
+[2026-02-06 13:18:56] [INFO] Xvfb 已启动: DISPLAY=:189
+[2026-02-06 13:18:56] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:18:56] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:18:56] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:18:57] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:18:57] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:18:57] [INFO] LLM API Async 查询成功: 292 字符
+[2026-02-06 13:18:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:18:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:18:58] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:18:58] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:18:58] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:18:59] [INFO] 域名预热完成: http://scholar.google.com
+[2026-02-06 13:18:59] [INFO] LLM API Async 查询成功: 41 字符
+[2026-02-06 13:18:59] [ERROR] 执行失败: search, HTTPConnectionPool(host='localhost', port=45143): Max retries exceeded with url: /session/7f9b2b8fdb50918fee31933f91b222bc/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection obje
+[2026-02-06 13:18:59] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=45143): Max retries exceeded with url: /session/7f9b2b8fdb50918fee31933f91b222bc/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x795e0d30e750>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:18:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:18:59] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:18:59] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:00] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:00] [INFO] LLM API Async 查询成功: 462 字符
+[2026-02-06 13:19:00] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 2 轮, 访问 2 页, 收集 1 条信息
+[2026-02-06 13:19:00] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:00] [INFO] Xvfb 已停止
+[2026-02-06 13:19:00] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:00] [INFO] Xvfb 已停止
+[2026-02-06 13:19:00] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=QPD9ztMAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:00] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:00] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:01] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:01] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=7_dVIeAAAAAJ&hl=en
+[2026-02-06 13:19:01] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:01] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=0UQwtDEAAAAJ&hl=en
+[2026-02-06 13:19:01] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:01] [INFO] LLM API Async 查询成功: 20 字符
+[2026-02-06 13:19:01] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:01] [INFO] Xvfb 已停止
+[2026-02-06 13:19:01] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:01] [INFO] Xvfb 已停止
+[2026-02-06 13:19:02] [WARNING] 打开标签页失败: http://scholar.google.com/citations?user=9irBJmUAAAAJ&hl=zh-CN, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:02] [INFO] Xvfb 已启动: DISPLAY=:104
+[2026-02-06 13:19:02] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:02] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:02] [INFO] LLM API Async 查询成功: 369 字符
+[2026-02-06 13:19:02] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:19:02] [INFO] Xvfb 已启动: DISPLAY=:160
+[2026-02-06 13:19:02] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:03] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:03] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=_rVi7FUAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:03] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:03] [INFO] Xvfb 已停止
+[2026-02-06 13:19:03] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:03] [INFO] IterAgent 开始: Gregory B. Martin, URL: http://scholar.google.com/citations?user=mEvxfi8AAAAJ&hl=zh-CN
+[2026-02-06 13:19:03] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:03] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=H05SmSsAAAAJ&hl=en
+[2026-02-06 13:19:03] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:03] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:04] [INFO] LLM API Async 查询成功: 8 字符
+[2026-02-06 13:19:04] [INFO] Xvfb 已启动: DISPLAY=:187
+[2026-02-06 13:19:04] [INFO] Xvfb 已启动: DISPLAY=:188
+[2026-02-06 13:19:04] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:04] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=50249): Max retries exceeded with url: /session/4e4c50dc6e6e2a52db9370d1f197a3ee/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x715d3cef8250>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:04] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:04] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:04] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=7_dVIeAAAAAJ&hl=en
+[2026-02-06 13:19:04] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:04] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:04] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:04] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:05] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:05] [INFO] Xvfb 已启动: DISPLAY=:190
+[2026-02-06 13:19:05] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:06] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=0UQwtDEAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:06] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=56423): Max retries exceeded with url: /session/e527904e0d2759309ae404d585169c5f/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7644c4ec4090>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:06] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:06] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=7_dVIeAAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:06] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:06] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:06] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:06] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:07] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=47321): Max retries exceeded with url: /session/caa31b20cd14e7f0d020eaa98d9ec609/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ee9a2ba0050>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:07] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:07] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:07] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:07] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:07] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:08] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:08] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:08] [WARNING] 打开标签页失败: http://scholar.google.com/citations?user=mEvxfi8AAAAJ&hl=zh-CN, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:08] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:08] [INFO] Xvfb 已停止
+[2026-02-06 13:19:09] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:09] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:09] [INFO] Xvfb 已启动: DISPLAY=:191
+[2026-02-06 13:19:09] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=H05SmSsAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:09] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:10] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=59039): Max retries exceeded with url: /session/1d8345b56bf44c0d7904413c31baabbd/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x70cb0b950550>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:10] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:10] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:10] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=39425): Max retries exceeded with url: /session/7ebbba9744067d53a3f69b1d4f4b6b97/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x796ae30501d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:10] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:10] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:10] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:10] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:10] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:10] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:11] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:19:11] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:11] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:11] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=7_dVIeAAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:12] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=41357): Max retries exceeded with url: /session/30da330544bcfd8f82f538a15f79bf26/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78303d174290>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:12] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:12] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:12] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:13] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:13] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=43729): Max retries exceeded with url: /session/8f80ec26b8c8da9e3fb11003a3dcb746/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77800d710390>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:13] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:13] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:14] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:14] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:14] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:15] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:15] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:15] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:15] [INFO] LLM API Async 查询成功: 493 字符
+[2026-02-06 13:19:15] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:19:15] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=38057): Max retries exceeded with url: /session/88e0d1785e4183ee00dbbcfc5155867e/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x791dc5394190>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:15] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:16] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:16] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:16] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:17] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:17] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:18] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:18] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:18] [INFO] Xvfb 已停止
+[2026-02-06 13:19:18] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:18] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:18] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:18] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:18] [INFO] Xvfb 已停止
+[2026-02-06 13:19:18] [INFO] LLM API Async 查询成功: 8 字符
+[2026-02-06 13:19:19] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:19] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:19] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:19] [INFO] Xvfb 已停止
+[2026-02-06 13:19:19] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:19] [INFO] IterAgent 开始: Gregory B. Martin, URL: http://scholar.google.com/citations?user=9irBJmUAAAAJ&hl=zh-CN
+[2026-02-06 13:19:19] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:19] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=_rVi7FUAAAAJ&hl=en
+[2026-02-06 13:19:19] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:19] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=QPD9ztMAAAAJ&hl=en
+[2026-02-06 13:19:19] [INFO] Xvfb 已启动: DISPLAY=:188
+[2026-02-06 13:19:19] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:19] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=H05SmSsAAAAJ&hl=en
+[2026-02-06 13:19:19] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:20] [INFO] Xvfb 已启动: DISPLAY=:123
+[2026-02-06 13:19:20] [INFO] Xvfb 已启动: DISPLAY=:120
+[2026-02-06 13:19:20] [INFO] Xvfb 已启动: DISPLAY=:124
+[2026-02-06 13:19:20] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:20] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:20] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:20] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:20] [INFO] Xvfb 已启动: DISPLAY=:132
+[2026-02-06 13:19:20] [INFO] Xvfb 已停止
+[2026-02-06 13:19:20] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:20] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:20] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:20] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:20] [INFO] 域名预热完成: http://scholar.google.com
+[2026-02-06 13:19:21] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:21] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=7_dVIeAAAAAJ&hl=en
+[2026-02-06 13:19:21] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:21] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:21] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:21] [INFO] Xvfb 已停止
+[2026-02-06 13:19:21] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:22] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:22] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=HdBPwJ8AAAAJ&hl=zh-CN
+[2026-02-06 13:19:22] [INFO] Xvfb 已启动: DISPLAY=:135
+[2026-02-06 13:19:22] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:22] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:22] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:22] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:22] [INFO] Xvfb 已停止
+[2026-02-06 13:19:22] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:22] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:22] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=AapWu6EAAAAJ&hl=en
+[2026-02-06 13:19:23] [INFO] Xvfb 已启动: DISPLAY=:101
+[2026-02-06 13:19:23] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:23] [INFO] Xvfb 已启动: DISPLAY=:156
+[2026-02-06 13:19:24] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:24] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=TwWS_k8AAAAJ&hl=zh-CN
+[2026-02-06 13:19:24] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:19:24] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:24] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=_rVi7FUAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:25] [INFO] Xvfb 已启动: DISPLAY=:173
+[2026-02-06 13:19:25] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:25] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:25] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:25] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:26] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:26] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:26] [INFO] LLM API Async 查询成功: 50 字符
+[2026-02-06 13:19:26] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:19:26] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:26] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:26] [INFO] Xvfb 已停止
+[2026-02-06 13:19:27] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:27] [WARNING] 打开标签页失败: http://scholar.google.com/citations?user=9irBJmUAAAAJ&hl=zh-CN, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:27] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:27] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:27] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:27] [INFO] Xvfb 已停止
+[2026-02-06 13:19:28] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:28] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:28] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:28] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=0UQwtDEAAAAJ&hl=en
+[2026-02-06 13:19:28] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=36925): Max retries exceeded with url: /session/0c3dd9acec8bc77babe94f5232063cd7/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ed0888d8310>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:28] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:28] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:28] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:28] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=QPD9ztMAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:29] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:29] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:29] [INFO] Xvfb 已启动: DISPLAY=:198
+[2026-02-06 13:19:29] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:29] [INFO] IterAgent 开始: Gregory B. Martin, URL: http://scholar.google.com/citations?user=mEvxfi8AAAAJ&hl=zh-CN
+[2026-02-06 13:19:29] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:29] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=H05SmSsAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:30] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:30] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:30] [INFO] Xvfb 已启动: DISPLAY=:183
+[2026-02-06 13:19:30] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=7_dVIeAAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:30] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:30] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:30] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:31] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=35723): Max retries exceeded with url: /session/0637c248760dfc55017bcfef07179af2/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7bd8e7eb0350>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:31] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:31] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=HdBPwJ8AAAAJ&hl=zh-CN, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:31] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:31] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:31] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:31] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:32] [INFO] LLM API Async 查询成功: 429 字符
+[2026-02-06 13:19:32] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 3 轮, 访问 3 页, 收集 2 条信息
+[2026-02-06 13:19:32] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:32] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=AapWu6EAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:32] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:32] [INFO] Xvfb 已停止
+[2026-02-06 13:19:32] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:32] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=52857): Max retries exceeded with url: /session/cba4ed2a0f7229586b427cfaea622487/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7db0057000d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:32] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:32] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:33] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:33] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=TwWS_k8AAAAJ&hl=zh-CN, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:33] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:33] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:33] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:33] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=HdBPwJ8AAAAJ&hl=zh-CN
+[2026-02-06 13:19:33] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=0UQwtDEAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:33] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=47599): Max retries exceeded with url: /session/0beb8f257713c45c5eb24d51763b65aa/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73f75a368050>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:33] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:34] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:34] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:34] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:34] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:34] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:34] [INFO] Xvfb 已停止
+[2026-02-06 13:19:34] [INFO] Xvfb 已启动: DISPLAY=:119
+[2026-02-06 13:19:34] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=58167): Max retries exceeded with url: /session/2f71d0b70ea4bb72950953e00024e800/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x709093c203d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:34] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:34] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:34] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:34] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:35] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:35] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:35] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:35] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:35] [INFO] Xvfb 已停止
+[2026-02-06 13:19:35] [INFO] Xvfb 已启动: DISPLAY=:123
+[2026-02-06 13:19:35] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=35937): Max retries exceeded with url: /session/bce2e2820789184790c8818750af9112/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72533534c210>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:35] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:35] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:35] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:35] [WARNING] 打开标签页失败: http://scholar.google.com/citations?user=mEvxfi8AAAAJ&hl=zh-CN, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:35] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:36] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:36] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:36] [INFO] Xvfb 已启动: DISPLAY=:124
+[2026-02-06 13:19:36] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=57791): Max retries exceeded with url: /session/b5f9962bc6a60a7ddff8228979bab7fa/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x721e1db14490>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:36] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:36] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:36] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:36] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:36] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:36] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:37] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=33643): Max retries exceeded with url: /session/d4a4637e4685bf190e551c87e874c518/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75edb04e0250>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:37] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:37] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:37] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:37] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:37] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:37] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:37] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:37] [INFO] Xvfb 已停止
+[2026-02-06 13:19:37] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=47181): Max retries exceeded with url: /session/40c8dc47c524ab5b528a21f77e1442ad/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7919e01200d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:37] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:37] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:38] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:38] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:38] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:39] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=HdBPwJ8AAAAJ&hl=zh-CN, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:39] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:39] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=H05SmSsAAAAJ&hl=en
+[2026-02-06 13:19:39] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:39] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:39] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:39] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=58785): Max retries exceeded with url: /session/e534e73979c09911e13ac0603cad3dae/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x778d90080250>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:39] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:39] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:40] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:40] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:40] [INFO] Xvfb 已启动: DISPLAY=:185
+[2026-02-06 13:19:40] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:40] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:41] [WARNING] 域名预热失败: http://scholar.google.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:41] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=51225): Max retries exceeded with url: /session/f841b452ef3a4fc92bfcd3e337b3a801/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:19:41] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:41] [INFO] Xvfb 已停止
+[2026-02-06 13:19:41] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:41] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:41] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:42] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:42] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:42] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:42] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:42] [INFO] Xvfb 已停止
+[2026-02-06 13:19:42] [INFO] 域名预热完成: http://scholar.google.com
+[2026-02-06 13:19:42] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:42] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=0UQwtDEAAAAJ&hl=en
+[2026-02-06 13:19:42] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:43] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:43] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:43] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:43] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=46591): Max retries exceeded with url: /session/6d4b79c01154c3234bdd184f419cac1e/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x704336fe8350>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:43] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:43] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:43] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:43] [INFO] Xvfb 已停止
+[2026-02-06 13:19:43] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:43] [INFO] Xvfb 已启动: DISPLAY=:100
+[2026-02-06 13:19:43] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:43] [INFO] Xvfb 已停止
+[2026-02-06 13:19:43] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:43] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:43] [INFO] IterAgent 开始: Gregory B. Martin, URL: http://scholar.google.com/citations?user=mEvxfi8AAAAJ&hl=zh-CN
+[2026-02-06 13:19:43] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:43] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:43] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:43] [INFO] Xvfb 已停止
+[2026-02-06 13:19:44] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:44] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:44] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:44] [INFO] Xvfb 已启动: DISPLAY=:198
+[2026-02-06 13:19:44] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:44] [INFO] Xvfb 已启动: DISPLAY=:172
+[2026-02-06 13:19:44] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:44] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:45] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:45] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:45] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:45] [INFO] Xvfb 已停止
+[2026-02-06 13:19:45] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:45] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:45] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=HdBPwJ8AAAAJ&hl=zh-CN
+[2026-02-06 13:19:45] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:45] [INFO] Xvfb 已停止
+[2026-02-06 13:19:45] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:45] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=7_dVIeAAAAAJ&hl=en
+[2026-02-06 13:19:45] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:45] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:45] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:46] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:46] [INFO] Xvfb 已启动: DISPLAY=:106
+[2026-02-06 13:19:46] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:46] [INFO] Xvfb 已停止
+[2026-02-06 13:19:46] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:46] [INFO] Xvfb 已启动: DISPLAY=:110
+[2026-02-06 13:19:46] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:46] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:47] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:47] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=H05SmSsAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:47] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:47] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=0UQwtDEAAAAJ&hl=en
+[2026-02-06 13:19:47] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:47] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:47] [INFO] 域名预热完成: http://scholar.google.com
+[2026-02-06 13:19:48] [INFO] Xvfb 已启动: DISPLAY=:148
+[2026-02-06 13:19:48] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:48] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:48] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:48] [INFO] Xvfb 已停止
+[2026-02-06 13:19:48] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:48] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:49] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=0UQwtDEAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:49] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:49] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:49] [WARNING] 打开标签页失败: http://scholar.google.com/citations?user=mEvxfi8AAAAJ&hl=zh-CN, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:49] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:50] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:50] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:50] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:50] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:50] [INFO] Xvfb 已停止
+[2026-02-06 13:19:50] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:51] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=44359): Max retries exceeded with url: /session/eb8503c62e63c4589b9c2429152599ce/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x770e47c604d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:51] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:51] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:51] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:51] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=HdBPwJ8AAAAJ&hl=zh-CN, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:51] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:51] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=AapWu6EAAAAJ&hl=en
+[2026-02-06 13:19:51] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:51] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:52] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:52] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:52] [INFO] Xvfb 已停止
+[2026-02-06 13:19:52] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=7_dVIeAAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:52] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:52] [INFO] Xvfb 已启动: DISPLAY=:113
+[2026-02-06 13:19:53] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=51771): Max retries exceeded with url: /session/9e374025b229aedc17728cad7ae74550/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a9067a80090>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:53] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:53] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:53] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:53] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:53] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=0UQwtDEAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:53] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:53] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:53] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:53] [INFO] Xvfb 已停止
+[2026-02-06 13:19:53] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=50951): Max retries exceeded with url: /session/0d530e909caf642c7db0709c6009207b/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dc6017880d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:53] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:53] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:53] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:53] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=TwWS_k8AAAAJ&hl=zh-CN
+[2026-02-06 13:19:53] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:54] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:54] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:54] [INFO] Xvfb 已启动: DISPLAY=:112
+[2026-02-06 13:19:54] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:54] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:54] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:55] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:55] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:55] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:55] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=46539): Max retries exceeded with url: /session/62e8546fbe41138c213214979b21db3f/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d7a1761c450>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:55] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:55] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:56] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:56] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=AapWu6EAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:56] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=38553): Max retries exceeded with url: /session/0c3c45a06916ce6ba21c7c88a82dc9e4/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x724e59550310>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:56] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:56] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:56] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:56] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:56] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:57] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=56837): Max retries exceeded with url: /session/e623b9ad1723e97fef0408f224f1e455/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7861663081d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:19:57] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:19:57] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:57] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:57] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:57] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:57] [INFO] Xvfb 已停止
+[2026-02-06 13:19:57] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:57] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:57] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:19:57] [INFO] Xvfb 已停止
+[2026-02-06 13:19:58] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:58] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:58] [INFO] Xvfb 已启动: DISPLAY=:106
+[2026-02-06 13:19:58] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:19:58] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:19:58] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=TwWS_k8AAAAJ&hl=zh-CN, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:19:59] [INFO] 域名预热完成: http://scholar.google.com
+[2026-02-06 13:19:59] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:19:59] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:19:59] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:19:59] [INFO] IterAgent 开始: Gregory B. Martin, URL: http://scholar.google.com/citations?user=mEvxfi8AAAAJ&hl=zh-CN
+[2026-02-06 13:20:00] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:00] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://btiscience.org/maria-harrison/
+[2026-02-06 13:20:00] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:00] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://www.nature.com/srep/about/editors
+[2026-02-06 13:20:00] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:00] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=7_dVIeAAAAAJ&hl=en
+[2026-02-06 13:20:00] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:00] [INFO] Xvfb 已启动: DISPLAY=:160
+[2026-02-06 13:20:00] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=49877): Max retries exceeded with url: /session/a13b1269e5e53bc98cc8c133c1486c91/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x716c291e0350>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:00] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:00] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:00] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:00] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:00] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:01] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:01] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:20:01] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:01] [INFO] Xvfb 已停止
+[2026-02-06 13:20:01] [INFO] Xvfb 已启动: DISPLAY=:166
+[2026-02-06 13:20:01] [INFO] Xvfb 已启动: DISPLAY=:169
+[2026-02-06 13:20:01] [INFO] Xvfb 已启动: DISPLAY=:170
+[2026-02-06 13:20:01] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:01] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:01] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:01] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:01] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:01] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:01] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:01] [INFO] Xvfb 已停止
+[2026-02-06 13:20:01] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:01] [INFO] Xvfb 已停止
+[2026-02-06 13:20:02] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:02] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:02] [INFO] Xvfb 已启动: DISPLAY=:113
+[2026-02-06 13:20:02] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:02] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=AapWu6EAAAAJ&hl=en
+[2026-02-06 13:20:02] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=43031): Max retries exceeded with url: /session/46b9d5f20c32dab600f097c29f2071cd/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x727ef1a64090>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:02] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:02] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:02] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:20:03] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:03] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:20:03] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:03] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:03] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:03] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=TwWS_k8AAAAJ&hl=zh-CN
+[2026-02-06 13:20:03] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:03] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:03] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:03] [INFO] Xvfb 已停止
+[2026-02-06 13:20:03] [INFO] Xvfb 已启动: DISPLAY=:149
+[2026-02-06 13:20:03] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:03] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:03] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:04] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:04] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:04] [INFO] Xvfb 已启动: DISPLAY=:114
+[2026-02-06 13:20:04] [INFO] Xvfb 已停止
+[2026-02-06 13:20:04] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:04] [WARNING] 打开标签页失败: http://scholar.google.com/citations?user=mEvxfi8AAAAJ&hl=zh-CN, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:04] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:05] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:05] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=HdBPwJ8AAAAJ&hl=zh-CN
+[2026-02-06 13:20:05] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:05] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:05] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:05] [INFO] Xvfb 已停止
+[2026-02-06 13:20:05] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=7_dVIeAAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:05] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:05] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=AapWu6EAAAAJ&hl=en
+[2026-02-06 13:20:05] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:05] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:06] [INFO] Xvfb 已启动: DISPLAY=:115
+[2026-02-06 13:20:06] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:06] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:06] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:06] [INFO] Xvfb 已启动: DISPLAY=:178
+[2026-02-06 13:20:06] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:06] [INFO] Xvfb 已停止
+[2026-02-06 13:20:07] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:07] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:07] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:07] [INFO] Xvfb 已启动: DISPLAY=:112
+[2026-02-06 13:20:07] [WARNING] 打开标签页失败: https://www.nature.com/srep/about/editors, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:08] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:08] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:08] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:08] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=58025): Max retries exceeded with url: /session/4bdd48a723ffe8ae8597bbeb06b66566/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d3bbc6300d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:08] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:08] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:09] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:09] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:09] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:09] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=58061): Max retries exceeded with url: /session/4000d522ecc6c85fc521f56d8f98d362/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x700b476a4350>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:09] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:09] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:09] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:20:09] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:10] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:10] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:10] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:10] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=TwWS_k8AAAAJ&hl=zh-CN, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:11] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:11] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=HdBPwJ8AAAAJ&hl=zh-CN, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:11] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:11] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=36507): Max retries exceeded with url: /session/51c52e6b0929a87e16eedb2fa862db25/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7c7335e28050>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:11] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:11] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:12] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:12] [INFO] Xvfb 已停止
+[2026-02-06 13:20:12] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:12] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=AapWu6EAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:12] [INFO] LLM API Async 查询成功: 54 字符
+[2026-02-06 13:20:12] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:12] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:12] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:12] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:13] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:13] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:13] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:13] [INFO] Xvfb 已停止
+[2026-02-06 13:20:14] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:14] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:14] [INFO] Xvfb 已启动: DISPLAY=:169
+[2026-02-06 13:20:14] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:20:14] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=49151): Max retries exceeded with url: /session/68a650c6786fccc5cafcdc7c9da6a00b/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74b3647184d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:14] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:14] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:15] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:15] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:15] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:15] [INFO] 域名预热完成: http://scholar.google.com
+[2026-02-06 13:20:15] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=41329): Max retries exceeded with url: /session/775da65fc3b706f0606584a39795c72c/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ca06b7a8190>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:15] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:15] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:15] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:16] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:16] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:16] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:20:16] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=50623): Max retries exceeded with url: /session/791c720c5e873e7a5094707ba9936cce/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x721e0c5683d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:16] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:16] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:16] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:16] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:16] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:17] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:17] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:17] [INFO] Xvfb 已停止
+[2026-02-06 13:20:17] [INFO] LLM API Async 查询成功: 275 字符
+[2026-02-06 13:20:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:17] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:17] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:18] [INFO] 域名预热完成: https://btiscience.org
+[2026-02-06 13:20:18] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:18] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:18] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:18] [INFO] Xvfb 已停止
+[2026-02-06 13:20:18] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:18] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=44581): Max retries exceeded with url: /session/acb93794961e15f49bf04040fb856382/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:20:18] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:18] [INFO] Xvfb 已停止
+[2026-02-06 13:20:19] [INFO] LLM API Async 查询成功: 8 字符
+[2026-02-06 13:20:20] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:20] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=YZ-BzW8AAAAJ&hl=es
+[2026-02-06 13:20:20] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:20:20] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:20] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://catalog.montana.edu/faculty/
+[2026-02-06 13:20:21] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=37809): Max retries exceeded with url: /session/6bec78f53cb90e1f38e6b94274f97be5/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d3bbc605210>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:21] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=37809): Max retries exceeded with url: /session/6bec78f53cb90e1f38e6b94274f97be5/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d3bbc633e10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:21] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:21] [INFO] Xvfb 已启动: DISPLAY=:168
+[2026-02-06 13:20:21] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:21] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:21] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:20:21] [INFO] Xvfb 已启动: DISPLAY=:194
+[2026-02-06 13:20:22] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:22] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=_rVi7FUAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:22] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:22] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:22] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:20:23] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:23] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:23] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:23] [INFO] Xvfb 已停止
+[2026-02-06 13:20:23] [INFO] LLM API Async 查询成功: 56 字符
+[2026-02-06 13:20:23] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:24] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:24] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:24] [INFO] Xvfb 已停止
+[2026-02-06 13:20:24] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=YZ-BzW8AAAAJ&hl=es, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:24] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:24] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:24] [INFO] Xvfb 已停止
+[2026-02-06 13:20:25] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:25] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=TwWS_k8AAAAJ&hl=zh-CN
+[2026-02-06 13:20:26] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=58045): Max retries exceeded with url: /session/95f231accb4815b73e2543b1dac2665b/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ba28c9d7c90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:26] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:26] [INFO] LLM API Async 查询成功: 54 字符
+[2026-02-06 13:20:26] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:26] [INFO] Xvfb 已启动: DISPLAY=:164
+[2026-02-06 13:20:26] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:26] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:27] [INFO] LLM API Async 查询成功: 275 字符
+[2026-02-06 13:20:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:27] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:28] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:28] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://www.georgiasouthern.edu/colleges/behavioral-social-sciences/departments/psychology/faculty-staff
+[2026-02-06 13:20:28] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:28] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://ww2.georgiasouthern.edu/academics/ce/about/
+[2026-02-06 13:20:28] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:28] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://www.coloradomesa.edu/directory/faculty-listing.html
+[2026-02-06 13:20:28] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=54795): Max retries exceeded with url: /session/013a9441c85c8acb13141805f78baa20/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x748e34cf4090>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:28] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:28] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:28] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:28] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:29] [INFO] Xvfb 已启动: DISPLAY=:159
+[2026-02-06 13:20:29] [INFO] Xvfb 已启动: DISPLAY=:162
+[2026-02-06 13:20:29] [INFO] Xvfb 已启动: DISPLAY=:161
+[2026-02-06 13:20:29] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:29] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:29] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:29] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:29] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:30] [INFO] LLM API Async 查询成功: 107 字符
+[2026-02-06 13:20:30] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:30] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=TwWS_k8AAAAJ&hl=zh-CN, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:30] [INFO] LLM API Async 查询成功: 12 字符
+[2026-02-06 13:20:30] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=37809): Max retries exceeded with url: /session/6bec78f53cb90e1f38e6b94274f97be5/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-02-06 13:20:30] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=37809): Max retries exceeded with url: /session/6bec78f53cb90e1f38e6b94274f97be5/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d3bbc7f1050>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:30] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:30] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:30] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:30] [INFO] LLM API Async 查询成功: 441 字符
+[2026-02-06 13:20:30] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 2 轮, 访问 2 页, 收集 1 条信息
+[2026-02-06 13:20:30] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:30] [INFO] Xvfb 已停止
+[2026-02-06 13:20:31] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:31] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:32] [INFO] LLM API Async 查询成功: 12 字符
+[2026-02-06 13:20:32] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:32] [WARNING] 打开标签页失败: https://www.georgiasouthern.edu/colleges/behavioral-social-sciences/departments/psychology/faculty-staff, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:32] [INFO] LLM API Async 查询成功: 20 字符
+[2026-02-06 13:20:32] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:32] [INFO] Xvfb 已停止
+[2026-02-06 13:20:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:33] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:20:34] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=38471): Max retries exceeded with url: /session/537d153022c2e845a37ff9a0b61e210b/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x784aa37e8490>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:34] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:34] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:34] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:34] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:34] [WARNING] 打开标签页失败: https://www.coloradomesa.edu/directory/faculty-listing.html, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:35] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:35] [WARNING] 打开标签页失败: https://ww2.georgiasouthern.edu/academics/ce/about/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:35] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:35] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:35] [INFO] Xvfb 已停止
+[2026-02-06 13:20:36] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=57313): Max retries exceeded with url: /session/166e3c7562b44de9b6216b0d8395f5fd/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ccffc174090>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:36] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:36] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:36] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:36] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:36] [INFO] LLM API Async 查询成功: 220 字符
+[2026-02-06 13:20:37] [INFO] LLM API Async 查询成功: 54 字符
+[2026-02-06 13:20:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:37] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:37] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://www.georgiasouthern.edu/colleges/science-mathematics/departments/biology/faculty-and-staff
+[2026-02-06 13:20:37] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:38] [INFO] Xvfb 已启动: DISPLAY=:184
+[2026-02-06 13:20:38] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:38] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:38] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=41671): Max retries exceeded with url: /session/cf5c9c5fdb68357d894e3afc8a45fc49/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77c7603ec050>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:38] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:38] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:39] [WARNING] 打开标签页失败: http://www.montana.edu/mll/faculty/martin.html, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:39] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:20:39] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:39] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=38001): Max retries exceeded with url: /session/410d5f83492be66620e692c5b2fd8adb/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7465bb9283d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:39] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:39] [INFO] LLM API Async 查询成功: 91 字符
+[2026-02-06 13:20:39] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:39] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:39] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:39] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:39] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:40] [WARNING] 域名预热失败: https://www.georgiasouthern.edu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:40] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=56185): Max retries exceeded with url: /session/e734f35c66023a2f96c58023642d9559/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:20:40] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:40] [INFO] Xvfb 已停止
+[2026-02-06 13:20:41] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:41] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=_rVi7FUAAAAJ&hl=en
+[2026-02-06 13:20:41] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:41] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://cals.cornell.edu/people/gregory-martin
+[2026-02-06 13:20:41] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:41] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://btiscience.org/greg-martin/
+[2026-02-06 13:20:41] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:41] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:41] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:41] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:41] [INFO] Xvfb 已停止
+[2026-02-06 13:20:41] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:41] [INFO] Xvfb 已停止
+[2026-02-06 13:20:41] [INFO] LLM API Async 查询成功: 12 字符
+[2026-02-06 13:20:42] [INFO] Xvfb 已启动: DISPLAY=:182
+[2026-02-06 13:20:42] [INFO] Xvfb 已启动: DISPLAY=:180
+[2026-02-06 13:20:42] [INFO] Xvfb 已启动: DISPLAY=:179
+[2026-02-06 13:20:42] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:42] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:42] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:42] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:42] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://www.iufro.org/media/fileadmin/publications/general-publications/iufro-scientific-achievement-award-winners-2024.pdf
+[2026-02-06 13:20:42] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:42] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:42] [INFO] Xvfb 已启动: DISPLAY=:161
+[2026-02-06 13:20:43] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=37777): Max retries exceeded with url: /session/76787f70d4236b5efd39fb7b7899e3be/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7901c366dd10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:43] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-02-06 13:20:43] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:43] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:43] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:43] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:43] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:43] [INFO] Xvfb 已启动: DISPLAY=:157
+[2026-02-06 13:20:43] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:43] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:44] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:44] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:45] [INFO] 域名预热完成: https://ww2.georgiasouthern.edu
+[2026-02-06 13:20:45] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:45] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:45] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=_rVi7FUAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:46] [WARNING] 打开标签页失败: https://cals.cornell.edu/people/gregory-martin, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:46] [INFO] LLM API Async 查询成功: 41 字符
+[2026-02-06 13:20:46] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:46] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:46] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:46] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:46] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:46] [INFO] Xvfb 已停止
+[2026-02-06 13:20:47] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:47] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:48] [ERROR] 获取页面内容失败: https://www.georgiasouthern.edu/colleges/science-mathematics/departments/biology/faculty-and-staff, HTTPConnectionPool(host='localhost', port=37693): Max retries exceeded with url: /session/47816845181ee3c82a0555f2d8e770fb/source (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa8cc10f8d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:48] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=37693): Max retries exceeded with url: /session/47816845181ee3c82a0555f2d8e770fb/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa8cc11b690>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:48] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:48] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:48] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:48] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://www.nanoge.org/about/our-speakers
+[2026-02-06 13:20:48] [WARNING] 域名预热失败: https://www.coloradomesa.edu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:48] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=49629): Max retries exceeded with url: /session/25729091a3f265275af86609c0d7f2cd/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:20:48] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:48] [INFO] Xvfb 已停止
+[2026-02-06 13:20:48] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:48] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:49] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:49] [INFO] LLM API Async 查询成功: 41 字符
+[2026-02-06 13:20:49] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:49] [WARNING] 域名预热失败: https://catalog.montana.edu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:49] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=51595): Max retries exceeded with url: /session/5e4e227e3c58cb568ea5d8999ab779e5/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:20:49] [INFO] Xvfb 已启动: DISPLAY=:190
+[2026-02-06 13:20:49] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=41379): Max retries exceeded with url: /session/a56362d7d76117df3ea90d7cd9f3009a/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74fd8d0dc090>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:49] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:49] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:49] [INFO] Xvfb 已停止
+[2026-02-06 13:20:49] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:49] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:49] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:50] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=35883): Max retries exceeded with url: /session/10ef9c21d8cbbde853e83e9091ffc625/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74b1d78842d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:50] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:50] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:50] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:50] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:50] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:51] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:51] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://www.robertcostanza.com/wp-content/uploads/2021/01/Costanza-Long-CV-1.21.pdf
+[2026-02-06 13:20:51] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:51] [INFO] LLM API Async 查询成功: 12 字符
+[2026-02-06 13:20:51] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:51] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:51] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:51] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://cals.cornell.edu/people/gregory-martin
+[2026-02-06 13:20:51] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:51] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://btiscience.org/greg-martin/
+[2026-02-06 13:20:51] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:51] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://scholar.google.com/citations?user=_rVi7FUAAAAJ&hl=en
+[2026-02-06 13:20:51] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:51] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://cmb.jabsom.hawaii.edu/faculty1.html
+[2026-02-06 13:20:52] [INFO] Xvfb 已启动: DISPLAY=:197
+[2026-02-06 13:20:52] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:52] [INFO] 域名预热完成: https://www.georgiasouthern.edu
+[2026-02-06 13:20:52] [INFO] Xvfb 已启动: DISPLAY=:133
+[2026-02-06 13:20:52] [INFO] Xvfb 已启动: DISPLAY=:131
+[2026-02-06 13:20:52] [INFO] Xvfb 已启动: DISPLAY=:140
+[2026-02-06 13:20:52] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:52] [INFO] Xvfb 已启动: DISPLAY=:136
+[2026-02-06 13:20:52] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:52] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:52] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:52] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:53] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:53] [INFO] LLM API Async 查询成功: 53 字符
+[2026-02-06 13:20:53] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:53] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:53] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:53] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:53] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:53] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:53] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:53] [INFO] Xvfb 已停止
+[2026-02-06 13:20:54] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:54] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:55] [WARNING] 域名预热失败: https://cals.cornell.edu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:55] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=49463): Max retries exceeded with url: /session/7a0e7b1d5f2fd78216cb91e79a130684/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:20:55] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:55] [INFO] Xvfb 已停止
+[2026-02-06 13:20:55] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:55] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://www.cpp.edu/agri/docs/agricolumn/2023-agricolumn.pdf
+[2026-02-06 13:20:55] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:55] [WARNING] 打开标签页失败: https://www.nanoge.org/about/our-speakers, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:55] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:56] [INFO] LLM API Async 查询成功: 91 字符
+[2026-02-06 13:20:56] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:56] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:20:56] [INFO] Xvfb 已启动: DISPLAY=:171
+[2026-02-06 13:20:56] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:56] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:56] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:57] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:20:57] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://physics.cornell.edu/news/four-elected-national-academy-sciences
+[2026-02-06 13:20:57] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:57] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:58] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=_rVi7FUAAAAJ&hl=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:58] [INFO] Xvfb 已启动: DISPLAY=:158
+[2026-02-06 13:20:58] [INFO] LLM API Async 查询成功: 12 字符
+[2026-02-06 13:20:58] [WARNING] 打开标签页失败: https://btiscience.org/greg-martin/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:58] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:20:58] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:20:58] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:20:59] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:20:59] [INFO] Xvfb 已停止
+[2026-02-06 13:20:59] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:20:59] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:20:59] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=55373): Max retries exceeded with url: /session/10ca245981e358912545fd3949049340/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x713c250e45d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:20:59] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:20:59] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:00] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:00] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:00] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:00] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:00] [INFO] Xvfb 已停止
+[2026-02-06 13:21:00] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:00] [INFO] Xvfb 已停止
+[2026-02-06 13:21:00] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:00] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://catalog.iastate.edu/faculty/
+[2026-02-06 13:21:00] [INFO] LLM API Async 查询成功: 54 字符
+[2026-02-06 13:21:00] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:00] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:00] [WARNING] 打开标签页失败: https://cals.cornell.edu/people/gregory-martin, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:01] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:01] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:01] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:01] [INFO] Xvfb 已启动: DISPLAY=:180
+[2026-02-06 13:21:01] [INFO] Xvfb 已启动: DISPLAY=:124
+[2026-02-06 13:21:02] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=48387): Max retries exceeded with url: /session/2d3810c9d259bc44d694368d18fb21f2/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79f1da7501d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:02] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:02] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:02] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:02] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://www.triconference.com/19/speakers
+[2026-02-06 13:21:02] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:02] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:02] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=38467): Max retries exceeded with url: /session/03d8d8fb74c543a2e756999444830975/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b2aed538110>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:02] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:02] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:02] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:02] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:02] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:02] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:03] [INFO] Xvfb 已启动: DISPLAY=:151
+[2026-02-06 13:21:03] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:03] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:03] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:03] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:04] [WARNING] 打开标签页失败: https://physics.cornell.edu/news/four-elected-national-academy-sciences, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:04] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:04] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:05] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=35771): Max retries exceeded with url: /session/a5d092c39b5ba42d40f9c2fb886c7b30/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x76e3ca5842d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:05] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:05] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:05] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:05] [INFO] LLM API Async 查询成功: 50 字符
+[2026-02-06 13:21:05] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:05] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:05] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:06] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:06] [WARNING] 域名预热失败: https://www.nanoge.org, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:06] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=48061): Max retries exceeded with url: /session/2436609a55aa598994555a45762a7cb4/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:06] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:06] [INFO] Xvfb 已停止
+[2026-02-06 13:21:06] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:06] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:06] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:07] [WARNING] 域名预热失败: https://www.iufro.org, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:07] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=51829): Max retries exceeded with url: /session/704889acd584ecb65265c551037e9166/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:07] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:07] [INFO] Xvfb 已停止
+[2026-02-06 13:21:07] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:07] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:07] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://issuu.com/ecs1902/docs/2022-if-fal
+[2026-02-06 13:21:07] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:07] [WARNING] 打开标签页失败: https://catalog.iastate.edu/faculty/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:08] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=46389): Max retries exceeded with url: /session/77fbb4389c665e26ff1d2d84b4019ecd/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x711a2c5f4150>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:08] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:08] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:08] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:08] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://clinam.org/wp-content/uploads/2021/10/low-res-Clinam-Proceedings-2016-complete.pdf
+[2026-02-06 13:21:08] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:08] [INFO] Xvfb 已启动: DISPLAY=:102
+[2026-02-06 13:21:08] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:08] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:09] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:09] [INFO] Xvfb 已启动: DISPLAY=:181
+[2026-02-06 13:21:09] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:09] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:09] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:10] [INFO] 域名预热完成: https://btiscience.org
+[2026-02-06 13:21:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:10] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:10] [INFO] 域名预热完成: https://scholar.google.com
+[2026-02-06 13:21:10] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:11] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:11] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:11] [WARNING] 域名预热失败: https://btiscience.org, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:11] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=45599): Max retries exceeded with url: /session/0c78ab416443a70925312f05a533ce09/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:11] [WARNING] 打开标签页失败: https://www.triconference.com/19/speakers, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:11] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:11] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=48609): Max retries exceeded with url: /session/3f5a3c70ba3dfa407e1bc8eeb1fe0d92/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7c2475d44110>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:11] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:11] [INFO] Xvfb 已停止
+[2026-02-06 13:21:11] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:12] [INFO] Xvfb 已停止
+[2026-02-06 13:21:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:12] [INFO] Xvfb 已停止
+[2026-02-06 13:21:12] [WARNING] 域名预热失败: https://cals.cornell.edu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:12] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:12] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=44217): Max retries exceeded with url: /session/8f8c39ba5638843b514399f439d74006/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:12] [INFO] Xvfb 已停止
+[2026-02-06 13:21:12] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:12] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:13] [INFO] Xvfb 已启动: DISPLAY=:197
+[2026-02-06 13:21:13] [INFO] LLM API Async 查询成功: 56 字符
+[2026-02-06 13:21:13] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:13] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:13] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:13] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:13] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:13] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://physics.cornell.edu/news/four-elected-national-academy-sciences
+[2026-02-06 13:21:13] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:13] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:13] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:13] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://www.research-and-innovation.cornell.edu/distinguished-faculty/
+[2026-02-06 13:21:14] [WARNING] 域名预热失败: https://physics.cornell.edu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:14] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=54463): Max retries exceeded with url: /session/d74375e3212629faf1988b8b933b8e1c/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:14] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:14] [INFO] Xvfb 已停止
+[2026-02-06 13:21:14] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:14] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://catalog.iastate.edu/faculty/
+[2026-02-06 13:21:14] [INFO] Xvfb 已启动: DISPLAY=:189
+[2026-02-06 13:21:14] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:14] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:14] [INFO] Xvfb 已启动: DISPLAY=:114
+[2026-02-06 13:21:14] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:15] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:15] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:15] [INFO] Xvfb 已启动: DISPLAY=:135
+[2026-02-06 13:21:15] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:15] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:15] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:15] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:15] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://www.research-and-innovation.cornell.edu/distinguished-faculty/
+[2026-02-06 13:21:15] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=47639): Max retries exceeded with url: /session/32a81de86d095d9b77725bb8ef9ff5b8/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741559114510>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:15] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:15] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:16] [WARNING] 打开标签页失败: https://issuu.com/ecs1902/docs/2022-if-fal, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:16] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:16] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:16] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:16] [INFO] Xvfb 已启动: DISPLAY=:106
+[2026-02-06 13:21:17] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:17] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:17] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:17] [INFO] LLM API Async 查询成功: 54 字符
+[2026-02-06 13:21:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:18] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:18] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:18] [WARNING] 域名预热失败: https://www.robertcostanza.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:18] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=56523): Max retries exceeded with url: /session/1d4177dcaed13879c0e580f68e0ae056/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:18] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:18] [INFO] Xvfb 已停止
+[2026-02-06 13:21:18] [INFO] 域名预热完成: https://catalog.iastate.edu
+[2026-02-06 13:21:18] [WARNING] 域名预热失败: https://www.cpp.edu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:18] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=57713): Max retries exceeded with url: /session/19f31ad8eacad1978afeb1d56cc243f3/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:19] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:19] [INFO] Xvfb 已停止
+[2026-02-06 13:21:19] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:19] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:19] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:19] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:19] [INFO] Xvfb 已停止
+[2026-02-06 13:21:20] [INFO] LLM API Async 查询成功: 109 字符
+[2026-02-06 13:21:20] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:20] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=42451): Max retries exceeded with url: /session/efac163a13541946d731f4079c95a70a/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7023cc7c00d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:20] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:20] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:20] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:20] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://clinam.org/wp-content/uploads/2021/10/Proceedings_20_web.pdf
+[2026-02-06 13:21:20] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:20] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:20] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:20] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:20] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://www.facebook.com/UWISTA/posts/news-professor-gary-wayne-garcia-conferred-with-emeritus-titlethe-university-of-/10159519306673893/
+[2026-02-06 13:21:21] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:21] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://guide.wisc.edu/faculty/
+[2026-02-06 13:21:21] [INFO] Xvfb 已启动: DISPLAY=:104
+[2026-02-06 13:21:21] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:21] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:21] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:21] [INFO] Xvfb 已启动: DISPLAY=:115
+[2026-02-06 13:21:21] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:22] [INFO] LLM API Async 查询成功: 20 字符
+[2026-02-06 13:21:22] [INFO] Xvfb 已启动: DISPLAY=:187
+[2026-02-06 13:21:22] [WARNING] 打开标签页失败: https://catalog.iastate.edu/faculty/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:22] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:22] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:22] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:23] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=53187): Max retries exceeded with url: /session/041d986b3e37d15ef1f48c6572caa724/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x779678859310>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:23] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:23] [WARNING] 域名预热失败: https://www.triconference.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:23] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=60699): Max retries exceeded with url: /session/44d6e19ef9d86e41129a4c6a23d7a90a/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:23] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:23] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:23] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:23] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:23] [INFO] Xvfb 已停止
+[2026-02-06 13:21:24] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:24] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:24] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:25] [INFO] LLM API Async 查询成功: 56 字符
+[2026-02-06 13:21:25] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:25] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:25] [INFO] LLM API Async 查询成功: 41 字符
+[2026-02-06 13:21:25] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=53187): Max retries exceeded with url: /session/041d986b3e37d15ef1f48c6572caa724/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x779678655010>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:25] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:26] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:26] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:26] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:26] [INFO] 域名预热完成: https://issuu.com
+[2026-02-06 13:21:26] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=33091): Max retries exceeded with url: /session/6da424f2080ec2a3fda327cadb972310/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x770aca18c090>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:26] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:26] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:26] [WARNING] 打开标签页失败: https://cmb.jabsom.hawaii.edu/faculty1.html, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:27] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:27] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:27] [WARNING] 打开标签页失败: https://www.facebook.com/UWISTA/posts/news-professor-gary-wayne-garcia-conferred-with-emeritus-titlethe-university-of-/10159519306673893/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:27] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:27] [INFO] Xvfb 已停止
+[2026-02-06 13:21:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:27] [INFO] LLM API Async 查询成功: 268 字符
+[2026-02-06 13:21:27] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:28] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:28] [INFO] LLM API Async 查询成功: 12 字符
+[2026-02-06 13:21:28] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=53187): Max retries exceeded with url: /session/041d986b3e37d15ef1f48c6572caa724/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-02-06 13:21:28] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=53187): Max retries exceeded with url: /session/041d986b3e37d15ef1f48c6572caa724/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77967885be10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:28] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:28] [INFO] LLM API Async 查询成功: 569 字符
+[2026-02-06 13:21:28] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:29] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:29] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:29] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:29] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://xeno-canto.org/contributors?q=all
+[2026-02-06 13:21:29] [INFO] LLM API Async 查询成功: 8 字符
+[2026-02-06 13:21:30] [WARNING] 打开标签页失败: https://guide.wisc.edu/faculty/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:30] [INFO] LLM API Async 查询成功: 12 字符
+[2026-02-06 13:21:30] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=53187): Max retries exceeded with url: /session/041d986b3e37d15ef1f48c6572caa724/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-02-06 13:21:30] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=53187): Max retries exceeded with url: /session/041d986b3e37d15ef1f48c6572caa724/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7796787ed1d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:30] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:30] [INFO] LLM API Async 查询成功: 8 字符
+[2026-02-06 13:21:30] [INFO] Xvfb 已启动: DISPLAY=:125
+[2026-02-06 13:21:30] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:30] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=42391): Max retries exceeded with url: /session/7de534d6c46eeacdaf749cad890bc241/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a8c8a840110>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:30] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:30] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:31] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:31] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:31] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=49769): Max retries exceeded with url: /session/0d3f3c1eca77c96c2671a0c9c5a36894/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7705bf8c0510>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:31] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:31] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:31] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:31] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:31] [INFO] LLM API Async 查询成功: 268 字符
+[2026-02-06 13:21:31] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:32] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:32] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:32] [WARNING] 域名预热失败: https://catalog.iastate.edu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:32] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=47791): Max retries exceeded with url: /session/9e9e02802cea251056b4c2cd83addc16/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:32] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:32] [INFO] Xvfb 已停止
+[2026-02-06 13:21:32] [INFO] LLM API Async 查询成功: 41 字符
+[2026-02-06 13:21:32] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=53187): Max retries exceeded with url: /session/041d986b3e37d15ef1f48c6572caa724/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77967864ac90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:33] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:33] [WARNING] 打开标签页失败: https://btiscience.org/greg-martin/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:33] [WARNING] 打开标签页失败: https://physics.cornell.edu/news, HTTPConnectionPool(host='localhost', port=36229): Max retries exceeded with url: /session/56e8b21b87fc3a816cafbf385ae83f40/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x719ccc2a4150>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:33] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:33] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:33] [INFO] LLM API Async 查询成功: 8 字符
+[2026-02-06 13:21:34] [WARNING] 打开标签页失败: https://xeno-canto.org/contributors?q=all, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:34] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=32885): Max retries exceeded with url: /session/8b71cf47cfad6450c86fac7903d7fe44/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ec8f5a840d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:34] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:34] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:34] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:34] [INFO] Xvfb 已停止
+[2026-02-06 13:21:34] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:35] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:35] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://guide.wisc.edu/faculty/
+[2026-02-06 13:21:35] [WARNING] 域名预热失败: https://clinam.org, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:35] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=57157): Max retries exceeded with url: /session/501cbdc42856385333a108c5f41c0351/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:35] [INFO] LLM API Async 查询成功: 12 字符
+[2026-02-06 13:21:35] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=53187): Max retries exceeded with url: /session/041d986b3e37d15ef1f48c6572caa724/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-02-06 13:21:35] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=53187): Max retries exceeded with url: /session/041d986b3e37d15ef1f48c6572caa724/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77967864ac50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:35] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:35] [INFO] Xvfb 已停止
+[2026-02-06 13:21:35] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:35] [INFO] Xvfb 已停止
+[2026-02-06 13:21:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:35] [INFO] Xvfb 已启动: DISPLAY=:136
+[2026-02-06 13:21:35] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:35] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:35] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:35] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:35] [INFO] Xvfb 已停止
+[2026-02-06 13:21:36] [INFO] Xvfb 已启动: DISPLAY=:131
+[2026-02-06 13:21:36] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:36] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:36] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:36] [INFO] Xvfb 已启动: DISPLAY=:115
+[2026-02-06 13:21:37] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:37] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://courses.cornell.edu/exploratory-studies/biological-sciences/
+[2026-02-06 13:21:37] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:37] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:37] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=36229): Max retries exceeded with url: /session/56e8b21b87fc3a816cafbf385ae83f40/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x719ccc28cb90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:37] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:38] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=37839): Max retries exceeded with url: /session/a6da479fac37bb6a80ba284499af3343/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73223a3cc190>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:38] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:38] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:38] [INFO] Xvfb 已启动: DISPLAY=:101
+[2026-02-06 13:21:38] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:38] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:38] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:38] [WARNING] 域名预热失败: https://guide.wisc.edu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:38] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=53851): Max retries exceeded with url: /session/7793f267694bb5f7e8d433f3a3545606/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:38] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:38] [INFO] Xvfb 已停止
+[2026-02-06 13:21:38] [INFO] LLM API Async 查询成功: 268 字符
+[2026-02-06 13:21:38] [INFO] LLM API Async 查询成功: 268 字符
+[2026-02-06 13:21:38] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:38] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:39] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:39] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:39] [INFO] LLM API Async 查询成功: 56 字符
+[2026-02-06 13:21:39] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:39] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:39] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:39] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:39] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:39] [WARNING] 打开标签页失败: https://guide.wisc.edu/faculty/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:39] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:39] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://www.esf.edu/biology/directory/index.php
+[2026-02-06 13:21:40] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:40] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:40] [INFO] Xvfb 已启动: DISPLAY=:190
+[2026-02-06 13:21:41] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:41] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:41] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:41] [INFO] LLM API Async 查询成功: 558 字符
+[2026-02-06 13:21:41] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 2 轮, 访问 3 页, 收集 1 条信息
+[2026-02-06 13:21:41] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:41] [INFO] Xvfb 已停止
+[2026-02-06 13:21:41] [WARNING] 域名预热失败: https://xeno-canto.org, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:41] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=41879): Max retries exceeded with url: /session/cd65c48fcc67af67e12580cb760a0aac/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:41] [INFO] 域名预热完成: https://www.facebook.com
+[2026-02-06 13:21:41] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:42] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:42] [INFO] Xvfb 已停止
+[2026-02-06 13:21:42] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:42] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:42] [INFO] Xvfb 已停止
+[2026-02-06 13:21:42] [INFO] LLM API Async 查询成功: 241 字符
+[2026-02-06 13:21:42] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 2 轮, 访问 3 页, 收集 3 条信息
+[2026-02-06 13:21:42] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:42] [INFO] Xvfb 已停止
+[2026-02-06 13:21:42] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:42] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://catalog.iastate.edu/faculty/faculty.pdf
+[2026-02-06 13:21:42] [INFO] LLM API Async 查询成功: 264 字符
+[2026-02-06 13:21:42] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:43] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:43] [INFO] LLM API Async 查询成功: 268 字符
+[2026-02-06 13:21:43] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:43] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:43] [INFO] Xvfb 已停止
+[2026-02-06 13:21:43] [INFO] Xvfb 已启动: DISPLAY=:104
+[2026-02-06 13:21:43] [WARNING] 打开标签页失败: https://courses.cornell.edu/exploratory-studies/biological-sciences/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:43] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:43] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://courses.cornell.edu/exploratory-studies/biological-sciences/
+[2026-02-06 13:21:43] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:43] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:43] [INFO] Xvfb 已启动: DISPLAY=:187
+[2026-02-06 13:21:43] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=53251): Max retries exceeded with url: /session/ebf2c704a53714b36b53ad7812266fd7/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x732198584410>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:43] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:43] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:44] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:44] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:44] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:44] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:44] [INFO] Xvfb 已启动: DISPLAY=:159
+[2026-02-06 13:21:44] [WARNING] 打开标签页失败: https://www.esf.edu/biology/directory/index.php, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:44] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:45] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:45] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:46] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:46] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:46] [WARNING] 域名预热失败: https://clinam.org, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:46] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=50617): Max retries exceeded with url: /session/de506a8a45f37f34e0b54aebaa2ac4f1/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:46] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:47] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:47] [INFO] Xvfb 已停止
+[2026-02-06 13:21:47] [INFO] LLM API Async 查询成功: 333 字符
+[2026-02-06 13:21:47] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 2 轮, 访问 3 页, 收集 3 条信息
+[2026-02-06 13:21:47] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:47] [INFO] Xvfb 已停止
+[2026-02-06 13:21:47] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=47159): Max retries exceeded with url: /session/d906479cc29979eb91a4931a127ed927/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x746e7b228250>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:47] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:47] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:47] [WARNING] 域名预热失败: https://guide.wisc.edu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:47] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=46171): Max retries exceeded with url: /session/19a745500aa2c2b6c336938bb2bec5f3/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:47] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:47] [INFO] Xvfb 已停止
+[2026-02-06 13:21:47] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:47] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:48] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:48] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://catalog.tamu.edu/undergraduate/faculty/
+[2026-02-06 13:21:48] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=40823): Max retries exceeded with url: /session/269b9bf593316d56e54b0b6946da5766/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dd67e578090>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:48] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:48] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:48] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:48] [WARNING] 打开标签页失败: https://courses.cornell.edu/exploratory-studies/biological-sciences/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:49] [INFO] IterAgent 初始化: k=3, n=2
+[2026-02-06 13:21:49] [INFO] IterAgent 开始: Gregory B. Martin, URL: https://academic.oup.com/plcell/pages/editorial-board-biographies
+[2026-02-06 13:21:49] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:49] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:49] [INFO] Xvfb 已启动: DISPLAY=:181
+[2026-02-06 13:21:49] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:49] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:50] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:50] [INFO] Xvfb 已启动: DISPLAY=:122
+[2026-02-06 13:21:50] [WARNING] 域名预热失败: https://courses.cornell.edu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:50] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=47649): Max retries exceeded with url: /session/1a7089c387504b841074adf28a5998c3/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:50] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:50] [INFO] Xvfb 已停止
+[2026-02-06 13:21:50] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:50] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:51] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:51] [WARNING] 域名预热失败: https://www.esf.edu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:51] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=52263): Max retries exceeded with url: /session/06157bf27f4a571d51455e702215060d/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:51] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:51] [INFO] Xvfb 已停止
+[2026-02-06 13:21:51] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:52] [WARNING] 打开标签页失败: https://catalog.tamu.edu/undergraduate/faculty/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:52] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=60143): Max retries exceeded with url: /session/fed1dc727fec2141b91ba6a1ef9ff54d/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73db1adf8350>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:52] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:52] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:53] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:53] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:54] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:55] [INFO] LLM API Async 查询成功: 56 字符
+[2026-02-06 13:21:55] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:55] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:55] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:55] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:56] [WARNING] 域名预热失败: https://courses.cornell.edu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:56] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=39167): Max retries exceeded with url: /session/b20052a03bc68e21dacd15d0af5552cb/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:56] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:56] [INFO] Xvfb 已停止
+[2026-02-06 13:21:56] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:56] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=39849): Max retries exceeded with url: /session/80a40ccd1250270909b9fa3b13b056da/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7c7f56bfc850>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-02-06 13:21:56] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:56] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:21:57] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:57] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:21:57] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:21:58] [WARNING] 域名预热失败: https://catalog.iastate.edu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:21:58] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=37021): Max retries exceeded with url: /session/bea99ce1aae995dd600145a2de9e9bd2/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:21:58] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:58] [INFO] Xvfb 已停止
+[2026-02-06 13:21:59] [INFO] LLM API Async 查询成功: 54 字符
+[2026-02-06 13:21:59] [INFO] IterAgent 完成: Gregory B. Martin, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-02-06 13:21:59] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:21:59] [INFO] 等待 Chrome 初始化锁...
+[2026-02-06 13:21:59] [INFO] 检测到 Chrome 主版本: 143
+[2026-02-06 13:22:00] [WARNING] 域名预热失败: https://catalog.tamu.edu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:22:00] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=38105): Max retries exceeded with url: /session/edebaf9b5d8744a33cc48ed96da39173/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:22:00] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:22:00] [INFO] Xvfb 已停止
+[2026-02-06 13:22:00] [INFO] 共享 Chrome driver 已创建
+[2026-02-06 13:22:03] [INFO] 域名预热完成: https://academic.oup.com
+[2026-02-06 13:22:07] [WARNING] 域名预热失败: https://cmb.jabsom.hawaii.edu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-02-06 13:22:07] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=41615): Max retries exceeded with url: /session/fc3b6e9fc265ac7c1523e6cd2d9f566f/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-02-06 13:22:07] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:22:07] [INFO] Xvfb 已停止
+[2026-02-06 13:22:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:22:10] [INFO] LLM API Async 查询成功: 54 字符
+[2026-02-06 13:22:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:22:13] [INFO] LLM API Async 查询成功: 108 字符
+[2026-02-06 13:22:13] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:22:16] [INFO] LLM API Async 查询成功: 41 字符
+[2026-02-06 13:22:16] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:22:18] [INFO] LLM API Async 查询成功: 54 字符
+[2026-02-06 13:22:18] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:22:21] [INFO] LLM API Async 查询成功: 107 字符
+[2026-02-06 13:22:21] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:22:24] [INFO] LLM API Async 查询成功: 20 字符
+[2026-02-06 13:23:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:23:31] [INFO] LLM API Async 查询成功: 175 字符
+[2026-02-06 13:23:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:23:34] [INFO] LLM API Async 查询成功: 113 字符
+[2026-02-06 13:23:34] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:23:37] [INFO] LLM API Async 查询成功: 12 字符
+[2026-02-06 13:23:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:23:42] [INFO] LLM API Async 查询成功: 54 字符
+[2026-02-06 13:23:42] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:23:44] [INFO] LLM API Async 查询成功: 85 字符
+[2026-02-06 13:23:44] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:23:46] [INFO] LLM API Async 查询成功: 12 字符
+[2026-02-06 13:24:47] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:24:50] [INFO] LLM API Async 查询成功: 194 字符
+[2026-02-06 13:24:51] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:24:54] [INFO] LLM API Async 查询成功: 113 字符
+[2026-02-06 13:24:54] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:24:56] [INFO] LLM API Async 查询成功: 12 字符
+[2026-02-06 13:24:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:25:01] [INFO] LLM API Async 查询成功: 54 字符
+[2026-02-06 13:25:01] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:25:04] [INFO] LLM API Async 查询成功: 107 字符
+[2026-02-06 13:25:04] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:25:06] [INFO] LLM API Async 查询成功: 12 字符
+[2026-02-06 13:25:09] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-02-06 13:25:11] [INFO] LLM API Async 查询成功: 54 字符
+[2026-02-06 13:25:11] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-02-06 13:25:11] [INFO] Xvfb 已停止
