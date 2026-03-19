@@ -1950,3 +1950,159 @@ Stacktrace:
 [2026-03-13 18:04:07] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
 [2026-03-13 18:04:12] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
 [2026-03-13 18:04:16] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-03-18 16:03:49] [INFO] 开始查找 ORCID: 0000-0002-1825-0097
+[2026-03-18 16:03:50] [INFO] 作者姓名: Josiah Carberry -> josiah carberry
+[2026-03-18 16:03:51] [INFO] 作者组织: Brown University
+[2026-03-18 16:03:52] [INFO] 获取到 6 篇 ORCID 论文
+[2026-03-18 16:03:53] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:03:54] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-1825-0097
+[2026-03-18 16:05:57] [INFO] 开始查找 ORCID: 0000-0002-1825-0097
+[2026-03-18 16:05:57] [INFO] 作者姓名: Josiah Carberry -> josiah carberry
+[2026-03-18 16:05:57] [INFO] 作者组织: Brown University
+[2026-03-18 16:05:57] [INFO] 获取到 6 篇 ORCID 论文
+[2026-03-18 16:05:57] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:05:57] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-1825-0097
+[2026-03-18 16:08:03] [INFO] 开始查找 ORCID: 0000-0002-1825-0097
+[2026-03-18 16:08:03] [INFO] 作者姓名: Josiah Carberry -> josiah carberry
+[2026-03-18 16:08:03] [INFO] 作者组织: Brown University
+[2026-03-18 16:08:03] [INFO] 获取到 6 篇 ORCID 论文
+[2026-03-18 16:08:03] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:08:03] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-1825-0097
+[2026-03-18 16:08:59] [INFO] 开始查找 ORCID: 0000-0002-1825-0097
+[2026-03-18 16:08:59] [INFO] 作者姓名: Josiah Carberry -> josiah carberry
+[2026-03-18 16:08:59] [INFO] 作者组织: Brown University
+[2026-03-18 16:08:59] [INFO] 获取到 6 篇 ORCID 论文
+[2026-03-18 16:08:59] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:08:59] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-1825-0097
+[2026-03-18 16:14:15] [INFO] 开始查找 ORCID: 0000-0002-4890-9147
+[2026-03-18 16:14:15] [INFO] 作者姓名: Dmitrijs Rots -> dmitrijs rots
+[2026-03-18 16:14:16] [INFO] 作者组织: Erasmus MC
+[2026-03-18 16:14:16] [INFO] 获取到 14 篇 ORCID 论文
+[2026-03-18 16:14:17] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:14:19] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-4890-9147
+[2026-03-18 16:19:02] [INFO] 开始查找 ORCID: 0000-0002-1825-0097
+[2026-03-18 16:19:02] [INFO] 作者姓名: Josiah Carberry -> josiah carberry
+[2026-03-18 16:19:02] [INFO] 作者组织: Brown University
+[2026-03-18 16:19:02] [INFO] 获取到 6 篇 ORCID 论文
+[2026-03-18 16:19:02] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:19:02] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-1825-0097
+[2026-03-18 16:19:19] [INFO] 开始查找 ORCID: 0000-0002-1825-0097
+[2026-03-18 16:19:19] [INFO] 作者姓名: Josiah Carberry -> josiah carberry
+[2026-03-18 16:19:19] [INFO] 作者组织: Brown University
+[2026-03-18 16:19:19] [INFO] 获取到 6 篇 ORCID 论文
+[2026-03-18 16:19:19] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:19:19] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-1825-0097
+[2026-03-18 16:19:38] [INFO] 开始查找 ORCID: 0000-0002-4890-9147
+[2026-03-18 16:19:38] [INFO] 作者姓名: Dmitrijs Rots -> dmitrijs rots
+[2026-03-18 16:19:38] [INFO] 作者组织: Erasmus MC
+[2026-03-18 16:19:38] [INFO] 获取到 14 篇 ORCID 论文
+[2026-03-18 16:19:38] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:19:38] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-4890-9147
+[2026-03-18 16:24:51] [INFO] 开始查找 ORCID: 0000-0002-1825-0097
+[2026-03-18 16:24:51] [INFO] 作者姓名: Josiah Carberry -> josiah carberry
+[2026-03-18 16:24:51] [INFO] 作者组织: Brown University
+[2026-03-18 16:24:51] [INFO] 获取到 6 篇 ORCID 论文
+[2026-03-18 16:24:51] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:24:51] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-1825-0097
+[2026-03-18 16:27:16] [INFO] 开始查找 ORCID: 0000-0002-1825-0097
+[2026-03-18 16:27:16] [INFO] 作者姓名: Josiah Carberry -> josiah carberry
+[2026-03-18 16:27:16] [INFO] 作者组织: Brown University
+[2026-03-18 16:27:16] [INFO] 获取到 6 篇 ORCID 论文
+[2026-03-18 16:27:16] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:27:16] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-1825-0097
+[2026-03-18 16:27:33] [INFO] 开始查找 ORCID: 0000-0002-1825-0097
+[2026-03-18 16:27:33] [INFO] 作者姓名: Josiah Carberry -> josiah carberry
+[2026-03-18 16:27:33] [INFO] 作者组织: Brown University
+[2026-03-18 16:27:33] [INFO] 获取到 6 篇 ORCID 论文
+[2026-03-18 16:27:33] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:27:33] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-1825-0097
+[2026-03-18 16:27:52] [INFO] 开始查找 ORCID: 0000-0002-4890-9147
+[2026-03-18 16:27:52] [INFO] 作者姓名: Dmitrijs Rots -> dmitrijs rots
+[2026-03-18 16:27:52] [INFO] 作者组织: Erasmus MC
+[2026-03-18 16:27:52] [INFO] 获取到 14 篇 ORCID 论文
+[2026-03-18 16:27:52] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:27:52] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-4890-9147
+[2026-03-18 16:28:43] [INFO] 开始查找 ORCID: 0000-0002-1825-0097
+[2026-03-18 16:28:43] [INFO] 作者姓名: Josiah Carberry -> josiah carberry
+[2026-03-18 16:28:43] [INFO] 作者组织: Brown University
+[2026-03-18 16:28:43] [INFO] 获取到 6 篇 ORCID 论文
+[2026-03-18 16:28:43] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:28:43] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-1825-0097
+[2026-03-18 16:30:52] [INFO] 开始查找 ORCID: 0000-0002-1825-0097
+[2026-03-18 16:30:52] [INFO] 作者姓名: Josiah Carberry -> josiah carberry
+[2026-03-18 16:30:52] [INFO] 作者组织: Brown University
+[2026-03-18 16:30:52] [INFO] 获取到 6 篇 ORCID 论文
+[2026-03-18 16:30:52] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:30:52] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-1825-0097
+[2026-03-18 16:32:32] [INFO] 开始查找 ORCID: 0000-0002-4890-9147
+[2026-03-18 16:32:32] [INFO] 作者姓名: Dmitrijs Rots -> dmitrijs rots
+[2026-03-18 16:32:32] [INFO] 作者组织: Erasmus MC
+[2026-03-18 16:32:32] [INFO] 获取到 14 篇 ORCID 论文
+[2026-03-18 16:32:32] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:32:32] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-4890-9147
+[2026-03-18 16:32:56] [INFO] 开始查找 ORCID: 0000-0002-1825-0097
+[2026-03-18 16:32:56] [INFO] 作者姓名: Josiah Carberry -> josiah carberry
+[2026-03-18 16:32:56] [INFO] 作者组织: Brown University
+[2026-03-18 16:32:56] [INFO] 获取到 6 篇 ORCID 论文
+[2026-03-18 16:32:56] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:32:56] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-1825-0097
+[2026-03-18 16:33:15] [INFO] 开始查找 ORCID: 0000-0002-1825-0097
+[2026-03-18 16:33:15] [INFO] 作者姓名: Josiah Carberry -> josiah carberry
+[2026-03-18 16:33:15] [INFO] 作者组织: Brown University
+[2026-03-18 16:33:15] [INFO] 获取到 6 篇 ORCID 论文
+[2026-03-18 16:33:15] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:33:15] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-1825-0097
+[2026-03-18 16:40:47] [INFO] 开始查找 ORCID: 0000-0002-1825-0097
+[2026-03-18 16:40:47] [INFO] 作者姓名: Josiah Carberry -> josiah carberry
+[2026-03-18 16:40:47] [INFO] 作者组织: Brown University
+[2026-03-18 16:40:47] [INFO] 获取到 6 篇 ORCID 论文
+[2026-03-18 16:40:47] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:40:47] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-1825-0097
+[2026-03-18 16:41:28] [INFO] 开始查找 ORCID: 0000-0002-4890-9147
+[2026-03-18 16:41:28] [INFO] 作者姓名: Dmitrijs Rots -> dmitrijs rots
+[2026-03-18 16:41:28] [INFO] 作者组织: Erasmus MC
+[2026-03-18 16:41:28] [INFO] 获取到 14 篇 ORCID 论文
+[2026-03-18 16:41:28] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-03-18 16:41:28] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-4890-9147
+[2026-03-19 14:35:56] [INFO] 缓存命中: 0000-0002-2527-5874 -> https://scholar.google.com/citations?user=1i5_TFEAAAAJ&hl=zh-CN
+[2026-03-19 14:56:21] [INFO] 缓存命中: 0000-0002-2527-5874 -> https://scholar.google.com/citations?user=1i5_TFEAAAAJ&hl=zh-CN
+[2026-03-19 21:43:13] [INFO] 缓存命中: 0000-0003-3397-3725 -> https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN
+[2026-03-19 21:43:13] [INFO] 开始搜索组织链接: Emmy Tay @ University of California, Davis
+[2026-03-19 21:43:14] [INFO] 搜索完成: Emmy Tay @ University of California, Davis, 找到 10 个链接
+[2026-03-19 21:43:14] [INFO] 缓存写入: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN @ University of California, Davis, 10 个链接
+[2026-03-19 21:44:56] [INFO] 缓存命中: 0000-0002-1067-7782 -> https://scholar.google.com/citations?user=NoU7ECUAAAAJ&hl=en&num=20&oi=sra
+[2026-03-19 21:44:56] [INFO] 开始搜索组织链接: Askar A Kleefeldt @ MRC Laboratory of Molecular Biology (LMB)
+[2026-03-19 21:44:57] [INFO] 搜索完成: Askar A Kleefeldt @ MRC Laboratory of Molecular Biology (LMB), 找到 10 个链接
+[2026-03-19 21:44:57] [INFO] 缓存写入: https://scholar.google.com/citations?user=NoU7ECUAAAAJ&hl=en&num=20&oi=sra @ MRC Laboratory of Molecular Biology (LMB), 10 个链接
+[2026-03-19 21:45:04] [INFO] 缓存命中: 0000-0002-1067-7782 -> https://scholar.google.com/citations?user=NoU7ECUAAAAJ&hl=en&num=20&oi=sra
+[2026-03-19 21:45:04] [INFO] 开始搜索组织链接: Askar A Kleefeldt @ MRC Laboratory of Molecular Biology (LMB)
+[2026-03-19 21:45:04] [INFO] 缓存命中: https://scholar.google.com/citations?user=NoU7ECUAAAAJ&hl=en&num=20&oi=sra, 10 个链接
+[2026-03-19 21:45:13] [INFO] 缓存命中: 0000-0002-1067-7782 -> https://scholar.google.com/citations?user=NoU7ECUAAAAJ&hl=en&num=20&oi=sra
+[2026-03-19 21:45:13] [INFO] 开始搜索组织链接: Askar A Kleefeldt @ MRC Laboratory of Molecular Biology (LMB)
+[2026-03-19 21:45:13] [INFO] 缓存命中: https://scholar.google.com/citations?user=NoU7ECUAAAAJ&hl=en&num=20&oi=sra, 10 个链接
+[2026-03-19 21:46:05] [INFO] 开始搜索社交媒体链接: Emmy Tay @ University of California, Davis
+[2026-03-19 21:46:06] [INFO] 社交媒体搜索完成: Emmy Tay @ University of California, Davis, 找到 10 个链接
+[2026-03-19 21:46:06] [INFO] 缓存写入: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN @ University of California, Davis, 10 个 social_media 链接
+[2026-03-19 21:48:22] [INFO] 开始搜索社交媒体链接: Askar A Kleefeldt @ MRC Laboratory of Molecular Biology (LMB)
+[2026-03-19 21:48:22] [INFO] 社交媒体搜索完成: Askar A Kleefeldt @ MRC Laboratory of Molecular Biology (LMB), 找到 4 个链接
+[2026-03-19 21:48:22] [INFO] 缓存写入: https://scholar.google.com/citations?user=NoU7ECUAAAAJ&hl=en&num=20&oi=sra @ MRC Laboratory of Molecular Biology (LMB), 4 个 social_media 链接
+[2026-03-19 21:49:06] [INFO] 开始搜索社交媒体链接: Askar A Kleefeldt @ MRC Laboratory of Molecular Biology (LMB)
+[2026-03-19 21:49:06] [INFO] 缓存命中: https://scholar.google.com/citations?user=NoU7ECUAAAAJ&hl=en&num=20&oi=sra, 4 个 social_media 链接
+[2026-03-19 21:49:07] [INFO] 开始搜索社交媒体链接: Askar A Kleefeldt @ MRC Laboratory of Molecular Biology (LMB)
+[2026-03-19 21:49:07] [INFO] 缓存命中: https://scholar.google.com/citations?user=NoU7ECUAAAAJ&hl=en&num=20&oi=sra, 4 个 social_media 链接
+[2026-03-19 21:50:38] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-19 21:50:41] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-03-19 21:50:46] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-03-19 21:50:52] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-03-19 21:51:28] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-19 21:51:32] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-03-19 21:51:36] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-03-19 21:51:40] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-03-19 21:51:54] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-19 21:51:59] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-03-19 21:52:03] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-03-19 21:52:08] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-03-19 21:52:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-19 21:52:37] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-03-19 21:52:41] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-03-19 21:52:45] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'

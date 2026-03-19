@@ -1,31 +1,25 @@
 """
 Org Pipeline 详细统计模块
 
-记录 organization / social_media / arbitrary 三类联网搜索的详细统计信息：
+记录 organization / social_media / arbitrary 三类联网搜索的阶段级统计：
 - 总请求次数
 - 缓存命中次数
 - 成功 / 未找到 / 错误次数
-- 链接与 worker 执行统计
+- 链接与处理结果汇总
+
+注意：
+- 这里只统计 stage 级调用
+- 不累计单个页面 worker / crawler 的次数
 """
 
 import json
 import threading
 from pathlib import Path
 from datetime import datetime, date
-from typing import Dict, Optional
+from typing import Any, Dict, Optional
 
 
 PIPELINE_TYPES = ("organization", "social_media", "arbitrary")
-
-
-def _empty_worker_stats() -> Dict:
-    return {
-        "total": 0,
-        "success": 0,
-        "failed": 0,
-        "timeout": 0,
-        "by_mode": {},
-    }
 
 
 def _empty_pipeline_stats() -> Dict:
@@ -38,7 +32,6 @@ def _empty_pipeline_stats() -> Dict:
         "links_found_total": 0,
         "links_processed_total": 0,
         "worker_success_total": 0,
-        "worker": _empty_worker_stats(),
     }
 
 
@@ -72,10 +65,36 @@ class OrgPipelineStats:
                 with open(self.storage_path, "r", encoding="utf-8") as f:
                     content = f.read().strip()
                     if content:
-                        return json.loads(content)
+                        return self._normalize_legacy_data(json.loads(content))
             except (json.JSONDecodeError, IOError):
                 pass
         return self._get_empty_stats()
+
+    def _normalize_legacy_data(self, data: Dict[str, Any]) -> Dict[str, Any]:
+        if not isinstance(data, dict):
+            return self._get_empty_stats()
+
+        data.pop("worker", None)
+
+        by_pipeline = data.get("by_pipeline")
+        if isinstance(by_pipeline, dict):
+            for value in by_pipeline.values():
+                if isinstance(value, dict):
+                    value.pop("worker", None)
+
+        daily = data.get("daily")
+        if isinstance(daily, dict):
+            for daily_bucket in daily.values():
+                if not isinstance(daily_bucket, dict):
+                    continue
+                daily_bucket.pop("worker", None)
+                daily_pipelines = daily_bucket.get("by_pipeline")
+                if isinstance(daily_pipelines, dict):
+                    for value in daily_pipelines.values():
+                        if isinstance(value, dict):
+                            value.pop("worker", None)
+
+        return data
 
     def _get_empty_stats(self) -> Dict:
         return {
@@ -87,7 +106,6 @@ class OrgPipelineStats:
             "links_found_total": 0,
             "links_processed_total": 0,
             "worker_success_total": 0,
-            "worker": _empty_worker_stats(),
             "by_pipeline": {name: _empty_pipeline_stats() for name in PIPELINE_TYPES},
             "daily": {},
             "last_updated": None,
@@ -103,7 +121,6 @@ class OrgPipelineStats:
             "links_found_total": 0,
             "links_processed_total": 0,
             "worker_success_total": 0,
-            "worker": _empty_worker_stats(),
             "by_pipeline": {name: _empty_pipeline_stats() for name in PIPELINE_TYPES},
         }
 
@@ -128,76 +145,79 @@ class OrgPipelineStats:
         if pipeline_type not in bucket["by_pipeline"]:
             bucket["by_pipeline"][pipeline_type] = _empty_pipeline_stats()
 
-    def _record_worker(self, worker_bucket: Dict, success: bool, mode: str, error: Optional[str]):
-        worker_bucket["total"] += 1
-        mode_key = mode or "unknown"
-        worker_bucket["by_mode"][mode_key] = worker_bucket["by_mode"].get(mode_key, 0) + 1
-        if success:
-            worker_bucket["success"] += 1
-        else:
-            worker_bucket["failed"] += 1
-            if error and "超时" in error:
-                worker_bucket["timeout"] += 1
-
-    def record_request(self, pipeline_type: str):
+    def record_request(self, pipeline_type: str, include_global: bool = True):
         today = self._get_today()
         with self._lock:
             self._ensure_daily(today)
             self._ensure_pipeline(self._data, pipeline_type)
             self._ensure_pipeline(self._data["daily"][today], pipeline_type)
 
-            self._data["total_requests"] += 1
             self._data["by_pipeline"][pipeline_type]["total_requests"] += 1
-            self._data["daily"][today]["total_requests"] += 1
             self._data["daily"][today]["by_pipeline"][pipeline_type]["total_requests"] += 1
+
+            if include_global:
+                self._data["total_requests"] += 1
+                self._data["daily"][today]["total_requests"] += 1
             self._save_data()
 
-    def record_cache_hit(self, pipeline_type: str):
+    def record_cache_hit(self, pipeline_type: str, include_global: bool = True):
         today = self._get_today()
         with self._lock:
             self._ensure_daily(today)
             self._ensure_pipeline(self._data, pipeline_type)
             self._ensure_pipeline(self._data["daily"][today], pipeline_type)
 
-            self._data["cache_hits"] += 1
             self._data["by_pipeline"][pipeline_type]["cache_hits"] += 1
-            self._data["daily"][today]["cache_hits"] += 1
             self._data["daily"][today]["by_pipeline"][pipeline_type]["cache_hits"] += 1
+
+            if include_global:
+                self._data["cache_hits"] += 1
+                self._data["daily"][today]["cache_hits"] += 1
             self._save_data()
 
-    def record_error(self, pipeline_type: str):
+    def record_error(self, pipeline_type: str, include_global: bool = True):
         today = self._get_today()
         with self._lock:
             self._ensure_daily(today)
             self._ensure_pipeline(self._data, pipeline_type)
             self._ensure_pipeline(self._data["daily"][today], pipeline_type)
 
-            self._data["error"] += 1
             self._data["by_pipeline"][pipeline_type]["error"] += 1
-            self._data["daily"][today]["error"] += 1
             self._data["daily"][today]["by_pipeline"][pipeline_type]["error"] += 1
+
+            if include_global:
+                self._data["error"] += 1
+                self._data["daily"][today]["error"] += 1
             self._save_data()
 
-    def record_not_found(self, pipeline_type: str, links_found: int = 0, links_processed: int = 0):
+    def record_not_found(
+        self,
+        pipeline_type: str,
+        links_found: int = 0,
+        links_processed: int = 0,
+        include_global: bool = True,
+    ):
         today = self._get_today()
         with self._lock:
             self._ensure_daily(today)
             self._ensure_pipeline(self._data, pipeline_type)
             self._ensure_pipeline(self._data["daily"][today], pipeline_type)
 
-            self._data["not_found"] += 1
-            self._data["links_found_total"] += links_found
-            self._data["links_processed_total"] += links_processed
             self._data["by_pipeline"][pipeline_type]["not_found"] += 1
             self._data["by_pipeline"][pipeline_type]["links_found_total"] += links_found
             self._data["by_pipeline"][pipeline_type]["links_processed_total"] += links_processed
 
-            self._data["daily"][today]["not_found"] += 1
-            self._data["daily"][today]["links_found_total"] += links_found
-            self._data["daily"][today]["links_processed_total"] += links_processed
             self._data["daily"][today]["by_pipeline"][pipeline_type]["not_found"] += 1
             self._data["daily"][today]["by_pipeline"][pipeline_type]["links_found_total"] += links_found
             self._data["daily"][today]["by_pipeline"][pipeline_type]["links_processed_total"] += links_processed
+
+            if include_global:
+                self._data["not_found"] += 1
+                self._data["links_found_total"] += links_found
+                self._data["links_processed_total"] += links_processed
+                self._data["daily"][today]["not_found"] += 1
+                self._data["daily"][today]["links_found_total"] += links_found
+                self._data["daily"][today]["links_processed_total"] += links_processed
             self._save_data()
 
     def record_success(
@@ -206,6 +226,7 @@ class OrgPipelineStats:
         links_found: int,
         links_processed: int,
         worker_success: int,
+        include_global: bool = True,
     ):
         today = self._get_today()
         with self._lock:
@@ -213,36 +234,61 @@ class OrgPipelineStats:
             self._ensure_pipeline(self._data, pipeline_type)
             self._ensure_pipeline(self._data["daily"][today], pipeline_type)
 
-            self._data["success"] += 1
-            self._data["links_found_total"] += links_found
-            self._data["links_processed_total"] += links_processed
-            self._data["worker_success_total"] += worker_success
             self._data["by_pipeline"][pipeline_type]["success"] += 1
             self._data["by_pipeline"][pipeline_type]["links_found_total"] += links_found
             self._data["by_pipeline"][pipeline_type]["links_processed_total"] += links_processed
             self._data["by_pipeline"][pipeline_type]["worker_success_total"] += worker_success
 
-            self._data["daily"][today]["success"] += 1
-            self._data["daily"][today]["links_found_total"] += links_found
-            self._data["daily"][today]["links_processed_total"] += links_processed
-            self._data["daily"][today]["worker_success_total"] += worker_success
             self._data["daily"][today]["by_pipeline"][pipeline_type]["success"] += 1
             self._data["daily"][today]["by_pipeline"][pipeline_type]["links_found_total"] += links_found
             self._data["daily"][today]["by_pipeline"][pipeline_type]["links_processed_total"] += links_processed
             self._data["daily"][today]["by_pipeline"][pipeline_type]["worker_success_total"] += worker_success
+
+            if include_global:
+                self._data["success"] += 1
+                self._data["links_found_total"] += links_found
+                self._data["links_processed_total"] += links_processed
+                self._data["worker_success_total"] += worker_success
+                self._data["daily"][today]["success"] += 1
+                self._data["daily"][today]["links_found_total"] += links_found
+                self._data["daily"][today]["links_processed_total"] += links_processed
+                self._data["daily"][today]["worker_success_total"] += worker_success
             self._save_data()
 
-    def record_worker_result(self, pipeline_type: str, success: bool, mode: str, error: Optional[str] = None):
+    def record_stage_cache_hits_from_person_cache(self, stages: Dict[str, Any]):
+        if not isinstance(stages, dict):
+            return
+
         today = self._get_today()
         with self._lock:
             self._ensure_daily(today)
-            self._ensure_pipeline(self._data, pipeline_type)
-            self._ensure_pipeline(self._data["daily"][today], pipeline_type)
 
-            self._record_worker(self._data["worker"], success, mode, error)
-            self._record_worker(self._data["by_pipeline"][pipeline_type]["worker"], success, mode, error)
-            self._record_worker(self._data["daily"][today]["worker"], success, mode, error)
-            self._record_worker(self._data["daily"][today]["by_pipeline"][pipeline_type]["worker"], success, mode, error)
+            stage_counts = []
+            if "organization_pipeline" in stages:
+                stage_counts.append(("organization", 1))
+            if "social_media_pipeline" in stages:
+                stage_counts.append(("social_media", 1))
+
+            arbitrary_stage = stages.get("arbitrary_pipeline")
+            if isinstance(arbitrary_stage, dict) and arbitrary_stage:
+                stage_counts.append(("arbitrary", len(arbitrary_stage)))
+
+            if stage_counts:
+                self._data["total_requests"] += 1
+                self._data["cache_hits"] += 1
+                self._data["daily"][today]["total_requests"] += 1
+                self._data["daily"][today]["cache_hits"] += 1
+
+            for pipeline_type, repeat_count in stage_counts:
+                self._ensure_pipeline(self._data, pipeline_type)
+                self._ensure_pipeline(self._data["daily"][today], pipeline_type)
+
+                self._data["by_pipeline"][pipeline_type]["total_requests"] += repeat_count
+                self._data["by_pipeline"][pipeline_type]["cache_hits"] += repeat_count
+
+                self._data["daily"][today]["by_pipeline"][pipeline_type]["total_requests"] += repeat_count
+                self._data["daily"][today]["by_pipeline"][pipeline_type]["cache_hits"] += repeat_count
+
             self._save_data()
 
     def get_stats(self) -> Dict:
@@ -269,25 +315,47 @@ def get_org_pipeline_stats() -> OrgPipelineStats:
     return _stats
 
 
-def record_request(pipeline_type: str):
-    get_org_pipeline_stats().record_request(pipeline_type)
+def record_request(pipeline_type: str, include_global: bool = True):
+    get_org_pipeline_stats().record_request(pipeline_type, include_global=include_global)
 
 
-def record_cache_hit(pipeline_type: str):
-    get_org_pipeline_stats().record_cache_hit(pipeline_type)
+def record_cache_hit(pipeline_type: str, include_global: bool = True):
+    get_org_pipeline_stats().record_cache_hit(pipeline_type, include_global=include_global)
 
 
-def record_error(pipeline_type: str):
-    get_org_pipeline_stats().record_error(pipeline_type)
+def record_error(pipeline_type: str, include_global: bool = True):
+    get_org_pipeline_stats().record_error(pipeline_type, include_global=include_global)
 
 
-def record_not_found(pipeline_type: str, links_found: int = 0, links_processed: int = 0):
-    get_org_pipeline_stats().record_not_found(pipeline_type, links_found, links_processed)
+def record_not_found(
+    pipeline_type: str,
+    links_found: int = 0,
+    links_processed: int = 0,
+    include_global: bool = True,
+):
+    get_org_pipeline_stats().record_not_found(
+        pipeline_type,
+        links_found,
+        links_processed,
+        include_global=include_global,
+    )
 
 
-def record_success(pipeline_type: str, links_found: int, links_processed: int, worker_success: int):
-    get_org_pipeline_stats().record_success(pipeline_type, links_found, links_processed, worker_success)
+def record_success(
+    pipeline_type: str,
+    links_found: int,
+    links_processed: int,
+    worker_success: int,
+    include_global: bool = True,
+):
+    get_org_pipeline_stats().record_success(
+        pipeline_type,
+        links_found,
+        links_processed,
+        worker_success,
+        include_global=include_global,
+    )
 
 
-def record_worker_result(pipeline_type: str, success: bool, mode: str, error: Optional[str] = None):
-    get_org_pipeline_stats().record_worker_result(pipeline_type, success, mode, error)
+def record_stage_cache_hits_from_person_cache(stages: Dict[str, Any]):
+    get_org_pipeline_stats().record_stage_cache_hits_from_person_cache(stages)

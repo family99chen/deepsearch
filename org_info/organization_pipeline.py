@@ -35,7 +35,6 @@ from utils.org_pipeline_stats import (
     record_not_found as record_stats_not_found,
     record_request as record_stats_request,
     record_success as record_stats_success,
-    record_worker_result as record_stats_worker_result,
 )
 
 
@@ -416,13 +415,6 @@ class OrganizationPipelineSubprocess:
         
         # 4. 合并结果
         success_results = [r for r in results if r.success]
-        for result in results:
-            record_stats_worker_result(
-                PIPELINE_TYPE,
-                success=result.success,
-                mode=result.mode,
-                error=result.error,
-            )
         reports = [r.report for r in success_results if r.report]
         merged = self._merge_reports(reports, person_name)
         merged += "\n---\n## Google Search API 原始内容\n\n"

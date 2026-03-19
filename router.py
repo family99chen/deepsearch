@@ -11,8 +11,9 @@ from io import StringIO
 from datetime import date
 from typing import Optional, AsyncGenerator
 import concurrent.futures
+from urllib.parse import quote
 
-from fastapi import APIRouter, Query, Depends, Request
+from fastapi import APIRouter, Query, Depends, Request, HTTPException
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 
@@ -43,6 +44,23 @@ async def track_usage(request: Request):
     endpoint = request.url.path
     record_api_call(endpoint)
     return endpoint
+
+
+def _resolve_google_scholar_url(
+    google_scholar_url: Optional[str],
+    user_id: Optional[str],
+) -> str:
+    """兼容完整 URL 和 Scholar user_id 两种输入。"""
+    if google_scholar_url:
+        return google_scholar_url.strip()
+
+    if user_id:
+        return f"https://scholar.google.com/citations?user={quote(user_id.strip())}"
+
+    raise HTTPException(
+        status_code=400,
+        detail="请提供 google_scholar_url 或 user_id",
+    )
 
 
 class SearchResult(BaseModel):
@@ -314,15 +332,18 @@ async def find_google_scholar_account_sync(
 
 @router.post("/person/report", response_model=PersonPipelineResult, tags=["Person Pipeline"])
 async def person_report_by_google_scholar(
-    google_scholar_url: str = Query(..., description="Google Scholar 个人主页 URL"),
+    google_scholar_url: Optional[str] = Query(None, description="Google Scholar 个人主页 URL"),
+    user_id: Optional[str] = Query(None, description="Google Scholar 账号 ID，如 iWykd1cAAAAJ"),
     _tracked: str = Depends(track_usage),
 ):
     """
-    输入 Google Scholar URL 生成个人完整报告
+    输入 Google Scholar URL 或账号 ID 生成个人完整报告
     """
+    resolved_google_scholar_url = _resolve_google_scholar_url(google_scholar_url, user_id)
+
     async with PIPELINE_SEMAPHORE:
         def run_sync():
-            return run_person_pipeline(google_scholar_url=google_scholar_url)
+            return run_person_pipeline(google_scholar_url=resolved_google_scholar_url)
 
         loop = asyncio.get_event_loop()
         executor = concurrent.futures.ThreadPoolExecutor(max_workers=1)
@@ -339,14 +360,17 @@ async def person_report_by_google_scholar(
 
 @router.get("/person/report/stream", tags=["Person Pipeline"])
 async def person_report_by_google_scholar_stream(
-    google_scholar_url: str = Query(..., description="Google Scholar 个人主页 URL"),
+    google_scholar_url: Optional[str] = Query(None, description="Google Scholar 个人主页 URL"),
+    user_id: Optional[str] = Query(None, description="Google Scholar 账号 ID，如 iWykd1cAAAAJ"),
     _tracked: str = Depends(track_usage),
 ):
     """
-    Google Scholar 报告（流式输出）
+    输入 Google Scholar URL 或账号 ID，流式生成报告
     """
+    resolved_google_scholar_url = _resolve_google_scholar_url(google_scholar_url, user_id)
+
     return StreamingResponse(
-        run_person_pipeline_with_logs(mode="gs", identifier=google_scholar_url),
+        run_person_pipeline_with_logs(mode="gs", identifier=resolved_google_scholar_url),
         media_type="text/event-stream",
         headers={
             "Cache-Control": "no-cache",

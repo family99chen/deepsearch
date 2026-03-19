@@ -34,6 +34,7 @@ from org_info.social_media_pipeline import run_social_media_pipeline
 from org_info.arbitrary_pipeline import run_arbitrary_pipeline
 from llm import query_async
 from localdb.deepsearch_cache import get_person_pipeline_cache
+from utils.org_pipeline_stats import record_stage_cache_hits_from_person_cache
 
 
 def _run_async(coro):
@@ -194,6 +195,7 @@ class PersonPipeline:
         )
         if cached_result:
             final = cached_result["final"]
+            record_stage_cache_hits_from_person_cache(cached_result.get("stages", {}))
             if self.verbose:
                 print("=" * 60)
                 print("[Pipeline] 命中 person_pipeline_cache")

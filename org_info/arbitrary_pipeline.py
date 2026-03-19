@@ -26,7 +26,6 @@ from utils.org_pipeline_stats import (
     record_not_found as record_stats_not_found,
     record_request as record_stats_request,
     record_success as record_stats_success,
-    record_worker_result as record_stats_worker_result,
 )
 
 WORKER_SCRIPT = Path(__file__).parent / "_worker.py"
@@ -139,7 +138,7 @@ class ArbitraryPipelineSubprocess:
         organization: Optional[str] = None,
     ) -> PipelineResult:
         start_time = time.time()
-        record_stats_request(PIPELINE_TYPE)
+        record_stats_request(PIPELINE_TYPE, include_global=False)
 
         if self.verbose:
             print("=" * 60)
@@ -153,14 +152,14 @@ class ArbitraryPipelineSubprocess:
                 google_scholar_url=google_scholar_url,
             )
         except Exception:
-            record_stats_error(PIPELINE_TYPE)
+            record_stats_error(PIPELINE_TYPE, include_global=False)
             raise
 
         if raw.get("from_cache"):
-            record_stats_cache_hit(PIPELINE_TYPE)
+            record_stats_cache_hit(PIPELINE_TYPE, include_global=False)
 
         if raw.get("success") is False:
-            record_stats_error(PIPELINE_TYPE)
+            record_stats_error(PIPELINE_TYPE, include_global=False)
             merged = self._merge_reports([], person_name, query)
             merged += "\n---\n## Arbitrary Search 原始内容\n\n"
             merged += "```json\n"
@@ -183,7 +182,12 @@ class ArbitraryPipelineSubprocess:
                 print(f"    {i+1}. {link.url[:60]}...")
 
         if not links:
-            record_stats_not_found(PIPELINE_TYPE, links_found=0, links_processed=0)
+            record_stats_not_found(
+                PIPELINE_TYPE,
+                links_found=0,
+                links_processed=0,
+                include_global=False,
+            )
             merged = self._merge_reports([], person_name, query)
             merged += "\n---\n## Arbitrary Search 原始内容\n\n"
             merged += "```json\n"
@@ -228,13 +232,6 @@ class ArbitraryPipelineSubprocess:
                     ))
 
         success_results = [r for r in results if r.success]
-        for result in results:
-            record_stats_worker_result(
-                PIPELINE_TYPE,
-                success=result.success,
-                mode=result.mode,
-                error=result.error,
-            )
         reports = [r.report for r in success_results if r.report]
         merged = self._merge_reports(reports, person_name, query)
         merged += "\n---\n## Arbitrary Search 原始内容\n\n"
@@ -249,12 +246,14 @@ class ArbitraryPipelineSubprocess:
                 links_found=len(links),
                 links_processed=len(results),
                 worker_success=len(success_results),
+                include_global=False,
             )
         else:
             record_stats_not_found(
                 PIPELINE_TYPE,
                 links_found=len(links),
                 links_processed=len(results),
+                include_global=False,
             )
         if self.verbose:
             print(f"\n[完成] 成功: {len(success_results)}/{len(results)}, 耗时: {elapsed:.1f}s")
