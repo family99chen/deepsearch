@@ -1,5 +1,5 @@
 {
-  "total": 29769,
+  "total": 29773,
   "daily": {
     "2026-01-17": {
       "total": 192,
@@ -148,19 +148,19 @@
       "last_request": "2026-03-18T16:41:28.136157"
     },
     "2026-03-19": {
-      "total": 12,
+      "total": 16,
       "endpoints": {
         "/find": 2,
-        "/person/report/orcid/stream": 10
+        "/person/report/orcid/stream": 14
       },
       "first_request": "2026-03-19T14:35:56.780003",
-      "last_request": "2026-03-19T22:10:05.681821"
+      "last_request": "2026-03-19T22:53:39.467326"
     }
   },
   "endpoints": {
     "/find": 29724,
-    "/person/report/orcid/stream": 41,
+    "/person/report/orcid/stream": 45,
     "/person/report/stream": 4
   },
-  "last_updated": "2026-03-19T22:10:05.681830"
+  "last_updated": "2026-03-19T22:53:39.467336"
 }

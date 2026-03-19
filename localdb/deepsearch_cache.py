@@ -17,7 +17,7 @@ from .insert_mongo import MongoCache
 PERSON_PIPELINE_COLLECTION = "person_pipeline_cache"
 PAGE_ANALYSIS_COLLECTION = "page_analysis_cache"
 
-PERSON_PIPELINE_CACHE_VERSION = "v1"
+PERSON_PIPELINE_CACHE_VERSION = "v2_no_extra"
 PAGE_ANALYSIS_CACHE_VERSION = "v1"
 
 PERSON_PIPELINE_CACHE_TTL = 7 * 24 * 3600
@@ -56,7 +56,6 @@ class PersonPipelineCache:
         backend: str,
         extra_sources: Optional[List[str]] = None,
     ) -> str:
-        extra_hash = _stable_hash(extra_sources or [])
         return (
             f"gs:{_normalize_url(google_scholar_url)}"
             f"|iter:{max_iterations}"
@@ -64,7 +63,6 @@ class PersonPipelineCache:
             f"|workers:{max_workers}"
             f"|model:{model}"
             f"|backend:{backend}"
-            f"|extra:{extra_hash}"
             f"|ver:{PERSON_PIPELINE_CACHE_VERSION}"
         )
 
@@ -131,8 +129,6 @@ class PersonPipelineCache:
                 "max_workers": max_workers,
                 "model": model,
                 "backend": backend,
-                "extra_sources_hash": _stable_hash(extra_sources or []),
-                "extra_sources_count": len(extra_sources or []),
                 "cache_version": PERSON_PIPELINE_CACHE_VERSION,
                 "cached_at": datetime.utcnow().isoformat(),
             },

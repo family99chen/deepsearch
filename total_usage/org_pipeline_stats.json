@@ -1,32 +1,32 @@
 {
-  "total_requests": 1,
-  "cache_hits": 1,
-  "success": 0,
+  "total_requests": 4,
+  "cache_hits": 3,
+  "success": 2,
   "not_found": 0,
   "error": 0,
-  "links_found_total": 0,
-  "links_processed_total": 0,
-  "worker_success_total": 0,
+  "links_found_total": 20,
+  "links_processed_total": 20,
+  "worker_success_total": 11,
   "by_pipeline": {
     "organization": {
-      "total_requests": 1,
-      "cache_hits": 1,
-      "success": 0,
+      "total_requests": 4,
+      "cache_hits": 3,
+      "success": 2,
       "not_found": 0,
       "error": 0,
-      "links_found_total": 0,
-      "links_processed_total": 0,
-      "worker_success_total": 0
+      "links_found_total": 20,
+      "links_processed_total": 20,
+      "worker_success_total": 11
     },
     "social_media": {
-      "total_requests": 1,
-      "cache_hits": 1,
-      "success": 0,
+      "total_requests": 4,
+      "cache_hits": 3,
+      "success": 2,
       "not_found": 0,
       "error": 0,
-      "links_found_total": 0,
-      "links_processed_total": 0,
-      "worker_success_total": 0
+      "links_found_total": 16,
+      "links_processed_total": 16,
+      "worker_success_total": 8
     },
     "arbitrary": {
       "total_requests": 0,
@@ -41,34 +41,34 @@
   },
   "daily": {
     "2026-03-19": {
-      "total_requests": 1,
-      "cache_hits": 1,
-      "success": 0,
+      "total_requests": 4,
+      "cache_hits": 3,
+      "success": 2,
       "not_found": 0,
       "error": 0,
-      "links_found_total": 0,
-      "links_processed_total": 0,
-      "worker_success_total": 0,
+      "links_found_total": 20,
+      "links_processed_total": 20,
+      "worker_success_total": 11,
       "by_pipeline": {
         "organization": {
-          "total_requests": 1,
-          "cache_hits": 1,
-          "success": 0,
+          "total_requests": 4,
+          "cache_hits": 3,
+          "success": 2,
           "not_found": 0,
           "error": 0,
-          "links_found_total": 0,
-          "links_processed_total": 0,
-          "worker_success_total": 0
+          "links_found_total": 20,
+          "links_processed_total": 20,
+          "worker_success_total": 11
         },
         "social_media": {
-          "total_requests": 1,
-          "cache_hits": 1,
-          "success": 0,
+          "total_requests": 4,
+          "cache_hits": 3,
+          "success": 2,
           "not_found": 0,
           "error": 0,
-          "links_found_total": 0,
-          "links_processed_total": 0,
-          "worker_success_total": 0
+          "links_found_total": 16,
+          "links_processed_total": 16,
+          "worker_success_total": 8
         },
         "arbitrary": {
           "total_requests": 0,
@@ -83,5 +83,5 @@
       }
     }
   },
-  "last_updated": "2026-03-19T22:10:05.758568"
+  "last_updated": "2026-03-19T22:53:39.595736"
 }
