@@ -101,6 +101,14 @@ def _safe_record_stats(callback):
         pass
 
 
+FINAL_REPORT_FAILURE_PREFIX = "DeepSearch failed:"
+
+
+def is_failure_report(report: Optional[str]) -> bool:
+    value = (report or "").strip()
+    return value.startswith(FINAL_REPORT_FAILURE_PREFIX)
+
+
 def _is_not_found_exception(exc: Exception) -> bool:
     if isinstance(exc, ValueError):
         message = str(exc).lower()
@@ -208,7 +216,10 @@ class PersonPipeline:
 
     @staticmethod
     def _build_failure_report(person_name: str) -> str:
-        return f"DeepSearch failed: unable to generate the final report for {person_name}. Please try again later."
+        return (
+            f"{FINAL_REPORT_FAILURE_PREFIX} unable to generate the final report "
+            f"for {person_name}. Please try again later."
+        )
 
     def run(
         self,

@@ -6,6 +6,7 @@ Google Scholar 账号查找路由
 
 import sys
 import os
+import json
 import asyncio
 from io import StringIO
 from datetime import date
@@ -21,7 +22,7 @@ from pydantic import BaseModel
 sys.path.insert(0, "google_scholar_url")
 
 from google_scholar_url.google_account_fetcher_pipeline import find_google_scholar_by_orcid
-from pipeline import run_person_pipeline, run_person_pipeline_by_orcid
+from pipeline import run_person_pipeline, run_person_pipeline_by_orcid, is_failure_report
 from utils.usage_tracker import record_api_call, get_tracker
 from utils.org_pipeline_stats import get_org_pipeline_stats
 from utils.pipeline_stats import get_pipeline_stats
@@ -32,6 +33,10 @@ router = APIRouter(tags=["Google Scholar"])
 # Pipeline 并发控制（避免资源争抢）
 PIPELINE_MAX_CONCURRENT = int(os.getenv("PIPELINE_MAX_CONCURRENT", "10"))
 PIPELINE_SEMAPHORE = asyncio.Semaphore(PIPELINE_MAX_CONCURRENT)
+
+
+def _format_sse_json(tag: str, payload: dict) -> str:
+    return f"data: {tag} {json.dumps(payload, ensure_ascii=False)}\n\n"
 
 
 # ============ 使用统计依赖 ============
@@ -140,7 +145,6 @@ async def run_person_pipeline_with_logs(mode: str, identifier: str) -> AsyncGene
         
     except Exception as e:
         error_msg = str(e)
-        yield f"data: [ERROR] {error_msg}\n\n"
     
     if result_obj:
         result = PersonPipelineResult(
@@ -151,9 +155,13 @@ async def run_person_pipeline_with_logs(mode: str, identifier: str) -> AsyncGene
             queries=result_obj.queries,
             sources=result_obj.sources,
         )
-        yield f"data: [RESULT] {result.model_dump_json()}\n\n"
+        event_tag = "[ERROR]" if is_failure_report(result.report) else "[RESULT]"
+        yield _format_sse_json(event_tag, result.model_dump())
     else:
-        yield f"data: [RESULT] {{\"success\": false, \"error\": \"{error_msg or 'unknown error'}\"}}\n\n"
+        yield _format_sse_json(
+            "[ERROR]",
+            {"success": False, "error": error_msg or "unknown error"},
+        )
     
     yield "data: [END]\n\n"
 
@@ -232,7 +240,6 @@ async def run_pipeline_with_logs(orcid_id: str) -> AsyncGenerator[str, None]:
         
     except Exception as e:
         error_msg = str(e)
-        yield f"data: [ERROR] {error_msg}\n\n"
     
     # 输出最终结果
     if result_url:
@@ -251,7 +258,10 @@ async def run_pipeline_with_logs(orcid_id: str) -> AsyncGenerator[str, None]:
             error=error_msg or "未找到匹配的 Google Scholar 账号"
         )
     
-    yield f"data: [RESULT] {result.model_dump_json()}\n\n"
+    if result.success:
+        yield _format_sse_json("[RESULT]", result.model_dump())
+    else:
+        yield _format_sse_json("[ERROR]", result.model_dump())
     yield "data: [END]\n\n"
 
 
@@ -268,7 +278,8 @@ async def find_google_scholar_account_stream(
     返回 Server-Sent Events (SSE) 流式响应：
     - [START] 开始处理
     - [LOG] 处理日志
-    - [RESULT] 最终结果（JSON 格式）
+    - [RESULT] 成功结果（JSON 格式）
+    - [ERROR] 失败结果（JSON 格式）
     - [END] 处理结束
     """
     return StreamingResponse(
