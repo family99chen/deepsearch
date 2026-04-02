@@ -50,9 +50,6 @@ except ImportError:
 
 # ============ 常量定义 ============
 
-# Chrome 二进制路径（由 Selenium Manager 自动下载）
-CHROME_BINARY_PATH = "/root/.cache/selenium/chrome/linux64/143.0.7499.192/chrome"
-
 # 社交媒体/联系方式域名（这些链接应该作为 person_info 而不是 relevant_links）
 CONTACT_DOMAINS = [
     "facebook.com", "fb.com",

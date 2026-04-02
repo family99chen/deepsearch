@@ -1,0 +1,1726 @@
+[2026-03-20 11:08:41] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 11:08:41] [INFO] IterAgent 开始: Emmy Tay, URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC10402119/
+[2026-03-20 11:08:41] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 11:08:41] [INFO] IterAgent 开始: Emmy Tay, URL: https://www.researchgate.net/profile/Emmy-Tay
+[2026-03-20 11:08:42] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 11:08:42] [INFO] IterAgent 开始: Emmy Tay, URL: https://www.reardonlab.com/project-gallery-page
+[2026-03-20 11:08:42] [INFO] Xvfb 已启动: DISPLAY=:129
+[2026-03-20 11:08:42] [INFO] Xvfb 已启动: DISPLAY=:127
+[2026-03-20 11:08:43] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:08:43] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:08:43] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:08:43] [INFO] Xvfb 已启动: DISPLAY=:156
+[2026-03-20 11:08:43] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:08:44] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:08:45] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:08:46] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:08:46] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:08:46] [WARNING] 打开标签页失败: https://pmc.ncbi.nlm.nih.gov/articles/PMC10402119/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 11:08:46] [WARNING] 打开标签页失败: https://www.researchgate.net/profile/Emmy-Tay, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 11:08:48] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:08:50] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=52243): Max retries exceeded with url: /session/134256f929acdd2756ffa21bb772708c/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7368ebb53dd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:08:50] [INFO] IterAgent 完成: Emmy Tay, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 11:08:50] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:08:50] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=33277): Max retries exceeded with url: /session/63c56ad7c7d431c24b20facc4179e8f9/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d9ab776c690>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:08:50] [INFO] IterAgent 完成: Emmy Tay, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 11:08:50] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:08:51] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:08:51] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:08:51] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:08:52] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:08:52] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:08:53] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:08:54] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:08:54] [INFO] 域名预热完成: https://www.researchgate.net
+[2026-03-20 11:08:57] [INFO] LLM API Async 查询成功: 162 字符
+[2026-03-20 11:08:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:08:57] [INFO] 域名预热完成: https://pmc.ncbi.nlm.nih.gov
+[2026-03-20 11:08:58] [INFO] LLM API Async 查询成功: 8 字符
+[2026-03-20 11:08:59] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=49821): Max retries exceeded with url: /session/850203de300bea53d8584366fbfa6758/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d9ab7760f90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:08:59] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=49821): Max retries exceeded with url: /session/850203de300bea53d8584366fbfa6758/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d9ab77a8950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:08:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:02] [INFO] LLM API Async 查询成功: 54 字符
+[2026-03-20 11:09:02] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:05] [INFO] LLM API Async 查询成功: 106 字符
+[2026-03-20 11:09:05] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:07] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:08] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 11:09:08] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=49821): Max retries exceeded with url: /session/850203de300bea53d8584366fbfa6758/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-03-20 11:09:08] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=49821): Max retries exceeded with url: /session/850203de300bea53d8584366fbfa6758/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d9ab779e350>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:09:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:10] [INFO] LLM API Async 查询成功: 56 字符
+[2026-03-20 11:09:10] [INFO] LLM API Async 查询成功: 50 字符
+[2026-03-20 11:09:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:10] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:09:10] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=49821): Max retries exceeded with url: /session/850203de300bea53d8584366fbfa6758/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d9ab7760f10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:09:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:11] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:12] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:09:12] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=49821): Max retries exceeded with url: /session/850203de300bea53d8584366fbfa6758/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 11:09:12] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=49821): Max retries exceeded with url: /session/850203de300bea53d8584366fbfa6758/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d9ab77602d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:09:12] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:16] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:09:16] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=49821): Max retries exceeded with url: /session/850203de300bea53d8584366fbfa6758/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 11:09:16] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=49821): Max retries exceeded with url: /session/850203de300bea53d8584366fbfa6758/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d9ab776ef50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:09:16] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:18] [INFO] LLM API Async 查询成功: 178 字符
+[2026-03-20 11:09:18] [INFO] IterAgent 完成: Emmy Tay, 迭代 2 轮, 访问 3 页, 收集 1 条信息
+[2026-03-20 11:09:18] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:09:18] [INFO] Xvfb 已停止
+[2026-03-20 11:09:18] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:09:18] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=49821): Max retries exceeded with url: /session/850203de300bea53d8584366fbfa6758/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 11:09:18] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=49821): Max retries exceeded with url: /session/850203de300bea53d8584366fbfa6758/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d9ab776ed50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:09:18] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:20] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 11:09:20] [INFO] IterAgent 开始: Emmy Tay, URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC11230291/
+[2026-03-20 11:09:21] [INFO] Xvfb 已启动: DISPLAY=:154
+[2026-03-20 11:09:21] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:09:21] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:09:21] [INFO] LLM API Async 查询成功: 138 字符
+[2026-03-20 11:09:21] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:22] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:09:22] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=49821): Max retries exceeded with url: /session/850203de300bea53d8584366fbfa6758/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d9ab7778550>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:09:22] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:09:22] [INFO] Xvfb 已停止
+[2026-03-20 11:09:22] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:09:24] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 11:09:24] [INFO] IterAgent 开始: Emmy Tay, URL: https://pubmed.ncbi.nlm.nih.gov/39937862/
+[2026-03-20 11:09:25] [INFO] Xvfb 已启动: DISPLAY=:132
+[2026-03-20 11:09:25] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:09:25] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:09:26] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:09:28] [ERROR] 获取页面内容失败: https://pmc.ncbi.nlm.nih.gov/articles/PMC11230291/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 11:09:28] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=34237): Max retries exceeded with url: /session/df48be6a67bda5ff8d35db772eccd024/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5eb27706d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:09:28] [INFO] IterAgent 完成: Emmy Tay, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 11:09:28] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:09:28] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:09:28] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:09:28] [WARNING] 打开标签页失败: https://pubmed.ncbi.nlm.nih.gov/39937862/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 11:09:29] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:09:32] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=39447): Max retries exceeded with url: /session/3cb6fdb550ccd72ee49244ace7c85baf/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7e8478160690>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:09:32] [INFO] IterAgent 完成: Emmy Tay, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 11:09:32] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:09:32] [INFO] LLM API Async 查询成功: 310 字符
+[2026-03-20 11:09:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:33] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:09:33] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:09:33] [INFO] 域名预热完成: https://pmc.ncbi.nlm.nih.gov
+[2026-03-20 11:09:34] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:09:34] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 11:09:36] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=52827): Max retries exceeded with url: /session/6af746cf584ea895383f6bc20af9c572/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7368ea60b290>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:09:36] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:38] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=55859): Max retries exceeded with url: /session/5980d13874280323a76b9c3be82a5311/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5eb277e950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:09:38] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:09:38] [INFO] Xvfb 已停止
+[2026-03-20 11:09:38] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:09:38] [ERROR] 执行失败: search, HTTPConnectionPool(host='localhost', port=52827): Max retries exceeded with url: /session/6af746cf584ea895383f6bc20af9c572/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection obje
+[2026-03-20 11:09:38] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=52827): Max retries exceeded with url: /session/6af746cf584ea895383f6bc20af9c572/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7368ebb5eb10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:09:38] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:38] [INFO] 域名预热完成: https://pubmed.ncbi.nlm.nih.gov
+[2026-03-20 11:09:40] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:09:40] [ERROR] 执行失败: search, HTTPConnectionPool(host='localhost', port=52827): Max retries exceeded with url: /session/6af746cf584ea895383f6bc20af9c572/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection obje
+[2026-03-20 11:09:40] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=52827): Max retries exceeded with url: /session/6af746cf584ea895383f6bc20af9c572/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7368ea7f5610>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:09:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:42] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:09:42] [ERROR] 执行失败: search, HTTPConnectionPool(host='localhost', port=52827): Max retries exceeded with url: /session/6af746cf584ea895383f6bc20af9c572/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection obje
+[2026-03-20 11:09:42] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=52827): Max retries exceeded with url: /session/6af746cf584ea895383f6bc20af9c572/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7368ebbb2090>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:09:42] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:44] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 11:09:44] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=52827): Max retries exceeded with url: /session/6af746cf584ea895383f6bc20af9c572/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-03-20 11:09:44] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=52827): Max retries exceeded with url: /session/6af746cf584ea895383f6bc20af9c572/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7368ea60bad0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:09:44] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:47] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:09:47] [ERROR] 执行失败: search, HTTPConnectionPool(host='localhost', port=52827): Max retries exceeded with url: /session/6af746cf584ea895383f6bc20af9c572/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection obje
+[2026-03-20 11:09:47] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=52827): Max retries exceeded with url: /session/6af746cf584ea895383f6bc20af9c572/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7368ebbb3bd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:09:47] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:09:47] [INFO] Xvfb 已停止
+[2026-03-20 11:09:52] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:09:58] [INFO] LLM API Async 查询成功: 125 字符
+[2026-03-20 11:09:58] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:10:12] [INFO] LLM API Async 查询成功: 195 字符
+[2026-03-20 11:10:12] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:10:15] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 11:10:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:10:27] [INFO] LLM API Async 查询成功: 128 字符
+[2026-03-20 11:10:28] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:10:33] [INFO] LLM API Async 查询成功: 128 字符
+[2026-03-20 11:10:33] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:10:35] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 11:10:47] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:10:53] [INFO] LLM API Async 查询成功: 152 字符
+[2026-03-20 11:10:54] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:10] [INFO] LLM API Async 查询成功: 463 字符
+[2026-03-20 11:11:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:12] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 11:11:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:11:12] [INFO] Xvfb 已停止
+[2026-03-20 11:11:14] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 11:11:14] [INFO] IterAgent 开始: Emmy Tay, URL: https://journals.physiology.org/doi/prev/20230103-aop/abs/10.1152/ajplung.00179.2022
+[2026-03-20 11:11:14] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 11:11:14] [INFO] IterAgent 开始: Emmy Tay, URL: https://ucdavisaggies.com/news/2021/9/28/football-no-8-8-uc-davis-back-home-to-host-idaho
+[2026-03-20 11:11:15] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 11:11:15] [INFO] IterAgent 开始: Emmy Tay, URL: https://www.facebook.com/groups/1721160937978388/posts/23973642825636881/
+[2026-03-20 11:11:15] [INFO] Xvfb 已启动: DISPLAY=:155
+[2026-03-20 11:11:15] [INFO] Xvfb 已启动: DISPLAY=:154
+[2026-03-20 11:11:15] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:11:15] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:11:15] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:11:16] [INFO] Xvfb 已启动: DISPLAY=:176
+[2026-03-20 11:11:16] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:11:17] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:11:17] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:11:18] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:11:18] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:11:20] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:11:20] [WARNING] 打开标签页失败: https://ucdavisaggies.com/news/2021/9/28/football-no-8-8-uc-davis-back-home-to-host-idaho, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 11:11:23] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:24] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=56695): Max retries exceeded with url: /session/e339a6e7d7a7481abc407164d9e72fc7/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a8b30570610>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:11:24] [INFO] IterAgent 完成: Emmy Tay, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 11:11:24] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:11:24] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:11:25] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:11:25] [INFO] LLM API Async 查询成功: 56 字符
+[2026-03-20 11:11:25] [INFO] IterAgent 完成: Emmy Tay, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 11:11:25] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:11:25] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:11:26] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:11:26] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:11:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:27] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:11:28] [WARNING] 域名预热失败: https://ucdavisaggies.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 11:11:28] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=33015): Max retries exceeded with url: /session/e15b66ba9dca1d36242ee61dc38d7fa8/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 11:11:28] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:11:28] [INFO] Xvfb 已停止
+[2026-03-20 11:11:30] [INFO] 域名预热完成: https://journals.physiology.org
+[2026-03-20 11:11:30] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 11:11:30] [INFO] IterAgent 开始: Emmy Tay, URL: https://www.pnas.org/doi/abs/10.1073/pnas.2415287122
+[2026-03-20 11:11:31] [INFO] Xvfb 已启动: DISPLAY=:104
+[2026-03-20 11:11:31] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:11:32] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:11:32] [INFO] LLM API Async 查询成功: 508 字符
+[2026-03-20 11:11:32] [INFO] IterAgent 完成: Emmy Tay, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 11:11:32] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:11:33] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:11:33] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:11:33] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:11:34] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:11:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:37] [INFO] LLM API Async 查询成功: 56 字符
+[2026-03-20 11:11:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:37] [INFO] 域名预热完成: https://www.facebook.com
+[2026-03-20 11:11:38] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:40] [INFO] LLM API Async 查询成功: 56 字符
+[2026-03-20 11:11:40] [INFO] IterAgent 完成: Emmy Tay, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 11:11:40] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:11:40] [INFO] LLM API Async 查询成功: 103 字符
+[2026-03-20 11:11:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:41] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:11:41] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:11:42] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:11:43] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:11:43] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=51639): Max retries exceeded with url: /session/cdc588386638d3ada974dfe1daeac4e4/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x789aa926e590>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:11:43] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=51639): Max retries exceeded with url: /session/cdc588386638d3ada974dfe1daeac4e4/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x789aa92f7190>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:11:43] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:44] [INFO] 域名预热完成: https://www.pnas.org
+[2026-03-20 11:11:46] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:46] [INFO] LLM API Async 查询成功: 74 字符
+[2026-03-20 11:11:46] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:48] [INFO] LLM API Async 查询成功: 54 字符
+[2026-03-20 11:11:48] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:49] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:51] [INFO] LLM API Async 查询成功: 103 字符
+[2026-03-20 11:11:51] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:51] [INFO] LLM API Async 查询成功: 54 字符
+[2026-03-20 11:11:51] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:51] [INFO] LLM API Async 查询成功: 114 字符
+[2026-03-20 11:11:51] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:53] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:11:53] [INFO] LLM API Async 查询成功: 103 字符
+[2026-03-20 11:11:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:54] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:11:54] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=51639): Max retries exceeded with url: /session/cdc588386638d3ada974dfe1daeac4e4/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 11:11:54] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=51639): Max retries exceeded with url: /session/cdc588386638d3ada974dfe1daeac4e4/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x789aa9234c90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:11:54] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:55] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:11:55] [INFO] LLM API Async 查询成功: 54 字符
+[2026-03-20 11:11:55] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:55] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:56] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:11:56] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=51639): Max retries exceeded with url: /session/cdc588386638d3ada974dfe1daeac4e4/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x789aa923f0d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:11:56] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:58] [INFO] LLM API Async 查询成功: 56 字符
+[2026-03-20 11:11:58] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:58] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:11:58] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=51639): Max retries exceeded with url: /session/cdc588386638d3ada974dfe1daeac4e4/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 11:11:58] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=51639): Max retries exceeded with url: /session/cdc588386638d3ada974dfe1daeac4e4/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x789aa9246950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:11:58] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:11:59] [INFO] LLM API Async 查询成功: 103 字符
+[2026-03-20 11:11:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:00] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:12:00] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=51639): Max retries exceeded with url: /session/cdc588386638d3ada974dfe1daeac4e4/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 11:12:00] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=51639): Max retries exceeded with url: /session/cdc588386638d3ada974dfe1daeac4e4/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x789aa92448d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:12:00] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:00] [INFO] LLM API Async 查询成功: 103 字符
+[2026-03-20 11:12:00] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:01] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:12:01] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:12:01] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=51639): Max retries exceeded with url: /session/cdc588386638d3ada974dfe1daeac4e4/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 11:12:01] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=51639): Max retries exceeded with url: /session/cdc588386638d3ada974dfe1daeac4e4/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x789aa923fb10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:12:01] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:02] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:12:03] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:04] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:04] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:12:04] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=51639): Max retries exceeded with url: /session/cdc588386638d3ada974dfe1daeac4e4/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 11:12:04] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=51639): Max retries exceeded with url: /session/cdc588386638d3ada974dfe1daeac4e4/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x789aa923ecd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:12:04] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:12:04] [INFO] Xvfb 已停止
+[2026-03-20 11:12:05] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:12:06] [INFO] LLM API Async 查询成功: 54 字符
+[2026-03-20 11:12:06] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:07] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 11:12:07] [INFO] IterAgent 开始: Emmy Tay, URL: https://www.rismedia.com/2021/07/12/emmy-award-journalist-transitions-real-estate-career/
+[2026-03-20 11:12:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:08] [INFO] Xvfb 已启动: DISPLAY=:148
+[2026-03-20 11:12:08] [INFO] LLM API Async 查询成功: 103 字符
+[2026-03-20 11:12:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:08] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:12:08] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:12:09] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:12:10] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:12:10] [INFO] LLM API Async 查询成功: 91 字符
+[2026-03-20 11:12:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:11] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:12:12] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:14] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:14] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:12:14] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:15] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:16] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:12:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:17] [INFO] LLM API Async 查询成功: 104 字符
+[2026-03-20 11:12:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:17] [INFO] LLM API Async 查询成功: 144 字符
+[2026-03-20 11:12:17] [INFO] IterAgent 完成: Emmy Tay, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 11:12:17] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:12:18] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:12:18] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:12:18] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:12:19] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:12:19] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:12:19] [INFO] Xvfb 已停止
+[2026-03-20 11:12:19] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:12:20] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:12:20] [INFO] Xvfb 已停止
+[2026-03-20 11:12:21] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 11:12:21] [INFO] IterAgent 开始: Emmy Tay, URL: https://www.facebook.com/uclatft/posts/icymi-last-week-we-laughed-we-cried-and-we-celebrated-the-life-and-legacy-of-bob/1332775468896122/
+[2026-03-20 11:12:22] [INFO] Xvfb 已启动: DISPLAY=:152
+[2026-03-20 11:12:22] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:12:22] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:12:23] [INFO] 域名预热完成: https://www.rismedia.com
+[2026-03-20 11:12:23] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 11:12:23] [INFO] IterAgent 开始: Emmy Tay, URL: https://chass.ucr.edu/announcements/2024/09/09/chass-faculty-announcement
+[2026-03-20 11:12:24] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:12:24] [INFO] Xvfb 已启动: DISPLAY=:167
+[2026-03-20 11:12:24] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:12:24] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:12:25] [WARNING] 打开标签页失败: https://www.facebook.com/uclatft/posts/icymi-last-week-we-laughed-we-cried-and-we-celebrated-the-life-and-legacy-of-bob/1332775468896122/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 11:12:26] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:12:28] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:29] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=54569): Max retries exceeded with url: /session/a3a417c08a86bb969644b3e45d771595/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d73d15601d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:12:29] [INFO] IterAgent 完成: Emmy Tay, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 11:12:29] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:12:29] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:12:30] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:12:30] [INFO] LLM API Async 查询成功: 54 字符
+[2026-03-20 11:12:30] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:31] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:12:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:32] [INFO] LLM API Async 查询成功: 109 字符
+[2026-03-20 11:12:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:34] [INFO] 域名预热完成: https://www.facebook.com
+[2026-03-20 11:12:35] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:12:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:37] [INFO] LLM API Async 查询成功: 150 字符
+[2026-03-20 11:12:37] [INFO] LLM API Async 查询成功: 56 字符
+[2026-03-20 11:12:38] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:38] [WARNING] 打开标签页失败: https://chass.ucr.edu/announcements, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 11:12:38] [WARNING] 打开标签页失败: https://chass.ucr.edu/tags/chass-news-announcements, ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2026-03-20 11:12:40] [INFO] LLM API Async 查询成功: 96 字符
+[2026-03-20 11:12:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:42] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=49373): Max retries exceeded with url: /session/b0afa15da5860c30daa9a625397639eb/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b3970e98c90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:12:42] [INFO] IterAgent 完成: Emmy Tay, 迭代 2 轮, 访问 3 页, 收集 0 条信息
+[2026-03-20 11:12:42] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:12:42] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:12:42] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:12:43] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:12:43] [INFO] LLM API Async 查询成功: 62 字符
+[2026-03-20 11:12:43] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:43] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:12:45] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:47] [INFO] LLM API Async 查询成功: 54 字符
+[2026-03-20 11:12:47] [INFO] LLM API Async 查询成功: 127 字符
+[2026-03-20 11:12:47] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:47] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:49] [INFO] 域名预热完成: https://chass.ucr.edu
+[2026-03-20 11:12:50] [INFO] LLM API Async 查询成功: 114 字符
+[2026-03-20 11:12:50] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:50] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:12:51] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=53043): Max retries exceeded with url: /session/3a394de2ea9f67a1ed3df8c92aaab0cd/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d73d114cb10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:12:51] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:52] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:12:53] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:12:53] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=53043): Max retries exceeded with url: /session/3a394de2ea9f67a1ed3df8c92aaab0cd/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-03-20 11:12:53] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=53043): Max retries exceeded with url: /session/3a394de2ea9f67a1ed3df8c92aaab0cd/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d73d113f590>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:12:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:54] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:56] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:12:56] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=53043): Max retries exceeded with url: /session/3a394de2ea9f67a1ed3df8c92aaab0cd/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 11:12:56] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=53043): Max retries exceeded with url: /session/3a394de2ea9f67a1ed3df8c92aaab0cd/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d73d114e6d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:12:56] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:57] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:12:57] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 11:12:57] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:12:57] [INFO] Xvfb 已停止
+[2026-03-20 11:12:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:12:59] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 11:12:59] [INFO] IterAgent 开始: Emmy Tay, URL: https://immunology.ucdavis.edu/sites/g/files/dgvnsk6526/files/media/documents/2023%20Booklet_final_reduced.docx.pdf
+[2026-03-20 11:13:00] [INFO] Xvfb 已启动: DISPLAY=:149
+[2026-03-20 11:13:01] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:13:01] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:13:02] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:13:02] [INFO] LLM API Async 查询成功: 104 字符
+[2026-03-20 11:13:02] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:03] [INFO] LLM API Async 查询成功: 140 字符
+[2026-03-20 11:13:03] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:04] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:13:06] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:07] [INFO] LLM API Async 查询成功: 121 字符
+[2026-03-20 11:13:07] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:08] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:13:08] [INFO] LLM API Async 查询成功: 110 字符
+[2026-03-20 11:13:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:09] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44057): Max retries exceeded with url: /session/0698b34291c149ad5c7af3ed671e0cbb/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b3970355410>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:13:09] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:10] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:13:10] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=44057): Max retries exceeded with url: /session/0698b34291c149ad5c7af3ed671e0cbb/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-03-20 11:13:10] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44057): Max retries exceeded with url: /session/0698b34291c149ad5c7af3ed671e0cbb/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b3970349c50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:13:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:10] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:13:12] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:12] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:13:12] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=44057): Max retries exceeded with url: /session/0698b34291c149ad5c7af3ed671e0cbb/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 11:13:12] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44057): Max retries exceeded with url: /session/0698b34291c149ad5c7af3ed671e0cbb/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b397033ef50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:13:12] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:13:12] [INFO] Xvfb 已停止
+[2026-03-20 11:13:14] [INFO] LLM API Async 查询成功: 56 字符
+[2026-03-20 11:13:14] [INFO] IterAgent 完成: Emmy Tay, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 11:13:14] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:13:14] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:13:14] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:13:14] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:13:14] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=44057): Max retries exceeded with url: /session/0698b34291c149ad5c7af3ed671e0cbb/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 11:13:14] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44057): Max retries exceeded with url: /session/0698b34291c149ad5c7af3ed671e0cbb/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b3970355950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:13:14] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:15] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 11:13:15] [INFO] IterAgent 开始: Emmy Tay, URL: https://asiasociety.org/northern-california/events/2021-future-education-summit-teaching-global-understanding
+[2026-03-20 11:13:15] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:13:16] [INFO] Xvfb 已启动: DISPLAY=:170
+[2026-03-20 11:13:16] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:13:16] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:13:16] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:13:16] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=44057): Max retries exceeded with url: /session/0698b34291c149ad5c7af3ed671e0cbb/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 11:13:16] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44057): Max retries exceeded with url: /session/0698b34291c149ad5c7af3ed671e0cbb/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b3970356110>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:13:16] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:18] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:13:19] [INFO] 域名预热完成: https://immunology.ucdavis.edu
+[2026-03-20 11:13:19] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:13:19] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=44057): Max retries exceeded with url: /session/0698b34291c149ad5c7af3ed671e0cbb/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 11:13:19] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44057): Max retries exceeded with url: /session/0698b34291c149ad5c7af3ed671e0cbb/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b3970d98e50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:13:19] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:13:19] [INFO] Xvfb 已停止
+[2026-03-20 11:13:28] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:29] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:30] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:13:30] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:31] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:13:33] [INFO] LLM API Async 查询成功: 186 字符
+[2026-03-20 11:13:34] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=32933): Max retries exceeded with url: /session/4999c18914d1cea8bcc031ec55b10549/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d9959991190>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:13:34] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=32933): Max retries exceeded with url: /session/4999c18914d1cea8bcc031ec55b10549/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d995996c990>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:13:34] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:36] [INFO] LLM API Async 查询成功: 68 字符
+[2026-03-20 11:13:36] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:39] [INFO] LLM API Async 查询成功: 115 字符
+[2026-03-20 11:13:39] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:41] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:13:41] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=32933): Max retries exceeded with url: /session/4999c18914d1cea8bcc031ec55b10549/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 11:13:41] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=32933): Max retries exceeded with url: /session/4999c18914d1cea8bcc031ec55b10549/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d995996f3d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:13:41] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:43] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:13:43] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=32933): Max retries exceeded with url: /session/4999c18914d1cea8bcc031ec55b10549/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 11:13:43] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=32933): Max retries exceeded with url: /session/4999c18914d1cea8bcc031ec55b10549/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d995996c850>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:13:43] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:44] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:44] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:47] [INFO] LLM API Async 查询成功: 194 字符
+[2026-03-20 11:13:47] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:13:47] [ERROR] 执行失败: search, HTTPConnectionPool(host='localhost', port=32933): Max retries exceeded with url: /session/4999c18914d1cea8bcc031ec55b10549/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection obje
+[2026-03-20 11:13:47] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=32933): Max retries exceeded with url: /session/4999c18914d1cea8bcc031ec55b10549/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d9958f0e250>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:13:47] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:13:49] [INFO] LLM API Async 查询成功: 194 字符
+[2026-03-20 11:13:50] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 11:13:50] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=32933): Max retries exceeded with url: /session/4999c18914d1cea8bcc031ec55b10549/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 11:13:50] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=32933): Max retries exceeded with url: /session/4999c18914d1cea8bcc031ec55b10549/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d9958f0c210>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 11:13:50] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:13:50] [INFO] Xvfb 已停止
+[2026-03-20 11:13:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:14:05] [INFO] LLM API Async 查询成功: 194 字符
+[2026-03-20 11:14:05] [INFO] IterAgent 完成: Emmy Tay, 迭代 3 轮, 访问 4 页, 收集 0 条信息
+[2026-03-20 11:14:05] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:14:06] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 11:14:06] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 11:14:07] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 11:14:12] [INFO] 域名预热完成: https://asiasociety.org
+[2026-03-20 11:14:22] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:14:25] [INFO] LLM API Async 查询成功: 102 字符
+[2026-03-20 11:14:25] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:14:32] [INFO] LLM API Async 查询成功: 108 字符
+[2026-03-20 11:14:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:14:33] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:14:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:14:40] [INFO] LLM API Async 查询成功: 97 字符
+[2026-03-20 11:14:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:14:44] [INFO] LLM API Async 查询成功: 113 字符
+[2026-03-20 11:14:44] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:14:45] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 11:14:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:14:57] [INFO] LLM API Async 查询成功: 92 字符
+[2026-03-20 11:14:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:14:59] [INFO] LLM API Async 查询成功: 102 字符
+[2026-03-20 11:14:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:15:01] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 11:15:09] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:15:12] [INFO] LLM API Async 查询成功: 84 字符
+[2026-03-20 11:15:12] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:15:16] [INFO] LLM API Async 查询成功: 105 字符
+[2026-03-20 11:15:16] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:15:19] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 11:15:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:15:29] [INFO] LLM API Async 查询成功: 75 字符
+[2026-03-20 11:15:29] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:15:33] [INFO] LLM API Async 查询成功: 102 字符
+[2026-03-20 11:15:33] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:15:35] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:15:39] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:15:45] [INFO] LLM API Async 查询成功: 96 字符
+[2026-03-20 11:15:46] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:15:49] [INFO] LLM API Async 查询成功: 102 字符
+[2026-03-20 11:15:49] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:15:50] [INFO] LLM API Async 查询成功: 32 字符
+[2026-03-20 11:15:54] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 11:15:58] [INFO] LLM API Async 查询成功: 96 字符
+[2026-03-20 11:15:58] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 11:15:58] [INFO] Xvfb 已停止
+[2026-03-20 13:59:41] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 13:59:41] [INFO] IterAgent 开始: Aarno Palotie, URL: https://scholar.google.com/citations?user=1i5_TFEAAAAJ&hl=en
+[2026-03-20 13:59:41] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 13:59:41] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.broadinstitute.org/bios/aarno-palotie
+[2026-03-20 13:59:41] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 13:59:41] [INFO] IterAgent 开始: Aarno Palotie, URL: https://researchers.mgh.harvard.edu/profile/14173445/Aarno-Palotie
+[2026-03-20 13:59:42] [INFO] Xvfb 已启动: DISPLAY=:173
+[2026-03-20 13:59:42] [INFO] Xvfb 已启动: DISPLAY=:171
+[2026-03-20 13:59:42] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 13:59:42] [INFO] Xvfb 已启动: DISPLAY=:172
+[2026-03-20 13:59:42] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 13:59:42] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 13:59:42] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 13:59:44] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 13:59:44] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 13:59:45] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 13:59:45] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 13:59:46] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 13:59:46] [WARNING] 打开标签页失败: https://www.broadinstitute.org/bios/aarno-palotie, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 13:59:50] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=46305): Max retries exceeded with url: /session/03c04211801a7c064921d4fbe264dc03/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7aa3d176c650>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 13:59:50] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 13:59:50] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 13:59:51] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 13:59:51] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 13:59:51] [WARNING] 打开标签页失败: https://researchers.mgh.harvard.edu/profile/14173445/Aarno-Palotie, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 13:59:52] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 13:59:52] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 13:59:55] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=43639): Max retries exceeded with url: /session/e1533f6a54658ca83ce1e7df0dc46f4c/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x770fd8b58290>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 13:59:55] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 13:59:55] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 13:59:56] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 13:59:56] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 13:59:56] [INFO] LLM API Async 查询成功: 312 字符
+[2026-03-20 13:59:56] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 13:59:57] [INFO] 域名预热完成: https://www.broadinstitute.org
+[2026-03-20 13:59:58] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 13:59:59] [INFO] LLM API Async 查询成功: 8 字符
+[2026-03-20 14:00:00] [WARNING] 打开标签页失败: https://scholar.google.com/intl/en/scholar/about.html, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:00:04] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=50241): Max retries exceeded with url: /session/fbe51c757c533bf1cc2213f8ccca2c70/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7951286ef150>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:00:04] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:00:04] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=53163): Max retries exceeded with url: /session/2dc1ef9ef41fcab4c8fdda5d1e49902c/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7aa3d17ca850>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:00:04] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=53163): Max retries exceeded with url: /session/2dc1ef9ef41fcab4c8fdda5d1e49902c/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7aa3d17dfed0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:00:04] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:00:06] [INFO] 域名预热完成: https://researchers.mgh.harvard.edu
+[2026-03-20 14:00:07] [INFO] LLM API Async 查询成功: 81 字符
+[2026-03-20 14:00:07] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:00:12] [INFO] LLM API Async 查询成功: 434 字符
+[2026-03-20 14:00:12] [INFO] IterAgent 完成: Aarno Palotie, 迭代 2 轮, 访问 2 页, 收集 1 条信息
+[2026-03-20 14:00:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:00:12] [INFO] Xvfb 已停止
+[2026-03-20 14:00:14] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:00:14] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.finngen.fi/en/aarno-palotie-named-docent-year-2024
+[2026-03-20 14:00:15] [INFO] Xvfb 已启动: DISPLAY=:185
+[2026-03-20 14:00:15] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:00:15] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:00:16] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=49269): Max retries exceeded with url: /session/80714ef0a90e89c3f0d40cd79358facf/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x770fd8be3a90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:00:16] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=49269): Max retries exceeded with url: /session/80714ef0a90e89c3f0d40cd79358facf/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x770fd8bfa890>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:00:16] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:00:16] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:00:18] [INFO] LLM API Async 查询成功: 802 字符
+[2026-03-20 14:00:18] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:00:19] [INFO] LLM API Async 查询成功: 76 字符
+[2026-03-20 14:00:19] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:00:22] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 14:00:22] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:00:22] [INFO] Xvfb 已停止
+[2026-03-20 14:00:25] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:00:25] [INFO] IterAgent 开始: Aarno Palotie, URL: https://pubmed.ncbi.nlm.nih.gov/23912948/
+[2026-03-20 14:00:25] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:00:26] [INFO] Xvfb 已启动: DISPLAY=:166
+[2026-03-20 14:00:26] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:00:26] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:00:27] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:00:29] [INFO] LLM API Async 查询成功: 519 字符
+[2026-03-20 14:00:29] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:00:32] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 14:00:32] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:00:32] [INFO] Xvfb 已停止
+[2026-03-20 14:00:34] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:00:34] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41586-020-03176-6
+[2026-03-20 14:00:35] [INFO] Xvfb 已启动: DISPLAY=:144
+[2026-03-20 14:00:35] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:00:35] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:00:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:00:36] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:00:37] [INFO] LLM API Async 查询成功: 557 字符
+[2026-03-20 14:00:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:00:38] [INFO] LLM API Async 查询成功: 8 字符
+[2026-03-20 14:00:43] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:00:45] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:00:45] [INFO] LLM API Async 查询成功: 60 字符
+[2026-03-20 14:00:45] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:00:49] [INFO] LLM API Async 查询成功: 316 字符
+[2026-03-20 14:00:49] [INFO] IterAgent 完成: Aarno Palotie, 迭代 2 轮, 访问 2 页, 收集 1 条信息
+[2026-03-20 14:00:49] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:00:49] [INFO] Xvfb 已停止
+[2026-03-20 14:00:51] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:00:51] [INFO] IterAgent 开始: Aarno Palotie, URL: https://pubmed.ncbi.nlm.nih.gov/34035472/
+[2026-03-20 14:00:52] [INFO] Xvfb 已启动: DISPLAY=:167
+[2026-03-20 14:00:52] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:00:52] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:00:53] [INFO] LLM API Async 查询成功: 165 字符
+[2026-03-20 14:00:53] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:00:54] [WARNING] 打开标签页失败: https://www.ncbi.nlm.nih.gov/guide/browsers/#ncbi_accesskeys, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:00:54] [INFO] LLM API Async 查询成功: 202 字符
+[2026-03-20 14:00:54] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:00:57] [INFO] LLM API Async 查询成功: 8 字符
+[2026-03-20 14:00:58] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=56493): Max retries exceeded with url: /session/9d9ce01ebe1b6a52e91352b5516ac40b/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79792f014a50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:00:58] [INFO] IterAgent 完成: Aarno Palotie, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-03-20 14:00:58] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:00:58] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:00:58] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:00] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:01] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41586-020-03176-6#content, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:01:02] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:01:04] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:01:04] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41586-020-03176-6
+[2026-03-20 14:01:04] [INFO] 域名预热完成: https://pubmed.ncbi.nlm.nih.gov
+[2026-03-20 14:01:04] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:01:04] [INFO] IterAgent 开始: Aarno Palotie, URL: https://pubmed.ncbi.nlm.nih.gov/23912948/
+[2026-03-20 14:01:04] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:01:04] [INFO] IterAgent 开始: Aarno Palotie, URL: https://pubmed.ncbi.nlm.nih.gov/34035472/
+[2026-03-20 14:01:05] [INFO] Xvfb 已启动: DISPLAY=:196
+[2026-03-20 14:01:05] [ERROR] 获取页面内容失败: https://www.nature.com/search?author=Aarno%20Palotie, HTTPConnectionPool(host='localhost', port=57139): Max retries exceeded with url: /session/a3c4cf2241ffd751dfabf27f224637d2/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71dc3ae66c50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:01:05] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=57139): Max retries exceeded with url: /session/a3c4cf2241ffd751dfabf27f224637d2/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71dc3b07af10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:01:05] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:01:05] [INFO] Xvfb 已启动: DISPLAY=:195
+[2026-03-20 14:01:05] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:05] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:05] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:05] [INFO] Xvfb 已启动: DISPLAY=:122
+[2026-03-20 14:01:05] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:06] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:06] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:07] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:08] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:08] [WARNING] 打开标签页失败: https://pubmed.ncbi.nlm.nih.gov/23912948/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:01:09] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:10] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41586-020-03176-6, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:01:11] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=44871): Max retries exceeded with url: /session/d6d66dde6bace6ced186689cfe3eb7df/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79792f14e790>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:01:11] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=44871): Max retries exceeded with url: /session/d6d66dde6bace6ced186689cfe3eb7df/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79792f155610>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:01:11] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:01:12] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=51969): Max retries exceeded with url: /session/d9545c93dadb55b673e5d22e7b8766a7/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7471bcf6c050>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:01:12] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:01:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:12] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:13] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:13] [INFO] LLM API Async 查询成功: 72 字符
+[2026-03-20 14:01:14] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:01:14] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:14] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=48915): Max retries exceeded with url: /session/f7324b8eacab93b3b33b22896d68fbb9/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x766dc7370ed0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:01:14] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:01:14] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:15] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:15] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:15] [INFO] LLM API Async 查询成功: 243 字符
+[2026-03-20 14:01:15] [INFO] IterAgent 完成: Aarno Palotie, 迭代 2 轮, 访问 3 页, 收集 1 条信息
+[2026-03-20 14:01:15] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:15] [INFO] Xvfb 已停止
+[2026-03-20 14:01:16] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:17] [INFO] LLM API Async 查询成功: 196 字符
+[2026-03-20 14:01:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:01:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:01:17] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:01:17] [INFO] IterAgent 开始: Aarno Palotie, URL: https://scholar.google.lu/citations?user=mEM8q5cAAAAJ&hl=el
+[2026-03-20 14:01:18] [INFO] 域名预热完成: https://pubmed.ncbi.nlm.nih.gov
+[2026-03-20 14:01:18] [INFO] Xvfb 已启动: DISPLAY=:168
+[2026-03-20 14:01:19] [INFO] LLM API Async 查询成功: 8 字符
+[2026-03-20 14:01:19] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:19] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:19] [INFO] LLM API Async 查询成功: 213 字符
+[2026-03-20 14:01:19] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:01:19] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:01:19] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:01:19] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=37001): Max retries exceeded with url: /session/9e35a214757e7b414ed57217b97721d2/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:01:19] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:19] [INFO] Xvfb 已停止
+[2026-03-20 14:01:20] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:20] [INFO] Xvfb 已停止
+[2026-03-20 14:01:20] [WARNING] 打开标签页失败: https://www.ncbi.nlm.nih.gov/guide/browsers/#ncbi_accesskeys, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:01:20] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:21] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 14:01:21] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:21] [INFO] Xvfb 已停止
+[2026-03-20 14:01:22] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:01:22] [INFO] IterAgent 开始: Aarno Palotie, URL: https://scholar.google.lu/citations?user=mEM8q5cAAAAJ&hl=el
+[2026-03-20 14:01:22] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:01:22] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41467-017-01008-2
+[2026-03-20 14:01:23] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:01:23] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41467-017-01008-2
+[2026-03-20 14:01:23] [INFO] Xvfb 已启动: DISPLAY=:173
+[2026-03-20 14:01:23] [INFO] Xvfb 已启动: DISPLAY=:174
+[2026-03-20 14:01:23] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:23] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:23] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:24] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=56873): Max retries exceeded with url: /session/a40fddf325b33da35ac6245a8b15b945/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x788383d1dd90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:01:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:01:24] [WARNING] 打开标签页失败: https://scholar.google.lu/citations?user=mEM8q5cAAAAJ&hl=el, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:01:24] [INFO] Xvfb 已启动: DISPLAY=:195
+[2026-03-20 14:01:24] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:25] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:25] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:26] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:26] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:27] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41467-017-01008-2, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:01:28] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:28] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=56047): Max retries exceeded with url: /session/2680bdd727ae71adb9a046629390f7bb/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x715c2fb68890>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:01:28] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:01:28] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:28] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:28] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:29] [INFO] LLM API Async 查询成功: 253 字符
+[2026-03-20 14:01:29] [INFO] IterAgent 完成: Aarno Palotie, 迭代 2 轮, 访问 2 页, 收集 1 条信息
+[2026-03-20 14:01:29] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:29] [INFO] Xvfb 已停止
+[2026-03-20 14:01:29] [WARNING] 打开标签页失败: https://scholar.google.lu/citations?user=mEM8q5cAAAAJ&hl=el, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:01:29] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:30] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41467-017-01008-2, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:01:31] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:01:31] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.sisuproject.fi/about
+[2026-03-20 14:01:31] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=50517): Max retries exceeded with url: /session/da005610c9fbcbbc9022d0ccf00d0144/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b45835702d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:01:31] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:01:31] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:32] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:32] [INFO] Xvfb 已启动: DISPLAY=:187
+[2026-03-20 14:01:32] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:32] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:32] [WARNING] 域名预热失败: https://scholar.google.lu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:01:32] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=33051): Max retries exceeded with url: /session/a9474a412164f09ed69ba32107a92cde/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:01:32] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:32] [INFO] Xvfb 已停止
+[2026-03-20 14:01:33] [INFO] LLM API Async 查询成功: 326 字符
+[2026-03-20 14:01:33] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:01:33] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=34965): Max retries exceeded with url: /session/3bf2a68bd80d99952131b32ee1f6017b/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7c9094268810>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:01:33] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:01:33] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:33] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:33] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:34] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:34] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=53585): Max retries exceeded with url: /session/c911a3524d41d41609ac2e8ef1c4964e/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d72a8560390>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:01:34] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:01:34] [INFO] LLM API Async 查询成功: 8 字符
+[2026-03-20 14:01:34] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:35] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:35] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:35] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:35] [WARNING] 打开标签页失败: https://www.ncbi.nlm.nih.gov/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:01:35] [WARNING] 打开标签页失败: https://pubmed.ncbi.nlm.nih.gov/, HTTPConnectionPool(host='localhost', port=47325): Max retries exceeded with url: /session/007bab3411d096ac1add0eb7c1dbf1c7/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75983d413210>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:01:36] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:36] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:01:36] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=49173): Max retries exceeded with url: /session/217403efa740adcb32ab6f44b2795755/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:01:36] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:36] [INFO] Xvfb 已停止
+[2026-03-20 14:01:37] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:38] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:38] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:01:38] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.sisuproject.fi/about
+[2026-03-20 14:01:39] [WARNING] 域名预热失败: https://scholar.google.lu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:01:39] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=36329): Max retries exceeded with url: /session/48a600d6af40ed91ae31db4de162222c/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:01:39] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:39] [INFO] Xvfb 已停止
+[2026-03-20 14:01:39] [INFO] Xvfb 已启动: DISPLAY=:145
+[2026-03-20 14:01:39] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=47325): Max retries exceeded with url: /session/007bab3411d096ac1add0eb7c1dbf1c7/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75983d41fc10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:01:39] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:01:39] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:40] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:41] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:41] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:01:41] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=48057): Max retries exceeded with url: /session/103fac2b74a55d801da41721b21b1c5c/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:01:41] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:41] [INFO] Xvfb 已停止
+[2026-03-20 14:01:47] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:01:47] [INFO] IterAgent 开始: Aarno Palotie, URL: https://scholar.google.lu/citations?user=mEM8q5cAAAAJ&hl=el
+[2026-03-20 14:01:47] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:01:47] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41467-017-01008-2
+[2026-03-20 14:01:47] [INFO] LLM API Async 查询成功: 467 字符
+[2026-03-20 14:01:47] [INFO] IterAgent 完成: Aarno Palotie, 迭代 2 轮, 访问 3 页, 收集 1 条信息
+[2026-03-20 14:01:47] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:47] [INFO] Xvfb 已停止
+[2026-03-20 14:01:47] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:01:47] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.sisuproject.fi/about
+[2026-03-20 14:01:48] [INFO] Xvfb 已启动: DISPLAY=:193
+[2026-03-20 14:01:48] [INFO] Xvfb 已启动: DISPLAY=:194
+[2026-03-20 14:01:48] [INFO] Xvfb 已启动: DISPLAY=:107
+[2026-03-20 14:01:48] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:48] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:48] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:48] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:49] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:50] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:51] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:51] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:52] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:52] [WARNING] 打开标签页失败: https://scholar.google.lu/citations?user=mEM8q5cAAAAJ&hl=el, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:01:54] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41467-017-01008-2, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:01:56] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=46123): Max retries exceeded with url: /session/76c97ddb08d5b0e6dd9e1be299934cbd/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x742bb2b6c790>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:01:56] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:01:56] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:57] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:57] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:01:58] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=47001): Max retries exceeded with url: /session/19828fc3f176c11094a67a0325b2cb23/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x748029b6c810>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:01:58] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:01:58] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:01:58] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:01:58] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:01:59] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:02:00] [WARNING] 域名预热失败: https://scholar.google.lu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:02:00] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=58727): Max retries exceeded with url: /session/3031d99d865be90a26dfaa12399c047a/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:02:00] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:02:00] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:02:00] [INFO] Xvfb 已停止
+[2026-03-20 14:02:05] [WARNING] 打开标签页失败: https://www.sisuproject.fi/about, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:02:06] [INFO] 域名预热完成: https://www.nature.com
+[2026-03-20 14:02:09] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=47549): Max retries exceeded with url: /session/8f7a80315c2c28e2c6a3644e9c8cf239/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75a3c876c150>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:02:09] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:02:09] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:02:10] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:02:10] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:02:11] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:02:11] [WARNING] 打开标签页失败: https://www.sisuproject.fi/about, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:02:12] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=51577): Max retries exceeded with url: /session/f1e29fb9f5f05b2d779a5814ed0b1bdc/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x748029b633d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:02:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:02:12] [INFO] Xvfb 已停止
+[2026-03-20 14:02:15] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=45581): Max retries exceeded with url: /session/9a50ee863e9b439b49dedcc26467f10c/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a4d78170350>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:02:15] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:02:15] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:02:15] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:02:15] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:02:17] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:02:22] [WARNING] 打开标签页失败: https://www.sisuproject.fi/about, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:02:26] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=46705): Max retries exceeded with url: /session/f63bd87d562601c8dc9cfecf422b30dd/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x787a25f785d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:02:26] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:02:26] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:02:27] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:02:27] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:02:28] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:02:41] [WARNING] 域名预热失败: https://www.sisuproject.fi, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:02:41] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=44415): Max retries exceeded with url: /session/d1a09674ee551f78227a756a3674f945/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:02:41] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:02:41] [INFO] Xvfb 已停止
+[2026-03-20 14:02:44] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:02:44] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41386-021-01023-4
+[2026-03-20 14:02:45] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:02:45] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.helsinki.fi/en/news/university-community/aarno-palotie-named-docent-year-2024
+[2026-03-20 14:02:45] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:02:45] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41588-018-0297-3
+[2026-03-20 14:02:45] [INFO] Xvfb 已启动: DISPLAY=:188
+[2026-03-20 14:02:46] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:02:46] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:02:46] [INFO] Xvfb 已启动: DISPLAY=:108
+[2026-03-20 14:02:46] [INFO] Xvfb 已启动: DISPLAY=:109
+[2026-03-20 14:02:46] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:02:46] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:02:47] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:02:47] [WARNING] 域名预热失败: https://www.sisuproject.fi, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:02:47] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=54951): Max retries exceeded with url: /session/611d7b7c32186d1c54fe314d3c00db5b/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:02:47] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:02:47] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:02:47] [INFO] Xvfb 已停止
+[2026-03-20 14:02:48] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:02:49] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:02:49] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:02:49] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41386-021-01023-4
+[2026-03-20 14:02:50] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:02:50] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41386-021-01023-4, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:02:50] [INFO] Xvfb 已启动: DISPLAY=:146
+[2026-03-20 14:02:51] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:02:51] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.helsinki.fi/en/news/university-community/aarno-palotie-named-docent-year-2024
+[2026-03-20 14:02:51] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:02:51] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41588-018-0297-3
+[2026-03-20 14:02:51] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:02:51] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:02:52] [INFO] Xvfb 已启动: DISPLAY=:198
+[2026-03-20 14:02:52] [INFO] Xvfb 已启动: DISPLAY=:114
+[2026-03-20 14:02:52] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:02:52] [WARNING] 打开标签页失败: https://www.helsinki.fi/en/news/university-community/aarno-palotie-named-docent-year-2024, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:02:52] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:02:52] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:02:53] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:02:54] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:02:54] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=36971): Max retries exceeded with url: /session/ecf54631542caf2f52c1e5bb30da5a3f/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x769244974610>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:02:54] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:02:54] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:02:54] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:02:54] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:02:55] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:02:56] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41386-021-01023-4, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:02:56] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:02:56] [WARNING] 打开标签页失败: https://www.helsinki.fi/en/news/university-community/aarno-palotie-named-docent-year-2024, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:02:56] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=41333): Max retries exceeded with url: /session/f4b1e6388f03c03b301be5ecf6178a9a/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x725676170790>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:02:56] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:02:56] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:02:56] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:02:57] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:02:57] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:02:58] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:02:58] [INFO] Xvfb 已停止
+[2026-03-20 14:02:58] [WARNING] 域名预热失败: https://www.sisuproject.fi, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:02:58] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=57695): Max retries exceeded with url: /session/d88f2980a2730e5a5682b26d96028cc3/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:02:58] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:02:58] [INFO] Xvfb 已停止
+[2026-03-20 14:02:59] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41588-018-0297-3, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:02:59] [ERROR] 获取页面内容失败: https://www.nature.com/articles/s41588-018-0297-3, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:02:59] [INFO] Xvfb 已启动: DISPLAY=:188
+[2026-03-20 14:02:59] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=58265): Max retries exceeded with url: /session/35f4d39d1ecabea402ef13edb9d1978e/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7762e5d704d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:02:59] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:02:59] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:02:59] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:02:59] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:02:59] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:02:59] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:02:59] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:02:59] [INFO] Xvfb 已停止
+[2026-03-20 14:03:00] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=45169): Max retries exceeded with url: /session/7866eacae7a5210dc2fe796f9e295ea3/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x797a10f687d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:00] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:03:00] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=40711): Max retries exceeded with url: /session/67e68323391045699938162f687782e8/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7070d6980450>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:00] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:03:00] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:00] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:00] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:00] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:00] [INFO] Xvfb 已启动: DISPLAY=:107
+[2026-03-20 14:03:00] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:01] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:01] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:01] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:01] [INFO] Xvfb 已停止
+[2026-03-20 14:03:01] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:03:01] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41386-021-01023-4
+[2026-03-20 14:03:02] [INFO] Xvfb 已启动: DISPLAY=:108
+[2026-03-20 14:03:02] [INFO] Xvfb 已启动: DISPLAY=:187
+[2026-03-20 14:03:02] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:03:02] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.helsinki.fi/en/news/university-community/aarno-palotie-named-docent-year-2024
+[2026-03-20 14:03:02] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:03:02] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41588-018-0297-3
+[2026-03-20 14:03:02] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:02] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:02] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:02] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:03] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=55841): Max retries exceeded with url: /session/e7392a1ed150da7682debdf12c1bbf34/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71c339370750>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:03] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:03:03] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:03] [INFO] Xvfb 已启动: DISPLAY=:147
+[2026-03-20 14:03:03] [INFO] Xvfb 已启动: DISPLAY=:152
+[2026-03-20 14:03:03] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:03] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:03] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:03] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:04] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:04] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:04] [INFO] Xvfb 已停止
+[2026-03-20 14:03:05] [INFO] Xvfb 已启动: DISPLAY=:146
+[2026-03-20 14:03:05] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:05] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=54817): Max retries exceeded with url: /session/19299a7ecb67bf3231bad62ae2ad8e88/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:03:05] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:05] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:05] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:05] [INFO] Xvfb 已停止
+[2026-03-20 14:03:05] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:05] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:05] [INFO] Xvfb 已停止
+[2026-03-20 14:03:06] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:06] [INFO] Xvfb 已启动: DISPLAY=:198
+[2026-03-20 14:03:06] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:07] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:08] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:08] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:03:08] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/ncomms5871
+[2026-03-20 14:03:08] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:09] [WARNING] 域名预热失败: https://www.helsinki.fi, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:09] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=52837): Max retries exceeded with url: /session/13847b8f4c66a5ff4408a8daef93aae0/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:03:09] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:09] [INFO] Xvfb 已停止
+[2026-03-20 14:03:09] [INFO] Xvfb 已启动: DISPLAY=:106
+[2026-03-20 14:03:09] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:09] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:09] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:10] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:10] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=51659): Max retries exceeded with url: /session/243a152b8b46db325ad36b5427749157/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:03:10] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:10] [INFO] Xvfb 已停止
+[2026-03-20 14:03:11] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:11] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:12] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:03:12] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.researchgate.net/profile/Michela-Traglia/publication/291408554_The_UK10K_project_identifies_rare_variants_in_health_and_disease/links/57bdd76a08aeb95224d05698/The-UK10K-project-identifies-rare-variants-in-health-and-disease.pdf?origin=scientificContributions
+[2026-03-20 14:03:12] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:12] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41386-021-01023-4, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:12] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:13] [INFO] Xvfb 已启动: DISPLAY=:160
+[2026-03-20 14:03:13] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:03:13] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41598-017-03054-8
+[2026-03-20 14:03:13] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:14] [INFO] Xvfb 已启动: DISPLAY=:121
+[2026-03-20 14:03:14] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:14] [WARNING] 打开标签页失败: https://www.helsinki.fi/en/news/university-community/aarno-palotie-named-docent-year-2024, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:14] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:14] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41588-018-0297-3, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:14] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:15] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:16] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:16] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=45083): Max retries exceeded with url: /session/1bd633f0e5dee3382488265e37e736eb/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7661cc968490>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:16] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:03:16] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:16] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:16] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=42973): Max retries exceeded with url: /session/f765ad68455f6d4a8b8bec452266bb6a/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:03:16] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:16] [INFO] Xvfb 已停止
+[2026-03-20 14:03:17] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:17] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:17] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:18] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=59991): Max retries exceeded with url: /session/4508522b30e20636abec426c0f3de268/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x731889d80ad0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:18] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:03:18] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=59359): Max retries exceeded with url: /session/4f9bc47efbdc033f549164a9f05940c8/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78bbb65607d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:18] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:03:18] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:18] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:18] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:18] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:18] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=45695): Max retries exceeded with url: /session/963bca42d757c72165929c46fbdf8844/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:03:18] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:19] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:19] [INFO] Xvfb 已停止
+[2026-03-20 14:03:19] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:19] [WARNING] 域名预热失败: https://www.helsinki.fi, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:19] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=55131): Max retries exceeded with url: /session/23708c33907965130a8c3bf4ed31193b/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:03:19] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:19] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:03:19] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/ncomms5871
+[2026-03-20 14:03:19] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:19] [INFO] Xvfb 已停止
+[2026-03-20 14:03:20] [INFO] Xvfb 已启动: DISPLAY=:124
+[2026-03-20 14:03:20] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:20] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:20] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:22] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:22] [WARNING] 打开标签页失败: https://www.nature.com/articles/ncomms5871, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:22] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:22] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:03:22] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.researchgate.net/profile/Michela-Traglia/publication/291408554_The_UK10K_project_identifies_rare_variants_in_health_and_disease/links/57bdd76a08aeb95224d05698/The-UK10K-project-identifies-rare-variants-in-health-and-disease.pdf?origin=scientificContributions
+[2026-03-20 14:03:22] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:03:22] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41598-017-03054-8
+[2026-03-20 14:03:23] [INFO] Xvfb 已启动: DISPLAY=:182
+[2026-03-20 14:03:23] [INFO] Xvfb 已启动: DISPLAY=:111
+[2026-03-20 14:03:24] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:24] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:24] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:24] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:25] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:25] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:25] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41598-017-03054-8, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:25] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:03:25] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:25] [INFO] Xvfb 已停止
+[2026-03-20 14:03:26] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=40055): Max retries exceeded with url: /session/9e77e2f0fa509076b607304bc1bc5de9/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79b064d68250>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:26] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:03:26] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:26] [INFO] Xvfb 已启动: DISPLAY=:147
+[2026-03-20 14:03:26] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:27] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=59723): Max retries exceeded with url: /session/7e7c3ae3c4d93aeaf5acbd23c2185835/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:03:27] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:27] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:27] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:27] [INFO] Xvfb 已停止
+[2026-03-20 14:03:27] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:27] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:27] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:27] [INFO] Xvfb 已停止
+[2026-03-20 14:03:27] [INFO] LLM API Async 查询成功: 54 字符
+[2026-03-20 14:03:27] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:03:27] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:27] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:28] [INFO] Xvfb 已启动: DISPLAY=:152
+[2026-03-20 14:03:28] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:28] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:28] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:29] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=52589): Max retries exceeded with url: /session/a0e28baae9bba23b107641196b415db2/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe823b704d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:29] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:03:29] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:03:29] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/ncomms5871
+[2026-03-20 14:03:29] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:29] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:29] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:30] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:30] [INFO] Xvfb 已启动: DISPLAY=:162
+[2026-03-20 14:03:30] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:31] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:31] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:31] [WARNING] 打开标签页失败: https://www.nature.com/articles/ncomms5871, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:33] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:33] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:33] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:33] [INFO] Xvfb 已停止
+[2026-03-20 14:03:34] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:34] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:34] [INFO] Xvfb 已启动: DISPLAY=:106
+[2026-03-20 14:03:34] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41598-017-03054-8, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:34] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:03:35] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:35] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=55211): Max retries exceeded with url: /session/43d844d0eb5c73909118a4659091228d/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x757f8716c9d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:35] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:03:35] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:35] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:36] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:36] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:36] [WARNING] 域名预热失败: https://www.helsinki.fi, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:36] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=33805): Max retries exceeded with url: /session/6c2948de390de3bf3f0d797c9800d728/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:03:36] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:36] [INFO] Xvfb 已停止
+[2026-03-20 14:03:37] [INFO] LLM API Async 查询成功: 58 字符
+[2026-03-20 14:03:37] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:03:37] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:37] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:37] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:37] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:38] [INFO] 域名预热完成: https://www.researchgate.net
+[2026-03-20 14:03:38] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=59195): Max retries exceeded with url: /session/f5198cd9897d858b2ecfb5b525ff241a/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7572a856c890>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:38] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:03:38] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:39] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:39] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:39] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:39] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:39] [INFO] Xvfb 已停止
+[2026-03-20 14:03:39] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:03:39] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.researchgate.net/profile/Michela-Traglia/publication/291408554_The_UK10K_project_identifies_rare_variants_in_health_and_disease/links/57bdd76a08aeb95224d05698/The-UK10K-project-identifies-rare-variants-in-health-and-disease.pdf?origin=scientificContributions
+[2026-03-20 14:03:40] [INFO] Xvfb 已启动: DISPLAY=:121
+[2026-03-20 14:03:40] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:40] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=36615): Max retries exceeded with url: /session/7cacc63062a874b9939a48074478e157/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:03:40] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:40] [INFO] Xvfb 已停止
+[2026-03-20 14:03:40] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:40] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:40] [INFO] Xvfb 已启动: DISPLAY=:120
+[2026-03-20 14:03:40] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:41] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:42] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:42] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:43] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:03:43] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41598-017-03054-8
+[2026-03-20 14:03:43] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=56645): Max retries exceeded with url: /session/29ea601103ecd2fcbaf5fbbe8d167524/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77e8f2762dd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:43] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=56645): Max retries exceeded with url: /session/29ea601103ecd2fcbaf5fbbe8d167524/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77e8f27cca90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:43] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:03:43] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:43] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:44] [WARNING] 打开标签页失败: https://www.nature.com/articles/ncomms5871, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:44] [INFO] Xvfb 已启动: DISPLAY=:192
+[2026-03-20 14:03:44] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:45] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:45] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:45] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=40655): Max retries exceeded with url: /session/dc8a28f2d1c0636c0da293b22d358073/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:03:45] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:45] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:45] [INFO] Xvfb 已停止
+[2026-03-20 14:03:45] [INFO] LLM API Async 查询成功: 54 字符
+[2026-03-20 14:03:45] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:03:46] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:46] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:46] [ERROR] 执行失败: navigate, ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2026-03-20 14:03:46] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:46] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:46] [INFO] Xvfb 已停止
+[2026-03-20 14:03:47] [INFO] 域名预热完成: https://www.researchgate.net
+[2026-03-20 14:03:47] [INFO] LLM API Async 查询成功: 104 字符
+[2026-03-20 14:03:47] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:03:48] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=38867): Max retries exceeded with url: /session/592916e298cd4ba6c53b47556b5f38d9/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7af19ff70090>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:48] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:03:48] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:48] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:48] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:48] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:48] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:03:48] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41586-020-2287-8
+[2026-03-20 14:03:49] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:03:49] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41586-020-2287-8
+[2026-03-20 14:03:49] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:49] [INFO] Xvfb 已启动: DISPLAY=:158
+[2026-03-20 14:03:49] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:49] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:49] [WARNING] 打开标签页失败: https://www.researchgate.net/profile/Michela-Traglia/publication/291408554_The_UK10K_project_identifies_rare_variants_in_health_and_disease/links/57bdd76a08aeb95224d05698/The-UK10K-project-identifies-rare-variants-in-health-and-disease.pdf?origin=scientificContributions, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:49] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 14:03:49] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=56645): Max retries exceeded with url: /session/29ea601103ecd2fcbaf5fbbe8d167524/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-03-20 14:03:49] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=56645): Max retries exceeded with url: /session/29ea601103ecd2fcbaf5fbbe8d167524/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77e8f277be10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:49] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:03:50] [INFO] Xvfb 已启动: DISPLAY=:141
+[2026-03-20 14:03:50] [INFO] 域名预热完成: https://www.nature.com
+[2026-03-20 14:03:50] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:50] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:50] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=50827): Max retries exceeded with url: /session/3af49e491065aa0446554e1204a38e67/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:03:51] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:51] [INFO] Xvfb 已停止
+[2026-03-20 14:03:51] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:51] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:51] [INFO] Xvfb 已停止
+[2026-03-20 14:03:51] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:51] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:51] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:03:51] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=56645): Max retries exceeded with url: /session/29ea601103ecd2fcbaf5fbbe8d167524/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77e8f2779450>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:51] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:03:52] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=57655): Max retries exceeded with url: /session/a83cb69afca583c35e62186e212313d3/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77349095bc50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:52] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=57655): Max retries exceeded with url: /session/a83cb69afca583c35e62186e212313d3/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7734909c4dd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:52] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:03:53] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:53] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:53] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:53] [INFO] Xvfb 已停止
+[2026-03-20 14:03:53] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:03:53] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/ncomms9111
+[2026-03-20 14:03:53] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:03:53] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=56645): Max retries exceeded with url: /session/29ea601103ecd2fcbaf5fbbe8d167524/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77e8f277b090>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:03:53] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:03:53] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/ncomms9111
+[2026-03-20 14:03:53] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=42829): Max retries exceeded with url: /session/b7562220025e566e0871ae459df2e359/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78a9b8368550>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:53] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:03:53] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:54] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41598-017-03054-8, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:54] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:54] [INFO] Xvfb 已启动: DISPLAY=:162
+[2026-03-20 14:03:54] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:54] [INFO] LLM API Async 查询成功: 54 字符
+[2026-03-20 14:03:54] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:03:54] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:54] [INFO] Xvfb 已启动: DISPLAY=:127
+[2026-03-20 14:03:54] [INFO] Xvfb 已启动: DISPLAY=:194
+[2026-03-20 14:03:54] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:55] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:55] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:55] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 14:03:55] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=56645): Max retries exceeded with url: /session/29ea601103ecd2fcbaf5fbbe8d167524/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 14:03:55] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=56645): Max retries exceeded with url: /session/29ea601103ecd2fcbaf5fbbe8d167524/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77e8f2791390>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:55] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:03:56] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:56] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:56] [INFO] LLM API Async 查询成功: 108 字符
+[2026-03-20 14:03:56] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:03:57] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41586-020-2287-8, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:57] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:57] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:58] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=50535): Max retries exceeded with url: /session/beb93b968ee6166b4707c11d53ddd0cf/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7481b5b6c590>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:58] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:03:58] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:03:58] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:03:58] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 14:03:58] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=57655): Max retries exceeded with url: /session/a83cb69afca583c35e62186e212313d3/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-03-20 14:03:58] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=57655): Max retries exceeded with url: /session/a83cb69afca583c35e62186e212313d3/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77349098bf90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:58] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:03:59] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:03:59] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:03:59] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:03:59] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=56645): Max retries exceeded with url: /session/29ea601103ecd2fcbaf5fbbe8d167524/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77e8f277a210>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:03:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:03:59] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41586-020-2287-8, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:03:59] [INFO] 域名预热完成: https://www.researchgate.net
+[2026-03-20 14:04:00] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:00] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:01] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:04:01] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=57655): Max retries exceeded with url: /session/a83cb69afca583c35e62186e212313d3/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7734909718d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:01] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=51633): Max retries exceeded with url: /session/664e5c3a4ffad6cd6767009d15c1115a/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74f51eb70350>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:01] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:04:01] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:04:01] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:01] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:04:02] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:02] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:02] [WARNING] 打开标签页失败: https://www.nature.com/articles/ncomms9111, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:04:02] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:04:02] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=56645): Max retries exceeded with url: /session/29ea601103ecd2fcbaf5fbbe8d167524/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77e8f2793e50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:02] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:02] [INFO] Xvfb 已停止
+[2026-03-20 14:04:03] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:04:03] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=33227): Max retries exceeded with url: /session/07642bec4b123555144ff1f85a2cb087/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:04:03] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:03] [INFO] Xvfb 已停止
+[2026-03-20 14:04:03] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:04:03] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=57655): Max retries exceeded with url: /session/a83cb69afca583c35e62186e212313d3/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7734909c4590>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:03] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:04:03] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=39087): Max retries exceeded with url: /session/0af517e88642e4b1e42129c19b5827ef/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x730746970150>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:03] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:04:03] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:03] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:03] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:04:04] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:04] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:04] [INFO] Xvfb 已停止
+[2026-03-20 14:04:04] [WARNING] 打开标签页失败: https://www.nature.com/articles/ncomms9111, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:04:04] [WARNING] 提取按钮失败: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2026-03-20 14:04:04] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=44551): Max retries exceeded with url: /session/20e1dab3d93eaad9c2c033a379895a20/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78a9b835e350>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:04] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:04:05] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:05] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 14:04:05] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=57655): Max retries exceeded with url: /session/a83cb69afca583c35e62186e212313d3/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 14:04:05] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=57655): Max retries exceeded with url: /session/a83cb69afca583c35e62186e212313d3/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x773490989150>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:05] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:04:05] [INFO] Xvfb 已启动: DISPLAY=:192
+[2026-03-20 14:04:05] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:05] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:04:05] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:05] [INFO] Xvfb 已停止
+[2026-03-20 14:04:06] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:04:06] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41586-020-2287-8
+[2026-03-20 14:04:06] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=35915): Max retries exceeded with url: /session/eec358555b157a364a8a41e865493980/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b2bb8b68750>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:06] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:04:06] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:06] [INFO] Xvfb 已启动: DISPLAY=:158
+[2026-03-20 14:04:06] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:06] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:04:06] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:07] [INFO] Xvfb 已启动: DISPLAY=:151
+[2026-03-20 14:04:07] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:04:07] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:04:07] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:04:07] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=57655): Max retries exceeded with url: /session/a83cb69afca583c35e62186e212313d3/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7734909512d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:07] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:04:08] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:08] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:08] [INFO] LLM API Async 查询成功: 54 字符
+[2026-03-20 14:04:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:04:08] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=38187): Max retries exceeded with url: /session/4ccf262f5b2192d86dc5daee2664be87/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7e9328170610>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:08] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:04:08] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:09] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:04:09] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:04:09] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=57655): Max retries exceeded with url: /session/a83cb69afca583c35e62186e212313d3/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77349095b290>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:09] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:09] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:09] [INFO] Xvfb 已停止
+[2026-03-20 14:04:09] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:10] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:10] [INFO] Xvfb 已停止
+[2026-03-20 14:04:10] [INFO] 域名预热完成: https://www.nature.com
+[2026-03-20 14:04:11] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:04:11] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:11] [INFO] Xvfb 已停止
+[2026-03-20 14:04:11] [INFO] Xvfb 已启动: DISPLAY=:127
+[2026-03-20 14:04:11] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:04:11] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=48659): Max retries exceeded with url: /session/a2a6463a8f97f857336c4ad17a611e03/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:04:11] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:11] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:11] [INFO] Xvfb 已停止
+[2026-03-20 14:04:11] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:11] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:04:12] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:12] [INFO] LLM API Async 查询成功: 104 字符
+[2026-03-20 14:04:12] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:04:12] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:14] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:04:14] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/ncomms9111
+[2026-03-20 14:04:14] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:04:14] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:14] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=39359): Max retries exceeded with url: /session/9a324ab8302e1b2e0862195bce9e459e/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:04:14] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:14] [INFO] Xvfb 已停止
+[2026-03-20 14:04:14] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:14] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 14:04:14] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=44551): Max retries exceeded with url: /session/20e1dab3d93eaad9c2c033a379895a20/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-03-20 14:04:14] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44551): Max retries exceeded with url: /session/20e1dab3d93eaad9c2c033a379895a20/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78a9b83b4990>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:14] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:04:15] [INFO] Xvfb 已启动: DISPLAY=:141
+[2026-03-20 14:04:15] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:04:15] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:16] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:16] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41586-020-2287-8, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:04:16] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:04:16] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44551): Max retries exceeded with url: /session/20e1dab3d93eaad9c2c033a379895a20/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78a9b83b6850>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:16] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:04:16] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:04:16] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=58291): Max retries exceeded with url: /session/fdd2617cb8ed7a4ce0c804feeef26b0f/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:04:16] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:16] [INFO] Xvfb 已停止
+[2026-03-20 14:04:17] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:18] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:04:18] [INFO] IterAgent 开始: Aarno Palotie, URL: https://scholar.google.lu/citations?user=mEM8q5cAAAAJ&hl=el
+[2026-03-20 14:04:18] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:04:18] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41467-017-01008-2
+[2026-03-20 14:04:18] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:04:18] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.sisuproject.fi/about
+[2026-03-20 14:04:18] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:04:18] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=57055): Max retries exceeded with url: /session/d1a3df919b78130c8e2948a5f68444ff/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:04:19] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:19] [INFO] Xvfb 已停止
+[2026-03-20 14:04:19] [INFO] Xvfb 已启动: DISPLAY=:170
+[2026-03-20 14:04:19] [INFO] Xvfb 已启动: DISPLAY=:172
+[2026-03-20 14:04:19] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:04:19] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:19] [INFO] Xvfb 已启动: DISPLAY=:106
+[2026-03-20 14:04:19] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:04:19] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44551): Max retries exceeded with url: /session/20e1dab3d93eaad9c2c033a379895a20/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78a9b83b5790>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:19] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:04:19] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:04:19] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:04:20] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=37885): Max retries exceeded with url: /session/fc2524898dac6cb09bab3e2457646192/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7901357686d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:20] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:04:20] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:20] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:04:20] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:20] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:21] [WARNING] 打开标签页失败: https://www.nature.com/articles/ncomms9111, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:04:21] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 14:04:21] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=44551): Max retries exceeded with url: /session/20e1dab3d93eaad9c2c033a379895a20/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 14:04:21] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44551): Max retries exceeded with url: /session/20e1dab3d93eaad9c2c033a379895a20/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78a9b83b6e90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:21] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:04:22] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:22] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:23] [WARNING] 打开标签页失败: https://scholar.google.lu/citations?user=mEM8q5cAAAAJ&hl=el, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:04:23] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:23] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:24] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:04:24] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44551): Max retries exceeded with url: /session/20e1dab3d93eaad9c2c033a379895a20/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78a9b839eb10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:04:24] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:25] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=58841): Max retries exceeded with url: /session/5d64dbc192a832ea84bd6a3787d5277e/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x724c44260610>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:25] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:04:25] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:25] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:04:25] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41467-017-01008-2, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:04:25] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:26] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:27] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=37585): Max retries exceeded with url: /session/218063bf4329907b2bf949edbf2f329b/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78f0ff570ad0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:27] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:04:27] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:27] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:04:27] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=37367): Max retries exceeded with url: /session/97dee54764964ebd6f8ed565adc53f2a/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:04:27] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:27] [INFO] Xvfb 已停止
+[2026-03-20 14:04:27] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:04:27] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:27] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:04:27] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44551): Max retries exceeded with url: /session/20e1dab3d93eaad9c2c033a379895a20/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78a9b83b64d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:27] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:28] [INFO] Xvfb 已停止
+[2026-03-20 14:04:29] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=43099): Max retries exceeded with url: /session/62114617ae3a37227a0b82065febf074/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7368d7164790>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:29] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:29] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:04:29] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:29] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:04:29] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=37831): Max retries exceeded with url: /session/201185d533e9d86c98d09f73f8b97d68/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:04:29] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:04:29] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:29] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:29] [INFO] Xvfb 已停止
+[2026-03-20 14:04:30] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:04:31] [WARNING] 域名预热失败: https://scholar.google.lu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:04:31] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=32847): Max retries exceeded with url: /session/098530fd151a6b45724c8de780a776f0/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:04:32] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:32] [INFO] Xvfb 已停止
+[2026-03-20 14:04:36] [INFO] 域名预热完成: https://www.nature.com
+[2026-03-20 14:04:53] [WARNING] 打开标签页失败: https://www.sisuproject.fi/about, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:04:57] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=55863): Max retries exceeded with url: /session/1a1bdf14f29642688dc279d3996470f1/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74132ed58590>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:57] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:04:57] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:04:58] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:04:58] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:04:59] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=47637): Max retries exceeded with url: /session/daa53307eb2f666fe810bece6b611472/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7368d675d850>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:59] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=47637): Max retries exceeded with url: /session/daa53307eb2f666fe810bece6b611472/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7368d67375d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:04:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:04:59] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:05:06] [INFO] LLM API Async 查询成功: 116 字符
+[2026-03-20 14:05:06] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:05:20] [INFO] LLM API Async 查询成功: 248 字符
+[2026-03-20 14:05:20] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:05:22] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:05:22] [ERROR] 执行失败: search, HTTPConnectionPool(host='localhost', port=47637): Max retries exceeded with url: /session/daa53307eb2f666fe810bece6b611472/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection obje
+[2026-03-20 14:05:22] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=47637): Max retries exceeded with url: /session/daa53307eb2f666fe810bece6b611472/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7368d5d7d310>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:05:22] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:05:24] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 14:05:24] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:05:24] [INFO] Xvfb 已停止
+[2026-03-20 14:05:29] [WARNING] 域名预热失败: https://www.sisuproject.fi, Message: timeout: Timed out receiving message from renderer: -0.003
+  (Session info: chrome=143.0.7499.192)
+Stacktrace:
+#0 0x5e716d45540a <unknown>
+#1 0x5e716ce8976b <unknown>
+#2 0x5e716ce7180a <unknown>
+#3 0x5e716ce714ed <unknown>
+#4 0x5e716ce6f3a7 <unknown>
+#5 0x5e716ce6fcbf <unknown>
+#6 0x5e716ce7e480 <unknown>
+#7 0x5e716ce97b47 <unknown>
+#8 0x5e716ce9e1fb <unknown>
+#9 0x5e716ce703e8 <unknown>
+#10 0x5e716ce978f8 <unknown>
+#11 0x5e716cf26639 <unknown>
+#12 0x5e716cecd7b2 <unknown>
+#13 0x5e716cece461 <unknown>
+#14 0x5e716d41ddf9 <unknown>
+#15 0x5e716d420d5d <unknown>
+#16 0x5e716d406b41 <unknown>
+#17 0x5e716d42193b <unknown>
+#18 0x5e716d3ed870 <unknown>
+#19 0x5e716d442828 <unknown>
+#20 0x5e716d4429fc <unknown>
+#21 0x5e716d454763 <unknown>
+#22 0x72c66749caa4 <unknown>
+#23 0x72c667529c6c <unknown>
+
+[2026-03-20 14:05:59] [ERROR] 执行失败: navigate, Message: timeout: Timed out receiving message from renderer: 0.020
+  (Session info: chrome=143.0.7499.192)
+Stacktrace:
+#0 0x5e716d45540a <unknown>
+#1 0x5e716ce8976b <unknown>
+#2 0x5e716ce7180a <unknow
+[2026-03-20 14:05:59] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:05:59] [INFO] Xvfb 已停止
+[2026-03-20 14:06:01] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:06:01] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41386-021-01023-4
+[2026-03-20 14:06:02] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:06:02] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.helsinki.fi/en/news/university-community/aarno-palotie-named-docent-year-2024
+[2026-03-20 14:06:02] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:06:02] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41588-018-0297-3
+[2026-03-20 14:06:02] [INFO] Xvfb 已启动: DISPLAY=:118
+[2026-03-20 14:06:03] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:06:03] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:06:03] [INFO] Xvfb 已启动: DISPLAY=:139
+[2026-03-20 14:06:03] [INFO] Xvfb 已启动: DISPLAY=:142
+[2026-03-20 14:06:03] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:06:04] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:06:04] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:06:04] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:06:05] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:06:06] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:06:07] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41386-021-01023-4, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:06:07] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:06:07] [WARNING] 打开标签页失败: https://www.helsinki.fi/en/news/university-community/aarno-palotie-named-docent-year-2024, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:06:11] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=49603): Max retries exceeded with url: /session/9e089b5cc9021d46822a95c5b33ee93f/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7026e2970550>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:06:11] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:06:11] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=37741): Max retries exceeded with url: /session/76c609384decdcd3861d0401e66ecd93/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d0863170390>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:06:11] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:06:11] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:06:11] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:06:11] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:06:11] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:06:11] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:06:13] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:06:13] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:06:14] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:06:15] [WARNING] 域名预热失败: https://www.helsinki.fi, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:06:15] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=55555): Max retries exceeded with url: /session/2eab3161cec63233da55acf83bdbd699/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:06:15] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:06:15] [INFO] Xvfb 已停止
+[2026-03-20 14:06:16] [ERROR] 获取页面内容失败: https://www.nature.com/articles/s41588-018-0297-3, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:06:16] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=45109): Max retries exceeded with url: /session/8b9526259d586f8119195c9599683398/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x751ff40744d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:06:16] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:06:16] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:06:16] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:06:16] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:06:17] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:06:17] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=50213): Max retries exceeded with url: /session/83df9a0faaeb40cb3fe8d49ea149d82f/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:06:17] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:06:17] [INFO] Xvfb 已停止
+[2026-03-20 14:06:17] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:06:17] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/ncomms5871
+[2026-03-20 14:06:17] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:06:18] [INFO] Xvfb 已启动: DISPLAY=:143
+[2026-03-20 14:06:19] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:06:19] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:06:19] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:06:19] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.researchgate.net/profile/Michela-Traglia/publication/291408554_The_UK10K_project_identifies_rare_variants_in_health_and_disease/links/57bdd76a08aeb95224d05698/The-UK10K-project-identifies-rare-variants-in-health-and-disease.pdf?origin=scientificContributions
+[2026-03-20 14:06:20] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:06:20] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=55149): Max retries exceeded with url: /session/624134bacc7be2db9bec25eb6a92f8c3/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:06:20] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:06:20] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:06:20] [INFO] Xvfb 已停止
+[2026-03-20 14:06:20] [INFO] Xvfb 已启动: DISPLAY=:198
+[2026-03-20 14:06:20] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:06:20] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:06:21] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:06:22] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:06:22] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41598-017-03054-8
+[2026-03-20 14:06:23] [INFO] Xvfb 已启动: DISPLAY=:180
+[2026-03-20 14:06:23] [WARNING] 打开标签页失败: https://www.nature.com/articles/ncomms5871, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:06:23] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:06:23] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:06:25] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:06:26] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:06:27] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=34187): Max retries exceeded with url: /session/945d4fbdd259c9a3974f988832c3fa2c/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75ff0896c550>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:06:27] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:06:27] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:06:28] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:06:28] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:06:28] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41598-017-03054-8, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:06:28] [INFO] LLM API Async 查询成功: 50 字符
+[2026-03-20 14:06:28] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:06:28] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:06:29] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:06:29] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:06:29] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:06:29] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:06:29] [INFO] Xvfb 已停止
+[2026-03-20 14:06:30] [INFO] Xvfb 已启动: DISPLAY=:142
+[2026-03-20 14:06:30] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:06:31] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:06:31] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:06:32] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:06:32] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=38803): Max retries exceeded with url: /session/c98fc64e6ca7c674a39fed4b7189ab6a/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74ced9f74290>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:06:32] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:06:32] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:06:32] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:06:33] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:06:33] [INFO] 域名预热完成: https://www.researchgate.net
+[2026-03-20 14:06:34] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:06:35] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:06:35] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=57309): Max retries exceeded with url: /session/5ad718b7a2f75a4a32754a60ebca95d0/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:06:35] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:06:35] [INFO] Xvfb 已停止
+[2026-03-20 14:06:38] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=44177): Max retries exceeded with url: /session/7e0c8cb8492333538752c132b113429c/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fcba6763c50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:06:38] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=44177): Max retries exceeded with url: /session/7e0c8cb8492333538752c132b113429c/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fcba67cc450>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:06:38] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:06:38] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:06:38] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/s41586-020-2287-8
+[2026-03-20 14:06:39] [INFO] Xvfb 已启动: DISPLAY=:126
+[2026-03-20 14:06:39] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:06:39] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:06:40] [INFO] 域名预热完成: https://www.nature.com
+[2026-03-20 14:06:40] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:06:40] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:06:40] [INFO] Xvfb 已停止
+[2026-03-20 14:06:40] [INFO] LLM API Async 查询成功: 54 字符
+[2026-03-20 14:06:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:06:41] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:06:41] [INFO] IterAgent 初始化: k=3, n=2
+[2026-03-20 14:06:41] [INFO] IterAgent 开始: Aarno Palotie, URL: https://www.nature.com/articles/ncomms9111
+[2026-03-20 14:06:42] [INFO] Xvfb 已启动: DISPLAY=:179
+[2026-03-20 14:06:42] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:06:42] [INFO] LLM API Async 查询成功: 89 字符
+[2026-03-20 14:06:42] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:06:42] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:06:44] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41586-020-2287-8, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:06:44] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:06:44] [INFO] LLM API Async 查询成功: 20 字符
+[2026-03-20 14:06:44] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=44177): Max retries exceeded with url: /session/7e0c8cb8492333538752c132b113429c/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-03-20 14:06:44] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44177): Max retries exceeded with url: /session/7e0c8cb8492333538752c132b113429c/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fcba675a690>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:06:44] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:06:47] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:06:47] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44177): Max retries exceeded with url: /session/7e0c8cb8492333538752c132b113429c/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fcba67cce10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:06:47] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:06:48] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=38123): Max retries exceeded with url: /session/77881e4a2c6e9233b68d0710587d27f1/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x70a41156cb10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:06:48] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:06:48] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:06:48] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:06:48] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:06:49] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:06:49] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44177): Max retries exceeded with url: /session/7e0c8cb8492333538752c132b113429c/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fcba67914d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:06:49] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:06:50] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:06:52] [ERROR] 获取页面内容失败: https://www.nature.com/articles/ncomms9111, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:06:52] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=52433): Max retries exceeded with url: /session/20b25d0acf890cc066a18a2647415780/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f721f362890>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:06:52] [INFO] IterAgent 完成: Aarno Palotie, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-03-20 14:06:52] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:06:52] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 14:06:52] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=44177): Max retries exceeded with url: /session/7e0c8cb8492333538752c132b113429c/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 14:06:52] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44177): Max retries exceeded with url: /session/7e0c8cb8492333538752c132b113429c/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fcba67c00d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:06:52] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:06:52] [INFO] 等待 Chrome 初始化锁...
+[2026-03-20 14:06:52] [INFO] 检测到 Chrome 主版本: 143
+[2026-03-20 14:06:53] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-03-20 14:06:53] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=48283): Max retries exceeded with url: /session/bd930f34fb0454d0dc0af3718c056401/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-03-20 14:06:53] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:06:53] [INFO] Xvfb 已停止
+[2026-03-20 14:06:54] [INFO] 共享 Chrome driver 已创建
+[2026-03-20 14:06:55] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:06:55] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44177): Max retries exceeded with url: /session/7e0c8cb8492333538752c132b113429c/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fcba67591d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:06:55] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:06:57] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 14:06:57] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=44177): Max retries exceeded with url: /session/7e0c8cb8492333538752c132b113429c/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-03-20 14:06:57] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=44177): Max retries exceeded with url: /session/7e0c8cb8492333538752c132b113429c/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fcba6745c10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-03-20 14:06:57] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:06:57] [INFO] Xvfb 已停止
+[2026-03-20 14:07:00] [INFO] 域名预热完成: https://www.nature.com
+[2026-03-20 14:07:16] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:07:31] [INFO] LLM API Async 查询成功: 131 字符
+[2026-03-20 14:07:31] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:07:37] [INFO] LLM API Async 查询成功: 108 字符
+[2026-03-20 14:07:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:07:39] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:07:49] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:08:01] [INFO] LLM API Async 查询成功: 134 字符
+[2026-03-20 14:08:01] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:08:05] [INFO] LLM API Async 查询成功: 113 字符
+[2026-03-20 14:08:05] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:08:08] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 14:08:21] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:08:28] [INFO] LLM API Async 查询成功: 125 字符
+[2026-03-20 14:08:29] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:08:34] [INFO] LLM API Async 查询成功: 111 字符
+[2026-03-20 14:08:34] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:08:36] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 14:08:42] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:08:46] [INFO] LLM API Async 查询成功: 82 字符
+[2026-03-20 14:08:47] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:08:50] [INFO] LLM API Async 查询成功: 109 字符
+[2026-03-20 14:08:50] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:08:52] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 14:08:54] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:08:57] [INFO] LLM API Async 查询成功: 37 字符
+[2026-03-20 14:08:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-03-20 14:08:59] [INFO] LLM API Async 查询成功: 12 字符
+[2026-03-20 14:09:01] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-03-20 14:09:01] [INFO] Xvfb 已停止

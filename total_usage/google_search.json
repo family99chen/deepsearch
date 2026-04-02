@@ -1,5 +1,5 @@
 {
-  "total": 22021,
+  "total": 29757,
   "daily": {
     "2026-01-17": {
       "total": 210,
@@ -152,10 +152,82 @@
       },
       "first_request": "2026-03-19T21:43:14.008838",
       "last_request": "2026-03-19T22:31:28.197096"
+    },
+    "2026-03-20": {
+      "total": 2,
+      "endpoints": {
+        "google_custom_search": 2
+      },
+      "first_request": "2026-03-20T13:59:40.364807",
+      "last_request": "2026-03-20T14:02:43.864772"
+    },
+    "2026-03-22": {
+      "total": 2790,
+      "endpoints": {
+        "google_custom_search": 2790
+      },
+      "first_request": "2026-03-22T00:09:11.488395",
+      "last_request": "2026-03-22T23:59:47.743344"
+    },
+    "2026-03-23": {
+      "total": 629,
+      "endpoints": {
+        "google_custom_search": 629
+      },
+      "first_request": "2026-03-23T00:00:50.932743",
+      "last_request": "2026-03-23T20:29:02.824817"
+    },
+    "2026-03-24": {
+      "total": 1013,
+      "endpoints": {
+        "google_custom_search": 1013
+      },
+      "first_request": "2026-03-24T12:45:37.754350",
+      "last_request": "2026-03-24T23:59:37.978171"
+    },
+    "2026-03-25": {
+      "total": 1872,
+      "endpoints": {
+        "google_custom_search": 1872
+      },
+      "first_request": "2026-03-25T00:00:05.929625",
+      "last_request": "2026-03-25T23:59:39.937176"
+    },
+    "2026-03-26": {
+      "total": 1413,
+      "endpoints": {
+        "google_custom_search": 1413
+      },
+      "first_request": "2026-03-26T00:00:14.931694",
+      "last_request": "2026-03-26T23:04:42.083156"
+    },
+    "2026-03-27": {
+      "total": 12,
+      "endpoints": {
+        "google_custom_search": 12
+      },
+      "first_request": "2026-03-27T01:23:03.120619",
+      "last_request": "2026-03-27T12:48:48.360736"
+    },
+    "2026-03-30": {
+      "total": 2,
+      "endpoints": {
+        "google_custom_search": 2
+      },
+      "first_request": "2026-03-30T15:31:31.468926",
+      "last_request": "2026-03-30T15:32:00.415020"
+    },
+    "2026-04-02": {
+      "total": 3,
+      "endpoints": {
+        "google_custom_search": 3
+      },
+      "first_request": "2026-04-02T11:27:21.011284",
+      "last_request": "2026-04-02T12:07:36.212439"
     }
   },
   "endpoints": {
-    "google_custom_search": 22021
+    "google_custom_search": 29757
   },
-  "last_updated": "2026-03-19T22:31:28.197105"
+  "last_updated": "2026-04-02T12:07:36.212448"
 }

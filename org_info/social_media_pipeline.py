@@ -24,13 +24,7 @@ from org_info.social_media_search import (
     search_person_in_social_media_with_raw as social_search_with_raw,
     SocialMediaLink,
 )
-from utils.org_pipeline_stats import (
-    record_cache_hit as record_stats_cache_hit,
-    record_error as record_stats_error,
-    record_not_found as record_stats_not_found,
-    record_request as record_stats_request,
-    record_success as record_stats_success,
-)
+from org_info.subprocess_manager import run_worker_subprocess
 
 # 复用已有 worker
 WORKER_SCRIPT = Path(__file__).parent / "_worker.py"
@@ -96,13 +90,21 @@ class SocialMediaPipelineSubprocess:
             if self.verbose:
                 print(f"[Subprocess] 启动: {url[:50]}...")
 
-            result = subprocess.run(
-                cmd,
-                capture_output=True,
-                text=True,
+            result = run_worker_subprocess(
+                cmd=cmd,
                 timeout=300,
-                cwd=str(Path(__file__).parent.parent),
+                cwd=Path(__file__).parent.parent,
             )
+
+            if result.timed_out:
+                return LinkResult(
+                    url=url,
+                    success=False,
+                    mode="failed",
+                    report="",
+                    info_count=0,
+                    error="超时 (5分钟)",
+                )
 
             if result.stderr and self.verbose:
                 for line in result.stderr.strip().split("\n"):
@@ -119,15 +121,6 @@ class SocialMediaPipelineSubprocess:
                 report="",
                 info_count=0,
                 error=f"Worker 退出码: {result.returncode}",
-            )
-        except subprocess.TimeoutExpired:
-            return LinkResult(
-                url=url,
-                success=False,
-                mode="failed",
-                report="",
-                info_count=0,
-                error="超时 (5分钟)",
             )
         except Exception as e:
             return LinkResult(
@@ -146,7 +139,6 @@ class SocialMediaPipelineSubprocess:
         google_scholar_url: Optional[str] = None,
     ) -> PipelineResult:
         start_time = time.time()
-        record_stats_request(PIPELINE_TYPE, include_global=False)
 
         if self.verbose:
             print("=" * 60)
@@ -165,14 +157,9 @@ class SocialMediaPipelineSubprocess:
                 google_scholar_url=google_scholar_url,
             )
         except Exception:
-            record_stats_error(PIPELINE_TYPE, include_global=False)
             raise
 
-        if social_raw.get("from_cache"):
-            record_stats_cache_hit(PIPELINE_TYPE, include_global=False)
-
         if social_raw.get("success") is False:
-            record_stats_error(PIPELINE_TYPE, include_global=False)
             merged = self._merge_reports([], person_name)
             merged += "\n---\n## Social Media Search 原始内容\n\n"
             merged += "```json\n"
@@ -194,12 +181,6 @@ class SocialMediaPipelineSubprocess:
                 print(f"    {i+1}. {link.url[:60]}...")
 
         if not links:
-            record_stats_not_found(
-                PIPELINE_TYPE,
-                links_found=0,
-                links_processed=0,
-                include_global=False,
-            )
             merged = self._merge_reports([], person_name)
             merged += "\n---\n## Social Media Search 原始内容\n\n"
             merged += "```json\n"
@@ -254,21 +235,6 @@ class SocialMediaPipelineSubprocess:
         merged += "\n```\n"
 
         elapsed = time.time() - start_time
-        if success_results:
-            record_stats_success(
-                PIPELINE_TYPE,
-                links_found=len(links),
-                links_processed=len(results),
-                worker_success=len(success_results),
-                include_global=False,
-            )
-        else:
-            record_stats_not_found(
-                PIPELINE_TYPE,
-                links_found=len(links),
-                links_processed=len(results),
-                include_global=False,
-            )
         if self.verbose:
             print(f"\n[完成] 成功: {len(success_results)}/{len(results)}, 耗时: {elapsed:.1f}s")
 

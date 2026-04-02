@@ -49,8 +49,6 @@ except ImportError:
 
 # ============ 常量 ============
 
-CHROME_BINARY_PATH = "/root/.cache/selenium/chrome/linux64/143.0.7499.192/chrome"
-
 
 # ============ 提示词 ============
 

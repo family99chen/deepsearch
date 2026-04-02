@@ -34,7 +34,13 @@ from org_info.social_media_pipeline import run_social_media_pipeline
 from org_info.arbitrary_pipeline import run_arbitrary_pipeline
 from llm import query_async
 from localdb.deepsearch_cache import get_person_pipeline_cache
-from utils.org_pipeline_stats import record_stage_cache_hits_from_person_cache
+from utils.org_pipeline_stats import (
+    record_cache_hit as record_org_pipeline_cache_hit,
+    record_error as record_org_pipeline_error,
+    record_not_found as record_org_pipeline_not_found,
+    record_request as record_org_pipeline_request,
+    record_success as record_org_pipeline_success,
+)
 
 
 def _run_async(coro):
@@ -85,6 +91,22 @@ def _extract_json(text: str) -> Optional[Dict[str, Any]]:
         except Exception:
             return None
     return None
+
+
+def _safe_record_stats(callback):
+    try:
+        callback()
+    except Exception:
+        # 统计是附属能力，不能影响主流程
+        pass
+
+
+def _is_not_found_exception(exc: Exception) -> bool:
+    if isinstance(exc, ValueError):
+        message = str(exc).lower()
+        markers = ("未找到", "not found", "无法从 google scholar 获取姓名")
+        return any(marker in message for marker in markers)
+    return False
 
 
 def _is_missing_organization(organization: Optional[str]) -> bool:
@@ -183,64 +205,118 @@ class PersonPipeline:
         extra_sources: Optional[List[str]] = None,
         fallback_organization: Optional[str] = None,
     ) -> FinalResult:
+        _safe_record_stats(record_org_pipeline_request)
         pipeline_cache = get_person_pipeline_cache()
-        cached_result = pipeline_cache.get_final_result(
-            google_scholar_url=google_scholar_url,
-            max_iterations=self.max_iterations,
-            max_links=self.max_links,
-            max_workers=self.max_workers,
-            model=self.model,
-            backend=self.backend,
-            extra_sources=extra_sources,
-        )
-        if cached_result:
-            final = cached_result["final"]
-            record_stage_cache_hits_from_person_cache(cached_result.get("stages", {}))
+        try:
+            cached_result = pipeline_cache.get_final_result(
+                google_scholar_url=google_scholar_url,
+                max_iterations=self.max_iterations,
+                max_links=self.max_links,
+                max_workers=self.max_workers,
+                model=self.model,
+                backend=self.backend,
+                extra_sources=extra_sources,
+            )
+            if cached_result:
+                final = cached_result["final"]
+                _safe_record_stats(record_org_pipeline_cache_hit)
+                if self.verbose:
+                    print("=" * 60)
+                    print("[Pipeline] 命中 person_pipeline_cache")
+                    print("=" * 60)
+                    print(f"[CACHE] Google Scholar URL: {google_scholar_url}")
+                result = FinalResult(
+                    person_name=final.get("person_name", ""),
+                    organization=final.get("organization"),
+                    report=final.get("report", ""),
+                    iterations=final.get("iterations", 0),
+                    queries=final.get("queries", []),
+                    sources=final.get("sources", []),
+                )
+                _safe_record_stats(record_org_pipeline_success)
+                return result
+
             if self.verbose:
                 print("=" * 60)
-                print("[Pipeline] 命中 person_pipeline_cache")
+                print("[Pipeline] 从 Google Scholar 开始")
                 print("=" * 60)
-                print(f"[CACHE] Google Scholar URL: {google_scholar_url}")
-            return FinalResult(
-                person_name=final.get("person_name", ""),
-                organization=final.get("organization"),
-                report=final.get("report", ""),
-                iterations=final.get("iterations", 0),
-                queries=final.get("queries", []),
-                sources=final.get("sources", []),
+
+            profile = get_profile_info(google_scholar_url)
+            person_name = profile.get("name")
+            organization = profile.get("affiliation")
+            original_organization = organization
+            scholar_email_domain = _extract_domain_from_verified_email(profile.get("verified_email"))
+            resolved_fallback_organization = _pick_fallback_organization(
+                fallback_organization,
+                scholar_email_domain,
             )
+            if _is_missing_organization(organization) and resolved_fallback_organization:
+                organization = resolved_fallback_organization
+            if not person_name:
+                raise ValueError("无法从 Google Scholar 获取姓名")
 
-        if self.verbose:
-            print("=" * 60)
-            print("[Pipeline] 从 Google Scholar 开始")
-            print("=" * 60)
+            if self.verbose:
+                print(f"[Pipeline] 姓名: {person_name}")
+                print(f"[Pipeline] 组织: {organization or '未找到'}")
+                if organization != original_organization and resolved_fallback_organization:
+                    print(f"[Pipeline] 组织回退来源: {resolved_fallback_organization}")
 
-        profile = get_profile_info(google_scholar_url)
-        person_name = profile.get("name")
-        organization = profile.get("affiliation")
-        original_organization = organization
-        scholar_email_domain = _extract_domain_from_verified_email(profile.get("verified_email"))
-        resolved_fallback_organization = _pick_fallback_organization(
-            fallback_organization,
-            scholar_email_domain,
-        )
-        if _is_missing_organization(organization) and resolved_fallback_organization:
-            organization = resolved_fallback_organization
-        if not person_name:
-            raise ValueError("无法从 Google Scholar 获取姓名")
+            stage_data: Dict[str, Any] = {
+                "profile": {
+                    "name": profile.get("name"),
+                    "affiliation": profile.get("affiliation"),
+                    "resolved_organization": organization,
+                    "verified_email_domain": scholar_email_domain,
+                    "verified_email": profile.get("verified_email"),
+                    "interests": profile.get("interests"),
+                    "citations": profile.get("citations"),
+                    "h_index": profile.get("h_index"),
+                    "i10_index": profile.get("i10_index"),
+                    "coauthors": profile.get("coauthors"),
+                    "profile_url": profile.get("url"),
+                },
+                "arbitrary_pipeline": {},
+            }
 
-        if self.verbose:
-            print(f"[Pipeline] 姓名: {person_name}")
-            print(f"[Pipeline] 组织: {organization or '未找到'}")
-            if organization != original_organization and resolved_fallback_organization:
-                print(f"[Pipeline] 组织回退来源: {resolved_fallback_organization}")
+            def _save_and_return(result: FinalResult) -> FinalResult:
+                pipeline_cache.set_final_result(
+                    google_scholar_url=google_scholar_url,
+                    max_iterations=self.max_iterations,
+                    max_links=self.max_links,
+                    max_workers=self.max_workers,
+                    model=self.model,
+                    backend=self.backend,
+                    result=self._to_cache_payload(result),
+                    extra_sources=extra_sources,
+                    stages=stage_data,
+                )
+                return result
 
-        stage_data: Dict[str, Any] = {
-            "profile": {
+            # 1) 组织信息 pipeline
+            org_result = run_org_pipeline(
+                person_name=person_name,
+                organization=organization,
+                google_scholar_url=google_scholar_url,
+                max_links=self.max_links,
+                max_workers=self.max_workers,
+                verbose=self.verbose,
+            )
+            stage_data["organization_pipeline"] = asdict(org_result)
+
+            # 2) 社交媒体 pipeline
+            social_result = run_social_media_pipeline(
+                person_name=person_name,
+                organization=organization,
+                google_scholar_url=google_scholar_url,
+                max_links=self.max_links,
+                max_workers=self.max_workers,
+                verbose=self.verbose,
+            )
+            stage_data["social_media_pipeline"] = asdict(social_result)
+
+            scholar_detail = {
                 "name": profile.get("name"),
                 "affiliation": profile.get("affiliation"),
-                "resolved_organization": organization,
-                "verified_email_domain": scholar_email_domain,
                 "verified_email": profile.get("verified_email"),
                 "interests": profile.get("interests"),
                 "citations": profile.get("citations"),
@@ -248,140 +324,102 @@ class PersonPipeline:
                 "i10_index": profile.get("i10_index"),
                 "coauthors": profile.get("coauthors"),
                 "profile_url": profile.get("url"),
-            },
-            "arbitrary_pipeline": {},
-        }
+            }
+            sources = [
+                "## Google Scholar Person Detail (authoritative)\n"
+                + json.dumps(scholar_detail, ensure_ascii=True, indent=2),
+                org_result.merged_report,
+                social_result.merged_report,
+            ]
+            if extra_sources:
+                sources = extra_sources + sources
+                if self.verbose:
+                    print("[Pipeline] extra_sources 内容:")
+                    for idx, item in enumerate(extra_sources, 1):
+                        print(f"[extra_source {idx}] {item}")
+            queries: List[str] = []
 
-        def _save_and_return(result: FinalResult) -> FinalResult:
-            pipeline_cache.set_final_result(
-                google_scholar_url=google_scholar_url,
-                max_iterations=self.max_iterations,
-                max_links=self.max_links,
-                max_workers=self.max_workers,
-                model=self.model,
-                backend=self.backend,
-                result=self._to_cache_payload(result),
-                extra_sources=extra_sources,
-                stages=stage_data,
-            )
-            return result
+            # 3) 分析 AI 判断是否足够
+            for i in range(self.max_iterations):
+                try:
+                    decision = self._analyze_sources(
+                        person_name,
+                        organization,
+                        sources,
+                        queries,
+                        iteration=i + 1,
+                    )
+                except Exception:
+                    # LLM 出错时直接返回已有内容，确保不中止
+                    result = _save_and_return(FinalResult(
+                        person_name=person_name,
+                        organization=organization,
+                        report="\n\n".join(sources),
+                        iterations=i + 1,
+                        queries=queries,
+                        sources=sources,
+                    ))
+                    _safe_record_stats(record_org_pipeline_success)
+                    return result
+                if decision.get("sufficient"):
+                    report = decision.get("final_report") or self._final_report(
+                        person_name,
+                        organization,
+                        sources,
+                    )
+                    stage_data["final_decision"] = decision
+                    result = _save_and_return(FinalResult(
+                        person_name=person_name,
+                        organization=organization,
+                        report=report,
+                        iterations=i + 1,
+                        queries=queries,
+                        sources=sources,
+                    ))
+                    _safe_record_stats(record_org_pipeline_success)
+                    return result
 
-        # 1) 组织信息 pipeline
-        org_result = run_org_pipeline(
-            person_name=person_name,
-            organization=organization,
-            google_scholar_url=google_scholar_url,
-            max_links=self.max_links,
-            max_workers=self.max_workers,
-            verbose=self.verbose,
-        )
-        stage_data["organization_pipeline"] = asdict(org_result)
+                next_query = decision.get("next_query", "").strip()
+                if not next_query:
+                    break
+                queries.append(next_query)
 
-        # 2) 社交媒体 pipeline
-        social_result = run_social_media_pipeline(
-            person_name=person_name,
-            organization=organization,
-            google_scholar_url=google_scholar_url,
-            max_links=self.max_links,
-            max_workers=self.max_workers,
-            verbose=self.verbose,
-        )
-        stage_data["social_media_pipeline"] = asdict(social_result)
-
-        scholar_detail = {
-            "name": profile.get("name"),
-            "affiliation": profile.get("affiliation"),
-            "verified_email": profile.get("verified_email"),
-            "interests": profile.get("interests"),
-            "citations": profile.get("citations"),
-            "h_index": profile.get("h_index"),
-            "i10_index": profile.get("i10_index"),
-            "coauthors": profile.get("coauthors"),
-            "profile_url": profile.get("url"),
-        }
-        sources = [
-            "## Google Scholar Person Detail (authoritative)\n"
-            + json.dumps(scholar_detail, ensure_ascii=True, indent=2),
-            org_result.merged_report,
-            social_result.merged_report,
-        ]
-        if extra_sources:
-            sources = extra_sources + sources
-            if self.verbose:
-                print("[Pipeline] extra_sources 内容:")
-                for idx, item in enumerate(extra_sources, 1):
-                    print(f"[extra_source {idx}] {item}")
-        queries: List[str] = []
-
-        # 3) 分析 AI 判断是否足够
-        for i in range(self.max_iterations):
-            try:
-                decision = self._analyze_sources(
-                    person_name,
-                    organization,
-                    sources,
-                    queries,
-                    iteration=i + 1,
-                )
-            except Exception:
-                # LLM 出错时直接返回已有内容，确保不中止
-                return _save_and_return(FinalResult(
-                    person_name=person_name,
+                ai_person_name = decision.get("person_name")
+                if self.verbose:
+                    if ai_person_name:
+                        print(f"[Pipeline] AI 提供人名: {ai_person_name}")
+                    else:
+                        print("[Pipeline] AI 未提供人名，仅使用 query")
+                arbitrary_result = run_arbitrary_pipeline(
+                    query=next_query,
+                    google_scholar_url=google_scholar_url,
+                    max_links=self.max_links,
+                    max_workers=self.max_workers,
+                    verbose=self.verbose,
+                    person_name=ai_person_name,
                     organization=organization,
-                    report="\n\n".join(sources),
-                    iterations=i + 1,
-                    queries=queries,
-                    sources=sources,
-                ))
-            if decision.get("sufficient"):
-                report = decision.get("final_report") or self._final_report(
-                    person_name,
-                    organization,
-                    sources,
                 )
-                stage_data["final_decision"] = decision
-                return _save_and_return(FinalResult(
-                    person_name=person_name,
-                    organization=organization,
-                    report=report,
-                    iterations=i + 1,
-                    queries=queries,
-                    sources=sources,
-                ))
+                stage_data["arbitrary_pipeline"][next_query] = asdict(arbitrary_result)
+                sources.append(arbitrary_result.merged_report)
 
-            next_query = decision.get("next_query", "").strip()
-            if not next_query:
-                break
-            queries.append(next_query)
-
-            ai_person_name = decision.get("person_name")
-            if self.verbose:
-                if ai_person_name:
-                    print(f"[Pipeline] AI 提供人名: {ai_person_name}")
-                else:
-                    print("[Pipeline] AI 未提供人名，仅使用 query")
-            arbitrary_result = run_arbitrary_pipeline(
-                query=next_query,
-                google_scholar_url=google_scholar_url,
-                max_links=self.max_links,
-                max_workers=self.max_workers,
-                verbose=self.verbose,
-                person_name=ai_person_name,
+            # 达到最大迭代次数，仍生成最终报告
+            final_report = self._final_report(person_name, organization, sources)
+            result = _save_and_return(FinalResult(
+                person_name=person_name,
                 organization=organization,
-            )
-            stage_data["arbitrary_pipeline"][next_query] = asdict(arbitrary_result)
-            sources.append(arbitrary_result.merged_report)
-
-        # 达到最大迭代次数，仍生成最终报告
-        final_report = self._final_report(person_name, organization, sources)
-        return _save_and_return(FinalResult(
-            person_name=person_name,
-            organization=organization,
-            report=final_report,
-            iterations=self.max_iterations,
-            queries=queries,
-            sources=sources,
-        ))
+                report=final_report,
+                iterations=self.max_iterations,
+                queries=queries,
+                sources=sources,
+            ))
+            _safe_record_stats(record_org_pipeline_success)
+            return result
+        except Exception as exc:
+            if _is_not_found_exception(exc):
+                _safe_record_stats(record_org_pipeline_not_found)
+            else:
+                _safe_record_stats(record_org_pipeline_error)
+            raise
 
     def _analyze_sources(
         self,

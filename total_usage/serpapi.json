@@ -1,5 +1,5 @@
 {
-  "total": 5799,
+  "total": 8389,
   "daily": {
     "2026-01-17": {
       "total": 38,
@@ -104,10 +104,58 @@
       },
       "first_request": "2026-03-18T16:03:54.180586",
       "last_request": "2026-03-18T16:14:19.976510"
+    },
+    "2026-03-22": {
+      "total": 1281,
+      "endpoints": {
+        "serpapi_scholar": 1281
+      },
+      "first_request": "2026-03-22T00:09:13.909031",
+      "last_request": "2026-03-22T23:46:14.201039"
+    },
+    "2026-03-23": {
+      "total": 105,
+      "endpoints": {
+        "serpapi_scholar": 105
+      },
+      "first_request": "2026-03-23T00:12:29.926971",
+      "last_request": "2026-03-23T20:52:52.988810"
+    },
+    "2026-03-24": {
+      "total": 216,
+      "endpoints": {
+        "serpapi_scholar": 216
+      },
+      "first_request": "2026-03-24T11:54:48.918812",
+      "last_request": "2026-03-24T23:59:35.648888"
+    },
+    "2026-03-25": {
+      "total": 682,
+      "endpoints": {
+        "serpapi_scholar": 682
+      },
+      "first_request": "2026-03-25T00:02:25.533385",
+      "last_request": "2026-03-25T23:51:16.624808"
+    },
+    "2026-03-26": {
+      "total": 290,
+      "endpoints": {
+        "serpapi_scholar": 290
+      },
+      "first_request": "2026-03-26T00:11:36.063523",
+      "last_request": "2026-03-26T23:54:39.195991"
+    },
+    "2026-03-27": {
+      "total": 16,
+      "endpoints": {
+        "serpapi_scholar": 16
+      },
+      "first_request": "2026-03-27T00:28:39.503549",
+      "last_request": "2026-03-27T12:45:49.433707"
     }
   },
   "endpoints": {
-    "serpapi_scholar": 5799
+    "serpapi_scholar": 8389
   },
-  "last_updated": "2026-03-18T16:14:19.976518"
+  "last_updated": "2026-03-27T12:45:49.433714"
 }

@@ -29,13 +29,7 @@ from org_info.google_org_search import (
     search_person_in_org_with_raw as google_search_with_raw,
     OrgPersonLink,
 )
-from utils.org_pipeline_stats import (
-    record_cache_hit as record_stats_cache_hit,
-    record_error as record_stats_error,
-    record_not_found as record_stats_not_found,
-    record_request as record_stats_request,
-    record_success as record_stats_success,
-)
+from org_info.subprocess_manager import run_worker_subprocess
 
 
 # ============ 配置 ============
@@ -252,13 +246,21 @@ class OrganizationPipelineSubprocess:
                 print(f"[Subprocess] 启动: {url[:50]}...")
             
             # 运行子进程，超时 5 分钟
-            result = subprocess.run(
-                cmd,
-                capture_output=True,
-                text=True,
+            result = run_worker_subprocess(
+                cmd=cmd,
                 timeout=300,
-                cwd=str(Path(__file__).parent.parent),  # 在项目根目录运行
+                cwd=Path(__file__).parent.parent,
             )
+
+            if result.timed_out:
+                return LinkResult(
+                    url=url,
+                    success=False,
+                    mode="failed",
+                    report="",
+                    info_count=0,
+                    error="超时 (5分钟)",
+                )
             
             # 打印子进程的 stderr（调试信息）
             if result.stderr and self.verbose:
@@ -280,15 +282,6 @@ class OrganizationPipelineSubprocess:
                     error=f"Worker 退出码: {result.returncode}",
                 )
         
-        except subprocess.TimeoutExpired:
-            return LinkResult(
-                url=url,
-                success=False,
-                mode="failed",
-                report="",
-                info_count=0,
-                error="超时 (5分钟)",
-            )
         except Exception as e:
             return LinkResult(
                 url=url,
@@ -307,7 +300,6 @@ class OrganizationPipelineSubprocess:
     ) -> PipelineResult:
         """运行 Pipeline"""
         start_time = time.time()
-        record_stats_request(PIPELINE_TYPE)
         
         if self.verbose:
             print("=" * 60)
@@ -324,7 +316,6 @@ class OrganizationPipelineSubprocess:
                 if self.verbose:
                     print(f"  组织: {org or '未找到'}")
             except Exception:
-                record_stats_error(PIPELINE_TYPE)
                 raise
         
         # 2. 搜索链接
@@ -339,14 +330,9 @@ class OrganizationPipelineSubprocess:
                 google_scholar_url=google_scholar_url,
             )
         except Exception:
-            record_stats_error(PIPELINE_TYPE)
             raise
 
-        if google_raw.get("from_cache"):
-            record_stats_cache_hit(PIPELINE_TYPE)
-
         if google_raw.get("success") is False:
-            record_stats_error(PIPELINE_TYPE)
             merged = self._merge_reports([], person_name)
             merged += "\n---\n## Google Search API 原始内容\n\n"
             merged += "```json\n"
@@ -368,7 +354,6 @@ class OrganizationPipelineSubprocess:
                 print(f"    {i+1}. {link.url[:60]}...")
         
         if not links:
-            record_stats_not_found(PIPELINE_TYPE, links_found=0, links_processed=0)
             merged = self._merge_reports([], person_name)
             merged += "\n---\n## Google Search API 原始内容\n\n"
             merged += "```json\n"
@@ -424,20 +409,6 @@ class OrganizationPipelineSubprocess:
         
         elapsed = time.time() - start_time
 
-        if success_results:
-            record_stats_success(
-                PIPELINE_TYPE,
-                links_found=len(links),
-                links_processed=len(results),
-                worker_success=len(success_results),
-            )
-        else:
-            record_stats_not_found(
-                PIPELINE_TYPE,
-                links_found=len(links),
-                links_processed=len(results),
-            )
-        
         if self.verbose:
             print(f"\n[完成] 成功: {len(success_results)}/{len(results)}, 耗时: {elapsed:.1f}s")
         

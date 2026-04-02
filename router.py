@@ -508,15 +508,12 @@ async def get_pipeline_today_usage():
 @router.get("/usage/org-pipeline", tags=["Usage"])
 async def get_org_pipeline_usage():
     """
-    获取 org_info 联网搜索详细统计
+    获取 deepsearch 调用统计
 
     返回：
-    - total_requests: 总请求次数
-    - cache_hits: 搜索缓存命中次数
-    - success / not_found / error: 总体结果统计
-    - links_found_total / links_processed_total / worker_success_total: 链接处理汇总
-    - worker: 全部 worker 的执行模式与成功失败情况
-    - by_pipeline: 按 organization / social_media / arbitrary 分组
+    - total_requests: deepsearch 总调用次数
+    - cache_hits: person_pipeline_cache 命中次数
+    - success / not_found / error: 互斥终态统计
     """
     stats = get_org_pipeline_stats()
     return stats.get_stats()
@@ -525,7 +522,7 @@ async def get_org_pipeline_usage():
 @router.get("/usage/org-pipeline/today", tags=["Usage"])
 async def get_org_pipeline_today_usage():
     """
-    获取今日 org_info 联网搜索详细统计
+    获取今日 deepsearch 调用统计
     """
     stats = get_org_pipeline_stats()
     return stats.get_today_stats()

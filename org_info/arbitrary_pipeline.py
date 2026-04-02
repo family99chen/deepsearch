@@ -20,13 +20,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from org_info.arbitrary_search import search_arbitrary_with_raw
-from utils.org_pipeline_stats import (
-    record_cache_hit as record_stats_cache_hit,
-    record_error as record_stats_error,
-    record_not_found as record_stats_not_found,
-    record_request as record_stats_request,
-    record_success as record_stats_success,
-)
+from org_info.subprocess_manager import run_worker_subprocess
 
 WORKER_SCRIPT = Path(__file__).parent / "_worker.py"
 PIPELINE_TYPE = "arbitrary"
@@ -87,13 +81,21 @@ class ArbitraryPipelineSubprocess:
             if self.verbose:
                 print(f"[Subprocess] 启动: {url[:50]}...")
 
-            result = subprocess.run(
-                cmd,
-                capture_output=True,
-                text=True,
+            result = run_worker_subprocess(
+                cmd=cmd,
                 timeout=300,
-                cwd=str(Path(__file__).parent.parent),
+                cwd=Path(__file__).parent.parent,
             )
+
+            if result.timed_out:
+                return LinkResult(
+                    url=url,
+                    success=False,
+                    mode="failed",
+                    report="",
+                    info_count=0,
+                    error="超时 (5分钟)",
+                )
 
             if result.stderr and self.verbose:
                 for line in result.stderr.strip().split("\n"):
@@ -110,15 +112,6 @@ class ArbitraryPipelineSubprocess:
                 report="",
                 info_count=0,
                 error=f"Worker 退出码: {result.returncode}",
-            )
-        except subprocess.TimeoutExpired:
-            return LinkResult(
-                url=url,
-                success=False,
-                mode="failed",
-                report="",
-                info_count=0,
-                error="超时 (5分钟)",
             )
         except Exception as e:
             return LinkResult(
@@ -138,7 +131,6 @@ class ArbitraryPipelineSubprocess:
         organization: Optional[str] = None,
     ) -> PipelineResult:
         start_time = time.time()
-        record_stats_request(PIPELINE_TYPE, include_global=False)
 
         if self.verbose:
             print("=" * 60)
@@ -152,14 +144,9 @@ class ArbitraryPipelineSubprocess:
                 google_scholar_url=google_scholar_url,
             )
         except Exception:
-            record_stats_error(PIPELINE_TYPE, include_global=False)
             raise
 
-        if raw.get("from_cache"):
-            record_stats_cache_hit(PIPELINE_TYPE, include_global=False)
-
         if raw.get("success") is False:
-            record_stats_error(PIPELINE_TYPE, include_global=False)
             merged = self._merge_reports([], person_name, query)
             merged += "\n---\n## Arbitrary Search 原始内容\n\n"
             merged += "```json\n"
@@ -182,12 +169,6 @@ class ArbitraryPipelineSubprocess:
                 print(f"    {i+1}. {link.url[:60]}...")
 
         if not links:
-            record_stats_not_found(
-                PIPELINE_TYPE,
-                links_found=0,
-                links_processed=0,
-                include_global=False,
-            )
             merged = self._merge_reports([], person_name, query)
             merged += "\n---\n## Arbitrary Search 原始内容\n\n"
             merged += "```json\n"
@@ -240,21 +221,6 @@ class ArbitraryPipelineSubprocess:
         merged += "\n```\n"
 
         elapsed = time.time() - start_time
-        if success_results:
-            record_stats_success(
-                PIPELINE_TYPE,
-                links_found=len(links),
-                links_processed=len(results),
-                worker_success=len(success_results),
-                include_global=False,
-            )
-        else:
-            record_stats_not_found(
-                PIPELINE_TYPE,
-                links_found=len(links),
-                links_processed=len(results),
-                include_global=False,
-            )
         if self.verbose:
             print(f"\n[完成] 成功: {len(success_results)}/{len(results)}, 耗时: {elapsed:.1f}s")
 

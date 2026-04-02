@@ -3,6 +3,10 @@ import sys
 import os
 import json
 import asyncio
+import atexit
+import signal
+import shutil
+import threading
 from pathlib import Path
 
 # 设置独立的 chromedriver 缓存目录（基于 PID）
@@ -11,6 +15,42 @@ os.environ["UC_CACHE_DIR"] = f"/tmp/uc_cache_{os.getpid()}"
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from localdb.deepsearch_cache import get_page_analysis_cache
+
+
+_cleanup_lock = threading.Lock()
+_cleanup_done = False
+
+
+def _cleanup_worker_resources():
+    """清理浏览器和 worker 运行时目录，允许重复调用。"""
+    global _cleanup_done
+
+    with _cleanup_lock:
+        if _cleanup_done:
+            return
+        _cleanup_done = True
+
+    try:
+        from org_info.shared_driver import close_shared_driver
+        close_shared_driver()
+    except Exception:
+        pass
+
+    cache_dir = f"/tmp/uc_cache_{os.getpid()}"
+    try:
+        shutil.rmtree(cache_dir, ignore_errors=True)
+    except Exception:
+        pass
+
+
+def _handle_exit_signal(signum, frame):
+    _cleanup_worker_resources()
+    raise SystemExit(128 + signum)
+
+
+atexit.register(_cleanup_worker_resources)
+signal.signal(signal.SIGTERM, _handle_exit_signal)
+signal.signal(signal.SIGINT, _handle_exit_signal)
 
 def run_task(url: str, person_name: str, verbose: bool):
     """运行单个任务"""
@@ -130,19 +170,7 @@ def run_task(url: str, person_name: str, verbose: bool):
         result["error"] = str(e)
     
     finally:
-        try:
-            from org_info.shared_driver import close_shared_driver
-            close_shared_driver()
-        except:
-            pass
-        
-        # 清理缓存目录
-        import shutil
-        cache_dir = f"/tmp/uc_cache_{os.getpid()}"
-        try:
-            shutil.rmtree(cache_dir, ignore_errors=True)
-        except:
-            pass
+        _cleanup_worker_resources()
     
     return result
 

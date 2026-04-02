@@ -31,6 +31,7 @@
 import os
 import time
 import asyncio
+import atexit
 import subprocess
 import threading
 from pathlib import Path
@@ -39,6 +40,7 @@ from contextlib import contextmanager, asynccontextmanager
 
 # undetected-chromedriver
 import undetected_chromedriver as uc
+from org_info.chrome_binary import get_chrome_version_main, resolve_chrome_binary_path
 
 # 导入日志
 try:
@@ -46,34 +48,6 @@ try:
 except ImportError:
     import logging
     logger = logging.getLogger(__name__)
-
-
-# ============ 常量 ============
-
-CHROME_BINARY_PATH = "/root/.cache/selenium/chrome/linux64/143.0.7499.192/chrome"
-
-
-def _get_chrome_version_main() -> Optional[int]:
-    """尝试从 Chrome 可执行文件读取主版本号（例如 143）"""
-    if not Path(CHROME_BINARY_PATH).exists():
-        return None
-    try:
-        result = subprocess.run(
-            [CHROME_BINARY_PATH, "--version"],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            check=False,
-        )
-        output = (result.stdout or result.stderr).strip()
-        # 形如: "Google Chrome 143.0.7499.192"
-        for token in output.split():
-            if token and token[0].isdigit():
-                major = token.split(".", 1)[0]
-                return int(major)
-    except Exception:
-        return None
-    return None
 
 
 # ============ Xvfb 管理 ============
@@ -242,17 +216,21 @@ class SharedDriverManager:
                 options.add_argument("--no-sandbox")
                 options.add_argument("--disable-dev-shm-usage")
                 options.add_argument("--window-size=1920,1080")
-                
-                if Path(CHROME_BINARY_PATH).exists():
-                    options.binary_location = CHROME_BINARY_PATH
 
-                version_main = _get_chrome_version_main()
+                chrome_binary = resolve_chrome_binary_path()
+                options.binary_location = chrome_binary
+
+                version_main = get_chrome_version_main(chrome_binary)
                 if version_main:
                     logger.info(f"检测到 Chrome 主版本: {version_main}")
                 else:
                     logger.info("未检测到 Chrome 主版本，将由 uc 自动选择驱动")
 
-                driver = uc.Chrome(options=options, version_main=version_main)
+                driver = uc.Chrome(
+                    options=options,
+                    version_main=version_main,
+                    browser_executable_path=chrome_binary,
+                )
                 driver.set_page_load_timeout(30)
                 
                 logger.info("共享 Chrome driver 已创建")
@@ -595,6 +573,18 @@ class SharedDriverManager:
 _manager: Optional[SharedDriverManager] = None
 
 
+def _close_shared_driver_on_exit():
+    """解释器退出时尽力关闭共享浏览器资源。"""
+    global _manager
+    if _manager is None:
+        return
+
+    try:
+        _manager.close()
+    except Exception:
+        pass
+
+
 def get_manager() -> SharedDriverManager:
     """获取全局管理器实例"""
     global _manager
@@ -829,4 +819,7 @@ if __name__ == "__main__":
     print("\n[Test 3] 关闭")
     close_shared_driver()
     print("  已关闭")
+
+
+atexit.register(_close_shared_driver_on_exit)
 
