@@ -199,6 +199,17 @@ class PersonPipeline:
             "sources": result.sources,
         }
 
+    @staticmethod
+    def _normalize_report_text(report: Optional[str]) -> Optional[str]:
+        if not report:
+            return None
+        value = report.strip()
+        return value or None
+
+    @staticmethod
+    def _build_failure_report(person_name: str) -> str:
+        return f"DeepSearch failed: unable to generate the final report for {person_name}. Please try again later."
+
     def run(
         self,
         google_scholar_url: str,
@@ -339,6 +350,17 @@ class PersonPipeline:
                         print(f"[extra_source {idx}] {item}")
             queries: List[str] = []
 
+            def _return_failed_result(iterations: int) -> FinalResult:
+                _safe_record_stats(record_org_pipeline_not_found)
+                return FinalResult(
+                    person_name=person_name,
+                    organization=organization,
+                    report=self._build_failure_report(person_name),
+                    iterations=iterations,
+                    queries=queries.copy(),
+                    sources=[],
+                )
+
             # 3) 分析 AI 判断是否足够
             for i in range(self.max_iterations):
                 try:
@@ -350,28 +372,34 @@ class PersonPipeline:
                         iteration=i + 1,
                     )
                 except Exception:
-                    # LLM 出错时直接返回已有内容，确保不中止
-                    result = _save_and_return(FinalResult(
-                        person_name=person_name,
-                        organization=organization,
-                        report="\n\n".join(sources),
-                        iterations=i + 1,
-                        queries=queries,
-                        sources=sources,
-                    ))
-                    _safe_record_stats(record_org_pipeline_success)
-                    return result
+                    report = self._final_report(person_name, organization, sources)
+                    normalized_report = self._normalize_report_text(report)
+                    if normalized_report:
+                        result = _save_and_return(FinalResult(
+                            person_name=person_name,
+                            organization=organization,
+                            report=normalized_report,
+                            iterations=i + 1,
+                            queries=queries,
+                            sources=sources,
+                        ))
+                        _safe_record_stats(record_org_pipeline_success)
+                        return result
+                    return _return_failed_result(i + 1)
                 if decision.get("sufficient"):
-                    report = decision.get("final_report") or self._final_report(
+                    report = self._normalize_report_text(decision.get("final_report")) or self._final_report(
                         person_name,
                         organization,
                         sources,
                     )
+                    normalized_report = self._normalize_report_text(report)
+                    if not normalized_report:
+                        return _return_failed_result(i + 1)
                     stage_data["final_decision"] = decision
                     result = _save_and_return(FinalResult(
                         person_name=person_name,
                         organization=organization,
-                        report=report,
+                        report=normalized_report,
                         iterations=i + 1,
                         queries=queries,
                         sources=sources,
@@ -404,10 +432,13 @@ class PersonPipeline:
 
             # 达到最大迭代次数，仍生成最终报告
             final_report = self._final_report(person_name, organization, sources)
+            normalized_report = self._normalize_report_text(final_report)
+            if not normalized_report:
+                return _return_failed_result(self.max_iterations)
             result = _save_and_return(FinalResult(
                 person_name=person_name,
                 organization=organization,
-                report=final_report,
+                report=normalized_report,
                 iterations=self.max_iterations,
                 queries=queries,
                 sources=sources,
@@ -492,7 +523,7 @@ class PersonPipeline:
         person_name: str,
         organization: Optional[str],
         sources: List[str],
-    ) -> str:
+    ) -> Optional[str]:
         system_prompt = "你是信息分析助手，请基于来源内容生成完整报告。"
         prompt = f"""
 人名: {person_name}
@@ -529,9 +560,9 @@ class PersonPipeline:
                     backend=self.backend,
                 )
             )
-            return response.strip() or "\n\n".join(sources)
+            return self._normalize_report_text(response)
         except Exception:
-            return "\n\n".join(sources)
+            return None
 
 def run_person_pipeline(
     google_scholar_url: str,
