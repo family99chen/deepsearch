@@ -1646,3 +1646,228 @@
 [2026-04-02 12:25:27] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
 [2026-04-02 12:25:29] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
 [2026-04-02 12:25:31] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 12:32:26] [INFO] 开始查找 ORCID: 0000-0002-1825-0097
+[2026-04-07 12:32:26] [INFO] 作者姓名: Josiah Carberry -> josiah carberry
+[2026-04-07 12:32:26] [INFO] 作者组织: Brown University
+[2026-04-07 12:32:26] [INFO] 获取到 6 篇 ORCID 论文
+[2026-04-07 12:32:27] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-04-07 12:32:31] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-1825-0097
+[2026-04-07 12:32:57] [INFO] 开始查找 ORCID: 0000-0002-1825-0097
+[2026-04-07 12:32:57] [INFO] 作者姓名: Josiah Carberry -> josiah carberry
+[2026-04-07 12:32:57] [INFO] 作者组织: Brown University
+[2026-04-07 12:32:57] [INFO] 获取到 6 篇 ORCID 论文
+[2026-04-07 12:32:57] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-04-07 12:32:57] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-1825-0097
+[2026-04-07 13:08:26] [INFO] 开始查找 ORCID: 0000-0002-1825-0097
+[2026-04-07 13:08:26] [INFO] 作者姓名: Josiah Carberry -> josiah carberry
+[2026-04-07 13:08:26] [INFO] 作者组织: Brown University
+[2026-04-07 13:08:26] [INFO] 获取到 6 篇 ORCID 论文
+[2026-04-07 13:08:26] [INFO] 名字搜索未找到，尝试论文标题搜索
+[2026-04-07 13:08:26] [WARNING] 未找到匹配的 Google Scholar 账号: 0000-0002-1825-0097
+[2026-04-07 13:08:43] [INFO] 开始查找 ORCID: 0000-0001-5443-573X
+[2026-04-07 13:08:43] [ERROR] [ERROR] 获取作者姓名失败: 404 Client Error: Not Found for url: https://pub.orcid.org/v3.0/0000-0001-5443-573X/person
+[2026-04-07 13:08:50] [INFO] 开始查找 ORCID: 0000-0002-8243-3096
+[2026-04-07 13:08:50] [ERROR] [ERROR] 获取作者姓名失败: 404 Client Error: Not Found for url: https://pub.orcid.org/v3.0/0000-0002-8243-3096/person
+[2026-04-07 13:09:04] [INFO] 缓存命中: 0000-0003-3397-3725 -> https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN
+[2026-04-07 13:09:12] [INFO] 缓存命中: 0000-0003-3397-3725 -> https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN
+[2026-04-07 13:09:12] [INFO] 开始搜索组织链接: Emmy Tay @ University of California, Davis
+[2026-04-07 13:09:12] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个链接
+[2026-04-07 13:11:52] [INFO] 开始搜索社交媒体链接: Emmy Tay @ University of California, Davis
+[2026-04-07 13:11:52] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个 social_media 链接
+[2026-04-07 13:12:29] [INFO] 缓存命中: 0000-0003-3397-3725 -> https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN
+[2026-04-07 13:12:29] [INFO] 开始搜索组织链接: Emmy Tay @ University of California, Davis
+[2026-04-07 13:12:29] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个链接
+[2026-04-07 13:13:47] [INFO] 开始搜索社交媒体链接: Emmy Tay @ University of California, Davis
+[2026-04-07 13:13:47] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个 social_media 链接
+[2026-04-07 13:15:09] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-07 13:15:10] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:15:14] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:15:15] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:15:15] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-07 13:15:18] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:15:20] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:15:22] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:18:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-07 13:18:20] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:18:22] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:18:24] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:18:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-07 13:18:27] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:18:30] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:18:34] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:18:45] [INFO] 缓存命中: 0000-0003-3397-3725 -> https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN
+[2026-04-07 13:18:45] [INFO] 开始搜索组织链接: Emmy Tay @ University of California, Davis
+[2026-04-07 13:18:45] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个链接
+[2026-04-07 13:19:59] [INFO] 开始搜索社交媒体链接: Emmy Tay @ University of California, Davis
+[2026-04-07 13:19:59] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个 social_media 链接
+[2026-04-07 13:23:35] [INFO] 缓存命中: 0000-0003-3397-3725 -> https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN
+[2026-04-07 13:23:35] [INFO] 开始搜索组织链接: Emmy Tay @ University of California, Davis
+[2026-04-07 13:23:35] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个链接
+[2026-04-07 13:23:54] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-07 13:23:55] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:23:57] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:24:00] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:24:00] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-07 13:24:01] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:24:03] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:24:05] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:24:39] [INFO] 开始搜索社交媒体链接: Emmy Tay @ University of California, Davis
+[2026-04-07 13:24:39] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个 social_media 链接
+[2026-04-07 13:29:25] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-07 13:29:27] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:29:29] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:29:32] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:29:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-07 13:29:35] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:29:37] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:29:40] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 13:58:39] [INFO] 缓存命中: 0000-0003-3397-3725 -> https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN
+[2026-04-07 13:58:39] [INFO] 开始搜索组织链接: Emmy Tay @ University of California, Davis
+[2026-04-07 13:58:39] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个链接
+[2026-04-07 13:59:50] [INFO] 开始搜索社交媒体链接: Emmy Tay @ University of California, Davis
+[2026-04-07 13:59:50] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个 social_media 链接
+[2026-04-07 14:05:33] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-07 14:05:38] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 14:05:40] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 14:05:43] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 14:05:43] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-07 14:05:45] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 14:05:47] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 14:05:49] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 14:05:57] [INFO] 开始搜索组织链接: Emmy Tay @ University of California, Davis
+[2026-04-07 14:05:58] [INFO] 搜索完成: Emmy Tay @ University of California, Davis, 找到 10 个链接
+[2026-04-07 14:05:58] [INFO] 缓存写入: https://scholar.google.com/citations?user=GUaAHccAAAAJ @ University of California, Davis, 10 个链接
+[2026-04-07 14:09:36] [INFO] 开始搜索社交媒体链接: Emmy Tay @ University of California, Davis
+[2026-04-07 14:09:37] [INFO] 社交媒体搜索完成: Emmy Tay @ University of California, Davis, 找到 10 个链接
+[2026-04-07 14:09:37] [INFO] 缓存写入: https://scholar.google.com/citations?user=GUaAHccAAAAJ @ University of California, Davis, 10 个 social_media 链接
+[2026-04-07 14:14:34] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-07 14:14:37] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 14:14:41] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 14:14:45] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 14:14:45] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-07 14:14:48] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 14:14:51] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 14:14:54] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 14:15:05] [INFO] 开始查找 ORCID: 0000-0002-1553-8272
+[2026-04-07 14:15:05] [ERROR] [ERROR] 获取作者姓名失败: 404 Client Error: Not Found for url: https://pub.orcid.org/v3.0/0000-0002-1553-8272/person
+[2026-04-07 14:15:17] [INFO] 开始查找 ORCID: 0000-0002-0568-2718
+[2026-04-07 14:15:17] [ERROR] [ERROR] 获取作者姓名失败: 404 Client Error: Not Found for url: https://pub.orcid.org/v3.0/0000-0002-0568-2718/person
+[2026-04-07 14:15:31] [INFO] 获取 Google Scholar 组织信息: JicYPdAAAAAJ -> Emeritus Prof. Computer Science,University of Toronto
+[2026-04-07 14:15:31] [INFO] 开始搜索组织链接: Geoffrey Hinton @ Emeritus Prof. Computer Science,University of Toronto
+[2026-04-07 14:15:31] [INFO] 搜索完成: Geoffrey Hinton @ Emeritus Prof. Computer Science,University of Toronto, 找到 7 个链接
+[2026-04-07 14:15:31] [INFO] 缓存写入: https://scholar.google.com/citations?user=JicYPdAAAAAJ @ Emeritus Prof. Computer Science,University of Toronto, 7 个链接
+[2026-04-07 14:17:23] [INFO] 开始搜索社交媒体链接: Geoffrey Hinton @ Emeritus Prof. Computer Science,University of Toronto
+[2026-04-07 14:17:23] [INFO] 社交媒体搜索完成: Geoffrey Hinton @ Emeritus Prof. Computer Science,University of Toronto, 找到 10 个链接
+[2026-04-07 14:17:23] [INFO] 缓存写入: https://scholar.google.com/citations?user=JicYPdAAAAAJ @ Emeritus Prof. Computer Science,University of Toronto, 10 个 social_media 链接
+[2026-04-07 14:20:28] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-07 14:20:33] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 14:20:36] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 14:20:38] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 14:20:38] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-07 14:20:42] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 14:20:44] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-07 14:20:47] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 14:57:34] [INFO] 缓存命中: 0000-0003-3397-3725 -> https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN
+[2026-04-09 14:57:34] [INFO] 开始搜索组织链接: Emmy Tay @ University of California, Davis
+[2026-04-09 14:57:34] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个链接
+[2026-04-09 14:58:54] [INFO] 开始搜索社交媒体链接: Emmy Tay @ University of California, Davis
+[2026-04-09 14:58:54] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个 social_media 链接
+[2026-04-09 15:02:51] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-09 15:02:53] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 15:02:56] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 15:02:59] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 15:02:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-09 15:03:00] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 15:03:02] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 15:03:04] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:02:30] [INFO] 缓存命中: 0000-0003-3397-3725 -> https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN
+[2026-04-09 21:02:30] [INFO] 开始搜索组织链接: Emmy Tay @ University of California, Davis
+[2026-04-09 21:02:30] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个链接
+[2026-04-09 21:03:46] [INFO] 开始搜索社交媒体链接: Emmy Tay @ University of California, Davis
+[2026-04-09 21:03:46] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个 social_media 链接
+[2026-04-09 21:08:00] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-09 21:08:02] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:08:05] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:08:08] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:08:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-09 21:08:10] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:08:13] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:08:16] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:19:49] [INFO] 缓存命中: 0000-0003-3397-3725 -> https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN
+[2026-04-09 21:19:50] [INFO] 开始搜索组织链接: Emmy Tay @ University of California, Davis
+[2026-04-09 21:19:50] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个链接
+[2026-04-09 21:21:02] [INFO] 开始搜索社交媒体链接: Emmy Tay @ University of California, Davis
+[2026-04-09 21:21:02] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个 social_media 链接
+[2026-04-09 21:21:04] [INFO] 缓存命中: 0000-0003-3397-3725 -> https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN
+[2026-04-09 21:21:04] [INFO] 开始搜索组织链接: Emmy Tay @ University of California, Davis
+[2026-04-09 21:21:04] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个链接
+[2026-04-09 21:22:14] [INFO] 开始搜索社交媒体链接: Emmy Tay @ University of California, Davis
+[2026-04-09 21:22:14] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个 social_media 链接
+[2026-04-09 21:23:19] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-09 21:23:24] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:23:29] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:23:32] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:23:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-09 21:23:35] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:23:37] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:23:38] [INFO] 缓存命中: 0000-0003-3397-3725 -> https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN
+[2026-04-09 21:23:38] [INFO] 开始搜索组织链接: Emmy Tay @ University of California, Davis
+[2026-04-09 21:23:38] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个链接
+[2026-04-09 21:23:39] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:24:44] [INFO] 开始搜索社交媒体链接: Emmy Tay @ University of California, Davis
+[2026-04-09 21:24:44] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个 social_media 链接
+[2026-04-09 21:25:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-09 21:25:19] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:25:21] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:25:24] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:25:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-09 21:25:26] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:25:31] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:25:33] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:29:36] [INFO] 缓存命中: 0000-0003-3397-3725 -> https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN
+[2026-04-09 21:29:36] [INFO] 开始搜索组织链接: Emmy Tay @ University of California, Davis
+[2026-04-09 21:29:36] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个链接
+[2026-04-09 21:29:38] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-09 21:29:42] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:29:45] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:29:48] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:29:48] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-09 21:29:51] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:29:54] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:29:58] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:30:54] [INFO] 开始搜索社交媒体链接: Emmy Tay @ University of California, Davis
+[2026-04-09 21:30:54] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个 social_media 链接
+[2026-04-09 21:35:34] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-09 21:35:36] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:35:38] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:35:40] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:35:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-09 21:35:42] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:35:45] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:35:50] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:37:53] [INFO] 缓存命中: 0000-0003-3397-3725 -> https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN
+[2026-04-09 21:37:53] [INFO] 开始搜索组织链接: Emmy Tay @ University of California, Davis
+[2026-04-09 21:37:53] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个链接
+[2026-04-09 21:38:13] [INFO] 缓存命中: 0000-0003-3397-3725 -> https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN
+[2026-04-09 21:38:13] [INFO] 开始搜索组织链接: Emmy Tay @ University of California, Davis
+[2026-04-09 21:38:13] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个链接
+[2026-04-09 21:39:18] [INFO] 开始搜索社交媒体链接: Emmy Tay @ University of California, Davis
+[2026-04-09 21:39:18] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个 social_media 链接
+[2026-04-09 21:39:28] [INFO] 开始搜索社交媒体链接: Emmy Tay @ University of California, Davis
+[2026-04-09 21:39:28] [INFO] 缓存命中: https://scholar.google.com/citations?user=GUaAHccAAAAJ&hl=zh-CN, 10 个 social_media 链接
+[2026-04-09 21:42:22] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-09 21:42:24] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:42:28] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:42:31] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:42:31] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-09 21:42:35] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:42:39] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:42:43] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:43:55] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-09 21:43:57] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:44:00] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:44:03] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:44:03] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-09 21:44:07] [WARNING] LLM API Async 重试 1: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:44:09] [WARNING] LLM API Async 重试 2: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'
+[2026-04-09 21:44:12] [ERROR] LLM API Async 查询失败: 400, message='Bad Request', url='https://api.zhizengzeng.com/v1/chat/completions'

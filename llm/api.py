@@ -36,6 +36,31 @@ def _load_config() -> dict:
     return {}
 
 
+def _build_chat_completion_payload(
+    model: str,
+    messages: list,
+    temperature: float,
+    max_tokens: int,
+    stream: bool,
+) -> Dict[str, Any]:
+    """
+    构建 OpenAI 兼容 chat/completions 请求体。
+
+    GPT-5 系列要求使用 `max_completion_tokens`，老模型仍保持 `max_tokens`
+    以兼容更多 OpenAI 兼容中转站。
+    """
+    payload: Dict[str, Any] = {
+        "model": model,
+        "messages": messages,
+        "temperature": temperature,
+        "stream": stream,
+    }
+
+    token_field = "max_completion_tokens" if (model or "").strip().lower().startswith("gpt-5") else "max_tokens"
+    payload[token_field] = max_tokens
+    return payload
+
+
 class LLMApiClient:
     """
     云端 LLM API 客户端
@@ -104,13 +129,13 @@ class LLMApiClient:
             "Content-Type": "application/json",
         }
         
-        data = {
-            "model": self.model,
-            "messages": messages,
-            "temperature": temperature,
-            "max_tokens": max_tokens,
-            "stream": True,
-        }
+        data = _build_chat_completion_payload(
+            model=self.model,
+            messages=messages,
+            temperature=temperature,
+            max_tokens=max_tokens,
+            stream=True,
+        )
         
         if self.verbose:
             print(f"[LLM API] 请求: {url}")
@@ -333,13 +358,13 @@ class LLMApiClientAsync:
             "Content-Type": "application/json",
         }
         
-        data = {
-            "model": self.model,
-            "messages": messages,
-            "temperature": temperature,
-            "max_tokens": max_tokens,
-            "stream": True,
-        }
+        data = _build_chat_completion_payload(
+            model=self.model,
+            messages=messages,
+            temperature=temperature,
+            max_tokens=max_tokens,
+            stream=True,
+        )
         
         if self.verbose:
             print(f"[LLM API Async] 请求: {url}")
