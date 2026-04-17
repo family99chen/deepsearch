@@ -1,0 +1,1042 @@
+[2026-04-17 13:26:13] [INFO] 缓存命中: 0000-0002-2445-2955 -> https://scholar.google.com/citations?user=Z6TdIX8AAAAJ&hl=zh-CN
+[2026-04-17 13:26:13] [INFO] 开始搜索组织链接: Katsuhiko Ariga @ WPI-MANA,National Institute for Materials Science(NIMS), Japan and The University of Tokyo, Japan
+[2026-04-17 13:26:13] [INFO] 搜索完成: Katsuhiko Ariga @ WPI-MANA,National Institute for Materials Science(NIMS), Japan and The University of Tokyo, Japan, 找到 10 个链接
+[2026-04-17 13:26:13] [INFO] 缓存写入: https://scholar.google.com/citations?user=Z6TdIX8AAAAJ&hl=zh-CN @ WPI-MANA,National Institute for Materials Science(NIMS), Japan and The University of Tokyo, Japan, 10 个链接
+[2026-04-17 13:26:14] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:26:14] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://scholar.google.com/citations?user=Z6TdIX8AAAAJ&hl=en
+[2026-04-17 13:26:14] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:26:14] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://www.beilstein-journals.org/bjnano/boardMembers/16038139
+[2026-04-17 13:26:14] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:26:14] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://samurai.nims.go.jp/profiles/ariga_katsuhiko?locale=en
+[2026-04-17 13:26:15] [INFO] Xvfb 已启动: DISPLAY=:182
+[2026-04-17 13:26:15] [INFO] Xvfb 已启动: DISPLAY=:185
+[2026-04-17 13:26:15] [INFO] Xvfb 已启动: DISPLAY=:186
+[2026-04-17 13:26:15] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:26:15] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:26:15] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:26:15] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:26:15] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:26:16] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:26:16] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:26:16] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:26:16] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:26:16] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:26:17] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:26:17] [WARNING] 打开标签页失败: https://www.beilstein-journals.org/bjnano/boardMembers/16038139, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:26:17] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:26:18] [WARNING] 打开标签页失败: https://samurai.nims.go.jp/profiles/ariga_katsuhiko?locale=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:26:21] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=37583): Max retries exceeded with url: /session/0dca2e594a6a0a3a7067a64f29468ce3/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72bfdd79c650>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:26:21] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:26:21] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:26:21] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:26:21] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:26:22] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=52455): Max retries exceeded with url: /session/0a3579c58fd9498155c24d7b42f01ce8/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b59e5fa01d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:26:22] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:26:22] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:26:22] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:26:23] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:26:23] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:26:24] [WARNING] 域名预热失败: https://www.beilstein-journals.org, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:26:24] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=33137): Max retries exceeded with url: /session/60566f6e3eb46e649f2bda4f40914410/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-04-17 13:26:24] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:26:24] [INFO] Xvfb 已停止
+[2026-04-17 13:26:25] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:26:25] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:26:26] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:26:26] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://pubs.rsc.org/en/content/articlehtml/2017/cc/c7cc06395d
+[2026-04-17 13:26:27] [INFO] Xvfb 已启动: DISPLAY=:143
+[2026-04-17 13:26:27] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:26:27] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:26:27] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:26:28] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:26:29] [INFO] 域名预热完成: https://samurai.nims.go.jp
+[2026-04-17 13:26:30] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=15989, response_chars=327
+[2026-04-17 13:26:30] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:26:31] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=482, response_chars=8
+[2026-04-17 13:26:33] [WARNING] 打开标签页失败: http://www.nims.go.jp/super/HP/E_home.htm, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:26:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:26:35] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=40409): Max retries exceeded with url: /session/9c9af2910cff696feb69c82b25f1a496/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b59e5ffecd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:26:35] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=40409): Max retries exceeded with url: /session/9c9af2910cff696feb69c82b25f1a496/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b59e5fa0650>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:26:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:26:37] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=48643): Max retries exceeded with url: /session/42ff1045b4aae6e2431beb294205bb27/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7cf268340610>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:26:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:26:38] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=9925, response_chars=273
+[2026-04-17 13:26:38] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:26:38] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=10259, response_chars=112
+[2026-04-17 13:26:38] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:26:40] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=419, response_chars=8
+[2026-04-17 13:26:42] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=423, response_chars=333
+[2026-04-17 13:26:42] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 2 轮, 访问 2 页, 收集 1 条信息
+[2026-04-17 13:26:42] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:26:42] [INFO] Xvfb 已停止
+[2026-04-17 13:26:43] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:26:43] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://pubmed.ncbi.nlm.nih.gov/33411512/
+[2026-04-17 13:26:44] [INFO] Xvfb 已启动: DISPLAY=:111
+[2026-04-17 13:26:44] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:26:44] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:26:44] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:26:44] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=10381, response_chars=376
+[2026-04-17 13:26:44] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:26:45] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:26:47] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=2755, response_chars=20
+[2026-04-17 13:26:47] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:26:47] [ERROR] 获取页面内容失败: https://pubs.rsc.org/en/results?searchtext=Author%3AKatsuhiko%20Ariga, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:26:47] [ERROR] 获取页面内容失败: https://pubs.rsc.org/en/journals/journal/cc, HTTPConnectionPool(host='localhost', port=55313): Max retries exceeded with url: /session/331748f59a95a2b62f320f0e96bc3ccd/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79e245fb6790>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:26:47] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=55313): Max retries exceeded with url: /session/331748f59a95a2b62f320f0e96bc3ccd/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79e245f9f450>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:26:47] [INFO] Xvfb 已停止
+[2026-04-17 13:26:47] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:26:49] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:26:49] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/adfm.201702905
+[2026-04-17 13:26:50] [INFO] Xvfb 已启动: DISPLAY=:197
+[2026-04-17 13:26:50] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:26:50] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:26:50] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:26:51] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:26:51] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:26:52] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=360, response_chars=334
+[2026-04-17 13:26:52] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 2 轮, 访问 3 页, 收集 1 条信息
+[2026-04-17 13:26:52] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:26:52] [INFO] Xvfb 已停止
+[2026-04-17 13:26:53] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:26:53] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://pubmed.ncbi.nlm.nih.gov/35217376/
+[2026-04-17 13:26:54] [INFO] Xvfb 已启动: DISPLAY=:158
+[2026-04-17 13:26:55] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:26:55] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:26:55] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:26:55] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=14983, response_chars=306
+[2026-04-17 13:26:55] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:26:56] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:26:59] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1174, response_chars=58
+[2026-04-17 13:26:59] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:26:59] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:27:00] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:27:00] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:27:01] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:01] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:27:01] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:03] [INFO] 域名预热完成: https://onlinelibrary.wiley.com
+[2026-04-17 13:27:05] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=15512, response_chars=190
+[2026-04-17 13:27:06] [WARNING] 打开标签页失败: https://www.ncbi.nlm.nih.gov/guide/browsers/#ncbi_accesskeys, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:27:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:10] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=56603): Max retries exceeded with url: /session/986765393a7f46f7cbce23ed791e6a60/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7565ac643e50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:27:10] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 3 轮, 访问 3 页, 收集 0 条信息
+[2026-04-17 13:27:10] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:27:10] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:27:10] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=18169, response_chars=230
+[2026-04-17 13:27:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:10] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:27:10] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=806, response_chars=56
+[2026-04-17 13:27:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:11] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=352, response_chars=8
+[2026-04-17 13:27:12] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=930, response_chars=108
+[2026-04-17 13:27:12] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:13] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:27:14] [WARNING] 打开标签页失败: https://www.ncbi.nlm.nih.gov/guide/browsers/#ncbi_accesskeys, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:27:14] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1211, response_chars=39
+[2026-04-17 13:27:14] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:16] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=806, response_chars=54
+[2026-04-17 13:27:16] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:17] [INFO] 域名预热完成: https://pubmed.ncbi.nlm.nih.gov
+[2026-04-17 13:27:18] [ERROR] 获取页面内容失败: https://pubmed.ncbi.nlm.nih.gov/?term=Katsuhiko+Ariga, HTTPConnectionPool(host='localhost', port=35791): Max retries exceeded with url: /session/8b5e8125a21b2bb2574d168dd137a675/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x718651c32c10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:27:18] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=35791): Max retries exceeded with url: /session/8b5e8125a21b2bb2574d168dd137a675/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x718651d0b450>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:27:18] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:20] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=930, response_chars=108
+[2026-04-17 13:27:20] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:22] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=293, response_chars=203
+[2026-04-17 13:27:22] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 2 轮, 访问 3 页, 收集 1 条信息
+[2026-04-17 13:27:22] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:27:22] [INFO] Xvfb 已停止
+[2026-04-17 13:27:22] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1391, response_chars=12
+[2026-04-17 13:27:23] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:27:23] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC10113519/
+[2026-04-17 13:27:24] [INFO] Xvfb 已启动: DISPLAY=:102
+[2026-04-17 13:27:24] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:27:24] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:27:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:24] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:27:24] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=48779): Max retries exceeded with url: /session/988e7d525c204e38a7dd446489c15d02/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7565ac6424d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:27:24] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=48779): Max retries exceeded with url: /session/988e7d525c204e38a7dd446489c15d02/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7565ac681910>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:27:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:25] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:27:26] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=776, response_chars=54
+[2026-04-17 13:27:26] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:28] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=900, response_chars=110
+[2026-04-17 13:27:28] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:28] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=12847, response_chars=94
+[2026-04-17 13:27:29] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:30] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:31] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1490, response_chars=12
+[2026-04-17 13:27:32] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=924, response_chars=54
+[2026-04-17 13:27:32] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:27:32] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:27:32] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:27:32] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:27:33] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:33] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:27:34] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=19152, response_chars=428
+[2026-04-17 13:27:34] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:35] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1515, response_chars=39
+[2026-04-17 13:27:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:36] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=2510, response_chars=21
+[2026-04-17 13:27:36] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=48779): Max retries exceeded with url: /session/988e7d525c204e38a7dd446489c15d02/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-04-17 13:27:36] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=48779): Max retries exceeded with url: /session/988e7d525c204e38a7dd446489c15d02/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7565ac5cf550>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:27:36] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:36] [INFO] 域名预热完成: https://pmc.ncbi.nlm.nih.gov
+[2026-04-17 13:27:37] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1637, response_chars=39
+[2026-04-17 13:27:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:38] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1653, response_chars=20
+[2026-04-17 13:27:38] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:27:38] [INFO] Xvfb 已停止
+[2026-04-17 13:27:39] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1759, response_chars=39
+[2026-04-17 13:27:39] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:27:39] [INFO] Xvfb 已停止
+[2026-04-17 13:27:40] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:27:40] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://pubs.acs.org/doi/abs/10.1021/acs.langmuir.1c02596
+[2026-04-17 13:27:41] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:27:41] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC9141234/
+[2026-04-17 13:27:41] [INFO] Xvfb 已启动: DISPLAY=:181
+[2026-04-17 13:27:41] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:27:41] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:27:41] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:27:41] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:42] [INFO] Xvfb 已启动: DISPLAY=:199
+[2026-04-17 13:27:42] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:27:44] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=730, response_chars=54
+[2026-04-17 13:27:44] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:44] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:27:44] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:27:44] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:27:44] [WARNING] 打开标签页失败: https://pubs.acs.org/doi/abs/10.1021/acs.langmuir.1c02596, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:27:45] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:27:46] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=685, response_chars=96
+[2026-04-17 13:27:46] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:48] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1299, response_chars=12
+[2026-04-17 13:27:48] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=35093): Max retries exceeded with url: /session/f907326dd1a3aec180c797863d8de8cb/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x793390098490>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:27:48] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:27:48] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:27:48] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:27:48] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:27:49] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:27:50] [ERROR] 获取页面内容失败: https://pmc.ncbi.nlm.nih.gov/articles/PMC9141234/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:27:50] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=34153): Max retries exceeded with url: /session/38f5c3648cd7e01531705f4216124049/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d37989a4390>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:27:50] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:27:50] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:27:50] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=34579): Max retries exceeded with url: /session/fccee78a080f82de5e15f85283cd017e/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74671ad04e90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:27:50] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=34579): Max retries exceeded with url: /session/fccee78a080f82de5e15f85283cd017e/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74671b1931d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:27:50] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:50] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:27:50] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:27:51] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:27:51] [INFO] 域名预热完成: https://pubs.acs.org
+[2026-04-17 13:27:53] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=881, response_chars=56
+[2026-04-17 13:27:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:54] [INFO] 域名预热完成: https://pmc.ncbi.nlm.nih.gov
+[2026-04-17 13:27:55] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=3478, response_chars=114
+[2026-04-17 13:27:55] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:56] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:57] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1365, response_chars=39
+[2026-04-17 13:27:57] [ERROR] 执行失败: search, HTTPConnectionPool(host='localhost', port=34579): Max retries exceeded with url: /session/fccee78a080f82de5e15f85283cd017e/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection obje
+[2026-04-17 13:27:57] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=34579): Max retries exceeded with url: /session/fccee78a080f82de5e15f85283cd017e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74671ad53ad0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:27:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:58] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=801, response_chars=56
+[2026-04-17 13:27:58] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:59] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1405, response_chars=12
+[2026-04-17 13:27:59] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=34579): Max retries exceeded with url: /session/fccee78a080f82de5e15f85283cd017e/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:27:59] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=34579): Max retries exceeded with url: /session/fccee78a080f82de5e15f85283cd017e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74671ad69990>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:27:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:27:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:00] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=903, response_chars=110
+[2026-04-17 13:28:00] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:01] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1454, response_chars=12
+[2026-04-17 13:28:01] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=34579): Max retries exceeded with url: /session/fccee78a080f82de5e15f85283cd017e/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:28:01] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=34579): Max retries exceeded with url: /session/fccee78a080f82de5e15f85283cd017e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74671ad69250>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:28:01] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:02] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=729, response_chars=54
+[2026-04-17 13:28:02] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:02] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1374, response_chars=12
+[2026-04-17 13:28:03] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1503, response_chars=12
+[2026-04-17 13:28:03] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=34579): Max retries exceeded with url: /session/fccee78a080f82de5e15f85283cd017e/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:28:03] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=34579): Max retries exceeded with url: /session/fccee78a080f82de5e15f85283cd017e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74671ad68990>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:28:03] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:04] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:04] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=683, response_chars=96
+[2026-04-17 13:28:04] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:04] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1552, response_chars=12
+[2026-04-17 13:28:04] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=34579): Max retries exceeded with url: /session/fccee78a080f82de5e15f85283cd017e/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:28:04] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=34579): Max retries exceeded with url: /session/fccee78a080f82de5e15f85283cd017e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74671ad68a50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:28:04] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:28:04] [INFO] Xvfb 已停止
+[2026-04-17 13:28:06] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1298, response_chars=12
+[2026-04-17 13:28:06] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=765, response_chars=56
+[2026-04-17 13:28:06] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:08] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=867, response_chars=110
+[2026-04-17 13:28:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:09] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:11] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=3865, response_chars=90
+[2026-04-17 13:28:11] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:12] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1285, response_chars=39
+[2026-04-17 13:28:12] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:14] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=765, response_chars=54
+[2026-04-17 13:28:14] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:14] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=3478, response_chars=128
+[2026-04-17 13:28:14] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:16] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=867, response_chars=108
+[2026-04-17 13:28:16] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:17] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1929, response_chars=39
+[2026-04-17 13:28:18] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1431, response_chars=12
+[2026-04-17 13:28:20] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:22] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1458, response_chars=12
+[2026-04-17 13:28:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:26] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=419, response_chars=109
+[2026-04-17 13:28:26] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:27] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=6639, response_chars=118
+[2026-04-17 13:28:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:28] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1570, response_chars=12
+[2026-04-17 13:28:30] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:31] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=7483, response_chars=251
+[2026-04-17 13:28:31] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:33] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=419, response_chars=115
+[2026-04-17 13:28:33] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:33] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=3382, response_chars=20
+[2026-04-17 13:28:34] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1654, response_chars=12
+[2026-04-17 13:28:36] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:28:36] [INFO] Xvfb 已停止
+[2026-04-17 13:28:42] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:47] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=48501, response_chars=108
+[2026-04-17 13:28:47] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:57] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=30539, response_chars=528
+[2026-04-17 13:28:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:28:58] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=3745, response_chars=20
+[2026-04-17 13:28:58] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:28:58] [INFO] Xvfb 已停止
+[2026-04-17 13:29:00] [INFO] 开始搜索社交媒体链接: Katsuhiko Ariga @ WPI-MANA,National Institute for Materials Science(NIMS), Japan and The University of Tokyo, Japan
+[2026-04-17 13:29:01] [INFO] 社交媒体搜索完成: Katsuhiko Ariga @ WPI-MANA,National Institute for Materials Science(NIMS), Japan and The University of Tokyo, Japan, 找到 10 个链接
+[2026-04-17 13:29:01] [INFO] 缓存写入: https://scholar.google.com/citations?user=Z6TdIX8AAAAJ&hl=zh-CN @ WPI-MANA,National Institute for Materials Science(NIMS), Japan and The University of Tokyo, Japan, 10 个 social_media 链接
+[2026-04-17 13:29:01] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:29:01] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://pubs.acs.org/doi/abs/10.1021/acs.langmuir.1c02596
+[2026-04-17 13:29:01] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:29:01] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://pubs.acs.org/doi/10.1021/acsami.7b11445
+[2026-04-17 13:29:01] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:29:01] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://pubs.acs.org/doi/10.1021/acs.langmuir.8b01434
+[2026-04-17 13:29:02] [INFO] Xvfb 已启动: DISPLAY=:117
+[2026-04-17 13:29:02] [INFO] Xvfb 已启动: DISPLAY=:120
+[2026-04-17 13:29:02] [INFO] Xvfb 已启动: DISPLAY=:119
+[2026-04-17 13:29:02] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:29:02] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:29:02] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:29:02] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:29:02] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:29:05] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:29:05] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:29:05] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:29:06] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:29:06] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:29:06] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:29:06] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:29:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:11] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:12] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1152, response_chars=56
+[2026-04-17 13:29:12] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:29:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:29:12] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:29:12] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:29:12] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1152, response_chars=60
+[2026-04-17 13:29:12] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:29:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:29:13] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:29:13] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:29:13] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:29:14] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1152, response_chars=54
+[2026-04-17 13:29:14] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:29:14] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:29:15] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:29:15] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:29:15] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:29:15] [INFO] 域名预热完成: https://pubs.acs.org
+[2026-04-17 13:29:16] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:29:17] [INFO] 域名预热完成: https://pubs.acs.org
+[2026-04-17 13:29:18] [INFO] 域名预热完成: https://pubs.acs.org
+[2026-04-17 13:29:20] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:22] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:22] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=801, response_chars=54
+[2026-04-17 13:29:22] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:23] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:24] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=797, response_chars=54
+[2026-04-17 13:29:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:25] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=791, response_chars=56
+[2026-04-17 13:29:25] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:25] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=903, response_chars=110
+[2026-04-17 13:29:25] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:27] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1208, response_chars=39
+[2026-04-17 13:29:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:27] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=899, response_chars=110
+[2026-04-17 13:29:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:28] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=893, response_chars=110
+[2026-04-17 13:29:28] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:30] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1204, response_chars=39
+[2026-04-17 13:29:30] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1364, response_chars=12
+[2026-04-17 13:29:30] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:30] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=801, response_chars=56
+[2026-04-17 13:29:30] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:32] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=797, response_chars=54
+[2026-04-17 13:29:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:32] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=903, response_chars=108
+[2026-04-17 13:29:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:33] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=765, response_chars=54
+[2026-04-17 13:29:33] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:34] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=899, response_chars=108
+[2026-04-17 13:29:34] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:35] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1547, response_chars=12
+[2026-04-17 13:29:36] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=867, response_chars=110
+[2026-04-17 13:29:36] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:36] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1373, response_chars=12
+[2026-04-17 13:29:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:39] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:39] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=765, response_chars=54
+[2026-04-17 13:29:39] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:40] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1275, response_chars=39
+[2026-04-17 13:29:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:40] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=765, response_chars=54
+[2026-04-17 13:29:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:42] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=765, response_chars=54
+[2026-04-17 13:29:42] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:42] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=867, response_chars=108
+[2026-04-17 13:29:42] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:43] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=867, response_chars=110
+[2026-04-17 13:29:43] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:44] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1467, response_chars=12
+[2026-04-17 13:29:45] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=867, response_chars=91
+[2026-04-17 13:29:45] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:45] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1461, response_chars=12
+[2026-04-17 13:29:46] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:47] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1404, response_chars=12
+[2026-04-17 13:29:48] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:48] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1494, response_chars=39
+[2026-04-17 13:29:48] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:49] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:50] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1486, response_chars=39
+[2026-04-17 13:29:50] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:50] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1616, response_chars=39
+[2026-04-17 13:29:50] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:50] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1448, response_chars=12
+[2026-04-17 13:29:51] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1738, response_chars=39
+[2026-04-17 13:29:52] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:29:52] [INFO] Xvfb 已停止
+[2026-04-17 13:29:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:53] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1608, response_chars=39
+[2026-04-17 13:29:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:53] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:29:53] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://www.nims.go.jp/mana/about/pror/periodical/mqh0050000003ygf-att/18_E.pdf
+[2026-04-17 13:29:54] [INFO] Xvfb 已启动: DISPLAY=:185
+[2026-04-17 13:29:54] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:29:54] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:29:54] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:29:55] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:29:55] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=419, response_chars=111
+[2026-04-17 13:29:55] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:29:57] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1730, response_chars=39
+[2026-04-17 13:29:57] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:29:57] [INFO] Xvfb 已停止
+[2026-04-17 13:29:57] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1562, response_chars=12
+[2026-04-17 13:29:59] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:29:59] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://onlinelibrary.wiley.com/doi/full/10.1002/pol.20220755
+[2026-04-17 13:29:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:00] [INFO] Xvfb 已启动: DISPLAY=:143
+[2026-04-17 13:30:00] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:30:00] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:30:00] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:30:00] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:01] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:30:01] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=419, response_chars=111
+[2026-04-17 13:30:01] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:02] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=705, response_chars=50
+[2026-04-17 13:30:02] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:30:02] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:30:02] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:30:02] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:30:03] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:30:05] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1640, response_chars=12
+[2026-04-17 13:30:05] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:07] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:30:07] [INFO] Xvfb 已停止
+[2026-04-17 13:30:07] [INFO] 域名预热完成: https://www.nims.go.jp
+[2026-04-17 13:30:08] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1174, response_chars=60
+[2026-04-17 13:30:08] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:30:08] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:30:08] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:30:08] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://pubs.rsc.org/en/content/articlehtml/2020/sc/d0sc03164j
+[2026-04-17 13:30:09] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:30:09] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:30:09] [INFO] Xvfb 已启动: DISPLAY=:145
+[2026-04-17 13:30:10] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:30:10] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:30:10] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:30:10] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:30:11] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:30:12] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:12] [INFO] 域名预热完成: https://onlinelibrary.wiley.com
+[2026-04-17 13:30:13] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1179, response_chars=39
+[2026-04-17 13:30:13] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:16] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1360, response_chars=12
+[2026-04-17 13:30:17] [ERROR] 执行失败: back, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:30:17] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=56151): Max retries exceeded with url: /session/03a397084d45fadc7d601cf54dcfdc77/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x794e8ff9aa10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:30:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:19] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=805, response_chars=56
+[2026-04-17 13:30:19] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:19] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1409, response_chars=12
+[2026-04-17 13:30:19] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=56151): Max retries exceeded with url: /session/03a397084d45fadc7d601cf54dcfdc77/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:30:19] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=56151): Max retries exceeded with url: /session/03a397084d45fadc7d601cf54dcfdc77/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x794e8ff38d10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:30:19] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:21] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1458, response_chars=12
+[2026-04-17 13:30:21] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=56151): Max retries exceeded with url: /session/03a397084d45fadc7d601cf54dcfdc77/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:30:21] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=56151): Max retries exceeded with url: /session/03a397084d45fadc7d601cf54dcfdc77/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x794e8ff99a10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:30:21] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:22] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=929, response_chars=89
+[2026-04-17 13:30:22] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:22] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:23] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1507, response_chars=12
+[2026-04-17 13:30:23] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=56151): Max retries exceeded with url: /session/03a397084d45fadc7d601cf54dcfdc77/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:30:23] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=56151): Max retries exceeded with url: /session/03a397084d45fadc7d601cf54dcfdc77/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x794e8ffd5890>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:30:23] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:24] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1357, response_chars=12
+[2026-04-17 13:30:25] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1556, response_chars=12
+[2026-04-17 13:30:25] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=56151): Max retries exceeded with url: /session/03a397084d45fadc7d601cf54dcfdc77/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:30:25] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=56151): Max retries exceeded with url: /session/03a397084d45fadc7d601cf54dcfdc77/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x794e8ff9a550>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:30:25] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:30:25] [INFO] Xvfb 已停止
+[2026-04-17 13:30:26] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:27] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:30:27] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC9033578/
+[2026-04-17 13:30:27] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=30705, response_chars=539
+[2026-04-17 13:30:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:28] [INFO] Xvfb 已启动: DISPLAY=:130
+[2026-04-17 13:30:28] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:30:28] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:30:28] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:30:29] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=776, response_chars=54
+[2026-04-17 13:30:29] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:29] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:30:30] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=671, response_chars=8
+[2026-04-17 13:30:31] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=900, response_chars=110
+[2026-04-17 13:30:31] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:32] [WARNING] 打开标签页失败: https://pubs.rsc.org/en/content/articlehtml/2020/sc/d0sc03528a, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:30:33] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1300, response_chars=39
+[2026-04-17 13:30:33] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:36] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=59639): Max retries exceeded with url: /session/00c17d602ce3db05c29a4c8cc259473e/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f16a2b8ab10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:30:36] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:36] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=776, response_chars=56
+[2026-04-17 13:30:36] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:38] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=900, response_chars=110
+[2026-04-17 13:30:38] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:40] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1459, response_chars=12
+[2026-04-17 13:30:42] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:43] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=612, response_chars=540
+[2026-04-17 13:30:43] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 2 轮, 访问 2 页, 收集 1 条信息
+[2026-04-17 13:30:43] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:30:43] [INFO] Xvfb 已停止
+[2026-04-17 13:30:44] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:30:44] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://pubs.acs.org/doi/abs/10.1021/acs.jpclett.1c03853
+[2026-04-17 13:30:44] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1484, response_chars=12
+[2026-04-17 13:30:45] [INFO] Xvfb 已启动: DISPLAY=:131
+[2026-04-17 13:30:45] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:30:45] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:30:45] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:30:46] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:30:46] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:47] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=30705, response_chars=329
+[2026-04-17 13:30:47] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:49] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=482, response_chars=8
+[2026-04-17 13:30:49] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=419, response_chars=113
+[2026-04-17 13:30:49] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:51] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:51] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1600, response_chars=12
+[2026-04-17 13:30:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:53] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1152, response_chars=58
+[2026-04-17 13:30:53] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:30:53] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:30:54] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:30:54] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:30:55] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:30:55] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=419, response_chars=91
+[2026-04-17 13:30:55] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:30:57] [INFO] 域名预热完成: https://pubs.acs.org
+[2026-04-17 13:30:58] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1656, response_chars=12
+[2026-04-17 13:30:59] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1304, response_chars=129
+[2026-04-17 13:31:00] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1279, response_chars=145
+[2026-04-17 13:31:00] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:00] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:31:00] [INFO] Xvfb 已停止
+[2026-04-17 13:31:01] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:02] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=482, response_chars=8
+[2026-04-17 13:31:02] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:31:02] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC11935860/
+[2026-04-17 13:31:03] [INFO] Xvfb 已启动: DISPLAY=:185
+[2026-04-17 13:31:03] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:31:03] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:31:03] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:31:03] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=800, response_chars=54
+[2026-04-17 13:31:03] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:04] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:31:06] [WARNING] 打开标签页失败: https://support.ncbi.nlm.nih.gov/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:31:06] [WARNING] 打开标签页失败: https://pmc.ncbi.nlm.nih.gov/about/#main-content, HTTPConnectionPool(host='localhost', port=60723): Max retries exceeded with url: /session/c3d62aa6d1dd1888216fc86a60f165a7/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f51e816ba90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:31:06] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=902, response_chars=110
+[2026-04-17 13:31:06] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:08] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1207, response_chars=39
+[2026-04-17 13:31:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:10] [ERROR] 获取页面内容失败: https://pubmed.ncbi.nlm.nih.gov/, HTTPConnectionPool(host='localhost', port=60723): Max retries exceeded with url: /session/c3d62aa6d1dd1888216fc86a60f165a7/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f51e8171a50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:31:10] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=60723): Max retries exceeded with url: /session/c3d62aa6d1dd1888216fc86a60f165a7/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f51e8170cd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:31:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:10] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=800, response_chars=54
+[2026-04-17 13:31:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:12] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:13] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=902, response_chars=108
+[2026-04-17 13:31:13] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:14] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=924, response_chars=115
+[2026-04-17 13:31:14] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:31:14] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:31:15] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:31:15] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:31:15] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1379, response_chars=12
+[2026-04-17 13:31:15] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:31:16] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=423, response_chars=366
+[2026-04-17 13:31:16] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 3 轮, 访问 6 页, 收集 1 条信息
+[2026-04-17 13:31:17] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:31:17] [INFO] Xvfb 已停止
+[2026-04-17 13:31:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:18] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:31:18] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/chem.202000789
+[2026-04-17 13:31:18] [INFO] 域名预热完成: https://pmc.ncbi.nlm.nih.gov
+[2026-04-17 13:31:19] [INFO] Xvfb 已启动: DISPLAY=:114
+[2026-04-17 13:31:19] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:31:19] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:31:19] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:31:19] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:31:20] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=765, response_chars=54
+[2026-04-17 13:31:20] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:24] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=867, response_chars=108
+[2026-04-17 13:31:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:25] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:25] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=50779): Max retries exceeded with url: /session/96102daea6beaaf2480d64a17d111ab3/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7616a5944f50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:31:25] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=50779): Max retries exceeded with url: /session/96102daea6beaaf2480d64a17d111ab3/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7616a5921490>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:31:25] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:26] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1465, response_chars=12
+[2026-04-17 13:31:27] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1208, response_chars=56
+[2026-04-17 13:31:27] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:31:27] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:31:27] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:31:27] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:31:27] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1262, response_chars=58
+[2026-04-17 13:31:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:28] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:28] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:31:30] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1492, response_chars=39
+[2026-04-17 13:31:30] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:31] [INFO] 域名预热完成: https://chemistry-europe.onlinelibrary.wiley.com
+[2026-04-17 13:31:32] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1614, response_chars=39
+[2026-04-17 13:31:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:34] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1736, response_chars=39
+[2026-04-17 13:31:34] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:31:34] [INFO] Xvfb 已停止
+[2026-04-17 13:31:35] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=30533, response_chars=601
+[2026-04-17 13:31:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:37] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1880, response_chars=20
+[2026-04-17 13:31:37] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:31:37] [INFO] Xvfb 已停止
+[2026-04-17 13:31:37] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=819, response_chars=56
+[2026-04-17 13:31:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:40] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=977, response_chars=106
+[2026-04-17 13:31:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:42] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1388, response_chars=12
+[2026-04-17 13:31:44] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:46] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=793, response_chars=56
+[2026-04-17 13:31:46] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:48] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=951, response_chars=108
+[2026-04-17 13:31:48] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:50] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1495, response_chars=12
+[2026-04-17 13:31:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:54] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1356, response_chars=39
+[2026-04-17 13:31:54] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:57] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1478, response_chars=39
+[2026-04-17 13:31:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:31:59] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1600, response_chars=12
+[2026-04-17 13:32:01] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:32:05] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=419, response_chars=91
+[2026-04-17 13:32:05] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:32:07] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1694, response_chars=12
+[2026-04-17 13:32:09] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:32:09] [INFO] Xvfb 已停止
+[2026-04-17 13:32:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:32:18] [INFO] LLM API Async 查询成功: model=gpt-5.4, request_chars=23980, response_chars=670
+[2026-04-17 13:32:19] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:32:19] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://www.k.u-tokyo.ac.jp/materials/en/ariga/
+[2026-04-17 13:32:19] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:32:19] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://www.nims.go.jp/super/HP/Lok/Lok2.htm
+[2026-04-17 13:32:19] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:32:19] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://www.k.u-tokyo.ac.jp/en/gsfs/faculty/katsuhiko_ariga/
+[2026-04-17 13:32:20] [INFO] Xvfb 已启动: DISPLAY=:192
+[2026-04-17 13:32:20] [INFO] Xvfb 已启动: DISPLAY=:193
+[2026-04-17 13:32:20] [INFO] Xvfb 已启动: DISPLAY=:189
+[2026-04-17 13:32:20] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:32:20] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:32:20] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:32:20] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:32:20] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:32:21] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:32:21] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:32:21] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:32:22] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:32:22] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:32:22] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:32:23] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:32:23] [WARNING] 打开标签页失败: https://www.k.u-tokyo.ac.jp/en/gsfs/faculty/katsuhiko_ariga/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:32:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:32:27] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=51489): Max retries exceeded with url: /session/9341f90f7f1e5dcb3c3fcfe3cbc43b0e/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75fbc9da0110>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:32:27] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:32:27] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:32:28] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:32:28] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:32:29] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:32:31] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:32:32] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=30705, response_chars=594
+[2026-04-17 13:32:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:32:34] [INFO] 域名预热完成: https://www.k.u-tokyo.ac.jp
+[2026-04-17 13:32:34] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=6679, response_chars=150
+[2026-04-17 13:32:35] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=578, response_chars=8
+[2026-04-17 13:32:36] [WARNING] 打开标签页失败: https://samurai.nims.go.jp/profiles/shrestha_lokkumar?locale=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:32:40] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=54973): Max retries exceeded with url: /session/dab55c52db61009277bca63544c6c471/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f6fea17f290>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:32:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:32:42] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:32:42] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:32:44] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1070, response_chars=58
+[2026-04-17 13:32:44] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:32:45] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=6649, response_chars=131
+[2026-04-17 13:32:46] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=6495, response_chars=107
+[2026-04-17 13:32:46] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:32:47] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=519, response_chars=515
+[2026-04-17 13:32:47] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 2 轮, 访问 2 页, 收集 1 条信息
+[2026-04-17 13:32:47] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:32:47] [INFO] Xvfb 已停止
+[2026-04-17 13:32:48] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:32:48] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://www.researchgate.net/post/I_need_a_002_in_thick_flexible_material_that_would_prevent_penetration_by_a_needle_pushed_with_5_lb_of_force513-312-3742
+[2026-04-17 13:32:48] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1288, response_chars=19
+[2026-04-17 13:32:49] [INFO] Xvfb 已启动: DISPLAY=:117
+[2026-04-17 13:32:49] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:32:49] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:32:49] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:32:50] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:32:51] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=42929): Max retries exceeded with url: /session/7424de392a51f53b768895f21c49ee45/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75fbc9df75d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:32:51] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=42929): Max retries exceeded with url: /session/7424de392a51f53b768895f21c49ee45/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75fbc9df7750>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:32:51] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:32:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:32:53] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=821, response_chars=54
+[2026-04-17 13:32:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:32:55] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:32:56] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=6500, response_chars=110
+[2026-04-17 13:32:56] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:32:56] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=6584, response_chars=121
+[2026-04-17 13:32:56] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 3 轮, 访问 3 页, 收集 0 条信息
+[2026-04-17 13:32:56] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:32:57] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:32:57] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:32:57] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1047, response_chars=56
+[2026-04-17 13:32:57] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:32:57] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:32:57] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:32:57] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:32:57] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:32:58] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1340, response_chars=39
+[2026-04-17 13:32:58] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=42929): Max retries exceeded with url: /session/7424de392a51f53b768895f21c49ee45/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75fbc932b190>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:32:58] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:32:58] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:32:58] [WARNING] 域名预热失败: https://www.k.u-tokyo.ac.jp, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:32:58] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=42421): Max retries exceeded with url: /session/20f20ee54a31f5dddcb897f5b359de55/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-04-17 13:32:59] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:32:59] [INFO] Xvfb 已停止
+[2026-04-17 13:32:59] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1418, response_chars=12
+[2026-04-17 13:32:59] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=42929): Max retries exceeded with url: /session/7424de392a51f53b768895f21c49ee45/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-04-17 13:32:59] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=42929): Max retries exceeded with url: /session/7424de392a51f53b768895f21c49ee45/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75fbc9329390>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:32:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:00] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:33:00] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://www.linkedin.com/in/rajashreechakravarti
+[2026-04-17 13:33:00] [INFO] 域名预热完成: https://www.researchgate.net
+[2026-04-17 13:33:01] [INFO] Xvfb 已启动: DISPLAY=:146
+[2026-04-17 13:33:02] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:33:02] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:33:02] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:33:02] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1467, response_chars=12
+[2026-04-17 13:33:02] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=42929): Max retries exceeded with url: /session/7424de392a51f53b768895f21c49ee45/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:33:02] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=42929): Max retries exceeded with url: /session/7424de392a51f53b768895f21c49ee45/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75fbc932b050>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:02] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:03] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:33:04] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1516, response_chars=12
+[2026-04-17 13:33:04] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=42929): Max retries exceeded with url: /session/7424de392a51f53b768895f21c49ee45/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:33:04] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=42929): Max retries exceeded with url: /session/7424de392a51f53b768895f21c49ee45/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75fbc93286d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:04] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:05] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=37867): Max retries exceeded with url: /session/bb653850b7475ca09fc3d4c2c0c6884e/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x756ce5d97d50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:05] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=37867): Max retries exceeded with url: /session/bb653850b7475ca09fc3d4c2c0c6884e/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x756ce5d9c750>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:05] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:06] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1565, response_chars=12
+[2026-04-17 13:33:06] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=42929): Max retries exceeded with url: /session/7424de392a51f53b768895f21c49ee45/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:33:06] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=42929): Max retries exceeded with url: /session/7424de392a51f53b768895f21c49ee45/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75fbc932bb10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:06] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:33:06] [INFO] Xvfb 已停止
+[2026-04-17 13:33:07] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=800, response_chars=56
+[2026-04-17 13:33:07] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:08] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:33:08] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://ifi.u-tokyo.ac.jp/en/people/takeuchi-kazuhiko/
+[2026-04-17 13:33:09] [INFO] Xvfb 已启动: DISPLAY=:195
+[2026-04-17 13:33:09] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:33:09] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:33:10] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:33:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:10] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=864, response_chars=110
+[2026-04-17 13:33:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:10] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:33:12] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1383, response_chars=20
+[2026-04-17 13:33:12] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=37867): Max retries exceeded with url: /session/bb653850b7475ca09fc3d4c2c0c6884e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-04-17 13:33:12] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=37867): Max retries exceeded with url: /session/bb653850b7475ca09fc3d4c2c0c6884e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x756ce5d86710>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:12] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:12] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=2386, response_chars=60
+[2026-04-17 13:33:13] [WARNING] 打开标签页失败: https://about.linkedin.com?trk=seo-authwall-base_footer-about, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:33:13] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1285, response_chars=39
+[2026-04-17 13:33:13] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=37867): Max retries exceeded with url: /session/bb653850b7475ca09fc3d4c2c0c6884e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x756ce5d85c10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:13] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:15] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1396, response_chars=39
+[2026-04-17 13:33:15] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=37867): Max retries exceeded with url: /session/bb653850b7475ca09fc3d4c2c0c6884e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x756ce5de64d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:15] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:17] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=60383): Max retries exceeded with url: /session/e6105ecac3489d391243686d195274ee/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73e4d8feab50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:17] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-04-17 13:33:17] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:33:17] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1507, response_chars=12
+[2026-04-17 13:33:17] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=37867): Max retries exceeded with url: /session/bb653850b7475ca09fc3d4c2c0c6884e/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:33:17] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=37867): Max retries exceeded with url: /session/bb653850b7475ca09fc3d4c2c0c6884e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x756ce5d87110>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:17] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:33:17] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:33:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:18] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:33:20] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1556, response_chars=12
+[2026-04-17 13:33:20] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=37867): Max retries exceeded with url: /session/bb653850b7475ca09fc3d4c2c0c6884e/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:33:20] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=37867): Max retries exceeded with url: /session/bb653850b7475ca09fc3d4c2c0c6884e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x756ce5d97c10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:20] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:20] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=16542, response_chars=168
+[2026-04-17 13:33:21] [INFO] 域名预热完成: https://www.linkedin.com
+[2026-04-17 13:33:22] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1605, response_chars=12
+[2026-04-17 13:33:22] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=37867): Max retries exceeded with url: /session/bb653850b7475ca09fc3d4c2c0c6884e/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:33:22] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=37867): Max retries exceeded with url: /session/bb653850b7475ca09fc3d4c2c0c6884e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x756ce5de6410>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:22] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:33:22] [INFO] Xvfb 已停止
+[2026-04-17 13:33:22] [WARNING] 打开标签页失败: https://ifi.u-tokyo.ac.jp/en/people/category/core-faculty/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:33:23] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:33:23] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://samurai.nims.go.jp/profiles/kawai_shigeki?locale=en
+[2026-04-17 13:33:24] [INFO] Xvfb 已启动: DISPLAY=:185
+[2026-04-17 13:33:25] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:33:25] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:33:25] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:33:26] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:33:26] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=51159): Max retries exceeded with url: /session/ce5a549cd3fd6c7343e3fc0c99f9d887/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x791fc0285390>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:26] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-04-17 13:33:26] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:33:26] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:33:26] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:33:27] [WARNING] 打开标签页失败: https://samurai.nims.go.jp/profiles/kawai_shigeki?locale=en, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:33:27] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:33:27] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=47915): Max retries exceeded with url: /session/d5a075924b2f5bd8c4b270e2e6396716/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73e4d8e05950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:27] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=47915): Max retries exceeded with url: /session/d5a075924b2f5bd8c4b270e2e6396716/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73e4d8fd5590>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:30] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1313, response_chars=64
+[2026-04-17 13:33:30] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:31] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=43965): Max retries exceeded with url: /session/f11babdaef1d09915ac0600bc2bdec77/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71deeb594190>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:31] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:33:31] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:33:31] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:33:31] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:33:31] [WARNING] 域名预热失败: https://ifi.u-tokyo.ac.jp, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:33:31] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=39607): Max retries exceeded with url: /session/b6868b27a4b73538e03ec1beec72f4e7/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-04-17 13:33:31] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:33:31] [INFO] Xvfb 已停止
+[2026-04-17 13:33:32] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=2612, response_chars=130
+[2026-04-17 13:33:32] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:33] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:33:33] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://www.researchgate.net/profile/Omar-Azzaroni
+[2026-04-17 13:33:34] [INFO] Xvfb 已启动: DISPLAY=:125
+[2026-04-17 13:33:34] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:33:34] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:33:34] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:33:34] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:33:35] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:33:35] [WARNING] 域名预热失败: https://samurai.nims.go.jp, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-17 13:33:35] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=33061): Max retries exceeded with url: /session/43b6af681dfec886ad1538064bbcb000/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-04-17 13:33:35] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:33:35] [INFO] Xvfb 已停止
+[2026-04-17 13:33:35] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1647, response_chars=39
+[2026-04-17 13:33:35] [ERROR] 执行失败: search, HTTPConnectionPool(host='localhost', port=47915): Max retries exceeded with url: /session/d5a075924b2f5bd8c4b270e2e6396716/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection obje
+[2026-04-17 13:33:35] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=47915): Max retries exceeded with url: /session/d5a075924b2f5bd8c4b270e2e6396716/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73e4d8e5a450>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:35] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:37] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:33:37] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://www.researchgate.net/profile/Mohamed-Ismail-71
+[2026-04-17 13:33:37] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1307, response_chars=12
+[2026-04-17 13:33:37] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=47915): Max retries exceeded with url: /session/d5a075924b2f5bd8c4b270e2e6396716/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:33:37] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=47915): Max retries exceeded with url: /session/d5a075924b2f5bd8c4b270e2e6396716/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73e4d8e59190>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:38] [INFO] Xvfb 已启动: DISPLAY=:145
+[2026-04-17 13:33:38] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:33:38] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:33:38] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:33:39] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1356, response_chars=12
+[2026-04-17 13:33:39] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=47915): Max retries exceeded with url: /session/d5a075924b2f5bd8c4b270e2e6396716/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:33:39] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=47915): Max retries exceeded with url: /session/d5a075924b2f5bd8c4b270e2e6396716/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73e4d8f72050>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:39] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:39] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:33:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:40] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1405, response_chars=12
+[2026-04-17 13:33:40] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=47915): Max retries exceeded with url: /session/d5a075924b2f5bd8c4b270e2e6396716/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:33:40] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=47915): Max retries exceeded with url: /session/d5a075924b2f5bd8c4b270e2e6396716/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73e4d8f8bd90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:42] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1047, response_chars=54
+[2026-04-17 13:33:42] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:33:42] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:33:42] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1454, response_chars=39
+[2026-04-17 13:33:42] [ERROR] 执行失败: search, HTTPConnectionPool(host='localhost', port=47915): Max retries exceeded with url: /session/d5a075924b2f5bd8c4b270e2e6396716/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection obje
+[2026-04-17 13:33:42] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=47915): Max retries exceeded with url: /session/d5a075924b2f5bd8c4b270e2e6396716/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73e4d8f99550>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:42] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:42] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:33:42] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:33:44] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:33:44] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:45] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1565, response_chars=12
+[2026-04-17 13:33:45] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=47915): Max retries exceeded with url: /session/d5a075924b2f5bd8c4b270e2e6396716/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:33:45] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=47915): Max retries exceeded with url: /session/d5a075924b2f5bd8c4b270e2e6396716/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73e4d8f99810>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:45] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:33:45] [INFO] Xvfb 已停止
+[2026-04-17 13:33:46] [INFO] 域名预热完成: https://www.researchgate.net
+[2026-04-17 13:33:47] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1047, response_chars=53
+[2026-04-17 13:33:47] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:33:47] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:33:47] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:33:47] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:33:47] [INFO] IterAgent 初始化: k=3, n=2
+[2026-04-17 13:33:47] [INFO] IterAgent 开始: Katsuhiko Ariga, URL: https://www.researchgate.net/profile/Bishnu-Bastakoti
+[2026-04-17 13:33:48] [INFO] Xvfb 已启动: DISPLAY=:180
+[2026-04-17 13:33:48] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:33:48] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:33:48] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-17 13:33:48] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:33:50] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:33:50] [INFO] 域名预热完成: https://www.researchgate.net
+[2026-04-17 13:33:51] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=43935): Max retries exceeded with url: /session/59d93a53229b15150544089a55d85e87/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7921715a3f50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:51] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=43935): Max retries exceeded with url: /session/59d93a53229b15150544089a55d85e87/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7921715aa0d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:51] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:53] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=696, response_chars=54
+[2026-04-17 13:33:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:54] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:55] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=41753): Max retries exceeded with url: /session/87cea31cb72ac702ea923af7c1f987c3/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78594a79bf50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:55] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=41753): Max retries exceeded with url: /session/87cea31cb72ac702ea923af7c1f987c3/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78594a7a0150>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:55] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:56] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1047, response_chars=54
+[2026-04-17 13:33:56] [INFO] IterAgent 完成: Katsuhiko Ariga, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-17 13:33:56] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:33:56] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=760, response_chars=89
+[2026-04-17 13:33:56] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:57] [INFO] 等待 Chrome 初始化锁...
+[2026-04-17 13:33:57] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-17 13:33:57] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=700, response_chars=54
+[2026-04-17 13:33:57] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:33:58] [INFO] 共享 Chrome driver 已创建
+[2026-04-17 13:33:58] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1258, response_chars=20
+[2026-04-17 13:33:58] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=43935): Max retries exceeded with url: /session/59d93a53229b15150544089a55d85e87/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-04-17 13:33:58] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=43935): Max retries exceeded with url: /session/59d93a53229b15150544089a55d85e87/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7921715a1450>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:33:58] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:00] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=764, response_chars=110
+[2026-04-17 13:34:00] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:00] [INFO] 域名预热完成: https://www.researchgate.net
+[2026-04-17 13:34:00] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1255, response_chars=39
+[2026-04-17 13:34:00] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=43935): Max retries exceeded with url: /session/59d93a53229b15150544089a55d85e87/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7921715a0f90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:34:00] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:02] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1283, response_chars=20
+[2026-04-17 13:34:02] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=41753): Max retries exceeded with url: /session/87cea31cb72ac702ea923af7c1f987c3/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-04-17 13:34:02] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=41753): Max retries exceeded with url: /session/87cea31cb72ac702ea923af7c1f987c3/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78594a79ad10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:34:02] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:02] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1366, response_chars=12
+[2026-04-17 13:34:02] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=43935): Max retries exceeded with url: /session/59d93a53229b15150544089a55d85e87/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:34:02] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=43935): Max retries exceeded with url: /session/59d93a53229b15150544089a55d85e87/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7921715f2c50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:34:02] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:03] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1259, response_chars=39
+[2026-04-17 13:34:03] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=41753): Max retries exceeded with url: /session/87cea31cb72ac702ea923af7c1f987c3/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78594a79a8d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:34:03] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:04] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1415, response_chars=12
+[2026-04-17 13:34:04] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=43935): Max retries exceeded with url: /session/59d93a53229b15150544089a55d85e87/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:34:04] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=43935): Max retries exceeded with url: /session/59d93a53229b15150544089a55d85e87/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7921715b5150>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:34:04] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:05] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:05] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1370, response_chars=12
+[2026-04-17 13:34:05] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=41753): Max retries exceeded with url: /session/87cea31cb72ac702ea923af7c1f987c3/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:34:05] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=41753): Max retries exceeded with url: /session/87cea31cb72ac702ea923af7c1f987c3/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78594a763e50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:34:05] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:06] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1464, response_chars=39
+[2026-04-17 13:34:06] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=43935): Max retries exceeded with url: /session/59d93a53229b15150544089a55d85e87/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7921715a1590>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:34:06] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:06] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=699, response_chars=54
+[2026-04-17 13:34:06] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:08] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1575, response_chars=12
+[2026-04-17 13:34:08] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=43935): Max retries exceeded with url: /session/59d93a53229b15150544089a55d85e87/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-04-17 13:34:08] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=43935): Max retries exceeded with url: /session/59d93a53229b15150544089a55d85e87/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x792171592710>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:34:08] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:34:08] [INFO] Xvfb 已停止
+[2026-04-17 13:34:08] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1419, response_chars=39
+[2026-04-17 13:34:08] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=41753): Max retries exceeded with url: /session/87cea31cb72ac702ea923af7c1f987c3/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78594a770110>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:34:08] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:10] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1530, response_chars=39
+[2026-04-17 13:34:10] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=41753): Max retries exceeded with url: /session/87cea31cb72ac702ea923af7c1f987c3/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78594a78a550>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:34:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:10] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=763, response_chars=111
+[2026-04-17 13:34:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:12] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1641, response_chars=39
+[2026-04-17 13:34:12] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=41753): Max retries exceeded with url: /session/87cea31cb72ac702ea923af7c1f987c3/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78594a788c10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-17 13:34:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:34:12] [INFO] Xvfb 已停止
+[2026-04-17 13:34:12] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1283, response_chars=20
+[2026-04-17 13:34:15] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:17] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=675, response_chars=54
+[2026-04-17 13:34:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:21] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=739, response_chars=114
+[2026-04-17 13:34:21] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:22] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1342, response_chars=39
+[2026-04-17 13:34:22] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:24] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=675, response_chars=54
+[2026-04-17 13:34:24] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:27] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=739, response_chars=110
+[2026-04-17 13:34:27] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:29] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1572, response_chars=12
+[2026-04-17 13:34:31] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:33] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=699, response_chars=54
+[2026-04-17 13:34:33] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:37] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=763, response_chars=110
+[2026-04-17 13:34:37] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:38] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1690, response_chars=12
+[2026-04-17 13:34:41] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:42] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=675, response_chars=54
+[2026-04-17 13:34:42] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:45] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=739, response_chars=89
+[2026-04-17 13:34:45] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:47] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1685, response_chars=12
+[2026-04-17 13:34:50] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:52] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=699, response_chars=54
+[2026-04-17 13:34:52] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:55] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=763, response_chars=89
+[2026-04-17 13:34:55] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:34:57] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=1881, response_chars=12
+[2026-04-17 13:34:59] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:35:00] [INFO] LLM API Async 查询成功: model=gpt-4o-mini, request_chars=675, response_chars=54
+[2026-04-17 13:35:00] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-17 13:35:00] [INFO] Xvfb 已停止
+[2026-04-17 13:35:02] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-04-17 13:35:39] [INFO] LLM API Async 查询成功: model=gpt-5.4, request_chars=32194, response_chars=5994

@@ -8,11 +8,18 @@ Pipeline 详细统计模块
 - 按搜索方法和迭代次数分类的成功次数
 """
 
+import copy
 import json
 import threading
+from contextlib import contextmanager
 from pathlib import Path
 from datetime import datetime, date
 from typing import Dict, Optional
+
+try:
+    import fcntl
+except ImportError:  # pragma: no cover - 非 Unix 环境回退
+    fcntl = None
 
 
 class PipelineStats:
@@ -48,6 +55,7 @@ class PipelineStats:
             storage_path = Path(__file__).parent.parent / "total_usage" / "pipeline_stats.json"
         
         self.storage_path = Path(storage_path)
+        self._lock_path = self.storage_path.with_name(f"{self.storage_path.name}.lock")
         self._file_lock = threading.Lock()
         
         # 确保目录存在
@@ -111,14 +119,40 @@ class PipelineStats:
     
     def _save_data(self):
         """保存数据到文件"""
-        with self._file_lock:
-            self._data["last_updated"] = datetime.now().isoformat()
-            with open(self.storage_path, 'w', encoding='utf-8') as f:
-                json.dump(self._data, f, indent=2, ensure_ascii=False)
+        with self._lock:
+            with self._locked_storage():
+                self._save_data_locked()
     
     def _get_today(self) -> str:
         """获取今天的日期字符串"""
         return date.today().isoformat()
+
+    @contextmanager
+    def _locked_storage(self):
+        """跨进程文件锁，避免并发写覆盖"""
+        self.storage_path.parent.mkdir(parents=True, exist_ok=True)
+
+        if fcntl is None:
+            yield
+            return
+
+        with open(self._lock_path, "a+", encoding="utf-8") as lock_file:
+            fcntl.flock(lock_file.fileno(), fcntl.LOCK_EX)
+            try:
+                yield
+            finally:
+                fcntl.flock(lock_file.fileno(), fcntl.LOCK_UN)
+
+    def _reload_from_disk_locked(self):
+        """在持有文件锁时刷新内存中的统计"""
+        self._data = self._load_data()
+
+    def _save_data_locked(self):
+        """在持有文件锁时保存数据"""
+        with self._file_lock:
+            self._data["last_updated"] = datetime.now().isoformat()
+            with open(self.storage_path, 'w', encoding='utf-8') as f:
+                json.dump(self._data, f, indent=2, ensure_ascii=False)
     
     def _ensure_daily(self, date_str: str):
         """确保每日统计存在"""
@@ -132,36 +166,42 @@ class PipelineStats:
         today = self._get_today()
         
         with self._lock:
-            self._data["total_requests"] = self._data.get("total_requests", 0) + 1
-            
-            self._ensure_daily(today)
-            self._data["daily"][today]["total_requests"] += 1
-            
-            self._save_data()
+            with self._locked_storage():
+                self._reload_from_disk_locked()
+                self._data["total_requests"] = self._data.get("total_requests", 0) + 1
+                
+                self._ensure_daily(today)
+                self._data["daily"][today]["total_requests"] += 1
+                
+                self._save_data_locked()
     
     def record_cache_hit(self):
         """记录缓存命中"""
         today = self._get_today()
         
         with self._lock:
-            self._data["cache_hits"] = self._data.get("cache_hits", 0) + 1
-            
-            self._ensure_daily(today)
-            self._data["daily"][today]["cache_hits"] += 1
-            
-            self._save_data()
+            with self._locked_storage():
+                self._reload_from_disk_locked()
+                self._data["cache_hits"] = self._data.get("cache_hits", 0) + 1
+                
+                self._ensure_daily(today)
+                self._data["daily"][today]["cache_hits"] += 1
+                
+                self._save_data_locked()
     
     def record_error(self):
         """记录错误"""
         today = self._get_today()
         
         with self._lock:
-            self._data["error"] = self._data.get("error", 0) + 1
-            
-            self._ensure_daily(today)
-            self._data["daily"][today]["error"] += 1
-            
-            self._save_data()
+            with self._locked_storage():
+                self._reload_from_disk_locked()
+                self._data["error"] = self._data.get("error", 0) + 1
+                
+                self._ensure_daily(today)
+                self._data["daily"][today]["error"] += 1
+                
+                self._save_data_locked()
     
     def record_success_by_name_search(self, iterations: int):
         """
@@ -174,28 +214,28 @@ class PipelineStats:
         iter_key = str(iterations)
         
         with self._lock:
-            # 更新总计
-            self._data["success"] = self._data.get("success", 0) + 1
-            
-            if "name_search" not in self._data:
-                self._data["name_search"] = {"total": 0, "by_iterations": {}}
-            
-            self._data["name_search"]["total"] += 1
-            
-            if "by_iterations" not in self._data["name_search"]:
-                self._data["name_search"]["by_iterations"] = {}
-            
-            self._data["name_search"]["by_iterations"][iter_key] = \
-                self._data["name_search"]["by_iterations"].get(iter_key, 0) + 1
-            
-            # 更新每日统计
-            self._ensure_daily(today)
-            self._data["daily"][today]["success"] += 1
-            self._data["daily"][today]["name_search"]["total"] += 1
-            self._data["daily"][today]["name_search"]["by_iterations"][iter_key] = \
-                self._data["daily"][today]["name_search"]["by_iterations"].get(iter_key, 0) + 1
-            
-            self._save_data()
+            with self._locked_storage():
+                self._reload_from_disk_locked()
+                self._data["success"] = self._data.get("success", 0) + 1
+                
+                if "name_search" not in self._data:
+                    self._data["name_search"] = {"total": 0, "by_iterations": {}}
+                
+                self._data["name_search"]["total"] += 1
+                
+                if "by_iterations" not in self._data["name_search"]:
+                    self._data["name_search"]["by_iterations"] = {}
+                
+                self._data["name_search"]["by_iterations"][iter_key] = \
+                    self._data["name_search"]["by_iterations"].get(iter_key, 0) + 1
+                
+                self._ensure_daily(today)
+                self._data["daily"][today]["success"] += 1
+                self._data["daily"][today]["name_search"]["total"] += 1
+                self._data["daily"][today]["name_search"]["by_iterations"][iter_key] = \
+                    self._data["daily"][today]["name_search"]["by_iterations"].get(iter_key, 0) + 1
+                
+                self._save_data_locked()
     
     def record_success_by_paper_search(self, papers_searched: int):
         """
@@ -208,53 +248,59 @@ class PipelineStats:
         paper_key = str(papers_searched)
         
         with self._lock:
-            # 更新总计
-            self._data["success"] = self._data.get("success", 0) + 1
-            
-            if "paper_search" not in self._data:
-                self._data["paper_search"] = {"total": 0, "by_papers": {}}
-            
-            self._data["paper_search"]["total"] += 1
-            
-            if "by_papers" not in self._data["paper_search"]:
-                self._data["paper_search"]["by_papers"] = {}
-            
-            self._data["paper_search"]["by_papers"][paper_key] = \
-                self._data["paper_search"]["by_papers"].get(paper_key, 0) + 1
-            
-            # 更新每日统计
-            self._ensure_daily(today)
-            self._data["daily"][today]["success"] += 1
-            self._data["daily"][today]["paper_search"]["total"] += 1
-            self._data["daily"][today]["paper_search"]["by_papers"][paper_key] = \
-                self._data["daily"][today]["paper_search"]["by_papers"].get(paper_key, 0) + 1
-            
-            self._save_data()
+            with self._locked_storage():
+                self._reload_from_disk_locked()
+                self._data["success"] = self._data.get("success", 0) + 1
+                
+                if "paper_search" not in self._data:
+                    self._data["paper_search"] = {"total": 0, "by_papers": {}}
+                
+                self._data["paper_search"]["total"] += 1
+                
+                if "by_papers" not in self._data["paper_search"]:
+                    self._data["paper_search"]["by_papers"] = {}
+                
+                self._data["paper_search"]["by_papers"][paper_key] = \
+                    self._data["paper_search"]["by_papers"].get(paper_key, 0) + 1
+                
+                self._ensure_daily(today)
+                self._data["daily"][today]["success"] += 1
+                self._data["daily"][today]["paper_search"]["total"] += 1
+                self._data["daily"][today]["paper_search"]["by_papers"][paper_key] = \
+                    self._data["daily"][today]["paper_search"]["by_papers"].get(paper_key, 0) + 1
+                
+                self._save_data_locked()
     
     def record_not_found(self):
         """记录未找到（所有方法都尝试了但没找到）"""
         today = self._get_today()
         
         with self._lock:
-            self._data["not_found"] = self._data.get("not_found", 0) + 1
-            
-            self._ensure_daily(today)
-            self._data["daily"][today]["not_found"] = self._data["daily"][today].get("not_found", 0) + 1
-            
-            self._save_data()
+            with self._locked_storage():
+                self._reload_from_disk_locked()
+                self._data["not_found"] = self._data.get("not_found", 0) + 1
+                
+                self._ensure_daily(today)
+                self._data["daily"][today]["not_found"] = self._data["daily"][today].get("not_found", 0) + 1
+                
+                self._save_data_locked()
     
     def get_stats(self) -> Dict:
         """获取完整统计数据"""
         with self._lock:
-            return self._data.copy()
+            with self._locked_storage():
+                self._reload_from_disk_locked()
+            return copy.deepcopy(self._data)
     
     def get_today_stats(self) -> Dict:
         """获取今日统计"""
         today = self._get_today()
         
         with self._lock:
+            with self._locked_storage():
+                self._reload_from_disk_locked()
             if today in self._data.get("daily", {}):
-                stats = self._data["daily"][today].copy()
+                stats = copy.deepcopy(self._data["daily"][today])
                 stats["date"] = today
                 return stats
             else:

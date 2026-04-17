@@ -1,0 +1,71 @@
+{
+  "total": 244,
+  "daily": {
+    "2026-04-17": {
+      "total": 244,
+      "endpoints": {
+        "api:gpt-4o-mini": 242,
+        "api:gpt-5.4": 2
+      },
+      "first_request": "2026-04-17T13:26:30.084604",
+      "last_request": "2026-04-17T13:35:39.573763",
+      "metrics": {
+        "request_chars_total": 711544,
+        "request_chars_samples": 244,
+        "avg_request_chars": 2916.16,
+        "response_chars_total": 25677,
+        "response_chars_samples": 244,
+        "avg_response_chars": 105.23
+      },
+      "endpoint_metrics": {
+        "api:gpt-4o-mini": {
+          "request_chars_total": 655370,
+          "request_chars_samples": 242,
+          "avg_request_chars": 2708.14,
+          "response_chars_total": 19013,
+          "response_chars_samples": 242,
+          "avg_response_chars": 78.57
+        },
+        "api:gpt-5.4": {
+          "request_chars_total": 56174,
+          "request_chars_samples": 2,
+          "avg_request_chars": 28087.0,
+          "response_chars_total": 6664,
+          "response_chars_samples": 2,
+          "avg_response_chars": 3332.0
+        }
+      }
+    }
+  },
+  "endpoints": {
+    "api:gpt-4o-mini": 242,
+    "api:gpt-5.4": 2
+  },
+  "last_updated": "2026-04-17T13:35:39.573789",
+  "metrics": {
+    "request_chars_total": 711544,
+    "request_chars_samples": 244,
+    "avg_request_chars": 2916.16,
+    "response_chars_total": 25677,
+    "response_chars_samples": 244,
+    "avg_response_chars": 105.23
+  },
+  "endpoint_metrics": {
+    "api:gpt-4o-mini": {
+      "request_chars_total": 655370,
+      "request_chars_samples": 242,
+      "avg_request_chars": 2708.14,
+      "response_chars_total": 19013,
+      "response_chars_samples": 242,
+      "avg_response_chars": 78.57
+    },
+    "api:gpt-5.4": {
+      "request_chars_total": 56174,
+      "request_chars_samples": 2,
+      "avg_request_chars": 28087.0,
+      "response_chars_total": 6664,
+      "response_chars_samples": 2,
+      "avg_response_chars": 3332.0
+    }
+  }
+}

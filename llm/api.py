@@ -61,6 +61,28 @@ def _build_chat_completion_payload(
     return payload
 
 
+def _content_length(content: Any) -> int:
+    """估算消息内容长度（按字符数）"""
+    if content is None:
+        return 0
+    if isinstance(content, str):
+        return len(content)
+    if isinstance(content, list):
+        total = 0
+        for item in content:
+            if isinstance(item, dict):
+                total += _content_length(item.get("text") or item.get("content"))
+            else:
+                total += _content_length(item)
+        return total
+    return len(str(content))
+
+
+def _messages_length(messages: List[Dict[str, Any]]) -> int:
+    """估算 messages 总长度（按字符数）"""
+    return sum(_content_length(message.get("content")) for message in messages if isinstance(message, dict))
+
+
 class LLMApiClient:
     """
     云端 LLM API 客户端
@@ -236,7 +258,12 @@ class LLMApiClient:
                     print()  # 换行
                 
                 result = "".join(full_response)
-                logger.info(f"LLM API 查询成功: {len(result)} 字符")
+                logger.info(
+                    "LLM API 查询成功: model=%s, request_chars=%s, response_chars=%s",
+                    self.model,
+                    _messages_length(messages),
+                    len(result),
+                )
                 return result
                 
             except Exception as e:
@@ -290,7 +317,12 @@ class LLMApiClient:
             print()
         
         result = "".join(full_response)
-        logger.info(f"LLM API 对话成功: {len(result)} 字符")
+        logger.info(
+            "LLM API 对话成功: model=%s, request_chars=%s, response_chars=%s",
+            self.model,
+            _messages_length(messages),
+            len(result),
+        )
         return result
 
 
@@ -433,7 +465,12 @@ class LLMApiClientAsync:
                     print()
                 
                 result = "".join(full_response)
-                logger.info(f"LLM API Async 查询成功: {len(result)} 字符")
+                logger.info(
+                    "LLM API Async 查询成功: model=%s, request_chars=%s, response_chars=%s",
+                    self.model,
+                    _messages_length(messages),
+                    len(result),
+                )
                 return result
                 
             except Exception as e:
@@ -471,7 +508,14 @@ class LLMApiClientAsync:
         if self.verbose:
             print()
         
-        return "".join(full_response)
+        result = "".join(full_response)
+        logger.info(
+            "LLM API Async 对话成功: model=%s, request_chars=%s, response_chars=%s",
+            self.model,
+            _messages_length(messages),
+            len(result),
+        )
+        return result
     
     async def batch_query(
         self,

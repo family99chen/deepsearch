@@ -7,11 +7,18 @@ DeepSearch 调用统计模块。
 - cache_hits 独立统计，可与 success / not_found / error 同时发生
 """
 
+import copy
 import json
 import threading
+from contextlib import contextmanager
 from datetime import date, datetime
 from pathlib import Path
 from typing import Any, Dict, Optional
+
+try:
+    import fcntl
+except ImportError:  # pragma: no cover - 非 Unix 环境回退
+    fcntl = None
 
 
 OUTCOME_FIELDS = ("success", "not_found", "error")
@@ -46,6 +53,7 @@ class OrgPipelineStats:
             storage_path = Path(__file__).parent.parent / "total_usage" / "org_pipeline_stats.json"
 
         self.storage_path = Path(storage_path)
+        self._lock_path = self.storage_path.with_name(f"{self.storage_path.name}.lock")
         self._file_lock = threading.Lock()
         self.storage_path.parent.mkdir(parents=True, exist_ok=True)
         self._data = self._load_data()
@@ -98,13 +106,39 @@ class OrgPipelineStats:
         }
 
     def _save_data(self):
+        with self._lock:
+            with self._locked_storage():
+                self._save_data_locked()
+
+    def _get_today(self) -> str:
+        return date.today().isoformat()
+
+    @contextmanager
+    def _locked_storage(self):
+        """跨进程文件锁，避免并发写覆盖"""
+        self.storage_path.parent.mkdir(parents=True, exist_ok=True)
+
+        if fcntl is None:
+            yield
+            return
+
+        with open(self._lock_path, "a+", encoding="utf-8") as lock_file:
+            fcntl.flock(lock_file.fileno(), fcntl.LOCK_EX)
+            try:
+                yield
+            finally:
+                fcntl.flock(lock_file.fileno(), fcntl.LOCK_UN)
+
+    def _reload_from_disk_locked(self):
+        """在持有文件锁时刷新内存中的统计"""
+        self._data = self._load_data()
+
+    def _save_data_locked(self):
+        """在持有文件锁时保存数据"""
         with self._file_lock:
             self._data["last_updated"] = datetime.now().isoformat()
             with open(self.storage_path, "w", encoding="utf-8") as f:
                 json.dump(self._data, f, indent=2, ensure_ascii=False)
-
-    def _get_today(self) -> str:
-        return date.today().isoformat()
 
     def _ensure_daily(self, date_str: str):
         if date_str not in self._data["daily"]:
@@ -113,54 +147,68 @@ class OrgPipelineStats:
     def record_request(self):
         today = self._get_today()
         with self._lock:
-            self._ensure_daily(today)
-            self._data["total_requests"] += 1
-            self._data["daily"][today]["total_requests"] += 1
-            self._save_data()
+            with self._locked_storage():
+                self._reload_from_disk_locked()
+                self._ensure_daily(today)
+                self._data["total_requests"] += 1
+                self._data["daily"][today]["total_requests"] += 1
+                self._save_data_locked()
 
     def record_cache_hit(self):
         today = self._get_today()
         with self._lock:
-            self._ensure_daily(today)
-            self._data["cache_hits"] += 1
-            self._data["daily"][today]["cache_hits"] += 1
-            self._save_data()
+            with self._locked_storage():
+                self._reload_from_disk_locked()
+                self._ensure_daily(today)
+                self._data["cache_hits"] += 1
+                self._data["daily"][today]["cache_hits"] += 1
+                self._save_data_locked()
 
     def record_success(self):
         today = self._get_today()
         with self._lock:
-            self._ensure_daily(today)
-            self._data["success"] += 1
-            self._data["daily"][today]["success"] += 1
-            self._save_data()
+            with self._locked_storage():
+                self._reload_from_disk_locked()
+                self._ensure_daily(today)
+                self._data["success"] += 1
+                self._data["daily"][today]["success"] += 1
+                self._save_data_locked()
 
     def record_not_found(self):
         today = self._get_today()
         with self._lock:
-            self._ensure_daily(today)
-            self._data["not_found"] += 1
-            self._data["daily"][today]["not_found"] += 1
-            self._save_data()
+            with self._locked_storage():
+                self._reload_from_disk_locked()
+                self._ensure_daily(today)
+                self._data["not_found"] += 1
+                self._data["daily"][today]["not_found"] += 1
+                self._save_data_locked()
 
     def record_error(self):
         today = self._get_today()
         with self._lock:
-            self._ensure_daily(today)
-            self._data["error"] += 1
-            self._data["daily"][today]["error"] += 1
-            self._save_data()
+            with self._locked_storage():
+                self._reload_from_disk_locked()
+                self._ensure_daily(today)
+                self._data["error"] += 1
+                self._data["daily"][today]["error"] += 1
+                self._save_data_locked()
 
     def get_stats(self) -> Dict[str, Any]:
         with self._lock:
-            return json.loads(json.dumps(self._data))
+            with self._locked_storage():
+                self._reload_from_disk_locked()
+            return copy.deepcopy(self._data)
 
     def get_today_stats(self) -> Dict[str, Any]:
         today = self._get_today()
         with self._lock:
+            with self._locked_storage():
+                self._reload_from_disk_locked()
             bucket = self._data["daily"].get(today, _empty_stats())
             return {
                 "date": today,
-                **json.loads(json.dumps(bucket)),
+                **copy.deepcopy(bucket),
             }
 
 

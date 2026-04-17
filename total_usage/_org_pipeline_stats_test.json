@@ -1,0 +1,17 @@
+{
+  "total_requests": 120,
+  "cache_hits": 60,
+  "success": 40,
+  "not_found": 40,
+  "error": 40,
+  "daily": {
+    "2026-04-17": {
+      "total_requests": 120,
+      "cache_hits": 60,
+      "success": 40,
+      "not_found": 40,
+      "error": 40
+    }
+  },
+  "last_updated": "2026-04-17T13:35:15.828667"
+}

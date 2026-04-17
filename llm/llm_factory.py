@@ -11,7 +11,7 @@ import sys
 import yaml
 import asyncio
 from pathlib import Path
-from typing import Optional, Literal, List
+from typing import Optional, Literal, List, Dict, Any
 
 # 添加项目根目录到 path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -27,6 +27,14 @@ except ImportError:
     import logging
     logger = logging.getLogger(__name__)
 
+# 导入使用统计模块
+HAS_USAGE_TRACKER = False
+try:
+    from utils.usage_tracker import UsageTracker
+    HAS_USAGE_TRACKER = True
+except ImportError:
+    pass
+
 
 def _load_config() -> dict:
     """加载配置文件"""
@@ -35,6 +43,81 @@ def _load_config() -> dict:
         with open(config_path, "r", encoding="utf-8") as f:
             return yaml.safe_load(f) or {}
     return {}
+
+
+def _get_usage_tracker() -> Optional["UsageTracker"]:
+    """获取 LLM 用量统计实例"""
+    if not HAS_USAGE_TRACKER:
+        return None
+    try:
+        storage_path = Path(__file__).parent.parent / "total_usage" / "llm.json"
+        return UsageTracker(storage_path=storage_path, auto_save=True)
+    except Exception:
+        return None
+
+
+def _resolve_usage_backend(client) -> str:
+    """根据客户端实例解析实际后端类型"""
+    if isinstance(client, (LLMApiClient, LLMApiClientAsync)):
+        return "api"
+    if isinstance(client, (LLMLocalClient, LLMLocalClientAsync)):
+        return "local"
+    return "unknown"
+
+
+def _build_usage_endpoint(client) -> str:
+    """构建统计维度：backend:model"""
+    backend = _resolve_usage_backend(client)
+    model = (getattr(client, "model", None) or "unknown_model").strip() or "unknown_model"
+    return f"{backend}:{model}"
+
+
+def _content_length(content: Any) -> int:
+    """估算消息内容长度（按字符数）"""
+    if content is None:
+        return 0
+    if isinstance(content, str):
+        return len(content)
+    if isinstance(content, list):
+        total = 0
+        for item in content:
+            if isinstance(item, dict):
+                total += _content_length(item.get("text") or item.get("content"))
+            else:
+                total += _content_length(item)
+        return total
+    return len(str(content))
+
+
+def _messages_length(messages: Optional[List[Dict[str, Any]]]) -> int:
+    """估算 messages 总长度（按字符数）"""
+    if not messages:
+        return 0
+    return sum(_content_length(message.get("content")) for message in messages if isinstance(message, dict))
+
+
+def _build_usage_metadata(request_chars: int, response_text: Optional[str]) -> Dict[str, int]:
+    """构建 LLM 统计附加元数据"""
+    return {
+        "request_chars": request_chars,
+        "response_chars": len(response_text or ""),
+    }
+
+
+def _record_llm_usage(client, count: int = 1, metadata: Optional[Dict[str, int]] = None):
+    """记录 LLM 请求次数，不影响主流程"""
+    if count <= 0:
+        return
+
+    tracker = _get_usage_tracker()
+    if not tracker:
+        return
+
+    try:
+        tracker.record(_build_usage_endpoint(client), count=count, metadata=metadata)
+    except Exception:
+        # 统计是附属能力，不能影响主流程
+        pass
 
 
 # LLM 类型
@@ -133,12 +216,21 @@ class LLMFactory:
             完整的响应文本
         """
         client = self._get_client()
-        return client.query(
+        request_chars = _messages_length([
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": prompt},
+        ])
+        result = client.query(
             prompt=prompt,
             system_prompt=system_prompt,
             temperature=temperature,
             max_tokens=max_tokens,
         )
+        _record_llm_usage(
+            client,
+            metadata=_build_usage_metadata(request_chars, result),
+        )
+        return result
     
     def chat(
         self,
@@ -158,11 +250,17 @@ class LLMFactory:
             完整的响应文本
         """
         client = self._get_client()
-        return client.chat(
+        request_chars = _messages_length(messages)
+        result = client.chat(
             messages=messages,
             temperature=temperature,
             max_tokens=max_tokens,
         )
+        _record_llm_usage(
+            client,
+            metadata=_build_usage_metadata(request_chars, result),
+        )
+        return result
 
 
 # ============ 异步工厂类 ============
@@ -250,12 +348,21 @@ class LLMFactoryAsync:
     ) -> str:
         """异步查询"""
         client = await self._get_client()
-        return await client.query(
+        request_chars = _messages_length([
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": prompt},
+        ])
+        result = await client.query(
             prompt=prompt,
             system_prompt=system_prompt,
             temperature=temperature,
             max_tokens=max_tokens,
         )
+        _record_llm_usage(
+            client,
+            metadata=_build_usage_metadata(request_chars, result),
+        )
+        return result
     
     async def chat(
         self,
@@ -265,11 +372,17 @@ class LLMFactoryAsync:
     ) -> str:
         """异步多轮对话"""
         client = await self._get_client()
-        return await client.chat(
+        request_chars = _messages_length(messages)
+        result = await client.chat(
             messages=messages,
             temperature=temperature,
             max_tokens=max_tokens,
         )
+        _record_llm_usage(
+            client,
+            metadata=_build_usage_metadata(request_chars, result),
+        )
+        return result
     
     async def batch_query(
         self,
@@ -292,14 +405,33 @@ class LLMFactoryAsync:
         Returns:
             响应列表
         """
-        client = await self._get_client()
-        return await client.batch_query(
-            prompts=prompts,
-            system_prompt=system_prompt,
-            temperature=temperature,
-            max_tokens=max_tokens,
-            max_concurrency=max_concurrency,
-        )
+        semaphore = asyncio.Semaphore(max_concurrency)
+
+        async def query_with_semaphore(prompt: str) -> str:
+            async with semaphore:
+                return await self.query(
+                    prompt=prompt,
+                    system_prompt=system_prompt,
+                    temperature=temperature,
+                    max_tokens=max_tokens,
+                )
+
+        if self.verbose:
+            print(f"[LLM Factory Async] 批量查询: {len(prompts)} 个, 并发: {max_concurrency}")
+
+        tasks = [query_with_semaphore(prompt) for prompt in prompts]
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+
+        final_results: List[str] = []
+        for i, result in enumerate(results):
+            if isinstance(result, Exception):
+                logger.error(f"批量查询第 {i} 个失败: {result}")
+                final_results.append("")
+            else:
+                final_results.append(result)
+
+        logger.info(f"LLM Factory Async 批量查询完成: {len(prompts)} 个")
+        return final_results
 
 
 # ============ 便捷函数 ============
