@@ -8,7 +8,6 @@ import sys
 import os
 import json
 import asyncio
-from io import StringIO
 from datetime import date
 from typing import Optional, AsyncGenerator
 import concurrent.futures
@@ -26,6 +25,11 @@ from pipeline import run_person_pipeline, run_person_pipeline_by_orcid, is_failu
 from utils.usage_tracker import record_api_call, get_tracker
 from utils.org_pipeline_stats import get_org_pipeline_stats
 from utils.pipeline_stats import get_pipeline_stats
+from utils.stream_capture import (
+    ThreadSafeConsoleBuffer,
+    capture_console_output,
+    drain_console_buffer,
+)
 
 # 创建路由器
 router = APIRouter(tags=["Google Scholar"])
@@ -37,6 +41,14 @@ PIPELINE_SEMAPHORE = asyncio.Semaphore(PIPELINE_MAX_CONCURRENT)
 
 def _format_sse_json(tag: str, payload: dict) -> str:
     return f"data: {tag} {json.dumps(payload, ensure_ascii=False)}\n\n"
+
+
+def _read_log_lines(
+    log_buffer: ThreadSafeConsoleBuffer,
+    position: int,
+    remainder: str,
+):
+    return drain_console_buffer(log_buffer, position, remainder)
 
 
 # ============ 使用统计依赖 ============
@@ -102,46 +114,38 @@ async def run_person_pipeline_with_logs(mode: str, identifier: str) -> AsyncGene
     else:
         yield f"data: [START] 开始生成 Google Scholar 报告: {identifier}\n\n"
     
-    log_buffer = StringIO()
+    log_buffer = ThreadSafeConsoleBuffer()
     result_obj = None
     error_msg = None
     
     try:
         def run_sync():
             nonlocal result_obj
-            old_stdout = sys.stdout
-            sys.stdout = log_buffer
-            try:
+            with capture_console_output(log_buffer):
                 if mode == "orcid":
                     result_obj = run_person_pipeline_by_orcid(orcid_id=identifier)
                 else:
                     result_obj = run_person_pipeline(google_scholar_url=identifier)
-            finally:
-                sys.stdout = old_stdout
         
         loop = asyncio.get_event_loop()
         executor = concurrent.futures.ThreadPoolExecutor(max_workers=1)
         future = loop.run_in_executor(executor, run_sync)
         
         last_pos = 0
+        remainder = ""
         while not future.done():
             await asyncio.sleep(0.5)
-            log_buffer.seek(last_pos)
-            new_logs = log_buffer.read()
-            last_pos = log_buffer.tell()
-            if new_logs:
-                for line in new_logs.strip().split('\n'):
-                    if line:
-                        yield f"data: [LOG] {line}\n\n"
+            lines, last_pos, remainder = _read_log_lines(log_buffer, last_pos, remainder)
+            for line in lines:
+                yield f"data: [LOG] {line}\n\n"
         
         await future
         
-        log_buffer.seek(last_pos)
-        remaining_logs = log_buffer.read()
-        if remaining_logs:
-            for line in remaining_logs.strip().split('\n'):
-                if line:
-                    yield f"data: [LOG] {line}\n\n"
+        lines, last_pos, remainder = _read_log_lines(log_buffer, last_pos, remainder)
+        for line in lines:
+            yield f"data: [LOG] {line}\n\n"
+        if remainder:
+            yield f"data: [LOG] {remainder}\n\n"
         
     except Exception as e:
         error_msg = str(e)
@@ -183,7 +187,7 @@ async def run_pipeline_with_logs(orcid_id: str) -> AsyncGenerator[str, None]:
     yield f"data: [START] 开始查找 ORCID: {orcid_id}\n\n"
     
     # 用于捕获 print 输出
-    log_buffer = StringIO()
+    log_buffer = ThreadSafeConsoleBuffer()
     result_url = None
     result_author = None
     error_msg = None
@@ -192,18 +196,13 @@ async def run_pipeline_with_logs(orcid_id: str) -> AsyncGenerator[str, None]:
         # 在线程池中运行同步的 pipeline 函数
         def run_sync():
             nonlocal result_url, result_author
-            # 重定向 stdout 到 buffer
-            old_stdout = sys.stdout
-            sys.stdout = log_buffer
-            try:
+            with capture_console_output(log_buffer):
                 url, author = find_google_scholar_by_orcid(
                     orcid_id=orcid_id,
                     verbose=True
                 )
                 result_url = url
                 result_author = author
-            finally:
-                sys.stdout = old_stdout
         
         # 使用 asyncio 在线程中运行
         loop = asyncio.get_event_loop()
@@ -214,29 +213,22 @@ async def run_pipeline_with_logs(orcid_id: str) -> AsyncGenerator[str, None]:
         
         # 持续读取日志并输出
         last_pos = 0
+        remainder = ""
         while not future.done():
             await asyncio.sleep(0.5)  # 每 0.5 秒检查一次
-            
-            # 读取新的日志
-            log_buffer.seek(last_pos)
-            new_logs = log_buffer.read()
-            last_pos = log_buffer.tell()
-            
-            if new_logs:
-                for line in new_logs.strip().split('\n'):
-                    if line:
-                        yield f"data: [LOG] {line}\n\n"
+            lines, last_pos, remainder = _read_log_lines(log_buffer, last_pos, remainder)
+            for line in lines:
+                yield f"data: [LOG] {line}\n\n"
         
         # 等待任务完成
         await future
         
         # 读取剩余的日志
-        log_buffer.seek(last_pos)
-        remaining_logs = log_buffer.read()
-        if remaining_logs:
-            for line in remaining_logs.strip().split('\n'):
-                if line:
-                    yield f"data: [LOG] {line}\n\n"
+        lines, last_pos, remainder = _read_log_lines(log_buffer, last_pos, remainder)
+        for line in lines:
+            yield f"data: [LOG] {line}\n\n"
+        if remainder:
+            yield f"data: [LOG] {remainder}\n\n"
         
     except Exception as e:
         error_msg = str(e)

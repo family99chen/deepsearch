@@ -9,6 +9,8 @@ import logging
 from datetime import datetime
 from pathlib import Path
 
+from utils.stream_capture import STDOUT_ROUTER, install_stream_capture
+
 
 # 日志目录
 LOG_DIR = Path(__file__).parent.parent / "logs"
@@ -35,6 +37,9 @@ def setup_logger(name: str = "deepsearch") -> logging.Logger:
         return logger
     
     logger.setLevel(logging.DEBUG)
+
+    # 统一安装可按请求隔离的 stdout/stderr 路由。
+    install_stream_capture()
     
     # 日志格式：简单通用
     formatter = logging.Formatter(
@@ -43,7 +48,7 @@ def setup_logger(name: str = "deepsearch") -> logging.Logger:
     )
     
     # 控制台输出
-    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler = logging.StreamHandler(STDOUT_ROUTER)
     console_handler.setLevel(logging.INFO)
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
