@@ -558,7 +558,7 @@ class PageReader:
         if self.verbose:
             print(f"[PageReader] 调用 LLM 分析...")
         
-        response = await query_async(prompt, temperature=0.3, verbose=False)
+        response = await query_async(prompt, temperature=0.3, max_tokens=512, verbose=False)
         
         if self.verbose:
             print(f"\n[PageReader] === LLM 原始响应 ===")

@@ -1,6 +1,6 @@
 {
-  "total_requests": 53083,
-  "cache_hits": 23244,
+  "total_requests": 53091,
+  "cache_hits": 23252,
   "success": 12537,
   "not_found": 16964,
   "error": 52,
@@ -699,8 +699,8 @@
       }
     },
     "2026-04-17": {
-      "total_requests": 1388,
-      "cache_hits": 748,
+      "total_requests": 1393,
+      "cache_hits": 753,
       "success": 171,
       "not_found": 469,
       "error": 0,
@@ -717,7 +717,22 @@
           "1": 16
         }
       }
+    },
+    "2026-04-18": {
+      "total_requests": 3,
+      "cache_hits": 3,
+      "success": 0,
+      "not_found": 0,
+      "error": 0,
+      "name_search": {
+        "total": 0,
+        "by_iterations": {}
+      },
+      "paper_search": {
+        "total": 0,
+        "by_papers": {}
+      }
     }
   },
-  "last_updated": "2026-04-17T13:26:13.420079"
+  "last_updated": "2026-04-18T12:38:43.625887"
 }

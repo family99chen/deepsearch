@@ -388,7 +388,7 @@ class IterAgent:
         )
         
         try:
-            response = await query_async(prompt, temperature=0.1, verbose=False)
+            response = await query_async(prompt, temperature=0.1, max_tokens=512, verbose=False)
             return "STOP" in response.upper()
         except Exception as e:
             logger.warning(f"LLM 决策失败: {e}")
@@ -414,7 +414,7 @@ class IterAgent:
         )
         
         try:
-            response = await query_async(prompt, temperature=0.3, verbose=False)
+            response = await query_async(prompt, temperature=0.3, max_tokens=512, verbose=False)
             
             if "REPORT:" in response:
                 report_start = response.find("REPORT:") + 7

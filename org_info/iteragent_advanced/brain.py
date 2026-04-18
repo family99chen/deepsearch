@@ -352,7 +352,7 @@ class Brain:
             print(available_actions)
             print(f"[Brain] === 可用操作结束 ===\n")
         
-        response = await query_async(prompt, temperature=0.3, verbose=False)
+        response = await query_async(prompt, temperature=0.3, max_tokens=512, verbose=False)
         
         if self.verbose:
             print(f"[Brain] LLM 响应: {response[:200]}")

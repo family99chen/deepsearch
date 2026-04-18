@@ -635,7 +635,7 @@ class PageExecuter:
         )
         
         try:
-            response = await query_async(prompt, temperature=0.2, verbose=False)
+            response = await query_async(prompt, temperature=0.2, max_tokens=512, verbose=False)
             
             if self.verbose:
                 print(f"[PageExecuter] LLM 响应: {response[:200]}")

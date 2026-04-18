@@ -1,71 +1,133 @@
 {
-  "total": 244,
+  "total": 354,
   "daily": {
     "2026-04-17": {
-      "total": 244,
+      "total": 312,
       "endpoints": {
-        "api:gpt-4o-mini": 242,
-        "api:gpt-5.4": 2
+        "api:gpt-4o-mini": 169,
+        "api:gpt-5.4": 6,
+        "local:gemma4-31b-it-vllm": 137
       },
-      "first_request": "2026-04-17T13:26:30.084604",
-      "last_request": "2026-04-17T13:35:39.573763",
+      "first_request": "2026-04-17T13:58:10.617945",
+      "last_request": "2026-04-17T22:16:22.057664",
       "metrics": {
-        "request_chars_total": 711544,
-        "request_chars_samples": 244,
-        "avg_request_chars": 2916.16,
-        "response_chars_total": 25677,
-        "response_chars_samples": 244,
-        "avg_response_chars": 105.23
+        "request_chars_total": 808051,
+        "request_chars_samples": 312,
+        "avg_request_chars": 2589.91,
+        "response_chars_total": 36746,
+        "response_chars_samples": 312,
+        "avg_response_chars": 117.78
       },
       "endpoint_metrics": {
         "api:gpt-4o-mini": {
-          "request_chars_total": 655370,
-          "request_chars_samples": 242,
-          "avg_request_chars": 2708.14,
-          "response_chars_total": 19013,
-          "response_chars_samples": 242,
-          "avg_response_chars": 78.57
+          "request_chars_total": 496088,
+          "request_chars_samples": 169,
+          "avg_request_chars": 2935.43,
+          "response_chars_total": 15499,
+          "response_chars_samples": 169,
+          "avg_response_chars": 91.71
         },
         "api:gpt-5.4": {
-          "request_chars_total": 56174,
+          "request_chars_total": 87291,
+          "request_chars_samples": 6,
+          "avg_request_chars": 14548.5,
+          "response_chars_total": 8094,
+          "response_chars_samples": 6,
+          "avg_response_chars": 1349.0
+        },
+        "local:gemma4-31b-it-vllm": {
+          "request_chars_total": 224672,
+          "request_chars_samples": 137,
+          "avg_request_chars": 1639.94,
+          "response_chars_total": 13153,
+          "response_chars_samples": 137,
+          "avg_response_chars": 96.01
+        }
+      }
+    },
+    "2026-04-18": {
+      "total": 42,
+      "endpoints": {
+        "api:gpt-5.4": 2,
+        "local:qwen3.6-35b-a3b-fp8": 40
+      },
+      "first_request": "2026-04-18T12:36:45.307815",
+      "last_request": "2026-04-18T12:41:01.975326",
+      "metrics": {
+        "request_chars_total": 253207,
+        "request_chars_samples": 42,
+        "avg_request_chars": 6028.74,
+        "response_chars_total": 21087,
+        "response_chars_samples": 42,
+        "avg_response_chars": 502.07
+      },
+      "endpoint_metrics": {
+        "api:gpt-5.4": {
+          "request_chars_total": 31814,
           "request_chars_samples": 2,
-          "avg_request_chars": 28087.0,
-          "response_chars_total": 6664,
+          "avg_request_chars": 15907.0,
+          "response_chars_total": 7065,
           "response_chars_samples": 2,
-          "avg_response_chars": 3332.0
+          "avg_response_chars": 3532.5
+        },
+        "local:qwen3.6-35b-a3b-fp8": {
+          "request_chars_total": 221393,
+          "request_chars_samples": 40,
+          "avg_request_chars": 5534.82,
+          "response_chars_total": 14022,
+          "response_chars_samples": 40,
+          "avg_response_chars": 350.55
         }
       }
     }
   },
   "endpoints": {
-    "api:gpt-4o-mini": 242,
-    "api:gpt-5.4": 2
+    "api:gpt-4o-mini": 169,
+    "api:gpt-5.4": 8,
+    "local:gemma4-31b-it-vllm": 137,
+    "local:qwen3.6-35b-a3b-fp8": 40
   },
-  "last_updated": "2026-04-17T13:35:39.573789",
+  "last_updated": "2026-04-18T12:41:01.975354",
   "metrics": {
-    "request_chars_total": 711544,
-    "request_chars_samples": 244,
-    "avg_request_chars": 2916.16,
-    "response_chars_total": 25677,
-    "response_chars_samples": 244,
-    "avg_response_chars": 105.23
+    "request_chars_total": 1061258,
+    "request_chars_samples": 354,
+    "avg_request_chars": 2997.9,
+    "response_chars_total": 57833,
+    "response_chars_samples": 354,
+    "avg_response_chars": 163.37
   },
   "endpoint_metrics": {
     "api:gpt-4o-mini": {
-      "request_chars_total": 655370,
-      "request_chars_samples": 242,
-      "avg_request_chars": 2708.14,
-      "response_chars_total": 19013,
-      "response_chars_samples": 242,
-      "avg_response_chars": 78.57
+      "request_chars_total": 496088,
+      "request_chars_samples": 169,
+      "avg_request_chars": 2935.43,
+      "response_chars_total": 15499,
+      "response_chars_samples": 169,
+      "avg_response_chars": 91.71
     },
     "api:gpt-5.4": {
-      "request_chars_total": 56174,
-      "request_chars_samples": 2,
-      "avg_request_chars": 28087.0,
-      "response_chars_total": 6664,
-      "response_chars_samples": 2,
-      "avg_response_chars": 3332.0
+      "request_chars_total": 119105,
+      "request_chars_samples": 8,
+      "avg_request_chars": 14888.12,
+      "response_chars_total": 15159,
+      "response_chars_samples": 8,
+      "avg_response_chars": 1894.88
+    },
+    "local:gemma4-31b-it-vllm": {
+      "request_chars_total": 224672,
+      "request_chars_samples": 137,
+      "avg_request_chars": 1639.94,
+      "response_chars_total": 13153,
+      "response_chars_samples": 137,
+      "avg_response_chars": 96.01
+    },
+    "local:qwen3.6-35b-a3b-fp8": {
+      "request_chars_total": 221393,
+      "request_chars_samples": 40,
+      "avg_request_chars": 5534.82,
+      "response_chars_total": 14022,
+      "response_chars_samples": 40,
+      "avg_response_chars": 350.55
     }
   }
 }

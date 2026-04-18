@@ -1,0 +1,657 @@
+[2026-04-18 12:34:00] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:34:00] [INFO] IterAgent 开始: Martin Dichgans, URL: https://www.dzne.de/en/research/research-areas/clinical-research/research-groups/dichgans/curriculum-vitae/
+[2026-04-18 12:34:00] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:34:00] [INFO] IterAgent 开始: Martin Dichgans, URL: https://scholar.google.com/citations?user=YpvQfgIAAAAJ&hl=de
+[2026-04-18 12:34:00] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:34:00] [INFO] IterAgent 开始: Martin Dichgans, URL: https://www.isd-research.de/dichgans-lab
+[2026-04-18 12:34:01] [INFO] Xvfb 已启动: DISPLAY=:116
+[2026-04-18 12:34:01] [INFO] Xvfb 已启动: DISPLAY=:117
+[2026-04-18 12:34:01] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:34:01] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:34:01] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:34:01] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:34:01] [INFO] Xvfb 已启动: DISPLAY=:148
+[2026-04-18 12:34:02] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:34:02] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:34:02] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:34:02] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:34:03] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:34:03] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:34:03] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:34:04] [WARNING] 打开标签页失败: https://scholar.google.com/citations?user=YpvQfgIAAAAJ&hl=de, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:34:04] [WARNING] 打开标签页失败: https://www.dzne.de/en/research/research-areas/clinical-research/research-groups/dichgans/curriculum-vitae/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:34:05] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:34:08] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=53127): Max retries exceeded with url: /session/6a9dcdc8face8881ba7f6b51e8f3e153/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x739720998650>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:34:08] [INFO] IterAgent 完成: Martin Dichgans, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:34:08] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:34:08] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=52665): Max retries exceeded with url: /session/a95b82967a367709fa2cacd41304c442/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7112d8d94750>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:34:08] [INFO] IterAgent 完成: Martin Dichgans, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:34:08] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:34:08] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:34:08] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:34:09] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:34:09] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:34:09] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:34:09] [WARNING] 打开标签页失败: https://www.isd-research.de/dichgans-lab, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:34:10] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:34:12] [INFO] 域名预热完成: https://scholar.google.com
+[2026-04-18 12:34:13] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=51289): Max retries exceeded with url: /session/7699666777fc488d5b8abb08800f286e/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7149c8f948d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:34:13] [INFO] IterAgent 完成: Martin Dichgans, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:34:13] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:34:14] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:34:14] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:34:14] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:34:14] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:34:14] [INFO] Xvfb 已停止
+[2026-04-18 12:34:14] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:34:15] [INFO] 域名预热完成: https://www.dzne.de
+[2026-04-18 12:34:16] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:34:16] [INFO] IterAgent 开始: Martin Dichgans, URL: https://pubmed.ncbi.nlm.nih.gov/39112714/
+[2026-04-18 12:34:17] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:34:17] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:34:17] [INFO] Xvfb 已停止
+[2026-04-18 12:34:17] [INFO] Xvfb 已启动: DISPLAY=:197
+[2026-04-18 12:34:17] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:34:17] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:34:17] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:34:18] [WARNING] 域名预热失败: https://www.isd-research.de, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:34:18] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=53511): Max retries exceeded with url: /session/31f1a2af4be113a0325cb7e8de4b3f3e/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-04-18 12:34:18] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:34:18] [INFO] Xvfb 已停止
+[2026-04-18 12:34:18] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:34:18] [INFO] IterAgent 开始: Martin Dichgans, URL: https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(18)30175-3/fulltext
+[2026-04-18 12:34:19] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:34:19] [INFO] Xvfb 已启动: DISPLAY=:145
+[2026-04-18 12:34:19] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:34:19] [INFO] IterAgent 开始: Martin Dichgans, URL: https://pubmed.ncbi.nlm.nih.gov/25369932/
+[2026-04-18 12:34:20] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:34:20] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:34:20] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:34:20] [INFO] Xvfb 已启动: DISPLAY=:120
+[2026-04-18 12:34:21] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:34:21] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:34:21] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:34:21] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:34:22] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:34:25] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:34:26] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:34:26] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:26] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:28] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:28] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:29] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:29] [ERROR] 页面分析失败: https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(18)30175-3/fulltext, 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:29] [INFO] IterAgent 完成: Martin Dichgans, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:34:29] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:34:29] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:34:29] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:34:29] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:29] [ERROR] 页面分析失败: https://pubmed.ncbi.nlm.nih.gov/39112714/, 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:29] [INFO] IterAgent 完成: Martin Dichgans, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:34:29] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:34:29] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:34:29] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:34:29] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:30] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:34:30] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:34:31] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:31] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:34:32] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:32] [ERROR] 页面分析失败: https://pubmed.ncbi.nlm.nih.gov/25369932/, 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:32] [INFO] IterAgent 完成: Martin Dichgans, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:34:32] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:34:32] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:34:32] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:34:32] [INFO] 域名预热完成: https://www.thelancet.com
+[2026-04-18 12:34:33] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:34:34] [INFO] 域名预热完成: https://pubmed.ncbi.nlm.nih.gov
+[2026-04-18 12:34:36] [INFO] 域名预热完成: https://pubmed.ncbi.nlm.nih.gov
+[2026-04-18 12:34:37] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:34:37] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:39] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:40] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:40] [ERROR] LLM 元素识别失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:40] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:34:40] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:41] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=34367): Max retries exceeded with url: /session/e7674ecb19f319849c1633c4ab4be53e/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x714758c7ee10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:34:41] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=34367): Max retries exceeded with url: /session/e7674ecb19f319849c1633c4ab4be53e/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x714758f080d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:34:41] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:34:41] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:41] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:42] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:42] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:42] [ERROR] LLM 总结失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:42] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:34:43] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:43] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:43] [ERROR] LLM 元素识别失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:44] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:34:44] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:44] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:45] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:45] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:34:45] [INFO] Xvfb 已停止
+[2026-04-18 12:34:45] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:47] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:47] [ERROR] LLM 总结失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:47] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:34:47] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:47] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:34:48] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:48] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:49] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:49] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:49] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:34:49] [INFO] Xvfb 已停止
+[2026-04-18 12:34:50] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:50] [ERROR] LLM 元素识别失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:50] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:34:51] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:52] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:53] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:53] [ERROR] LLM 总结失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:53] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:34:54] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:55] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:56] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:34:56] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:34:56] [INFO] Xvfb 已停止
+[2026-04-18 12:34:58] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:34:58] [INFO] IterAgent 开始: Martin Dichgans, URL: https://www.isd-research.de/dichgans-lab
+[2026-04-18 12:34:58] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:34:58] [INFO] IterAgent 开始: Martin Dichgans, URL: https://www.dzne.de/en/im-fokus/meldungen/2025/highly-cited-dzne-scientists-among-the-worlds-most-impactful-researchers/
+[2026-04-18 12:34:58] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:34:58] [INFO] IterAgent 开始: Martin Dichgans, URL: https://www.dzne.de/en/im-fokus/meldungen/2024/highly-cited-several-dzne-scientists-among-the-worlds-most-impactful-researchers/
+[2026-04-18 12:34:59] [INFO] Xvfb 已启动: DISPLAY=:183
+[2026-04-18 12:34:59] [INFO] Xvfb 已启动: DISPLAY=:180
+[2026-04-18 12:34:59] [INFO] Xvfb 已启动: DISPLAY=:182
+[2026-04-18 12:34:59] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:34:59] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:34:59] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:34:59] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:35:00] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:35:00] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:35:00] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:35:00] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:35:01] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:35:01] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:35:01] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:35:02] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:35:03] [WARNING] 打开标签页失败: https://www.dzne.de/en/im-fokus/meldungen/2024/highly-cited-several-dzne-scientists-among-the-worlds-most-impactful-researchers/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:35:04] [WARNING] 打开标签页失败: https://www.dzne.de/en/im-fokus/meldungen/2025/highly-cited-dzne-scientists-among-the-worlds-most-impactful-researchers/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:35:07] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=39655): Max retries exceeded with url: /session/c079c9d5fd68b877187aff74f87eb188/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7eebcb18c490>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:35:07] [INFO] IterAgent 完成: Martin Dichgans, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:35:07] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:35:07] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:35:07] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:35:08] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:35:08] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=59379): Max retries exceeded with url: /session/e6c06ee9173925d23fb3b9f7c1c1fccb/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77539e3a8dd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:35:08] [INFO] IterAgent 完成: Martin Dichgans, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:35:08] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:35:09] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:35:09] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:35:09] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:35:10] [WARNING] 域名预热失败: https://www.dzne.de, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:35:10] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=39117): Max retries exceeded with url: /session/45614fe377907569510214386e9ee484/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-04-18 12:35:10] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:35:10] [INFO] Xvfb 已停止
+[2026-04-18 12:35:11] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:35:11] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:35:11] [INFO] IterAgent 开始: Martin Dichgans, URL: https://www.nature.com/articles/s41588-020-00760-4
+[2026-04-18 12:35:11] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:12] [INFO] Xvfb 已启动: DISPLAY=:164
+[2026-04-18 12:35:13] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:13] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:35:13] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:35:13] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:35:13] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:35:14] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:14] [ERROR] 页面分析失败: https://www.isd-research.de/dichgans-lab, 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:14] [INFO] IterAgent 完成: Martin Dichgans, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:35:14] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:35:14] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:35:14] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:35:14] [INFO] 域名预热完成: https://www.dzne.de
+[2026-04-18 12:35:15] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:35:16] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:35:16] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:35:16] [INFO] Xvfb 已停止
+[2026-04-18 12:35:16] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41588-020-00760-4, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:35:17] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:35:17] [INFO] IterAgent 开始: Martin Dichgans, URL: https://www.nature.com/articles/s41588-019-0449-0
+[2026-04-18 12:35:18] [INFO] Xvfb 已启动: DISPLAY=:185
+[2026-04-18 12:35:19] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:35:19] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:35:19] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:35:19] [WARNING] 域名预热失败: https://www.isd-research.de, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:35:19] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=47359): Max retries exceeded with url: /session/2caf957348ae8d78fec960419c5264c5/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-04-18 12:35:19] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:35:19] [INFO] Xvfb 已停止
+[2026-04-18 12:35:19] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:35:20] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=48513): Max retries exceeded with url: /session/782cc87437848dd7b4acf5558125f614/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7e42383a4090>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:35:20] [INFO] IterAgent 完成: Martin Dichgans, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:35:20] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:35:20] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:35:21] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:35:21] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:35:21] [INFO] IterAgent 开始: Martin Dichgans, URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC9945815/
+[2026-04-18 12:35:22] [INFO] Xvfb 已启动: DISPLAY=:116
+[2026-04-18 12:35:22] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:35:22] [WARNING] 打开标签页失败: https://www.nature.com/articles/s41588-019-0449-0, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:35:24] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:35:24] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:35:24] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:35:25] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:35:26] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=49593): Max retries exceeded with url: /session/43adeb206bfc75fcc52b54711edb799a/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x70ff78d94690>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:35:26] [INFO] IterAgent 完成: Martin Dichgans, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:35:26] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:35:27] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:35:27] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:35:27] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:35:27] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=52899): Max retries exceeded with url: /session/adde66485bfe70dfdd8266c2e57d81fc/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-04-18 12:35:27] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:35:27] [INFO] Xvfb 已停止
+[2026-04-18 12:35:27] [WARNING] 打开标签页失败: https://pmc.ncbi.nlm.nih.gov/articles/PMC9945815/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:35:27] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:35:28] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:35:28] [INFO] IterAgent 开始: Martin Dichgans, URL: https://www.isd-research.de/benakis-lab
+[2026-04-18 12:35:29] [INFO] Xvfb 已启动: DISPLAY=:197
+[2026-04-18 12:35:29] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:35:29] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:35:29] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:35:30] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:35:30] [WARNING] 域名预热失败: https://www.nature.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:35:30] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=59595): Max retries exceeded with url: /session/a79ee74f99007c2af88d67d06908bc56/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-04-18 12:35:30] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:35:30] [INFO] Xvfb 已停止
+[2026-04-18 12:35:31] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=35587): Max retries exceeded with url: /session/e37681d2f822b3548b729f2e06e57699/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71a44dfacc50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:35:31] [INFO] IterAgent 完成: Martin Dichgans, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:35:31] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:35:31] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:35:31] [INFO] IterAgent 开始: Martin Dichgans, URL: https://www.nature.com/articles/s41467-025-61650-z
+[2026-04-18 12:35:32] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:35:32] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:35:32] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:35:32] [INFO] Xvfb 已启动: DISPLAY=:198
+[2026-04-18 12:35:33] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:35:33] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:35:33] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:35:33] [WARNING] 打开标签页失败: https://www.isd-research.de/benakis-lab, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:35:34] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:35:35] [INFO] 域名预热完成: https://pmc.ncbi.nlm.nih.gov
+[2026-04-18 12:35:37] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=55847): Max retries exceeded with url: /session/0d5f5504f163f9822fe9831ae8a2c155/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x76e3682981d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:35:37] [INFO] IterAgent 完成: Martin Dichgans, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:35:37] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:35:37] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:35:37] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:35:38] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:35:41] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=52503): Max retries exceeded with url: /session/191933b1c8212fc0d3a348fd119ea9d3/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71a44df9d390>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:35:41] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=52503): Max retries exceeded with url: /session/191933b1c8212fc0d3a348fd119ea9d3/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71a44dff5350>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:35:41] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:35:42] [ERROR] 获取页面内容失败: https://www.nature.com/articles/s41467-025-61650-z, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:35:42] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=34095): Max retries exceeded with url: /session/d153695c179da488a1ddc3e1a3fac81a/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x795cfe3b4250>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:35:42] [INFO] IterAgent 完成: Martin Dichgans, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:35:42] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:35:42] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:35:42] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:35:42] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:43] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:35:43] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:43] [INFO] 域名预热完成: https://www.isd-research.de
+[2026-04-18 12:35:44] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:44] [ERROR] LLM 元素识别失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:44] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:35:45] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:46] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:47] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:47] [ERROR] LLM 总结失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:47] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:35:48] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:48] [INFO] 域名预热完成: https://www.nature.com
+[2026-04-18 12:35:49] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:50] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:50] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:35:50] [INFO] Xvfb 已停止
+[2026-04-18 12:35:51] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=40147): Max retries exceeded with url: /session/24ad0f6cec1df4f437a26cfb6b94aa90/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x76e3682d2510>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:35:51] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=40147): Max retries exceeded with url: /session/24ad0f6cec1df4f437a26cfb6b94aa90/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x76e3682d9f10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:35:51] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:35:51] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:52] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:35:52] [INFO] IterAgent 开始: Martin Dichgans, URL: https://www.nature.com/articles/s41586-022-05165-3
+[2026-04-18 12:35:52] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:53] [INFO] Xvfb 已启动: DISPLAY=:173
+[2026-04-18 12:35:53] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:35:53] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:35:53] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:35:53] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:53] [ERROR] LLM 元素识别失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:53] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:35:54] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:55] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:35:55] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=58909): Max retries exceeded with url: /session/256792fbf993d3cf1e8a8ba0ff01e433/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x795cfe3a4890>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:35:55] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=58909): Max retries exceeded with url: /session/256792fbf993d3cf1e8a8ba0ff01e433/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x795cfdf7ac10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:35:55] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:35:55] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:56] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:56] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:56] [ERROR] LLM 总结失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:56] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:35:57] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:57] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:58] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:58] [ERROR] LLM 元素识别失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:58] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:58] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:35:59] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:59] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:35:59] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:35:59] [INFO] Xvfb 已停止
+[2026-04-18 12:36:00] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:36:01] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:36:01] [INFO] IterAgent 开始: Martin Dichgans, URL: https://www.isd-research.de/wahl-lab
+[2026-04-18 12:36:01] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:36:01] [ERROR] LLM 总结失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:36:01] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:36:02] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:36:02] [INFO] Xvfb 已启动: DISPLAY=:130
+[2026-04-18 12:36:02] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:36:02] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:36:02] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:36:03] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:36:03] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:36:03] [ERROR] 获取页面内容失败: https://www.nature.com/articles/s41586-022-05165-3, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:36:03] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=49491): Max retries exceeded with url: /session/e37ba887aa9dc31195e594dd12ba1c72/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x763fcc994290>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:36:03] [INFO] IterAgent 完成: Martin Dichgans, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:36:03] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:36:04] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:36:04] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:36:04] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:36:04] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:36:04] [INFO] Xvfb 已停止
+[2026-04-18 12:36:06] [WARNING] 打开标签页失败: https://www.isd-research.de/wahl-lab, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:36:07] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:36:10] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=37939): Max retries exceeded with url: /session/797128ad764a0c60b3cb42f6952bbd9d/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x716b9b3a00d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:36:10] [INFO] IterAgent 完成: Martin Dichgans, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:36:10] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:36:11] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:36:11] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:36:13] [INFO] 域名预热完成: https://www.nature.com
+[2026-04-18 12:36:13] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:36:13] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:36:13] [INFO] Xvfb 已停止
+[2026-04-18 12:36:14] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:36:19] [INFO] 域名预热完成: https://www.isd-research.de
+[2026-04-18 12:36:27] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:36:28] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:36:29] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:36:30] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:36:30] [ERROR] LLM 元素识别失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:36:30] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:36:31] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:36:32] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:36:33] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:36:33] [ERROR] LLM 总结失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:36:33] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:36:34] [WARNING] LLM Local Async 重试 1: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:36:35] [WARNING] LLM Local Async 重试 2: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:36:36] [ERROR] LLM Local Async 查询失败: 404, message='Not Found', url='https://user-sys-531a-i.tailab6c76.ts.net/v1/chat/completions'
+[2026-04-18 12:36:36] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:36:36] [INFO] Xvfb 已停止
+[2026-04-18 12:38:44] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:38:44] [INFO] IterAgent 开始: Rino Rappuoli, URL: https://www.toscanalifesciences.org/en/progetti/monoclonal-antibody-discovery-mad-lab/rino-rappuoli-m/
+[2026-04-18 12:38:44] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:38:44] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:38:44] [INFO] IterAgent 开始: Rino Rappuoli, URL: https://www.biotecnopolo.it/en/rino-rappuoli-scientific-research-strategic-for-countering-future-pandemics/
+[2026-04-18 12:38:44] [INFO] IterAgent 开始: Rino Rappuoli, URL: https://pubmed.ncbi.nlm.nih.gov/36872345/
+[2026-04-18 12:38:45] [INFO] Xvfb 已启动: DISPLAY=:141
+[2026-04-18 12:38:45] [INFO] Xvfb 已启动: DISPLAY=:139
+[2026-04-18 12:38:45] [INFO] Xvfb 已启动: DISPLAY=:142
+[2026-04-18 12:38:45] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:38:45] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:38:45] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:38:45] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:38:45] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:38:46] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:38:46] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:38:46] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:38:50] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:38:51] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:38:51] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:38:51] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:38:52] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:38:54] [INFO] LLM Local Async 查询成功: 360 字符
+[2026-04-18 12:38:54] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:38:54] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-04-18 12:39:02] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:02] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:02] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:05] [INFO] LLM Local Async 查询成功: 873 字符
+[2026-04-18 12:39:05] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:05] [INFO] LLM Local Async 查询成功: 785 字符
+[2026-04-18 12:39:05] [INFO] LLM Local Async 查询成功: 780 字符
+[2026-04-18 12:39:05] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:05] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-04-18 12:39:05] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-04-18 12:39:05] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:08] [INFO] LLM Local Async 查询成功: 1069 字符
+[2026-04-18 12:39:08] [INFO] IterAgent 完成: Rino Rappuoli, 迭代 2 轮, 访问 3 页, 收集 3 条信息
+[2026-04-18 12:39:08] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:39:08] [INFO] Xvfb 已停止
+[2026-04-18 12:39:09] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:39:09] [INFO] IterAgent 开始: Rino Rappuoli, URL: https://www.biotecnopolo.it/en/home-eng/
+[2026-04-18 12:39:10] [INFO] Xvfb 已启动: DISPLAY=:132
+[2026-04-18 12:39:10] [WARNING] 打开标签页失败: https://www.toscanalifesciences.org/en/progetti/monoclonal-antibody-discovery-mad-lab/rino-rappuoli-m/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:39:11] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:39:11] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:39:11] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:39:12] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:39:12] [WARNING] 打开标签页失败: https://biotecnopolo.it/en/news/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:39:14] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=60877): Max retries exceeded with url: /session/eff624039aca00b723927b8f6e4a48b7/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7faf3c394590>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:39:14] [INFO] IterAgent 完成: Rino Rappuoli, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:39:14] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:39:14] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:39:14] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:39:15] [WARNING] 打开标签页失败: https://www.biotecnopolo.it/en/home-eng/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:39:16] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:39:16] [ERROR] 获取页面内容失败: https://biotecnopolo.it/en/home-eng/, HTTPConnectionPool(host='localhost', port=58413): Max retries exceeded with url: /session/813b50296d942dac8c5b8b1c01bb6d33/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a989692d190>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:39:16] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=58413): Max retries exceeded with url: /session/813b50296d942dac8c5b8b1c01bb6d33/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a989692cd50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:39:16] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:18] [INFO] LLM Local Async 查询成功: 876 字符
+[2026-04-18 12:39:18] [INFO] IterAgent 完成: Rino Rappuoli, 迭代 2 轮, 访问 3 页, 收集 1 条信息
+[2026-04-18 12:39:18] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:39:18] [INFO] Xvfb 已停止
+[2026-04-18 12:39:19] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=53963): Max retries exceeded with url: /session/f3cdea517856d39c8c4fc739efa723d4/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72f06f39c950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:39:19] [INFO] IterAgent 完成: Rino Rappuoli, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:39:19] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:39:19] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:39:19] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:39:20] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:39:20] [INFO] IterAgent 开始: Rino Rappuoli, URL: https://cepi.net/exploiting-fungus-growth-rapid-and-affordable-vaccine-development
+[2026-04-18 12:39:21] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:39:21] [INFO] Xvfb 已启动: DISPLAY=:125
+[2026-04-18 12:39:21] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:39:21] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:39:21] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:39:21] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:39:23] [WARNING] 域名预热失败: https://www.biotecnopolo.it, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:39:23] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=44425): Max retries exceeded with url: /session/85f9172827a3992c1aecc10e12b5fa85/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-04-18 12:39:23] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:39:23] [INFO] Xvfb 已停止
+[2026-04-18 12:39:25] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:39:25] [INFO] IterAgent 开始: Rino Rappuoli, URL: https://scholar.google.com/citations?user=yhZzuFMAAAAJ&hl=it
+[2026-04-18 12:39:26] [INFO] Xvfb 已启动: DISPLAY=:122
+[2026-04-18 12:39:26] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:39:26] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:39:26] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:39:27] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:39:29] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:30] [INFO] LLM Local Async 查询成功: 341 字符
+[2026-04-18 12:39:30] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:31] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-04-18 12:39:32] [WARNING] 域名预热失败: https://www.toscanalifesciences.org, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:39:32] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=59331): Max retries exceeded with url: /session/2c1b9e1075b97e88c7e695d620175f0b/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-04-18 12:39:32] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:39:32] [INFO] Xvfb 已停止
+[2026-04-18 12:39:33] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:39:33] [INFO] IterAgent 开始: Rino Rappuoli, URL: https://www.nfid.org/person/rino-rappuoli-phd/
+[2026-04-18 12:39:34] [INFO] Xvfb 已启动: DISPLAY=:121
+[2026-04-18 12:39:34] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:39:34] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:39:34] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:39:35] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:36] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:39:37] [INFO] LLM Local Async 查询成功: 806 字符
+[2026-04-18 12:39:37] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:37] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:38] [INFO] LLM Local Async 查询成功: 4 字符
+[2026-04-18 12:39:38] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:38] [INFO] LLM Local Async 查询成功: 125 字符
+[2026-04-18 12:39:38] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:38] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-04-18 12:39:38] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:40] [INFO] LLM Local Async 查询成功: 326 字符
+[2026-04-18 12:39:40] [INFO] IterAgent 完成: Rino Rappuoli, 迭代 2 轮, 访问 2 页, 收集 1 条信息
+[2026-04-18 12:39:40] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:39:40] [INFO] Xvfb 已停止
+[2026-04-18 12:39:41] [INFO] LLM Local Async 查询成功: 1080 字符
+[2026-04-18 12:39:41] [INFO] IterAgent 完成: Rino Rappuoli, 迭代 1 轮, 访问 1 页, 收集 1 条信息
+[2026-04-18 12:39:41] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:39:41] [INFO] Xvfb 已停止
+[2026-04-18 12:39:41] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:39:41] [INFO] IterAgent 开始: Rino Rappuoli, URL: https://www.terrapinn.com/conference/world-vaccine-congress-europe/speaker-rino-RAPPUOLI.stm
+[2026-04-18 12:39:42] [INFO] Xvfb 已启动: DISPLAY=:126
+[2026-04-18 12:39:42] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:39:42] [INFO] IterAgent 开始: Rino Rappuoli, URL: https://iums.org/about-us/-executive-board-2022-2026.html
+[2026-04-18 12:39:42] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:39:42] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:39:43] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:39:43] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:39:43] [INFO] Xvfb 已启动: DISPLAY=:172
+[2026-04-18 12:39:44] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:39:44] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:39:44] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:39:45] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:45] [WARNING] 打开标签页失败: https://www.terrapinn.com/conference/world-vaccine-congress-europe/speaker-rino-RAPPUOLI.stm, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:39:47] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:39:49] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=40765): Max retries exceeded with url: /session/90b3b45ba25b2f95637cae0068a3b4e4/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x70348e7a0310>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:39:49] [INFO] IterAgent 完成: Rino Rappuoli, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:39:49] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:39:50] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:39:50] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:39:50] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:39:54] [INFO] 域名预热完成: https://www.terrapinn.com
+[2026-04-18 12:39:55] [INFO] LLM Local Async 查询成功: 1250 字符
+[2026-04-18 12:39:55] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:55] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:55] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-04-18 12:39:56] [INFO] LLM Local Async 查询成功: 328 字符
+[2026-04-18 12:39:56] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:39:57] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-04-18 12:40:01] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:02] [INFO] LLM Local Async 查询成功: 58 字符
+[2026-04-18 12:40:02] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:02] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:02] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:02] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:03] [INFO] LLM Local Async 查询成功: 233 字符
+[2026-04-18 12:40:03] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:03] [INFO] LLM Local Async 查询成功: 52 字符
+[2026-04-18 12:40:03] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:03] [INFO] LLM Local Async 查询成功: 216 字符
+[2026-04-18 12:40:03] [INFO] LLM Local Async 查询成功: 221 字符
+[2026-04-18 12:40:03] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:04] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-04-18 12:40:04] [INFO] LLM Local Async 查询成功: 4 字符
+[2026-04-18 12:40:04] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:04] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:04] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-04-18 12:40:04] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:40:04] [INFO] Xvfb 已停止
+[2026-04-18 12:40:06] [INFO] LLM Local Async 查询成功: 286 字符
+[2026-04-18 12:40:06] [INFO] IterAgent 完成: Rino Rappuoli, 迭代 2 轮, 访问 2 页, 收集 1 条信息
+[2026-04-18 12:40:06] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:40:06] [INFO] Xvfb 已停止
+[2026-04-18 12:40:06] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:40:06] [INFO] IterAgent 开始: Rino Rappuoli, URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC10801854/
+[2026-04-18 12:40:07] [INFO] Xvfb 已启动: DISPLAY=:125
+[2026-04-18 12:40:07] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:40:07] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:40:07] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:40:08] [INFO] LLM Local Async 查询成功: 1175 字符
+[2026-04-18 12:40:08] [INFO] IterAgent 完成: Rino Rappuoli, 迭代 2 轮, 访问 3 页, 收集 3 条信息
+[2026-04-18 12:40:08] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:40:08] [INFO] Xvfb 已停止
+[2026-04-18 12:40:11] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:40:16] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:18] [INFO] LLM Local Async 查询成功: 456 字符
+[2026-04-18 12:40:18] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:19] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-04-18 12:40:27] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:27] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:29] [INFO] LLM Local Async 查询成功: 386 字符
+[2026-04-18 12:40:29] [INFO] LLM Local Async 查询成功: 454 字符
+[2026-04-18 12:40:29] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:30] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-04-18 12:40:30] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:32] [INFO] LLM Local Async 查询成功: 735 字符
+[2026-04-18 12:40:32] [INFO] IterAgent 完成: Rino Rappuoli, 迭代 2 轮, 访问 3 页, 收集 3 条信息
+[2026-04-18 12:40:32] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:40:32] [INFO] Xvfb 已停止
+[2026-04-18 12:40:34] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:40:34] [INFO] IterAgent 开始: Rino Rappuoli, URL: https://www.nfid.org/public-health-heroes-from-dreams-to-life-saving-vaccines/
+[2026-04-18 12:40:34] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:40:34] [INFO] IterAgent 开始: Rino Rappuoli, URL: https://www.toscanalifesciences.org/en/progetti/monoclonal-antibody-discovery-mad-lab/rino-rappuoli-m/
+[2026-04-18 12:40:34] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:40:34] [INFO] IterAgent 开始: Rino Rappuoli, URL: https://www.nfid.org/celebrating-resilient-heroes-of-public-health/
+[2026-04-18 12:40:35] [INFO] Xvfb 已启动: DISPLAY=:166
+[2026-04-18 12:40:35] [INFO] Xvfb 已启动: DISPLAY=:165
+[2026-04-18 12:40:35] [INFO] Xvfb 已启动: DISPLAY=:167
+[2026-04-18 12:40:35] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:40:35] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:40:35] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:40:35] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:40:35] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:40:38] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:40:38] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:40:38] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:40:42] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:40:42] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:40:42] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:40:42] [WARNING] 打开标签页失败: https://www.toscanalifesciences.org/en/progetti/monoclonal-antibody-discovery-mad-lab/rino-rappuoli-m/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:40:43] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:40:45] [WARNING] 打开标签页失败: https://www.nfid.org/public-health-heroes-from-dreams-to-life-saving-vaccines/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:40:46] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=36835): Max retries exceeded with url: /session/66b81d7b39ac0daf43bdb2826362e4e6/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7c3a9e1b0290>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:40:46] [INFO] IterAgent 完成: Rino Rappuoli, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:40:46] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:40:46] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:40:47] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:40:47] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:40:49] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=47063): Max retries exceeded with url: /session/06421988afa0af9823e5c5918d32c645/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x719c72d9ca10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:40:49] [INFO] IterAgent 完成: Rino Rappuoli, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-04-18 12:40:49] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:40:50] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:40:50] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:40:50] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:40:51] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:53] [WARNING] 域名预热失败: https://www.toscanalifesciences.org, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-04-18 12:40:53] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=56079): Max retries exceeded with url: /session/fbc0a1f5e28a242aab6b3c23093a9dc2/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-04-18 12:40:53] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-04-18 12:40:53] [INFO] Xvfb 已停止
+[2026-04-18 12:40:53] [INFO] LLM Local Async 查询成功: 549 字符
+[2026-04-18 12:40:53] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:40:54] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-04-18 12:40:55] [INFO] 域名预热完成: https://www.nfid.org
+[2026-04-18 12:40:55] [INFO] IterAgent 初始化: k=2, n=2
+[2026-04-18 12:40:55] [INFO] IterAgent 开始: Rino Rappuoli, URL: https://www.nfid.org/podcast/how-passion-and-purpose-drive-vaccine-innovation-with-rino-rappuoli-phd/
+[2026-04-18 12:40:56] [INFO] Xvfb 已启动: DISPLAY=:186
+[2026-04-18 12:40:56] [INFO] 等待 Chrome 初始化锁...
+[2026-04-18 12:40:56] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/147.0.7727.57/chrome (selenium-manager)
+[2026-04-18 12:40:56] [INFO] 检测到 Chrome 主版本: 147
+[2026-04-18 12:40:57] [INFO] 共享 Chrome driver 已创建
+[2026-04-18 12:41:01] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=52227): Max retries exceeded with url: /session/6ec643219ff3bc7988e41c117141a83f/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x719c72d844d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:41:01] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=52227): Max retries exceeded with url: /session/6ec643219ff3bc7988e41c117141a83f/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x719c72d9d0d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-04-18 12:41:01] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:41:01] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:41:01] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-04-18 12:41:01] [INFO] LLM Local Async 查询成功: 86 字符
+[2026-04-18 12:41:02] [INFO] LLM Factory Async 初始化, 后端: local

@@ -190,7 +190,7 @@ class Summarizer:
             content=content,
         )
         
-        response = await query_async(prompt, temperature=0.3, verbose=False)
+        response = await query_async(prompt, temperature=0.3, max_tokens=512, verbose=False)
         
         if self.verbose:
             print(f"[Summarizer] LLM 响应长度: {len(response)} 字符")

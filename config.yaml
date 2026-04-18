@@ -55,7 +55,7 @@ llm:
   # - api: 使用云端 API（OpenAI、Claude 等）
   # - local: 使用本地部署的模型
   # - auto: 自动选择（优先本地，本地不可用时使用 API）
-  backend: "api"
+  backend: "local"
   
   # 云端 API 配置（OpenAI 兼容格式）
   api:
@@ -66,8 +66,8 @@ llm:
   
   # 本地模型配置（OpenAI 兼容格式）
   local:
-    api_base: "http://localhost:11434/v1"  # Ollama 默认地址
-    model: "qwen2.5:7b"  # 本地模型名称
+    api_base: "https://user-sys-531a-i.tailab6c76.ts.net/v1"  # Tailscale 暴露的远端本地模型
+    model: "qwen3.6-35b-a3b-fp8"  # 远端 vLLM 模型名称
     timeout: 300  # 本地模型可能需要更长时间
 
 # Iter Agent 配置（迭代式网页深挖）
@@ -75,7 +75,7 @@ iter_agent:
   # 最大迭代次数 (k)
   # 每次迭代会读取上一轮发现的所有链接
   # 例如：k=3 表示最多进行 3 轮深挖
-  max_iterations: 3
+  max_iterations: 2
   
   # 每个页面最多返回的链接数 (n)
   # 每个页面分析后最多返回 n 个可能包含目标人物信息的链接
@@ -86,10 +86,10 @@ iter_agent:
 iteragent_advanced:
   # 最大迭代次数
   # 每次迭代 Brain 会决定一个动作（点击、搜索、返回等）
-  max_iterations: 6
+  max_iterations: 3
   
   # 提示词中显示的历史记录条数
-  max_history_in_prompt: 5
+  max_history_in_prompt: 3
 
 # Organization Pipeline 配置（组织人员信息收集管道）
 organization_pipeline:
