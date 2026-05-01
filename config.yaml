@@ -9,7 +9,7 @@ google_scholar:
 
 # Google Custom Search API 配置
 google:
-  api_key: "AIzaSyAx7Gy4iSDzyHxbA7iTaG4pIwoK0Ff8kj8"
+  api_key: "AIzaSyB00No88pbFJI7lHWn7cbYjzCd55fD3Seg"
   cx: "d75a80598807a44f4"
   # API 限制：免费版每天 100 次查询
   # 付费版：$5/1000 次查询
@@ -59,7 +59,7 @@ llm:
   
   # 云端 API 配置（OpenAI 兼容格式）
   api:
-    api_key: "sk-zk2bf37cb0da785f5ed7d2526b717bb43f969b3bc585d0d6"  # 填入你的 API Key
+    api_key: "sk-zk237f8a8debbd35ffde5659deb813245b769ee1d5dbd081"  # 填入你的 API Key
     api_base: "https://api.zhizengzeng.com/v1"  # 或其他兼容的 API
     model: "gpt-4o-mini"
     timeout: 120  # 超时时间（秒）
@@ -105,12 +105,25 @@ organization_pipeline:
   # - iter_agent.max_iterations
   # - iteragent_advanced.max_iterations
 
+# 浏览器资源调度配置
+browser_scheduler:
+  # 全站同时允许运行多少个浏览器型 worker（稳定吃满而不是瞬时爆发）
+  global_slots: 8
+  # 同一域名同时允许运行多少个浏览器型 worker
+  default_domain_slots: 2
+  # 可按需对特定域名单独收紧；留空表示使用 default_domain_slots
+  domain_limits: {}
+  # domain_limits:
+  #   scholar.google.com: 2
+  #   researchgate.net: 1
+  #   pubs.acs.org: 2
+
 # Person Pipeline 配置（总 Pipeline）
 person_pipeline:
   # LLM 后端选择: "api" | "local" | "auto"
   backend: "api"
   # LLM 模型名称（仅在 api/local 对应后端时生效）
-  model: "gpt-5.4"
+  model: "deepseek-v4-pro"
   # 最大迭代次数
   max_iterations: 1
   # 最大处理链接数

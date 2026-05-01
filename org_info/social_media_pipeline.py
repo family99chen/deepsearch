@@ -94,6 +94,8 @@ class SocialMediaPipelineSubprocess:
                 cmd=cmd,
                 timeout=300,
                 cwd=Path(__file__).parent.parent,
+                resource_url=url,
+                verbose=self.verbose,
             )
 
             if result.timed_out:

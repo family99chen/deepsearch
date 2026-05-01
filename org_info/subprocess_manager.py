@@ -12,6 +12,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Sequence, Union
 
+from org_info.browser_scheduler import browser_resource_context
+
 
 @dataclass
 class ManagedSubprocessResult:
@@ -52,35 +54,38 @@ def run_worker_subprocess(
     cmd: Sequence[str],
     cwd: Union[str, Path],
     timeout: int,
+    resource_url: str = "",
+    verbose: bool = False,
 ) -> ManagedSubprocessResult:
     """
     Run a worker in its own session so timeout cleanup removes child browsers.
     """
-    process = subprocess.Popen(
-        list(cmd),
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True,
-        cwd=str(cwd),
-        start_new_session=True,
-    )
+    with browser_resource_context(resource_url, verbose=verbose):
+        process = subprocess.Popen(
+            list(cmd),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            cwd=str(cwd),
+            start_new_session=True,
+        )
 
-    try:
-        stdout, stderr = process.communicate(timeout=timeout)
-        return ManagedSubprocessResult(
-            returncode=process.returncode,
-            stdout=stdout or "",
-            stderr=stderr or "",
-        )
-    except subprocess.TimeoutExpired as exc:
-        _terminate_process_group(process)
-        stdout, stderr = process.communicate()
-        return ManagedSubprocessResult(
-            returncode=process.returncode if process.returncode is not None else -signal.SIGKILL,
-            stdout=stdout or exc.stdout or "",
-            stderr=stderr or exc.stderr or "",
-            timed_out=True,
-        )
-    except Exception:
-        _terminate_process_group(process)
-        raise
+        try:
+            stdout, stderr = process.communicate(timeout=timeout)
+            return ManagedSubprocessResult(
+                returncode=process.returncode,
+                stdout=stdout or "",
+                stderr=stderr or "",
+            )
+        except subprocess.TimeoutExpired as exc:
+            _terminate_process_group(process)
+            stdout, stderr = process.communicate()
+            return ManagedSubprocessResult(
+                returncode=process.returncode if process.returncode is not None else -signal.SIGKILL,
+                stdout=stdout or exc.stdout or "",
+                stderr=stderr or exc.stderr or "",
+                timed_out=True,
+            )
+        except Exception:
+            _terminate_process_group(process)
+            raise
