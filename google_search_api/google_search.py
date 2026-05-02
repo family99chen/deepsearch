@@ -20,6 +20,7 @@ from pathlib import Path
 from typing import Optional, List, Dict, Any, Tuple
 from dataclasses import dataclass, asdict
 from datetime import datetime, timedelta
+from urllib.parse import urlparse
 import time
 
 # 添加项目根目录到 path
@@ -92,11 +93,11 @@ def _generate_cache_key(query: str, num: int, start: int, **kwargs) -> str:
     return hashlib.md5(key_string.encode()).hexdigest()
 
 
-def _record_api_call():
+def _record_api_call(endpoint: str = "google_custom_search"):
     """记录一次 API 调用"""
     tracker = _get_usage_tracker()
     if tracker:
-        tracker.record("google_custom_search", count=1)
+        tracker.record(endpoint, count=1)
 
 
 @dataclass
@@ -173,12 +174,14 @@ class GoogleSearchAPI:
     """Google Custom Search API 封装（带指数退避重试 + MongoDB 缓存）"""
     
     BASE_URL = "https://www.googleapis.com/customsearch/v1"
+    SERPER_BASE_URL = "https://google.serper.dev/search"
     
     def __init__(
         self,
         api_key: Optional[str] = None,
         cx: Optional[str] = None,
-        rate_limit: int = 10,
+        provider: Optional[str] = None,
+        rate_limit: Optional[int] = None,
         max_retries: int = 3,
         base_delay: float = 1.0,
         max_delay: float = 60.0,
@@ -197,11 +200,27 @@ class GoogleSearchAPI:
             use_cache: 是否使用缓存（默认 True）
         """
         config = self._load_config()
+        search_config = config.get("search", {})
         google_config = config.get("google", {})
+        serper_config = config.get("serper", {})
         
-        self.api_key = api_key or google_config.get("api_key")
+        self.provider = (provider or search_config.get("provider") or "google").lower()
+        if self.provider not in {"google", "serper"}:
+            raise ValueError(f"不支持的搜索 provider: {self.provider}")
+
+        self.google_api_key = api_key or google_config.get("api_key")
         self.cx = cx or google_config.get("cx")
-        self.rate_limit = rate_limit or google_config.get("rate_limit", 10)
+        self.serper_api_key = serper_config.get("api_key") or api_key
+        self.serper_base_url = serper_config.get("api_base", self.SERPER_BASE_URL)
+        self.serper_engine = serper_config.get("engine", "google")
+        self.serper_type = serper_config.get("type", "search")
+        self.serper_enrich_snippet = serper_config.get("enrich_snippet", True)
+        self.serper_snippet_extra_max_chars = int(
+            serper_config.get("snippet_extra_max_chars", 2000)
+        )
+
+        provider_config = serper_config if self.provider == "serper" else google_config
+        self.rate_limit = rate_limit if rate_limit is not None else provider_config.get("rate_limit", 10)
         
         # 重试配置
         self.max_retries = max_retries
@@ -212,8 +231,10 @@ class GoogleSearchAPI:
         self.use_cache = use_cache
         self._cache = _get_cache() if use_cache else None
         
-        if not self.api_key or not self.cx:
+        if self.provider == "google" and (not self.google_api_key or not self.cx):
             raise ValueError("必须提供 api_key 和 cx，或在 config.yaml 中配置")
+        if self.provider == "serper" and not self.serper_api_key:
+            raise ValueError("必须在 config.yaml 的 serper.api_key 中配置 Serper API Key")
         
         self.limiter = RateLimiter(max_requests=self.rate_limit)
         self._session: Optional[aiohttp.ClientSession] = None
@@ -268,6 +289,264 @@ class GoogleSearchAPI:
     
     async def __aexit__(self, exc_type, exc_val, exc_tb):
         await self.close()
+
+    @staticmethod
+    def _display_link_from_url(url: str) -> str:
+        try:
+            return urlparse(url).netloc
+        except Exception:
+            return ""
+
+    def _build_serper_payload(
+        self,
+        full_query: str,
+        num: int,
+        start: int,
+        language: str,
+        safe: str,
+        date_restrict: Optional[str],
+        extra_params: Optional[Dict[str, Any]],
+    ) -> Dict[str, Any]:
+        payload: Dict[str, Any] = {
+            "q": full_query,
+            "type": self.serper_type,
+            "engine": self.serper_engine,
+            "num": min(num, 10),
+            "page": max(1, ((max(1, start) - 1) // max(1, min(num, 10))) + 1),
+        }
+        if language:
+            payload["hl"] = language
+        if safe and safe != "off":
+            payload["safe"] = safe
+        if date_restrict:
+            payload["dateRestrict"] = date_restrict
+        if extra_params:
+            payload.update(extra_params)
+        return payload
+
+    @staticmethod
+    def _is_scholar_profile_query(query: str) -> bool:
+        normalized = query.lower()
+        return "scholar.google.com/citations" in normalized
+
+    @staticmethod
+    def _stringify_serper_attributes(attributes: Dict[str, Any], limit: int = 8) -> str:
+        parts = []
+        for key, value in list(attributes.items())[:limit]:
+            if value is None:
+                continue
+            parts.append(f"{key}: {value}")
+        return "; ".join(parts)
+
+    def _build_serper_global_context(self, data: Dict[str, Any]) -> str:
+        chunks = []
+
+        knowledge_graph = data.get("knowledgeGraph") or {}
+        if knowledge_graph:
+            kg_parts = []
+            title = knowledge_graph.get("title")
+            description = knowledge_graph.get("description")
+            description_source = knowledge_graph.get("descriptionSource")
+            description_link = knowledge_graph.get("descriptionLink")
+            attributes = knowledge_graph.get("attributes") or {}
+            if title:
+                kg_parts.append(f"title: {title}")
+            if description:
+                kg_parts.append(f"description: {description}")
+            if description_source:
+                kg_parts.append(f"source: {description_source}")
+            if description_link:
+                kg_parts.append(f"source_link: {description_link}")
+            if isinstance(attributes, dict) and attributes:
+                kg_parts.append(f"attributes: {self._stringify_serper_attributes(attributes)}")
+            if kg_parts:
+                chunks.append("KnowledgeGraph: " + " | ".join(kg_parts))
+
+        people_also_ask = data.get("peopleAlsoAsk") or []
+        paa_parts = []
+        for item in people_also_ask[:3]:
+            question = item.get("question")
+            snippet = item.get("snippet")
+            link = item.get("link")
+            if question:
+                value = question
+                if snippet:
+                    value += f" - {snippet}"
+                if link:
+                    value += f" ({link})"
+                paa_parts.append(value)
+        if paa_parts:
+            chunks.append("PeopleAlsoAsk: " + " || ".join(paa_parts))
+
+        related_searches = data.get("relatedSearches") or []
+        related_queries = [
+            item.get("query")
+            for item in related_searches[:8]
+            if item.get("query")
+        ]
+        if related_queries:
+            chunks.append("RelatedSearches: " + "; ".join(related_queries))
+
+        return "\n".join(chunks)
+
+    def _build_serper_item_snippet(
+        self,
+        item: Dict[str, Any],
+        global_context: str,
+        include_global_context: bool,
+    ) -> str:
+        parts = []
+        snippet = item.get("snippet")
+        if snippet:
+            parts.append(snippet)
+
+        date = item.get("date")
+        if date:
+            parts.append(f"Date: {date}")
+
+        sitelinks = item.get("sitelinks") or []
+        sitelink_parts = []
+        for sitelink in sitelinks[:5]:
+            title = sitelink.get("title")
+            link = sitelink.get("link")
+            if title and link:
+                sitelink_parts.append(f"{title}: {link}")
+            elif title:
+                sitelink_parts.append(title)
+            elif link:
+                sitelink_parts.append(link)
+        if sitelink_parts:
+            parts.append("Sitelinks: " + "; ".join(sitelink_parts))
+
+        if include_global_context and global_context:
+            parts.append(global_context)
+
+        enriched = "\n".join(parts)
+        if len(enriched) > self.serper_snippet_extra_max_chars:
+            return enriched[: self.serper_snippet_extra_max_chars].rstrip() + "..."
+        return enriched
+
+    def _parse_serper_response(
+        self,
+        data: Dict[str, Any],
+        query: str,
+        search_time: float,
+    ) -> SearchResponse:
+        should_enrich = self.serper_enrich_snippet and not self._is_scholar_profile_query(query)
+        global_context = self._build_serper_global_context(data) if should_enrich else ""
+        items = []
+        for idx, item in enumerate(data.get("organic", [])):
+            snippet = item.get("snippet", "")
+            if should_enrich:
+                snippet = self._build_serper_item_snippet(
+                    item,
+                    global_context=global_context,
+                    include_global_context=(idx == 0),
+                )
+            items.append(SearchResult(
+                title=item.get("title", ""),
+                link=item.get("link", ""),
+                snippet=snippet,
+                display_link=self._display_link_from_url(item.get("link", "")),
+            ))
+        total_results = len(items)
+        search_parameters = data.get("searchParameters") or {}
+        if isinstance(search_parameters.get("num"), int):
+            total_results = max(total_results, search_parameters["num"])
+        return SearchResponse(
+            success=True,
+            query=query,
+            total_results=total_results,
+            items=items,
+            search_time=search_time,
+        )
+
+    async def _request_serper(
+        self,
+        full_query: str,
+        query: str,
+        num: int,
+        start: int,
+        language: str,
+        safe: str,
+        date_restrict: Optional[str],
+        extra_params: Optional[Dict[str, Any]],
+        start_time: float,
+    ) -> SearchResponse:
+        payload = self._build_serper_payload(
+            full_query=full_query,
+            num=num,
+            start=start,
+            language=language,
+            safe=safe,
+            date_restrict=date_restrict,
+            extra_params=extra_params,
+        )
+        headers = {
+            "X-API-KEY": self.serper_api_key,
+            "Content-Type": "application/json",
+        }
+        last_exception = None
+        for attempt in range(self.max_retries + 1):
+            try:
+                session = await self._get_session()
+                async with session.post(self.serper_base_url, json=payload, headers=headers) as response:
+                    search_time = time.time() - start_time
+                    if response.status in DEFAULT_RETRYABLE_STATUS_CODES:
+                        if attempt < self.max_retries:
+                            delay = self._calculate_delay(attempt)
+                            print(f"[RETRY] Serper HTTP {response.status}，{delay:.1f}秒后重试 "
+                                  f"({attempt + 1}/{self.max_retries})...")
+                            await asyncio.sleep(delay)
+                            continue
+                        error_text = await response.text()
+                        return SearchResponse(
+                            success=False,
+                            query=query,
+                            total_results=0,
+                            items=[],
+                            search_time=search_time,
+                            error=f"Serper API 错误 ({response.status}): {error_text}",
+                        )
+
+                    if response.status != 200:
+                        error_text = await response.text()
+                        return SearchResponse(
+                            success=False,
+                            query=query,
+                            total_results=0,
+                            items=[],
+                            search_time=search_time,
+                            error=f"Serper API 错误 ({response.status}): {error_text}",
+                        )
+
+                    data = await response.json()
+                    _record_api_call("serper_google_search")
+                    return self._parse_serper_response(data, query, search_time)
+            except DEFAULT_RETRYABLE_EXCEPTIONS as e:
+                last_exception = e
+                if attempt >= self.max_retries:
+                    return SearchResponse(
+                        success=False,
+                        query=query,
+                        total_results=0,
+                        items=[],
+                        search_time=time.time() - start_time,
+                        error=f"Serper 请求失败（重试 {self.max_retries} 次后）: {type(e).__name__}: {e}",
+                    )
+                delay = self._calculate_delay(attempt)
+                print(f"[RETRY] Serper {type(e).__name__}，{delay:.1f}秒后重试 "
+                      f"({attempt + 1}/{self.max_retries})...")
+                await asyncio.sleep(delay)
+
+        return SearchResponse(
+            success=False,
+            query=query,
+            total_results=0,
+            items=[],
+            search_time=time.time() - start_time,
+            error=str(last_exception) if last_exception else "Serper 未知错误",
+        )
     
     async def search(
         self,
@@ -315,6 +594,7 @@ class GoogleSearchAPI:
             query=full_query, 
             num=num, 
             start=start,
+            provider=self.provider,
             language=language,
             safe=safe,
             date_restrict=date_restrict
@@ -352,7 +632,7 @@ class GoogleSearchAPI:
         
         # 构建参数
         params = {
-            "key": self.api_key,
+            "key": self.google_api_key,
             "cx": self.cx,
             "q": full_query,
             "num": min(num, 10),  # API 限制最多 10
@@ -370,6 +650,53 @@ class GoogleSearchAPI:
         # 带重试的请求
         last_exception = None
         start_time = time.time()
+
+        if self.provider == "serper":
+            result = await self._request_serper(
+                full_query=full_query,
+                query=query,
+                num=num,
+                start=start,
+                language=language,
+                safe=safe,
+                date_restrict=date_restrict,
+                extra_params=extra_params,
+                start_time=start_time,
+            )
+            if result.success and should_use_cache and self._cache:
+                cache_data = {
+                    "provider": self.provider,
+                    "query": query,
+                    "full_query": full_query,
+                    "total_results": result.total_results,
+                    "has_results": len(result.items) > 0,
+                    "items": [
+                        {
+                            "title": item.title,
+                            "link": item.link,
+                            "snippet": item.snippet,
+                            "display_link": item.display_link,
+                            "html_title": item.html_title,
+                            "html_snippet": item.html_snippet,
+                            "formatted_url": item.formatted_url,
+                        }
+                        for item in result.items
+                    ],
+                    "cached_at": datetime.now().isoformat(),
+                    "params": {
+                        "num": num,
+                        "start": start,
+                        "language": language,
+                        "safe": safe,
+                        "date_restrict": date_restrict,
+                    },
+                }
+                self._cache.set(cache_key, cache_data, ttl=CACHE_TTL)
+                if result.items:
+                    print(f"[CACHE] 已写入 Serper 缓存: {full_query[:50]}... ({len(result.items)} 条结果)")
+                else:
+                    print(f"[CACHE] 已写入 Serper 缓存（无结果）: {full_query[:50]}...")
+            return result
         
         for attempt in range(self.max_retries + 1):
             try:
@@ -434,6 +761,7 @@ class GoogleSearchAPI:
                     # 无论是否有结果都写入缓存，空结果也缓存以避免重复查询
                     if should_use_cache and self._cache:
                         cache_data = {
+                            "provider": self.provider,
                             "query": query,
                             "full_query": full_query,
                             "total_results": total_results,

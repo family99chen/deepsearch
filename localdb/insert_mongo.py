@@ -38,6 +38,7 @@ MongoDB 缓存模块
 """
 
 import sys
+import os
 import yaml
 import hashlib
 import functools
@@ -115,16 +116,23 @@ class MongoCache:
         mongo_config = config.get("mongodb", {})
         
         # 使用配置文件或参数或默认值
-        self.host = host or mongo_config.get("host", self.DEFAULT_HOST)
-        self.port = port or mongo_config.get("port", self.DEFAULT_PORT)
-        self.db_name = db_name or mongo_config.get("db_name", self.DEFAULT_DB)
-        self.collection_name = collection_name or mongo_config.get("collection", self.DEFAULT_COLLECTION)
-        self.username = username or mongo_config.get("username")
-        self.password = password or mongo_config.get("password")
-        self.auth_source = mongo_config.get("auth_source", "admin")  # 默认 admin
+        self.mongo_uri = os.getenv("MONGODB_URL") or os.getenv("MONGO_URI")
+        self.host = host or os.getenv("MONGODB_HOST") or mongo_config.get("host", self.DEFAULT_HOST)
+        self.port = int(port or os.getenv("MONGODB_PORT") or mongo_config.get("port", self.DEFAULT_PORT))
+        self.db_name = db_name or os.getenv("MONGODB_DB_NAME") or mongo_config.get("db_name", self.DEFAULT_DB)
+        self.collection_name = (
+            collection_name
+            or os.getenv("MONGODB_COLLECTION")
+            or mongo_config.get("collection", self.DEFAULT_COLLECTION)
+        )
+        self.username = username or os.getenv("MONGODB_USERNAME") or mongo_config.get("username")
+        self.password = password or os.getenv("MONGODB_PASSWORD") or mongo_config.get("password")
+        self.auth_source = os.getenv("MONGODB_AUTH_SOURCE") or mongo_config.get("auth_source", "admin")
         
         # 构建连接 URI
-        if self.username and self.password:
+        if self.mongo_uri:
+            uri = self.mongo_uri
+        elif self.username and self.password:
             uri = f"mongodb://{self.username}:{self.password}@{self.host}:{self.port}/?authSource={self.auth_source}"
         else:
             uri = f"mongodb://{self.host}:{self.port}/"

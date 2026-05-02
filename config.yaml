@@ -7,13 +7,33 @@ orcid:
 google_scholar:
   search_base_url: "https://scholar.google.com"
 
+# Google Scholar 作者页论文列表获取
+scholar_author_fetch:
+  # true: 先用 requests 抓取，失败/429 后 fallback 到 Chromium
+  # false: 直接用 headless Chromium，避免已知 requests 必定 429 时浪费重试时间
+  use_requests: false
+
 # Google Custom Search API 配置
+search:
+  # 搜索后端选择: "google" | "serper"
+  provider: "serper"
+
 google:
   api_key: "AIzaSyB00No88pbFJI7lHWn7cbYjzCd55fD3Seg"
   cx: "d75a80598807a44f4"
   # API 限制：免费版每天 100 次查询
   # 付费版：$5/1000 次查询
   rate_limit: 1000  # 每秒最大请求数
+
+# Serper API 配置 (Google Search)
+serper:
+  api_key: "97a12edab77d76fad588a9b3dd97a169331c0544"
+  api_base: "https://google.serper.dev/search"
+  engine: "google"
+  type: "search"
+  rate_limit: 20
+  enrich_snippet: true
+  snippet_extra_max_chars: 10000
 
 # SerpAPI 配置 (Google Scholar 搜索)
 serpapi:

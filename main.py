@@ -36,8 +36,12 @@ async def root():
         "version": "1.0.0",
         "docs": "/docs",
         "endpoints": {
-            "/find": "根据 ORCID ID 查找 Google Scholar 账号（流式输出）",
-            "/find/sync": "根据 ORCID ID 查找 Google Scholar 账号（同步返回）"
+            "/find": "提交 ORCID 查找任务并流式输出",
+            "/find/sync": "提交 ORCID 查找任务",
+            "/person/report": "提交 Google Scholar 人物报告任务",
+            "/person/report/orcid": "提交 ORCID 人物报告任务",
+            "/jobs/{job_id}": "查询任务状态和结果",
+            "/jobs/{job_id}/stream": "流式读取任务日志和结果",
         }
     }
 

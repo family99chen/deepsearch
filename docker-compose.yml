@@ -1,0 +1,73 @@
+services:
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    command: ["mongod", "--port", "27018", "--bind_ip_all"]
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - "${MONGODB_PORT:-27018}:27018"
+
+  api:
+    build: .
+    restart: unless-stopped
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
+    depends_on:
+      - redis
+      - mongo
+    environment:
+      REDIS_URL: "${REDIS_URL:-redis://redis:6379/0}"
+      CELERY_BROKER_URL: "${CELERY_BROKER_URL:-redis://redis:6379/0}"
+      CELERY_RESULT_BACKEND: "${CELERY_RESULT_BACKEND:-redis://redis:6379/0}"
+      MONGODB_URL: "${MONGODB_URL:-mongodb://mongo:27018/}"
+      CHROME_BINARY_PATH: /usr/bin/google-chrome
+      PIPELINE_MAX_CONCURRENT: "${PIPELINE_MAX_CONCURRENT:-10}"
+      JOB_TTL_SECONDS: "${JOB_TTL_SECONDS:-604800}"
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+      - ./logs:/app/logs
+      - ./total_usage:/app/total_usage
+    ports:
+      - "${API_PORT:-8080}:8080"
+
+  worker:
+    build: .
+    restart: unless-stopped
+    command:
+      [
+        "celery",
+        "-A",
+        "tasks:celery_app",
+        "worker",
+        "--loglevel=INFO",
+        "--concurrency=${CELERY_WORKER_CONCURRENCY:-1}"
+      ]
+    depends_on:
+      - redis
+      - mongo
+    environment:
+      REDIS_URL: "${REDIS_URL:-redis://redis:6379/0}"
+      CELERY_BROKER_URL: "${CELERY_BROKER_URL:-redis://redis:6379/0}"
+      CELERY_RESULT_BACKEND: "${CELERY_RESULT_BACKEND:-redis://redis:6379/0}"
+      MONGODB_URL: "${MONGODB_URL:-mongodb://mongo:27018/}"
+      CELERY_WORKER_PREFETCH_MULTIPLIER: "${CELERY_WORKER_PREFETCH_MULTIPLIER:-1}"
+      CHROME_BINARY_PATH: /usr/bin/google-chrome
+      JOB_TTL_SECONDS: "${JOB_TTL_SECONDS:-604800}"
+    shm_size: "${WORKER_SHM_SIZE:-1gb}"
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+      - ./logs:/app/logs
+      - ./total_usage:/app/total_usage
+
+volumes:
+  redis-data:
+  mongo-data:

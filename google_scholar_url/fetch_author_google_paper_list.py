@@ -15,6 +15,7 @@ import time
 import random
 import string
 import requests
+import yaml
 from typing import List, Optional, Dict, Any
 from urllib.parse import urlparse, parse_qs
 from bs4 import BeautifulSoup
@@ -52,6 +53,14 @@ except ImportError:
 # 缓存配置
 CACHE_COLLECTION = "google_scholar_person_detail"
 CACHE_TTL = 180 * 24 * 3600  # 6个月
+
+
+def _load_config() -> Dict[str, Any]:
+    config_path = Path(__file__).parent.parent / "config.yaml"
+    if config_path.exists():
+        with open(config_path, "r", encoding="utf-8") as f:
+            return yaml.safe_load(f) or {}
+    return {}
 
 
 def _get_cache() -> Optional["MongoCache"]:
@@ -128,6 +137,7 @@ class GoogleScholarProfileScraper:
         max_delay: float = 60.0,
         use_cache: bool = True,
         verbose: bool = True,
+        use_requests: Optional[bool] = None,
     ):
         """
         初始化爬虫
@@ -139,12 +149,15 @@ class GoogleScholarProfileScraper:
             use_cache: 是否使用缓存
             verbose: 是否打印详细日志
         """
+        config = _load_config().get("scholar_author_fetch", {})
+
         # 重试配置
         self.max_retries = max_retries
         self.base_delay = base_delay
         self.max_delay = max_delay
         self.use_cache = use_cache
         self.verbose = verbose
+        self.use_requests = config.get("use_requests", True) if use_requests is None else use_requests
         
         # 缓存实例
         self._cache = _get_cache() if use_cache else None
@@ -359,6 +372,84 @@ class GoogleScholarProfileScraper:
         parsed = urlparse(profile_url)
         params = parse_qs(parsed.query)
         return params.get('user', [None])[0]
+
+    def _fetch_page_with_chromium(self, url: str, timeout: int = 45) -> Optional[str]:
+        """
+        使用 headless Chromium 获取 Scholar 页面 HTML。
+
+        可作为 requests 路径失败后的 fallback，也可通过配置直接使用。
+        """
+        driver = None
+        try:
+            from selenium import webdriver
+            from selenium.webdriver.chrome.options import Options
+            from selenium.webdriver.common.by import By
+            from selenium.webdriver.support.ui import WebDriverWait
+            from org_info.chrome_binary import resolve_chrome_binary_path
+
+            options = Options()
+            options.binary_location = resolve_chrome_binary_path()
+            options.add_argument("--headless=new")
+            options.add_argument("--no-sandbox")
+            options.add_argument("--disable-dev-shm-usage")
+            options.add_argument("--disable-gpu")
+            options.add_argument("--window-size=1280,1600")
+            options.add_argument("--lang=en-US")
+            options.add_argument(
+                "--user-agent=Mozilla/5.0 (X11; Linux x86_64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/120.0.0.0 Safari/537.36"
+            )
+
+            driver = webdriver.Chrome(options=options)
+            driver.set_page_load_timeout(timeout)
+            driver.get(url)
+            WebDriverWait(driver, timeout).until(
+                lambda d: d.execute_script("return document.readyState") == "complete"
+            )
+            WebDriverWait(driver, timeout).until(
+                lambda d: d.find_elements(By.CSS_SELECTOR, "a.gsc_a_at")
+                or "captcha" in d.page_source.lower()
+                or "unusual traffic" in d.page_source.lower()
+            )
+            return driver.page_source
+        except Exception as e:
+            if self.verbose:
+                print(f"[WARNING] Chromium fallback 获取失败: {type(e).__name__}: {e}")
+            return None
+        finally:
+            if driver is not None:
+                try:
+                    driver.quit()
+                except Exception:
+                    pass
+
+    def _fetch_page_soup(self, url: str, allow_chromium_fallback: bool = True) -> Optional[BeautifulSoup]:
+        if self.use_requests:
+            response = self._request_with_retry(url)
+            if response is not None:
+                if self._check_blocked(response.text):
+                    print("[ERROR] 访问被限制，尝试 Chromium fallback...")
+                else:
+                    return BeautifulSoup(response.text, 'html.parser')
+        elif self.verbose:
+            print("[INFO] 已禁用 requests，直接使用 Chromium 获取 Scholar 页面")
+
+        if not allow_chromium_fallback:
+            return None
+
+        if self.verbose:
+            if self.use_requests:
+                print("[INFO] requests 获取失败，尝试 Chromium fallback...")
+            else:
+                print("[INFO] 正在使用 Chromium 获取 Scholar 页面...")
+        html = self._fetch_page_with_chromium(url)
+        if not html:
+            return None
+        if self._check_blocked(html):
+            print("[ERROR] Chromium fallback 仍被限制")
+            return None
+        return BeautifulSoup(html, 'html.parser')
     
     def get_profile_with_papers(self, profile_url: str, use_cache: bool = None) -> Dict[str, Any]:
         """
@@ -392,17 +483,10 @@ class GoogleScholarProfileScraper:
         
         # 获取第一页（包含个人信息）
         first_page_url = f"https://scholar.google.com/citations?user={user_id}&hl=zh-CN&cstart=0&pagesize=100"
-        response = self._request_with_retry(first_page_url)
+        soup = self._fetch_page_soup(first_page_url)
         
-        if response is None:
+        if soup is None:
             print(f"[ERROR] 无法获取作者页面: {user_id}")
-            return {}
-        
-        soup = BeautifulSoup(response.text, 'html.parser')
-        
-        # 检查是否被封锁
-        if self._check_blocked(response.text):
-            print("[ERROR] 访问被限制")
             return {}
         
         # 解析个人信息
@@ -430,11 +514,9 @@ class GoogleScholarProfileScraper:
             if self.verbose:
                 print(f"[INFO] 正在获取第 {cstart // pagesize + 1} 页...")
             
-            response = self._request_with_retry(url)
-            if response is None:
+            soup = self._fetch_page_soup(url)
+            if soup is None:
                 break
-            
-            soup = BeautifulSoup(response.text, 'html.parser')
             paper_rows = soup.select('tr.gsc_a_tr')
             
             if not paper_rows:
@@ -505,10 +587,9 @@ class GoogleScholarProfileScraper:
             if self.verbose:
                 print(f"[INFO] 正在获取第 {cstart // pagesize + 1} 页 (cstart={cstart})...")
             
-            # 使用带重试的请求
-            response = self._request_with_retry(url)
-            
-            if response is None:
+            soup = self._fetch_page_soup(url)
+
+            if soup is None:
                 consecutive_failures += 1
                 if consecutive_failures >= max_consecutive_failures:
                     print(f"[ERROR] 连续 {consecutive_failures} 次请求失败，停止获取")
@@ -522,19 +603,6 @@ class GoogleScholarProfileScraper:
             
             # 礼貌性延迟
             time.sleep(2)
-            
-            soup = BeautifulSoup(response.text, 'html.parser')
-            
-            # 检查是否被封锁
-            if self._check_blocked(response.text):
-                print("[ERROR] 访问被限制，尝试刷新 cookies...")
-                # 重新生成假 cookies 并重试一次
-                self._load_fake_cookies()
-                response = self._request_with_retry(url)
-                if response is None or self._check_blocked(response.text):
-                    print("[ERROR] 刷新 cookies 后仍被限制，停止获取")
-                    break
-                soup = BeautifulSoup(response.text, 'html.parser')
             
             # 保存第一页的 soup，用于后续提取个人信息
             if cstart == 0:

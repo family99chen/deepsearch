@@ -15,13 +15,19 @@ from urllib.parse import quote
 
 from fastapi import APIRouter, Query, Depends, Request, HTTPException
 from fastapi.responses import StreamingResponse
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 # 添加子目录到 path
 sys.path.insert(0, "google_scholar_url")
 
 from google_scholar_url.google_account_fetcher_pipeline import find_google_scholar_by_orcid
 from pipeline import run_person_pipeline, run_person_pipeline_by_orcid, is_failure_report
+from job_store import get_job_store
+from tasks import (
+    submit_orcid_find,
+    submit_person_report_gs,
+    submit_person_report_orcid,
+)
 from utils.usage_tracker import record_api_call, get_tracker
 from utils.org_pipeline_stats import get_org_pipeline_stats
 from utils.pipeline_stats import get_pipeline_stats
@@ -99,6 +105,100 @@ class PersonPipelineResult(BaseModel):
     iterations: int
     queries: list
     sources: list
+
+
+class JobSubmission(BaseModel):
+    """异步任务提交结果"""
+    job_id: str
+    status: str
+    job_url: str
+    stream_url: str
+
+
+class JobStatus(BaseModel):
+    """异步任务状态"""
+    job_id: str
+    job_type: Optional[str] = None
+    status: str
+    payload: dict = Field(default_factory=dict)
+    result: Optional[dict] = None
+    error: Optional[str] = None
+    created_at: Optional[str] = None
+    started_at: Optional[str] = None
+    finished_at: Optional[str] = None
+    updated_at: Optional[str] = None
+    celery_task_id: Optional[str] = None
+
+
+def _build_job_submission(request: Request, job_id: str) -> JobSubmission:
+    return JobSubmission(
+        job_id=job_id,
+        status="pending",
+        job_url=str(request.url_for("get_job_status", job_id=job_id)),
+        stream_url=str(request.url_for("stream_job_status", job_id=job_id)),
+    )
+
+
+def _submit_job_or_503(submitter, *args) -> str:
+    try:
+        return submitter(*args)
+    except Exception as exc:
+        raise HTTPException(
+            status_code=503,
+            detail=f"任务队列不可用或提交失败: {exc}",
+        ) from exc
+
+
+def _format_stored_sse_event(event_id: str, fields: dict) -> str:
+    tag = fields.get("tag") or "[LOG]"
+    payload_json = fields.get("payload_json")
+    if payload_json:
+        try:
+            payload = json.loads(payload_json)
+        except json.JSONDecodeError:
+            payload = {"raw": payload_json}
+        return f"id: {event_id}\n" + _format_sse_json(tag, payload)
+
+    message = fields.get("message") or ""
+    suffix = f" {message}" if message else ""
+    return f"id: {event_id}\ndata: {tag}{suffix}\n\n"
+
+
+async def stream_job_events(
+    job_id: str,
+    last_event_id: str = "0-0",
+    emit_queued_log: bool = False,
+) -> AsyncGenerator[str, None]:
+    store = get_job_store()
+    if not store.get_job(job_id):
+        yield _format_sse_json("[ERROR]", {"success": False, "error": "任务不存在"})
+        yield "data: [END]\n\n"
+        return
+
+    if emit_queued_log:
+        yield f"data: [LOG] 任务已提交: {job_id}\n\n"
+
+    current_event_id = last_event_id
+    while True:
+        events, current_event_id = await asyncio.to_thread(
+            store.read_events,
+            job_id,
+            current_event_id,
+            5000,
+            100,
+        )
+        for event_id, fields in events:
+            yield _format_stored_sse_event(event_id, fields)
+            if fields.get("tag") == "[END]":
+                return
+
+        job = await asyncio.to_thread(store.get_job, job_id)
+        if job and job.get("status") in {"success", "failed"}:
+            result = job.get("result") or {"success": False, "error": job.get("error")}
+            tag = "[RESULT]" if job.get("status") == "success" else "[ERROR]"
+            yield _format_sse_json(tag, result)
+            yield "data: [END]\n\n"
+            return
 
 
 async def run_person_pipeline_with_logs(mode: str, identifier: str) -> AsyncGenerator[str, None]:
@@ -274,8 +374,9 @@ async def find_google_scholar_account_stream(
     - [ERROR] 失败结果（JSON 格式）
     - [END] 处理结束
     """
+    job_id = _submit_job_or_503(submit_orcid_find, orcid_id)
     return StreamingResponse(
-        run_pipeline_with_logs(orcid_id=orcid_id),
+        stream_job_events(job_id=job_id, emit_queued_log=True),
         media_type="text/event-stream",
         headers={
             "Cache-Control": "no-cache",
@@ -292,15 +393,11 @@ async def find_google_scholar_account_sync(
 ):
     """
     根据 ORCID ID 查找对应的 Google Scholar 账号（同步返回）
-    
-    参数配置从 config.yaml 读取（max_iterations, match_threshold, max_matches）
-    
-    注意：此接口可能需要较长时间，建议使用 /find 流式接口
     """
     result_url = None
     result_author = None
     error_msg = None
-    
+
     def run_sync():
         nonlocal result_url, result_author
         url, author = find_google_scholar_by_orcid(
@@ -309,32 +406,34 @@ async def find_google_scholar_account_sync(
         )
         result_url = url
         result_author = author
-    
+
     try:
         loop = asyncio.get_event_loop()
         executor = concurrent.futures.ThreadPoolExecutor(max_workers=1)
         await loop.run_in_executor(executor, run_sync)
     except Exception as e:
         error_msg = str(e)
-    
+
     if result_url:
         return SearchResult(
             success=True,
             orcid_id=orcid_id,
             google_scholar_url=result_url,
-            author_name=result_author.get('name') if result_author else None,
-            affiliation=result_author.get('affiliation') if result_author else None
-        )
-    else:
-        return SearchResult(
-            success=False,
-            orcid_id=orcid_id,
-            error=error_msg or "未找到匹配的 Google Scholar 账号"
+            author_name=result_author.get("name") if result_author else None,
+            affiliation=result_author.get("affiliation") if result_author else None,
+            match_count=result_author.get("match_count") if result_author else None,
         )
 
+    return SearchResult(
+        success=False,
+        orcid_id=orcid_id,
+        error=error_msg or "未找到匹配的 Google Scholar 账号",
+    )
 
-@router.post("/person/report", response_model=PersonPipelineResult, tags=["Person Pipeline"])
+
+@router.post("/person/report", response_model=JobSubmission, tags=["Person Pipeline"])
 async def person_report_by_google_scholar(
+    request: Request,
     google_scholar_url: Optional[str] = Query(None, description="Google Scholar 个人主页 URL"),
     user_id: Optional[str] = Query(None, description="Google Scholar 账号 ID，如 iWykd1cAAAAJ"),
     _tracked: str = Depends(track_usage),
@@ -343,22 +442,8 @@ async def person_report_by_google_scholar(
     输入 Google Scholar URL 或账号 ID 生成个人完整报告
     """
     resolved_google_scholar_url = _resolve_google_scholar_url(google_scholar_url, user_id)
-
-    async with PIPELINE_SEMAPHORE:
-        def run_sync():
-            return run_person_pipeline(google_scholar_url=resolved_google_scholar_url)
-
-        loop = asyncio.get_event_loop()
-        executor = concurrent.futures.ThreadPoolExecutor(max_workers=1)
-        result = await loop.run_in_executor(executor, run_sync)
-        return PersonPipelineResult(
-            person_name=result.person_name,
-            organization=result.organization,
-            report=result.report,
-            iterations=result.iterations,
-            queries=result.queries,
-            sources=result.sources,
-        )
+    job_id = _submit_job_or_503(submit_person_report_gs, resolved_google_scholar_url)
+    return _build_job_submission(request, job_id)
 
 
 @router.get("/person/report/stream", tags=["Person Pipeline"])
@@ -371,9 +456,10 @@ async def person_report_by_google_scholar_stream(
     输入 Google Scholar URL 或账号 ID，流式生成报告
     """
     resolved_google_scholar_url = _resolve_google_scholar_url(google_scholar_url, user_id)
+    job_id = _submit_job_or_503(submit_person_report_gs, resolved_google_scholar_url)
 
     return StreamingResponse(
-        run_person_pipeline_with_logs(mode="gs", identifier=resolved_google_scholar_url),
+        stream_job_events(job_id=job_id, emit_queued_log=True),
         media_type="text/event-stream",
         headers={
             "Cache-Control": "no-cache",
@@ -383,29 +469,17 @@ async def person_report_by_google_scholar_stream(
     )
 
 
-@router.post("/person/report/orcid", response_model=PersonPipelineResult, tags=["Person Pipeline"])
+@router.post("/person/report/orcid", response_model=JobSubmission, tags=["Person Pipeline"])
 async def person_report_by_orcid(
+    request: Request,
     orcid_id: str = Query(..., description="ORCID ID，格式如 0000-0002-1825-0097"),
     _tracked: str = Depends(track_usage),
 ):
     """
     输入 ORCID ID 生成个人完整报告
     """
-    async with PIPELINE_SEMAPHORE:
-        def run_sync():
-            return run_person_pipeline_by_orcid(orcid_id=orcid_id)
-
-        loop = asyncio.get_event_loop()
-        executor = concurrent.futures.ThreadPoolExecutor(max_workers=1)
-        result = await loop.run_in_executor(executor, run_sync)
-        return PersonPipelineResult(
-            person_name=result.person_name,
-            organization=result.organization,
-            report=result.report,
-            iterations=result.iterations,
-            queries=result.queries,
-            sources=result.sources,
-        )
+    job_id = _submit_job_or_503(submit_person_report_orcid, orcid_id)
+    return _build_job_submission(request, job_id)
 
 
 @router.get("/person/report/orcid/stream", tags=["Person Pipeline"])
@@ -416,14 +490,41 @@ async def person_report_by_orcid_stream(
     """
     ORCID 报告（流式输出）
     """
+    job_id = _submit_job_or_503(submit_person_report_orcid, orcid_id)
     return StreamingResponse(
-        run_person_pipeline_with_logs(mode="orcid", identifier=orcid_id),
+        stream_job_events(job_id=job_id, emit_queued_log=True),
         media_type="text/event-stream",
         headers={
             "Cache-Control": "no-cache",
             "Connection": "keep-alive",
             "X-Accel-Buffering": "no"
         }
+    )
+
+
+@router.get("/jobs/{job_id}", response_model=JobStatus, tags=["Jobs"])
+async def get_job_status(job_id: str):
+    """获取异步任务状态和最终结果。"""
+    job = await asyncio.to_thread(get_job_store().get_job, job_id)
+    if not job:
+        raise HTTPException(status_code=404, detail="任务不存在")
+    return JobStatus(**job)
+
+
+@router.get("/jobs/{job_id}/stream", tags=["Jobs"])
+async def stream_job_status(
+    job_id: str,
+    after: str = Query("0-0", description="Redis Stream event id，用于断线续传"),
+):
+    """从 Redis Stream 读取任务日志和最终结果。"""
+    return StreamingResponse(
+        stream_job_events(job_id=job_id, last_event_id=after),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "X-Accel-Buffering": "no",
+        },
     )
 
 

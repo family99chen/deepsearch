@@ -567,7 +567,7 @@ if __name__ == "__main__":
     # 示例用法
     
     # 测试 ORCID ID
-    test_orcid = "0000-0002-5790-5164"
+    test_orcid = "0000-0001-8616-920X"
     
     print()
     print("=" * 60)
