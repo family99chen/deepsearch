@@ -158,6 +158,15 @@ class GoogleScholarProfileScraper:
         self.use_cache = use_cache
         self.verbose = verbose
         self.use_requests = config.get("use_requests", True) if use_requests is None else use_requests
+        self.chromium_retries = int(config.get("chromium_retries", 1))
+        self.prefer_proxy_requests = bool(config.get("prefer_proxy_requests", False))
+
+        proxy_request_config = config.get("proxy_requests", {}) or {}
+        self.proxy_requests_enabled = bool(proxy_request_config.get("enabled", False))
+        self.proxy_requests_url = proxy_request_config.get("url", "")
+        self.proxy_requests_max_retries = int(proxy_request_config.get("max_retries", 3))
+        self.proxy_requests_timeout = int(proxy_request_config.get("timeout", 30))
+        self.proxy_requests_backoff_seconds = float(proxy_request_config.get("backoff_seconds", 1.0))
         
         # 缓存实例
         self._cache = _get_cache() if use_cache else None
@@ -424,7 +433,70 @@ class GoogleScholarProfileScraper:
                 except Exception:
                     pass
 
+    def _request_with_proxy_retries(self, url: str) -> Optional[requests.Response]:
+        """使用轮换代理 requests 获取页面。每次重试新建 Session，便于代理切换出口 IP。"""
+        if not self.proxy_requests_enabled or not self.proxy_requests_url:
+            return None
+
+        proxies = {
+            "http": self.proxy_requests_url,
+            "https": self.proxy_requests_url,
+        }
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                          "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "Connection": "close",
+            "Upgrade-Insecure-Requests": "1",
+        }
+
+        for attempt in range(1, self.proxy_requests_max_retries + 1):
+            try:
+                if self.verbose:
+                    print(f"[INFO] 轮换代理 requests 获取 Scholar 页面 ({attempt}/{self.proxy_requests_max_retries})...")
+                session = requests.Session()
+                session.headers.update(headers)
+                response = session.get(
+                    url,
+                    proxies=proxies,
+                    timeout=self.proxy_requests_timeout,
+                )
+                if response.status_code in DEFAULT_RETRYABLE_STATUS_CODES:
+                    if self.verbose:
+                        print(f"[WARNING] 轮换代理 HTTP {response.status_code}")
+                    time.sleep(self.proxy_requests_backoff_seconds * attempt)
+                    continue
+                response.raise_for_status()
+                if self._check_blocked(response.text):
+                    if self.verbose:
+                        print("[WARNING] 轮换代理返回反爬页面，继续重试")
+                    time.sleep(self.proxy_requests_backoff_seconds * attempt)
+                    continue
+                return response
+            except Exception as e:
+                if self.verbose:
+                    print(f"[WARNING] 轮换代理请求失败: {type(e).__name__}: {e}")
+                time.sleep(self.proxy_requests_backoff_seconds * attempt)
+
+        return None
+
+    def _soup_from_html_if_allowed(self, html: str, source: str) -> Optional[BeautifulSoup]:
+        if not html:
+            return None
+        if self._check_blocked(html):
+            print(f"[ERROR] {source} 仍被限制")
+            return None
+        return BeautifulSoup(html, 'html.parser')
+
     def _fetch_page_soup(self, url: str, allow_chromium_fallback: bool = True) -> Optional[BeautifulSoup]:
+        if self.prefer_proxy_requests and self.proxy_requests_enabled:
+            response = self._request_with_proxy_retries(url)
+            if response is not None:
+                return BeautifulSoup(response.text, 'html.parser')
+            if self.verbose:
+                print("[WARNING] 轮换代理 requests 获取失败，尝试后续 fallback")
+
         if self.use_requests:
             response = self._request_with_retry(url)
             if response is not None:
@@ -438,18 +510,24 @@ class GoogleScholarProfileScraper:
         if not allow_chromium_fallback:
             return None
 
-        if self.verbose:
-            if self.use_requests:
-                print("[INFO] requests 获取失败，尝试 Chromium fallback...")
-            else:
-                print("[INFO] 正在使用 Chromium 获取 Scholar 页面...")
-        html = self._fetch_page_with_chromium(url)
-        if not html:
-            return None
-        if self._check_blocked(html):
-            print("[ERROR] Chromium fallback 仍被限制")
-            return None
-        return BeautifulSoup(html, 'html.parser')
+        for attempt in range(1, max(1, self.chromium_retries) + 1):
+            if self.verbose:
+                if self.use_requests:
+                    print(f"[INFO] requests 获取失败，尝试 Chromium fallback ({attempt}/{self.chromium_retries})...")
+                else:
+                    print(f"[INFO] 正在使用 Chromium 获取 Scholar 页面 ({attempt}/{self.chromium_retries})...")
+            html = self._fetch_page_with_chromium(url)
+            soup = self._soup_from_html_if_allowed(html, "Chromium fallback")
+            if soup is not None:
+                return soup
+
+        if not self.prefer_proxy_requests:
+            response = self._request_with_proxy_retries(url)
+            if response is None:
+                return None
+            return self._soup_from_html_if_allowed(response.text, "轮换代理 requests")
+
+        return None
     
     def get_profile_with_papers(self, profile_url: str, use_cache: bool = None) -> Dict[str, Any]:
         """

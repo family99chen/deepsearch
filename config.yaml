@@ -9,9 +9,19 @@ google_scholar:
 
 # Google Scholar 作者页论文列表获取
 scholar_author_fetch:
-  # true: 先用 requests 抓取，失败/429 后 fallback 到 Chromium
-  # false: 直接用 headless Chromium，避免已知 requests 必定 429 时浪费重试时间
+  # true: 先用本机 requests 抓取；false: 跳过本机 requests
   use_requests: false
+  # true: 优先用轮换代理 requests，失败后才 fallback 到本机 Chromium
+  prefer_proxy_requests: true
+  # 本机 Chromium 获取 Scholar 作者页的重试次数（仅在代理失败后使用）
+  chromium_retries: 1
+  # 本机 Chromium 失败后，使用 requests + 轮换住宅代理兜底
+  proxy_requests:
+    enabled: true
+    url: "https://spzpk1f2pw:dIhg30oj2+sj3LIaeS@gate.decodo.com:7000"
+    max_retries: 4
+    timeout: 30
+    backoff_seconds: 1.0
 
 # Google Custom Search API 配置
 search:
