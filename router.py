@@ -386,6 +386,21 @@ async def find_google_scholar_account_stream(
     )
 
 
+@router.post("/find/job", response_model=JobSubmission)
+async def submit_google_scholar_account_job(
+    request: Request,
+    orcid_id: str = Query(..., description="ORCID ID，格式如 0000-0002-1825-0097"),
+    _tracked: str = Depends(track_usage),
+):
+    """
+    根据 ORCID ID 提交 Google Scholar 查找任务。
+
+    批量调用推荐使用该接口：立即返回 job_id，不保持 SSE 长连接。
+    """
+    job_id = _submit_job_or_503(submit_orcid_find, orcid_id)
+    return _build_job_submission(request, job_id)
+
+
 @router.get("/find/sync", response_model=SearchResult)
 async def find_google_scholar_account_sync(
     orcid_id: str = Query(..., description="ORCID ID，格式如 0000-0002-1825-0097"),

@@ -1,5 +1,5 @@
 {
-  "total": 79687,
+  "total": 139021,
   "daily": {
     "2026-01-17": {
       "total": 192,
@@ -443,21 +443,31 @@
       "last_request": "2026-05-01T23:59:59.992453"
     },
     "2026-05-02": {
-      "total": 16329,
+      "total": 39386,
       "endpoints": {
-        "/find/sync": 16327,
-        "/find": 2
+        "/find/sync": 16935,
+        "/find": 2357,
+        "/find/job": 20094
       },
       "first_request": "2026-05-02T00:00:00.993698",
-      "last_request": "2026-05-02T16:45:20.988089"
+      "last_request": "2026-05-02T23:59:58.263952"
+    },
+    "2026-05-03": {
+      "total": 36277,
+      "endpoints": {
+        "/find/job": 36277
+      },
+      "first_request": "2026-05-03T00:00:00.094605",
+      "last_request": "2026-05-03T16:03:45.204617"
     }
   },
   "endpoints": {
-    "/find": 41422,
+    "/find": 43777,
     "/person/report/orcid/stream": 16094,
     "/person/report/stream": 16,
     "/person/report/orcid": 1896,
-    "/find/sync": 20259
+    "/find/sync": 20867,
+    "/find/job": 56371
   },
-  "last_updated": "2026-05-02T16:45:20.988101"
+  "last_updated": "2026-05-03T16:03:45.204631"
 }
