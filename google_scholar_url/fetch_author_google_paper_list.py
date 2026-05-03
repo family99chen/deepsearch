@@ -322,8 +322,18 @@ class GoogleScholarProfileScraper:
         last_exception = None
         
         for attempt in range(self.max_retries + 1):
+            started = time.time()
             try:
                 response = self.session.get(url, timeout=timeout)
+                self._log_fetch_attempt(
+                    source="local_requests",
+                    url=url,
+                    elapsed=time.time() - started,
+                    status=response.status_code,
+                    html_text=response.text,
+                    attempt=attempt + 1,
+                    max_attempts=self.max_retries + 1,
+                )
                 
                 # 检查是否需要重试的状态码
                 if response.status_code in DEFAULT_RETRYABLE_STATUS_CODES:
@@ -342,6 +352,14 @@ class GoogleScholarProfileScraper:
                 
             except DEFAULT_RETRYABLE_EXCEPTIONS as e:
                 last_exception = e
+                self._log_fetch_attempt(
+                    source="local_requests",
+                    url=url,
+                    elapsed=time.time() - started,
+                    error=f"{type(e).__name__}: {e}",
+                    attempt=attempt + 1,
+                    max_attempts=self.max_retries + 1,
+                )
                 
                 if attempt >= self.max_retries:
                     print(f"[ERROR] 请求失败，重试次数已用尽: {type(e).__name__}: {e}")
@@ -353,6 +371,14 @@ class GoogleScholarProfileScraper:
                 time.sleep(delay)
                 
             except requests.RequestException as e:
+                self._log_fetch_attempt(
+                    source="local_requests",
+                    url=url,
+                    elapsed=time.time() - started,
+                    error=f"{type(e).__name__}: {e}",
+                    attempt=attempt + 1,
+                    max_attempts=self.max_retries + 1,
+                )
                 print(f"[ERROR] 请求失败: {e}")
                 return None
         
@@ -382,6 +408,73 @@ class GoogleScholarProfileScraper:
         params = parse_qs(parsed.query)
         return params.get('user', [None])[0]
 
+    def _fetch_context(self, url: str) -> Dict[str, Any]:
+        parsed = urlparse(url)
+        params = parse_qs(parsed.query)
+        return {
+            "user_id": params.get("user", [""])[0],
+            "cstart": params.get("cstart", [""])[0],
+            "pagesize": params.get("pagesize", [""])[0],
+        }
+
+    def _block_markers(self, html_text: str) -> List[str]:
+        lower = (html_text or "").lower()
+        markers = []
+        for marker in (
+            "captcha",
+            "recaptcha",
+            "unusual traffic",
+            "not a robot",
+            "our systems have detected",
+            "accounts.google.com",
+        ):
+            if marker in lower:
+                markers.append(marker)
+        if "accounts.google.com" in markers and "gsc_a_at" in lower:
+            markers.remove("accounts.google.com")
+        return markers
+
+    def _paper_row_count(self, html_text: str) -> int:
+        if not html_text:
+            return 0
+        return len(BeautifulSoup(html_text, "html.parser").select("tr.gsc_a_tr"))
+
+    def _log_fetch_attempt(
+        self,
+        source: str,
+        url: str,
+        elapsed: float,
+        status: Optional[int] = None,
+        html_text: Optional[str] = None,
+        error: Optional[str] = None,
+        attempt: Optional[int] = None,
+        max_attempts: Optional[int] = None,
+    ) -> None:
+        if not self.verbose:
+            return
+        ctx = self._fetch_context(url)
+        markers = self._block_markers(html_text or "")
+        html_value = html_text or ""
+        paper_rows = self._paper_row_count(html_value)
+        text_length = 0
+        if html_value:
+            try:
+                text_length = len(BeautifulSoup(html_value, "html.parser").get_text(" ", strip=True))
+            except Exception:
+                text_length = 0
+        attempt_text = ""
+        if attempt is not None and max_attempts is not None:
+            attempt_text = f" attempt={attempt}/{max_attempts}"
+        print(
+            "[SCHOLAR_FETCH] "
+            f"source={source}{attempt_text} "
+            f"user_id={ctx.get('user_id')} cstart={ctx.get('cstart')} "
+            f"status={status} elapsed={elapsed:.2f}s "
+            f"html_len={len(html_value)} text_len={text_length} "
+            f"paper_rows={paper_rows} blocked={bool(markers)} "
+            f"markers={markers} error={error or ''}"
+        )
+
     def _fetch_page_with_chromium(self, url: str, timeout: int = 45) -> Optional[str]:
         """
         使用 headless Chromium 获取 Scholar 页面 HTML。
@@ -389,6 +482,7 @@ class GoogleScholarProfileScraper:
         可作为 requests 路径失败后的 fallback，也可通过配置直接使用。
         """
         driver = None
+        started = time.time()
         try:
             from selenium import webdriver
             from selenium.webdriver.chrome.options import Options
@@ -421,8 +515,21 @@ class GoogleScholarProfileScraper:
                 or "captcha" in d.page_source.lower()
                 or "unusual traffic" in d.page_source.lower()
             )
-            return driver.page_source
+            html = driver.page_source
+            self._log_fetch_attempt(
+                source="chromium",
+                url=url,
+                elapsed=time.time() - started,
+                html_text=html,
+            )
+            return html
         except Exception as e:
+            self._log_fetch_attempt(
+                source="chromium",
+                url=url,
+                elapsed=time.time() - started,
+                error=f"{type(e).__name__}: {e}",
+            )
             if self.verbose:
                 print(f"[WARNING] Chromium fallback 获取失败: {type(e).__name__}: {e}")
             return None
@@ -452,6 +559,7 @@ class GoogleScholarProfileScraper:
         }
 
         for attempt in range(1, self.proxy_requests_max_retries + 1):
+            started = time.time()
             try:
                 if self.verbose:
                     print(f"[INFO] 轮换代理 requests 获取 Scholar 页面 ({attempt}/{self.proxy_requests_max_retries})...")
@@ -461,6 +569,15 @@ class GoogleScholarProfileScraper:
                     url,
                     proxies=proxies,
                     timeout=self.proxy_requests_timeout,
+                )
+                self._log_fetch_attempt(
+                    source="proxy_requests",
+                    url=url,
+                    elapsed=time.time() - started,
+                    status=response.status_code,
+                    html_text=response.text,
+                    attempt=attempt,
+                    max_attempts=self.proxy_requests_max_retries,
                 )
                 if response.status_code in DEFAULT_RETRYABLE_STATUS_CODES:
                     if self.verbose:
@@ -475,6 +592,14 @@ class GoogleScholarProfileScraper:
                     continue
                 return response
             except Exception as e:
+                self._log_fetch_attempt(
+                    source="proxy_requests",
+                    url=url,
+                    elapsed=time.time() - started,
+                    error=f"{type(e).__name__}: {e}",
+                    attempt=attempt,
+                    max_attempts=self.proxy_requests_max_retries,
+                )
                 if self.verbose:
                     print(f"[WARNING] 轮换代理请求失败: {type(e).__name__}: {e}")
                 time.sleep(self.proxy_requests_backoff_seconds * attempt)
@@ -484,9 +609,13 @@ class GoogleScholarProfileScraper:
     def _soup_from_html_if_allowed(self, html: str, source: str) -> Optional[BeautifulSoup]:
         if not html:
             return None
-        if self._check_blocked(html):
-            print(f"[ERROR] {source} 仍被限制")
+        markers = self._block_markers(html)
+        paper_rows = self._paper_row_count(html)
+        if markers:
+            print(f"[ERROR] {source} 仍被限制 markers={markers} paper_rows={paper_rows}")
             return None
+        if self.verbose:
+            print(f"[SCHOLAR_FETCH] source={source} accepted paper_rows={paper_rows}")
         return BeautifulSoup(html, 'html.parser')
 
     def _fetch_page_soup(self, url: str, allow_chromium_fallback: bool = True) -> Optional[BeautifulSoup]:
@@ -741,19 +870,7 @@ class GoogleScholarProfileScraper:
         Returns:
             是否被封锁
         """
-        # 检查是否有验证码
-        if 'captcha' in html_text.lower() or 'recaptcha' in html_text.lower():
-            return True
-        
-        # 检查是否是异常流量页面
-        if 'unusual traffic' in html_text.lower():
-            return True
-        
-        # 检查是否是登录页面（但页面内容不含论文）
-        if 'accounts.google.com' in html_text and 'gsc_a_at' not in html_text:
-            return True
-        
-        return False
+        return bool(self._block_markers(html_text))
     
     def _parse_paper_row(self, row) -> Optional[dict]:
         """

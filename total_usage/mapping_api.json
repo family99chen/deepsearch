@@ -1,5 +1,5 @@
 {
-  "total": 139037,
+  "total": 145209,
   "daily": {
     "2026-01-17": {
       "total": 192,
@@ -453,12 +453,12 @@
       "last_request": "2026-05-02T23:59:58.263952"
     },
     "2026-05-03": {
-      "total": 36293,
+      "total": 42465,
       "endpoints": {
-        "/find/job": 36293
+        "/find/job": 42465
       },
       "first_request": "2026-05-03T00:00:00.094605",
-      "last_request": "2026-05-03T19:54:59.189918"
+      "last_request": "2026-05-03T23:10:08.042925"
     }
   },
   "endpoints": {
@@ -467,7 +467,7 @@
     "/person/report/stream": 16,
     "/person/report/orcid": 1896,
     "/find/sync": 20867,
-    "/find/job": 56387
+    "/find/job": 62559
   },
-  "last_updated": "2026-05-03T19:54:59.189925"
+  "last_updated": "2026-05-03T23:10:08.042932"
 }
