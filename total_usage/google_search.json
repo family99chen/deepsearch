@@ -1,5 +1,5 @@
 {
-  "total": 111253,
+  "total": 130091,
   "daily": {
     "2026-01-17": {
       "total": 210,
@@ -378,17 +378,25 @@
       "last_request": "2026-05-02T23:59:59.515350"
     },
     "2026-05-03": {
-      "total": 40878,
+      "total": 42215,
       "endpoints": {
-        "serper_google_search": 40878
+        "serper_google_search": 42215
       },
       "first_request": "2026-05-03T00:00:00.154519",
-      "last_request": "2026-05-03T23:10:04.921208"
+      "last_request": "2026-05-03T23:59:53.030411"
+    },
+    "2026-05-04": {
+      "total": 17501,
+      "endpoints": {
+        "serper_google_search": 17501
+      },
+      "first_request": "2026-05-04T00:00:00.047882",
+      "last_request": "2026-05-04T05:50:37.386885"
     }
   },
   "endpoints": {
     "google_custom_search": 48024,
-    "serper_google_search": 63229
+    "serper_google_search": 82067
   },
-  "last_updated": "2026-05-03T23:10:04.921221"
+  "last_updated": "2026-05-04T05:50:37.386892"
 }

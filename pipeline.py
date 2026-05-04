@@ -28,7 +28,12 @@ from google_scholar_url.google_account_fetcher_pipeline import (
     _get_cache as _get_orcid_cache,
 )
 from google_scholar_url.fetch_author_person_info import _get_cache as _get_orcid_person_cache
-from google_scholar_url.fetch_person_organization import _get_cache as _get_orcid_org_cache
+from google_scholar_url.fetch_author_person_info import get_author_name
+from google_scholar_url.fetch_author_paper_list import get_author_papers
+from google_scholar_url.fetch_person_organization import (
+    _get_cache as _get_orcid_org_cache,
+    get_author_organization,
+)
 from org_info.organization_pipeline import run_pipeline as run_org_pipeline
 from org_info.social_media_pipeline import run_social_media_pipeline
 from org_info.arbitrary_pipeline import run_arbitrary_pipeline
@@ -634,18 +639,60 @@ def run_person_pipeline_by_orcid(
     org_cache = _get_orcid_org_cache()
     orcid_person_info = {}
     orcid_org_info = {}
-    if person_cache:
-        orcid_person_info = {
+    orcid_paper_info = {}
+
+    def _read_orcid_person_cache() -> Dict[str, Any]:
+        if not person_cache:
+            return {}
+        return {
             "given_name": person_cache.get_field(orcid_id, "given_name"),
             "family_name": person_cache.get_field(orcid_id, "family_name"),
             "credit_name": person_cache.get_field(orcid_id, "credit_name"),
             "full_name": person_cache.get_field(orcid_id, "full_name"),
         }
-    if org_cache:
-        orcid_org_info = {
+
+    def _read_orcid_org_cache() -> Dict[str, Any]:
+        if not org_cache:
+            return {}
+        return {
             "primary_organization": org_cache.get_field(orcid_id, "primary_organization"),
             "organizations": org_cache.get_field(orcid_id, "organizations"),
         }
+
+    # 如果 ORCID -> GS 映射命中缓存，find_google_scholar_by_orcid 不会再触发 ORCID API。
+    # 这里按原 ORCID helper 的缓存逻辑补齐 person/org/papers，供 extra_sources 使用。
+    if person_cache and person_cache.get_field(orcid_id, "full_name") is None:
+        try:
+            get_author_name(orcid_id, use_cache=True)
+        except Exception as exc:
+            if verbose:
+                print(f"[ORCID] 补充 person cache 失败: {exc}")
+
+    if org_cache and org_cache.get_field(orcid_id, "primary_organization") is None:
+        try:
+            get_author_organization(orcid_id, use_cache=True)
+        except Exception as exc:
+            if verbose:
+                print(f"[ORCID] 补充 organization cache 失败: {exc}")
+
+    try:
+        papers = get_author_papers(orcid_id, use_cache=True)
+        orcid_paper_info = {
+            "paper_count": len(papers),
+            "sample_titles": [
+                paper.get("title")
+                for paper in papers[:10]
+                if isinstance(paper, dict) and paper.get("title")
+            ],
+        }
+    except Exception as exc:
+        if verbose:
+            print(f"[ORCID] 补充 papers cache 失败: {exc}")
+
+    if person_cache:
+        orcid_person_info = _read_orcid_person_cache()
+    if org_cache:
+        orcid_org_info = _read_orcid_org_cache()
 
     orcid_detail = {
         "orcid_id": orcid_id,
@@ -654,6 +701,7 @@ def run_person_pipeline_by_orcid(
         "cache": orcid_cached,
         "orcid_person_cache": orcid_person_info,
         "orcid_org_cache": orcid_org_info,
+        "orcid_papers_cache": orcid_paper_info,
     }
     extra_sources = [
         "## ORCID -> Google Scholar Mapping (authoritative)\n"
