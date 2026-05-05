@@ -89,10 +89,12 @@ llm:
   
   # 云端 API 配置（OpenAI 兼容格式）
   api:
-    api_key: "sk-zk237f8a8debbd35ffde5659deb813245b769ee1d5dbd081"  # 填入你的 API Key
-    api_base: "https://api.zhizengzeng.com/v1"  # 或其他兼容的 API
-    model: "gpt-4o-mini"
-    timeout: 120  # 超时时间（秒）
+    api_key: "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"  # 填入你的 API Key
+    api_base: "https://openrouter.ai/api/v1"  # 或其他兼容的 API
+    model: "deepseek/deepseek-v4-pro"
+    timeout: 60  # 等待响应 headers / 首个流式 chunk 的超时时间（秒）
+    stream_gap_timeout: 30  # 已开始流式后，等待下一个 chunk 的最长时间（秒）
+    max_retries: 1
   
   # 本地模型配置（OpenAI 兼容格式）
   local:
@@ -153,7 +155,7 @@ person_pipeline:
   # LLM 后端选择: "api" | "local" | "auto"
   backend: "api"
   # LLM 模型名称（仅在 api/local 对应后端时生效）
-  model: "deepseek-v4-pro"
+  model: "deepseek/deepseek-v4-pro"
   # 最大迭代次数
   max_iterations: 1
   # 最大处理链接数

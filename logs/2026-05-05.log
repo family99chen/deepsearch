@@ -1,0 +1,2355 @@
+[2026-05-05 19:34:59] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:34:59] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://scholar.google.com/citations?user=KFa7vUMAAAAJ&hl=en
+[2026-05-05 19:34:59] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:34:59] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://dsi-africa.org/dsi-3rd-consortium-meeting/biography/1142
+[2026-05-05 19:34:59] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:34:59] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.ub.bw/user/11449
+[2026-05-05 19:35:00] [INFO] Xvfb 已启动: DISPLAY=:127
+[2026-05-05 19:35:00] [INFO] Xvfb 已启动: DISPLAY=:128
+[2026-05-05 19:35:00] [INFO] Xvfb 已启动: DISPLAY=:125
+[2026-05-05 19:35:00] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:35:00] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:35:00] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:35:00] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:35:00] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:35:01] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:35:02] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:35:02] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:35:02] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:35:02] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:35:02] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:35:03] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:35:04] [WARNING] 打开标签页失败: https://dsi-africa.org/dsi-3rd-consortium-meeting/biography/1142, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:35:07] [WARNING] 打开标签页失败: https://www.ub.bw/user/11449, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:35:08] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=45529): Max retries exceeded with url: /session/35349e93b507d4aea4b15998f1be3a62/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x745f0f598090>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:35:08] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 19:35:08] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:35:08] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:35:08] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:35:09] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:35:10] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:11] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=35163): Max retries exceeded with url: /session/30fe752d8c2ebf6b673770cea757194b/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x752d722b4410>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:35:11] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 19:35:11] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:35:11] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:35:11] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:35:12] [WARNING] 域名预热失败: https://dsi-africa.org, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:35:12] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=49231): Max retries exceeded with url: /session/617040a5f267addad6ad6da812e6254a/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-05 19:35:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:35:12] [INFO] Xvfb 已停止
+[2026-05-05 19:35:12] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:35:13] [INFO] LLM Local Async 查询成功: 1761 字符
+[2026-05-05 19:35:13] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:14] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:35:14] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://bw.linkedin.com/in/gaone-retshabile-phd-95242820
+[2026-05-05 19:35:14] [INFO] LLM Local Async 查询成功: 4 字符
+[2026-05-05 19:35:14] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:15] [INFO] Xvfb 已启动: DISPLAY=:184
+[2026-05-05 19:35:15] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:35:15] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:35:15] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:35:15] [WARNING] 域名预热失败: https://www.ub.bw, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:35:15] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=53331): Max retries exceeded with url: /session/dc05d0202c3574819f227fdd342d779b/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-05 19:35:15] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:35:15] [INFO] Xvfb 已停止
+[2026-05-05 19:35:16] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:35:17] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:35:17] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.researchgate.net/profile/Gaone-Retshabile
+[2026-05-05 19:35:17] [INFO] LLM Local Async 查询成功: 1381 字符
+[2026-05-05 19:35:17] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 1 条信息
+[2026-05-05 19:35:17] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:35:17] [INFO] Xvfb 已停止
+[2026-05-05 19:35:18] [INFO] Xvfb 已启动: DISPLAY=:157
+[2026-05-05 19:35:19] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:35:19] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:35:19] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:35:19] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.maratto.africa/people/gaone-retshabile-e3c689
+[2026-05-05 19:35:19] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:35:19] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:35:20] [INFO] Xvfb 已启动: DISPLAY=:145
+[2026-05-05 19:35:20] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:35:20] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:35:20] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:35:21] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:35:22] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:23] [INFO] LLM Local Async 查询成功: 185 字符
+[2026-05-05 19:35:23] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:24] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-05-05 19:35:24] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:25] [WARNING] 打开标签页失败: https://bw.linkedin.com/in/gaone-retshabile-phd-95242820#main-content, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:35:25] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 19:35:25] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 19:35:25] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:35:25] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:35:25] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:35:27] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:28] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:35:28] [INFO] LLM Local Async 查询成功: 489 字符
+[2026-05-05 19:35:28] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:29] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=56399): Max retries exceeded with url: /session/a3cdb0184f9e8e088293b14467831227/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d2a7a544350>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:35:29] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:29] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-05-05 19:35:30] [INFO] 域名预热完成: https://www.researchgate.net
+[2026-05-05 19:35:30] [INFO] LLM Local Async 查询成功: 361 字符
+[2026-05-05 19:35:30] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 1 条信息
+[2026-05-05 19:35:30] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:35:30] [INFO] Xvfb 已停止
+[2026-05-05 19:35:31] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:35:31] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://pubmed.ncbi.nlm.nih.gov/29706352/
+[2026-05-05 19:35:32] [INFO] Xvfb 已启动: DISPLAY=:114
+[2026-05-05 19:35:33] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:35:33] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:35:33] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:35:34] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:35:35] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=33253): Max retries exceeded with url: /session/32071f34c4b4af470cd2b75cf081cc6b/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75d9470a0190>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:35:35] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=33253): Max retries exceeded with url: /session/32071f34c4b4af470cd2b75cf081cc6b/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75d9470bf2d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:35:35] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:35] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 19:35:35] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:36] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:36] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:36] [INFO] LLM Local Async 查询成功: 130 字符
+[2026-05-05 19:35:36] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:37] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 19:35:37] [INFO] LLM Local Async 查询成功: 223 字符
+[2026-05-05 19:35:37] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:37] [INFO] LLM Local Async 查询成功: 61 字符
+[2026-05-05 19:35:37] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:35:37] [INFO] Xvfb 已停止
+[2026-05-05 19:35:38] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-05-05 19:35:38] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:39] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:35:39] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.rims.gov.bw/converis/portal/detail/Person/6248262;jsessionid=wbd9gP22QdEQcpqRBjabcEET7_k9UEn0NoAxkrdr.www?lang=en_US
+[2026-05-05 19:35:40] [INFO] Xvfb 已启动: DISPLAY=:163
+[2026-05-05 19:35:40] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:35:40] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:35:40] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:35:40] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:40] [INFO] LLM Local Async 查询成功: 872 字符
+[2026-05-05 19:35:40] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 3 页, 收集 1 条信息
+[2026-05-05 19:35:40] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:35:40] [INFO] Xvfb 已停止
+[2026-05-05 19:35:41] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:35:42] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:35:42] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://dsi-africa.org/dsi-4th-consortium-meeting/biography/82
+[2026-05-05 19:35:42] [INFO] LLM Local Async 查询成功: 410 字符
+[2026-05-05 19:35:42] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:43] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-05-05 19:35:43] [INFO] Xvfb 已启动: DISPLAY=:160
+[2026-05-05 19:35:43] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:35:43] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:35:43] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:35:44] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:35:48] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:49] [INFO] LLM Local Async 查询成功: 137 字符
+[2026-05-05 19:35:49] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:50] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-05-05 19:35:50] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:51] [INFO] LLM Local Async 查询成功: 328 字符
+[2026-05-05 19:35:51] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 1 条信息
+[2026-05-05 19:35:51] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:35:51] [INFO] Xvfb 已停止
+[2026-05-05 19:35:55] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:56] [INFO] LLM Local Async 查询成功: 655 字符
+[2026-05-05 19:35:56] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:57] [INFO] LLM Local Async 查询成功: 4 字符
+[2026-05-05 19:35:57] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:35:59] [INFO] LLM Local Async 查询成功: 521 字符
+[2026-05-05 19:35:59] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 1 条信息
+[2026-05-05 19:35:59] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:35:59] [INFO] Xvfb 已停止
+[2026-05-05 19:36:11] [WARNING] 打开标签页失败: https://www.rims.gov.bw/converis/portal/detail/Person/6248262;jsessionid=wbd9gP22QdEQcpqRBjabcEET7_k9UEn0NoAxkrdr.www?lang=en_US, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:36:15] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=58631): Max retries exceeded with url: /session/f3c20985d2dc245205accd4e7fe70f5d/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7381ed587ed0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:36:15] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 19:36:15] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:36:15] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:36:15] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:36:16] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:36:46] [WARNING] 域名预热失败: https://www.rims.gov.bw, Message: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=148.0.7778.97)
+Stacktrace:
+#0 0x57b36dd4b8aa <unknown>
+#1 0x57b36d7468a9 <unknown>
+#2 0x57b36d72df70 <unknown>
+#3 0x57b36d72db96 <unknown>
+#4 0x57b36d72b6cb <unknown>
+#5 0x57b36d72c04f <unknown>
+#6 0x57b36d73b4d0 <unknown>
+#7 0x57b36d755627 <unknown>
+#8 0x57b36d75cf2b <unknown>
+#9 0x57b36d72c7b9 <unknown>
+#10 0x57b36d7553bd <unknown>
+#11 0x57b36d7e2e03 <unknown>
+#12 0x57b36d78e4cf <unknown>
+#13 0x57b36d78f291 <unknown>
+#14 0x57b36dd1176b <unknown>
+#15 0x57b36dd1467d <unknown>
+#16 0x57b36dcfe6c8 <unknown>
+#17 0x57b36dd15210 <unknown>
+#18 0x57b36dce5170 <unknown>
+#19 0x57b36dd387b8 <unknown>
+#20 0x57b36dd38955 <unknown>
+#21 0x57b36dd4a30e <unknown>
+#22 0x7ac7c829caa4 <unknown>
+#23 0x7ac7c8329c6c <unknown>
+
+[2026-05-05 19:37:16] [ERROR] 执行失败: navigate, Message: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=148.0.7778.97)
+Stacktrace:
+#0 0x57b36dd4b8aa <unknown>
+#1 0x57b36d7468a9 <unknown>
+#2 0x57b36d72df70 <unknow
+[2026-05-05 19:37:16] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:37:16] [INFO] Xvfb 已停止
+[2026-05-05 19:37:18] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:37:18] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/crackittuitionbotswana/posts/gaone-retshabile-is-the-first-of-the-botswana-trainee-cohort-who-graduates-with-/4903056566372137/
+[2026-05-05 19:37:18] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:37:18] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/posts/ub-bcm-graduates-first-phd-scientistnovember-1-2021-marked-a-historic-moment-for/3050966348511127/
+[2026-05-05 19:37:19] [INFO] Xvfb 已启动: DISPLAY=:163
+[2026-05-05 19:37:19] [INFO] Xvfb 已启动: DISPLAY=:165
+[2026-05-05 19:37:19] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:37:19] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:37:19] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:37:19] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:37:20] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:37:20] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:37:20] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:37:21] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:37:21] [WARNING] 打开标签页失败: https://www.facebook.com/UbMmadikolo/posts/ub-bcm-graduates-first-phd-scientistnovember-1-2021-marked-a-historic-moment-for/3050966348511127/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:37:25] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=36807): Max retries exceeded with url: /session/ec6654bb245616cf588036c702d13e08/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x70c520c9c350>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:37:25] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 19:37:25] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:37:26] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:37:26] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:37:26] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:37:28] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:37:29] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 19:37:29] [INFO] LLM Local Async 查询成功: 400 字符
+[2026-05-05 19:37:29] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:37:30] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-05-05 19:37:33] [WARNING] 打开标签页失败: https://thepatriot.co.bw/botswana-graduates-first-ph-d-scientist-in-collaboration-with-baylor-college-of-medicine/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:37:36] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:37:37] [INFO] LLM Local Async 查询成功: 95 字符
+[2026-05-05 19:37:37] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:37:37] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=40861): Max retries exceeded with url: /session/f7b7911cb13fa71f565fd1d618054ea9/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7629c2fe9d90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:37:37] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:37:39] [INFO] LLM Local Async 查询成功: 449 字符
+[2026-05-05 19:37:39] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:37:39] [INFO] LLM Local Async 查询成功: 628 字符
+[2026-05-05 19:37:39] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 1 条信息
+[2026-05-05 19:37:39] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:37:39] [INFO] Xvfb 已停止
+[2026-05-05 19:37:39] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 19:37:39] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:37:39] [INFO] Xvfb 已停止
+[2026-05-05 19:37:40] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:37:40] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/posts/to-all-the-phenomenal-women-of-the-university-of-botswana-you-are-cordially-invi/3175393622735065/
+[2026-05-05 19:37:41] [INFO] Xvfb 已启动: DISPLAY=:138
+[2026-05-05 19:37:41] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:37:41] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/ThePatriotOnSunday/posts/botswana-graduates-first-phd-scientist-in-collaboration-with-baylor-college-of-m/4543606332394734/
+[2026-05-05 19:37:41] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:37:41] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:37:41] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:37:42] [INFO] Xvfb 已启动: DISPLAY=:149
+[2026-05-05 19:37:42] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:37:43] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:37:43] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:37:43] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:37:43] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:37:44] [WARNING] 打开标签页失败: https://www.facebook.com/UbMmadikolo/posts/to-all-the-phenomenal-women-of-the-university-of-botswana-you-are-cordially-invi/3175393622735065/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:37:48] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=53439): Max retries exceeded with url: /session/88e30d6c023375c85aa94f681ed1e037/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72251ca8be90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:37:48] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 19:37:48] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:37:48] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:37:48] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:37:49] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:37:51] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:37:51] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 19:37:52] [INFO] LLM Local Async 查询成功: 165 字符
+[2026-05-05 19:37:54] [WARNING] 打开标签页失败: https://thepatriot.co.bw/botswana-graduates-first-ph-d-scientist-in-collaboration-with-baylor-college-of-medicine/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:37:58] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:37:58] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=33979): Max retries exceeded with url: /session/bd1a77288ef8b6b5ea7e252b9dedd918/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d87150ac790>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:37:58] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 19:37:58] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:37:58] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:37:58] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:37:59] [INFO] LLM Local Async 查询成功: 96 字符
+[2026-05-05 19:37:59] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:37:59] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:38:00] [INFO] LLM Local Async 查询成功: 135 字符
+[2026-05-05 19:38:00] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:38:00] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 19:38:02] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 19:38:02] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=42141): Max retries exceeded with url: /session/6344fd1b6716b9cb413b86a4ad99652d/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72251c5c1b50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:38:02] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:38:03] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 19:38:03] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=42141): Max retries exceeded with url: /session/6344fd1b6716b9cb413b86a4ad99652d/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-05-05 19:38:03] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=42141): Max retries exceeded with url: /session/6344fd1b6716b9cb413b86a4ad99652d/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72251c50d190>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:38:03] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:38:03] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 19:38:03] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=42141): Max retries exceeded with url: /session/6344fd1b6716b9cb413b86a4ad99652d/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72251c5a9d90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:38:03] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:38:03] [INFO] Xvfb 已停止
+[2026-05-05 19:38:05] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:38:05] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/photos/joinus-lectureseries-june19genomics-a-bridge-to-precision-medicine-register-now-/775224251388453/
+[2026-05-05 19:38:06] [INFO] Xvfb 已启动: DISPLAY=:165
+[2026-05-05 19:38:06] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:38:06] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:38:06] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:38:08] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:38:10] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=49967): Max retries exceeded with url: /session/f7ed0b880a4247d9d395b2e0778c2649/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d87153ded10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:38:10] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=49967): Max retries exceeded with url: /session/f7ed0b880a4247d9d395b2e0778c2649/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d87151d3b90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:38:10] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:38:11] [INFO] LLM Local Async 查询成功: 65 字符
+[2026-05-05 19:38:11] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:38:12] [INFO] LLM Local Async 查询成功: 146 字符
+[2026-05-05 19:38:12] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:38:13] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 19:38:13] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=49967): Max retries exceeded with url: /session/f7ed0b880a4247d9d395b2e0778c2649/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-05-05 19:38:13] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=49967): Max retries exceeded with url: /session/f7ed0b880a4247d9d395b2e0778c2649/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d8714435a90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:38:13] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:38:13] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:38:13] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 19:38:13] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=49967): Max retries exceeded with url: /session/f7ed0b880a4247d9d395b2e0778c2649/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-05-05 19:38:13] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=49967): Max retries exceeded with url: /session/f7ed0b880a4247d9d395b2e0778c2649/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d8714337450>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:38:13] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:38:14] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 19:38:14] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 19:38:14] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=49967): Max retries exceeded with url: /session/f7ed0b880a4247d9d395b2e0778c2649/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d871445ef90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:38:14] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:38:14] [INFO] Xvfb 已停止
+[2026-05-05 19:38:16] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:38:16] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/posts/four-faculty-of-business-students-to-represent-university-of-botswana-in-singapo/2545655979042169/
+[2026-05-05 19:38:16] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:38:16] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.bcm.edu/news/botswana-graduates-first-ph-d-scientist-in-collaboration-with-baylor-college-of-medicine
+[2026-05-05 19:38:17] [INFO] Xvfb 已启动: DISPLAY=:104
+[2026-05-05 19:38:17] [INFO] Xvfb 已启动: DISPLAY=:105
+[2026-05-05 19:38:17] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:38:17] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:38:17] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:38:17] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:38:18] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:38:18] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:38:18] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:38:19] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:38:19] [WARNING] 打开标签页失败: https://www.facebook.com/UbMmadikolo/posts/four-faculty-of-business-students-to-represent-university-of-botswana-in-singapo/2545655979042169/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:38:21] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:38:21] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 19:38:21] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 19:38:21] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:38:22] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:38:22] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:38:23] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:38:23] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=49981): Max retries exceeded with url: /session/8d5ea51d1ad1b94555bb987cd1e73047/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x727365987c10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:38:23] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 19:38:23] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:38:24] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:38:24] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:38:24] [WARNING] 域名预热失败: https://www.facebook.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:38:24] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=35313): Max retries exceeded with url: /session/8d173211f551227e2a3a1ddabebf7bb1/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-05 19:38:24] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:38:24] [INFO] Xvfb 已停止
+[2026-05-05 19:38:25] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:38:26] [ERROR] 获取页面内容失败: https://www.bcm.edu/news/botswana-graduates-first-ph-d-scientist-in-collaboration-with-baylor-college-of-medicine, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:38:26] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=41657): Max retries exceeded with url: /session/d73ee3662e05fdaf885b39c727530dce/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a078a998290>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:38:26] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 19:38:26] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:38:26] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:38:26] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:38:26] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:38:26] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/61568400972914/posts/%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%B2-%F0%9D%9F%B0%F0%9D%98%81%F0%9D%97%B5-%F0%9D%97%98%F0%9D%97%B1%F0%9D%97%B6%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB-%F0%9D%97%A9%F0%9D%98%82%F0%9D%97%BB%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%B6-%F0%9D%97%94%F0%9D%97%BB%F0%9D%97%BB%F0%9D%98%82%F0%9D%97%AE%F0%9D%97%B9-%F0%9D%97%95%F0%9D%97%BC%F0%9D%98%81%F0%9D%98%80%F0%9D%98%84%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%AE-%F0%9D%97%AA%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B2%F0%9D%97%BB-%F0%9D%97%A6%F0%9D%97%BD%F0%9D%97%BC%F0%9D%97%BF%F0%9D%98%81%F0%9D%98%80-%F0%9D%97%94%F0%9D%98%84%F0%9D%97%AE%F0%9D%97%BF%F0%9D%97%B1%F0%9D%98%80-%F0%9D%97%A1%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B2%F0%9D%97%B2%F0%9D%98%80-%F0%9D%97%A5%F0%9D%97%B2%F0%9D%98%83%F0%9D%97%B2%F0%9D%97%AE%F0%9D%97%B9%F0%9D%97%B2%F0%9D%97%B1bots/122186187194613365/
+[2026-05-05 19:38:27] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:38:27] [INFO] Xvfb 已启动: DISPLAY=:192
+[2026-05-05 19:38:28] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 19:38:28] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:38:28] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:38:28] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:38:29] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:38:29] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:38:29] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:38:29] [INFO] Xvfb 已停止
+[2026-05-05 19:38:29] [WARNING] 域名预热失败: https://www.bcm.edu, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:38:29] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=55611): Max retries exceeded with url: /session/5c85bfdc32012c71b16af7235922c2af/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-05 19:38:29] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:38:29] [INFO] Xvfb 已停止
+[2026-05-05 19:38:31] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:38:31] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/BNYCpage/posts/-meet-the-dream-team-driving-young-people-to-thrive-and-excel-in-botswana-ngwana/1116767103814984/
+[2026-05-05 19:38:32] [INFO] Xvfb 已启动: DISPLAY=:104
+[2026-05-05 19:38:32] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:38:32] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:38:32] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:38:33] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:38:35] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:38:38] [INFO] LLM Local Async 查询成功: 684 字符
+[2026-05-05 19:38:39] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:38:40] [WARNING] 打开标签页失败: https://www.facebook.com/people/Ministry-of-Sport-And-Arts-Botswana/61568400972914/?__cft__[0]=AZamkOnPFLM2bENtyo8xhUNTrpxo3Tn5506zLPap30EaI1n6o85Bn-gJcj2Pq9phvvbdaxF5pL8mKkrXkMNVWKTnM3V-yz1NokxoZO8jHia1Df3r4JjwvHmDP3YOxPXSQEU5AgVlWzepoqFvMI6VDlj8MbJP1yV_w0Q1fiJtDQqTrQ&__tn__=%3C%3C%2CP-R, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:38:41] [INFO] LLM Local Async 查询成功: 130 字符
+[2026-05-05 19:38:44] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=49585): Max retries exceeded with url: /session/4b6cec0b5040896509d266ff203068c8/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x717044aa09d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:38:44] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 19:38:44] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:38:44] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:38:44] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:38:45] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:38:46] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:38:47] [INFO] LLM Local Async 查询成功: 189 字符
+[2026-05-05 19:38:47] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 19:38:47] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:38:47] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:38:47] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:38:48] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 19:38:48] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:38:49] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:38:49] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:38:49] [INFO] Xvfb 已停止
+[2026-05-05 19:38:51] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:38:51] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/cafgen/?locale=id_ID
+[2026-05-05 19:38:51] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 19:38:52] [INFO] Xvfb 已启动: DISPLAY=:135
+[2026-05-05 19:38:52] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:38:52] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:38:52] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:38:53] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:38:53] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:38:53] [INFO] Xvfb 已停止
+[2026-05-05 19:38:54] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:39:00] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:39:01] [INFO] LLM Local Async 查询成功: 142 字符
+[2026-05-05 19:39:13] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:39:14] [INFO] LLM Local Async 查询成功: 71 字符
+[2026-05-05 19:39:14] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 19:39:14] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:39:14] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:39:14] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:39:15] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:39:17] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 19:39:24] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:39:25] [INFO] LLM Local Async 查询成功: 103 字符
+[2026-05-05 19:39:25] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:39:26] [INFO] LLM Local Async 查询成功: 153 字符
+[2026-05-05 19:39:26] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:39:26] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 19:39:31] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:39:32] [INFO] LLM Local Async 查询成功: 99 字符
+[2026-05-05 19:39:32] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:39:33] [INFO] LLM Local Async 查询成功: 165 字符
+[2026-05-05 19:39:33] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:39:34] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 19:39:38] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:39:39] [INFO] LLM Local Async 查询成功: 87 字符
+[2026-05-05 19:39:39] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:39:40] [INFO] LLM Local Async 查询成功: 161 字符
+[2026-05-05 19:39:40] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:39:41] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 19:39:44] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:39:45] [INFO] LLM Local Async 查询成功: 99 字符
+[2026-05-05 19:39:45] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:39:45] [INFO] Xvfb 已停止
+[2026-05-05 19:49:19] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:49:19] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.ub.bw/user/11449
+[2026-05-05 19:49:19] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:49:19] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://dsi-africa.org/dsi-3rd-consortium-meeting/biography/1142
+[2026-05-05 19:49:20] [INFO] Xvfb 已启动: DISPLAY=:125
+[2026-05-05 19:49:20] [INFO] Xvfb 已启动: DISPLAY=:124
+[2026-05-05 19:49:20] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:49:20] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:49:20] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:49:20] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:49:20] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.researchgate.net/profile/Gaone-Retshabile
+[2026-05-05 19:49:20] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:49:21] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:49:21] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:49:21] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:49:21] [INFO] Xvfb 已启动: DISPLAY=:162
+[2026-05-05 19:49:22] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:49:22] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:49:22] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:49:22] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:49:23] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:49:24] [WARNING] 打开标签页失败: https://dsi-africa.org/dsi-3rd-consortium-meeting/biography/1142, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:49:25] [WARNING] 打开标签页失败: https://www.ub.bw/user/11449, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:49:28] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:49:28] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=60045): Max retries exceeded with url: /session/7ab8caa9560fff8e21b0d432fd021b99/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x70214f987cd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:49:28] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 19:49:28] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:49:28] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:49:28] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:49:28] [INFO] LLM Local Async 查询成功: 79 字符
+[2026-05-05 19:49:28] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 19:49:28] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:49:29] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:49:29] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=40223): Max retries exceeded with url: /session/f00f6487d7358a9a1c5e80becbab5546/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71d5c989c690>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:49:29] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 19:49:29] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:49:29] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:49:29] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:49:29] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:49:30] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:49:30] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:49:31] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:49:31] [WARNING] 域名预热失败: https://dsi-africa.org, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:49:31] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=48413): Max retries exceeded with url: /session/433aaf45b7593e3bfc4560f2031b2d22/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-05 19:49:32] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:49:32] [INFO] Xvfb 已停止
+[2026-05-05 19:49:32] [INFO] 域名预热完成: https://www.researchgate.net
+[2026-05-05 19:49:35] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:49:35] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.rims.gov.bw/converis/portal/detail/Person/6248262;jsessionid=wbd9gP22QdEQcpqRBjabcEET7_k9UEn0NoAxkrdr.www?lang=en_US
+[2026-05-05 19:49:36] [INFO] Xvfb 已启动: DISPLAY=:153
+[2026-05-05 19:49:36] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:49:36] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:49:36] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:49:37] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:49:37] [WARNING] 域名预热失败: https://www.ub.bw, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:49:37] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=34245): Max retries exceeded with url: /session/289bd7a3a2649df93b30fc9d43de64ee/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-05 19:49:37] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:49:37] [INFO] Xvfb 已停止
+[2026-05-05 19:49:38] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=35039): Max retries exceeded with url: /session/172fc9a1b7088fba9e562fbbbd34adc1/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ac2575b2390>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:49:38] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=35039): Max retries exceeded with url: /session/172fc9a1b7088fba9e562fbbbd34adc1/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ac2575c3810>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:49:38] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:49:39] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 19:49:39] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:49:40] [INFO] LLM Local Async 查询成功: 145 字符
+[2026-05-05 19:49:40] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:49:40] [INFO] LLM Local Async 查询成功: 59 字符
+[2026-05-05 19:49:40] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:49:40] [INFO] Xvfb 已停止
+[2026-05-05 19:50:07] [WARNING] 打开标签页失败: https://www.rims.gov.bw/converis/portal/detail/Person/6248262;jsessionid=wbd9gP22QdEQcpqRBjabcEET7_k9UEn0NoAxkrdr.www?lang=en_US, Message: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=148.0.7778.97)
+Stacktrace:
+#0 0x600dc4e478aa <unknown>
+#1 0x600dc48428a9 <unknown>
+#2 0x600dc4829f70 <unknown>
+#3 0x600dc4829b96 <unknown>
+#4 0x600dc48276cb <unknown>
+#5 0x600dc482804f <unknown>
+#6 0x600dc48374d0 <unknown>
+#7 0x600dc4851627 <unknown>
+#8 0x600dc4858f2b <unknown>
+#9 0x600dc48287b9 <unknown>
+#10 0x600dc48513bd <unknown>
+#11 0x600dc48dee03 <unknown>
+#12 0x600dc488a4cf <unknown>
+#13 0x600dc488b291 <unknown>
+#14 0x600dc4e0d76b <unknown>
+#15 0x600dc4e1067d <unknown>
+#16 0x600dc4dfa6c8 <unknown>
+#17 0x600dc4e11210 <unknown>
+#18 0x600dc4de1170 <unknown>
+#19 0x600dc4e347b8 <unknown>
+#20 0x600dc4e34955 <unknown>
+#21 0x600dc4e4630e <unknown>
+#22 0x7bb4a529caa4 <unknown>
+#23 0x7bb4a5329c6c <unknown>
+
+[2026-05-05 19:50:11] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 19:50:11] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:50:11] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:50:11] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:50:12] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:50:42] [WARNING] 域名预热失败: https://www.rims.gov.bw, Message: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=148.0.7778.97)
+Stacktrace:
+#0 0x5b1a3d6fd8aa <unknown>
+#1 0x5b1a3d0f88a9 <unknown>
+#2 0x5b1a3d0dff70 <unknown>
+#3 0x5b1a3d0dfb96 <unknown>
+#4 0x5b1a3d0dd6cb <unknown>
+#5 0x5b1a3d0de04f <unknown>
+#6 0x5b1a3d0ed4d0 <unknown>
+#7 0x5b1a3d107627 <unknown>
+#8 0x5b1a3d10ef2b <unknown>
+#9 0x5b1a3d0de7b9 <unknown>
+#10 0x5b1a3d1073bd <unknown>
+#11 0x5b1a3d194e03 <unknown>
+#12 0x5b1a3d1404cf <unknown>
+#13 0x5b1a3d141291 <unknown>
+#14 0x5b1a3d6c376b <unknown>
+#15 0x5b1a3d6c667d <unknown>
+#16 0x5b1a3d6b06c8 <unknown>
+#17 0x5b1a3d6c7210 <unknown>
+#18 0x5b1a3d697170 <unknown>
+#19 0x5b1a3d6ea7b8 <unknown>
+#20 0x5b1a3d6ea955 <unknown>
+#21 0x5b1a3d6fc30e <unknown>
+#22 0x7696a889caa4 <unknown>
+#23 0x7696a8929c6c <unknown>
+
+[2026-05-05 19:51:12] [ERROR] 执行失败: navigate, Message: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=148.0.7778.97)
+Stacktrace:
+#0 0x5b1a3d6fd8aa <unknown>
+#1 0x5b1a3d0f88a9 <unknown>
+#2 0x5b1a3d0dff70 <unknow
+[2026-05-05 19:51:12] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:51:12] [INFO] Xvfb 已停止
+[2026-05-05 19:51:14] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:51:14] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/posts/to-all-the-phenomenal-women-of-the-university-of-botswana-you-are-cordially-invi/3175393622735065/
+[2026-05-05 19:51:15] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:51:15] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/photos/joinus-lectureseries-june19genomics-a-bridge-to-precision-medicine-register-now-/775224251388453/
+[2026-05-05 19:51:15] [INFO] Xvfb 已启动: DISPLAY=:105
+[2026-05-05 19:51:15] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:51:15] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:51:15] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:51:16] [INFO] Xvfb 已启动: DISPLAY=:123
+[2026-05-05 19:51:16] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:51:16] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:51:16] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:51:16] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:51:17] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:51:17] [WARNING] 打开标签页失败: https://www.facebook.com/UbMmadikolo/posts/to-all-the-phenomenal-women-of-the-university-of-botswana-you-are-cordially-invi/3175393622735065/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:51:21] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=47399): Max retries exceeded with url: /session/e6a910e184bcc10cad3f56298fc7341f/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79be00098250>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:51:21] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 19:51:21] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:51:21] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:51:21] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:51:22] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:51:23] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:51:23] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 19:51:24] [WARNING] 打开标签页失败: https://l.facebook.com/l.php?u=https%3A%2F%2Fabout.meta.com%2Ftechnologies%2Fmeta-pay&h=AUAAcxi-S9IPcSL5B0F0jIIfnEp40p7R-Hcp12Qv9WDyRoBgKusYWntBNbED36NTtjH_uKuhSQsnwjfPEhQp3krnaqTQxEpJqk1o-BT84KmKkkHrKLAwoQNXx70_HCGAfGfQ1QxTxtATvA, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:51:25] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 19:51:28] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=51765): Max retries exceeded with url: /session/7ffc4d6b06090d1b9f482dfeab9bdfbf/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dd9837e65d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:51:28] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 19:51:28] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:51:29] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:51:29] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:51:31] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=35701): Max retries exceeded with url: /session/8a85031aa0084475081c37e51e0862d8/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79be000c0d10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:51:31] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=35701): Max retries exceeded with url: /session/8a85031aa0084475081c37e51e0862d8/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79be000d9a10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:51:31] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:51:31] [INFO] LLM Local Async 查询成功: 62 字符
+[2026-05-05 19:51:31] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:51:32] [INFO] LLM Local Async 查询成功: 122 字符
+[2026-05-05 19:51:32] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:51:32] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:51:33] [INFO] LLM Local Async 查询成功: 83 字符
+[2026-05-05 19:51:33] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:51:33] [INFO] Xvfb 已停止
+[2026-05-05 19:51:34] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:51:34] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/posts/four-faculty-of-business-students-to-represent-university-of-botswana-in-singapo/2545655979042169/
+[2026-05-05 19:51:34] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:51:34] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.bcm.edu/news/botswana-graduates-first-ph-d-scientist-in-collaboration-with-baylor-college-of-medicine
+[2026-05-05 19:51:35] [INFO] Xvfb 已启动: DISPLAY=:194
+[2026-05-05 19:51:35] [INFO] Xvfb 已启动: DISPLAY=:195
+[2026-05-05 19:51:35] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 19:51:35] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:51:35] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:51:35] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:51:36] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:51:36] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:51:36] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:51:36] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:51:37] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:51:42] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:51:42] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:51:42] [INFO] LLM Local Async 查询成功: 69 字符
+[2026-05-05 19:51:42] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:51:43] [INFO] LLM Local Async 查询成功: 129 字符
+[2026-05-05 19:51:43] [INFO] LLM Local Async 查询成功: 131 字符
+[2026-05-05 19:51:43] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:51:44] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 19:51:46] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:51:47] [INFO] LLM Local Async 查询成功: 641 字符
+[2026-05-05 19:51:47] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:51:48] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-05-05 19:51:49] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:51:49] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 19:51:49] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 19:51:49] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:51:50] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:51:50] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:51:50] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:51:50] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:51:51] [INFO] LLM Local Async 查询成功: 64 字符
+[2026-05-05 19:51:51] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:51:51] [INFO] LLM Local Async 查询成功: 119 字符
+[2026-05-05 19:51:51] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:51:52] [INFO] LLM Local Async 查询成功: 55 字符
+[2026-05-05 19:51:52] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:51:52] [INFO] Xvfb 已停止
+[2026-05-05 19:51:53] [WARNING] 打开标签页失败: https://pubmed.ncbi.nlm.nih.gov/29706352/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 19:51:53] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 19:51:54] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:51:54] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/61568400972914/posts/%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%B2-%F0%9D%9F%B0%F0%9D%98%81%F0%9D%97%B5-%F0%9D%97%98%F0%9D%97%B1%F0%9D%97%B6%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB-%F0%9D%97%A9%F0%9D%98%82%F0%9D%97%BB%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%B6-%F0%9D%97%94%F0%9D%97%BB%F0%9D%97%BB%F0%9D%98%82%F0%9D%97%AE%F0%9D%97%B9-%F0%9D%97%95%F0%9D%97%BC%F0%9D%98%81%F0%9D%98%80%F0%9D%98%84%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%AE-%F0%9D%97%AA%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B2%F0%9D%97%BB-%F0%9D%97%A6%F0%9D%97%BD%F0%9D%97%BC%F0%9D%97%BF%F0%9D%98%81%F0%9D%98%80-%F0%9D%97%94%F0%9D%98%84%F0%9D%97%AE%F0%9D%97%BF%F0%9D%97%B1%F0%9D%98%80-%F0%9D%97%A1%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B2%F0%9D%97%B2%F0%9D%98%80-%F0%9D%97%A5%F0%9D%97%B2%F0%9D%98%83%F0%9D%97%B2%F0%9D%97%AE%F0%9D%97%B9%F0%9D%97%B2%F0%9D%97%B1bots/122186187194613365/
+[2026-05-05 19:51:55] [INFO] Xvfb 已启动: DISPLAY=:102
+[2026-05-05 19:51:55] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:51:55] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:51:55] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:51:56] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:51:57] [ERROR] 获取页面内容失败: https://www.bcm.edu/news/botswana-baylor-college-of-medicine-renew-partnership?fbclid=IwAR2i9ZIqGeKiGzU-tvmaxSQndVDdPCcmpU_giyY1XzgNzpfZSETRv4MhbEA, HTTPConnectionPool(host='localhost', port=43195): Max retries exceeded with url: /session/53b941e65040cc40a248a40f17864699/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7c1a92676290>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:51:57] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=43195): Max retries exceeded with url: /session/53b941e65040cc40a248a40f17864699/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7c1a9220b810>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:51:57] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:51:58] [INFO] LLM Local Async 查询成功: 533 字符
+[2026-05-05 19:51:58] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 3 页, 收集 1 条信息
+[2026-05-05 19:51:58] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:51:58] [INFO] Xvfb 已停止
+[2026-05-05 19:51:59] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=41475): Max retries exceeded with url: /session/8c2cd09792615ff407f8e47681923607/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7194dc227350>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:51:59] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=41475): Max retries exceeded with url: /session/8c2cd09792615ff407f8e47681923607/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7194dc2244d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:51:59] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:00] [INFO] LLM Local Async 查询成功: 79 字符
+[2026-05-05 19:52:00] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:01] [INFO] LLM Local Async 查询成功: 136 字符
+[2026-05-05 19:52:01] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:02] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:02] [INFO] LLM Local Async 查询成功: 78 字符
+[2026-05-05 19:52:02] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:52:02] [INFO] Xvfb 已停止
+[2026-05-05 19:52:03] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 19:52:04] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:52:04] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/BNYCpage/posts/-meet-the-dream-team-driving-young-people-to-thrive-and-excel-in-botswana-ngwana/1116767103814984/
+[2026-05-05 19:52:05] [INFO] Xvfb 已启动: DISPLAY=:188
+[2026-05-05 19:52:05] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:52:05] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:52:05] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:52:06] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:52:08] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:09] [INFO] LLM Local Async 查询成功: 176 字符
+[2026-05-05 19:52:09] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 19:52:09] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:52:09] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:52:10] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:52:10] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:52:12] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:13] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 19:52:13] [INFO] LLM Local Async 查询成功: 139 字符
+[2026-05-05 19:52:19] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:20] [INFO] LLM Local Async 查询成功: 189 字符
+[2026-05-05 19:52:20] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 19:52:20] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:52:20] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:52:20] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:52:21] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=50005): Max retries exceeded with url: /session/20649eb3186f02723af1b87857f4f53e/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7e48742f3dd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:52:21] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=50005): Max retries exceeded with url: /session/20649eb3186f02723af1b87857f4f53e/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7e4874263b50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:52:21] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:21] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:52:22] [INFO] LLM Local Async 查询成功: 80 字符
+[2026-05-05 19:52:22] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:23] [INFO] LLM Local Async 查询成功: 106 字符
+[2026-05-05 19:52:23] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:24] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 19:52:24] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=50005): Max retries exceeded with url: /session/20649eb3186f02723af1b87857f4f53e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-05-05 19:52:24] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=50005): Max retries exceeded with url: /session/20649eb3186f02723af1b87857f4f53e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7e487405cb10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:52:24] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:24] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 19:52:24] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 19:52:24] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=50005): Max retries exceeded with url: /session/20649eb3186f02723af1b87857f4f53e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7e4874073190>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:52:24] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:25] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 19:52:25] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=50005): Max retries exceeded with url: /session/20649eb3186f02723af1b87857f4f53e/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-05-05 19:52:25] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=50005): Max retries exceeded with url: /session/20649eb3186f02723af1b87857f4f53e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7e4874026690>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:52:25] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:52:25] [INFO] Xvfb 已停止
+[2026-05-05 19:52:27] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 19:52:27] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/cafgen/?locale=id_ID
+[2026-05-05 19:52:28] [INFO] Xvfb 已启动: DISPLAY=:136
+[2026-05-05 19:52:28] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:52:28] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 19:52:28] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:52:29] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:52:30] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=57501): Max retries exceeded with url: /session/b6ab3ddd91fd4002704ad9c779d91b15/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x791d7c4a5c90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:52:30] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=57501): Max retries exceeded with url: /session/b6ab3ddd91fd4002704ad9c779d91b15/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x791d7c303890>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:52:30] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:31] [INFO] LLM Local Async 查询成功: 87 字符
+[2026-05-05 19:52:31] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:32] [INFO] LLM Local Async 查询成功: 116 字符
+[2026-05-05 19:52:32] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:32] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 19:52:32] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=57501): Max retries exceeded with url: /session/b6ab3ddd91fd4002704ad9c779d91b15/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-05-05 19:52:32] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=57501): Max retries exceeded with url: /session/b6ab3ddd91fd4002704ad9c779d91b15/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x791d7c101710>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:52:32] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:33] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 19:52:33] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=57501): Max retries exceeded with url: /session/b6ab3ddd91fd4002704ad9c779d91b15/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-05-05 19:52:33] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=57501): Max retries exceeded with url: /session/b6ab3ddd91fd4002704ad9c779d91b15/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x791d7c2a0690>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:52:33] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:34] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 19:52:34] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=57501): Max retries exceeded with url: /session/b6ab3ddd91fd4002704ad9c779d91b15/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x791d7c24f990>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 19:52:34] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:52:34] [INFO] Xvfb 已停止
+[2026-05-05 19:52:35] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:36] [INFO] LLM Local Async 查询成功: 142 字符
+[2026-05-05 19:52:47] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:48] [INFO] LLM Local Async 查询成功: 71 字符
+[2026-05-05 19:52:48] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 19:52:48] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:52:48] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 19:52:48] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 19:52:49] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 19:52:52] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 19:52:58] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:52:59] [INFO] LLM Local Async 查询成功: 79 字符
+[2026-05-05 19:52:59] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:53:00] [INFO] LLM Local Async 查询成功: 153 字符
+[2026-05-05 19:53:00] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:53:01] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 19:53:05] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:53:06] [INFO] LLM Local Async 查询成功: 99 字符
+[2026-05-05 19:53:06] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:53:07] [INFO] LLM Local Async 查询成功: 159 字符
+[2026-05-05 19:53:07] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:53:08] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 19:53:13] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:53:13] [INFO] LLM Local Async 查询成功: 83 字符
+[2026-05-05 19:53:13] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:53:14] [INFO] LLM Local Async 查询成功: 156 字符
+[2026-05-05 19:53:14] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:53:15] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 19:53:19] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 19:53:19] [INFO] LLM Local Async 查询成功: 99 字符
+[2026-05-05 19:53:19] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 19:53:19] [INFO] Xvfb 已停止
+[2026-05-05 20:00:55] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:00:55] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.ub.bw/user/11449
+[2026-05-05 20:00:55] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:00:55] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://dsi-africa.org/dsi-3rd-consortium-meeting/biography/1142
+[2026-05-05 20:00:56] [INFO] Xvfb 已启动: DISPLAY=:142
+[2026-05-05 20:00:56] [INFO] Xvfb 已启动: DISPLAY=:145
+[2026-05-05 20:00:56] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:00:56] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:00:56] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:00:56] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:00:56] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:00:56] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.researchgate.net/profile/Gaone-Retshabile
+[2026-05-05 20:00:57] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:00:57] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:00:57] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:00:57] [INFO] Xvfb 已启动: DISPLAY=:180
+[2026-05-05 20:00:57] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:00:58] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:00:58] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:00:58] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:00:58] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:00:58] [WARNING] 打开标签页失败: https://dsi-africa.org/dsi-3rd-consortium-meeting/biography/1142, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:01:01] [WARNING] 打开标签页失败: https://www.ub.bw/user/11449, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:01:02] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=40439): Max retries exceeded with url: /session/0b8d016b6d7f39eb8a1c15b110889f2d/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x703cb6cb01d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:01:02] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 20:01:03] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:01:03] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:01:03] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:01:03] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:01:04] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:01:04] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:01:04] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 20:01:04] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:01:04] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:01:04] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:01:05] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=41477): Max retries exceeded with url: /session/5eb8bf323a8cece29ed0172382997e4b/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75ef24798590>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:01:05] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 20:01:05] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:01:05] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:01:05] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:01:05] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:01:06] [WARNING] 域名预热失败: https://dsi-africa.org, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:01:06] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=44093): Max retries exceeded with url: /session/e55e1f5193198a81f78b63b6cea022f6/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-05 20:01:06] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:01:06] [INFO] Xvfb 已停止
+[2026-05-05 20:01:06] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:01:07] [INFO] 域名预热完成: https://www.researchgate.net
+[2026-05-05 20:01:09] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:01:09] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.rims.gov.bw/converis/portal/detail/Person/6248262;jsessionid=wbd9gP22QdEQcpqRBjabcEET7_k9UEn0NoAxkrdr.www?lang=en_US
+[2026-05-05 20:01:10] [INFO] Xvfb 已启动: DISPLAY=:152
+[2026-05-05 20:01:10] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:01:10] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:01:10] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:01:11] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:01:11] [WARNING] 域名预热失败: https://www.ub.bw, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:01:11] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=43767): Max retries exceeded with url: /session/9b3d287f218d4adb81444f825f01e162/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-05 20:01:11] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:01:11] [INFO] Xvfb 已停止
+[2026-05-05 20:01:12] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=38841): Max retries exceeded with url: /session/f2146c836f68b8c61a02e0c9c5487e3c/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b473bfe6b10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:01:12] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=38841): Max retries exceeded with url: /session/f2146c836f68b8c61a02e0c9c5487e3c/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b473bf9a1d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:01:12] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:01:13] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:01:13] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:01:14] [INFO] LLM Local Async 查询成功: 138 字符
+[2026-05-05 20:01:14] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:01:14] [INFO] LLM Local Async 查询成功: 49 字符
+[2026-05-05 20:01:14] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:01:14] [INFO] Xvfb 已停止
+[2026-05-05 20:01:41] [WARNING] 打开标签页失败: https://www.rims.gov.bw/converis/portal/detail/Person/6248262;jsessionid=wbd9gP22QdEQcpqRBjabcEET7_k9UEn0NoAxkrdr.www?lang=en_US, Message: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=148.0.7778.97)
+Stacktrace:
+#0 0x5b80445608aa <unknown>
+#1 0x5b8043f5b8a9 <unknown>
+#2 0x5b8043f42f70 <unknown>
+#3 0x5b8043f42b96 <unknown>
+#4 0x5b8043f406cb <unknown>
+#5 0x5b8043f4104f <unknown>
+#6 0x5b8043f504d0 <unknown>
+#7 0x5b8043f6a627 <unknown>
+#8 0x5b8043f71f2b <unknown>
+#9 0x5b8043f417b9 <unknown>
+#10 0x5b8043f6a3bd <unknown>
+#11 0x5b8043ff7e03 <unknown>
+#12 0x5b8043fa34cf <unknown>
+#13 0x5b8043fa4291 <unknown>
+#14 0x5b804452676b <unknown>
+#15 0x5b804452967d <unknown>
+#16 0x5b80445136c8 <unknown>
+#17 0x5b804452a210 <unknown>
+#18 0x5b80444fa170 <unknown>
+#19 0x5b804454d7b8 <unknown>
+#20 0x5b804454d955 <unknown>
+#21 0x5b804455f30e <unknown>
+#22 0x728c2049caa4 <unknown>
+#23 0x728c20529c6c <unknown>
+
+[2026-05-05 20:01:45] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 20:01:45] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:01:45] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:01:45] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:01:46] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:02:16] [WARNING] 域名预热失败: https://www.rims.gov.bw, Message: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=148.0.7778.97)
+Stacktrace:
+#0 0x643babeb18aa <unknown>
+#1 0x643bab8ac8a9 <unknown>
+#2 0x643bab893f70 <unknown>
+#3 0x643bab893b96 <unknown>
+#4 0x643bab8916cb <unknown>
+#5 0x643bab89204f <unknown>
+#6 0x643bab8a14d0 <unknown>
+#7 0x643bab8bb627 <unknown>
+#8 0x643bab8c2f2b <unknown>
+#9 0x643bab8927b9 <unknown>
+#10 0x643bab8bb3bd <unknown>
+#11 0x643bab948e03 <unknown>
+#12 0x643bab8f44cf <unknown>
+#13 0x643bab8f5291 <unknown>
+#14 0x643babe7776b <unknown>
+#15 0x643babe7a67d <unknown>
+#16 0x643babe646c8 <unknown>
+#17 0x643babe7b210 <unknown>
+#18 0x643babe4b170 <unknown>
+#19 0x643babe9e7b8 <unknown>
+#20 0x643babe9e955 <unknown>
+#21 0x643babeb030e <unknown>
+#22 0x7654d249caa4 <unknown>
+#23 0x7654d2529c6c <unknown>
+
+[2026-05-05 20:02:46] [ERROR] 执行失败: navigate, Message: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=148.0.7778.97)
+Stacktrace:
+#0 0x643babeb18aa <unknown>
+#1 0x643bab8ac8a9 <unknown>
+#2 0x643bab893f70 <unknow
+[2026-05-05 20:02:46] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:02:46] [INFO] Xvfb 已停止
+[2026-05-05 20:02:48] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:02:48] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/posts/to-all-the-phenomenal-women-of-the-university-of-botswana-you-are-cordially-invi/3175393622735065/
+[2026-05-05 20:02:49] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:02:49] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/photos/joinus-lectureseries-june19genomics-a-bridge-to-precision-medicine-register-now-/775224251388453/
+[2026-05-05 20:02:49] [INFO] Xvfb 已启动: DISPLAY=:138
+[2026-05-05 20:02:50] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:02:50] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:02:50] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:02:50] [INFO] Xvfb 已启动: DISPLAY=:157
+[2026-05-05 20:02:50] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:02:53] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:02:53] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:02:53] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:02:57] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:02:59] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:00] [INFO] LLM Local Async 查询成功: 127 字符
+[2026-05-05 20:03:02] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:03] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:03:05] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:06] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:03:06] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:03:06] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:03:06] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:03:06] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:03:07] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:03:10] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:10] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:03:10] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:03:10] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:03:10] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:03:11] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:03:11] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:03:11] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:03:11] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:03:11] [INFO] Xvfb 已停止
+[2026-05-05 20:03:12] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:03:13] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:03:13] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/posts/four-faculty-of-business-students-to-represent-university-of-botswana-in-singapo/2545655979042169/
+[2026-05-05 20:03:14] [INFO] Xvfb 已启动: DISPLAY=:132
+[2026-05-05 20:03:15] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:03:15] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:03:15] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:03:15] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:03:16] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:03:21] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:21] [INFO] LLM Local Async 查询成功: 69 字符
+[2026-05-05 20:03:21] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:22] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:22] [INFO] LLM Local Async 查询成功: 113 字符
+[2026-05-05 20:03:22] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:23] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 20:03:23] [INFO] LLM Local Async 查询成功: 129 字符
+[2026-05-05 20:03:29] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:29] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:29] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:03:29] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:03:29] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:03:29] [INFO] LLM Local Async 查询成功: 64 字符
+[2026-05-05 20:03:29] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:30] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:03:30] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:03:30] [INFO] LLM Local Async 查询成功: 115 字符
+[2026-05-05 20:03:30] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:31] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:03:31] [INFO] LLM Local Async 查询成功: 57 字符
+[2026-05-05 20:03:31] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:03:31] [INFO] Xvfb 已停止
+[2026-05-05 20:03:32] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:03:32] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/cafgen/?locale=id_ID
+[2026-05-05 20:03:33] [INFO] Xvfb 已启动: DISPLAY=:195
+[2026-05-05 20:03:34] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:03:34] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:03:34] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:03:34] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:03:35] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:03:40] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=43487): Max retries exceeded with url: /session/39a9d24705534d6c471ecbe551b1ba63/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x777e1905ec90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:03:40] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=43487): Max retries exceeded with url: /session/39a9d24705534d6c471ecbe551b1ba63/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x777e18f3cd10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:03:40] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:40] [INFO] LLM Local Async 查询成功: 71 字符
+[2026-05-05 20:03:40] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:41] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:42] [INFO] LLM Local Async 查询成功: 129 字符
+[2026-05-05 20:03:42] [INFO] LLM Local Async 查询成功: 122 字符
+[2026-05-05 20:03:42] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:42] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 20:03:42] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=43487): Max retries exceeded with url: /session/39a9d24705534d6c471ecbe551b1ba63/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-05-05 20:03:42] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=43487): Max retries exceeded with url: /session/39a9d24705534d6c471ecbe551b1ba63/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x777e185b6f50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:03:42] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:43] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 20:03:43] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=43487): Max retries exceeded with url: /session/39a9d24705534d6c471ecbe551b1ba63/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-05-05 20:03:43] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=43487): Max retries exceeded with url: /session/39a9d24705534d6c471ecbe551b1ba63/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x777e18500a10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:03:43] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:44] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 20:03:44] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=43487): Max retries exceeded with url: /session/39a9d24705534d6c471ecbe551b1ba63/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x777e18fd8390>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:03:44] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:03:44] [INFO] Xvfb 已停止
+[2026-05-05 20:03:45] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:03:45] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/BNYCpage/posts/-meet-the-dream-team-driving-young-people-to-thrive-and-excel-in-botswana-ngwana/1116767103814984/
+[2026-05-05 20:03:46] [INFO] Xvfb 已启动: DISPLAY=:159
+[2026-05-05 20:03:47] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:03:47] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:03:47] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:03:47] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:48] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:03:48] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:03:48] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:03:48] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:03:50] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:03:50] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:03:53] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:03:56] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:03:56] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:03:57] [INFO] LLM Local Async 查询成功: 130 字符
+[2026-05-05 20:04:02] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:03] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:03] [INFO] LLM Local Async 查询成功: 189 字符
+[2026-05-05 20:04:03] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:04:03] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:04:03] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:04:03] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:04:04] [INFO] LLM Local Async 查询成功: 103 字符
+[2026-05-05 20:04:04] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:04] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:04:04] [INFO] LLM Local Async 查询成功: 148 字符
+[2026-05-05 20:04:04] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:05] [INFO] LLM Local Async 查询成功: 21 字符
+[2026-05-05 20:04:07] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:04:09] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:10] [INFO] LLM Local Async 查询成功: 115 字符
+[2026-05-05 20:04:10] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:10] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 20:04:13] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:14] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=53307): Max retries exceeded with url: /session/10941795ccb085d82b933aeda5bc9726/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a7089305410>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:04:14] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=53307): Max retries exceeded with url: /session/10941795ccb085d82b933aeda5bc9726/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a7089dc5150>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:04:14] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:14] [INFO] LLM Local Async 查询成功: 55 字符
+[2026-05-05 20:04:14] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:14] [INFO] LLM Local Async 查询成功: 103 字符
+[2026-05-05 20:04:14] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:16] [INFO] LLM Local Async 查询成功: 114 字符
+[2026-05-05 20:04:16] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:16] [INFO] LLM Local Async 查询成功: 168 字符
+[2026-05-05 20:04:16] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:16] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 20:04:16] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=53307): Max retries exceeded with url: /session/10941795ccb085d82b933aeda5bc9726/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-05-05 20:04:16] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=53307): Max retries exceeded with url: /session/10941795ccb085d82b933aeda5bc9726/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a7089247610>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:04:16] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:04:16] [INFO] Xvfb 已停止
+[2026-05-05 20:04:16] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 20:04:17] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:18] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:04:18] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/61568400972914/posts/%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%B2-%F0%9D%9F%B0%F0%9D%98%81%F0%9D%97%B5-%F0%9D%97%98%F0%9D%97%B1%F0%9D%97%B6%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB-%F0%9D%97%A9%F0%9D%98%82%F0%9D%97%BB%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%B6-%F0%9D%97%94%F0%9D%97%BB%F0%9D%97%BB%F0%9D%98%82%F0%9D%97%AE%F0%9D%97%B9-%F0%9D%97%95%F0%9D%97%BC%F0%9D%98%81%F0%9D%98%80%F0%9D%98%84%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%AE-%F0%9D%97%AA%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B2%F0%9D%97%BB-%F0%9D%97%A6%F0%9D%97%BD%F0%9D%97%BC%F0%9D%97%BF%F0%9D%98%81%F0%9D%98%80-%F0%9D%97%94%F0%9D%98%84%F0%9D%97%AE%F0%9D%97%BF%F0%9D%97%B1%F0%9D%98%80-%F0%9D%97%A1%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B2%F0%9D%97%B2%F0%9D%98%80-%F0%9D%97%A5%F0%9D%97%B2%F0%9D%98%83%F0%9D%97%B2%F0%9D%97%AE%F0%9D%97%B9%F0%9D%97%B2%F0%9D%97%B1bots/122186187194613365/
+[2026-05-05 20:04:18] [INFO] LLM Local Async 查询成功: 104 字符
+[2026-05-05 20:04:18] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:19] [INFO] Xvfb 已启动: DISPLAY=:104
+[2026-05-05 20:04:19] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:04:19] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:04:19] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:04:20] [INFO] LLM Local Async 查询成功: 116 字符
+[2026-05-05 20:04:20] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:20] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 20:04:20] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:04:23] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:24] [INFO] LLM Local Async 查询成功: 107 字符
+[2026-05-05 20:04:24] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:25] [INFO] LLM Local Async 查询成功: 116 字符
+[2026-05-05 20:04:25] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:26] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 20:04:26] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:29] [INFO] LLM Local Async 查询成功: 684 字符
+[2026-05-05 20:04:30] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:30] [INFO] LLM Local Async 查询成功: 55 字符
+[2026-05-05 20:04:30] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:04:30] [INFO] Xvfb 已停止
+[2026-05-05 20:04:35] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:36] [INFO] LLM Local Async 查询成功: 176 字符
+[2026-05-05 20:04:36] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:04:36] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:04:37] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:04:37] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:04:38] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:04:40] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:04:46] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:47] [INFO] LLM Local Async 查询成功: 84 字符
+[2026-05-05 20:04:47] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:48] [INFO] LLM Local Async 查询成功: 106 字符
+[2026-05-05 20:04:48] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:49] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 20:04:54] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:54] [INFO] LLM Local Async 查询成功: 91 字符
+[2026-05-05 20:04:54] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:55] [INFO] LLM Local Async 查询成功: 111 字符
+[2026-05-05 20:04:55] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:04:56] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 20:04:59] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:05:00] [INFO] LLM Local Async 查询成功: 90 字符
+[2026-05-05 20:05:00] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:05:01] [INFO] LLM Local Async 查询成功: 109 字符
+[2026-05-05 20:05:01] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:05:02] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 20:05:05] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:05:06] [INFO] LLM Local Async 查询成功: 107 字符
+[2026-05-05 20:05:06] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:05:06] [INFO] Xvfb 已停止
+[2026-05-05 20:25:08] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:25:08] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.ub.bw/user/11449
+[2026-05-05 20:25:08] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:25:08] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://dsi-africa.org/dsi-3rd-consortium-meeting/biography/1142
+[2026-05-05 20:25:09] [INFO] Xvfb 已启动: DISPLAY=:163
+[2026-05-05 20:25:09] [INFO] Xvfb 已启动: DISPLAY=:166
+[2026-05-05 20:25:09] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:25:09] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:25:09] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:25:09] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:25:09] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:25:09] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.researchgate.net/profile/Gaone-Retshabile
+[2026-05-05 20:25:10] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:25:10] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:25:10] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:25:10] [INFO] Xvfb 已启动: DISPLAY=:105
+[2026-05-05 20:25:11] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:25:11] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:25:11] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:25:11] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:25:12] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:25:13] [WARNING] 打开标签页失败: https://dsi-africa.org/dsi-3rd-consortium-meeting/biography/1142, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:25:13] [WARNING] 打开标签页失败: https://www.ub.bw/user/11449, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:25:16] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:25:17] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=45681): Max retries exceeded with url: /session/8a39fbbc75eaca27738e8bac90ea8091/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71e9eda9c490>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:25:17] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 20:25:17] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:25:17] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=54119): Max retries exceeded with url: /session/e04f43519548b768496845f241e1193a/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75fa75d8f690>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:25:17] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 20:25:17] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:25:17] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:25:17] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:25:17] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:25:17] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:25:17] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 20:25:17] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:25:18] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:25:18] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:25:18] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:25:19] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:25:19] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:25:19] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:25:20] [WARNING] 域名预热失败: https://dsi-africa.org, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:25:20] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=48993): Max retries exceeded with url: /session/445aef406d58cde5541d37909e0bc5e4/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-05 20:25:20] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:25:20] [INFO] Xvfb 已停止
+[2026-05-05 20:25:21] [WARNING] 域名预热失败: https://www.ub.bw, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:25:21] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=42355): Max retries exceeded with url: /session/78092572ff57477ab0400376e9cc6403/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-05 20:25:21] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:25:21] [INFO] Xvfb 已停止
+[2026-05-05 20:25:22] [INFO] 域名预热完成: https://www.researchgate.net
+[2026-05-05 20:25:23] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:25:23] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.rims.gov.bw/converis/portal/detail/Person/6248262;jsessionid=wbd9gP22QdEQcpqRBjabcEET7_k9UEn0NoAxkrdr.www?lang=en_US
+[2026-05-05 20:25:24] [INFO] Xvfb 已启动: DISPLAY=:149
+[2026-05-05 20:25:24] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:25:24] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:25:24] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:25:25] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:25:27] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=48907): Max retries exceeded with url: /session/12f33f6b99b41de1bd8e8d639eb64ad7/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78f590cb01d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:25:27] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=48907): Max retries exceeded with url: /session/12f33f6b99b41de1bd8e8d639eb64ad7/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78f590cc00d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:25:27] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:25:28] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:25:28] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:25:28] [INFO] LLM Local Async 查询成功: 132 字符
+[2026-05-05 20:25:28] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:25:29] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 20:25:29] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=48907): Max retries exceeded with url: /session/12f33f6b99b41de1bd8e8d639eb64ad7/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x78f590c8df10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:25:29] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:25:30] [INFO] LLM Local Async 查询成功: 34 字符
+[2026-05-05 20:25:30] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:25:30] [INFO] Xvfb 已停止
+[2026-05-05 20:25:55] [WARNING] 打开标签页失败: https://www.rims.gov.bw/converis/portal/detail/Person/6248262;jsessionid=wbd9gP22QdEQcpqRBjabcEET7_k9UEn0NoAxkrdr.www?lang=en_US, Message: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=148.0.7778.97)
+Stacktrace:
+#0 0x570a446938aa <unknown>
+#1 0x570a4408e8a9 <unknown>
+#2 0x570a44075f70 <unknown>
+#3 0x570a44075b96 <unknown>
+#4 0x570a440736cb <unknown>
+#5 0x570a4407404f <unknown>
+#6 0x570a440834d0 <unknown>
+#7 0x570a4409d627 <unknown>
+#8 0x570a440a4f2b <unknown>
+#9 0x570a440747b9 <unknown>
+#10 0x570a4409d3bd <unknown>
+#11 0x570a4412ae03 <unknown>
+#12 0x570a440d64cf <unknown>
+#13 0x570a440d7291 <unknown>
+#14 0x570a4465976b <unknown>
+#15 0x570a4465c67d <unknown>
+#16 0x570a446466c8 <unknown>
+#17 0x570a4465d210 <unknown>
+#18 0x570a4462d170 <unknown>
+#19 0x570a446807b8 <unknown>
+#20 0x570a44680955 <unknown>
+#21 0x570a4469230e <unknown>
+#22 0x71391189caa4 <unknown>
+#23 0x713911929c6c <unknown>
+
+[2026-05-05 20:25:59] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 20:25:59] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:25:59] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:25:59] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:26:00] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:26:30] [WARNING] 域名预热失败: https://www.rims.gov.bw, Message: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=148.0.7778.97)
+Stacktrace:
+#0 0x5f0e79d248aa <unknown>
+#1 0x5f0e7971f8a9 <unknown>
+#2 0x5f0e79706f70 <unknown>
+#3 0x5f0e79706b96 <unknown>
+#4 0x5f0e797046cb <unknown>
+#5 0x5f0e7970504f <unknown>
+#6 0x5f0e797144d0 <unknown>
+#7 0x5f0e7972e627 <unknown>
+#8 0x5f0e79735f2b <unknown>
+#9 0x5f0e797057b9 <unknown>
+#10 0x5f0e7972e3bd <unknown>
+#11 0x5f0e797bbe03 <unknown>
+#12 0x5f0e797674cf <unknown>
+#13 0x5f0e79768291 <unknown>
+#14 0x5f0e79cea76b <unknown>
+#15 0x5f0e79ced67d <unknown>
+#16 0x5f0e79cd76c8 <unknown>
+#17 0x5f0e79cee210 <unknown>
+#18 0x5f0e79cbe170 <unknown>
+#19 0x5f0e79d117b8 <unknown>
+#20 0x5f0e79d11955 <unknown>
+#21 0x5f0e79d2330e <unknown>
+#22 0x7ffaed89caa4 <unknown>
+#23 0x7ffaed929c6c <unknown>
+
+[2026-05-05 20:27:00] [ERROR] 执行失败: navigate, Message: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=148.0.7778.97)
+Stacktrace:
+#0 0x5f0e79d248aa <unknown>
+#1 0x5f0e7971f8a9 <unknown>
+#2 0x5f0e79706f70 <unknow
+[2026-05-05 20:27:00] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:27:00] [INFO] Xvfb 已停止
+[2026-05-05 20:27:03] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:27:03] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/posts/to-all-the-phenomenal-women-of-the-university-of-botswana-you-are-cordially-invi/3175393622735065/
+[2026-05-05 20:27:03] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:27:03] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/photos/joinus-lectureseries-june19genomics-a-bridge-to-precision-medicine-register-now-/775224251388453/
+[2026-05-05 20:27:04] [INFO] Xvfb 已启动: DISPLAY=:136
+[2026-05-05 20:27:04] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:27:04] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:27:04] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:27:04] [INFO] Xvfb 已启动: DISPLAY=:154
+[2026-05-05 20:27:05] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:27:05] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:27:05] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:27:05] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:27:06] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:27:11] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:27:11] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:27:12] [INFO] LLM Local Async 查询成功: 127 字符
+[2026-05-05 20:27:12] [INFO] LLM Local Async 查询成功: 192 字符
+[2026-05-05 20:27:17] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:27:17] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:27:17] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:27:17] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:27:18] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:27:18] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:27:19] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:27:20] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:27:20] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:27:20] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:27:20] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:27:20] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:27:20] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:27:21] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:27:23] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:27:24] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:27:24] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:27:24] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:27:24] [INFO] Xvfb 已停止
+[2026-05-05 20:27:26] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:27:26] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/posts/four-faculty-of-business-students-to-represent-university-of-botswana-in-singapo/2545655979042169/
+[2026-05-05 20:27:27] [INFO] Xvfb 已启动: DISPLAY=:137
+[2026-05-05 20:27:27] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:27:27] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:27:27] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:27:28] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:27:30] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:27:31] [INFO] LLM Local Async 查询成功: 81 字符
+[2026-05-05 20:27:31] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:27:31] [INFO] LLM Local Async 查询成功: 132 字符
+[2026-05-05 20:27:31] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:27:32] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 20:27:34] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:27:35] [INFO] LLM Local Async 查询成功: 129 字符
+[2026-05-05 20:27:38] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:27:39] [INFO] LLM Local Async 查询成功: 64 字符
+[2026-05-05 20:27:39] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:27:39] [INFO] LLM Local Async 查询成功: 120 字符
+[2026-05-05 20:27:39] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:27:40] [INFO] LLM Local Async 查询成功: 51 字符
+[2026-05-05 20:27:40] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:27:40] [INFO] Xvfb 已停止
+[2026-05-05 20:27:40] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:27:41] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:27:41] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:27:41] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:27:41] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:27:41] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/cafgen/?locale=id_ID
+[2026-05-05 20:27:42] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:27:42] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:27:42] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:27:42] [INFO] Xvfb 已启动: DISPLAY=:120
+[2026-05-05 20:27:43] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:27:43] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:27:43] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:27:44] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:27:45] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:27:46] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:27:47] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:27:47] [INFO] Xvfb 已停止
+[2026-05-05 20:27:48] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:27:48] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/BNYCpage/posts/-meet-the-dream-team-driving-young-people-to-thrive-and-excel-in-botswana-ngwana/1116767103814984/
+[2026-05-05 20:27:49] [INFO] Xvfb 已启动: DISPLAY=:109
+[2026-05-05 20:27:49] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:27:49] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:27:49] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:27:50] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:27:50] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:27:50] [INFO] LLM Local Async 查询成功: 129 字符
+[2026-05-05 20:27:56] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:27:56] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:27:57] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:27:57] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:27:57] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:27:57] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:27:57] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:27:57] [INFO] LLM Local Async 查询成功: 130 字符
+[2026-05-05 20:27:58] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:28:00] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:28:02] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:28:03] [INFO] LLM Local Async 查询成功: 193 字符
+[2026-05-05 20:28:03] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:28:03] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:28:03] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:28:04] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:28:04] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:28:06] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=50027): Max retries exceeded with url: /session/1de4ca9a9db631069dda7a6184678d09/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7edade151990>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:28:06] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=50027): Max retries exceeded with url: /session/1de4ca9a9db631069dda7a6184678d09/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7edade36dd50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:28:06] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:28:07] [INFO] LLM Local Async 查询成功: 55 字符
+[2026-05-05 20:28:07] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:28:07] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:28:08] [INFO] LLM Local Async 查询成功: 161 字符
+[2026-05-05 20:28:08] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:28:09] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 20:28:09] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=50027): Max retries exceeded with url: /session/1de4ca9a9db631069dda7a6184678d09/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-05-05 20:28:09] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=50027): Max retries exceeded with url: /session/1de4ca9a9db631069dda7a6184678d09/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7edadd606f50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:28:09] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:28:09] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 20:28:09] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=50027): Max retries exceeded with url: /session/1de4ca9a9db631069dda7a6184678d09/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-05-05 20:28:09] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=50027): Max retries exceeded with url: /session/1de4ca9a9db631069dda7a6184678d09/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7edadd6044d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:28:09] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:28:10] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 20:28:10] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=50027): Max retries exceeded with url: /session/1de4ca9a9db631069dda7a6184678d09/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7edadd7fc550>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:28:10] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:28:10] [INFO] Xvfb 已停止
+[2026-05-05 20:28:12] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:28:12] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/61568400972914/posts/%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%B2-%F0%9D%9F%B0%F0%9D%98%81%F0%9D%97%B5-%F0%9D%97%98%F0%9D%97%B1%F0%9D%97%B6%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB-%F0%9D%97%A9%F0%9D%98%82%F0%9D%97%BB%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%B6-%F0%9D%97%94%F0%9D%97%BB%F0%9D%97%BB%F0%9D%98%82%F0%9D%97%AE%F0%9D%97%B9-%F0%9D%97%95%F0%9D%97%BC%F0%9D%98%81%F0%9D%98%80%F0%9D%98%84%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%AE-%F0%9D%97%AA%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B2%F0%9D%97%BB-%F0%9D%97%A6%F0%9D%97%BD%F0%9D%97%BC%F0%9D%97%BF%F0%9D%98%81%F0%9D%98%80-%F0%9D%97%94%F0%9D%98%84%F0%9D%97%AE%F0%9D%97%BF%F0%9D%97%B1%F0%9D%98%80-%F0%9D%97%A1%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B2%F0%9D%97%B2%F0%9D%98%80-%F0%9D%97%A5%F0%9D%97%B2%F0%9D%98%83%F0%9D%97%B2%F0%9D%97%AE%F0%9D%97%B9%F0%9D%97%B2%F0%9D%97%B1bots/122186187194613365/
+[2026-05-05 20:28:13] [INFO] Xvfb 已启动: DISPLAY=:176
+[2026-05-05 20:28:13] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:28:13] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:28:13] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:28:13] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=38309): Max retries exceeded with url: /session/e95ee9e7743f55a88eb25b678b0ac08c/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x70e30cb05650>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:28:13] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=38309): Max retries exceeded with url: /session/e95ee9e7743f55a88eb25b678b0ac08c/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x70e30cb06a90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:28:13] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:28:14] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:28:14] [INFO] LLM Local Async 查询成功: 103 字符
+[2026-05-05 20:28:14] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:28:15] [INFO] LLM Local Async 查询成功: 116 字符
+[2026-05-05 20:28:15] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:28:16] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 20:28:16] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=38309): Max retries exceeded with url: /session/e95ee9e7743f55a88eb25b678b0ac08c/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x70e30cacb290>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:28:16] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:28:17] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 20:28:17] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=38309): Max retries exceeded with url: /session/e95ee9e7743f55a88eb25b678b0ac08c/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-05-05 20:28:17] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=38309): Max retries exceeded with url: /session/e95ee9e7743f55a88eb25b678b0ac08c/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x70e30c901850>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:28:17] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:28:17] [INFO] LLM Local Async 查询成功: 76 字符
+[2026-05-05 20:28:18] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:28:18] [INFO] Xvfb 已停止
+[2026-05-05 20:28:20] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:28:21] [INFO] LLM Local Async 查询成功: 52 字符
+[2026-05-05 20:28:26] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:28:27] [INFO] LLM Local Async 查询成功: 176 字符
+[2026-05-05 20:28:27] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:28:27] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:28:27] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:28:27] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:28:28] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:28:31] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:28:38] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:28:39] [INFO] LLM Local Async 查询成功: 84 字符
+[2026-05-05 20:28:39] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:28:40] [INFO] LLM Local Async 查询成功: 106 字符
+[2026-05-05 20:28:40] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:28:41] [INFO] LLM Local Async 查询成功: 94 字符
+[2026-05-05 20:28:41] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:28:41] [INFO] Xvfb 已停止
+[2026-05-05 20:40:15] [INFO] 缓存命中: 0000-0003-1721-0963 -> https://scholar.google.com/citations?user=KFa7vUMAAAAJ&hl=zh-CN
+[2026-05-05 20:40:15] [INFO] 开始搜索组织链接: Gaone Retshabile @ University of Botswana
+[2026-05-05 20:40:15] [INFO] 缓存命中: https://scholar.google.com/citations?user=KFa7vUMAAAAJ&hl=zh-CN, 9 个链接
+[2026-05-05 20:40:15] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:40:15] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://dsi-africa.org/dsi-3rd-consortium-meeting/biography/1142
+[2026-05-05 20:40:15] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:40:15] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.ub.bw/user/11449
+[2026-05-05 20:40:16] [INFO] Xvfb 已启动: DISPLAY=:137
+[2026-05-05 20:40:16] [INFO] Xvfb 已启动: DISPLAY=:134
+[2026-05-05 20:40:16] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:40:16] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:40:16] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.researchgate.net/profile/Gaone-Retshabile
+[2026-05-05 20:40:16] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:40:17] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:40:17] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:40:17] [INFO] Xvfb 已启动: DISPLAY=:172
+[2026-05-05 20:40:18] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:40:18] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:40:18] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:40:18] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:40:18] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:40:18] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:40:18] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:40:20] [WARNING] 打开标签页失败: https://dsi-africa.org/dsi-3rd-consortium-meeting/biography/1142, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:40:21] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:40:21] [WARNING] 打开标签页失败: https://www.ub.bw/user/11449, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:40:24] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=32895): Max retries exceeded with url: /session/49e823bb1adde5ce66a2471280a852c7/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7e01b069c210>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:40:24] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 20:40:24] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:40:25] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:40:25] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:40:25] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=41123): Max retries exceeded with url: /session/dcff0f230d9063a65dabdb99fff0120c/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7affc6aa4910>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:40:25] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 20:40:25] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:40:25] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:40:25] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:40:26] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:40:26] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:40:26] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:40:27] [INFO] LLM Local Async 查询成功: 79 字符
+[2026-05-05 20:40:27] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 20:40:27] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:40:27] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:40:27] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:40:27] [WARNING] 域名预热失败: https://dsi-africa.org, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:40:27] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=42363): Max retries exceeded with url: /session/39e07057fbf0f820f7bdac08f8b0e4ec/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-05 20:40:28] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:40:28] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:40:28] [INFO] Xvfb 已停止
+[2026-05-05 20:40:29] [WARNING] 域名预热失败: https://www.ub.bw, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:40:29] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=55631): Max retries exceeded with url: /session/c07cd1df71897f52550c80f0d6e30484/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-05 20:40:29] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:40:29] [INFO] Xvfb 已停止
+[2026-05-05 20:40:30] [INFO] 域名预热完成: https://www.researchgate.net
+[2026-05-05 20:40:31] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:40:31] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.rims.gov.bw/converis/portal/detail/Person/6248262;jsessionid=wbd9gP22QdEQcpqRBjabcEET7_k9UEn0NoAxkrdr.www?lang=en_US
+[2026-05-05 20:40:32] [INFO] Xvfb 已启动: DISPLAY=:193
+[2026-05-05 20:40:32] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:40:32] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:40:32] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:40:33] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:40:34] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=39309): Max retries exceeded with url: /session/8e7283d580c93fa4704f0002fe0ed59e/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73f00b7f6d50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:40:34] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=39309): Max retries exceeded with url: /session/8e7283d580c93fa4704f0002fe0ed59e/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73f00b7abb10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:40:34] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:40:35] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:40:35] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:40:36] [INFO] LLM Local Async 查询成功: 136 字符
+[2026-05-05 20:40:36] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:40:37] [INFO] LLM Local Async 查询成功: 54 字符
+[2026-05-05 20:40:37] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:40:37] [INFO] Xvfb 已停止
+[2026-05-05 20:40:42] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:40:44] [INFO] LLM Local Async 查询成功: 1082 字符
+[2026-05-05 20:40:44] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:40:44] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-05-05 20:40:55] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:40:55] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:40:57] [INFO] LLM Local Async 查询成功: 270 字符
+[2026-05-05 20:40:57] [INFO] LLM Local Async 查询成功: 270 字符
+[2026-05-05 20:40:57] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:40:57] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-05-05 20:40:57] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:40:59] [INFO] LLM Local Async 查询成功: 704 字符
+[2026-05-05 20:40:59] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 3 页, 收集 1 条信息
+[2026-05-05 20:40:59] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:40:59] [INFO] Xvfb 已停止
+[2026-05-05 20:41:00] [INFO] 开始搜索社交媒体链接: Gaone Retshabile @ University of Botswana
+[2026-05-05 20:41:00] [INFO] 缓存命中: https://scholar.google.com/citations?user=KFa7vUMAAAAJ&hl=zh-CN, 10 个 social_media 链接
+[2026-05-05 20:41:01] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:41:01] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/posts/to-all-the-phenomenal-women-of-the-university-of-botswana-you-are-cordially-invi/3175393622735065/
+[2026-05-05 20:41:02] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:41:02] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/photos/joinus-lectureseries-june19genomics-a-bridge-to-precision-medicine-register-now-/775224251388453/
+[2026-05-05 20:41:02] [INFO] Xvfb 已启动: DISPLAY=:134
+[2026-05-05 20:41:03] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:41:03] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:41:03] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:41:03] [INFO] Xvfb 已启动: DISPLAY=:152
+[2026-05-05 20:41:03] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:41:03] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:41:04] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:41:04] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:41:04] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:41:09] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:41:10] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:41:10] [INFO] LLM Local Async 查询成功: 127 字符
+[2026-05-05 20:41:11] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:41:15] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:41:16] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:41:16] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:41:16] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:41:16] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:41:16] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:41:16] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:41:17] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:41:17] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:41:17] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:41:17] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:41:17] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:41:17] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:41:19] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:41:20] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:41:21] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:41:22] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:41:22] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:41:22] [INFO] Xvfb 已停止
+[2026-05-05 20:41:23] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:41:23] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/posts/four-faculty-of-business-students-to-represent-university-of-botswana-in-singapo/2545655979042169/
+[2026-05-05 20:41:24] [INFO] Xvfb 已启动: DISPLAY=:106
+[2026-05-05 20:41:24] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:41:24] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:41:24] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:41:25] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:41:27] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:41:28] [INFO] LLM Local Async 查询成功: 69 字符
+[2026-05-05 20:41:28] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:41:29] [INFO] LLM Local Async 查询成功: 122 字符
+[2026-05-05 20:41:29] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:41:29] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 20:41:31] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:41:32] [INFO] LLM Local Async 查询成功: 129 字符
+[2026-05-05 20:41:35] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:41:36] [INFO] LLM Local Async 查询成功: 89 字符
+[2026-05-05 20:41:36] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:41:37] [INFO] LLM Local Async 查询成功: 120 字符
+[2026-05-05 20:41:37] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:41:38] [INFO] LLM Local Async 查询成功: 58 字符
+[2026-05-05 20:41:38] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:41:38] [INFO] Xvfb 已停止
+[2026-05-05 20:41:38] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:41:38] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:41:38] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:41:38] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:41:39] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:41:39] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:41:39] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:41:39] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/cafgen/?locale=id_ID
+[2026-05-05 20:41:40] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:41:40] [INFO] Xvfb 已启动: DISPLAY=:181
+[2026-05-05 20:41:41] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:41:41] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:41:41] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:41:41] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:41:42] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:41:43] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:41:44] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:41:44] [INFO] Xvfb 已停止
+[2026-05-05 20:41:45] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:41:45] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/BNYCpage/posts/-meet-the-dream-team-driving-young-people-to-thrive-and-excel-in-botswana-ngwana/1116767103814984/
+[2026-05-05 20:41:46] [INFO] Xvfb 已启动: DISPLAY=:168
+[2026-05-05 20:41:47] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:41:47] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:41:47] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:41:47] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:41:48] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:41:49] [INFO] LLM Local Async 查询成功: 315 字符
+[2026-05-05 20:41:50] [WARNING] 打开标签页失败: https://www.facebook.com/cafgen/about, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 20:41:53] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:41:54] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=53241): Max retries exceeded with url: /session/442fd9c37e3846c519303224c0798089/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b91f9aa05d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:41:54] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:41:54] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:41:54] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:41:54] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:41:55] [INFO] LLM Local Async 查询成功: 130 字符
+[2026-05-05 20:41:55] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:41:58] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:42:00] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:01] [INFO] LLM Local Async 查询成功: 189 字符
+[2026-05-05 20:42:01] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:42:01] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:42:01] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:42:01] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:42:02] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:42:03] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:04] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 20:42:04] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:05] [INFO] LLM Local Async 查询成功: 115 字符
+[2026-05-05 20:42:05] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:05] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:42:05] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 20:42:11] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:12] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:12] [INFO] LLM Local Async 查询成功: 52 字符
+[2026-05-05 20:42:12] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:13] [INFO] LLM Local Async 查询成功: 100 字符
+[2026-05-05 20:42:13] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:13] [INFO] LLM Local Async 查询成功: 113 字符
+[2026-05-05 20:42:13] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:14] [INFO] LLM Local Async 查询成功: 71 字符
+[2026-05-05 20:42:14] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:42:14] [INFO] Xvfb 已停止
+[2026-05-05 20:42:14] [INFO] LLM Local Async 查询成功: 116 字符
+[2026-05-05 20:42:14] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:14] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 20:42:15] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 20:42:15] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/61568400972914/posts/%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%B2-%F0%9D%9F%B0%F0%9D%98%81%F0%9D%97%B5-%F0%9D%97%98%F0%9D%97%B1%F0%9D%97%B6%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB-%F0%9D%97%A9%F0%9D%98%82%F0%9D%97%BB%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%B6-%F0%9D%97%94%F0%9D%97%BB%F0%9D%97%BB%F0%9D%98%82%F0%9D%97%AE%F0%9D%97%B9-%F0%9D%97%95%F0%9D%97%BC%F0%9D%98%81%F0%9D%98%80%F0%9D%98%84%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%AE-%F0%9D%97%AA%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B2%F0%9D%97%BB-%F0%9D%97%A6%F0%9D%97%BD%F0%9D%97%BC%F0%9D%97%BF%F0%9D%98%81%F0%9D%98%80-%F0%9D%97%94%F0%9D%98%84%F0%9D%97%AE%F0%9D%97%BF%F0%9D%97%B1%F0%9D%98%80-%F0%9D%97%A1%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B2%F0%9D%97%B2%F0%9D%98%80-%F0%9D%97%A5%F0%9D%97%B2%F0%9D%98%83%F0%9D%97%B2%F0%9D%97%AE%F0%9D%97%B9%F0%9D%97%B2%F0%9D%97%B1bots/122186187194613365/
+[2026-05-05 20:42:16] [INFO] Xvfb 已启动: DISPLAY=:160
+[2026-05-05 20:42:16] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:42:16] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 20:42:16] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:42:17] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:42:19] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=37241): Max retries exceeded with url: /session/d57ee6a7e53bd54685ff949b17a1077e/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x783d903df550>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:42:19] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=37241): Max retries exceeded with url: /session/d57ee6a7e53bd54685ff949b17a1077e/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x783d903f8d50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:42:19] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:20] [INFO] LLM Local Async 查询成功: 74 字符
+[2026-05-05 20:42:20] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:21] [INFO] LLM Local Async 查询成功: 114 字符
+[2026-05-05 20:42:21] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:21] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 20:42:21] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=37241): Max retries exceeded with url: /session/d57ee6a7e53bd54685ff949b17a1077e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-05-05 20:42:21] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=37241): Max retries exceeded with url: /session/d57ee6a7e53bd54685ff949b17a1077e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x783d90129c90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:42:21] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:22] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 20:42:22] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=37241): Max retries exceeded with url: /session/d57ee6a7e53bd54685ff949b17a1077e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-05-05 20:42:22] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=37241): Max retries exceeded with url: /session/d57ee6a7e53bd54685ff949b17a1077e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x783d902c0d50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 20:42:22] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:42:22] [INFO] Xvfb 已停止
+[2026-05-05 20:42:23] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:26] [INFO] LLM Local Async 查询成功: 684 字符
+[2026-05-05 20:42:31] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:32] [INFO] LLM Local Async 查询成功: 176 字符
+[2026-05-05 20:42:32] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 20:42:32] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:42:33] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 20:42:33] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 20:42:33] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 20:42:36] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 20:42:42] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:43] [INFO] LLM Local Async 查询成功: 92 字符
+[2026-05-05 20:42:43] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:44] [INFO] LLM Local Async 查询成功: 106 字符
+[2026-05-05 20:42:44] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:45] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 20:42:46] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:47] [INFO] LLM Local Async 查询成功: 84 字符
+[2026-05-05 20:42:47] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:48] [INFO] LLM Local Async 查询成功: 106 字符
+[2026-05-05 20:42:48] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:48] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 20:42:51] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:52] [INFO] LLM Local Async 查询成功: 107 字符
+[2026-05-05 20:42:52] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:53] [INFO] LLM Local Async 查询成功: 110 字符
+[2026-05-05 20:42:53] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:54] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 20:42:58] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 20:42:58] [INFO] LLM Local Async 查询成功: 55 字符
+[2026-05-05 20:42:58] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 20:42:58] [INFO] Xvfb 已停止
+[2026-05-05 20:43:00] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-05-05 20:44:07] [WARNING] LLM API Async 重试 1: Server disconnected
+[2026-05-05 20:46:08] [WARNING] LLM API Async 重试 2: 
+[2026-05-05 20:48:10] [ERROR] LLM API Async 查询失败: 
+[2026-05-05 20:48:10] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-05-05 20:50:11] [WARNING] LLM API Async 重试 1: 
+[2026-05-05 20:52:13] [WARNING] LLM API Async 重试 2: 
+[2026-05-05 20:54:15] [ERROR] LLM API Async 查询失败: 
+[2026-05-05 21:28:06] [INFO] 缓存命中: 0000-0003-1721-0963 -> https://scholar.google.com/citations?user=KFa7vUMAAAAJ&hl=zh-CN
+[2026-05-05 21:28:06] [INFO] 开始搜索组织链接: Gaone Retshabile @ University of Botswana
+[2026-05-05 21:28:06] [INFO] 缓存命中: https://scholar.google.com/citations?user=KFa7vUMAAAAJ&hl=zh-CN, 9 个链接
+[2026-05-05 21:28:07] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 21:28:07] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.ub.bw/user/11449
+[2026-05-05 21:28:07] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 21:28:07] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://dsi-africa.org/dsi-3rd-consortium-meeting/biography/1142
+[2026-05-05 21:28:08] [INFO] Xvfb 已启动: DISPLAY=:105
+[2026-05-05 21:28:08] [INFO] Xvfb 已启动: DISPLAY=:104
+[2026-05-05 21:28:08] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 21:28:08] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.researchgate.net/profile/Gaone-Retshabile
+[2026-05-05 21:28:08] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:28:08] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 21:28:08] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:28:08] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:28:09] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:28:09] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 21:28:09] [INFO] Xvfb 已启动: DISPLAY=:141
+[2026-05-05 21:28:09] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:28:09] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:28:10] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:28:10] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 21:28:10] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:28:10] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:28:11] [WARNING] 打开标签页失败: https://dsi-africa.org/dsi-3rd-consortium-meeting/biography/1142, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 21:28:12] [WARNING] 打开标签页失败: https://www.ub.bw/user/11449, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 21:28:15] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:28:15] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=36019): Max retries exceeded with url: /session/150b7e0e71f91b134578f800ae339409/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b114b598250>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 21:28:15] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 21:28:16] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:28:16] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:28:16] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:28:16] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=39287): Max retries exceeded with url: /session/454f901e8b7669ca33270451f5183559/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73d54bfa0250>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 21:28:16] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 21:28:16] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:28:16] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 21:28:16] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 21:28:16] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:28:16] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:28:16] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:28:17] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:28:17] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:28:19] [WARNING] 域名预热失败: https://dsi-africa.org, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 21:28:19] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=48197): Max retries exceeded with url: /session/f1b21ec54992051898972a72ba4ae4e9/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-05 21:28:19] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:28:19] [INFO] Xvfb 已停止
+[2026-05-05 21:28:20] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:28:20] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:28:21] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:28:23] [WARNING] 域名预热失败: https://www.ub.bw, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 21:28:23] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=54645): Max retries exceeded with url: /session/f42edd15fd70335187297923b1308653/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-05 21:28:23] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:28:23] [INFO] Xvfb 已停止
+[2026-05-05 21:28:23] [INFO] 域名预热完成: https://www.researchgate.net
+[2026-05-05 21:28:29] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:28:29] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 21:28:29] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:28:30] [INFO] LLM Local Async 查询成功: 161 字符
+[2026-05-05 21:28:30] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:28:31] [INFO] LLM Local Async 查询成功: 46 字符
+[2026-05-05 21:28:31] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:28:31] [INFO] Xvfb 已停止
+[2026-05-05 21:28:32] [INFO] 开始搜索社交媒体链接: Gaone Retshabile @ University of Botswana
+[2026-05-05 21:28:32] [INFO] 缓存命中: https://scholar.google.com/citations?user=KFa7vUMAAAAJ&hl=zh-CN, 10 个 social_media 链接
+[2026-05-05 21:28:33] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 21:28:33] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/posts/to-all-the-phenomenal-women-of-the-university-of-botswana-you-are-cordially-invi/3175393622735065/
+[2026-05-05 21:28:34] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 21:28:34] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/photos/joinus-lectureseries-june19genomics-a-bridge-to-precision-medicine-register-now-/775224251388453/
+[2026-05-05 21:28:34] [INFO] Xvfb 已启动: DISPLAY=:142
+[2026-05-05 21:28:35] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:28:35] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 21:28:35] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:28:35] [INFO] Xvfb 已启动: DISPLAY=:160
+[2026-05-05 21:28:35] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:28:36] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:28:36] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 21:28:36] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:28:37] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:28:42] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:28:43] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:28:43] [INFO] LLM Local Async 查询成功: 127 字符
+[2026-05-05 21:28:44] [INFO] LLM Local Async 查询成功: 192 字符
+[2026-05-05 21:28:48] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:28:49] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 21:28:49] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 21:28:49] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:28:49] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:28:49] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:28:49] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:28:50] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:28:50] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 21:28:50] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 21:28:50] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:28:50] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:28:50] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:28:51] [WARNING] 域名预热失败: https://www.facebook.com, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 21:28:51] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=35957): Max retries exceeded with url: /session/f9f88b49b6c0dd8e55159f6a35a3be8f/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-05 21:28:51] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:28:51] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:28:51] [INFO] Xvfb 已停止
+[2026-05-05 21:28:52] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 21:28:52] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/posts/four-faculty-of-business-students-to-represent-university-of-botswana-in-singapo/2545655979042169/
+[2026-05-05 21:28:53] [INFO] Xvfb 已启动: DISPLAY=:107
+[2026-05-05 21:28:54] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 21:28:54] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:28:54] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 21:28:54] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:28:54] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:28:59] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:00] [INFO] LLM Local Async 查询成功: 69 字符
+[2026-05-05 21:29:00] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:01] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:01] [INFO] LLM Local Async 查询成功: 132 字符
+[2026-05-05 21:29:01] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:02] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 21:29:02] [INFO] LLM Local Async 查询成功: 129 字符
+[2026-05-05 21:29:07] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:08] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:08] [INFO] LLM Local Async 查询成功: 64 字符
+[2026-05-05 21:29:08] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:08] [INFO] LLM Local Async 查询成功: 192 字符
+[2026-05-05 21:29:08] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 21:29:08] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:29:09] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:29:09] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:29:09] [INFO] LLM Local Async 查询成功: 114 字符
+[2026-05-05 21:29:09] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:09] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:29:10] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 21:29:12] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 21:29:16] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:16] [INFO] LLM Local Async 查询成功: 89 字符
+[2026-05-05 21:29:16] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:17] [INFO] LLM Local Async 查询成功: 110 字符
+[2026-05-05 21:29:17] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:18] [INFO] LLM Local Async 查询成功: 66 字符
+[2026-05-05 21:29:18] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:29:18] [INFO] Xvfb 已停止
+[2026-05-05 21:29:19] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:20] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 21:29:20] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/cafgen/?locale=id_ID
+[2026-05-05 21:29:20] [INFO] LLM Local Async 查询成功: 90 字符
+[2026-05-05 21:29:20] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:21] [INFO] Xvfb 已启动: DISPLAY=:169
+[2026-05-05 21:29:21] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:29:21] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 21:29:21] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:29:21] [INFO] LLM Local Async 查询成功: 119 字符
+[2026-05-05 21:29:21] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:22] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:29:22] [INFO] LLM Local Async 查询成功: 68 字符
+[2026-05-05 21:29:22] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:29:22] [INFO] Xvfb 已停止
+[2026-05-05 21:29:24] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 21:29:24] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/BNYCpage/posts/-meet-the-dream-team-driving-young-people-to-thrive-and-excel-in-botswana-ngwana/1116767103814984/
+[2026-05-05 21:29:25] [INFO] Xvfb 已启动: DISPLAY=:174
+[2026-05-05 21:29:25] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:29:25] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 21:29:25] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:29:26] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:29:28] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:28] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 21:29:32] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:33] [INFO] LLM Local Async 查询成功: 130 字符
+[2026-05-05 21:29:33] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:34] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 21:29:34] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 21:29:34] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:29:35] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:29:35] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:29:35] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:29:38] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 21:29:39] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:40] [INFO] LLM Local Async 查询成功: 189 字符
+[2026-05-05 21:29:40] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 21:29:40] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:29:40] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:29:40] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:29:41] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:29:44] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 21:29:45] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=39851): Max retries exceeded with url: /session/cbb9d7164025ac222a8b68e0775b94be/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7abf9972cf90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 21:29:45] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=39851): Max retries exceeded with url: /session/cbb9d7164025ac222a8b68e0775b94be/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7abf9a1d7710>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 21:29:45] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:46] [INFO] LLM Local Async 查询成功: 55 字符
+[2026-05-05 21:29:46] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:47] [INFO] LLM Local Async 查询成功: 153 字符
+[2026-05-05 21:29:47] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:48] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 21:29:48] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=39851): Max retries exceeded with url: /session/cbb9d7164025ac222a8b68e0775b94be/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-05-05 21:29:48] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=39851): Max retries exceeded with url: /session/cbb9d7164025ac222a8b68e0775b94be/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7abf98d5a950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 21:29:48] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:48] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 21:29:48] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=39851): Max retries exceeded with url: /session/cbb9d7164025ac222a8b68e0775b94be/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-05-05 21:29:48] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=39851): Max retries exceeded with url: /session/cbb9d7164025ac222a8b68e0775b94be/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7abf98d67b50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 21:29:48] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:49] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 21:29:49] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=39851): Max retries exceeded with url: /session/cbb9d7164025ac222a8b68e0775b94be/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7abf98d58510>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 21:29:49] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:29:49] [INFO] Xvfb 已停止
+[2026-05-05 21:29:50] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 21:29:50] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/61568400972914/posts/%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%B2-%F0%9D%9F%B0%F0%9D%98%81%F0%9D%97%B5-%F0%9D%97%98%F0%9D%97%B1%F0%9D%97%B6%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB-%F0%9D%97%A9%F0%9D%98%82%F0%9D%97%BB%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%B6-%F0%9D%97%94%F0%9D%97%BB%F0%9D%97%BB%F0%9D%98%82%F0%9D%97%AE%F0%9D%97%B9-%F0%9D%97%95%F0%9D%97%BC%F0%9D%98%81%F0%9D%98%80%F0%9D%98%84%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%AE-%F0%9D%97%AA%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B2%F0%9D%97%BB-%F0%9D%97%A6%F0%9D%97%BD%F0%9D%97%BC%F0%9D%97%BF%F0%9D%98%81%F0%9D%98%80-%F0%9D%97%94%F0%9D%98%84%F0%9D%97%AE%F0%9D%97%BF%F0%9D%97%B1%F0%9D%98%80-%F0%9D%97%A1%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B2%F0%9D%97%B2%F0%9D%98%80-%F0%9D%97%A5%F0%9D%97%B2%F0%9D%98%83%F0%9D%97%B2%F0%9D%97%AE%F0%9D%97%B9%F0%9D%97%B2%F0%9D%97%B1bots/122186187194613365/
+[2026-05-05 21:29:51] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:51] [INFO] Xvfb 已启动: DISPLAY=:180
+[2026-05-05 21:29:52] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:29:52] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 21:29:52] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:29:52] [INFO] LLM Local Async 查询成功: 104 字符
+[2026-05-05 21:29:52] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:52] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:29:53] [INFO] LLM Local Async 查询成功: 116 字符
+[2026-05-05 21:29:53] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:54] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 21:29:55] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=53649): Max retries exceeded with url: /session/583359b753ceb72070317cb182647349/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x729e2dbed690>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 21:29:55] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=53649): Max retries exceeded with url: /session/583359b753ceb72070317cb182647349/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x729e2e67bc50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 21:29:55] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:55] [INFO] LLM Local Async 查询成功: 77 字符
+[2026-05-05 21:29:55] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:57] [INFO] LLM Local Async 查询成功: 113 字符
+[2026-05-05 21:29:57] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:57] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 21:29:57] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=53649): Max retries exceeded with url: /session/583359b753ceb72070317cb182647349/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-05-05 21:29:57] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=53649): Max retries exceeded with url: /session/583359b753ceb72070317cb182647349/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x729e2d803090>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 21:29:57] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:29:58] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 21:29:58] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=53649): Max retries exceeded with url: /session/583359b753ceb72070317cb182647349/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-05-05 21:29:58] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=53649): Max retries exceeded with url: /session/583359b753ceb72070317cb182647349/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x729e2d95a010>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 21:29:58] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:29:58] [INFO] Xvfb 已停止
+[2026-05-05 21:29:59] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:30:02] [INFO] LLM Local Async 查询成功: 684 字符
+[2026-05-05 21:30:08] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:30:09] [INFO] LLM Local Async 查询成功: 176 字符
+[2026-05-05 21:30:09] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 21:30:09] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:30:10] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 21:30:10] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 21:30:12] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 21:30:15] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 21:30:22] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:30:23] [INFO] LLM Local Async 查询成功: 81 字符
+[2026-05-05 21:30:23] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:30:24] [INFO] LLM Local Async 查询成功: 106 字符
+[2026-05-05 21:30:24] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:30:24] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 21:30:25] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:30:26] [INFO] LLM Local Async 查询成功: 81 字符
+[2026-05-05 21:30:26] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:30:27] [INFO] LLM Local Async 查询成功: 106 字符
+[2026-05-05 21:30:27] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:30:28] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 21:30:31] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:30:32] [INFO] LLM Local Async 查询成功: 55 字符
+[2026-05-05 21:30:32] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:30:32] [INFO] LLM Local Async 查询成功: 113 字符
+[2026-05-05 21:30:32] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 21:30:33] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 21:30:35] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 21:30:35] [INFO] Xvfb 已停止
+[2026-05-05 21:30:36] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-05-05 21:32:36] [WARNING] LLM API Async 重试 1: 
+[2026-05-05 21:34:38] [WARNING] LLM API Async 重试 2: 
+[2026-05-05 21:36:40] [ERROR] LLM API Async 查询失败: 
+[2026-05-05 21:36:40] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-05-05 21:36:43] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-05-05 21:36:47] [INFO] LLM API Async 首个流式 chunk: model=deepseek-v4-pro, first_chunk_seconds=0.00
+[2026-05-05 21:38:41] [WARNING] LLM API Async 重试 1: 
+[2026-05-05 21:40:06] [WARNING] LLM API Async 重试 1: Timeout on reading data from socket
+[2026-05-05 21:40:24] [INFO] LLM API Async 首个流式 chunk: model=deepseek-v4-pro, first_chunk_seconds=0.00
+[2026-05-05 21:40:43] [WARNING] LLM API Async 重试 2: 
+[2026-05-05 21:40:55] [INFO] LLM API Async 首个内容 token: model=deepseek-v4-pro, first_content_seconds=31.22
+[2026-05-05 21:42:45] [ERROR] LLM API Async 查询失败: 
+[2026-05-05 21:48:45] [WARNING] LLM API Async 重试 2: Timeout on reading data from socket
+[2026-05-05 21:48:54] [INFO] LLM API Async 首个流式 chunk: model=deepseek-v4-pro, first_chunk_seconds=0.00
+[2026-05-05 21:54:02] [ERROR] LLM API Async 查询失败: Timeout on reading data from socket
+[2026-05-05 21:55:23] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-05-05 21:55:26] [INFO] LLM API Async 首个流式 chunk: model=deepseek-v4-pro, first_chunk_seconds=0.00
+[2026-05-05 21:55:39] [INFO] LLM API Async 首个内容 token: model=deepseek-v4-pro, first_content_seconds=12.81
+[2026-05-05 21:55:39] [INFO] LLM API Async 查询成功: model=deepseek-v4-pro, request_chars=6, response_chars=2
+[2026-05-05 22:07:43] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-05-05 22:07:50] [INFO] LLM API Async 首个流式 chunk: model=deepseek-v4-pro, first_chunk_seconds=0.00
+[2026-05-05 22:15:31] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-05-05 22:15:36] [INFO] LLM API Async 首个流式 chunk: model=deepseek-v4-pro, first_chunk_seconds=0.00
+[2026-05-05 22:16:20] [INFO] LLM API Async 首个内容 token: model=deepseek-v4-pro, first_content_seconds=44.38
+[2026-05-05 22:57:21] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-05-05 22:57:29] [INFO] LLM API Async 首个流式 chunk: model=deepseek-v4-pro, first_chunk_seconds=0.00
+[2026-05-05 22:59:21] [INFO] LLM API Async 首个内容 token: model=deepseek-v4-pro, first_content_seconds=112.29
+[2026-05-05 23:21:26] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-05-05 23:21:28] [INFO] LLM API Async 响应 headers: model=deepseek/deepseek-v4-pro, headers_seconds=1.71
+[2026-05-05 23:21:28] [INFO] LLM API Async 首个流式 chunk: model=deepseek/deepseek-v4-pro, first_chunk_seconds=1.71
+[2026-05-05 23:21:28] [INFO] LLM API Async 首个推理 token: model=deepseek/deepseek-v4-pro, first_reasoning_seconds=1.71
+[2026-05-05 23:21:35] [INFO] LLM API Async 首个内容 token: model=deepseek/deepseek-v4-pro, first_content_seconds=8.90
+[2026-05-05 23:21:40] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=13.54, data_lines=100, reasoning_chars=626, content_chars=511
+[2026-05-05 23:21:48] [INFO] LLM API Async 查询成功: model=deepseek/deepseek-v4-pro, request_chars=22724, response_chars=1299
+[2026-05-05 23:22:17] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-05-05 23:22:19] [INFO] LLM API Async 响应 headers: model=deepseek/deepseek-v4-pro, headers_seconds=2.31
+[2026-05-05 23:22:19] [INFO] LLM API Async 首个流式 chunk: model=deepseek/deepseek-v4-pro, first_chunk_seconds=2.31
+[2026-05-05 23:22:19] [INFO] LLM API Async 首个推理 token: model=deepseek/deepseek-v4-pro, first_reasoning_seconds=2.31
+[2026-05-05 23:22:23] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=5.72, data_lines=100, reasoning_chars=226, content_chars=0
+[2026-05-05 23:22:26] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=9.16, data_lines=200, reasoning_chars=444, content_chars=0
+[2026-05-05 23:22:28] [INFO] LLM API Async 首个内容 token: model=deepseek/deepseek-v4-pro, first_content_seconds=11.57
+[2026-05-05 23:22:29] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=12.44, data_lines=300, reasoning_chars=574, content_chars=65
+[2026-05-05 23:22:32] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=15.31, data_lines=400, reasoning_chars=574, content_chars=307
+[2026-05-05 23:22:35] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=18.36, data_lines=500, reasoning_chars=574, content_chars=536
+[2026-05-05 23:22:38] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=21.40, data_lines=600, reasoning_chars=574, content_chars=798
+[2026-05-05 23:22:41] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=24.17, data_lines=700, reasoning_chars=574, content_chars=1033
+[2026-05-05 23:22:44] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=27.05, data_lines=800, reasoning_chars=574, content_chars=1283
+[2026-05-05 23:22:47] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=30.26, data_lines=900, reasoning_chars=574, content_chars=1544
+[2026-05-05 23:22:50] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=33.39, data_lines=1000, reasoning_chars=574, content_chars=1759
+[2026-05-05 23:22:53] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=36.19, data_lines=1100, reasoning_chars=574, content_chars=2067
+[2026-05-05 23:22:56] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=39.16, data_lines=1200, reasoning_chars=574, content_chars=2497
+[2026-05-05 23:22:59] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=42.27, data_lines=1300, reasoning_chars=574, content_chars=2761
+[2026-05-05 23:23:02] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=45.39, data_lines=1400, reasoning_chars=574, content_chars=2955
+[2026-05-05 23:23:05] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=48.16, data_lines=1500, reasoning_chars=574, content_chars=3171
+[2026-05-05 23:23:08] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=51.11, data_lines=1600, reasoning_chars=574, content_chars=3369
+[2026-05-05 23:23:11] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=54.57, data_lines=1700, reasoning_chars=574, content_chars=3620
+[2026-05-05 23:23:14] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=57.38, data_lines=1800, reasoning_chars=574, content_chars=3879
+[2026-05-05 23:23:17] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=60.20, data_lines=1900, reasoning_chars=574, content_chars=4096
+[2026-05-05 23:23:20] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=63.34, data_lines=2000, reasoning_chars=574, content_chars=4303
+[2026-05-05 23:23:21] [INFO] LLM API Async 查询成功: model=deepseek/deepseek-v4-pro, request_chars=22724, response_chars=4349
+[2026-05-05 23:26:53] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-05-05 23:26:56] [INFO] LLM API Async 响应 headers: model=deepseek/deepseek-v4-pro, headers_seconds=3.29
+[2026-05-05 23:26:56] [INFO] LLM API Async 首个流式 chunk: model=deepseek/deepseek-v4-pro, first_chunk_seconds=3.29
+[2026-05-05 23:26:56] [INFO] LLM API Async 首个推理 token: model=deepseek/deepseek-v4-pro, first_reasoning_seconds=3.30
+[2026-05-05 23:27:00] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=6.76, data_lines=100, reasoning_chars=239, content_chars=0
+[2026-05-05 23:27:02] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=9.52, data_lines=200, reasoning_chars=421, content_chars=0
+[2026-05-05 23:27:06] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=13.03, data_lines=300, reasoning_chars=633, content_chars=0
+[2026-05-05 23:27:09] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=16.21, data_lines=400, reasoning_chars=818, content_chars=0
+[2026-05-05 23:27:10] [INFO] LLM API Async 首个内容 token: model=deepseek/deepseek-v4-pro, first_content_seconds=17.36
+[2026-05-05 23:27:12] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=19.22, data_lines=500, reasoning_chars=891, content_chars=138
+[2026-05-05 23:27:15] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=22.39, data_lines=600, reasoning_chars=891, content_chars=406
+[2026-05-05 23:27:18] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=25.22, data_lines=700, reasoning_chars=891, content_chars=635
+[2026-05-05 23:27:21] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=28.16, data_lines=800, reasoning_chars=891, content_chars=887
+[2026-05-05 23:27:24] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=30.98, data_lines=900, reasoning_chars=891, content_chars=1144
+[2026-05-05 23:27:27] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=33.92, data_lines=1000, reasoning_chars=891, content_chars=1410
+[2026-05-05 23:27:30] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=37.14, data_lines=1100, reasoning_chars=891, content_chars=1658
+[2026-05-05 23:27:33] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=39.89, data_lines=1200, reasoning_chars=891, content_chars=1856
+[2026-05-05 23:27:36] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=43.02, data_lines=1300, reasoning_chars=891, content_chars=2120
+[2026-05-05 23:27:39] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=46.20, data_lines=1400, reasoning_chars=891, content_chars=2422
+[2026-05-05 23:27:42] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=49.18, data_lines=1500, reasoning_chars=891, content_chars=2727
+[2026-05-05 23:27:45] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=52.32, data_lines=1600, reasoning_chars=891, content_chars=2922
+[2026-05-05 23:27:48] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=55.43, data_lines=1700, reasoning_chars=891, content_chars=3135
+[2026-05-05 23:27:51] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=58.18, data_lines=1800, reasoning_chars=891, content_chars=3382
+[2026-05-05 23:27:54] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=61.13, data_lines=1900, reasoning_chars=891, content_chars=3612
+[2026-05-05 23:27:57] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=64.49, data_lines=2000, reasoning_chars=891, content_chars=3825
+[2026-05-05 23:27:57] [INFO] LLM API Async 查询成功: model=deepseek/deepseek-v4-pro, request_chars=22724, response_chars=3830
+[2026-05-05 23:31:14] [INFO] 缓存命中: 0000-0003-1721-0963 -> https://scholar.google.com/citations?user=KFa7vUMAAAAJ&hl=zh-CN
+[2026-05-05 23:31:14] [INFO] 开始搜索组织链接: Gaone Retshabile @ University of Botswana
+[2026-05-05 23:31:14] [INFO] 缓存命中: https://scholar.google.com/citations?user=KFa7vUMAAAAJ&hl=zh-CN, 9 个链接
+[2026-05-05 23:31:15] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 23:31:15] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://dsi-africa.org/dsi-3rd-consortium-meeting/biography/1142
+[2026-05-05 23:31:15] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 23:31:15] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.ub.bw/user/11449
+[2026-05-05 23:31:16] [INFO] Xvfb 已启动: DISPLAY=:114
+[2026-05-05 23:31:16] [INFO] Xvfb 已启动: DISPLAY=:111
+[2026-05-05 23:31:16] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:31:16] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:31:16] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 23:31:16] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.researchgate.net/profile/Gaone-Retshabile
+[2026-05-05 23:31:16] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 23:31:16] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:31:17] [INFO] Xvfb 已启动: DISPLAY=:154
+[2026-05-05 23:31:18] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:31:20] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:31:20] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 23:31:20] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:31:23] [WARNING] 打开标签页失败: https://www.ub.bw/user/11449, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 23:31:23] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:31:23] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 23:31:24] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:31:25] [WARNING] 打开标签页失败: https://dsi-africa.org/dsi-3rd-consortium-meeting/biography/1142, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 23:31:27] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:31:27] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=32865): Max retries exceeded with url: /session/02824e0ef0da087bff25fd9481bbde96/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ca66799c250>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 23:31:27] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 23:31:27] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:31:28] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:31:28] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:31:28] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:31:29] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=41041): Max retries exceeded with url: /session/cb624666b70b458da42dff1189d95ecb/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ca63f187cd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 23:31:29] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 23:31:29] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:31:29] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:31:29] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:31:30] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:31:31] [WARNING] 域名预热失败: https://www.ub.bw, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 23:31:31] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=38961): Max retries exceeded with url: /session/9a7bf265cb1691a2cccef6dc4f0ffea4/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-05 23:31:31] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:31:31] [INFO] Xvfb 已停止
+[2026-05-05 23:31:32] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:31:33] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 23:31:33] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-05 23:31:33] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:31:33] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:31:33] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:31:33] [WARNING] 域名预热失败: https://dsi-africa.org, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-05 23:31:33] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=47555): Max retries exceeded with url: /session/18d6449b2363d0533c26b4bf4cdbb12a/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-05 23:31:33] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:31:33] [INFO] Xvfb 已停止
+[2026-05-05 23:31:34] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:31:36] [INFO] 域名预热完成: https://www.researchgate.net
+[2026-05-05 23:31:41] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:31:42] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 23:31:42] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:31:43] [INFO] LLM Local Async 查询成功: 133 字符
+[2026-05-05 23:31:43] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:31:44] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 23:31:44] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:31:44] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 23:31:44] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:31:45] [INFO] LLM Local Async 查询成功: 144 字符
+[2026-05-05 23:31:45] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:31:46] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 23:31:48] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:31:48] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 23:31:48] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:31:49] [INFO] LLM Local Async 查询成功: 118 字符
+[2026-05-05 23:31:49] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:31:50] [INFO] LLM Local Async 查询成功: 57 字符
+[2026-05-05 23:31:50] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:31:50] [INFO] Xvfb 已停止
+[2026-05-05 23:31:51] [INFO] 开始搜索社交媒体链接: Gaone Retshabile @ University of Botswana
+[2026-05-05 23:31:51] [INFO] 缓存命中: https://scholar.google.com/citations?user=KFa7vUMAAAAJ&hl=zh-CN, 10 个 social_media 链接
+[2026-05-05 23:31:52] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 23:31:52] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/posts/to-all-the-phenomenal-women-of-the-university-of-botswana-you-are-cordially-invi/3175393622735065/
+[2026-05-05 23:31:53] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 23:31:53] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/photos/joinus-lectureseries-june19genomics-a-bridge-to-precision-medicine-register-now-/775224251388453/
+[2026-05-05 23:31:53] [INFO] Xvfb 已启动: DISPLAY=:181
+[2026-05-05 23:31:54] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:31:54] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 23:31:54] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:31:54] [INFO] Xvfb 已启动: DISPLAY=:102
+[2026-05-05 23:31:54] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:31:54] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:31:54] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 23:31:55] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:31:55] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:32:00] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:01] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:01] [INFO] LLM Local Async 查询成功: 127 字符
+[2026-05-05 23:32:02] [INFO] LLM Local Async 查询成功: 192 字符
+[2026-05-05 23:32:06] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:07] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 23:32:07] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 23:32:07] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:32:07] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:32:07] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:32:07] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:08] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 23:32:08] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 23:32:08] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:32:08] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:32:08] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:32:08] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:32:11] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:32:11] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 23:32:14] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 23:32:17] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=54579): Max retries exceeded with url: /session/58b3477de0968834b636d1dc83f97199/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71baeb5e6290>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 23:32:17] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=54579): Max retries exceeded with url: /session/58b3477de0968834b636d1dc83f97199/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71baeb5e53d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 23:32:17] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:18] [INFO] LLM Local Async 查询成功: 67 字符
+[2026-05-05 23:32:18] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:19] [INFO] LLM Local Async 查询成功: 121 字符
+[2026-05-05 23:32:19] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:19] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 23:32:19] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=54579): Max retries exceeded with url: /session/58b3477de0968834b636d1dc83f97199/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-05-05 23:32:19] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=54579): Max retries exceeded with url: /session/58b3477de0968834b636d1dc83f97199/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71baeaa82510>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 23:32:19] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:19] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:20] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 23:32:20] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=54579): Max retries exceeded with url: /session/58b3477de0968834b636d1dc83f97199/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-05-05 23:32:20] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=54579): Max retries exceeded with url: /session/58b3477de0968834b636d1dc83f97199/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71baeaa82a90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 23:32:20] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:20] [INFO] LLM Local Async 查询成功: 69 字符
+[2026-05-05 23:32:20] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:20] [INFO] LLM Local Async 查询成功: 76 字符
+[2026-05-05 23:32:20] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:32:20] [INFO] Xvfb 已停止
+[2026-05-05 23:32:21] [INFO] LLM Local Async 查询成功: 131 字符
+[2026-05-05 23:32:21] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:22] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 23:32:22] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 23:32:22] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/UbMmadikolo/posts/four-faculty-of-business-students-to-represent-university-of-botswana-in-singapo/2545655979042169/
+[2026-05-05 23:32:23] [INFO] Xvfb 已启动: DISPLAY=:144
+[2026-05-05 23:32:24] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:32:24] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 23:32:24] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:32:24] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:32:27] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:28] [INFO] LLM Local Async 查询成功: 89 字符
+[2026-05-05 23:32:28] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:29] [INFO] LLM Local Async 查询成功: 119 字符
+[2026-05-05 23:32:29] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:30] [INFO] LLM Local Async 查询成功: 63 字符
+[2026-05-05 23:32:30] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:32:30] [INFO] Xvfb 已停止
+[2026-05-05 23:32:30] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:31] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 23:32:31] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/cafgen/?locale=id_ID
+[2026-05-05 23:32:31] [INFO] LLM Local Async 查询成功: 129 字符
+[2026-05-05 23:32:32] [INFO] Xvfb 已启动: DISPLAY=:192
+[2026-05-05 23:32:32] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:32:32] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 23:32:33] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:32:33] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:32:37] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:38] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 23:32:38] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 23:32:38] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:32:38] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:32:38] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:32:39] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:32:39] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:40] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 23:32:41] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 23:32:45] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:45] [INFO] LLM Local Async 查询成功: 50 字符
+[2026-05-05 23:32:45] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 23:32:45] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:32:46] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:32:46] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:32:46] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:32:48] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=36591): Max retries exceeded with url: /session/8bd659bab2e43af93cf4d87699a1733a/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b85fec10a90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 23:32:48] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=36591): Max retries exceeded with url: /session/8bd659bab2e43af93cf4d87699a1733a/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b85fec42ad0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 23:32:48] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:49] [INFO] LLM Local Async 查询成功: 79 字符
+[2026-05-05 23:32:49] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:49] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 23:32:50] [INFO] LLM Local Async 查询成功: 122 字符
+[2026-05-05 23:32:50] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:51] [INFO] LLM Local Async 查询成功: 155 字符
+[2026-05-05 23:32:51] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:32:51] [INFO] Xvfb 已停止
+[2026-05-05 23:32:52] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 23:32:52] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/BNYCpage/posts/-meet-the-dream-team-driving-young-people-to-thrive-and-excel-in-botswana-ngwana/1116767103814984/
+[2026-05-05 23:32:53] [INFO] Xvfb 已启动: DISPLAY=:199
+[2026-05-05 23:32:53] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:32:53] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 23:32:53] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:32:54] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:32:56] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=35113): Max retries exceeded with url: /session/591381ead280098358e510aac37cacbe/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72c7547319d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 23:32:56] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=35113): Max retries exceeded with url: /session/591381ead280098358e510aac37cacbe/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72c7548de710>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 23:32:56] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:56] [INFO] LLM Local Async 查询成功: 55 字符
+[2026-05-05 23:32:56] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:57] [INFO] LLM Local Async 查询成功: 153 字符
+[2026-05-05 23:32:57] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:58] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 23:32:58] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=35113): Max retries exceeded with url: /session/591381ead280098358e510aac37cacbe/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-05-05 23:32:58] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=35113): Max retries exceeded with url: /session/591381ead280098358e510aac37cacbe/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72c75466dd50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 23:32:58] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:59] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 23:32:59] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=35113): Max retries exceeded with url: /session/591381ead280098358e510aac37cacbe/back (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object
+[2026-05-05 23:32:59] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=35113): Max retries exceeded with url: /session/591381ead280098358e510aac37cacbe/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72c75466d890>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 23:32:59] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:32:59] [INFO] LLM Local Async 查询成功: 40 字符
+[2026-05-05 23:32:59] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=35113): Max retries exceeded with url: /session/591381ead280098358e510aac37cacbe/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72c754660f50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 23:32:59] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:32:59] [INFO] Xvfb 已停止
+[2026-05-05 23:33:00] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:01] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-05 23:33:01] [INFO] IterAgent 开始: Gaone Retshabile, URL: https://www.facebook.com/61568400972914/posts/%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%B2-%F0%9D%9F%B0%F0%9D%98%81%F0%9D%97%B5-%F0%9D%97%98%F0%9D%97%B1%F0%9D%97%B6%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB-%F0%9D%97%A9%F0%9D%98%82%F0%9D%97%BB%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%B6-%F0%9D%97%94%F0%9D%97%BB%F0%9D%97%BB%F0%9D%98%82%F0%9D%97%AE%F0%9D%97%B9-%F0%9D%97%95%F0%9D%97%BC%F0%9D%98%81%F0%9D%98%80%F0%9D%98%84%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%AE-%F0%9D%97%AA%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B2%F0%9D%97%BB-%F0%9D%97%A6%F0%9D%97%BD%F0%9D%97%BC%F0%9D%97%BF%F0%9D%98%81%F0%9D%98%80-%F0%9D%97%94%F0%9D%98%84%F0%9D%97%AE%F0%9D%97%BF%F0%9D%97%B1%F0%9D%98%80-%F0%9D%97%A1%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B2%F0%9D%97%B2%F0%9D%98%80-%F0%9D%97%A5%F0%9D%97%B2%F0%9D%98%83%F0%9D%97%B2%F0%9D%97%AE%F0%9D%97%B9%F0%9D%97%B2%F0%9D%97%B1bots/122186187194613365/
+[2026-05-05 23:33:02] [INFO] LLM Local Async 查询成功: 130 字符
+[2026-05-05 23:33:02] [INFO] Xvfb 已启动: DISPLAY=:157
+[2026-05-05 23:33:02] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:33:02] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.97/chrome (selenium-manager)
+[2026-05-05 23:33:02] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:33:03] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:33:07] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:08] [INFO] LLM Local Async 查询成功: 193 字符
+[2026-05-05 23:33:08] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 23:33:08] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:33:08] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:33:09] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:33:09] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:09] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:33:12] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 23:33:12] [INFO] LLM Local Async 查询成功: 684 字符
+[2026-05-05 23:33:18] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:19] [INFO] LLM Local Async 查询成功: 229 字符
+[2026-05-05 23:33:19] [INFO] IterAgent 完成: Gaone Retshabile, 迭代 2 轮, 访问 2 页, 收集 0 条信息
+[2026-05-05 23:33:19] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:33:19] [INFO] 等待 Chrome 初始化锁...
+[2026-05-05 23:33:19] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-05 23:33:19] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:20] [INFO] 共享 Chrome driver 已创建
+[2026-05-05 23:33:20] [INFO] LLM Local Async 查询成功: 104 字符
+[2026-05-05 23:33:20] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:21] [INFO] LLM Local Async 查询成功: 116 字符
+[2026-05-05 23:33:21] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:22] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 23:33:23] [INFO] 域名预热完成: https://www.facebook.com
+[2026-05-05 23:33:26] [WARNING] 提取按钮失败: HTTPConnectionPool(host='localhost', port=49455): Max retries exceeded with url: /session/236fe9be16cd9c2231cbff4c99a21f15/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72ec4c158e10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 23:33:26] [WARNING] 提取可点击元素失败: HTTPConnectionPool(host='localhost', port=49455): Max retries exceeded with url: /session/236fe9be16cd9c2231cbff4c99a21f15/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72ec47ff6050>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 23:33:26] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:27] [INFO] LLM Local Async 查询成功: 55 字符
+[2026-05-05 23:33:27] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:28] [INFO] LLM Local Async 查询成功: 113 字符
+[2026-05-05 23:33:28] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:28] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 23:33:28] [ERROR] 执行失败: click, HTTPConnectionPool(host='localhost', port=49455): Max retries exceeded with url: /session/236fe9be16cd9c2231cbff4c99a21f15/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-05-05 23:33:28] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=49455): Max retries exceeded with url: /session/236fe9be16cd9c2231cbff4c99a21f15/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72ec474318d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 23:33:28] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:29] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:29] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 23:33:29] [ERROR] 执行失败: back, HTTPConnectionPool(host='localhost', port=49455): Max retries exceeded with url: /session/236fe9be16cd9c2231cbff4c99a21f15/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object 
+[2026-05-05 23:33:29] [ERROR] 获取页面信息失败: HTTPConnectionPool(host='localhost', port=49455): Max retries exceeded with url: /session/236fe9be16cd9c2231cbff4c99a21f15/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72ec47431250>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-05 23:33:29] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:33:29] [INFO] Xvfb 已停止
+[2026-05-05 23:33:30] [INFO] LLM Local Async 查询成功: 92 字符
+[2026-05-05 23:33:30] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:31] [INFO] LLM Local Async 查询成功: 106 字符
+[2026-05-05 23:33:31] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:32] [INFO] LLM Local Async 查询成功: 20 字符
+[2026-05-05 23:33:36] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:37] [INFO] LLM Local Async 查询成功: 87 字符
+[2026-05-05 23:33:37] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:38] [INFO] LLM Local Async 查询成功: 107 字符
+[2026-05-05 23:33:38] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:38] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-05 23:33:42] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:43] [INFO] LLM Local Async 查询成功: 104 字符
+[2026-05-05 23:33:43] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:44] [INFO] LLM Local Async 查询成功: 106 字符
+[2026-05-05 23:33:44] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-05 23:33:45] [INFO] LLM Local Async 查询成功: 113 字符
+[2026-05-05 23:33:45] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-05 23:33:45] [INFO] Xvfb 已停止
+[2026-05-05 23:33:46] [INFO] LLM Factory Async 初始化, 后端: api
+[2026-05-05 23:33:48] [INFO] LLM API Async 响应 headers: model=deepseek/deepseek-v4-pro, headers_seconds=1.95
+[2026-05-05 23:33:48] [INFO] LLM API Async 首个流式 chunk: model=deepseek/deepseek-v4-pro, first_chunk_seconds=1.95
+[2026-05-05 23:33:48] [INFO] LLM API Async 首个推理 token: model=deepseek/deepseek-v4-pro, first_reasoning_seconds=1.95
+[2026-05-05 23:34:02] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=15.39, data_lines=100, reasoning_chars=1100, content_chars=0
+[2026-05-05 23:34:10] [INFO] LLM API Async 首个内容 token: model=deepseek/deepseek-v4-pro, first_content_seconds=23.60
+[2026-05-05 23:34:13] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=26.83, data_lines=200, reasoning_chars=1945, content_chars=316
+[2026-05-05 23:34:26] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=39.29, data_lines=300, reasoning_chars=1945, content_chars=1724
+[2026-05-05 23:34:38] [INFO] LLM API Async 流式进度: model=deepseek/deepseek-v4-pro, elapsed=51.79, data_lines=400, reasoning_chars=1945, content_chars=2633
+[2026-05-05 23:34:42] [INFO] LLM API Async 查询成功: model=deepseek/deepseek-v4-pro, request_chars=23145, response_chars=3031

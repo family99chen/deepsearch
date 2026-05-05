@@ -81,7 +81,7 @@ class LLMLocalClient:
         self,
         messages: list,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
     ) -> Generator[str, None, None]:
         """
         流式请求（内部使用）
@@ -168,7 +168,7 @@ class LLMLocalClient:
         prompt: str,
         system_prompt: Optional[str] = None,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
     ) -> str:
         """
         发送查询并返回完整响应
@@ -232,7 +232,7 @@ class LLMLocalClient:
         self,
         messages: list,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
     ) -> str:
         """
         多轮对话
@@ -330,7 +330,7 @@ class LLMLocalClientAsync:
         self,
         messages: list,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
     ) -> AsyncGenerator[str, None]:
         """异步流式请求"""
         url = f"{self.api_base}/chat/completions"
@@ -385,7 +385,7 @@ class LLMLocalClientAsync:
         prompt: str,
         system_prompt: Optional[str] = None,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
     ) -> str:
         """异步查询"""
         messages = []
@@ -435,7 +435,7 @@ class LLMLocalClientAsync:
         self,
         messages: list,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
     ) -> str:
         """异步多轮对话"""
         full_response = []
@@ -459,7 +459,7 @@ class LLMLocalClientAsync:
         prompts: List[str],
         system_prompt: Optional[str] = None,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
         max_concurrency: int = 3,
     ) -> List[str]:
         """

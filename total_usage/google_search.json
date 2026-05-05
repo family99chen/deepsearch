@@ -1,5 +1,5 @@
 {
-  "total": 130330,
+  "total": 130332,
   "daily": {
     "2026-01-17": {
       "total": 210,
@@ -392,11 +392,19 @@
       },
       "first_request": "2026-05-04T00:00:00.047882",
       "last_request": "2026-05-04T16:46:00.725949"
+    },
+    "2026-05-05": {
+      "total": 2,
+      "endpoints": {
+        "serper_google_search": 2
+      },
+      "first_request": "2026-05-05T19:34:53.472966",
+      "last_request": "2026-05-05T19:34:58.444331"
     }
   },
   "endpoints": {
     "google_custom_search": 48024,
-    "serper_google_search": 82306
+    "serper_google_search": 82308
   },
-  "last_updated": "2026-05-04T16:46:00.725956"
+  "last_updated": "2026-05-05T19:34:58.444340"
 }

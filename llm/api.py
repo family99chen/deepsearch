@@ -13,6 +13,7 @@ import yaml
 import asyncio
 import requests
 import aiohttp
+import time
 from pathlib import Path
 from typing import Optional, Dict, Any, Generator, List, AsyncGenerator
 
@@ -96,8 +97,8 @@ class LLMApiClient:
         api_key: Optional[str] = None,
         api_base: Optional[str] = None,
         model: Optional[str] = None,
-        timeout: int = 120,
-        max_retries: int = 3,
+        timeout: Optional[int] = None,
+        max_retries: Optional[int] = None,
         verbose: bool = False,
     ):
         """
@@ -117,8 +118,9 @@ class LLMApiClient:
         self.api_key = api_key or llm_config.get("api_key", "")
         self.api_base = api_base or llm_config.get("api_base", "https://api.openai.com/v1")
         self.model = model or llm_config.get("model", "gpt-4o-mini")
-        self.timeout = timeout or llm_config.get("timeout", 120)
-        self.max_retries = max_retries
+        self.timeout = timeout if timeout is not None else llm_config.get("timeout", 120)
+        self.stream_gap_timeout = llm_config.get("stream_gap_timeout", self.timeout)
+        self.max_retries = max_retries if max_retries is not None else llm_config.get("max_retries", 3)
         self.verbose = verbose
         
         # 移除末尾的斜杠
@@ -131,7 +133,7 @@ class LLMApiClient:
         self,
         messages: list,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
     ) -> Generator[str, None, None]:
         """
         流式请求（内部使用）
@@ -216,7 +218,7 @@ class LLMApiClient:
         prompt: str,
         system_prompt: Optional[str] = None,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
     ) -> str:
         """
         发送查询并返回完整响应
@@ -285,7 +287,7 @@ class LLMApiClient:
         self,
         messages: list,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
     ) -> str:
         """
         多轮对话
@@ -340,8 +342,8 @@ class LLMApiClientAsync:
         api_key: Optional[str] = None,
         api_base: Optional[str] = None,
         model: Optional[str] = None,
-        timeout: int = 120,
-        max_retries: int = 3,
+        timeout: Optional[int] = None,
+        max_retries: Optional[int] = None,
         verbose: bool = False,
     ):
         """初始化异步 API 客户端"""
@@ -351,8 +353,9 @@ class LLMApiClientAsync:
         self.api_key = api_key or llm_config.get("api_key", "")
         self.api_base = api_base or llm_config.get("api_base", "https://api.openai.com/v1")
         self.model = model or llm_config.get("model", "gpt-4o-mini")
-        self.timeout = timeout or llm_config.get("timeout", 120)
-        self.max_retries = max_retries
+        self.timeout = timeout if timeout is not None else llm_config.get("timeout", 120)
+        self.stream_gap_timeout = llm_config.get("stream_gap_timeout", self.timeout)
+        self.max_retries = max_retries if max_retries is not None else llm_config.get("max_retries", 3)
         self.verbose = verbose
         
         self.api_base = self.api_base.rstrip("/")
@@ -361,7 +364,14 @@ class LLMApiClientAsync:
     async def _get_session(self) -> aiohttp.ClientSession:
         """获取或创建 HTTP session"""
         if self._session is None or self._session.closed:
-            timeout = aiohttp.ClientTimeout(total=self.timeout)
+            # Streaming requests can legitimately run for several minutes on
+            # long final-report prompts. Do not cap total response time; only
+            # time out connection setup or long gaps between streamed chunks.
+            timeout = aiohttp.ClientTimeout(
+                total=None,
+                sock_connect=self.timeout,
+                sock_read=None,
+            )
             self._session = aiohttp.ClientSession(timeout=timeout)
         return self._session
     
@@ -380,7 +390,7 @@ class LLMApiClientAsync:
         self,
         messages: list,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
     ) -> AsyncGenerator[str, None]:
         """异步流式请求"""
         url = f"{self.api_base}/chat/completions"
@@ -403,12 +413,48 @@ class LLMApiClientAsync:
         
         session = await self._get_session()
         
+        started_at = time.time()
         async with session.post(url, headers=headers, json=data) as response:
             response.raise_for_status()
+            first_chunk_at = None
+            first_reasoning_at = None
+            first_content_at = None
+            reasoning_chars = 0
+            content_chars = 0
+            data_lines = 0
+            last_progress_at = started_at
+            logger.info(
+                "LLM API Async 响应 headers: model=%s, headers_seconds=%.2f",
+                self.model,
+                time.time() - started_at,
+            )
             
-            async for line in response.content:
+            while True:
+                read_timeout = self.timeout if first_chunk_at is None else self.stream_gap_timeout
+                if first_chunk_at is None:
+                    phase = "首个流式 chunk"
+                else:
+                    phase = "下一个流式 chunk"
+
+                try:
+                    line = await asyncio.wait_for(
+                        response.content.readline(),
+                        timeout=read_timeout,
+                    )
+                except asyncio.TimeoutError as exc:
+                    raise TimeoutError(
+                        f"LLM API Async 等待{phase}超时: {read_timeout}s"
+                    ) from exc
+
                 if not line:
-                    continue
+                    break
+                if first_chunk_at is None:
+                    first_chunk_at = time.time()
+                    logger.info(
+                        "LLM API Async 首个流式 chunk: model=%s, first_chunk_seconds=%.2f",
+                        self.model,
+                        first_chunk_at - started_at,
+                    )
                 
                 line_text = line.decode("utf-8").strip()
                 
@@ -425,9 +471,39 @@ class LLMApiClientAsync:
                     choices = chunk.get("choices", [])
                     if choices:
                         delta = choices[0].get("delta", {})
+                        data_lines += 1
+                        reasoning = delta.get("reasoning_content") or delta.get("reasoning") or ""
                         content = delta.get("content", "")
+                        if reasoning:
+                            reasoning_chars += len(reasoning)
+                            if first_reasoning_at is None:
+                                first_reasoning_at = time.time()
+                                logger.info(
+                                    "LLM API Async 首个推理 token: model=%s, first_reasoning_seconds=%.2f",
+                                    self.model,
+                                    first_reasoning_at - started_at,
+                                )
                         if content:
+                            content_chars += len(content)
+                            if first_content_at is None:
+                                first_content_at = time.time()
+                                logger.info(
+                                    "LLM API Async 首个内容 token: model=%s, first_content_seconds=%.2f",
+                                    self.model,
+                                    first_content_at - started_at,
+                                )
                             yield content
+                        now = time.time()
+                        if data_lines % 100 == 0 or now - last_progress_at >= 60:
+                            last_progress_at = now
+                            logger.info(
+                                "LLM API Async 流式进度: model=%s, elapsed=%.2f, data_lines=%s, reasoning_chars=%s, content_chars=%s",
+                                self.model,
+                                now - started_at,
+                                data_lines,
+                                reasoning_chars,
+                                content_chars,
+                            )
                 except json.JSONDecodeError:
                     continue
     
@@ -436,7 +512,7 @@ class LLMApiClientAsync:
         prompt: str,
         system_prompt: Optional[str] = None,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
     ) -> str:
         """异步查询"""
         messages = []
@@ -478,11 +554,23 @@ class LLMApiClientAsync:
                 full_response = []
                 
                 if attempt < self.max_retries - 1:
-                    logger.warning(f"LLM API Async 重试 {attempt + 1}: {e}")
+                    await self.close()
+                    logger.warning(
+                        "LLM API Async 重试 %s/%s: %s: %r",
+                        attempt + 1,
+                        self.max_retries,
+                        type(e).__name__,
+                        e,
+                    )
                     await asyncio.sleep(1)
                     continue
                 else:
-                    logger.error(f"LLM API Async 查询失败: {e}")
+                    logger.error(
+                        "LLM API Async 查询失败: %s: %r",
+                        type(e).__name__,
+                        e,
+                        exc_info=True,
+                    )
                     raise last_exception
         
         return ""
@@ -491,7 +579,7 @@ class LLMApiClientAsync:
         self,
         messages: list,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
     ) -> str:
         """异步多轮对话"""
         full_response = []
@@ -522,7 +610,7 @@ class LLMApiClientAsync:
         prompts: List[str],
         system_prompt: Optional[str] = None,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
         max_concurrency: int = 5,
     ) -> List[str]:
         """

@@ -201,7 +201,7 @@ class LLMFactory:
         prompt: str,
         system_prompt: Optional[str] = None,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
     ) -> str:
         """
         发送查询并返回完整响应
@@ -236,7 +236,7 @@ class LLMFactory:
         self,
         messages: list,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
     ) -> str:
         """
         多轮对话
@@ -344,7 +344,7 @@ class LLMFactoryAsync:
         prompt: str,
         system_prompt: Optional[str] = None,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
     ) -> str:
         """异步查询"""
         client = await self._get_client()
@@ -368,7 +368,7 @@ class LLMFactoryAsync:
         self,
         messages: list,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
     ) -> str:
         """异步多轮对话"""
         client = await self._get_client()
@@ -389,7 +389,7 @@ class LLMFactoryAsync:
         prompts: List[str],
         system_prompt: Optional[str] = None,
         temperature: float = 0.7,
-        max_tokens: int = 4096,
+        max_tokens: int = 20480,
         max_concurrency: int = 5,
     ) -> List[str]:
         """
@@ -452,7 +452,7 @@ def query(
     prompt: str,
     system_prompt: Optional[str] = None,
     temperature: float = 0.7,
-    max_tokens: int = 4096,
+    max_tokens: int = 20480,
     model: Optional[str] = None,
     backend: Optional[LLMType] = None,
     verbose: bool = False,
@@ -492,7 +492,7 @@ def query(
 def chat(
     messages: list,
     temperature: float = 0.7,
-    max_tokens: int = 4096,
+    max_tokens: int = 20480,
     model: Optional[str] = None,
     backend: Optional[LLMType] = None,
     verbose: bool = False,
@@ -536,7 +536,7 @@ async def query_async(
     prompt: str,
     system_prompt: Optional[str] = None,
     temperature: float = 0.7,
-    max_tokens: int = 4096,
+    max_tokens: int = 20480,
     model: Optional[str] = None,
     backend: Optional[LLMType] = None,
     verbose: bool = False,
@@ -559,7 +559,7 @@ async def query_async(
 async def chat_async(
     messages: list,
     temperature: float = 0.7,
-    max_tokens: int = 4096,
+    max_tokens: int = 20480,
     model: Optional[str] = None,
     backend: Optional[LLMType] = None,
     verbose: bool = False,
@@ -577,7 +577,7 @@ async def batch_query_async(
     prompts: List[str],
     system_prompt: Optional[str] = None,
     temperature: float = 0.7,
-    max_tokens: int = 4096,
+    max_tokens: int = 20480,
     max_concurrency: int = 5,
     model: Optional[str] = None,
     backend: Optional[LLMType] = None,
