@@ -1,5 +1,5 @@
 {
-  "total": 195386,
+  "total": 195387,
   "daily": {
     "2026-04-17": {
       "total": 312,
@@ -394,23 +394,49 @@
           "avg_response_chars": 3127.25
         }
       }
+    },
+    "2026-05-06": {
+      "total": 1,
+      "endpoints": {
+        "local:qwen3.6-35b-a3b-fp8": 1
+      },
+      "first_request": "2026-05-06T16:50:12.047559",
+      "last_request": "2026-05-06T16:50:12.047564",
+      "metrics": {
+        "request_chars_total": 42016,
+        "request_chars_samples": 1,
+        "avg_request_chars": 42016.0,
+        "response_chars_total": 2,
+        "response_chars_samples": 1,
+        "avg_response_chars": 2.0
+      },
+      "endpoint_metrics": {
+        "local:qwen3.6-35b-a3b-fp8": {
+          "request_chars_total": 42016,
+          "request_chars_samples": 1,
+          "avg_request_chars": 42016.0,
+          "response_chars_total": 2,
+          "response_chars_samples": 1,
+          "avg_response_chars": 2.0
+        }
+      }
     }
   },
   "endpoints": {
     "api:gpt-4o-mini": 169,
     "api:gpt-5.4": 2592,
     "local:gemma4-31b-it-vllm": 137,
-    "local:qwen3.6-35b-a3b-fp8": 190202,
+    "local:qwen3.6-35b-a3b-fp8": 190203,
     "api:deepseek-v4-pro": 2282,
     "api:deepseek/deepseek-v4-pro": 4
   },
-  "last_updated": "2026-05-05T23:34:42.501791",
+  "last_updated": "2026-05-06T16:50:12.047588",
   "metrics": {
-    "request_chars_total": 780605534,
-    "request_chars_samples": 195386,
-    "avg_request_chars": 3995.2,
-    "response_chars_total": 43585168,
-    "response_chars_samples": 195386,
+    "request_chars_total": 780647550,
+    "request_chars_samples": 195387,
+    "avg_request_chars": 3995.39,
+    "response_chars_total": 43585170,
+    "response_chars_samples": 195387,
     "avg_response_chars": 223.07
   },
   "endpoint_metrics": {
@@ -439,11 +465,11 @@
       "avg_response_chars": 96.01
     },
     "local:qwen3.6-35b-a3b-fp8": {
-      "request_chars_total": 661744863,
-      "request_chars_samples": 190202,
-      "avg_request_chars": 3479.17,
-      "response_chars_total": 29116056,
-      "response_chars_samples": 190202,
+      "request_chars_total": 661786879,
+      "request_chars_samples": 190203,
+      "avg_request_chars": 3479.37,
+      "response_chars_total": 29116058,
+      "response_chars_samples": 190203,
       "avg_response_chars": 153.08
     },
     "api:deepseek-v4-pro": {
