@@ -1,8 +1,8 @@
 {
-  "total_requests": 10892,
-  "cache_hits": 1835,
-  "success": 7989,
-  "not_found": 2893,
+  "total_requests": 11467,
+  "cache_hits": 2182,
+  "success": 8479,
+  "not_found": 2978,
   "error": 0,
   "daily": {
     "2026-03-24": {
@@ -186,7 +186,21 @@
       "success": 1,
       "not_found": 6,
       "error": 0
+    },
+    "2026-05-06": {
+      "total_requests": 2,
+      "cache_hits": 0,
+      "success": 0,
+      "not_found": 2,
+      "error": 0
+    },
+    "2026-05-07": {
+      "total_requests": 573,
+      "cache_hits": 347,
+      "success": 490,
+      "not_found": 83,
+      "error": 0
     }
   },
-  "last_updated": "2026-05-05T23:34:42.504834"
+  "last_updated": "2026-05-07T15:14:28.307518"
 }

@@ -1,5 +1,5 @@
 {
-  "total": 52140,
+  "total": 52183,
   "daily": {
     "2026-01-17": {
       "total": 38,
@@ -320,10 +320,18 @@
       },
       "first_request": "2026-05-04T00:00:06.328395",
       "last_request": "2026-05-04T16:45:55.079808"
+    },
+    "2026-05-07": {
+      "total": 43,
+      "endpoints": {
+        "serpapi_scholar": 43
+      },
+      "first_request": "2026-05-07T01:09:32.413972",
+      "last_request": "2026-05-07T14:12:23.052522"
     }
   },
   "endpoints": {
-    "serpapi_scholar": 52140
+    "serpapi_scholar": 52183
   },
-  "last_updated": "2026-05-04T16:45:55.079815"
+  "last_updated": "2026-05-07T14:12:23.052535"
 }

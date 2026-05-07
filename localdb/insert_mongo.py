@@ -168,14 +168,37 @@ class MongoCache:
         try:
             # 键的唯一索引
             self.collection.create_index("key", unique=True)
-            # 过期时间索引（MongoDB 会自动删除过期文档）
-            self.collection.create_index("expire_at", expireAfterSeconds=0)
         except Exception as e:
             print(f"[WARNING] 创建索引失败: {e}")
     
     def is_connected(self) -> bool:
         """检查是否已连接到 MongoDB"""
         return self._connected
+
+    @staticmethod
+    def _is_expired(expire_at: Optional[datetime]) -> bool:
+        return bool(expire_at and datetime.utcnow() > expire_at)
+
+    def _field_expire_at(self, doc: Dict, field_name: str) -> Optional[datetime]:
+        field_expire_at = doc.get("field_expire_at")
+        if isinstance(field_expire_at, dict) and field_name in field_expire_at:
+            return field_expire_at.get(field_name)
+        return doc.get("expire_at")
+
+    def _filter_unexpired_fields(self, doc: Dict, default: Any = None) -> Any:
+        value = doc.get("value", default)
+        if not isinstance(value, dict):
+            return default if self._is_expired(doc.get("expire_at")) else value
+
+        field_expire_at = doc.get("field_expire_at")
+        if not isinstance(field_expire_at, dict):
+            return default if self._is_expired(doc.get("expire_at")) else value
+
+        filtered = {}
+        for field_name, field_value in value.items():
+            if not self._is_expired(self._field_expire_at(doc, field_name)):
+                filtered[field_name] = field_value
+        return filtered if filtered else default
     
     def use_collection(self, collection_name: str) -> "MongoCache":
         """
@@ -244,6 +267,8 @@ class MongoCache:
                 "value": value,
                 "created_at": datetime.utcnow(),
                 "updated_at": datetime.utcnow(),
+                "field_expire_at": None,
+                "field_ttl": None,
             }
             
             # 设置过期时间
@@ -291,14 +316,7 @@ class MongoCache:
             if doc is None:
                 return default
             
-            # 检查是否过期（手动检查，以防 TTL 索引延迟）
-            expire_at = doc.get("expire_at")
-            if expire_at and datetime.utcnow() > expire_at:
-                # 已过期，删除并返回默认值
-                self.delete(key)
-                return default
-            
-            return doc.get("value", default)
+            return self._filter_unexpired_fields(doc, default)
             
         except Exception as e:
             print(f"[ERROR] 缓存读取失败: {e}")
@@ -348,10 +366,13 @@ class MongoCache:
                 "updated_at": datetime.utcnow(),
             }
             
-            # 设置过期时间
+            # 字段级过期时间：同一 key 下每个 value.<field_name> 独立过期。
             if ttl is not None and ttl > 0:
-                update_doc["expire_at"] = datetime.utcnow() + timedelta(seconds=ttl)
-                update_doc["ttl"] = ttl
+                update_doc[f"field_expire_at.{field_name}"] = datetime.utcnow() + timedelta(seconds=ttl)
+                update_doc[f"field_ttl.{field_name}"] = ttl
+            else:
+                update_doc[f"field_expire_at.{field_name}"] = None
+                update_doc[f"field_ttl.{field_name}"] = None
             
             # 使用 upsert + $set 实现字段更新
             self.collection.update_one(
@@ -396,14 +417,10 @@ class MongoCache:
             if doc is None:
                 return default
             
-            # 检查是否过期
-            expire_at = doc.get("expire_at")
-            if expire_at and datetime.utcnow() > expire_at:
-                self.delete(key)
-                return default
-            
             value = doc.get("value", {})
             if isinstance(value, dict):
+                if self._is_expired(self._field_expire_at(doc, field_name)):
+                    return default
                 return value.get(field_name, default)
             
             return default
@@ -429,16 +446,14 @@ class MongoCache:
         try:
             doc = self.collection.find_one(
                 {"key": key, f"value.{field_name}": {"$exists": True}},
-                {"_id": 1, "expire_at": 1}
+                {"_id": 1, "expire_at": 1, f"field_expire_at.{field_name}": 1}
             )
             
             if doc is None:
                 return False
             
-            # 检查是否过期
-            expire_at = doc.get("expire_at")
-            if expire_at and datetime.utcnow() > expire_at:
-                self.delete(key)
+            # 检查字段是否过期；过期缓存保留在库里，但对系统表现为不存在。
+            if self._is_expired(self._field_expire_at(doc, field_name)):
                 return False
             
             return True
@@ -466,19 +481,19 @@ class MongoCache:
             if doc is None:
                 return None
             
-            # 检查是否过期
-            expire_at = doc.get("expire_at")
-            if expire_at and datetime.utcnow() > expire_at:
-                self.delete(key)
+            value = self._filter_unexpired_fields(doc, None)
+            if value is None:
                 return None
             
             return {
-                "value": doc.get("value"),
+                "value": value,
                 "metadata": doc.get("metadata"),
                 "created_at": doc.get("created_at"),
                 "updated_at": doc.get("updated_at"),
                 "ttl": doc.get("ttl"),
                 "expire_at": doc.get("expire_at"),
+                "field_ttl": doc.get("field_ttl"),
+                "field_expire_at": doc.get("field_expire_at"),
             }
             
         except Exception as e:
@@ -519,18 +534,15 @@ class MongoCache:
             return False
         
         try:
-            doc = self.collection.find_one({"key": key}, {"_id": 1, "expire_at": 1})
+            doc = self.collection.find_one(
+                {"key": key},
+                {"_id": 1, "value": 1, "expire_at": 1, "field_expire_at": 1}
+            )
             
             if doc is None:
                 return False
             
-            # 检查是否过期
-            expire_at = doc.get("expire_at")
-            if expire_at and datetime.utcnow() > expire_at:
-                self.delete(key)
-                return False
-            
-            return True
+            return self._filter_unexpired_fields(doc, None) is not None
             
         except Exception as e:
             print(f"[ERROR] 缓存检查失败: {e}")
