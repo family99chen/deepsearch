@@ -1,20 +1,20 @@
 {
-  "total_requests": 162181,
-  "cache_hits": 30300,
-  "success": 39357,
-  "not_found": 91748,
-  "error": 452,
+  "total_requests": 168468,
+  "cache_hits": 33663,
+  "success": 39434,
+  "not_found": 94564,
+  "error": 483,
   "name_search": {
-    "total": 36265,
+    "total": 36335,
     "by_iterations": {
-      "1": 29816,
-      "2": 6449
+      "1": 29875,
+      "2": 6460
     }
   },
   "paper_search": {
-    "total": 3092,
+    "total": 3099,
     "by_papers": {
-      "1": 3092
+      "1": 3099
     }
   },
   "daily": {
@@ -997,15 +997,76 @@
       }
     },
     "2026-05-07": {
-      "total_requests": 1174,
-      "cache_hits": 571,
-      "success": 2,
-      "not_found": 508,
-      "error": 93,
+      "total_requests": 1925,
+      "cache_hits": 931,
+      "success": 13,
+      "not_found": 858,
+      "error": 123,
       "name_search": {
-        "total": 1,
+        "total": 12,
         "by_iterations": {
-          "2": 1
+          "2": 4,
+          "1": 8
+        }
+      },
+      "paper_search": {
+        "total": 1,
+        "by_papers": {
+          "1": 1
+        }
+      }
+    },
+    "2026-05-08": {
+      "total_requests": 1146,
+      "cache_hits": 602,
+      "success": 25,
+      "not_found": 518,
+      "error": 1,
+      "name_search": {
+        "total": 22,
+        "by_iterations": {
+          "1": 19,
+          "2": 3
+        }
+      },
+      "paper_search": {
+        "total": 3,
+        "by_papers": {
+          "1": 3
+        }
+      }
+    },
+    "2026-05-09": {
+      "total_requests": 1711,
+      "cache_hits": 982,
+      "success": 18,
+      "not_found": 711,
+      "error": 0,
+      "name_search": {
+        "total": 15,
+        "by_iterations": {
+          "1": 12,
+          "2": 3
+        }
+      },
+      "paper_search": {
+        "total": 3,
+        "by_papers": {
+          "1": 3
+        }
+      }
+    },
+    "2026-05-10": {
+      "total_requests": 2679,
+      "cache_hits": 1419,
+      "success": 23,
+      "not_found": 1237,
+      "error": 0,
+      "name_search": {
+        "total": 22,
+        "by_iterations": {
+          "1": 20,
+          "2": 2
         }
       },
       "paper_search": {
@@ -1016,5 +1077,5 @@
       }
     }
   },
-  "last_updated": "2026-05-07T15:14:28.274353"
+  "last_updated": "2026-05-10T21:48:50.927374"
 }

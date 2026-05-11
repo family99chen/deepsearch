@@ -1,5 +1,5 @@
 {
-  "total": 130776,
+  "total": 136320,
   "daily": {
     "2026-01-17": {
       "total": 210,
@@ -410,17 +410,41 @@
       "last_request": "2026-05-06T23:25:42.460470"
     },
     "2026-05-07": {
-      "total": 440,
+      "total": 525,
       "endpoints": {
-        "serper_google_search": 440
+        "serper_google_search": 525
       },
       "first_request": "2026-05-07T01:09:24.418555",
-      "last_request": "2026-05-07T14:23:50.625639"
+      "last_request": "2026-05-07T23:42:04.213546"
+    },
+    "2026-05-08": {
+      "total": 406,
+      "endpoints": {
+        "serper_google_search": 406
+      },
+      "first_request": "2026-05-08T00:05:18.635126",
+      "last_request": "2026-05-08T23:59:58.802383"
+    },
+    "2026-05-09": {
+      "total": 2040,
+      "endpoints": {
+        "serper_google_search": 2040
+      },
+      "first_request": "2026-05-09T00:01:07.511385",
+      "last_request": "2026-05-09T23:59:27.378696"
+    },
+    "2026-05-10": {
+      "total": 3013,
+      "endpoints": {
+        "serper_google_search": 3013
+      },
+      "first_request": "2026-05-10T00:00:09.401392",
+      "last_request": "2026-05-10T21:59:19.571743"
     }
   },
   "endpoints": {
     "google_custom_search": 48024,
-    "serper_google_search": 82752
+    "serper_google_search": 88296
   },
-  "last_updated": "2026-05-07T14:23:50.625647"
+  "last_updated": "2026-05-10T21:59:19.571761"
 }

@@ -1,527 +1,141 @@
 {
-  "total": 206274,
+  "total": 104485,
   "daily": {
-    "2026-04-17": {
-      "total": 312,
+    "2026-05-08": {
+      "total": 6641,
       "endpoints": {
-        "api:gpt-4o-mini": 169,
-        "api:gpt-5.4": 6,
-        "local:gemma4-31b-it-vllm": 137
+        "local:qwen3.6-35b-a3b-fp8": 6440,
+        "api:deepseek/deepseek-v4-pro": 201
       },
-      "first_request": "2026-04-17T13:58:10.617945",
-      "last_request": "2026-04-17T22:16:22.057664",
+      "first_request": "2026-05-08T16:02:48.218337",
+      "last_request": "2026-05-08T23:59:58.848481",
       "metrics": {
-        "request_chars_total": 808051,
-        "request_chars_samples": 312,
-        "avg_request_chars": 2589.91,
-        "response_chars_total": 36746,
-        "response_chars_samples": 312,
-        "avg_response_chars": 117.78
-      },
-      "endpoint_metrics": {
-        "api:gpt-4o-mini": {
-          "request_chars_total": 496088,
-          "request_chars_samples": 169,
-          "avg_request_chars": 2935.43,
-          "response_chars_total": 15499,
-          "response_chars_samples": 169,
-          "avg_response_chars": 91.71
-        },
-        "api:gpt-5.4": {
-          "request_chars_total": 87291,
-          "request_chars_samples": 6,
-          "avg_request_chars": 14548.5,
-          "response_chars_total": 8094,
-          "response_chars_samples": 6,
-          "avg_response_chars": 1349.0
-        },
-        "local:gemma4-31b-it-vllm": {
-          "request_chars_total": 224672,
-          "request_chars_samples": 137,
-          "avg_request_chars": 1639.94,
-          "response_chars_total": 13153,
-          "response_chars_samples": 137,
-          "avg_response_chars": 96.01
-        }
-      }
-    },
-    "2026-04-18": {
-      "total": 24219,
-      "endpoints": {
-        "api:gpt-5.4": 961,
-        "local:qwen3.6-35b-a3b-fp8": 23258
-      },
-      "first_request": "2026-04-18T12:36:45.307815",
-      "last_request": "2026-04-18T23:59:55.652140",
-      "metrics": {
-        "request_chars_total": 102592640,
-        "request_chars_samples": 24219,
-        "avg_request_chars": 4236.04,
-        "response_chars_total": 7057075,
-        "response_chars_samples": 24219,
-        "avg_response_chars": 291.39
-      },
-      "endpoint_metrics": {
-        "api:gpt-5.4": {
-          "request_chars_total": 22953513,
-          "request_chars_samples": 961,
-          "avg_request_chars": 23885.03,
-          "response_chars_total": 3511110,
-          "response_chars_samples": 961,
-          "avg_response_chars": 3653.6
-        },
-        "local:qwen3.6-35b-a3b-fp8": {
-          "request_chars_total": 79639127,
-          "request_chars_samples": 23258,
-          "avg_request_chars": 3424.16,
-          "response_chars_total": 3545965,
-          "response_chars_samples": 23258,
-          "avg_response_chars": 152.46
-        }
-      }
-    },
-    "2026-04-19": {
-      "total": 45515,
-      "endpoints": {
-        "local:qwen3.6-35b-a3b-fp8": 44154,
-        "api:gpt-5.4": 1361
-      },
-      "first_request": "2026-04-19T00:00:03.996117",
-      "last_request": "2026-04-19T19:50:19.246741",
-      "metrics": {
-        "request_chars_total": 188659163,
-        "request_chars_samples": 45515,
-        "avg_request_chars": 4144.99,
-        "response_chars_total": 12062222,
-        "response_chars_samples": 45515,
-        "avg_response_chars": 265.02
+        "request_chars_total": 21634342,
+        "request_chars_samples": 6641,
+        "avg_request_chars": 3257.69,
+        "response_chars_total": 1244289,
+        "response_chars_samples": 6641,
+        "avg_response_chars": 187.36
       },
       "endpoint_metrics": {
         "local:qwen3.6-35b-a3b-fp8": {
-          "request_chars_total": 153915504,
-          "request_chars_samples": 44154,
-          "avg_request_chars": 3485.88,
-          "response_chars_total": 6944726,
-          "response_chars_samples": 44154,
-          "avg_response_chars": 157.28
-        },
-        "api:gpt-5.4": {
-          "request_chars_total": 34743659,
-          "request_chars_samples": 1361,
-          "avg_request_chars": 25528.04,
-          "response_chars_total": 5117496,
-          "response_chars_samples": 1361,
-          "avg_response_chars": 3760.1
-        }
-      }
-    },
-    "2026-04-23": {
-      "total": 32,
-      "endpoints": {
-        "local:qwen3.6-35b-a3b-fp8": 32
-      },
-      "first_request": "2026-04-23T23:58:48.114835",
-      "last_request": "2026-04-23T23:59:51.532303",
-      "metrics": {
-        "request_chars_total": 95665,
-        "request_chars_samples": 32,
-        "avg_request_chars": 2989.53,
-        "response_chars_total": 10205,
-        "response_chars_samples": 32,
-        "avg_response_chars": 318.91
-      },
-      "endpoint_metrics": {
-        "local:qwen3.6-35b-a3b-fp8": {
-          "request_chars_total": 95665,
-          "request_chars_samples": 32,
-          "avg_request_chars": 2989.53,
-          "response_chars_total": 10205,
-          "response_chars_samples": 32,
-          "avg_response_chars": 318.91
-        }
-      }
-    },
-    "2026-04-24": {
-      "total": 9130,
-      "endpoints": {
-        "local:qwen3.6-35b-a3b-fp8": 8915,
-        "api:gpt-5.4": 215
-      },
-      "first_request": "2026-04-24T00:00:05.737952",
-      "last_request": "2026-04-24T23:59:59.659041",
-      "metrics": {
-        "request_chars_total": 34961653,
-        "request_chars_samples": 9130,
-        "avg_request_chars": 3829.32,
-        "response_chars_total": 2159749,
-        "response_chars_samples": 9130,
-        "avg_response_chars": 236.56
-      },
-      "endpoint_metrics": {
-        "local:qwen3.6-35b-a3b-fp8": {
-          "request_chars_total": 29828975,
-          "request_chars_samples": 8915,
-          "avg_request_chars": 3345.93,
-          "response_chars_total": 1328397,
-          "response_chars_samples": 8915,
-          "avg_response_chars": 149.01
-        },
-        "api:gpt-5.4": {
-          "request_chars_total": 5132678,
-          "request_chars_samples": 215,
-          "avg_request_chars": 23872.92,
-          "response_chars_total": 831352,
-          "response_chars_samples": 215,
-          "avg_response_chars": 3866.75
-        }
-      }
-    },
-    "2026-04-25": {
-      "total": 33597,
-      "endpoints": {
-        "local:qwen3.6-35b-a3b-fp8": 33595,
-        "api:gpt-5.4": 2
-      },
-      "first_request": "2026-04-25T00:00:04.977541",
-      "last_request": "2026-04-25T18:46:16.386470",
-      "metrics": {
-        "request_chars_total": 116516333,
-        "request_chars_samples": 33597,
-        "avg_request_chars": 3468.06,
-        "response_chars_total": 5281899,
-        "response_chars_samples": 33597,
-        "avg_response_chars": 157.21
-      },
-      "endpoint_metrics": {
-        "local:qwen3.6-35b-a3b-fp8": {
-          "request_chars_total": 116468506,
-          "request_chars_samples": 33595,
-          "avg_request_chars": 3466.84,
-          "response_chars_total": 5273615,
-          "response_chars_samples": 33595,
-          "avg_response_chars": 156.98
-        },
-        "api:gpt-5.4": {
-          "request_chars_total": 47827,
-          "request_chars_samples": 2,
-          "avg_request_chars": 23913.5,
-          "response_chars_total": 8284,
-          "response_chars_samples": 2,
-          "avg_response_chars": 4142.0
-        }
-      }
-    },
-    "2026-04-26": {
-      "total": 3110,
-      "endpoints": {
-        "local:qwen3.6-35b-a3b-fp8": 3063,
-        "api:gpt-5.4": 47
-      },
-      "first_request": "2026-04-26T01:39:40.377992",
-      "last_request": "2026-04-26T23:59:59.418124",
-      "metrics": {
-        "request_chars_total": 15505482,
-        "request_chars_samples": 3110,
-        "avg_request_chars": 4985.69,
-        "response_chars_total": 828402,
-        "response_chars_samples": 3110,
-        "avg_response_chars": 266.37
-      },
-      "endpoint_metrics": {
-        "local:qwen3.6-35b-a3b-fp8": {
-          "request_chars_total": 14491149,
-          "request_chars_samples": 3063,
-          "avg_request_chars": 4731.03,
-          "response_chars_total": 648324,
-          "response_chars_samples": 3063,
-          "avg_response_chars": 211.66
-        },
-        "api:gpt-5.4": {
-          "request_chars_total": 1014333,
-          "request_chars_samples": 47,
-          "avg_request_chars": 21581.55,
-          "response_chars_total": 180078,
-          "response_chars_samples": 47,
-          "avg_response_chars": 3831.45
-        }
-      }
-    },
-    "2026-04-27": {
-      "total": 26985,
-      "endpoints": {
-        "local:qwen3.6-35b-a3b-fp8": 26282,
-        "api:deepseek-v4-pro": 703
-      },
-      "first_request": "2026-04-27T00:00:09.167057",
-      "last_request": "2026-04-27T23:59:56.277860",
-      "metrics": {
-        "request_chars_total": 117972454,
-        "request_chars_samples": 26985,
-        "avg_request_chars": 4371.78,
-        "response_chars_total": 6095778,
-        "response_chars_samples": 26985,
-        "avg_response_chars": 225.9
-      },
-      "endpoint_metrics": {
-        "local:qwen3.6-35b-a3b-fp8": {
-          "request_chars_total": 103024791,
-          "request_chars_samples": 26282,
-          "avg_request_chars": 3919.98,
-          "response_chars_total": 4506809,
-          "response_chars_samples": 26282,
-          "avg_response_chars": 171.48
-        },
-        "api:deepseek-v4-pro": {
-          "request_chars_total": 14947663,
-          "request_chars_samples": 703,
-          "avg_request_chars": 21262.68,
-          "response_chars_total": 1588969,
-          "response_chars_samples": 703,
-          "avg_response_chars": 2260.27
-        }
-      }
-    },
-    "2026-04-28": {
-      "total": 44147,
-      "endpoints": {
-        "api:deepseek-v4-pro": 1364,
-        "local:qwen3.6-35b-a3b-fp8": 42783
-      },
-      "first_request": "2026-04-28T00:00:00.143473",
-      "last_request": "2026-04-28T23:59:57.371238",
-      "metrics": {
-        "request_chars_total": 164433348,
-        "request_chars_samples": 44147,
-        "avg_request_chars": 3724.68,
-        "response_chars_total": 8315515,
-        "response_chars_samples": 44147,
-        "avg_response_chars": 188.36
-      },
-      "endpoint_metrics": {
-        "api:deepseek-v4-pro": {
-          "request_chars_total": 33525675,
-          "request_chars_samples": 1364,
-          "avg_request_chars": 24578.94,
-          "response_chars_total": 2736809,
-          "response_chars_samples": 1364,
-          "avg_response_chars": 2006.46
-        },
-        "local:qwen3.6-35b-a3b-fp8": {
-          "request_chars_total": 130907673,
-          "request_chars_samples": 42783,
-          "avg_request_chars": 3059.81,
-          "response_chars_total": 5578706,
-          "response_chars_samples": 42783,
-          "avg_response_chars": 130.4
-        }
-      }
-    },
-    "2026-04-29": {
-      "total": 7981,
-      "endpoints": {
-        "local:qwen3.6-35b-a3b-fp8": 7767,
-        "api:deepseek-v4-pro": 214
-      },
-      "first_request": "2026-04-29T00:00:01.222412",
-      "last_request": "2026-04-29T13:01:21.485352",
-      "metrics": {
-        "request_chars_total": 37065013,
-        "request_chars_samples": 7981,
-        "avg_request_chars": 4644.16,
-        "response_chars_total": 1683077,
-        "response_chars_samples": 7981,
-        "avg_response_chars": 210.89
-      },
-      "endpoint_metrics": {
-        "local:qwen3.6-35b-a3b-fp8": {
-          "request_chars_total": 31469064,
-          "request_chars_samples": 7767,
-          "avg_request_chars": 4051.64,
-          "response_chars_total": 1237320,
-          "response_chars_samples": 7767,
-          "avg_response_chars": 159.3
-        },
-        "api:deepseek-v4-pro": {
-          "request_chars_total": 5595949,
-          "request_chars_samples": 214,
-          "avg_request_chars": 26149.29,
-          "response_chars_total": 445757,
-          "response_chars_samples": 214,
-          "avg_response_chars": 2082.98
-        }
-      }
-    },
-    "2026-05-05": {
-      "total": 358,
-      "endpoints": {
-        "local:qwen3.6-35b-a3b-fp8": 353,
-        "api:deepseek-v4-pro": 1,
-        "api:deepseek/deepseek-v4-pro": 4
-      },
-      "first_request": "2026-05-05T19:35:13.821075",
-      "last_request": "2026-05-05T23:34:42.501765",
-      "metrics": {
-        "request_chars_total": 1995732,
-        "request_chars_samples": 358,
-        "avg_request_chars": 5574.67,
-        "response_chars_total": 54500,
-        "response_chars_samples": 358,
-        "avg_response_chars": 152.23
-      },
-      "endpoint_metrics": {
-        "local:qwen3.6-35b-a3b-fp8": {
-          "request_chars_total": 1904409,
-          "request_chars_samples": 353,
-          "avg_request_chars": 5394.93,
-          "response_chars_total": 41989,
-          "response_chars_samples": 353,
-          "avg_response_chars": 118.95
-        },
-        "api:deepseek-v4-pro": {
-          "request_chars_total": 6,
-          "request_chars_samples": 1,
-          "avg_request_chars": 6.0,
-          "response_chars_total": 2,
-          "response_chars_samples": 1,
-          "avg_response_chars": 2.0
+          "request_chars_total": 17935233,
+          "request_chars_samples": 6440,
+          "avg_request_chars": 2784.97,
+          "response_chars_total": 808954,
+          "response_chars_samples": 6440,
+          "avg_response_chars": 125.61
         },
         "api:deepseek/deepseek-v4-pro": {
-          "request_chars_total": 91317,
-          "request_chars_samples": 4,
-          "avg_request_chars": 22829.25,
-          "response_chars_total": 12509,
-          "response_chars_samples": 4,
-          "avg_response_chars": 3127.25
+          "request_chars_total": 3699109,
+          "request_chars_samples": 201,
+          "avg_request_chars": 18403.53,
+          "response_chars_total": 435335,
+          "response_chars_samples": 201,
+          "avg_response_chars": 2165.85
         }
       }
     },
-    "2026-05-06": {
-      "total": 145,
+    "2026-05-09": {
+      "total": 37716,
       "endpoints": {
-        "local:qwen3.6-35b-a3b-fp8": 145
+        "local:qwen3.6-35b-a3b-fp8": 36412,
+        "api:deepseek/deepseek-v4-pro": 1304
       },
-      "first_request": "2026-05-06T16:50:12.047559",
-      "last_request": "2026-05-06T23:26:45.390512",
+      "first_request": "2026-05-09T00:00:00.353109",
+      "last_request": "2026-05-09T23:59:57.808284",
       "metrics": {
-        "request_chars_total": 498468,
-        "request_chars_samples": 145,
-        "avg_request_chars": 3437.71,
-        "response_chars_total": 26047,
-        "response_chars_samples": 145,
-        "avg_response_chars": 179.63
+        "request_chars_total": 119651689,
+        "request_chars_samples": 37716,
+        "avg_request_chars": 3172.44,
+        "response_chars_total": 7273289,
+        "response_chars_samples": 37716,
+        "avg_response_chars": 192.84
       },
       "endpoint_metrics": {
         "local:qwen3.6-35b-a3b-fp8": {
-          "request_chars_total": 498468,
-          "request_chars_samples": 145,
-          "avg_request_chars": 3437.71,
-          "response_chars_total": 26047,
-          "response_chars_samples": 145,
-          "avg_response_chars": 179.63
-        }
-      }
-    },
-    "2026-05-07": {
-      "total": 10743,
-      "endpoints": {
-        "local:qwen3.6-35b-a3b-fp8": 10508,
-        "api:deepseek/deepseek-v4-pro": 235
-      },
-      "first_request": "2026-05-07T01:09:39.693631",
-      "last_request": "2026-05-07T14:29:12.521511",
-      "metrics": {
-        "request_chars_total": 36176788,
-        "request_chars_samples": 10743,
-        "avg_request_chars": 3367.48,
-        "response_chars_total": 1957103,
-        "response_chars_samples": 10743,
-        "avg_response_chars": 182.17
-      },
-      "endpoint_metrics": {
-        "local:qwen3.6-35b-a3b-fp8": {
-          "request_chars_total": 31685549,
-          "request_chars_samples": 10508,
-          "avg_request_chars": 3015.37,
-          "response_chars_total": 1421429,
-          "response_chars_samples": 10508,
-          "avg_response_chars": 135.27
+          "request_chars_total": 95852865,
+          "request_chars_samples": 36412,
+          "avg_request_chars": 2632.45,
+          "response_chars_total": 4430040,
+          "response_chars_samples": 36412,
+          "avg_response_chars": 121.66
         },
         "api:deepseek/deepseek-v4-pro": {
-          "request_chars_total": 4491239,
-          "request_chars_samples": 235,
-          "avg_request_chars": 19111.66,
-          "response_chars_total": 535674,
-          "response_chars_samples": 235,
-          "avg_response_chars": 2279.46
+          "request_chars_total": 23798824,
+          "request_chars_samples": 1304,
+          "avg_request_chars": 18250.63,
+          "response_chars_total": 2843249,
+          "response_chars_samples": 1304,
+          "avg_response_chars": 2180.41
+        }
+      }
+    },
+    "2026-05-10": {
+      "total": 60128,
+      "endpoints": {
+        "local:qwen3.6-35b-a3b-fp8": 58217,
+        "api:deepseek/deepseek-v4-pro": 1911
+      },
+      "first_request": "2026-05-10T00:00:00.975050",
+      "last_request": "2026-05-10T22:02:27.063751",
+      "metrics": {
+        "request_chars_total": 189481841,
+        "request_chars_samples": 60128,
+        "avg_request_chars": 3151.31,
+        "response_chars_total": 11262114,
+        "response_chars_samples": 60128,
+        "avg_response_chars": 187.3
+      },
+      "endpoint_metrics": {
+        "local:qwen3.6-35b-a3b-fp8": {
+          "request_chars_total": 154065626,
+          "request_chars_samples": 58217,
+          "avg_request_chars": 2646.4,
+          "response_chars_total": 7098158,
+          "response_chars_samples": 58217,
+          "avg_response_chars": 121.93
+        },
+        "api:deepseek/deepseek-v4-pro": {
+          "request_chars_total": 35416215,
+          "request_chars_samples": 1911,
+          "avg_request_chars": 18532.82,
+          "response_chars_total": 4163956,
+          "response_chars_samples": 1911,
+          "avg_response_chars": 2178.94
         }
       }
     }
   },
   "endpoints": {
-    "api:gpt-4o-mini": 169,
-    "api:gpt-5.4": 2592,
-    "local:gemma4-31b-it-vllm": 137,
-    "local:qwen3.6-35b-a3b-fp8": 200855,
-    "api:deepseek-v4-pro": 2282,
-    "api:deepseek/deepseek-v4-pro": 239
+    "local:qwen3.6-35b-a3b-fp8": 101069,
+    "api:deepseek/deepseek-v4-pro": 3416
   },
-  "last_updated": "2026-05-07T14:29:12.521534",
+  "last_updated": "2026-05-10T22:02:27.063780",
   "metrics": {
-    "request_chars_total": 817280790,
-    "request_chars_samples": 206274,
-    "avg_request_chars": 3962.11,
-    "response_chars_total": 45568318,
-    "response_chars_samples": 206274,
-    "avg_response_chars": 220.91
+    "request_chars_total": 330767872,
+    "request_chars_samples": 104485,
+    "avg_request_chars": 3165.7,
+    "response_chars_total": 19779692,
+    "response_chars_samples": 104485,
+    "avg_response_chars": 189.31
   },
   "endpoint_metrics": {
-    "api:gpt-4o-mini": {
-      "request_chars_total": 496088,
-      "request_chars_samples": 169,
-      "avg_request_chars": 2935.43,
-      "response_chars_total": 15499,
-      "response_chars_samples": 169,
-      "avg_response_chars": 91.71
-    },
-    "api:gpt-5.4": {
-      "request_chars_total": 63979301,
-      "request_chars_samples": 2592,
-      "avg_request_chars": 24683.37,
-      "response_chars_total": 9656414,
-      "response_chars_samples": 2592,
-      "avg_response_chars": 3725.47
-    },
-    "local:gemma4-31b-it-vllm": {
-      "request_chars_total": 224672,
-      "request_chars_samples": 137,
-      "avg_request_chars": 1639.94,
-      "response_chars_total": 13153,
-      "response_chars_samples": 137,
-      "avg_response_chars": 96.01
-    },
     "local:qwen3.6-35b-a3b-fp8": {
-      "request_chars_total": 693928880,
-      "request_chars_samples": 200855,
-      "avg_request_chars": 3454.87,
-      "response_chars_total": 30563532,
-      "response_chars_samples": 200855,
-      "avg_response_chars": 152.17
-    },
-    "api:deepseek-v4-pro": {
-      "request_chars_total": 54069293,
-      "request_chars_samples": 2282,
-      "avg_request_chars": 23693.82,
-      "response_chars_total": 4771537,
-      "response_chars_samples": 2282,
-      "avg_response_chars": 2090.95
+      "request_chars_total": 267853724,
+      "request_chars_samples": 101069,
+      "avg_request_chars": 2650.21,
+      "response_chars_total": 12337152,
+      "response_chars_samples": 101069,
+      "avg_response_chars": 122.07
     },
     "api:deepseek/deepseek-v4-pro": {
-      "request_chars_total": 4582556,
-      "request_chars_samples": 239,
-      "avg_request_chars": 19173.87,
-      "response_chars_total": 548183,
-      "response_chars_samples": 239,
-      "avg_response_chars": 2293.65
+      "request_chars_total": 62914148,
+      "request_chars_samples": 3416,
+      "avg_request_chars": 18417.49,
+      "response_chars_total": 7442540,
+      "response_chars_samples": 3416,
+      "avg_response_chars": 2178.73
     }
   }
 }

@@ -1,8 +1,8 @@
 {
-  "total_requests": 11467,
-  "cache_hits": 2182,
-  "success": 8479,
-  "not_found": 2978,
+  "total_requests": 14907,
+  "cache_hits": 3430,
+  "success": 11734,
+  "not_found": 3123,
   "error": 0,
   "daily": {
     "2026-03-24": {
@@ -195,12 +195,33 @@
       "error": 0
     },
     "2026-05-07": {
-      "total_requests": 573,
-      "cache_hits": 347,
-      "success": 490,
-      "not_found": 83,
+      "total_requests": 944,
+      "cache_hits": 637,
+      "success": 780,
+      "not_found": 164,
+      "error": 0
+    },
+    "2026-05-08": {
+      "total_requests": 627,
+      "cache_hits": 394,
+      "success": 508,
+      "not_found": 59,
+      "error": 0
+    },
+    "2026-05-09": {
+      "total_requests": 1000,
+      "cache_hits": 232,
+      "success": 997,
+      "not_found": 4,
+      "error": 0
+    },
+    "2026-05-10": {
+      "total_requests": 1442,
+      "cache_hits": 332,
+      "success": 1460,
+      "not_found": 1,
       "error": 0
     }
   },
-  "last_updated": "2026-05-07T15:14:28.307518"
+  "last_updated": "2026-05-10T22:02:27.066137"
 }
