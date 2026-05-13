@@ -1,5 +1,5 @@
 {
-  "total": 104485,
+  "total": 133447,
   "daily": {
     "2026-05-08": {
       "total": 6641,
@@ -105,37 +105,142 @@
           "avg_response_chars": 2178.94
         }
       }
+    },
+    "2026-05-11": {
+      "total": 8091,
+      "endpoints": {
+        "local:qwen3.6-35b-a3b-fp8": 7921,
+        "api:deepseek/deepseek-v4-pro": 170
+      },
+      "first_request": "2026-05-11T16:49:09.521156",
+      "last_request": "2026-05-11T21:31:42.693266",
+      "metrics": {
+        "request_chars_total": 25948514,
+        "request_chars_samples": 8091,
+        "avg_request_chars": 3207.08,
+        "response_chars_total": 1373767,
+        "response_chars_samples": 8091,
+        "avg_response_chars": 169.79
+      },
+      "endpoint_metrics": {
+        "local:qwen3.6-35b-a3b-fp8": {
+          "request_chars_total": 22731367,
+          "request_chars_samples": 7921,
+          "avg_request_chars": 2869.76,
+          "response_chars_total": 975804,
+          "response_chars_samples": 7921,
+          "avg_response_chars": 123.19
+        },
+        "api:deepseek/deepseek-v4-pro": {
+          "request_chars_total": 3217147,
+          "request_chars_samples": 170,
+          "avg_request_chars": 18924.39,
+          "response_chars_total": 397963,
+          "response_chars_samples": 170,
+          "avg_response_chars": 2340.96
+        }
+      }
+    },
+    "2026-05-12": {
+      "total": 20635,
+      "endpoints": {
+        "local:qwen3.6-35b-a3b-fp8": 19945,
+        "api:deepseek/deepseek-v4-pro": 690
+      },
+      "first_request": "2026-05-12T00:59:34.008163",
+      "last_request": "2026-05-12T07:14:49.381884",
+      "metrics": {
+        "request_chars_total": 69880648,
+        "request_chars_samples": 20635,
+        "avg_request_chars": 3386.51,
+        "response_chars_total": 4045459,
+        "response_chars_samples": 20635,
+        "avg_response_chars": 196.05
+      },
+      "endpoint_metrics": {
+        "local:qwen3.6-35b-a3b-fp8": {
+          "request_chars_total": 56906723,
+          "request_chars_samples": 19945,
+          "avg_request_chars": 2853.18,
+          "response_chars_total": 2534037,
+          "response_chars_samples": 19945,
+          "avg_response_chars": 127.05
+        },
+        "api:deepseek/deepseek-v4-pro": {
+          "request_chars_total": 12973925,
+          "request_chars_samples": 690,
+          "avg_request_chars": 18802.79,
+          "response_chars_total": 1511422,
+          "response_chars_samples": 690,
+          "avg_response_chars": 2190.47
+        }
+      }
+    },
+    "2026-05-13": {
+      "total": 236,
+      "endpoints": {
+        "local:qwen3.6-35b-a3b-fp8": 232,
+        "api:deepseek/deepseek-v4-pro": 4
+      },
+      "first_request": "2026-05-13T15:10:54.584471",
+      "last_request": "2026-05-13T17:54:44.657526",
+      "metrics": {
+        "request_chars_total": 776904,
+        "request_chars_samples": 236,
+        "avg_request_chars": 3291.97,
+        "response_chars_total": 58402,
+        "response_chars_samples": 236,
+        "avg_response_chars": 247.47
+      },
+      "endpoint_metrics": {
+        "local:qwen3.6-35b-a3b-fp8": {
+          "request_chars_total": 681981,
+          "request_chars_samples": 232,
+          "avg_request_chars": 2939.57,
+          "response_chars_total": 47620,
+          "response_chars_samples": 232,
+          "avg_response_chars": 205.26
+        },
+        "api:deepseek/deepseek-v4-pro": {
+          "request_chars_total": 94923,
+          "request_chars_samples": 4,
+          "avg_request_chars": 23730.75,
+          "response_chars_total": 10782,
+          "response_chars_samples": 4,
+          "avg_response_chars": 2695.5
+        }
+      }
     }
   },
   "endpoints": {
-    "local:qwen3.6-35b-a3b-fp8": 101069,
-    "api:deepseek/deepseek-v4-pro": 3416
+    "local:qwen3.6-35b-a3b-fp8": 129167,
+    "api:deepseek/deepseek-v4-pro": 4280
   },
-  "last_updated": "2026-05-10T22:02:27.063780",
+  "last_updated": "2026-05-13T17:54:44.657558",
   "metrics": {
-    "request_chars_total": 330767872,
-    "request_chars_samples": 104485,
-    "avg_request_chars": 3165.7,
-    "response_chars_total": 19779692,
-    "response_chars_samples": 104485,
-    "avg_response_chars": 189.31
+    "request_chars_total": 427373938,
+    "request_chars_samples": 133447,
+    "avg_request_chars": 3202.57,
+    "response_chars_total": 25257320,
+    "response_chars_samples": 133447,
+    "avg_response_chars": 189.27
   },
   "endpoint_metrics": {
     "local:qwen3.6-35b-a3b-fp8": {
-      "request_chars_total": 267853724,
-      "request_chars_samples": 101069,
-      "avg_request_chars": 2650.21,
-      "response_chars_total": 12337152,
-      "response_chars_samples": 101069,
-      "avg_response_chars": 122.07
+      "request_chars_total": 348173795,
+      "request_chars_samples": 129167,
+      "avg_request_chars": 2695.53,
+      "response_chars_total": 15894613,
+      "response_chars_samples": 129167,
+      "avg_response_chars": 123.05
     },
     "api:deepseek/deepseek-v4-pro": {
-      "request_chars_total": 62914148,
-      "request_chars_samples": 3416,
-      "avg_request_chars": 18417.49,
-      "response_chars_total": 7442540,
-      "response_chars_samples": 3416,
-      "avg_response_chars": 2178.73
+      "request_chars_total": 79200143,
+      "request_chars_samples": 4280,
+      "avg_request_chars": 18504.71,
+      "response_chars_total": 9362707,
+      "response_chars_samples": 4280,
+      "avg_response_chars": 2187.55
     }
   }
 }

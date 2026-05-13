@@ -8,6 +8,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from router import router
+from patent_pipeline.router import router as patent_router
 
 app = FastAPI(
     title="DeepSearch API",
@@ -26,6 +27,7 @@ app.add_middleware(
 
 # 注册路由
 app.include_router(router)
+app.include_router(patent_router)
 
 
 @app.get("/")
@@ -40,6 +42,9 @@ async def root():
             "/find/sync": "提交 ORCID 查找任务",
             "/person/report": "提交 Google Scholar 人物报告任务",
             "/person/report/orcid": "提交 ORCID 人物报告任务",
+            "/patents/orcid": "按 ORCID 查询专利",
+            "/patents/gs": "按 Google Scholar 查询专利",
+            "/patents/search": "按姓名和组织查询专利",
             "/jobs/{job_id}": "查询任务状态和结果",
             "/jobs/{job_id}/stream": "流式读取任务日志和结果",
         }

@@ -163,3 +163,16 @@ person_pipeline:
   # 最大并发数
   max_workers: 3
 
+# Patent Pipeline 配置（独立于 Person Pipeline）
+patent_pipeline:
+  # SerpAPI Google Patents 最多翻页数；1 表示只查第一页
+  max_pages: 1
+  # 每页结果数
+  results_per_page: 100
+  # Google Patents 详情页抓取并发数（requests 失败后 Chromium fallback）
+  detail_concurrency: 10
+  # 发明人姓名匹配阈值
+  min_inventor_match_score: 0.85
+  # patent 搜索/详情缓存 TTL
+  cache_ttl_days: 180
+

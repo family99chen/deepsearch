@@ -16,6 +16,12 @@ sys.path.insert(0, str(Path(__file__).parent / "google_scholar_url"))
 
 from google_scholar_url.google_account_fetcher_pipeline import find_google_scholar_by_orcid
 from job_store import get_job_store, get_redis_url
+from patent_pipeline.identity import (
+    resolve_direct as resolve_patent_direct,
+    resolve_from_google_scholar as resolve_patent_from_google_scholar,
+    resolve_from_orcid as resolve_patent_from_orcid,
+)
+from patent_pipeline.pipeline import run_patent_pipeline
 from pipeline import is_failure_report, run_person_pipeline, run_person_pipeline_by_orcid
 from utils.stream_capture import (
     ThreadSafeConsoleBuffer,
@@ -179,6 +185,78 @@ def person_report_orcid_task(self, job_id: str, orcid_id: str) -> Dict[str, Any]
     )
 
 
+def _identity_not_found(source: str) -> Dict[str, Any]:
+    return {"success": False, "error": "identity_not_found", "source": source}
+
+
+@celery_app.task(name="deepsearch.patent_search_orcid", bind=True)
+def patent_search_orcid_task(self, job_id: str, orcid_id: str, use_cache: bool = True) -> Dict[str, Any]:
+    def runner() -> Dict[str, Any]:
+        identity = resolve_patent_from_orcid(orcid_id, use_cache=use_cache)
+        if identity is None:
+            return _identity_not_found("orcid")
+        return run_patent_pipeline(identity, use_cache=use_cache)
+
+    return _run_with_streamed_logs(
+        job_id=job_id,
+        celery_task_id=self.request.id,
+        start_message=f"开始查询 ORCID 专利: {orcid_id}",
+        runner=runner,
+        result_tag=lambda result: "[RESULT]" if result.get("success") else "[ERROR]",
+    )
+
+
+@celery_app.task(name="deepsearch.patent_search_gs", bind=True)
+def patent_search_gs_task(
+    self,
+    job_id: str,
+    google_scholar_url: Optional[str] = None,
+    user_id: Optional[str] = None,
+    use_cache: bool = True,
+) -> Dict[str, Any]:
+    def runner() -> Dict[str, Any]:
+        identity = resolve_patent_from_google_scholar(
+            google_scholar_url=google_scholar_url,
+            user_id=user_id,
+            use_cache=use_cache,
+        )
+        if identity is None:
+            return _identity_not_found("google_scholar")
+        return run_patent_pipeline(identity, use_cache=use_cache)
+
+    identifier = google_scholar_url or user_id or ""
+    return _run_with_streamed_logs(
+        job_id=job_id,
+        celery_task_id=self.request.id,
+        start_message=f"开始查询 Google Scholar 专利: {identifier}",
+        runner=runner,
+        result_tag=lambda result: "[RESULT]" if result.get("success") else "[ERROR]",
+    )
+
+
+@celery_app.task(name="deepsearch.patent_search_direct", bind=True)
+def patent_search_direct_task(
+    self,
+    job_id: str,
+    person_name: str,
+    organization: str,
+    use_cache: bool = True,
+) -> Dict[str, Any]:
+    def runner() -> Dict[str, Any]:
+        identity = resolve_patent_direct(person_name, organization)
+        if identity is None:
+            return _identity_not_found("direct")
+        return run_patent_pipeline(identity, use_cache=use_cache)
+
+    return _run_with_streamed_logs(
+        job_id=job_id,
+        celery_task_id=self.request.id,
+        start_message=f"开始查询专利: {person_name} @ {organization}",
+        runner=runner,
+        result_tag=lambda result: "[RESULT]" if result.get("success") else "[ERROR]",
+    )
+
+
 def submit_orcid_find(orcid_id: str) -> str:
     store = get_job_store()
     job_id = store.create_job("orcid_find", {"orcid_id": orcid_id})
@@ -211,6 +289,61 @@ def submit_person_report_orcid(orcid_id: str) -> str:
     job_id = store.create_job("person_report_orcid", {"orcid_id": orcid_id})
     try:
         async_result = person_report_orcid_task.delay(job_id, orcid_id)
+    except Exception as exc:
+        store.set_failed(job_id, f"任务提交失败: {exc}")
+        raise
+    store.set_dispatched(job_id, celery_task_id=async_result.id)
+    return job_id
+
+
+def submit_patent_search_orcid(orcid_id: str, use_cache: bool = True) -> str:
+    store = get_job_store()
+    job_id = store.create_job("patent_search_orcid", {"orcid_id": orcid_id, "use_cache": use_cache})
+    try:
+        async_result = patent_search_orcid_task.apply_async(
+            args=(job_id, orcid_id, use_cache),
+            queue="patent",
+        )
+    except Exception as exc:
+        store.set_failed(job_id, f"任务提交失败: {exc}")
+        raise
+    store.set_dispatched(job_id, celery_task_id=async_result.id)
+    return job_id
+
+
+def submit_patent_search_gs(
+    google_scholar_url: Optional[str] = None,
+    user_id: Optional[str] = None,
+    use_cache: bool = True,
+) -> str:
+    store = get_job_store()
+    job_id = store.create_job(
+        "patent_search_gs",
+        {"google_scholar_url": google_scholar_url, "user_id": user_id, "use_cache": use_cache},
+    )
+    try:
+        async_result = patent_search_gs_task.apply_async(
+            args=(job_id, google_scholar_url, user_id, use_cache),
+            queue="patent",
+        )
+    except Exception as exc:
+        store.set_failed(job_id, f"任务提交失败: {exc}")
+        raise
+    store.set_dispatched(job_id, celery_task_id=async_result.id)
+    return job_id
+
+
+def submit_patent_search_direct(person_name: str, organization: str, use_cache: bool = True) -> str:
+    store = get_job_store()
+    job_id = store.create_job(
+        "patent_search_direct",
+        {"person_name": person_name, "organization": organization, "use_cache": use_cache},
+    )
+    try:
+        async_result = patent_search_direct_task.apply_async(
+            args=(job_id, person_name, organization, use_cache),
+            queue="patent",
+        )
     except Exception as exc:
         store.set_failed(job_id, f"任务提交失败: {exc}")
         raise
