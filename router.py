@@ -31,6 +31,7 @@ from tasks import (
 from utils.usage_tracker import record_api_call, get_tracker
 from utils.org_pipeline_stats import get_org_pipeline_stats
 from utils.pipeline_stats import get_pipeline_stats
+from utils.patent_pipeline_stats import get_patent_pipeline_stats
 from utils.stream_capture import (
     ThreadSafeConsoleBuffer,
     capture_console_output,
@@ -644,4 +645,18 @@ async def get_org_pipeline_today_usage():
     获取今日 deepsearch 调用统计
     """
     stats = get_org_pipeline_stats()
+    return stats.get_today_stats()
+
+
+@router.get("/usage/patent-pipeline", tags=["Usage"])
+async def get_patent_pipeline_usage():
+    """获取 Patent Pipeline 业务统计。"""
+    stats = get_patent_pipeline_stats()
+    return stats.get_stats()
+
+
+@router.get("/usage/patent-pipeline/today", tags=["Usage"])
+async def get_patent_pipeline_today_usage():
+    """获取今日 Patent Pipeline 业务统计。"""
+    stats = get_patent_pipeline_stats()
     return stats.get_today_stats()

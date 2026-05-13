@@ -23,6 +23,7 @@ from patent_pipeline.identity import (
 )
 from patent_pipeline.pipeline import run_patent_pipeline
 from pipeline import is_failure_report, run_person_pipeline, run_person_pipeline_by_orcid
+from utils.patent_pipeline_stats import record_result as record_patent_result
 from utils.stream_capture import (
     ThreadSafeConsoleBuffer,
     capture_console_output,
@@ -189,13 +190,31 @@ def _identity_not_found(source: str) -> Dict[str, Any]:
     return {"success": False, "error": "identity_not_found", "source": source}
 
 
+def _record_patent_stats(source: str, result: Dict[str, Any]) -> Dict[str, Any]:
+    if not result.get("success"):
+        record_patent_result(source=source, outcome="error")
+        return result
+    confirmed_count = len(result.get("confirmed") or [])
+    possible_count = len(result.get("possible") or [])
+    rejected_count = len(result.get("rejected") or [])
+    outcome = "success" if confirmed_count > 0 else "not_found"
+    record_patent_result(
+        source=source,
+        outcome=outcome,
+        confirmed_count=confirmed_count,
+        possible_count=possible_count,
+        rejected_count=rejected_count,
+    )
+    return result
+
+
 @celery_app.task(name="deepsearch.patent_search_orcid", bind=True)
 def patent_search_orcid_task(self, job_id: str, orcid_id: str, use_cache: bool = True) -> Dict[str, Any]:
     def runner() -> Dict[str, Any]:
         identity = resolve_patent_from_orcid(orcid_id, use_cache=use_cache)
         if identity is None:
-            return _identity_not_found("orcid")
-        return run_patent_pipeline(identity, use_cache=use_cache)
+            return _record_patent_stats("orcid", _identity_not_found("orcid"))
+        return _record_patent_stats("orcid", run_patent_pipeline(identity, use_cache=use_cache))
 
     return _run_with_streamed_logs(
         job_id=job_id,
@@ -221,8 +240,8 @@ def patent_search_gs_task(
             use_cache=use_cache,
         )
         if identity is None:
-            return _identity_not_found("google_scholar")
-        return run_patent_pipeline(identity, use_cache=use_cache)
+            return _record_patent_stats("google_scholar", _identity_not_found("google_scholar"))
+        return _record_patent_stats("google_scholar", run_patent_pipeline(identity, use_cache=use_cache))
 
     identifier = google_scholar_url or user_id or ""
     return _run_with_streamed_logs(
@@ -245,8 +264,8 @@ def patent_search_direct_task(
     def runner() -> Dict[str, Any]:
         identity = resolve_patent_direct(person_name, organization)
         if identity is None:
-            return _identity_not_found("direct")
-        return run_patent_pipeline(identity, use_cache=use_cache)
+            return _record_patent_stats("direct", _identity_not_found("direct"))
+        return _record_patent_stats("direct", run_patent_pipeline(identity, use_cache=use_cache))
 
     return _run_with_streamed_logs(
         job_id=job_id,
@@ -300,10 +319,7 @@ def submit_patent_search_orcid(orcid_id: str, use_cache: bool = True) -> str:
     store = get_job_store()
     job_id = store.create_job("patent_search_orcid", {"orcid_id": orcid_id, "use_cache": use_cache})
     try:
-        async_result = patent_search_orcid_task.apply_async(
-            args=(job_id, orcid_id, use_cache),
-            queue="patent",
-        )
+        async_result = patent_search_orcid_task.delay(job_id, orcid_id, use_cache)
     except Exception as exc:
         store.set_failed(job_id, f"任务提交失败: {exc}")
         raise
@@ -322,10 +338,7 @@ def submit_patent_search_gs(
         {"google_scholar_url": google_scholar_url, "user_id": user_id, "use_cache": use_cache},
     )
     try:
-        async_result = patent_search_gs_task.apply_async(
-            args=(job_id, google_scholar_url, user_id, use_cache),
-            queue="patent",
-        )
+        async_result = patent_search_gs_task.delay(job_id, google_scholar_url, user_id, use_cache)
     except Exception as exc:
         store.set_failed(job_id, f"任务提交失败: {exc}")
         raise
@@ -340,10 +353,7 @@ def submit_patent_search_direct(person_name: str, organization: str, use_cache: 
         {"person_name": person_name, "organization": organization, "use_cache": use_cache},
     )
     try:
-        async_result = patent_search_direct_task.apply_async(
-            args=(job_id, person_name, organization, use_cache),
-            queue="patent",
-        )
+        async_result = patent_search_direct_task.delay(job_id, person_name, organization, use_cache)
     except Exception as exc:
         store.set_failed(job_id, f"任务提交失败: {exc}")
         raise

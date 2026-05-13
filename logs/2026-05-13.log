@@ -2141,3 +2141,69 @@
 [2026-05-13 17:54:55] [INFO] 等待 Chrome 初始化锁...
 [2026-05-13 17:54:55] [INFO] 检测到 Chrome 主版本: 148
 [2026-05-13 17:54:55] [INFO] 共享 Chrome driver 已创建
+[2026-05-13 17:54:58] [INFO] 域名预热完成: https://in.linkedin.com
+[2026-05-13 17:54:58] [ERROR] 多标签页并行获取失败: HTTPConnectionPool(host='localhost', port=58927): Max retries exceeded with url: /session/ed78c3868463bf9f7398662c922ddbae/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7bebef6a4650>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-13 17:54:58] [INFO] IterAgent 完成: Dr. Dhruba Jyoti Sarkar, 迭代 1 轮, 访问 1 页, 收集 0 条信息
+[2026-05-13 17:54:58] [INFO] 域名预热完成: https://sciprofiles.com
+[2026-05-13 17:54:58] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-13 17:54:58] [INFO] 等待 Chrome 初始化锁...
+[2026-05-13 17:54:58] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-13 17:54:58] [ERROR] 执行失败: navigate, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-13 17:54:58] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-13 17:54:58] [INFO] Xvfb 已停止
+[2026-05-13 17:54:59] [INFO] 共享 Chrome driver 已创建
+[2026-05-13 17:55:00] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-13 17:55:00] [INFO] IterAgent 开始: Dr. Dhruba Jyoti Sarkar, URL: https://sites.google.com/site/dsarkarresearch/contact
+[2026-05-13 17:55:01] [INFO] Xvfb 已启动: DISPLAY=:170
+[2026-05-13 17:55:01] [INFO] 等待 Chrome 初始化锁...
+[2026-05-13 17:55:01] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.167/chrome (selenium-manager)
+[2026-05-13 17:55:01] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-13 17:55:01] [WARNING] 域名预热失败: https://klyuniv.ac.in, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-13 17:55:01] [ERROR] 执行失败: navigate, HTTPConnectionPool(host='localhost', port=56573): Max retries exceeded with url: /session/33a32f193647b156d14d9f2ad2add8ef/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection ob
+[2026-05-13 17:55:01] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-13 17:55:01] [INFO] Xvfb 已停止
+[2026-05-13 17:55:02] [INFO] 共享 Chrome driver 已创建
+[2026-05-13 17:55:02] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-13 17:55:03] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-13 17:55:03] [INFO] IterAgent 开始: Dr. Dhruba Jyoti Sarkar, URL: https://scholar.google.com/citations?user=4vM_K0MAAAAJ&hl=en
+[2026-05-13 17:55:04] [INFO] Xvfb 已启动: DISPLAY=:162
+[2026-05-13 17:55:05] [INFO] 等待 Chrome 初始化锁...
+[2026-05-13 17:55:05] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.167/chrome (selenium-manager)
+[2026-05-13 17:55:05] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-13 17:55:05] [INFO] 共享 Chrome driver 已创建
+[2026-05-13 17:55:06] [INFO] LLM Local Async 查询成功: 118 字符
+[2026-05-13 17:55:06] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-13 17:55:06] [INFO] LLM Local Async 查询成功: 47 字符
+[2026-05-13 17:55:06] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-13 17:55:07] [INFO] LLM Local Async 查询成功: 124 字符
+[2026-05-13 17:55:07] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-13 17:55:07] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-13 17:55:12] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-13 17:55:18] [INFO] LLM Local Async 查询成功: 12 字符
+[2026-05-13 17:55:20] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-13 17:55:31] [INFO] LLM Local Async 查询成功: 103 字符
+[2026-05-13 17:55:31] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-13 17:55:31] [INFO] LLM Local Async 查询成功: 47 字符
+[2026-05-13 17:55:31] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-13 17:55:31] [INFO] Xvfb 已停止
+[2026-05-13 17:55:31] [INFO] LLM Local Async 查询成功: 728 字符
+[2026-05-13 17:55:31] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-13 17:55:31] [INFO] LLM Local Async 查询成功: 717 字符
+[2026-05-13 17:55:31] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-13 17:55:31] [INFO] LLM Local Async 查询成功: 4 字符
+[2026-05-13 17:55:31] [INFO] LLM Factory Async 初始化, 后端: local
+[2026-05-13 17:55:32] [INFO] LLM Local Async 查询成功: 8 字符
+[2026-05-13 17:55:33] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-13 17:55:33] [INFO] IterAgent 开始: Dr. Dhruba Jyoti Sarkar, URL: https://adtu.in/teaching-faculties/T0RZeQ==/.html
+[2026-05-13 17:55:33] [WARNING] 打开标签页失败: https://klyuniv.ac.in/professors/dhrubajyoti/, ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2026-05-13 17:55:33] [WARNING] 打开标签页失败: https://sites.google.com/site/dsatclass, HTTPConnectionPool(host='localhost', port=48589): Max retries exceeded with url: /session/b44dc378ec22dc65bbcbd07fb80a2e8a/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79eca4f2b9d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2026-05-13 17:55:33] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-13 17:55:33] [INFO] Xvfb 已停止
+[2026-05-13 17:55:33] [INFO] Chrome driver 已关闭（保持 Xvfb）
+[2026-05-13 17:55:33] [INFO] Xvfb 已停止
+[2026-05-13 17:55:34] [INFO] Xvfb 已启动: DISPLAY=:121
+[2026-05-13 17:55:34] [INFO] 等待 Chrome 初始化锁...
+[2026-05-13 17:55:34] [INFO] 使用 Chrome 二进制: /root/.cache/selenium/chrome/linux64/148.0.7778.167/chrome (selenium-manager)
+[2026-05-13 17:55:34] [INFO] 检测到 Chrome 主版本: 148
+[2026-05-13 17:55:34] [INFO] IterAgent 初始化: k=2, n=2
+[2026-05-13 17:55:34] [INFO] IterAgent 开始: Dr. Dhruba Jyoti Sarkar, URL: https://iari.academia.edu/DhrubaJyotiSarkar/CurriculumVitae
