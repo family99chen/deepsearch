@@ -1,5 +1,5 @@
 {
-  "total": 626861,
+  "total": 805789,
   "daily": {
     "2026-01-17": {
       "total": 192,
@@ -534,30 +534,66 @@
       "last_request": "2026-05-12T07:05:21.584989"
     },
     "2026-05-13": {
-      "total": 951,
+      "total": 7938,
       "endpoints": {
-        "/person/report/orcid": 931,
-        "/find/sync": 5,
+        "/person/report/orcid": 7913,
+        "/find/sync": 6,
         "/person/report": 3,
-        "/patents/search": 8,
-        "/patents/orcid": 2,
+        "/patents/search": 9,
+        "/patents/orcid": 5,
         "/patents/gs": 2
       },
       "first_request": "2026-05-13T15:09:07.083549",
-      "last_request": "2026-05-13T18:07:31.732398"
+      "last_request": "2026-05-13T23:54:11.361128"
+    },
+    "2026-05-14": {
+      "total": 69312,
+      "endpoints": {
+        "/person/report/orcid": 67712,
+        "/patents/orcid": 1600
+      },
+      "first_request": "2026-05-14T06:48:45.822623",
+      "last_request": "2026-05-14T23:59:59.995627"
+    },
+    "2026-05-15": {
+      "total": 39434,
+      "endpoints": {
+        "/patents/orcid": 16843,
+        "/person/report/orcid": 22591
+      },
+      "first_request": "2026-05-15T00:00:01.115938",
+      "last_request": "2026-05-15T23:59:58.339817"
+    },
+    "2026-05-16": {
+      "total": 55554,
+      "endpoints": {
+        "/patents/orcid": 47769,
+        "/person/report/orcid": 7785
+      },
+      "first_request": "2026-05-16T00:00:02.521001",
+      "last_request": "2026-05-16T23:59:56.360785"
+    },
+    "2026-05-17": {
+      "total": 7641,
+      "endpoints": {
+        "/person/report/orcid": 7639,
+        "/patents/orcid": 2
+      },
+      "first_request": "2026-05-17T00:00:03.040036",
+      "last_request": "2026-05-17T09:20:12.531375"
     }
   },
   "endpoints": {
     "/find": 43777,
     "/person/report/orcid/stream": 16094,
     "/person/report/stream": 16,
-    "/person/report/orcid": 406004,
-    "/find/sync": 20872,
+    "/person/report/orcid": 518713,
+    "/find/sync": 20873,
     "/find/job": 140082,
     "/person/report": 4,
-    "/patents/search": 8,
-    "/patents/orcid": 2,
+    "/patents/search": 9,
+    "/patents/orcid": 66219,
     "/patents/gs": 2
   },
-  "last_updated": "2026-05-13T18:07:31.732415"
+  "last_updated": "2026-05-17T09:20:12.531384"
 }

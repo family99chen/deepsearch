@@ -4,7 +4,8 @@ Patent pipeline usage and outcome statistics.
 Records one request per patent pipeline job and mutually exclusive outcomes:
 - success: pipeline finished and found at least one confirmed patent
 - not_found: pipeline finished but found no confirmed patents
-- error: identity resolution failed or the job raised
+- identity_not_found: input did not provide enough identity data to search
+- error: the job raised or an external dependency failed
 """
 
 import copy
@@ -22,7 +23,7 @@ except ImportError:  # pragma: no cover
 
 
 SOURCES = ("direct", "orcid", "google_scholar")
-OUTCOMES = ("success", "not_found", "error")
+OUTCOMES = ("success", "not_found", "identity_not_found", "error")
 
 
 def _empty_source_stats() -> Dict[str, Any]:
@@ -30,6 +31,7 @@ def _empty_source_stats() -> Dict[str, Any]:
         "total_requests": 0,
         "success": 0,
         "not_found": 0,
+        "identity_not_found": 0,
         "error": 0,
         "confirmed_total": 0,
         "possible_total": 0,

@@ -192,7 +192,8 @@ def _identity_not_found(source: str) -> Dict[str, Any]:
 
 def _record_patent_stats(source: str, result: Dict[str, Any]) -> Dict[str, Any]:
     if not result.get("success"):
-        record_patent_result(source=source, outcome="error")
+        outcome = "identity_not_found" if result.get("error") == "identity_not_found" else "error"
+        record_patent_result(source=source, outcome=outcome)
         return result
     confirmed_count = len(result.get("confirmed") or [])
     possible_count = len(result.get("possible") or [])
