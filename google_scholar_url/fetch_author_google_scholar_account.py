@@ -3,12 +3,60 @@
 通过论文标题匹配来验证身份
 """
 
-from typing import List, Dict, Optional, Tuple
+import re
+from typing import Any, Dict, List, Optional, Tuple
 
 # 导入已有的模块
 from fetch_google_scholar_name_list import GoogleScholarAuthorScraper
 from fetch_author_paper_list import get_author_papers
 from verify_author_info import verify_author_identity
+from name_normalization import normalize_name
+
+
+def _split_author_names(authors_text: str) -> List[str]:
+    """将 Scholar 论文里的作者字符串拆成单个作者名。"""
+    if not authors_text:
+        return []
+    parts = re.split(r"\s*(?:,|;|\band\b)\s*", authors_text)
+    return [part.strip() for part in parts if part and part.strip() and part.strip() != "..."]
+
+
+def _has_duplicate_exact_author_name(
+    matched_papers: List[Dict[str, Any]],
+    matched_name: Optional[str],
+) -> bool:
+    target_name = normalize_name(matched_name or "")
+    if not target_name:
+        return False
+
+    for paper in matched_papers or []:
+        author_tokens = _split_author_names(paper.get("scholar_authors", ""))
+        duplicate_count = sum(
+            1 for token in author_tokens if normalize_name(token) == target_name
+        )
+        if duplicate_count >= 2:
+            return True
+    return False
+
+
+def _build_confidence_label(
+    orcid_name: Optional[str],
+    matched_name: Optional[str],
+    matched_papers: List[Dict[str, Any]],
+) -> str:
+    normalized_orcid_name = normalize_name(orcid_name or "")
+    normalized_matched_name = normalize_name(matched_name or "")
+
+    if not normalized_orcid_name or not normalized_matched_name:
+        return "high risk"
+
+    if normalized_orcid_name != normalized_matched_name:
+        return "high risk"
+
+    if _has_duplicate_exact_author_name(matched_papers, matched_name):
+        return "low risk"
+
+    return "no risk"
 
 
 def find_google_scholar_account(
@@ -152,6 +200,7 @@ def find_google_scholar_account(
 def find_google_scholar_account_from_candidates(
     candidates: List[Dict],
     orcid_papers: List[dict],
+    orcid_name: Optional[str] = None,
     match_threshold: float = 0.85,
     max_matches: int = 10,
     verbose: bool = True
@@ -162,6 +211,7 @@ def find_google_scholar_account_from_candidates(
     Args:
         candidates: 候选人列表，每个候选人是一个字典，包含 url, name, affiliation 等
         orcid_papers: ORCID 论文列表
+        orcid_name: ORCID 作者名，用于计算置信标签
         match_threshold: 标题匹配相似度阈值
         max_matches: 每个候选人最大匹配论文数量
         verbose: 是否打印详细信息
@@ -205,18 +255,34 @@ def find_google_scholar_account_from_candidates(
             print(f"    URL: {url}")
         
         try:
-            is_same, matches = verify_author_identity(
+            is_same, matches, verification_details = verify_author_identity(
                 scholar_profile_url=url,
                 orcid_papers=orcid_papers,
                 match_threshold=match_threshold,
                 max_matches=max_matches,
-                verbose=False
+                verbose=False,
+                return_details=True,
             )
             
             if is_same:
+                matched_papers = verification_details.get("matched_papers", [])
+                confidence_label = _build_confidence_label(
+                    orcid_name=orcid_name,
+                    matched_name=name,
+                    matched_papers=matched_papers,
+                )
+                if isinstance(candidate, dict):
+                    matched_candidate = dict(candidate)
+                else:
+                    matched_candidate = {'url': url}
+                matched_candidate['match_count'] = len(matches)
+                if confidence_label is not None:
+                    matched_candidate['confidence_label'] = confidence_label
                 if verbose:
                     print(f"    ✓ 匹配成功！找到 {len(matches)} 篇相同论文")
-                return url, candidate if isinstance(candidate, dict) else {'url': url}, len(matches)
+                    if confidence_label is not None:
+                        print(f"    置信标签: {confidence_label}")
+                return url, matched_candidate, len(matches)
             else:
                 if verbose:
                     print(f"    ✗ 不匹配")

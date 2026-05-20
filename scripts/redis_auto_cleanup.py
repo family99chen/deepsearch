@@ -72,7 +72,7 @@ def flush_pipeline(pipe: redis.client.Pipeline, pending_ops: int) -> int:
 
 def cleanup_completed_jobs(
     client: redis.Redis,
-    cutoff: datetime,
+    cutoff: Optional[datetime],
     batch_size: int,
 ) -> tuple[int, int, int]:
     pipe = client.pipeline(transaction=False)
@@ -91,9 +91,10 @@ def cleanup_completed_jobs(
             continue
         if status not in {"success", "failed"}:
             continue
-        finished_at = parse_dt(data.get("finished_at")) or parse_dt(data.get("updated_at"))
-        if finished_at and finished_at > cutoff:
-            continue
+        if cutoff is not None:
+            finished_at = parse_dt(data.get("finished_at")) or parse_dt(data.get("updated_at"))
+            if finished_at and finished_at > cutoff:
+                continue
 
         pipe.delete(key)
         pipe.delete(f"{key}:events")
@@ -153,6 +154,7 @@ def main() -> int:
     print(f"started_at={utc_now().isoformat()}")
     print(f"used_memory_before_mb={before_mb:.2f}")
     print(f"threshold_mb={args.threshold_mb}")
+    print(f"target_mb={args.target_mb}")
     print(f"retain_hours={args.retain_hours}")
 
     if before_mb < args.threshold_mb and not args.force:
@@ -160,10 +162,25 @@ def main() -> int:
         os.close(lock_fd)
         return 0
 
-    cutoff = utc_now() - timedelta(hours=args.retain_hours)
+    cutoff = utc_now() - timedelta(hours=args.retain_hours) if args.retain_hours > 0 else None
     deleted_jobs, deleted_events, kept_active = cleanup_completed_jobs(client, cutoff, args.batch_size)
     deleted_meta = cleanup_celery_results(client, args.batch_size)
     after_mb = used_memory_mb(client)
+    retention_bypassed = False
+
+    if after_mb > args.target_mb and args.retain_hours > 0:
+        # Under memory pressure, freshness is less important than keeping Redis alive.
+        # User-visible finished job results are historical data and can be regenerated.
+        extra_jobs, extra_events, kept_active_after_bypass = cleanup_completed_jobs(
+            client,
+            cutoff=None,
+            batch_size=args.batch_size,
+        )
+        deleted_jobs += extra_jobs
+        deleted_events += extra_events
+        kept_active = kept_active_after_bypass
+        after_mb = used_memory_mb(client)
+        retention_bypassed = True
 
     save_status = "not_needed"
     if deleted_jobs or deleted_events or deleted_meta:
@@ -173,6 +190,7 @@ def main() -> int:
     print(f"deleted_event_streams={deleted_events}")
     print(f"deleted_celery_task_meta={deleted_meta}")
     print(f"kept_pending_running_jobs={kept_active}")
+    print(f"retention_bypassed={str(retention_bypassed).lower()}")
     print(f"used_memory_after_mb={after_mb:.2f}")
     print(f"bgsave_status={save_status}")
     print(f"elapsed_seconds={time.time() - started:.2f}")

@@ -1,34 +1,38 @@
 {
-  "total_requests": 18746,
-  "success": 2900,
-  "not_found": 2852,
+  "total_requests": 20625,
+  "success": 3913,
+  "not_found": 3718,
+  "identity_not_found": 0,
   "error": 12994,
-  "confirmed_total": 73063,
-  "possible_total": 96,
-  "rejected_total": 243903,
+  "confirmed_total": 94820,
+  "possible_total": 124,
+  "rejected_total": 335990,
   "by_source": {
     "direct": {
       "total_requests": 1,
       "success": 1,
       "not_found": 0,
+      "identity_not_found": 0,
       "error": 0,
       "confirmed_total": 34,
       "possible_total": 0,
       "rejected_total": 66
     },
     "orcid": {
-      "total_requests": 18745,
-      "success": 2899,
-      "not_found": 2852,
+      "total_requests": 20624,
+      "success": 3912,
+      "not_found": 3718,
+      "identity_not_found": 0,
       "error": 12994,
-      "confirmed_total": 73029,
-      "possible_total": 96,
-      "rejected_total": 243837
+      "confirmed_total": 94786,
+      "possible_total": 124,
+      "rejected_total": 335924
     },
     "google_scholar": {
       "total_requests": 0,
       "success": 0,
       "not_found": 0,
+      "identity_not_found": 0,
       "error": 0,
       "confirmed_total": 0,
       "possible_total": 0,
@@ -40,6 +44,7 @@
       "total_requests": 2,
       "success": 2,
       "not_found": 0,
+      "identity_not_found": 0,
       "error": 0,
       "confirmed_total": 44,
       "possible_total": 0,
@@ -49,6 +54,7 @@
           "total_requests": 1,
           "success": 1,
           "not_found": 0,
+          "identity_not_found": 0,
           "error": 0,
           "confirmed_total": 34,
           "possible_total": 0,
@@ -58,6 +64,7 @@
           "total_requests": 1,
           "success": 1,
           "not_found": 0,
+          "identity_not_found": 0,
           "error": 0,
           "confirmed_total": 10,
           "possible_total": 0,
@@ -67,6 +74,7 @@
           "total_requests": 0,
           "success": 0,
           "not_found": 0,
+          "identity_not_found": 0,
           "error": 0,
           "confirmed_total": 0,
           "possible_total": 0,
@@ -78,6 +86,7 @@
       "total_requests": 4310,
       "success": 1183,
       "not_found": 1257,
+      "identity_not_found": 0,
       "error": 1870,
       "confirmed_total": 25629,
       "possible_total": 76,
@@ -87,6 +96,7 @@
           "total_requests": 0,
           "success": 0,
           "not_found": 0,
+          "identity_not_found": 0,
           "error": 0,
           "confirmed_total": 0,
           "possible_total": 0,
@@ -96,6 +106,7 @@
           "total_requests": 4310,
           "success": 1183,
           "not_found": 1257,
+          "identity_not_found": 0,
           "error": 1870,
           "confirmed_total": 25629,
           "possible_total": 76,
@@ -105,6 +116,7 @@
           "total_requests": 0,
           "success": 0,
           "not_found": 0,
+          "identity_not_found": 0,
           "error": 0,
           "confirmed_total": 0,
           "possible_total": 0,
@@ -116,6 +128,7 @@
       "total_requests": 14434,
       "success": 1715,
       "not_found": 1595,
+      "identity_not_found": 0,
       "error": 11124,
       "confirmed_total": 47390,
       "possible_total": 20,
@@ -125,6 +138,7 @@
           "total_requests": 0,
           "success": 0,
           "not_found": 0,
+          "identity_not_found": 0,
           "error": 0,
           "confirmed_total": 0,
           "possible_total": 0,
@@ -134,6 +148,7 @@
           "total_requests": 14434,
           "success": 1715,
           "not_found": 1595,
+          "identity_not_found": 0,
           "error": 11124,
           "confirmed_total": 47390,
           "possible_total": 20,
@@ -143,6 +158,91 @@
           "total_requests": 0,
           "success": 0,
           "not_found": 0,
+          "identity_not_found": 0,
+          "error": 0,
+          "confirmed_total": 0,
+          "possible_total": 0,
+          "rejected_total": 0
+        }
+      }
+    },
+    "2026-05-17": {
+      "total_requests": 1807,
+      "success": 975,
+      "not_found": 832,
+      "identity_not_found": 0,
+      "error": 0,
+      "confirmed_total": 20757,
+      "possible_total": 27,
+      "rejected_total": 88317,
+      "by_source": {
+        "direct": {
+          "total_requests": 0,
+          "success": 0,
+          "not_found": 0,
+          "identity_not_found": 0,
+          "error": 0,
+          "confirmed_total": 0,
+          "possible_total": 0,
+          "rejected_total": 0
+        },
+        "orcid": {
+          "total_requests": 1807,
+          "success": 975,
+          "not_found": 832,
+          "identity_not_found": 0,
+          "error": 0,
+          "confirmed_total": 20757,
+          "possible_total": 27,
+          "rejected_total": 88317
+        },
+        "google_scholar": {
+          "total_requests": 0,
+          "success": 0,
+          "not_found": 0,
+          "identity_not_found": 0,
+          "error": 0,
+          "confirmed_total": 0,
+          "possible_total": 0,
+          "rejected_total": 0
+        }
+      }
+    },
+    "2026-05-18": {
+      "total_requests": 72,
+      "success": 38,
+      "not_found": 34,
+      "identity_not_found": 0,
+      "error": 0,
+      "confirmed_total": 1000,
+      "possible_total": 1,
+      "rejected_total": 3770,
+      "by_source": {
+        "direct": {
+          "total_requests": 0,
+          "success": 0,
+          "not_found": 0,
+          "identity_not_found": 0,
+          "error": 0,
+          "confirmed_total": 0,
+          "possible_total": 0,
+          "rejected_total": 0
+        },
+        "orcid": {
+          "total_requests": 72,
+          "success": 38,
+          "not_found": 34,
+          "identity_not_found": 0,
+          "error": 0,
+          "confirmed_total": 1000,
+          "possible_total": 1,
+          "rejected_total": 3770
+        },
+        "google_scholar": {
+          "total_requests": 0,
+          "success": 0,
+          "not_found": 0,
+          "identity_not_found": 0,
           "error": 0,
           "confirmed_total": 0,
           "possible_total": 0,
@@ -151,5 +251,5 @@
       }
     }
   },
-  "last_updated": "2026-05-16T23:40:43.324144"
+  "last_updated": "2026-05-18T15:14:52.775660"
 }

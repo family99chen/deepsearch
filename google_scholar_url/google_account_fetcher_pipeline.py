@@ -170,6 +170,8 @@ def find_google_scholar_by_orcid(
                 "url": cached_data.get("google_scholar_url"),
                 "user_id": cached_data.get("user_id"),
                 "affiliation": cached_data.get("affiliation"),
+                "match_count": cached_data.get("match_count"),
+                "confidence_label": cached_data.get("confidence_label"),
             }
             return cached_data["google_scholar_url"], matched_candidate
     
@@ -355,6 +357,7 @@ def find_google_scholar_by_orcid(
             matched_url, matched_candidate, match_count = find_google_scholar_account_from_candidates(
                 candidates=candidates,
                 orcid_papers=orcid_papers,
+                orcid_name=author_name,
                 match_threshold=match_threshold,
                 max_matches=max_matches,
                 verbose=verbose
@@ -376,6 +379,7 @@ def find_google_scholar_by_orcid(
                         "search_method": "name_search",
                         "search_strategy": search_desc,
                         "match_count": match_count,
+                        "confidence_label": matched_candidate.get("confidence_label"),
                         "google_search_calls": total_google_search_calls,
                         "cached_at": datetime.now().isoformat(),
                     }
@@ -489,6 +493,7 @@ def find_google_scholar_by_orcid(
             matched_url, matched_candidate, match_count = find_google_scholar_account_from_candidates(
                 candidates=paper_candidates,
                 orcid_papers=orcid_papers,
+                orcid_name=author_name,
                 match_threshold=match_threshold,
                 max_matches=max_matches,
                 verbose=verbose
@@ -510,6 +515,7 @@ def find_google_scholar_by_orcid(
                         "search_method": "paper_search",
                         "search_paper": paper_title[:100],
                         "match_count": match_count,
+                        "confidence_label": matched_candidate.get("confidence_label"),
                         "papers_searched": papers_searched_count,
                         "cached_at": datetime.now().isoformat(),
                     }

@@ -1,5 +1,5 @@
 {
-  "total": 63979,
+  "total": 65739,
   "daily": {
     "2026-01-17": {
       "total": 38,
@@ -406,18 +406,36 @@
       "last_request": "2026-05-16T23:59:52.223490"
     },
     "2026-05-17": {
-      "total": 111,
+      "total": 1779,
       "endpoints": {
-        "serpapi_scholar": 111
+        "serpapi_scholar": 111,
+        "serpapi_patents": 1668
       },
       "first_request": "2026-05-17T00:00:31.968063",
-      "last_request": "2026-05-17T01:28:13.705840"
+      "last_request": "2026-05-17T18:20:06.634606"
+    },
+    "2026-05-18": {
+      "total": 77,
+      "endpoints": {
+        "serpapi_scholar": 20,
+        "serpapi_patents": 57
+      },
+      "first_request": "2026-05-18T14:59:20.956350",
+      "last_request": "2026-05-18T22:18:57.922259"
+    },
+    "2026-05-19": {
+      "total": 15,
+      "endpoints": {
+        "serpapi_scholar": 15
+      },
+      "first_request": "2026-05-19T00:22:36.798169",
+      "last_request": "2026-05-19T00:24:12.300138"
     }
   },
   "endpoints": {
-    "serpapi_scholar": 53829,
-    "serpapi_patents": 10040,
+    "serpapi_scholar": 53864,
+    "serpapi_patents": 11765,
     "serpapi_patent_details": 110
   },
-  "last_updated": "2026-05-17T01:28:13.705849"
+  "last_updated": "2026-05-19T00:24:12.300150"
 }

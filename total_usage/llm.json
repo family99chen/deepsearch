@@ -1,5 +1,5 @@
 {
-  "total": 149747,
+  "total": 153793,
   "daily": {
     "2026-05-08": {
       "total": 6641,
@@ -350,37 +350,107 @@
           "avg_response_chars": 2379.33
         }
       }
+    },
+    "2026-05-18": {
+      "total": 2511,
+      "endpoints": {
+        "local:qwen3.6-35b-a3b-fp8": 2449,
+        "api:deepseek/deepseek-v4-pro": 62
+      },
+      "first_request": "2026-05-18T14:59:48.630396",
+      "last_request": "2026-05-18T22:35:28.259109",
+      "metrics": {
+        "request_chars_total": 6002979,
+        "request_chars_samples": 2511,
+        "avg_request_chars": 2390.67,
+        "response_chars_total": 435902,
+        "response_chars_samples": 2511,
+        "avg_response_chars": 173.6
+      },
+      "endpoint_metrics": {
+        "local:qwen3.6-35b-a3b-fp8": {
+          "request_chars_total": 4829053,
+          "request_chars_samples": 2449,
+          "avg_request_chars": 1971.85,
+          "response_chars_total": 298468,
+          "response_chars_samples": 2449,
+          "avg_response_chars": 121.87
+        },
+        "api:deepseek/deepseek-v4-pro": {
+          "request_chars_total": 1173926,
+          "request_chars_samples": 62,
+          "avg_request_chars": 18934.29,
+          "response_chars_total": 137434,
+          "response_chars_samples": 62,
+          "avg_response_chars": 2216.68
+        }
+      }
+    },
+    "2026-05-19": {
+      "total": 1535,
+      "endpoints": {
+        "local:qwen3.6-35b-a3b-fp8": 1497,
+        "api:deepseek/deepseek-v4-pro": 38
+      },
+      "first_request": "2026-05-19T00:22:48.391270",
+      "last_request": "2026-05-19T00:53:14.831164",
+      "metrics": {
+        "request_chars_total": 4786269,
+        "request_chars_samples": 1535,
+        "avg_request_chars": 3118.09,
+        "response_chars_total": 236582,
+        "response_chars_samples": 1535,
+        "avg_response_chars": 154.13
+      },
+      "endpoint_metrics": {
+        "local:qwen3.6-35b-a3b-fp8": {
+          "request_chars_total": 4072710,
+          "request_chars_samples": 1497,
+          "avg_request_chars": 2720.58,
+          "response_chars_total": 168146,
+          "response_chars_samples": 1497,
+          "avg_response_chars": 112.32
+        },
+        "api:deepseek/deepseek-v4-pro": {
+          "request_chars_total": 713559,
+          "request_chars_samples": 38,
+          "avg_request_chars": 18777.87,
+          "response_chars_total": 68436,
+          "response_chars_samples": 38,
+          "avg_response_chars": 1800.95
+        }
+      }
     }
   },
   "endpoints": {
-    "local:qwen3.6-35b-a3b-fp8": 144965,
-    "api:deepseek/deepseek-v4-pro": 4782
+    "local:qwen3.6-35b-a3b-fp8": 148911,
+    "api:deepseek/deepseek-v4-pro": 4882
   },
-  "last_updated": "2026-05-17T02:14:50.158042",
+  "last_updated": "2026-05-19T00:53:14.831184",
   "metrics": {
-    "request_chars_total": 484604001,
-    "request_chars_samples": 149747,
-    "avg_request_chars": 3236.15,
-    "response_chars_total": 28233172,
-    "response_chars_samples": 149747,
-    "avg_response_chars": 188.54
+    "request_chars_total": 495393249,
+    "request_chars_samples": 153793,
+    "avg_request_chars": 3221.17,
+    "response_chars_total": 28905656,
+    "response_chars_samples": 153793,
+    "avg_response_chars": 187.95
   },
   "endpoint_metrics": {
     "local:qwen3.6-35b-a3b-fp8": {
-      "request_chars_total": 396244301,
-      "request_chars_samples": 144965,
-      "avg_request_chars": 2733.38,
-      "response_chars_total": 17782234,
-      "response_chars_samples": 144965,
-      "avg_response_chars": 122.67
+      "request_chars_total": 405146064,
+      "request_chars_samples": 148911,
+      "avg_request_chars": 2720.73,
+      "response_chars_total": 18248848,
+      "response_chars_samples": 148911,
+      "avg_response_chars": 122.55
     },
     "api:deepseek/deepseek-v4-pro": {
-      "request_chars_total": 88359700,
-      "request_chars_samples": 4782,
-      "avg_request_chars": 18477.56,
-      "response_chars_total": 10450938,
-      "response_chars_samples": 4782,
-      "avg_response_chars": 2185.47
+      "request_chars_total": 90247185,
+      "request_chars_samples": 4882,
+      "avg_request_chars": 18485.7,
+      "response_chars_total": 10656808,
+      "response_chars_samples": 4882,
+      "avg_response_chars": 2182.88
     }
   }
 }

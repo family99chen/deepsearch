@@ -182,6 +182,7 @@ class FinalResult:
     iterations: int
     queries: List[str] = field(default_factory=list)
     sources: List[str] = field(default_factory=list)
+    confidence_label: Optional[str] = None
 
 
 class PersonPipeline:
@@ -203,7 +204,7 @@ class PersonPipeline:
     
     @staticmethod
     def _to_cache_payload(result: FinalResult) -> Dict[str, Any]:
-        return {
+        payload = {
             "person_name": result.person_name,
             "organization": result.organization,
             "report": result.report,
@@ -211,6 +212,9 @@ class PersonPipeline:
             "queries": result.queries,
             "sources": result.sources,
         }
+        if result.confidence_label is not None:
+            payload["confidence_label"] = result.confidence_label
+        return payload
 
     @staticmethod
     def _normalize_report_text(report: Optional[str]) -> Optional[str]:
@@ -231,6 +235,7 @@ class PersonPipeline:
         google_scholar_url: str,
         extra_sources: Optional[List[str]] = None,
         fallback_organization: Optional[str] = None,
+        confidence_label: Optional[str] = None,
     ) -> FinalResult:
         _safe_record_stats(record_org_pipeline_request)
         pipeline_cache = get_person_pipeline_cache()
@@ -259,6 +264,7 @@ class PersonPipeline:
                     iterations=final.get("iterations", 0),
                     queries=final.get("queries", []),
                     sources=final.get("sources", []),
+                    confidence_label=final.get("confidence_label"),
                 )
                 _safe_record_stats(record_org_pipeline_success)
                 return result
@@ -306,6 +312,8 @@ class PersonPipeline:
             }
 
             def _save_and_return(result: FinalResult) -> FinalResult:
+                if result.confidence_label is None and confidence_label is not None:
+                    result.confidence_label = confidence_label
                 pipeline_cache.set_final_result(
                     google_scholar_url=google_scholar_url,
                     max_iterations=self.max_iterations,
@@ -375,6 +383,7 @@ class PersonPipeline:
                     iterations=iterations,
                     queries=queries.copy(),
                     sources=[],
+                    confidence_label=confidence_label,
                 )
 
             # 3) 分析 AI 判断是否足够
@@ -634,6 +643,11 @@ def run_person_pipeline_by_orcid(
     cache = _get_orcid_cache()
     if cache:
         orcid_cached = cache.get(orcid_id)
+    confidence_label = None
+    if isinstance(matched_candidate, dict):
+        confidence_label = matched_candidate.get("confidence_label")
+    if confidence_label is None and isinstance(orcid_cached, dict):
+        confidence_label = orcid_cached.get("confidence_label")
 
     person_cache = _get_orcid_person_cache()
     org_cache = _get_orcid_org_cache()
@@ -726,6 +740,7 @@ def run_person_pipeline_by_orcid(
         gs_url,
         extra_sources=extra_sources,
         fallback_organization=fallback_organization,
+        confidence_label=confidence_label,
     )
 
 

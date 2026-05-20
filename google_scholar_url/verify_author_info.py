@@ -5,7 +5,7 @@
 
 import re
 import math
-from typing import List, Tuple
+from typing import Any, Dict, List, Tuple, Union
 from difflib import SequenceMatcher
 
 # 导入已有的模块
@@ -81,8 +81,12 @@ def verify_author_identity(
     orcid_papers: List[dict] = None,
     match_threshold: float = 0.85,
     max_matches: int = 10,
-    verbose: bool = True
-) -> Tuple[bool, List[Tuple[str, str]]]:
+    verbose: bool = True,
+    return_details: bool = False,
+) -> Union[
+    Tuple[bool, List[Tuple[str, str]]],
+    Tuple[bool, List[Tuple[str, str]], Dict[str, Any]],
+]:
     """
     验证 Google Scholar 作者与 ORCID 作者是否为同一人
     
@@ -93,10 +97,42 @@ def verify_author_identity(
         match_threshold: 标题匹配相似度阈值
         max_matches: 最大匹配数量，达到后停止匹配以节约时间
         verbose: 是否打印详细信息
+        return_details: 是否返回额外验证细节
         
     Returns:
-        (是否为同一人, 匹配的论文列表[(scholar_title, orcid_title), ...])
+        默认返回:
+            (是否为同一人, 匹配的论文列表[(scholar_title, orcid_title), ...])
+
+        当 return_details=True 时额外返回:
+            {
+                "scholar_paper_count": int,
+                "orcid_paper_count": int,
+                "base_count": int,
+                "required_ratio": float,
+                "required_matches": int,
+                "target_matches": int,
+                "actual_matches": int,
+                "matched_papers": [
+                    {
+                        "scholar_title": str,
+                        "orcid_title": str,
+                        "scholar_authors": str,
+                        "scholar_venue": str,
+                        "scholar_year": str,
+                        "scholar_detail_url": str,
+                    }
+                ],
+            }
     """
+    def _return(
+        is_same_person: bool,
+        matches: List[Tuple[str, str]],
+        details: Dict[str, Any],
+    ):
+        if return_details:
+            return is_same_person, matches, details
+        return is_same_person, matches
+
     # 参数验证
     if orcid_papers is None and orcid_id is None:
         raise ValueError("必须提供 orcid_id 或 orcid_papers 其中之一")
@@ -124,7 +160,16 @@ def verify_author_identity(
     
     if not scholar_titles:
         print("[WARNING] 未获取到 Google Scholar 论文")
-        return False, []
+        return _return(False, [], {
+            "scholar_paper_count": 0,
+            "orcid_paper_count": len(orcid_papers or []),
+            "base_count": 0,
+            "required_ratio": 0.0,
+            "required_matches": 0,
+            "target_matches": 0,
+            "actual_matches": 0,
+            "matched_papers": [],
+        })
     
     # 2. 获取 ORCID 论文列表（如果未传入）
     if orcid_papers is not None:
@@ -146,11 +191,29 @@ def verify_author_identity(
                 print(f"[INFO] ORCID 共 {len(orcid_titles)} 篇论文\n")
         except Exception as e:
             print(f"[ERROR] 获取 ORCID 论文失败: {e}")
-            return False, []
+            return _return(False, [], {
+                "scholar_paper_count": len(scholar_titles),
+                "orcid_paper_count": 0,
+                "base_count": 0,
+                "required_ratio": 0.0,
+                "required_matches": 0,
+                "target_matches": 0,
+                "actual_matches": 0,
+                "matched_papers": [],
+            })
     
     if not orcid_titles:
         print("[WARNING] 未获取到 ORCID 论文")
-        return False, []
+        return _return(False, [], {
+            "scholar_paper_count": len(scholar_titles),
+            "orcid_paper_count": 0,
+            "base_count": 0,
+            "required_ratio": 0.0,
+            "required_matches": 0,
+            "target_matches": 0,
+            "actual_matches": 0,
+            "matched_papers": [],
+        })
     
     # 3. 计算所需匹配数量
     base_count = min(len(scholar_titles), len(orcid_titles))
@@ -169,27 +232,39 @@ def verify_author_identity(
     if verbose:
         print(f"[STEP 3] 匹配论文标题（目标 {target_matches} 篇，阈值 {required_matches}，上限 {max_matches}）...")
     
-    matched_papers = []
+    matched_pairs: List[Tuple[str, str]] = []
+    matched_papers: List[Dict[str, Any]] = []
     
-    for scholar_title in scholar_titles:
+    for scholar_paper in scholar_papers:
+        scholar_title = scholar_paper.get('title', '')
+        if not scholar_title:
+            continue
         # 达到目标匹配数即停止
-        if len(matched_papers) >= target_matches:
+        if len(matched_pairs) >= target_matches:
             if verbose:
                 print(f"[INFO] 已达到目标匹配数 {target_matches}，停止匹配")
             break
         
         for orcid_title in orcid_titles:
             if fuzzy_match_title(scholar_title, orcid_title, match_threshold):
-                matched_papers.append((scholar_title, orcid_title))
+                matched_pairs.append((scholar_title, orcid_title))
+                matched_papers.append({
+                    "scholar_title": scholar_title,
+                    "orcid_title": orcid_title,
+                    "scholar_authors": scholar_paper.get("authors", ""),
+                    "scholar_venue": scholar_paper.get("venue", ""),
+                    "scholar_year": scholar_paper.get("year", ""),
+                    "scholar_detail_url": scholar_paper.get("detail_url", ""),
+                })
                 if verbose:
-                    print(f"  ✓ 匹配成功 ({len(matched_papers)}/{target_matches}):")
+                    print(f"  ✓ 匹配成功 ({len(matched_pairs)}/{target_matches}):")
                     print(f"    Scholar: {scholar_title[:60]}...")
                     print(f"    ORCID:   {orcid_title[:60]}...")
                 break  # 一篇 scholar 论文只匹配一次
     
     # 5. 判断结果
     # 达到目标匹配数即为同一人
-    is_same_person = len(matched_papers) >= target_matches
+    is_same_person = len(matched_pairs) >= target_matches
     
     if verbose:
         print()
@@ -199,10 +274,19 @@ def verify_author_identity(
         print(f"基数（较少一方）: {base_count} 篇")
         print(f"要求重合比例: {required_ratio:.0%} = {required_matches} 篇")
         print(f"目标匹配数量: {target_matches} 篇 (min(阈值{required_matches}, 上限{max_matches}))")
-        print(f"实际匹配数量: {len(matched_papers)} 篇")
+        print(f"实际匹配数量: {len(matched_pairs)} 篇")
         print(f"是否为同一人: {'✓ 是' if is_same_person else '✗ 否'}")
     
-    return is_same_person, matched_papers
+    return _return(is_same_person, matched_pairs, {
+        "scholar_paper_count": len(scholar_titles),
+        "orcid_paper_count": len(orcid_titles),
+        "base_count": base_count,
+        "required_ratio": required_ratio,
+        "required_matches": required_matches,
+        "target_matches": target_matches,
+        "actual_matches": len(matched_pairs),
+        "matched_papers": matched_papers,
+    })
 
 
 if __name__ == "__main__":

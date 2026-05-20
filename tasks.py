@@ -44,8 +44,8 @@ celery_app.conf.update(
 )
 
 
-def _serialize_person_result(result: Any) -> Dict[str, Any]:
-    return {
+def _serialize_person_result(result: Any, include_confidence_label: bool = False) -> Dict[str, Any]:
+    payload = {
         "person_name": result.person_name,
         "organization": result.organization,
         "report": result.report,
@@ -53,6 +53,9 @@ def _serialize_person_result(result: Any) -> Dict[str, Any]:
         "queries": result.queries,
         "sources": result.sources,
     }
+    if include_confidence_label:
+        payload["confidence_label"] = getattr(result, "confidence_label", None)
+    return payload
 
 
 def _serialize_search_result(
@@ -69,6 +72,7 @@ def _serialize_search_result(
             "author_name": result_author.get("name") if result_author else None,
             "affiliation": result_author.get("affiliation") if result_author else None,
             "match_count": result_author.get("match_count") if result_author else None,
+            "confidence_label": result_author.get("confidence_label") if result_author else None,
             "error": None,
         }
     return {
@@ -78,6 +82,7 @@ def _serialize_search_result(
         "author_name": None,
         "affiliation": None,
         "match_count": None,
+        "confidence_label": None,
         "error": error or "未找到匹配的 Google Scholar 账号",
     }
 
@@ -175,7 +180,10 @@ def person_report_gs_task(self, job_id: str, google_scholar_url: str) -> Dict[st
 @celery_app.task(name="deepsearch.person_report_orcid", bind=True)
 def person_report_orcid_task(self, job_id: str, orcid_id: str) -> Dict[str, Any]:
     def runner() -> Dict[str, Any]:
-        return _serialize_person_result(run_person_pipeline_by_orcid(orcid_id=orcid_id))
+        return _serialize_person_result(
+            run_person_pipeline_by_orcid(orcid_id=orcid_id),
+            include_confidence_label=True,
+        )
 
     return _run_with_streamed_logs(
         job_id=job_id,

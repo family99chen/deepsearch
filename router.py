@@ -95,6 +95,7 @@ class SearchResult(BaseModel):
     author_name: Optional[str] = None
     affiliation: Optional[str] = None
     match_count: Optional[int] = None
+    confidence_label: Optional[str] = None
     error: Optional[str] = None
 
 
@@ -106,6 +107,7 @@ class PersonPipelineResult(BaseModel):
     iterations: int
     queries: list
     sources: list
+    confidence_label: Optional[str] = None
 
 
 class JobSubmission(BaseModel):
@@ -259,6 +261,7 @@ async def run_person_pipeline_with_logs(mode: str, identifier: str) -> AsyncGene
             iterations=result_obj.iterations,
             queries=result_obj.queries,
             sources=result_obj.sources,
+            confidence_label=getattr(result_obj, "confidence_label", None),
         )
         event_tag = "[ERROR]" if is_failure_report(result.report) else "[RESULT]"
         yield _format_sse_json(event_tag, result.model_dump())
@@ -342,7 +345,8 @@ async def run_pipeline_with_logs(orcid_id: str) -> AsyncGenerator[str, None]:
             google_scholar_url=result_url,
             author_name=result_author.get('name') if result_author else None,
             affiliation=result_author.get('affiliation') if result_author else None,
-            match_count=result_author.get('match_count') if result_author else None
+            match_count=result_author.get('match_count') if result_author else None,
+            confidence_label=result_author.get('confidence_label') if result_author else None,
         )
     else:
         result = SearchResult(
@@ -438,6 +442,7 @@ async def find_google_scholar_account_sync(
             author_name=result_author.get("name") if result_author else None,
             affiliation=result_author.get("affiliation") if result_author else None,
             match_count=result_author.get("match_count") if result_author else None,
+            confidence_label=result_author.get("confidence_label") if result_author else None,
         )
 
     return SearchResult(
