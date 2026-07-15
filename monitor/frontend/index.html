@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeepSearch 运维面板</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>DeepSearch 运维面板</h1>
+      <p class="subtitle">基础设施 + 用量统计（按需刷新）</p>
+    </div>
+    <div class="topbar-actions">
+      <label class="api-label">
+        API
+        <input id="apiBase" type="text" value="" placeholder="留空=Vite代理 / 或 http://127.0.0.1:8091" />
+      </label>
+      <button id="refreshBtn" type="button">刷新全部</button>
+      <span id="lastFetch" class="muted">尚未加载</span>
+    </div>
+  </header>
+
+  <main id="app">
+    <section id="summary" class="cards-row"></section>
+
+    <div class="grid-2">
+      <section class="panel">
+        <h2>Celery 集群</h2>
+        <div id="celeryTable" class="table-wrap"></div>
+      </section>
+      <section class="panel">
+        <h2>节点状态</h2>
+        <div id="nodesTable" class="table-wrap"></div>
+      </section>
+    </div>
+
+    <div class="grid-2">
+      <section class="panel">
+        <h2>Redis</h2>
+        <div id="redisPanel"></div>
+      </section>
+      <section class="panel">
+        <h2>MongoDB 缓存</h2>
+        <div id="mongoPanel"></div>
+      </section>
+    </div>
+
+    <section class="panel usage-section">
+      <div class="usage-header">
+        <h2>用量统计</h2>
+        <label>
+          全局日期
+          <select id="globalDate"></select>
+        </label>
+      </div>
+      <div id="usageGrid" class="usage-grid"></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

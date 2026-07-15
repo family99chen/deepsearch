@@ -10,6 +10,10 @@ REMOTE_WORKERS=(
   "worker1:worker1"
   "worker2:worker2"
   "worker3:worker3"
+  "worker4:worker4"
+  "worker5:worker5"
+  "worker6:worker6"
+  "worker7:worker7"
 )
 
 SSH_OPTS=(
@@ -221,11 +225,6 @@ case "$ACTION" in
     exit 2
     ;;
 esac
-
-if [ "$ACTION" = "ping" ]; then
-  run_local "$ACTION"
-  exit $?
-fi
 
 run_local "$ACTION" &
 pids=("$!")

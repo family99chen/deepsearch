@@ -110,12 +110,12 @@ def resolve_from_orcid(orcid_id: str, use_cache: bool = True) -> Optional[Identi
         except Exception:
             organization = None
 
-    if not person_name:
+    if not person_name or not organization:
         return None
 
     return Identity(
         person_name=person_name,
-        organization=organization or "",
+        organization=organization,
         source="orcid",
         orcid_id=orcid_id,
         raw={"cached": cached},

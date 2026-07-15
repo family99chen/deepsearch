@@ -53,6 +53,20 @@ MongoDB 当前通过 Docker 暴露：
 27018 MongoDB
 ```
 
+当前已注册的 worker 公网 IP：
+
+```text
+worker1  47.81.212.142
+worker2  47.81.212.36
+worker3  47.250.117.51
+worker4  47.81.210.142
+worker5  47.250.197.223
+worker6  47.250.144.201
+worker7  47.250.197.11
+```
+
+主节点 UFW 已对上述 IP 放行 6379/27018。**阿里云 ECS 安全组也必须在控制台为每个 worker IP 单独添加入站规则**，否则 worker 仍会连接超时（UFW 收不到包）。
+
 不要把 Redis/MongoDB 对全公网开放给所有 IP。当前 Redis 无密码，为了效率优先，必须靠安全组白名单保护。
 
 如果三台 worker 不在同一个内网，只能用公网：

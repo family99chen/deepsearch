@@ -1,0 +1,64 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python bytecode and tooling
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.python-version
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+
+# Python packaging / virtualenvs
+build/
+dist/
+site/
+.eggs/
+*.egg-info/
+pip-wheel-metadata/
+.venv/
+venv/
+env/
+ENV/
+
+# Runtime files
+logs/
+total_usage/
+*.log
+*.out
+*.err
+*.pid
+*.pid.lock
+tmp/
+temp/
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+
+# Frontend dependencies and build output
+monitor/frontend/node_modules/
+monitor/frontend/dist/
+monitor/frontend/.vite/
+monitor/frontend/.next/
+monitor/frontend/out/
+monitor/frontend/coverage/
+monitor/frontend/*.tsbuildinfo
+monitor/frontend/.turbo/
+
+# Local caches
+.cache/
